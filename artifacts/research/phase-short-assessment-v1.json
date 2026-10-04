@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "plan_sha256": "dd492b81550765016389854558f02d755559d9b3c9961eb6e800a57014c39101",
+  "assessor_sha256": "96f507af973b4e3a49ec5f94ad884c16f349db6c9dc25406ff73209ea041bd12",
+  "results": {
+    "classical-30ms": {
+      "games": 64,
+      "wins": 15,
+      "draws": 19,
+      "losses": 30,
+      "unresolved": 0,
+      "forfeits": 0,
+      "score": 0.3828125,
+      "primary_95_percent_family_interval": [
+        0.27419354838709675,
+        0.49193548387096775
+      ],
+      "families": 31,
+      "report_sha256": "49bc8aa4d1db4108ccad88da510ca79983718b852794fce78ffb2103dc0b2211",
+      "pgn_sha256": "4125a8170ab8b0d90571f96421e284eb66d8c51e7f59baa3f34d01385c545e11",
+      "audit_sha256": "29418a71989a1153e0fc62b72d4ab6120356a987c7f11f31437d7476cda2364b"
+    },
+    "control-30ms": {
+      "games": 64,
+      "wins": 26,
+      "draws": 25,
+      "losses": 13,
+      "unresolved": 0,
+      "forfeits": 0,
+      "score": 0.6015625,
+      "primary_95_percent_family_interval": [
+        0.525,
+        0.6742424242424242
+      ],
+      "families": 28,
+      "report_sha256": "2001d3b36ec38072ae898f582ed101cd689938a6166e13bdf4a67a61e46a6ec8",
+      "pgn_sha256": "fd000c976b0a85b07b4e7bce6761908992ef01d36a25513175def3c5522bfba1",
+      "audit_sha256": "032f92cdb82371253808c1a93139dedb877f8be002285c347b7a213b8100a55b"
+    }
+  },
+  "gates": {
+    "correctness": true,
+    "tactics": false,
+    "classical_short": false,
+    "control_short": true,
+    "short_zero_unresolved_forfeits": true
+  },
+  "failed_gates": [
+    "tactics",
+    "classical_short"
+  ],
+  "eligible_for_long_confirmation": false,
+  "eligible_for_promotion": false,
+  "interpretation": "Predeclared architecture screen only. No Elo inferred and no Stockfish superiority. Failed tactics or confidence gates keep the neural model experimental; classical default retained."
+}

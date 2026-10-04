@@ -59,18 +59,43 @@ Source, checkpoints, full histories and frozen scripts remain in the repository.
 
 ## Paired matches
 
-Both predeclared 64-game screens are running sequentially: phase vs frozen
-classical 0.7.6 and phase vs matched neural control, each on a distinct fresh
-32-pair opening partition at 30 ms/move, one thread and 64 MiB hash. Sixteen
-further pairs are reserved for conditional 100 ms confirmation. No retuning,
-adaptive extension or inferred Elo is permitted. The original plan requires
+Both predeclared 64-game screens finish: phase vs frozen classical 0.7.6 and
+phase vs matched neural control, each on a distinct fresh 32-pair opening
+partition at 30 ms/move, one thread and 64 MiB hash. All 128 PGNs are
+independently audited with no forfeits or unresolved games.
+
+| Opponent | W / D / L | Score | 95% opening-family interval |
+| --- | --- | ---: | --- |
+| Frozen classical 0.7.6 | 15 / 19 / 30 | 38.28% | 27.42%..49.19% |
+| Matched neural control | 26 / 25 / 13 | 60.16% | 52.50%..67.42% |
+
+The candidate beats its matched neural control in this limited screen, but
+remains below classical play and loses two quiet depth-eight tactics. Both
+frozen tactical and classical confidence gates fail. The longer confirmation
+is skipped and all 16 reserved pairs remain unused by Aster. There is no
+retuning, adaptive extension or inferred Elo. The original plan requires
 all correctness/tactical gates and a short classical opening-family confidence
 lower bound strictly above 50%, plus a control score of at least 50% with
-lower bound at least 45%. Every completed PGN is independently replayed.
+lower bound at least 45%. The bootstrap uses 20,000 samples, seed 20261113
+and 31/28 first-four-ply families respectively. This single initialization,
+dataset and short control do not establish broad strength or transfer to
+other engines/settings. The [decision](../artifacts/research/phase-decision-v1.json)
+recomputes all declared gates.
+
+The pipeline is frozen before matches. A small separately frozen preservation
+adapter normalizes evidence paths for POSIX, retaining the original Windows
+preserver and every gate byte for byte. Partial runs refuse final preservation.
+Completed artifact hashes and PGN audits can be rechecked with:
+
+```powershell
+.venv/Scripts/python.exe scripts/preserve_phase_portable.py --verify
+```
 
 No learned default or strength gain has been selected. The last matched local
 rating remains 2319 (95% interval 2277..2360) for the exact earlier
-0.7.6-q-evasion binary; this new binary/model is unrated. Public Elo and
+0.7.6-q-evasion binary; this new binary/model is unrated. The
+[session record](../artifacts/ratings/session-20261004-phase.json) retains that
+exact matched reference. Public Elo and
 full-strength Stockfish superiority remain unestablished. Next investigate
 broader stable endgame supervision and feature interactions in a separate
 predeclared experiment, without tuning to these fixture answers.

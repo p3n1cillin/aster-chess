@@ -1,0 +1,7 @@
+{
+  "created_utc": "2026-10-04T17:49:54.996948+00:00",
+  "adapter_sha256": "d1305d414685d425454383fe7acc26f88a890187861401bcf88e5de2a8f720f2",
+  "original_preserver_sha256": "1abbcbaa66482fdac736fa1caddb89636cc48f156216da7b3ed6d95614947b63",
+  "reason": "Normalize the existing model.ann/../training.json evidence path before opening: Windows accepts it, POSIX does not. Original frozen preserver and every algorithm, model, budget and promotion gate remain byte-identical. Declared while the fixed match process is live, before completion.",
+  "scope": "Portable evidence path reading only"
+}

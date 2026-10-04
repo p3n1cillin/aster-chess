@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "C:\Users\lukem\source\repos\WIP\chess\scripts\preserve_phase_portable.py", line 20, in <module>
+    if __name__ == "__main__": main()
+                               ~~~~^^
+  File "C:\Users\lukem\source\repos\WIP\chess\scripts\preserve_phase_portable.py", line 17, in main
+    preserve_phase.main()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\lukem\source\repos\WIP\chess\scripts\preserve_phase.py", line 54, in main
+    args = parser.parse_args(); verify_results()
+                                ~~~~~~~~~~~~~~^^
+  File "C:\Users\lukem\source\repos\WIP\chess\scripts\preserve_phase.py", line 20, in verify_results
+    assert state["status"] == training["status"] == "complete", "Never freeze partial runs"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Never freeze partial runs

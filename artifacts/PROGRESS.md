@@ -1,12 +1,51 @@
 # Project progress — 4 October 2026
 
 The production engine is **Aster 0.6.0**, with experimental source identified
-as **0.7.6-feature-dev**, with optional threat, KPK, conversion, proof,
+as **0.7.8-phase-dev**, with optional threat, KPK, conversion, proof,
 **0.7.5-lazy-order-dev**, **0.7.6-q-evasion-dev** and **0.7.7-iir-dev** builds. The goal of surpassing Stockfish remains
 active and has not been achieved. The current engine uses a classical evaluator;
 the classical evaluator is the default. Optional trained neural prototypes
 exist but regressed in matches. The opt-in KPK solver generates its own table;
 there is no general tablebase probing or parallel search.
+
+## Completed experiment: phase neural output remains experimental
+
+Original optional formats 9/10 blend turn-aware middlegame/endgame outputs,
+with 64-bit integer inference and phase-keyed caches. All **53 tests** and
+**7,350 independent inference comparisons** pass, including formats 1..10
+and scalar/vector phase inference. Classical and both trained models each
+pass **2,614** independent rule/perft/protocol checks; models additionally
+match independent inference on **525** positions each. Default search retains
+all moves/scores/nodes on **80** fresh depth-eight openings, totaling
+**6,529,455** nodes each, and bench seven retains **146,772** nodes.
+Windows/Linux CI passes for ordinary and IIR builds, with 53/54 tests.
+
+The matched 50-epoch control reproduces the earlier moderate paired-loss
+model byte for byte. Starting shared weights, random streams, data, game split
+and budgets match; cloned phase heads isolate output architecture. Quantized
+held-out error improves only from **127.623 to 127.426 cp** across all 5,690
+rows. The phase model solves **30/32** quiet depth-eight tactics versus the
+control's **32/32**; its quiet-node score **24/32** remains below the classical
+threshold **25/32**. Original tactics and endgame move thresholds pass.
+
+All **128 predeclared paired games** finish and are independently audited,
+with zero forfeits/unresolved. At 30 ms the candidate scores **15 W / 19 D /
+30 L** against frozen classical 0.7.6, **38.28%**, primary 95% family interval
+**27.42%..49.19%**. Against the matched neural control it scores **26 W / 25 D /
+13 L**, **60.16%**, interval **52.50%..67.42%**. It improves this limited neural
+ablation but fails both tactical and classical confidence gates, so remains
+experimental. Conditional longer confirmation is skipped; 16 reserved pairs
+are unused. No retuning or adaptive extension occurs.
+
+Source, datasets, model checkpoints, binaries, frozen scripts and complete
+PGNs are pushed to the private repository. See [phase output](../docs/PHASE-OUTPUT.md)
+and the [decision](research/phase-decision-v1.json). The current ordinary
+classical evaluator is retained. Its new binary has no separate rating;
+the last exact matched reference remains **2319**, interval **2277..2360**,
+on the local SF19 setting-equivalent scale at 30 ms, one thread and 64 MiB.
+Public Elo and Stockfish superiority remain unestablished. Next broaden
+stable endgame supervision and feature interactions, and extend native
+proof-backed plans in a separately verified experiment.
 
 ## Completed experiment: unseeded secondary search remains opt-in
 

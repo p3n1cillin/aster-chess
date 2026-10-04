@@ -1,0 +1,1038 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-04T17:55:28.947727+00:00",
+  "artifacts": [
+    {
+      "path": "artifacts/benchmarks/phase-default-vs-baseline-depth8.json",
+      "bytes": 52604,
+      "sha256": "95d1e4f43c26404923e40744cb3a666e89154d2afb0688ecb76a1beb0a69cc39"
+    },
+    {
+      "path": "artifacts/data/teacher-turn-60k-static-v1-classical.jsonl",
+      "bytes": 16042807,
+      "sha256": "bfea2a0226b65879961c7cde551dde3d715a9e59ef9e99adf627e3744f2be162"
+    },
+    {
+      "path": "artifacts/matches/phase-classical-30ms.audit.json",
+      "bytes": 112,
+      "sha256": "29418a71989a1153e0fc62b72d4ab6120356a987c7f11f31437d7476cda2364b"
+    },
+    {
+      "path": "artifacts/matches/phase-classical-30ms.json",
+      "bytes": 2127853,
+      "sha256": "49bc8aa4d1db4108ccad88da510ca79983718b852794fce78ffb2103dc0b2211"
+    },
+    {
+      "path": "artifacts/matches/phase-classical-30ms.pgn",
+      "bytes": 68199,
+      "sha256": "4125a8170ab8b0d90571f96421e284eb66d8c51e7f59baa3f34d01385c545e11"
+    },
+    {
+      "path": "artifacts/matches/phase-classical-30ms.txt",
+      "bytes": 25648,
+      "sha256": "1cb822cc01def0e907442af5c875220d7b5ac0cf05497ca443dffa6e1b0fd341"
+    },
+    {
+      "path": "artifacts/matches/phase-control-30ms.audit.json",
+      "bytes": 112,
+      "sha256": "032f92cdb82371253808c1a93139dedb877f8be002285c347b7a213b8100a55b"
+    },
+    {
+      "path": "artifacts/matches/phase-control-30ms.json",
+      "bytes": 2318061,
+      "sha256": "2001d3b36ec38072ae898f582ed101cd689938a6166e13bdf4a67a61e46a6ec8"
+    },
+    {
+      "path": "artifacts/matches/phase-control-30ms.pgn",
+      "bytes": 72379,
+      "sha256": "fd000c976b0a85b07b4e7bce6761908992ef01d36a25513175def3c5522bfba1"
+    },
+    {
+      "path": "artifacts/matches/phase-control-30ms.txt",
+      "bytes": 25739,
+      "sha256": "5fd289b99a9e9f4a69b371f03d9068be4449353099d4f9cfbc3f00ecabd4d978"
+    },
+    {
+      "path": "artifacts/publish/phase-dev/Aster.deps.json",
+      "bytes": 407,
+      "sha256": "846e5fc4a8c7c44657545ea00b93646fff9dc53574fc62eb7bb2c3d7fe4c6a4c"
+    },
+    {
+      "path": "artifacts/publish/phase-dev/Aster.dll",
+      "bytes": 97792,
+      "sha256": "ea5ba189628bf12c597620438563e323aed1306a2426bc91ec82f6a72f4f85ff"
+    },
+    {
+      "path": "artifacts/publish/phase-dev/Aster.exe",
+      "bytes": 151552,
+      "sha256": "d7bfa87d19a62dcc7678bf6522a4ddad23c6b11508c9cd1d29d260024bfa0e86"
+    },
+    {
+      "path": "artifacts/publish/phase-dev/Aster.pdb",
+      "bytes": 39052,
+      "sha256": "aef5719ec7af9edb3f897df88f37970dc9616b9ab39e64a64ffd32450819fcec"
+    },
+    {
+      "path": "artifacts/publish/phase-dev/Aster.runtimeconfig.json",
+      "bytes": 374,
+      "sha256": "60e8700cdee9afcc3894f7e9bbb7ac56bb8d7af7561e8ad47323f3b5ebe4c3af"
+    },
+    {
+      "path": "artifacts/publish/q-evasion-default-dotnet/Aster.deps.json",
+      "bytes": 407,
+      "sha256": "846e5fc4a8c7c44657545ea00b93646fff9dc53574fc62eb7bb2c3d7fe4c6a4c"
+    },
+    {
+      "path": "artifacts/publish/q-evasion-default-dotnet/Aster.dll",
+      "bytes": 97280,
+      "sha256": "3801b8cbc1cbbb98e2435ab5b00b161d08c2be16d4a18af7cc56e3eb2f43e343"
+    },
+    {
+      "path": "artifacts/publish/q-evasion-default-dotnet/Aster.exe",
+      "bytes": 151552,
+      "sha256": "df050007d366f0bd08563404b7c470bd12a860b12f897b681ba703b7e6b46dd1"
+    },
+    {
+      "path": "artifacts/publish/q-evasion-default-dotnet/Aster.pdb",
+      "bytes": 38020,
+      "sha256": "38611f851c5d678aaa6d8ed5e5976c068ea7aa0c47b54dc1c34a782a2a4d737d"
+    },
+    {
+      "path": "artifacts/publish/q-evasion-default-dotnet/Aster.runtimeconfig.json",
+      "bytes": 374,
+      "sha256": "60e8700cdee9afcc3894f7e9bbb7ac56bb8d7af7561e8ad47323f3b5ebe4c3af"
+    },
+    {
+      "path": "artifacts/research/phase-decision-v1.json",
+      "bytes": 1918,
+      "sha256": "de3048765928b0aeb8510d6649e9778518c494cac82ef09ea33d32684f648c34"
+    },
+    {
+      "path": "artifacts/research/phase-match-execution-v1.json",
+      "bytes": 830,
+      "sha256": "c5c4a1fcf31a8ea044ddf9426614542c1d6ba3682d803a6b5a5af0f96dfb000b"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/analyze_rating.py",
+      "bytes": 12378,
+      "sha256": "f6fe53073c006e91760b885adab9803f92cd50fa3c3a7ba6ada90f0a8e5b8d13"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/assess_phase.py",
+      "bytes": 3267,
+      "sha256": "96f507af973b4e3a49ec5f94ad884c16f349db6c9dc25406ff73209ea041bd12"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/audit_match.py",
+      "bytes": 3219,
+      "sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/audit_openings.py",
+      "bytes": 2728,
+      "sha256": "0c97723cf8a0404f9e3681a90f5d9d09dcfc4978721748222ee80a679a6fca5d"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/check_phase.py",
+      "bytes": 5735,
+      "sha256": "d9701299a7400af63e14bc3ec496364c8b1d3948f4cc1538190f657b28d197b9"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/compare_search.py",
+      "bytes": 5197,
+      "sha256": "a8162c85b4ea4aae46546ca8a02d4b04c083bf56abb6a28d64f322b2331b6dd9"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/declare_phase.py",
+      "bytes": 4606,
+      "sha256": "c2ca9d714961632e4bbd368fc75d7e03a584f816f32684fde6af0ac655291cc6"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/freeze_engine_source.py",
+      "bytes": 1798,
+      "sha256": "db919e19f9b75ade115a3d834ad48cc57e01a6165130ef03a775279f4c89acb7"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/freeze_phase_pipeline.py",
+      "bytes": 2035,
+      "sha256": "177c37354c88ef3d6c57a11190b5df9ba3b8ac52ed52c9b66173e677d4f3073f"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/generate_openings.py",
+      "bytes": 5856,
+      "sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/manifest.json",
+      "bytes": 8432,
+      "sha256": "1dce36298afed6f4f300b265b59738e278e9cc03ff90fb27527e7a8e6329901c"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/match.py",
+      "bytes": 16962,
+      "sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/neural_format.py",
+      "bytes": 6240,
+      "sha256": "304897abff22a599e5523ad08492f76d91dde8def54e54497716969602970efa"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/prepare_phase.py",
+      "bytes": 1890,
+      "sha256": "a60837633ef7893bcd1101947dd240531ba03873035a0de98cc060b959d6f114"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/preserve_phase.py",
+      "bytes": 5874,
+      "sha256": "1abbcbaa66482fdac736fa1caddb89636cc48f156216da7b3ed6d95614947b63"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/run_phase.py",
+      "bytes": 5009,
+      "sha256": "d7ca9628b70a6a4e967db0d1bb627af7c01626793703ef719f16c0f32f217dd5"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/run_rating.py",
+      "bytes": 5839,
+      "sha256": "6e8a31adefd0aeb5d51eac2f5672396f4518f779947713f86dac138ff00f661a"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/tactics.py",
+      "bytes": 3182,
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/train_network.py",
+      "bytes": 22773,
+      "sha256": "08f8647a375444193303d057f9704f965582760c3d8dcf157178e2704fa65af9"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/train_phase.py",
+      "bytes": 3720,
+      "sha256": "9ca0b38cfc7e97e415bc9032ac894373b1a39470502ca23781add6e7e24a7dcf"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/uci_client.py",
+      "bytes": 3569,
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/verify.py",
+      "bytes": 9421,
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/verify_network.py",
+      "bytes": 6371,
+      "sha256": "be2ffe96b1a70f2e2ac24d4df640cd1682ab49c161c985a7f3aecd51de50fada"
+    },
+    {
+      "path": "artifacts/research/phase-pipeline-start/verify_phase.py",
+      "bytes": 4998,
+      "sha256": "6c04498a6410ad3a9bf218e1e8f597d494668c57d01d4e7fb8df90c23feb3347"
+    },
+    {
+      "path": "artifacts/research/phase-plan-v1.json",
+      "bytes": 4619,
+      "sha256": "dd492b81550765016389854558f02d755559d9b3c9961eb6e800a57014c39101"
+    },
+    {
+      "path": "artifacts/research/phase-preservation-portability-v1/manifest.json",
+      "bytes": 601,
+      "sha256": "337c1cbdd1113de9c21fe57dbc8f065d5e52b04eab83ff4e284e6b96bf8ef936"
+    },
+    {
+      "path": "artifacts/research/phase-preservation-portability-v1/preserve_phase_portable.py",
+      "bytes": 789,
+      "sha256": "d1305d414685d425454383fe7acc26f88a890187861401bcf88e5de2a8f720f2"
+    },
+    {
+      "path": "artifacts/research/phase-rating-reference-v1.json",
+      "bytes": 2619,
+      "sha256": "dd603bdb0afda06ad4c133c6a9261b6127713a1c0f73613f569a8e153a1c5c22"
+    },
+    {
+      "path": "artifacts/research/phase-short-assessment-v1.json",
+      "bytes": 1918,
+      "sha256": "de3048765928b0aeb8510d6649e9778518c494cac82ef09ea33d32684f648c34"
+    },
+    {
+      "path": "artifacts/research/phase-source/Aster.sln",
+      "bytes": 1969,
+      "sha256": "0cce33025d086c048a48c3dcd7543ae1338cf5c518b15060b7cd4b0e5c9864a1"
+    },
+    {
+      "path": "artifacts/research/phase-source/Directory.Build.props",
+      "bytes": 318,
+      "sha256": "aae19899039dcffcd68ffa855c683877cd6c4d6813d36bd974024a26b219badb"
+    },
+    {
+      "path": "artifacts/research/phase-source/global.json",
+      "bytes": 58,
+      "sha256": "d8fc1e71d76ffd7f785d4b7abbae953024544b52cf19fc4b8d687b058e594610"
+    },
+    {
+      "path": "artifacts/research/phase-source/manifest.json",
+      "bytes": 3630,
+      "sha256": "3ee13720e63ae073a28ac4ea93a799f6557d39f53ca5835bdcea5a95032894bb"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Attacks.cs",
+      "bytes": 2643,
+      "sha256": "10a2eb8139f9786d5b097d92f3e385a889a24c8940a0d1fade1b1a987a37b9c6"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Board.cs",
+      "bytes": 18790,
+      "sha256": "af1db55d63700255db50bd2c5b538d15c7ae1558ba3296a21f0e54bf2bfa16d9"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/EndgameProof.cs",
+      "bytes": 5186,
+      "sha256": "a03d6e4c226d7fa07cda2a50c3852bff0610dc9339472e5aed6f1dc1dec6095e"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Engine.csproj",
+      "bytes": 285,
+      "sha256": "7cf064b7199806147a2d4c716a36ff3e916002ca7df76c476d511296a72e6052"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Evaluation.cs",
+      "bytes": 7519,
+      "sha256": "b7c1ad0014eebea5d59c13ba37861616df60db253f906f6b94b4fb88e7d3bbe5"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/KpkBitbase.cs",
+      "bytes": 7104,
+      "sha256": "a13112931282526f774ca2b5ea1e87736f0c21e4b24d1fa9da8ae18560bfcc39"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/MajorMateBitbase.cs",
+      "bytes": 7110,
+      "sha256": "2ff38a71882eb9f8a5a1305745f569bb6849bb44f8d2a2c329ecba9a74617b48"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Move.cs",
+      "bytes": 1304,
+      "sha256": "9cee181118dc8dbf01687b7c5210ad81aa07826e70ce7fb9b512b321b69bdc85"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/NeuralNetwork.cs",
+      "bytes": 13412,
+      "sha256": "4961c8545975f63e5ace2913c21ead67bee6a1cbb2d3b25a8fdcc2bbdc07cbf2"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Perft.cs",
+      "bytes": 589,
+      "sha256": "7e679e005a22d3cd3e003f6034495d4e62c8fd5ca79b89822c9a7e78b2fd085e"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Program.cs",
+      "bytes": 4664,
+      "sha256": "47206d408b8c36c10cbb78247aa04fb13444b28154fda535afd012f4e60ea132"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Search.cs",
+      "bytes": 18501,
+      "sha256": "f0efbc3320594503c91efe78f38622e5ee3412817af9aebc146cd90d5052c919"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/SearchProfile.cs",
+      "bytes": 3232,
+      "sha256": "60ed1caee10ce09adf20d9542d0eac06fc613a29881f04bd0f15a826109d405c"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/StaticExchange.cs",
+      "bytes": 3783,
+      "sha256": "36208f3889d346dac33deba7ad7f9e20cd67deeb465c910f2355cbde8fd57af9"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/ThreatEvaluation.cs",
+      "bytes": 3531,
+      "sha256": "b956761ca5157dc70faecdd28faa1d45a52cd574cefb9866cd45a11f5df364bd"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/TranspositionTable.cs",
+      "bytes": 2433,
+      "sha256": "6b6a3a5581678ebf8c36640f02e1ed27ee9055ed55f1eaa205ab7d38bbf45001"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Uci.cs",
+      "bytes": 13958,
+      "sha256": "0aea357b653e52995aa5c1cdc30c56beffeac2db814c0f87cb406e1d7295f473"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Zobrist.cs",
+      "bytes": 880,
+      "sha256": "116806963b5b3a5b9bd10c9b988fffd78ce56f7abfa3a2bf716203d42c687ac2"
+    },
+    {
+      "path": "artifacts/research/phase-source/tests/Engine.Tests/Engine.Tests.csproj",
+      "bytes": 194,
+      "sha256": "731df592e64b335e2d2bb5e1aad2c481926ff8c43284e4a81b888cadaf782639"
+    },
+    {
+      "path": "artifacts/research/phase-source/tests/Engine.Tests/Program.cs",
+      "bytes": 55848,
+      "sha256": "327a588fb0c60c6dbd1e338e885efa94769f9c8f079cf534eaebc19d6e7461e9"
+    },
+    {
+      "path": "artifacts/research/phase-summary-v1/AGENTS.md",
+      "bytes": 1377,
+      "sha256": "eadef7c286c1847cc2300fefcfb46890fa0d2d4f47db720d31430923299d3487"
+    },
+    {
+      "path": "artifacts/research/phase-summary-v1/PHASE-OUTPUT.md",
+      "bytes": 5547,
+      "sha256": "985bdc14dcf9391c27b29f7ce8b47072657fb80159154047b7b8b20bbc5871e9"
+    },
+    {
+      "path": "artifacts/research/phase-summary-v1/PROGRESS.md",
+      "bytes": 69463,
+      "sha256": "119a477f18a10184180362211b6f0426bc386c44715f8a899a2e6600a01eb529"
+    },
+    {
+      "path": "artifacts/research/phase-summary-v1/RATING.md",
+      "bytes": 7435,
+      "sha256": "48a4f0d128d91385de95dc28a3bb34fd3b9d3198fd34015b2022d7a4a738ba8d"
+    },
+    {
+      "path": "artifacts/research/phase-summary-v1/README.md",
+      "bytes": 11458,
+      "sha256": "31ae7a9d196ce93c2d56dfb931f1f0a4ab876bb1e681e65536b385d68ac99fa8"
+    },
+    {
+      "path": "artifacts/research/phase-summary-v1/ROADMAP.md",
+      "bytes": 14129,
+      "sha256": "db7fe0012fc4e85bcf24682ec19a330cca8a64c1d56f4bfa6bf5ddae26d745fc"
+    },
+    {
+      "path": "artifacts/research/phase-training-execution-v1.json",
+      "bytes": 1091,
+      "sha256": "d21629dd0ca75fc1e75903c3fb37ca7cf1a1bba4475ab0119f7c3f08313c6c6a"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/Aster.sln",
+      "bytes": 1969,
+      "sha256": "0cce33025d086c048a48c3dcd7543ae1338cf5c518b15060b7cd4b0e5c9864a1"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/Directory.Build.props",
+      "bytes": 318,
+      "sha256": "aae19899039dcffcd68ffa855c683877cd6c4d6813d36bd974024a26b219badb"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/global.json",
+      "bytes": 58,
+      "sha256": "d8fc1e71d76ffd7f785d4b7abbae953024544b52cf19fc4b8d687b058e594610"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/manifest.json",
+      "bytes": 3687,
+      "sha256": "6c84f4627f587c29014e667993d0be2495a5235ab3baac30322803ca66456c03"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/src/Engine/Attacks.cs",
+      "bytes": 2643,
+      "sha256": "10a2eb8139f9786d5b097d92f3e385a889a24c8940a0d1fade1b1a987a37b9c6"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/src/Engine/Board.cs",
+      "bytes": 18790,
+      "sha256": "af1db55d63700255db50bd2c5b538d15c7ae1558ba3296a21f0e54bf2bfa16d9"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/src/Engine/EndgameProof.cs",
+      "bytes": 5186,
+      "sha256": "a03d6e4c226d7fa07cda2a50c3852bff0610dc9339472e5aed6f1dc1dec6095e"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/src/Engine/Engine.csproj",
+      "bytes": 285,
+      "sha256": "7cf064b7199806147a2d4c716a36ff3e916002ca7df76c476d511296a72e6052"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/src/Engine/Evaluation.cs",
+      "bytes": 7506,
+      "sha256": "31a7107e86fdb946087a21883696b65da3a5afbaf1cfde7d5690e9fe839b2b9a"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/src/Engine/KpkBitbase.cs",
+      "bytes": 7104,
+      "sha256": "a13112931282526f774ca2b5ea1e87736f0c21e4b24d1fa9da8ae18560bfcc39"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/src/Engine/MajorMateBitbase.cs",
+      "bytes": 7110,
+      "sha256": "2ff38a71882eb9f8a5a1305745f569bb6849bb44f8d2a2c329ecba9a74617b48"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/src/Engine/Move.cs",
+      "bytes": 1304,
+      "sha256": "9cee181118dc8dbf01687b7c5210ad81aa07826e70ce7fb9b512b321b69bdc85"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/src/Engine/NeuralNetwork.cs",
+      "bytes": 12093,
+      "sha256": "b1f4c9bd9466c66508837d3ae864db4802fdb152a0794481e75034e71becced7"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/src/Engine/Perft.cs",
+      "bytes": 589,
+      "sha256": "7e679e005a22d3cd3e003f6034495d4e62c8fd5ca79b89822c9a7e78b2fd085e"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/src/Engine/Program.cs",
+      "bytes": 4664,
+      "sha256": "47206d408b8c36c10cbb78247aa04fb13444b28154fda535afd012f4e60ea132"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/src/Engine/Search.cs",
+      "bytes": 17934,
+      "sha256": "884fb00f3d45f9d38ed900500fd2a539d13f17d4332242d3f8ab8042571ac2e5"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/src/Engine/SearchProfile.cs",
+      "bytes": 3002,
+      "sha256": "bbc69ee408f7015dd121d00fef331050a6c245ae576ebc1015e16fb5ac56c248"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/src/Engine/StaticExchange.cs",
+      "bytes": 3783,
+      "sha256": "36208f3889d346dac33deba7ad7f9e20cd67deeb465c910f2355cbde8fd57af9"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/src/Engine/ThreatEvaluation.cs",
+      "bytes": 3531,
+      "sha256": "b956761ca5157dc70faecdd28faa1d45a52cd574cefb9866cd45a11f5df364bd"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/src/Engine/TranspositionTable.cs",
+      "bytes": 2433,
+      "sha256": "6b6a3a5581678ebf8c36640f02e1ed27ee9055ed55f1eaa205ab7d38bbf45001"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/src/Engine/Uci.cs",
+      "bytes": 13866,
+      "sha256": "d7e4c23b35cae7f1bac32424319e37b1738c72e40f3a29c5f1ef93d95b7e7a26"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/src/Engine/Zobrist.cs",
+      "bytes": 880,
+      "sha256": "116806963b5b3a5b9bd10c9b988fffd78ce56f7abfa3a2bf716203d42c687ac2"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/tests/Engine.Tests/Engine.Tests.csproj",
+      "bytes": 194,
+      "sha256": "731df592e64b335e2d2bb5e1aad2c481926ff8c43284e4a81b888cadaf782639"
+    },
+    {
+      "path": "artifacts/research/q-evasion-default-source/tests/Engine.Tests/Program.cs",
+      "bytes": 46588,
+      "sha256": "c72a6552e5d514e8eac34012b05f4fe259fa4a96178afd1245674b968b47264d"
+    },
+    {
+      "path": "artifacts/tactics/phase-candidate-endgames-5000nodes.json",
+      "bytes": 4054,
+      "sha256": "7ef549d10c9f4e280aa178f437429b6c90771ca427e712671edc61be355c1184"
+    },
+    {
+      "path": "artifacts/tactics/phase-candidate-tactics-5000nodes.json",
+      "bytes": 7233,
+      "sha256": "99ab18add133ed9013a2af05d8566d721373ac2f7d9adf0f59b909a3d9b8f9b1"
+    },
+    {
+      "path": "artifacts/tactics/phase-candidate-tactics-depth8.json",
+      "bytes": 7264,
+      "sha256": "6204d928e6b6bda3db1b05e719a8bdde3b3c92e399187cfcd871962298dd5afe"
+    },
+    {
+      "path": "artifacts/tactics/phase-candidate-tactics-quiet-5000nodes.json",
+      "bytes": 7246,
+      "sha256": "efecff5999133bc80f58109e843bc97febb6651874118b733ea178c110a465ca"
+    },
+    {
+      "path": "artifacts/tactics/phase-candidate-tactics-quiet-depth8.json",
+      "bytes": 7271,
+      "sha256": "918049591d5af45eed56b119ad8a478dbe0ea42671436c4e0b25ea4cec418c97"
+    },
+    {
+      "path": "artifacts/tactics/phase-control-endgames-5000nodes.json",
+      "bytes": 4053,
+      "sha256": "6c7786e932bbe7a999871b10d690981a2bfc89474a7626ff12d3a3b18cf45f04"
+    },
+    {
+      "path": "artifacts/tactics/phase-control-tactics-5000nodes.json",
+      "bytes": 7235,
+      "sha256": "5f1405cdfec2d3883929926983399f2d42d322fa637e3e6b07d522e499d8fdf8"
+    },
+    {
+      "path": "artifacts/tactics/phase-control-tactics-depth8.json",
+      "bytes": 7266,
+      "sha256": "e7314383e9c23d4a9bc9a4c00907fa0eba9bf81f74a10adcb7798c9997306f7c"
+    },
+    {
+      "path": "artifacts/tactics/phase-control-tactics-quiet-5000nodes.json",
+      "bytes": 7248,
+      "sha256": "5f1f56ab6c747fe70b481a7735af075106a1ce9f8dfc6679ed7b0da77db41d1b"
+    },
+    {
+      "path": "artifacts/tactics/phase-control-tactics-quiet-depth8.json",
+      "bytes": 7267,
+      "sha256": "0482df4454c34ba6956cb637860e0bcb0e8c6160eb4da771bf2224bd4eb17e2f"
+    },
+    {
+      "path": "artifacts/training/phase-control-v1/checkpoint.pt",
+      "bytes": 3398651,
+      "sha256": "7d99cc873135af8b8b2666e446b0cb4ae3b731c1226ce6808c7f5c860f8a5ee9"
+    },
+    {
+      "path": "artifacts/training/phase-control-v1/model.ann",
+      "bytes": 1697692,
+      "sha256": "98535307c0c30b529cf242d2a947ccacf66678b25710f80de980e13ec4c77975"
+    },
+    {
+      "path": "artifacts/training/phase-control-v1/source/neural_format.py",
+      "bytes": 6240,
+      "sha256": "304897abff22a599e5523ad08492f76d91dde8def54e54497716969602970efa"
+    },
+    {
+      "path": "artifacts/training/phase-control-v1/source/train_network.py",
+      "bytes": 22773,
+      "sha256": "08f8647a375444193303d057f9704f965582760c3d8dcf157178e2704fa65af9"
+    },
+    {
+      "path": "artifacts/training/phase-control-v1/training.json",
+      "bytes": 24399,
+      "sha256": "9b9b107bfa7491ab822f626c3921cdcf6e80c2b2197f80dcf6c75b98f0a6dae4"
+    },
+    {
+      "path": "artifacts/training/phase-output-v1/checkpoint.pt",
+      "bytes": 3399163,
+      "sha256": "4ac698af661da2cf384b3c647727be56eb72a10ac4fafb79775b0c326d68ab13"
+    },
+    {
+      "path": "artifacts/training/phase-output-v1/model.ann",
+      "bytes": 1697948,
+      "sha256": "037f06f436437a50ada9c2ced14d6c1a960fb127dd7d1122dd01defb2029416e"
+    },
+    {
+      "path": "artifacts/training/phase-output-v1/source/neural_format.py",
+      "bytes": 6240,
+      "sha256": "304897abff22a599e5523ad08492f76d91dde8def54e54497716969602970efa"
+    },
+    {
+      "path": "artifacts/training/phase-output-v1/source/train_network.py",
+      "bytes": 22773,
+      "sha256": "08f8647a375444193303d057f9704f965582760c3d8dcf157178e2704fa65af9"
+    },
+    {
+      "path": "artifacts/training/phase-output-v1/training.json",
+      "bytes": 24395,
+      "sha256": "f165af10608afb2cc90a100d705602b8fb116dc9cc25632742f41170524999e3"
+    },
+    {
+      "path": "artifacts/validation/phase-bench7.txt",
+      "bytes": 739,
+      "sha256": "94ba9a752f79a2458994bcdcac5f159699da0f88c05eeb4f4855de3dbbebe87b"
+    },
+    {
+      "path": "artifacts/validation/phase-build-final.txt",
+      "bytes": 367,
+      "sha256": "94da83985f47384b00bf077210e0de1c690aac32840a1280137be947d8dfd25b"
+    },
+    {
+      "path": "artifacts/validation/phase-build.txt",
+      "bytes": 367,
+      "sha256": "fb68b1d7b2042aadddfa7816d2a46dfd0b4e38f281d8c44b6ee90fe9a3755e57"
+    },
+    {
+      "path": "artifacts/validation/phase-candidate-endgames-5000nodes.txt",
+      "bytes": 29,
+      "sha256": "ef4e645f8ea67b03b31bbb891a18f192680d3ff359c2bd10e014b1541b2db39b"
+    },
+    {
+      "path": "artifacts/validation/phase-candidate-network.json",
+      "bytes": 4446,
+      "sha256": "538af78753746febd01070de4c47fdee21ce20dc4c64b5fe707059925132907e"
+    },
+    {
+      "path": "artifacts/validation/phase-candidate-network.txt",
+      "bytes": 2484,
+      "sha256": "6edc5bb06359ea0bca7af33e56f81219c0826674862452c354c378cb3b13ac5d"
+    },
+    {
+      "path": "artifacts/validation/phase-candidate-rules.json",
+      "bytes": 630,
+      "sha256": "82a87408da924a7959970f8a6fcc122bf22b48797158d9077610718e4c02711e"
+    },
+    {
+      "path": "artifacts/validation/phase-candidate-rules.txt",
+      "bytes": 569,
+      "sha256": "f2d871cebb9ba46201d01c5dc773bdccc4a266268c88ea0119a8fdbf1e478e13"
+    },
+    {
+      "path": "artifacts/validation/phase-candidate-tactics-5000nodes.txt",
+      "bytes": 29,
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/phase-candidate-tactics-depth8.txt",
+      "bytes": 29,
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/phase-candidate-tactics-quiet-5000nodes.txt",
+      "bytes": 29,
+      "sha256": "42def545db2a70966cb6bc37906897a006ce19db515c280022a24195ce77c43f"
+    },
+    {
+      "path": "artifacts/validation/phase-candidate-tactics-quiet-depth8.txt",
+      "bytes": 29,
+      "sha256": "6337b334be0c058fb1bf16f4a73c3d5db90443d425f7a0e635d6eb5fd21b2611"
+    },
+    {
+      "path": "artifacts/validation/phase-ci-source.json",
+      "bytes": 16656,
+      "sha256": "d05e375af2fee85f42a95da5f3cfad025fd94d8fbed4b6f0665c0598ad18ccc1"
+    },
+    {
+      "path": "artifacts/validation/phase-classical-100ms-audit.json",
+      "bytes": 3229,
+      "sha256": "54e851c0624208e30d588c50e7ab34b7effa285f9f023af8462448a4bbefa7b6"
+    },
+    {
+      "path": "artifacts/validation/phase-classical-30ms-audit.json",
+      "bytes": 3229,
+      "sha256": "b9875a154734524e303da57b1466562c2423c27dde7dab50dac0eea0da31689a"
+    },
+    {
+      "path": "artifacts/validation/phase-control-30ms-audit.json",
+      "bytes": 3229,
+      "sha256": "a8267ce2e24965c1a0222be66a7667ab441f90b679556b264b8097607974e4c4"
+    },
+    {
+      "path": "artifacts/validation/phase-control-endgames-5000nodes.txt",
+      "bytes": 29,
+      "sha256": "ef4e645f8ea67b03b31bbb891a18f192680d3ff359c2bd10e014b1541b2db39b"
+    },
+    {
+      "path": "artifacts/validation/phase-control-network.json",
+      "bytes": 4448,
+      "sha256": "63afad8fbc1d61ac35e998d88b5b5d66226d4341bfa8847dd17bf2e01c532af8"
+    },
+    {
+      "path": "artifacts/validation/phase-control-network.txt",
+      "bytes": 2486,
+      "sha256": "fb79771986e8cd7d15707b1bd71fc55b840f5361a343676a5ec82f2772109f0b"
+    },
+    {
+      "path": "artifacts/validation/phase-control-rules.json",
+      "bytes": 631,
+      "sha256": "783e8ac9af4555c9059f9f63821166c99d8ded0aa3afe6557613ace7f74b734e"
+    },
+    {
+      "path": "artifacts/validation/phase-control-rules.txt",
+      "bytes": 570,
+      "sha256": "297fa7cf950f693d2ad638b2a14fed643a8f4fa455a555c14bdb5437de872dfe"
+    },
+    {
+      "path": "artifacts/validation/phase-control-tactics-5000nodes.txt",
+      "bytes": 29,
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/phase-control-tactics-depth8.txt",
+      "bytes": 29,
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/phase-control-tactics-quiet-5000nodes.txt",
+      "bytes": 29,
+      "sha256": "d50b25143c7ac31fbccc50e3d9333de6623c07eb45801491314bd2cba77f6fc7"
+    },
+    {
+      "path": "artifacts/validation/phase-control-tactics-quiet-depth8.txt",
+      "bytes": 29,
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/phase-default-comparison.txt",
+      "bytes": 180,
+      "sha256": "07ba3a2cdcc57e36346e6ff3e992f05ffd4da9d43a582895df41340770251899"
+    },
+    {
+      "path": "artifacts/validation/phase-default-rules.json",
+      "bytes": 540,
+      "sha256": "fd4bc44146a50e3f3fd0c6ad622a4f10e62674077a89206eefc0447bb09126d5"
+    },
+    {
+      "path": "artifacts/validation/phase-default-rules.txt",
+      "bytes": 479,
+      "sha256": "aa75a03b880e6a04c3106df9c6dc881979b21f0d10d4150d2b4d933108a8b142"
+    },
+    {
+      "path": "artifacts/validation/phase-engine-tests.txt",
+      "bytes": 3245,
+      "sha256": "2783df7655274a114172493e5ad2cb8ad8acb6a374f35eed74579e9b2dc6cfd2"
+    },
+    {
+      "path": "artifacts/validation/phase-final-source-check.json",
+      "bytes": 2070,
+      "sha256": "b626384dc3d20bd7c91a7192217b8e7f849530a370b6f98f09b7e21905752e5b"
+    },
+    {
+      "path": "artifacts/validation/phase-final-tests.txt",
+      "bytes": 3244,
+      "sha256": "57b1f157f73f7c2401e1f3ca4c994e5fe240cadbb0d08cd586ee83036760506c"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-1-vector.json",
+      "bytes": 579,
+      "sha256": "568461303172130f01657b4f0f1863ba4958756b935ba865a0365b421ceb9400"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-1.ann",
+      "bytes": 26204,
+      "sha256": "d49cfbac1caaf644e4335e9a1f2c50de27423c8599e89a4c355c7b9870725bec"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-10-scalar.json",
+      "bytes": 580,
+      "sha256": "95b24359d884df6c44f732b617d7b7ee78330e05fe283640509024b2e04c8e43"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-10-vector.json",
+      "bytes": 580,
+      "sha256": "95b24359d884df6c44f732b617d7b7ee78330e05fe283640509024b2e04c8e43"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-10.ann",
+      "bytes": 444092,
+      "sha256": "047c8643ae23f4f4c83fe337005f251657459cb2c14afe15e6597aa24b03284c"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-11-scalar.json",
+      "bytes": 580,
+      "sha256": "2ca46fd7777cfc8f4915a2f74ffc87a2e73baebc6a9f3c338ae241e8966d3775"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-11-vector.json",
+      "bytes": 580,
+      "sha256": "2ca46fd7777cfc8f4915a2f74ffc87a2e73baebc6a9f3c338ae241e8966d3775"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-11.ann",
+      "bytes": 6713372,
+      "sha256": "8c844d238134b8ecea63f4bb442005c9f2814acf784704b7b1d3a6285c218f72"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-2-vector.json",
+      "bytes": 579,
+      "sha256": "449d886d6c9f72d4f058ec7028fc00e4af15837a0668ea8083112f609dab1097"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-2.ann",
+      "bytes": 26204,
+      "sha256": "04375c2b513e74273e0630a3fbd827ece4e76d699f306647b8d2d3358066c6b2"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-3-vector.json",
+      "bytes": 579,
+      "sha256": "bdf5435e8d2f01c259b8b8476a998e8219cb0c172caba16e26cf2ec172baa166"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-3.ann",
+      "bytes": 443996,
+      "sha256": "a009c80a6803e70e0116b56a4e9b01b998c4a3b7714595790ae47592073f3b31"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-4-vector.json",
+      "bytes": 579,
+      "sha256": "22476a4200a7ad51b57040eef4cfc069b54e12b2330cd8945c51b308878f96e9"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-4.ann",
+      "bytes": 443996,
+      "sha256": "cc82fcbdf95b7672019ca15c44fe6e6b9354b0855455cd6b6f59fa925a4b2984"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-5-vector.json",
+      "bytes": 579,
+      "sha256": "bed268eb2630dcfc8a7713cd3d771e1536de49a2d0b0feffd02b46a50816bb02"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-5.ann",
+      "bytes": 444028,
+      "sha256": "2feb44e65ded1fb3e3f3f521cae25b9a064ce47e3fc33316e9bff5973c661e3a"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-6-vector.json",
+      "bytes": 579,
+      "sha256": "15a90d8b1fef985d6130a26274423a14920dbc322663662e7deb059a8771a71b"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-6.ann",
+      "bytes": 444028,
+      "sha256": "cafac96bee350e5c35efb94af0eb03486c02012e805970ae93b8f6e9a78e28cf"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-7-vector.json",
+      "bytes": 579,
+      "sha256": "79d4f63739efc45b813f6604adc0c0c8ec7d6806e1d301cdc018a91531e3610e"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-7.ann",
+      "bytes": 444028,
+      "sha256": "3775c0689991bf861c3500c6cc2346f6feacd41671f09633b686736deca195b6"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-8-vector.json",
+      "bytes": 579,
+      "sha256": "881c7317ea7dd625ff776c9c85da08750625756a54e30fd307a5d238d087066f"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-8.ann",
+      "bytes": 444028,
+      "sha256": "461d74af2d6742177f2a75a8a62a81bbe6278f5875c4992292220c4f0247e8ac"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-9-scalar.json",
+      "bytes": 579,
+      "sha256": "0f65bb1a619b9f7bd4f9d6b20807a59e4a5fef4c7215298d78f17bf680118798"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-9-vector.json",
+      "bytes": 579,
+      "sha256": "0f65bb1a619b9f7bd4f9d6b20807a59e4a5fef4c7215298d78f17bf680118798"
+    },
+    {
+      "path": "artifacts/validation/phase-format-v1/format-9.ann",
+      "bytes": 444092,
+      "sha256": "ff588cd4fbba042cbcac04d31f71f183ed85d465f183f46349624c1ed440c2ad"
+    },
+    {
+      "path": "artifacts/validation/phase-formats.json",
+      "bytes": 4331,
+      "sha256": "07ee3bb22c87a94c014f52da7a07a4f0f6af6615668f5d9314595fb0ca06ca85"
+    },
+    {
+      "path": "artifacts/validation/phase-formats.txt",
+      "bytes": 68,
+      "sha256": "14726cb6064ac17d620c38912369322f6b3b3df5c47abc11bde6ea37fbcc63ea"
+    },
+    {
+      "path": "artifacts/validation/phase-opening-preparation.txt",
+      "bytes": 354,
+      "sha256": "6d399540f7aad839e6565120412c358253585afd4c03046d3bce470d68b345a7"
+    },
+    {
+      "path": "artifacts/validation/phase-parent-audit.json",
+      "bytes": 3229,
+      "sha256": "a08411c9426553850e18891f40cc9833be51d840040ee5cb470e297e98b4791b"
+    },
+    {
+      "path": "artifacts/validation/phase-partial-preservation-refusal.txt",
+      "bytes": 868,
+      "sha256": "824da5cf19b009aa9166c9f074fa2beaacb8ff4d85b1f4174ec4e2016971f55b"
+    },
+    {
+      "path": "artifacts/validation/phase-preflight.json",
+      "bytes": 2613,
+      "sha256": "dda05404a4517429f46a74886a17472663c9f2112326185d54dbc1ea76370f6d"
+    },
+    {
+      "path": "artifacts/validation/phase-publish.txt",
+      "bytes": 80,
+      "sha256": "d0f2189d43803cb87a9184b2a3e56ef8d56f1021b30ce206e1e95847c5c1c975"
+    },
+    {
+      "path": "artifacts/validation/phase-training-candidate.txt",
+      "bytes": 1801,
+      "sha256": "f491a404686eee5c78d425ddd69c328d72bf937def8cace3883030dd196f51e1"
+    },
+    {
+      "path": "artifacts/validation/phase-training-control.txt",
+      "bytes": 1807,
+      "sha256": "e01832b581a9c52f6c5c960636db497aea3a708a6669dda826f3ed9db38b9c8d"
+    },
+    {
+      "path": "tests/fixtures/phase-classical-100ms-v1.json",
+      "bytes": 9788,
+      "sha256": "3b01d69ec7c31e2e5991b81ebb5860024b4393cb42d91c8a84db69ff20dacffc"
+    },
+    {
+      "path": "tests/fixtures/phase-classical-30ms-v1.json",
+      "bytes": 15162,
+      "sha256": "3efc264b68683bd961a269679ecb493ccd53888651e5a767b34b66a7c0f5e3e1"
+    },
+    {
+      "path": "tests/fixtures/phase-control-30ms-v1.json",
+      "bytes": 15183,
+      "sha256": "f29fbb72d1d3696bff82ff4630bc51b37d6148af3350e0b265509e96aab30758"
+    },
+    {
+      "path": "tests/fixtures/phase-parent-v1.json",
+      "bytes": 30205,
+      "sha256": "35fd8dc040ab40538966d73d0f9c54d38ce490175e90fba10c9cf4c82363063f"
+    }
+  ],
+  "games": 128,
+  "decision": {
+    "schema": 1,
+    "plan_sha256": "dd492b81550765016389854558f02d755559d9b3c9961eb6e800a57014c39101",
+    "assessor_sha256": "96f507af973b4e3a49ec5f94ad884c16f349db6c9dc25406ff73209ea041bd12",
+    "results": {
+      "classical-30ms": {
+        "games": 64,
+        "wins": 15,
+        "draws": 19,
+        "losses": 30,
+        "unresolved": 0,
+        "forfeits": 0,
+        "score": 0.3828125,
+        "primary_95_percent_family_interval": [
+          0.27419354838709675,
+          0.49193548387096775
+        ],
+        "families": 31,
+        "report_sha256": "49bc8aa4d1db4108ccad88da510ca79983718b852794fce78ffb2103dc0b2211",
+        "pgn_sha256": "4125a8170ab8b0d90571f96421e284eb66d8c51e7f59baa3f34d01385c545e11",
+        "audit_sha256": "29418a71989a1153e0fc62b72d4ab6120356a987c7f11f31437d7476cda2364b"
+      },
+      "control-30ms": {
+        "games": 64,
+        "wins": 26,
+        "draws": 25,
+        "losses": 13,
+        "unresolved": 0,
+        "forfeits": 0,
+        "score": 0.6015625,
+        "primary_95_percent_family_interval": [
+          0.525,
+          0.6742424242424242
+        ],
+        "families": 28,
+        "report_sha256": "2001d3b36ec38072ae898f582ed101cd689938a6166e13bdf4a67a61e46a6ec8",
+        "pgn_sha256": "fd000c976b0a85b07b4e7bce6761908992ef01d36a25513175def3c5522bfba1",
+        "audit_sha256": "032f92cdb82371253808c1a93139dedb877f8be002285c347b7a213b8100a55b"
+      }
+    },
+    "gates": {
+      "correctness": true,
+      "tactics": false,
+      "classical_short": false,
+      "control_short": true,
+      "short_zero_unresolved_forfeits": true
+    },
+    "failed_gates": [
+      "tactics",
+      "classical_short"
+    ],
+    "eligible_for_long_confirmation": false,
+    "eligible_for_promotion": false,
+    "interpretation": "Predeclared architecture screen only. No Elo inferred and no Stockfish superiority. Failed tactics or confidence gates keep the neural model experimental; classical default retained."
+  },
+  "interpretation": "Complete fixed-budget phase architecture ablation, source/binaries/models/data/checkpoints/diagnostics and independently audited PGNs. All hashes recomputed. No public Elo or Stockfish superiority inferred."
+}

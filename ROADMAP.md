@@ -180,6 +180,17 @@ Neither qualifies for the predeclared longer confirmation. Retain this optional
 training objective; investigate tactical feature and label coverage next.
 See `docs/PAIR-LOSS.md`. The classical default is unchanged.
 
+Phase-conditioned turn-aware output (formats 9/10) passes 53 engine tests and
+7,350 independent inference comparisons. A matched training control reproduces
+the earlier model exactly; shared initial weights/RNG, data and budgets match.
+The phase model's 128 audited paired games score 60.16% against that control
+(95% family interval 52.50%..67.42%), but only 38.28% against classical 0.7.6
+(27.42%..49.19%) and lose two quiet depth-eight tactics. Both promotion gates
+fail; longer confirmation is skipped, with 16 reserved pairs unused. This
+limited neural ablation improvement does not establish broad strength.
+See `docs/PHASE-OUTPUT.md`. Broaden stable endgame supervision and feature
+interactions separately; preserve the classical default and fresh confirmation.
+
 Next, extend feature interactions and the reproducible data pipeline using
 diverse legal self-play positions and scored outcomes or explicitly documented
 teacher labels. Partition by game to avoid train/test leakage; remove duplicate

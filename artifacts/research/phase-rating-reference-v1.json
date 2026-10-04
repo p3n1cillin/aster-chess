@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "timestamp_utc": "2026-10-04T17:55:27.293701+00:00",
+  "status": "last measured reference retained; optional phase neural candidate unrated",
+  "public_elo": null,
+  "last_measured_local_rating": 2319.019359271422,
+  "primary_95_percent_local_interval": [
+    2277.370617879139,
+    2360.3589099588767
+  ],
+  "local_scale": "SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash",
+  "rated_engine": "artifacts/publish/q-evasion-dev/Aster.dll",
+  "rated_engine_sha256": "a3994e4f350b2cfa261db5edc1e4ae5c332d85d4b3eaf34c0730267f3603d9a0",
+  "rated_version": "Aster 0.7.6-q-evasion-dev",
+  "reference_record": {
+    "path": "artifacts/ratings/session-20261004-q-evasion-confirmation.json",
+    "sha256": "78eeab42081af15787be31f35b9307143355c0b55a93119b741e7f95e81ca736"
+  },
+  "candidate_sha256": "ea5ba189628bf12c597620438563e323aed1306a2426bc91ec82f6a72f4f85ff",
+  "failed_gates": [
+    "tactics",
+    "classical_short"
+  ],
+  "candidate_general_regression": {
+    "classical-30ms": {
+      "games": 64,
+      "wins": 15,
+      "draws": 19,
+      "losses": 30,
+      "unresolved": 0,
+      "forfeits": 0,
+      "score": 0.3828125,
+      "primary_95_percent_family_interval": [
+        0.27419354838709675,
+        0.49193548387096775
+      ],
+      "families": 31,
+      "report_sha256": "49bc8aa4d1db4108ccad88da510ca79983718b852794fce78ffb2103dc0b2211",
+      "pgn_sha256": "4125a8170ab8b0d90571f96421e284eb66d8c51e7f59baa3f34d01385c545e11",
+      "audit_sha256": "29418a71989a1153e0fc62b72d4ab6120356a987c7f11f31437d7476cda2364b"
+    },
+    "control-30ms": {
+      "games": 64,
+      "wins": 26,
+      "draws": 25,
+      "losses": 13,
+      "unresolved": 0,
+      "forfeits": 0,
+      "score": 0.6015625,
+      "primary_95_percent_family_interval": [
+        0.525,
+        0.6742424242424242
+      ],
+      "families": 28,
+      "report_sha256": "2001d3b36ec38072ae898f582ed101cd689938a6166e13bdf4a67a61e46a6ec8",
+      "pgn_sha256": "fd000c976b0a85b07b4e7bce6761908992ef01d36a25513175def3c5522bfba1",
+      "audit_sha256": "032f92cdb82371253808c1a93139dedb877f8be002285c347b7a213b8100a55b"
+    }
+  },
+  "reason": "Phase candidate beats its matched neural control in a limited short screen but loses quiet tactics and scores below frozen classical play. No promotion, conditional longer confirmation skipped,16 reserved opening pairs unused. No Elo inferred; preserve exact earlier rated binary and local uncertainty.",
+  "candidate_model_sha256": "037f06f436437a50ada9c2ced14d6c1a960fb127dd7d1122dd01defb2029416e"
+}

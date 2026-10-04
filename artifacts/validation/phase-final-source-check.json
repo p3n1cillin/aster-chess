@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "source_files": [
+    {
+      "path": "Aster.sln",
+      "same": true
+    },
+    {
+      "path": "Directory.Build.props",
+      "same": true
+    },
+    {
+      "path": "global.json",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Attacks.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Board.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/EndgameProof.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Evaluation.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/KpkBitbase.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/MajorMateBitbase.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Move.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/NeuralNetwork.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Perft.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Program.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Search.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/SearchProfile.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/StaticExchange.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/ThreatEvaluation.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/TranspositionTable.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Uci.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Zobrist.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Engine.csproj",
+      "same": true
+    },
+    {
+      "path": "tests/Engine.Tests/Program.cs",
+      "same": true
+    },
+    {
+      "path": "tests/Engine.Tests/Engine.Tests.csproj",
+      "same": true
+    }
+  ],
+  "binary_sha256": "ea5ba189628bf12c597620438563e323aed1306a2426bc91ec82f6a72f4f85ff",
+  "tests_reused": "53 tests,2614 classical rule checks and80 identical default depth8 comparisons: exact source unchanged; no rebuild or adopted model"
+}

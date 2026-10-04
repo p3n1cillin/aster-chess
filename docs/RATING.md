@@ -28,6 +28,14 @@ conditional rating is skipped; 128 reserved openings remain unused. The
 exact 0.7.6-q-evasion estimate above. No Elo is inferred from the two slightly
 positive baseline-regression point scores or reduced fixed-depth work.
 
+The subsequent **0.7.8-phase-dev** inference build and optional phase model
+complete 128 audited architecture-screen games. The model beats its matched
+neural control but fails quiet tactics and scores below frozen classical play.
+It remains experimental, and conditional longer confirmation is skipped.
+The [phase session record](../artifacts/ratings/session-20261004-phase.json)
+retains the same exact measured 0.7.6-q-evasion reference; neither the new DLL
+nor its model receives an Elo estimate from these regression games.
+
 The frozen ordinary **Aster 0.7.4-feature-dev** has a provisional local estimate
 of **2300**, with a **95% opening-family interval of 2265..2335**, on the
 **SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash** scale.
