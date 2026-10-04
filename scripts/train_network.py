@@ -90,6 +90,19 @@ def objective(prediction: torch.Tensor, target: torch.Tensor) -> torch.Tensor:
         + .01 * nn.functional.smooth_l1_loss(prediction, target, beta=1)
 
 
+def validation_split(games: list[int], seed: int, path: str | None) -> tuple[set[int], dict | None]:
+    if path is None:
+        return set(random.Random(seed).sample(games, max(1, len(games) // 10))), None
+    source = pathlib.Path(path)
+    raw = json.loads(source.read_text(encoding="utf-8"))
+    selected = raw.get("validation_games") if isinstance(raw, dict) else raw
+    if not isinstance(selected, list) or not selected or any(type(game) is not int for game in selected):
+        raise ValueError("Fixed validation games must be a nonempty list of integer IDs")
+    if len(set(selected)) != len(selected) or not set(selected) < set(games):
+        raise ValueError("Fixed validation IDs must be unique, present, and leave training games")
+    return set(selected), {"path": str(source.resolve()), "sha256": hashlib.sha256(source.read_bytes()).hexdigest()}
+
+
 def turn_pairs(rows: list[dict], validation_games: set) -> tuple[list, list]:
     """Return white/black row pairs, retaining the original whole-game split."""
     parents = {row["fen"]: i for i, row in enumerate(rows) if not row.get("counterfactual_turn")}
@@ -122,6 +135,7 @@ def main() -> None:
     parser.add_argument("--learning-rate", type=float, default=.002)
     parser.add_argument("--threads", type=int, default=4)
     parser.add_argument("--seed", type=int, default=20261003)
+    parser.add_argument("--validation-games", help="Frozen JSON list or object with validation_games; whole-game split")
     parser.add_argument("--classical-base", action="store_true", help="Learn bounded corrections on the frozen classical evaluator")
     parser.add_argument("--king-context", action="store_true", help="Add own-king-region conditioned piece features")
     parser.add_argument("--turn-output", action="store_true", help="Learn separate moving/opponent perspective output weights; requires king context")
@@ -184,8 +198,7 @@ def main() -> None:
     tempo = torch.tensor([row["classical_white_cp"] / 100 if args.classical_base
                           else (.12 if row["fen"].split()[1] == "w" else -.12) for row in rows])
     games = sorted({row["game"] for row in rows})
-    rng = random.Random(args.seed)
-    validation_games = set(rng.sample(games, max(1, len(games) // 10)))
+    validation_games, split_provenance = validation_split(games, args.seed, args.validation_games)
     validation_indices, training_indices = [], []
     canonical: set[str] = set()
     for i, row in enumerate(rows):
@@ -218,6 +231,8 @@ def main() -> None:
     for tensor in (model.linear.weight, model.transformer.weight, model.bias, model.output[:args.hidden * (2 if args.turn_output else 1)]):
         initial_shared.update(tensor.detach().numpy().tobytes())
     initial_rng_sha256 = hashlib.sha256(torch.get_rng_state().numpy().tobytes()).hexdigest()
+    initial_state = hashlib.sha256()
+    for tensor in model.state_dict().values(): initial_state.update(tensor.detach().numpy().tobytes())
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate, weight_decay=1e-5)
 
     def evaluate(indices: torch.Tensor) -> dict:
@@ -254,6 +269,7 @@ def main() -> None:
     best_weights = copy.deepcopy(model.state_dict())
     best_epoch = 0
     history = []
+    batch_fingerprints = []
     print(json.dumps({"initial_validation": initial, "initial_activation": initial_activation, "training_positions": len(training), "validation_positions": len(validation)}), flush=True)
     for epoch in range(1, args.epochs + 1):
         shuffled = training[torch.randperm(len(training))]
@@ -262,6 +278,9 @@ def main() -> None:
         pair_batches = []
         if len(pair_training):
             pair_batches = list(pair_training[torch.randperm(len(pair_training))].split(max(1, args.batch_size // 4)))
+        batch_digest = hashlib.sha256(shuffled.numpy().tobytes())
+        for pairs in pair_batches: batch_digest.update(pairs.numpy().tobytes())
+        batch_fingerprints.append(batch_digest.hexdigest())
         for batch_number, batch in enumerate(shuffled.split(args.batch_size)):
             optimizer.zero_grad(set_to_none=True)
             prediction = model(white[batch], black[batch], tempo[batch], turn[batch], phase[batch])
@@ -313,6 +332,7 @@ def main() -> None:
               "dataset_sha256": data_digest, "model_sha256": model_digest, "source_files": source_manifest,
               "architecture": f"shared {features}->H clipped ReLU with linear term; king_context={args.king_context}; turn_output={args.turn_output}; squared_activation={args.squared_activation}; phase_output={args.phase_output}",
               "initial_shared_sha256": initial_shared.hexdigest(), "initial_rng_sha256": initial_rng_sha256,
+              "initial_state_sha256": initial_state.hexdigest(), "epoch_batch_sha256": batch_fingerprints,
               "phase_validation": [{"phase_range": [low, high], "positions": int(((phase[validation].numpy() >= low) & (phase[validation].numpy() <= high)).sum()),
                   "quantized_mae_cp": float(np.abs(qp - yt)[(phase[validation].numpy() >= low) & (phase[validation].numpy() <= high)].mean())
                   if ((phase[validation].numpy() >= low) & (phase[validation].numpy() <= high)).any() else None}
@@ -338,6 +358,10 @@ def main() -> None:
         "heldout_pairs": len(pair_validation), "pair_batch_size": max(1, args.batch_size // 4),
         "selected_validation": evaluate_pairs(), "selection": "Ordinary held-out position loss only; pair diagnostics do not select epochs."}
     report["residual_cap_cp"] = 250 if args.classical_base else None
+    if split_provenance is not None:
+        if hashlib.sha256(pathlib.Path(args.validation_games).read_bytes()).hexdigest() != split_provenance["sha256"]:
+            raise ValueError("Fixed validation split changed during training")
+        report["fixed_split"] = split_provenance
     (output / "training.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({key: report[key] for key in ("selected_epoch", "quantized_validation_mae_cp", "quantization_mae_cp", "seconds")}), flush=True)
 
