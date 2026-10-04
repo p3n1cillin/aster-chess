@@ -1,0 +1,679 @@
+{"source_games": 1, "positions_written": 4, "buckets": [4, 0, 0, 0], "seconds": 0.98}
+{"queried": 128, "accepted_candidates": 30, "buckets": [12, 0, 17, 1], "games": 15, "seconds": 7.83}
+{"source_games": 26, "positions_written": 42, "buckets": [12, 0, 25, 5], "seconds": 10.96}
+{"queried": 256, "accepted_candidates": 63, "buckets": [13, 1, 35, 14], "games": 34, "seconds": 14.82}
+{"queried": 384, "accepted_candidates": 84, "buckets": [19, 2, 46, 17], "games": 49, "seconds": 21.12}
+{"source_games": 51, "positions_written": 85, "buckets": [19, 2, 46, 18], "seconds": 21.77}
+{"queried": 512, "accepted_candidates": 117, "buckets": [20, 5, 66, 26], "games": 70, "seconds": 28.71}
+{"source_games": 76, "positions_written": 138, "buckets": [22, 5, 79, 32], "seconds": 32.12}
+{"queried": 640, "accepted_candidates": 152, "buckets": [22, 5, 92, 33], "games": 80, "seconds": 35.12}
+{"source_games": 101, "positions_written": 182, "buckets": [29, 10, 101, 42], "seconds": 41.73}
+{"queried": 768, "accepted_candidates": 184, "buckets": [31, 10, 101, 42], "games": 101, "seconds": 42.32}
+{"queried": 896, "accepted_candidates": 221, "buckets": [40, 13, 121, 47], "games": 114, "seconds": 48.92}
+{"source_games": 126, "positions_written": 226, "buckets": [40, 14, 124, 48], "seconds": 51.45}
+{"queried": 1024, "accepted_candidates": 251, "buckets": [42, 18, 142, 49], "games": 138, "seconds": 56.2}
+{"source_games": 151, "positions_written": 284, "buckets": [46, 18, 165, 55], "seconds": 62.2}
+{"queried": 1152, "accepted_candidates": 289, "buckets": [46, 18, 170, 55], "games": 155, "seconds": 63.58}
+{"queried": 1280, "accepted_candidates": 319, "buckets": [58, 21, 178, 62], "games": 173, "seconds": 70.76}
+{"source_games": 176, "positions_written": 322, "buckets": [58, 21, 180, 63], "seconds": 71.61}
+{"queried": 1408, "accepted_candidates": 347, "buckets": [58, 22, 194, 73], "games": 183, "seconds": 77.22}
+{"source_games": 201, "positions_written": 371, "buckets": [63, 23, 208, 77], "seconds": 83.81}
+{"queried": 1536, "accepted_candidates": 373, "buckets": [63, 23, 208, 79], "games": 213, "seconds": 85.67}
+{"source_games": 226, "positions_written": 384, "buckets": [63, 24, 215, 82], "seconds": 89.48}
+{"queried": 1664, "accepted_candidates": 392, "buckets": [63, 24, 217, 88], "games": 234, "seconds": 92.47}
+{"queried": 1792, "accepted_candidates": 428, "buckets": [68, 30, 238, 92], "games": 247, "seconds": 99.53}
+{"source_games": 251, "positions_written": 445, "buckets": [68, 34, 248, 95], "seconds": 102.83}
+{"queried": 1920, "accepted_candidates": 459, "buckets": [79, 34, 251, 95], "games": 264, "seconds": 106.47}
+{"source_games": 276, "positions_written": 464, "buckets": [79, 34, 256, 95], "seconds": 110.57}
+{"queried": 2048, "accepted_candidates": 479, "buckets": [80, 34, 267, 98], "games": 282, "seconds": 113.58}
+{"queried": 2176, "accepted_candidates": 505, "buckets": [89, 34, 277, 105], "games": 295, "seconds": 120.23}
+{"source_games": 301, "positions_written": 521, "buckets": [89, 34, 287, 111], "seconds": 123.43}
+{"queried": 2304, "accepted_candidates": 546, "buckets": [89, 34, 310, 113], "games": 308, "seconds": 127.15}
+{"source_games": 326, "positions_written": 567, "buckets": [89, 35, 324, 119], "seconds": 134.49}
+{"queried": 2432, "accepted_candidates": 568, "buckets": [89, 35, 324, 120], "games": 327, "seconds": 134.72}
+{"queried": 2560, "accepted_candidates": 603, "buckets": [94, 39, 348, 122], "games": 340, "seconds": 141.73}
+{"source_games": 351, "positions_written": 617, "buckets": [94, 43, 357, 123], "seconds": 145.13}
+{"queried": 2688, "accepted_candidates": 635, "buckets": [98, 43, 365, 129], "games": 361, "seconds": 148.97}
+{"source_games": 376, "positions_written": 656, "buckets": [98, 44, 378, 136], "seconds": 154.48}
+{"queried": 2816, "accepted_candidates": 667, "buckets": [99, 45, 385, 138], "games": 380, "seconds": 156.31}
+{"source_games": 401, "positions_written": 704, "buckets": [104, 48, 401, 151], "seconds": 163.41}
+{"queried": 2944, "accepted_candidates": 707, "buckets": [104, 48, 401, 154], "games": 403, "seconds": 164.29}
+{"queried": 3072, "accepted_candidates": 729, "buckets": [104, 54, 407, 164], "games": 419, "seconds": 171.07}
+{"source_games": 426, "positions_written": 735, "buckets": [104, 56, 411, 164], "seconds": 173.33}
+{"queried": 3200, "accepted_candidates": 763, "buckets": [110, 57, 431, 165], "games": 437, "seconds": 178.3}
+{"source_games": 451, "positions_written": 779, "buckets": [118, 57, 436, 168], "seconds": 182.93}
+{"queried": 3328, "accepted_candidates": 794, "buckets": [118, 57, 447, 172], "games": 454, "seconds": 185.3}
+{"source_games": 476, "positions_written": 808, "buckets": [122, 58, 450, 178], "seconds": 190.67}
+{"queried": 3456, "accepted_candidates": 814, "buckets": [122, 58, 452, 182], "games": 482, "seconds": 192.67}
+{"queried": 3584, "accepted_candidates": 856, "buckets": [133, 66, 468, 189], "games": 499, "seconds": 199.83}
+{"source_games": 501, "positions_written": 859, "buckets": [133, 66, 471, 189], "seconds": 200.15}
+{"queried": 3712, "accepted_candidates": 894, "buckets": [144, 68, 490, 192], "games": 517, "seconds": 206.96}
+{"source_games": 526, "positions_written": 905, "buckets": [144, 68, 499, 194], "seconds": 210.81}
+{"queried": 3840, "accepted_candidates": 916, "buckets": [144, 71, 504, 197], "games": 529, "seconds": 213.29}
+{"source_games": 551, "positions_written": 938, "buckets": [151, 74, 515, 198], "seconds": 219.13}
+{"queried": 3968, "accepted_candidates": 946, "buckets": [154, 74, 517, 201], "games": 556, "seconds": 220.91}
+{"source_games": 576, "positions_written": 977, "buckets": [163, 74, 530, 210], "seconds": 227.71}
+{"queried": 4096, "accepted_candidates": 982, "buckets": [163, 75, 534, 210], "games": 576, "seconds": 228.46}
+{"queried": 4224, "accepted_candidates": 1025, "buckets": [170, 87, 552, 216], "games": 590, "seconds": 235.52}
+{"source_games": 601, "positions_written": 1050, "buckets": [173, 88, 571, 218], "seconds": 239.79}
+{"queried": 4352, "accepted_candidates": 1065, "buckets": [177, 88, 578, 222], "games": 609, "seconds": 242.71}
+{"queried": 4480, "accepted_candidates": 1088, "buckets": [178, 89, 592, 229], "games": 617, "seconds": 248.83}
+{"source_games": 626, "positions_written": 1112, "buckets": [186, 89, 605, 232], "seconds": 252.85}
+{"queried": 4608, "accepted_candidates": 1122, "buckets": [186, 90, 610, 236], "games": 642, "seconds": 256.55}
+{"source_games": 651, "positions_written": 1125, "buckets": [187, 90, 612, 236], "seconds": 258.94}
+{"queried": 4736, "accepted_candidates": 1142, "buckets": [187, 98, 618, 239], "games": 669, "seconds": 264.14}
+{"source_games": 676, "positions_written": 1151, "buckets": [187, 98, 624, 242], "seconds": 266.25}
+{"source_games": 701, "positions_written": 1165, "buckets": [190, 98, 630, 247], "seconds": 271.42}
+{"queried": 4864, "accepted_candidates": 1166, "buckets": [190, 98, 631, 247], "games": 702, "seconds": 271.89}
+{"queried": 4992, "accepted_candidates": 1206, "buckets": [196, 99, 652, 259], "games": 721, "seconds": 278.88}
+{"source_games": 726, "positions_written": 1209, "buckets": [196, 99, 654, 260], "seconds": 280.13}
+{"queried": 5120, "accepted_candidates": 1233, "buckets": [207, 100, 661, 265], "games": 743, "seconds": 285.9}
+{"source_games": 751, "positions_written": 1248, "buckets": [207, 100, 674, 267], "seconds": 289.31}
+{"queried": 5248, "accepted_candidates": 1259, "buckets": [214, 100, 676, 269], "games": 757, "seconds": 292.37}
+{"queried": 5376, "accepted_candidates": 1311, "buckets": [229, 100, 709, 273], "games": 772, "seconds": 299.63}
+{"source_games": 776, "positions_written": 1312, "buckets": [229, 100, 709, 274], "seconds": 300.11}
+{"queried": 5504, "accepted_candidates": 1340, "buckets": [234, 107, 723, 276], "games": 789, "seconds": 306.42}
+{"source_games": 801, "positions_written": 1372, "buckets": [238, 109, 745, 280], "seconds": 312.23}
+{"queried": 5632, "accepted_candidates": 1373, "buckets": [238, 109, 745, 281], "games": 802, "seconds": 313.11}
+{"source_games": 826, "positions_written": 1388, "buckets": [243, 109, 749, 287], "seconds": 320.02}
+{"queried": 5760, "accepted_candidates": 1389, "buckets": [243, 109, 750, 287], "games": 828, "seconds": 320.73}
+{"queried": 5888, "accepted_candidates": 1421, "buckets": [254, 109, 763, 295], "games": 845, "seconds": 327.68}
+{"source_games": 851, "positions_written": 1423, "buckets": [254, 109, 765, 295], "seconds": 328.58}
+{"queried": 6016, "accepted_candidates": 1447, "buckets": [257, 110, 778, 302], "games": 871, "seconds": 334.9}
+{"source_games": 876, "positions_written": 1464, "buckets": [259, 112, 789, 304], "seconds": 337.18}
+{"queried": 6144, "accepted_candidates": 1493, "buckets": [277, 114, 796, 306], "games": 886, "seconds": 341.51}
+{"source_games": 901, "positions_written": 1526, "buckets": [292, 115, 807, 312], "seconds": 347.47}
+{"queried": 6272, "accepted_candidates": 1529, "buckets": [292, 115, 810, 312], "games": 903, "seconds": 348.35}
+{"source_games": 926, "positions_written": 1559, "buckets": [308, 122, 814, 315], "seconds": 354.81}
+{"queried": 6400, "accepted_candidates": 1561, "buckets": [308, 122, 815, 316], "games": 926, "seconds": 355.52}
+{"queried": 6528, "accepted_candidates": 1595, "buckets": [316, 123, 836, 320], "games": 949, "seconds": 362.82}
+{"source_games": 951, "positions_written": 1597, "buckets": [316, 123, 836, 322], "seconds": 363.37}
+{"queried": 6656, "accepted_candidates": 1624, "buckets": [323, 124, 847, 330], "games": 975, "seconds": 370.36}
+{"source_games": 976, "positions_written": 1628, "buckets": [323, 124, 851, 330], "seconds": 371.21}
+{"queried": 6784, "accepted_candidates": 1657, "buckets": [330, 125, 869, 333], "games": 988, "seconds": 376.7}
+{"source_games": 1001, "positions_written": 1692, "buckets": [340, 125, 886, 341], "seconds": 382.73}
+{"queried": 6912, "accepted_candidates": 1693, "buckets": [340, 125, 886, 342], "games": 1001, "seconds": 383.39}
+{"queried": 7040, "accepted_candidates": 1722, "buckets": [343, 130, 903, 346], "games": 1015, "seconds": 389.91}
+{"source_games": 1026, "positions_written": 1731, "buckets": [345, 130, 907, 349], "seconds": 394.08}
+{"queried": 7168, "accepted_candidates": 1745, "buckets": [350, 130, 916, 349], "games": 1038, "seconds": 397.09}
+{"source_games": 1051, "positions_written": 1760, "buckets": [350, 131, 928, 351], "seconds": 400.55}
+{"queried": 7296, "accepted_candidates": 1774, "buckets": [358, 131, 932, 353], "games": 1065, "seconds": 404.72}
+{"source_games": 1076, "positions_written": 1783, "buckets": [358, 131, 938, 356], "seconds": 406.98}
+{"queried": 7424, "accepted_candidates": 1802, "buckets": [363, 131, 949, 359], "games": 1090, "seconds": 412.15}
+{"source_games": 1101, "positions_written": 1806, "buckets": [363, 131, 950, 362], "seconds": 415.09}
+{"queried": 7552, "accepted_candidates": 1821, "buckets": [363, 131, 961, 366], "games": 1108, "seconds": 418.69}
+{"source_games": 1126, "positions_written": 1849, "buckets": [374, 135, 968, 372], "seconds": 424.68}
+{"queried": 7680, "accepted_candidates": 1851, "buckets": [374, 135, 968, 374], "games": 1129, "seconds": 425.86}
+{"queried": 7808, "accepted_candidates": 1881, "buckets": [381, 141, 981, 378], "games": 1144, "seconds": 432.77}
+{"source_games": 1151, "positions_written": 1889, "buckets": [381, 141, 987, 380], "seconds": 434.51}
+{"queried": 7936, "accepted_candidates": 1913, "buckets": [388, 142, 998, 385], "games": 1159, "seconds": 439.55}
+{"queried": 8064, "accepted_candidates": 1950, "buckets": [396, 142, 1019, 393], "games": 1171, "seconds": 446.42}
+{"source_games": 1176, "positions_written": 1958, "buckets": [398, 145, 1021, 394], "seconds": 448.19}
+{"queried": 8192, "accepted_candidates": 1968, "buckets": [403, 145, 1024, 396], "games": 1191, "seconds": 453.42}
+{"source_games": 1201, "positions_written": 1972, "buckets": [403, 145, 1024, 400], "seconds": 459.13}
+{"queried": 8320, "accepted_candidates": 1972, "buckets": [403, 145, 1024, 400], "games": 1202, "seconds": 459.63}
+{"queried": 8448, "accepted_candidates": 1994, "buckets": [412, 157, 1024, 401], "games": 1221, "seconds": 466.56}
+{"source_games": 1226, "positions_written": 2008, "buckets": [419, 164, 1024, 401], "seconds": 468.34}
+{"queried": 8576, "accepted_candidates": 2022, "buckets": [427, 165, 1024, 406], "games": 1238, "seconds": 473.18}
+{"queried": 8704, "accepted_candidates": 2036, "buckets": [431, 169, 1024, 412], "games": 1248, "seconds": 479.62}
+{"source_games": 1251, "positions_written": 2036, "buckets": [431, 169, 1024, 412], "seconds": 479.79}
+{"queried": 8832, "accepted_candidates": 2045, "buckets": [437, 169, 1024, 415], "games": 1267, "seconds": 486.46}
+{"source_games": 1276, "positions_written": 2058, "buckets": [445, 170, 1024, 419], "seconds": 490.21}
+{"queried": 8960, "accepted_candidates": 2062, "buckets": [445, 170, 1024, 423], "games": 1279, "seconds": 493.35}
+{"queried": 9088, "accepted_candidates": 2077, "buckets": [453, 170, 1024, 430], "games": 1298, "seconds": 500.18}
+{"source_games": 1301, "positions_written": 2077, "buckets": [453, 170, 1024, 430], "seconds": 500.5}
+{"source_games": 1326, "positions_written": 2093, "buckets": [465, 170, 1024, 434], "seconds": 506.28}
+{"queried": 9216, "accepted_candidates": 2094, "buckets": [465, 171, 1024, 434], "games": 1327, "seconds": 507.71}
+{"queried": 9344, "accepted_candidates": 2124, "buckets": [482, 171, 1024, 447], "games": 1344, "seconds": 514.99}
+{"source_games": 1351, "positions_written": 2131, "buckets": [483, 174, 1024, 450], "seconds": 518.1}
+{"queried": 9472, "accepted_candidates": 2135, "buckets": [487, 174, 1024, 450], "games": 1359, "seconds": 521.77}
+{"source_games": 1376, "positions_written": 2138, "buckets": [489, 174, 1024, 451], "seconds": 526.81}
+{"queried": 9600, "accepted_candidates": 2140, "buckets": [489, 174, 1024, 453], "games": 1380, "seconds": 528.63}
+{"queried": 9728, "accepted_candidates": 2155, "buckets": [503, 174, 1024, 454], "games": 1393, "seconds": 535.17}
+{"source_games": 1401, "positions_written": 2163, "buckets": [505, 174, 1024, 460], "seconds": 538.06}
+{"queried": 9856, "accepted_candidates": 2166, "buckets": [505, 175, 1024, 462], "games": 1409, "seconds": 542.12}
+{"queried": 9984, "accepted_candidates": 2193, "buckets": [515, 185, 1024, 469], "games": 1419, "seconds": 548.53}
+{"source_games": 1426, "positions_written": 2194, "buckets": [515, 185, 1024, 470], "seconds": 550.41}
+{"queried": 10112, "accepted_candidates": 2200, "buckets": [515, 187, 1024, 474], "games": 1438, "seconds": 555.4}
+{"source_games": 1451, "positions_written": 2203, "buckets": [515, 188, 1024, 476], "seconds": 559.41}
+{"queried": 10240, "accepted_candidates": 2212, "buckets": [515, 188, 1024, 485], "games": 1461, "seconds": 562.27}
+{"source_games": 1476, "positions_written": 2217, "buckets": [515, 189, 1024, 489], "seconds": 566.83}
+{"queried": 10368, "accepted_candidates": 2221, "buckets": [515, 189, 1024, 493], "games": 1483, "seconds": 569.08}
+{"source_games": 1501, "positions_written": 2230, "buckets": [515, 190, 1024, 501], "seconds": 574.14}
+{"queried": 10496, "accepted_candidates": 2232, "buckets": [515, 190, 1024, 503], "games": 1504, "seconds": 576.18}
+{"queried": 10624, "accepted_candidates": 2251, "buckets": [517, 196, 1024, 514], "games": 1516, "seconds": 582.91}
+{"source_games": 1526, "positions_written": 2252, "buckets": [517, 196, 1024, 515], "seconds": 584.35}
+{"queried": 10752, "accepted_candidates": 2264, "buckets": [525, 197, 1024, 518], "games": 1545, "seconds": 590.25}
+{"source_games": 1551, "positions_written": 2277, "buckets": [533, 199, 1024, 521], "seconds": 593.34}
+{"queried": 10880, "accepted_candidates": 2296, "buckets": [546, 199, 1024, 527], "games": 1566, "seconds": 597.28}
+{"source_games": 1576, "positions_written": 2303, "buckets": [546, 203, 1024, 530], "seconds": 601.55}
+{"queried": 11008, "accepted_candidates": 2319, "buckets": [560, 203, 1024, 532], "games": 1582, "seconds": 603.93}
+{"source_games": 1601, "positions_written": 2329, "buckets": [568, 203, 1024, 534], "seconds": 610.56}
+{"queried": 11136, "accepted_candidates": 2331, "buckets": [570, 203, 1024, 534], "games": 1603, "seconds": 610.88}
+{"queried": 11264, "accepted_candidates": 2355, "buckets": [587, 203, 1024, 541], "games": 1613, "seconds": 617.22}
+{"source_games": 1626, "positions_written": 2371, "buckets": [600, 203, 1024, 544], "seconds": 621.92}
+{"queried": 11392, "accepted_candidates": 2382, "buckets": [607, 203, 1024, 548], "games": 1629, "seconds": 623.81}
+{"queried": 11520, "accepted_candidates": 2406, "buckets": [623, 203, 1024, 556], "games": 1643, "seconds": 630.52}
+{"source_games": 1651, "positions_written": 2415, "buckets": [629, 203, 1024, 559], "seconds": 633.37}
+{"queried": 11648, "accepted_candidates": 2423, "buckets": [629, 203, 1024, 567], "games": 1659, "seconds": 637.16}
+{"source_games": 1676, "positions_written": 2431, "buckets": [629, 203, 1024, 575], "seconds": 643.94}
+{"queried": 11776, "accepted_candidates": 2432, "buckets": [629, 203, 1024, 576], "games": 1677, "seconds": 644.17}
+{"queried": 11904, "accepted_candidates": 2441, "buckets": [631, 205, 1024, 581], "games": 1690, "seconds": 650.79}
+{"source_games": 1701, "positions_written": 2441, "buckets": [631, 205, 1024, 581], "seconds": 653.11}
+{"queried": 12032, "accepted_candidates": 2453, "buckets": [635, 211, 1024, 583], "games": 1714, "seconds": 657.81}
+{"source_games": 1726, "positions_written": 2457, "buckets": [637, 211, 1024, 585], "seconds": 660.89}
+{"queried": 12160, "accepted_candidates": 2471, "buckets": [649, 211, 1024, 587], "games": 1739, "seconds": 664.92}
+{"source_games": 1751, "positions_written": 2481, "buckets": [649, 216, 1024, 592], "seconds": 669.54}
+{"queried": 12288, "accepted_candidates": 2485, "buckets": [650, 218, 1024, 593], "games": 1764, "seconds": 672.38}
+{"source_games": 1776, "positions_written": 2488, "buckets": [650, 220, 1024, 594], "seconds": 675.81}
+{"queried": 12416, "accepted_candidates": 2508, "buckets": [661, 229, 1024, 594], "games": 1783, "seconds": 679.56}
+{"queried": 12544, "accepted_candidates": 2524, "buckets": [667, 234, 1024, 599], "games": 1798, "seconds": 686.71}
+{"source_games": 1801, "positions_written": 2524, "buckets": [667, 234, 1024, 599], "seconds": 687.14}
+{"queried": 12672, "accepted_candidates": 2544, "buckets": [678, 242, 1024, 600], "games": 1821, "seconds": 693.52}
+{"source_games": 1826, "positions_written": 2545, "buckets": [678, 242, 1024, 601], "seconds": 694.68}
+{"queried": 12800, "accepted_candidates": 2556, "buckets": [684, 247, 1024, 601], "games": 1836, "seconds": 700.45}
+{"source_games": 1851, "positions_written": 2573, "buckets": [694, 250, 1024, 605], "seconds": 705.45}
+{"queried": 12928, "accepted_candidates": 2575, "buckets": [695, 250, 1024, 606], "games": 1856, "seconds": 707.45}
+{"queried": 13056, "accepted_candidates": 2591, "buckets": [696, 257, 1024, 614], "games": 1871, "seconds": 714.14}
+{"source_games": 1876, "positions_written": 2595, "buckets": [700, 257, 1024, 614], "seconds": 714.96}
+{"queried": 13184, "accepted_candidates": 2607, "buckets": [706, 257, 1024, 620], "games": 1894, "seconds": 722.02}
+{"source_games": 1901, "positions_written": 2607, "buckets": [706, 257, 1024, 620], "seconds": 723.92}
+{"queried": 13312, "accepted_candidates": 2611, "buckets": [706, 261, 1024, 620], "games": 1907, "seconds": 728.93}
+{"queried": 13440, "accepted_candidates": 2632, "buckets": [716, 268, 1024, 624], "games": 1923, "seconds": 736.0}
+{"source_games": 1926, "positions_written": 2640, "buckets": [716, 276, 1024, 624], "seconds": 737.8}
+{"queried": 13568, "accepted_candidates": 2644, "buckets": [719, 276, 1024, 625], "games": 1939, "seconds": 742.63}
+{"source_games": 1951, "positions_written": 2650, "buckets": [719, 276, 1024, 631], "seconds": 746.45}
+{"queried": 13696, "accepted_candidates": 2661, "buckets": [719, 285, 1024, 633], "games": 1959, "seconds": 749.65}
+{"source_games": 1976, "positions_written": 2681, "buckets": [727, 285, 1024, 645], "seconds": 755.97}
+{"queried": 13824, "accepted_candidates": 2682, "buckets": [727, 285, 1024, 646], "games": 1981, "seconds": 756.84}
+{"queried": 13952, "accepted_candidates": 2698, "buckets": [735, 287, 1024, 652], "games": 1997, "seconds": 763.71}
+{"source_games": 2001, "positions_written": 2699, "buckets": [735, 287, 1024, 653], "seconds": 765.7}
+{"queried": 14080, "accepted_candidates": 2712, "buckets": [745, 287, 1024, 656], "games": 2018, "seconds": 770.81}
+{"source_games": 2026, "positions_written": 2721, "buckets": [745, 288, 1024, 664], "seconds": 774.42}
+{"queried": 14208, "accepted_candidates": 2738, "buckets": [754, 293, 1024, 667], "games": 2035, "seconds": 777.81}
+{"source_games": 2051, "positions_written": 2742, "buckets": [755, 295, 1024, 668], "seconds": 781.79}
+{"queried": 14336, "accepted_candidates": 2745, "buckets": [756, 297, 1024, 668], "games": 2058, "seconds": 784.94}
+{"source_games": 2076, "positions_written": 2752, "buckets": [756, 298, 1024, 674], "seconds": 790.36}
+{"queried": 14464, "accepted_candidates": 2754, "buckets": [756, 298, 1024, 676], "games": 2085, "seconds": 792.52}
+{"queried": 14592, "accepted_candidates": 2773, "buckets": [761, 298, 1024, 690], "games": 2099, "seconds": 798.82}
+{"source_games": 2101, "positions_written": 2778, "buckets": [761, 298, 1024, 695], "seconds": 799.71}
+{"queried": 14720, "accepted_candidates": 2788, "buckets": [761, 298, 1024, 705], "games": 2117, "seconds": 805.81}
+{"source_games": 2126, "positions_written": 2794, "buckets": [761, 298, 1024, 711], "seconds": 809.16}
+{"queried": 14848, "accepted_candidates": 2808, "buckets": [769, 301, 1024, 714], "games": 2131, "seconds": 812.36}
+{"queried": 14976, "accepted_candidates": 2824, "buckets": [779, 303, 1024, 718], "games": 2143, "seconds": 818.61}
+{"source_games": 2151, "positions_written": 2838, "buckets": [783, 312, 1024, 719], "seconds": 823.13}
+{"queried": 15104, "accepted_candidates": 2849, "buckets": [786, 320, 1024, 719], "games": 2155, "seconds": 825.74}
+{"source_games": 2176, "positions_written": 2877, "buckets": [792, 327, 1024, 734], "seconds": 832.97}
+{"queried": 15232, "accepted_candidates": 2877, "buckets": [792, 327, 1024, 734], "games": 2176, "seconds": 833.07}
+{"queried": 15360, "accepted_candidates": 2890, "buckets": [793, 334, 1024, 739], "games": 2197, "seconds": 840.12}
+{"source_games": 2201, "positions_written": 2898, "buckets": [801, 334, 1024, 739], "seconds": 840.72}
+{"queried": 15488, "accepted_candidates": 2907, "buckets": [804, 336, 1024, 743], "games": 2222, "seconds": 847.76}
+{"source_games": 2226, "positions_written": 2913, "buckets": [804, 336, 1024, 749], "seconds": 849.21}
+{"queried": 15616, "accepted_candidates": 2923, "buckets": [810, 340, 1024, 749], "games": 2241, "seconds": 854.98}
+{"source_games": 2251, "positions_written": 2937, "buckets": [814, 344, 1024, 755], "seconds": 858.8}
+{"queried": 15744, "accepted_candidates": 2941, "buckets": [816, 344, 1024, 757], "games": 2255, "seconds": 861.31}
+{"source_games": 2276, "positions_written": 2956, "buckets": [824, 344, 1024, 764], "seconds": 867.2}
+{"queried": 15872, "accepted_candidates": 2961, "buckets": [825, 344, 1024, 768], "games": 2280, "seconds": 868.85}
+{"queried": 16000, "accepted_candidates": 2976, "buckets": [834, 344, 1024, 774], "games": 2291, "seconds": 874.86}
+{"source_games": 2301, "positions_written": 3002, "buckets": [845, 355, 1024, 778], "seconds": 879.62}
+{"queried": 16128, "accepted_candidates": 3002, "buckets": [845, 355, 1024, 778], "games": 2306, "seconds": 881.64}
+{"queried": 16256, "accepted_candidates": 3024, "buckets": [857, 363, 1024, 780], "games": 2318, "seconds": 888.24}
+{"source_games": 2326, "positions_written": 3031, "buckets": [862, 363, 1024, 782], "seconds": 889.81}
+{"queried": 16384, "accepted_candidates": 3047, "buckets": [869, 365, 1024, 789], "games": 2345, "seconds": 895.88}
+{"source_games": 2351, "positions_written": 3052, "buckets": [871, 365, 1024, 792], "seconds": 898.6}
+{"queried": 16512, "accepted_candidates": 3061, "buckets": [871, 367, 1024, 799], "games": 2363, "seconds": 902.67}
+{"source_games": 2376, "positions_written": 3064, "buckets": [871, 367, 1024, 802], "seconds": 905.84}
+{"queried": 16640, "accepted_candidates": 3068, "buckets": [871, 368, 1024, 805], "games": 2395, "seconds": 910.4}
+{"source_games": 2401, "positions_written": 3068, "buckets": [871, 368, 1024, 805], "seconds": 913.91}
+{"queried": 16768, "accepted_candidates": 3082, "buckets": [871, 368, 1024, 819], "games": 2414, "seconds": 917.49}
+{"source_games": 2426, "positions_written": 3089, "buckets": [871, 372, 1024, 822], "seconds": 920.47}
+{"queried": 16896, "accepted_candidates": 3102, "buckets": [883, 373, 1024, 822], "games": 2429, "seconds": 924.21}
+{"queried": 17024, "accepted_candidates": 3124, "buckets": [897, 374, 1024, 829], "games": 2441, "seconds": 930.76}
+{"source_games": 2451, "positions_written": 3128, "buckets": [898, 375, 1024, 831], "seconds": 933.65}
+{"queried": 17152, "accepted_candidates": 3133, "buckets": [898, 376, 1024, 835], "games": 2468, "seconds": 938.28}
+{"source_games": 2476, "positions_written": 3142, "buckets": [906, 376, 1024, 836], "seconds": 942.57}
+{"queried": 17280, "accepted_candidates": 3145, "buckets": [909, 376, 1024, 836], "games": 2484, "seconds": 945.13}
+{"source_games": 2501, "positions_written": 3153, "buckets": [910, 377, 1024, 842], "seconds": 951.62}
+{"queried": 17408, "accepted_candidates": 3153, "buckets": [910, 377, 1024, 842], "games": 2505, "seconds": 952.19}
+{"queried": 17536, "accepted_candidates": 3171, "buckets": [922, 379, 1024, 846], "games": 2514, "seconds": 958.79}
+{"source_games": 2526, "positions_written": 3193, "buckets": [938, 380, 1024, 851], "seconds": 963.14}
+{"queried": 17664, "accepted_candidates": 3199, "buckets": [942, 380, 1024, 853], "games": 2534, "seconds": 965.85}
+{"source_games": 2551, "positions_written": 3214, "buckets": [946, 380, 1024, 864], "seconds": 970.11}
+{"queried": 17792, "accepted_candidates": 3229, "buckets": [958, 380, 1024, 867], "games": 2559, "seconds": 972.92}
+{"queried": 17920, "accepted_candidates": 3239, "buckets": [962, 382, 1024, 871], "games": 2575, "seconds": 979.35}
+{"source_games": 2576, "positions_written": 3239, "buckets": [962, 382, 1024, 871], "seconds": 979.8}
+{"source_games": 2601, "positions_written": 3243, "buckets": [962, 382, 1024, 875], "seconds": 985.38}
+{"queried": 18048, "accepted_candidates": 3250, "buckets": [967, 382, 1024, 877], "games": 2602, "seconds": 986.62}
+{"queried": 18176, "accepted_candidates": 3269, "buckets": [977, 389, 1024, 879], "games": 2617, "seconds": 993.13}
+{"source_games": 2626, "positions_written": 3270, "buckets": [977, 389, 1024, 880], "seconds": 994.7}
+{"queried": 18304, "accepted_candidates": 3283, "buckets": [978, 389, 1024, 892], "games": 2644, "seconds": 1000.87}
+{"source_games": 2651, "positions_written": 3292, "buckets": [984, 391, 1024, 893], "seconds": 1003.48}
+{"queried": 18432, "accepted_candidates": 3301, "buckets": [989, 391, 1024, 897], "games": 2658, "seconds": 1007.49}
+{"source_games": 2676, "positions_written": 3314, "buckets": [989, 394, 1024, 907], "seconds": 1014.1}
+{"queried": 18560, "accepted_candidates": 3314, "buckets": [989, 394, 1024, 907], "games": 2676, "seconds": 1014.55}
+{"source_games": 2701, "positions_written": 3318, "buckets": [989, 396, 1024, 909], "seconds": 1020.76}
+{"queried": 18688, "accepted_candidates": 3326, "buckets": [997, 396, 1024, 909], "games": 2708, "seconds": 1022.42}
+{"queried": 18816, "accepted_candidates": 3328, "buckets": [997, 396, 1024, 911], "games": 2719, "seconds": 1028.89}
+{"source_games": 2726, "positions_written": 3332, "buckets": [997, 396, 1024, 915], "seconds": 1031.29}
+{"queried": 18944, "accepted_candidates": 3345, "buckets": [1005, 396, 1024, 920], "games": 2735, "seconds": 1035.84}
+{"source_games": 2751, "positions_written": 3357, "buckets": [1012, 397, 1024, 924], "seconds": 1040.7}
+{"queried": 19072, "accepted_candidates": 3359, "buckets": [1012, 397, 1024, 926], "games": 2757, "seconds": 1043.01}
+{"source_games": 2776, "positions_written": 3375, "buckets": [1022, 397, 1024, 932], "seconds": 1048.74}
+{"queried": 19200, "accepted_candidates": 3377, "buckets": [1024, 397, 1024, 932], "games": 2777, "seconds": 1049.85}
+{"queried": 19328, "accepted_candidates": 3380, "buckets": [1024, 399, 1024, 933], "games": 2788, "seconds": 1056.2}
+{"source_games": 2801, "positions_written": 3386, "buckets": [1024, 399, 1024, 939], "seconds": 1059.45}
+{"queried": 19456, "accepted_candidates": 3391, "buckets": [1024, 403, 1024, 940], "games": 2808, "seconds": 1063.38}
+{"source_games": 2826, "positions_written": 3398, "buckets": [1024, 403, 1024, 947], "seconds": 1070.15}
+{"queried": 19584, "accepted_candidates": 3399, "buckets": [1024, 403, 1024, 948], "games": 2826, "seconds": 1070.5}
+{"source_games": 2851, "positions_written": 3410, "buckets": [1024, 408, 1024, 954], "seconds": 1077.21}
+{"queried": 19712, "accepted_candidates": 3411, "buckets": [1024, 408, 1024, 955], "games": 2852, "seconds": 1077.68}
+{"queried": 19840, "accepted_candidates": 3416, "buckets": [1024, 410, 1024, 958], "games": 2871, "seconds": 1084.71}
+{"source_games": 2876, "positions_written": 3420, "buckets": [1024, 410, 1024, 962], "seconds": 1086.17}
+{"queried": 19968, "accepted_candidates": 3434, "buckets": [1024, 410, 1024, 976], "games": 2886, "seconds": 1091.43}
+{"queried": 20096, "accepted_candidates": 3448, "buckets": [1024, 413, 1024, 987], "games": 2897, "seconds": 1097.68}
+{"source_games": 2901, "positions_written": 3449, "buckets": [1024, 414, 1024, 987], "seconds": 1099.55}
+{"queried": 20224, "accepted_candidates": 3452, "buckets": [1024, 414, 1024, 990], "games": 2912, "seconds": 1103.93}
+{"queried": 20352, "accepted_candidates": 3468, "buckets": [1024, 414, 1024, 1006], "games": 2925, "seconds": 1110.51}
+{"source_games": 2926, "positions_written": 3468, "buckets": [1024, 414, 1024, 1006], "seconds": 1110.83}
+{"queried": 20480, "accepted_candidates": 3474, "buckets": [1024, 414, 1024, 1012], "games": 2941, "seconds": 1116.83}
+{"source_games": 2951, "positions_written": 3479, "buckets": [1024, 418, 1024, 1013], "seconds": 1121.38}
+{"queried": 20608, "accepted_candidates": 3487, "buckets": [1024, 420, 1024, 1019], "games": 2955, "seconds": 1123.68}
+{"queried": 20736, "accepted_candidates": 3498, "buckets": [1024, 428, 1024, 1022], "games": 2974, "seconds": 1130.72}
+{"source_games": 2976, "positions_written": 3498, "buckets": [1024, 428, 1024, 1022], "seconds": 1130.9}
+{"queried": 20864, "accepted_candidates": 3500, "buckets": [1024, 428, 1024, 1024], "games": 2989, "seconds": 1137.57}
+{"source_games": 3001, "positions_written": 3500, "buckets": [1024, 428, 1024, 1024], "seconds": 1140.4}
+{"queried": 20992, "accepted_candidates": 3500, "buckets": [1024, 428, 1024, 1024], "games": 3009, "seconds": 1144.76}
+{"queried": 21120, "accepted_candidates": 3503, "buckets": [1024, 431, 1024, 1024], "games": 3024, "seconds": 1151.01}
+{"source_games": 3026, "positions_written": 3503, "buckets": [1024, 431, 1024, 1024], "seconds": 1151.41}
+{"queried": 21248, "accepted_candidates": 3503, "buckets": [1024, 431, 1024, 1024], "games": 3036, "seconds": 1157.47}
+{"source_games": 3051, "positions_written": 3503, "buckets": [1024, 431, 1024, 1024], "seconds": 1163.09}
+{"queried": 21376, "accepted_candidates": 3503, "buckets": [1024, 431, 1024, 1024], "games": 3056, "seconds": 1164.57}
+{"source_games": 3076, "positions_written": 3504, "buckets": [1024, 432, 1024, 1024], "seconds": 1169.47}
+{"queried": 21504, "accepted_candidates": 3506, "buckets": [1024, 434, 1024, 1024], "games": 3079, "seconds": 1171.79}
+{"queried": 21632, "accepted_candidates": 3513, "buckets": [1024, 441, 1024, 1024], "games": 3090, "seconds": 1178.3}
+{"source_games": 3101, "positions_written": 3515, "buckets": [1024, 443, 1024, 1024], "seconds": 1182.81}
+{"queried": 21760, "accepted_candidates": 3515, "buckets": [1024, 443, 1024, 1024], "games": 3112, "seconds": 1185.29}
+{"source_games": 3126, "positions_written": 3515, "buckets": [1024, 443, 1024, 1024], "seconds": 1190.12}
+{"queried": 21888, "accepted_candidates": 3515, "buckets": [1024, 443, 1024, 1024], "games": 3133, "seconds": 1192.32}
+{"queried": 22016, "accepted_candidates": 3515, "buckets": [1024, 443, 1024, 1024], "games": 3149, "seconds": 1199.07}
+{"source_games": 3151, "positions_written": 3515, "buckets": [1024, 443, 1024, 1024], "seconds": 1199.64}
+{"queried": 22144, "accepted_candidates": 3523, "buckets": [1024, 451, 1024, 1024], "games": 3163, "seconds": 1205.39}
+{"source_games": 3176, "positions_written": 3529, "buckets": [1024, 457, 1024, 1024], "seconds": 1209.41}
+{"queried": 22272, "accepted_candidates": 3529, "buckets": [1024, 457, 1024, 1024], "games": 3186, "seconds": 1212.45}
+{"source_games": 3201, "positions_written": 3529, "buckets": [1024, 457, 1024, 1024], "seconds": 1216.62}
+{"queried": 22400, "accepted_candidates": 3529, "buckets": [1024, 457, 1024, 1024], "games": 3211, "seconds": 1219.59}
+{"source_games": 3226, "positions_written": 3529, "buckets": [1024, 457, 1024, 1024], "seconds": 1224.39}
+{"queried": 22528, "accepted_candidates": 3529, "buckets": [1024, 457, 1024, 1024], "games": 3232, "seconds": 1226.22}
+{"queried": 22656, "accepted_candidates": 3529, "buckets": [1024, 457, 1024, 1024], "games": 3241, "seconds": 1232.2}
+{"source_games": 3251, "positions_written": 3530, "buckets": [1024, 458, 1024, 1024], "seconds": 1235.76}
+{"queried": 22784, "accepted_candidates": 3531, "buckets": [1024, 459, 1024, 1024], "games": 3257, "seconds": 1238.48}
+{"queried": 22912, "accepted_candidates": 3536, "buckets": [1024, 464, 1024, 1024], "games": 3275, "seconds": 1244.99}
+{"source_games": 3276, "positions_written": 3536, "buckets": [1024, 464, 1024, 1024], "seconds": 1245.0}
+{"queried": 23040, "accepted_candidates": 3536, "buckets": [1024, 464, 1024, 1024], "games": 3290, "seconds": 1251.46}
+{"source_games": 3301, "positions_written": 3536, "buckets": [1024, 464, 1024, 1024], "seconds": 1254.97}
+{"queried": 23168, "accepted_candidates": 3539, "buckets": [1024, 467, 1024, 1024], "games": 3311, "seconds": 1258.24}
+{"source_games": 3326, "positions_written": 3542, "buckets": [1024, 470, 1024, 1024], "seconds": 1263.3}
+{"queried": 23296, "accepted_candidates": 3542, "buckets": [1024, 470, 1024, 1024], "games": 3333, "seconds": 1265.12}
+{"queried": 23424, "accepted_candidates": 3546, "buckets": [1024, 474, 1024, 1024], "games": 3350, "seconds": 1271.92}
+{"source_games": 3351, "positions_written": 3546, "buckets": [1024, 474, 1024, 1024], "seconds": 1272.35}
+{"queried": 23552, "accepted_candidates": 3546, "buckets": [1024, 474, 1024, 1024], "games": 3366, "seconds": 1278.62}
+{"source_games": 3376, "positions_written": 3548, "buckets": [1024, 476, 1024, 1024], "seconds": 1283.23}
+{"queried": 23680, "accepted_candidates": 3548, "buckets": [1024, 476, 1024, 1024], "games": 3379, "seconds": 1285.05}
+{"queried": 23808, "accepted_candidates": 3551, "buckets": [1024, 479, 1024, 1024], "games": 3398, "seconds": 1291.91}
+{"source_games": 3401, "positions_written": 3551, "buckets": [1024, 479, 1024, 1024], "seconds": 1293.17}
+{"queried": 23936, "accepted_candidates": 3553, "buckets": [1024, 481, 1024, 1024], "games": 3417, "seconds": 1299.22}
+{"source_games": 3426, "positions_written": 3563, "buckets": [1024, 491, 1024, 1024], "seconds": 1305.19}
+{"queried": 24064, "accepted_candidates": 3563, "buckets": [1024, 491, 1024, 1024], "games": 3426, "seconds": 1305.35}
+{"queried": 24192, "accepted_candidates": 3563, "buckets": [1024, 491, 1024, 1024], "games": 3441, "seconds": 1312.0}
+{"source_games": 3451, "positions_written": 3570, "buckets": [1024, 498, 1024, 1024], "seconds": 1316.06}
+{"queried": 24320, "accepted_candidates": 3570, "buckets": [1024, 498, 1024, 1024], "games": 3458, "seconds": 1318.3}
+{"source_games": 3476, "positions_written": 3571, "buckets": [1024, 499, 1024, 1024], "seconds": 1324.32}
+{"queried": 24448, "accepted_candidates": 3571, "buckets": [1024, 499, 1024, 1024], "games": 3479, "seconds": 1325.67}
+{"queried": 24576, "accepted_candidates": 3572, "buckets": [1024, 500, 1024, 1024], "games": 3493, "seconds": 1332.36}
+{"source_games": 3501, "positions_written": 3577, "buckets": [1024, 505, 1024, 1024], "seconds": 1336.34}
+{"queried": 24704, "accepted_candidates": 3577, "buckets": [1024, 505, 1024, 1024], "games": 3507, "seconds": 1338.86}
+{"source_games": 3526, "positions_written": 3577, "buckets": [1024, 505, 1024, 1024], "seconds": 1344.66}
+{"queried": 24832, "accepted_candidates": 3577, "buckets": [1024, 505, 1024, 1024], "games": 3528, "seconds": 1345.93}
+{"queried": 24960, "accepted_candidates": 3579, "buckets": [1024, 507, 1024, 1024], "games": 3537, "seconds": 1352.22}
+{"queried": 25088, "accepted_candidates": 3583, "buckets": [1024, 511, 1024, 1024], "games": 3548, "seconds": 1358.84}
+{"source_games": 3551, "positions_written": 3583, "buckets": [1024, 511, 1024, 1024], "seconds": 1359.34}
+{"queried": 25216, "accepted_candidates": 3584, "buckets": [1024, 512, 1024, 1024], "games": 3564, "seconds": 1365.79}
+{"source_games": 3576, "positions_written": 3584, "buckets": [1024, 512, 1024, 1024], "seconds": 1370.77}
+{"queried": 25344, "accepted_candidates": 3584, "buckets": [1024, 512, 1024, 1024], "games": 3582, "seconds": 1372.8}
+{"source_games": 3601, "positions_written": 3591, "buckets": [1024, 519, 1024, 1024], "seconds": 1379.25}
+{"queried": 25472, "accepted_candidates": 3591, "buckets": [1024, 519, 1024, 1024], "games": 3605, "seconds": 1380.52}
+{"queried": 25600, "accepted_candidates": 3592, "buckets": [1024, 520, 1024, 1024], "games": 3621, "seconds": 1386.67}
+{"source_games": 3626, "positions_written": 3601, "buckets": [1024, 529, 1024, 1024], "seconds": 1389.98}
+{"queried": 25728, "accepted_candidates": 3603, "buckets": [1024, 531, 1024, 1024], "games": 3636, "seconds": 1393.3}
+{"source_games": 3651, "positions_written": 3604, "buckets": [1024, 532, 1024, 1024], "seconds": 1398.54}
+{"queried": 25856, "accepted_candidates": 3604, "buckets": [1024, 532, 1024, 1024], "games": 3653, "seconds": 1400.36}
+{"queried": 25984, "accepted_candidates": 3604, "buckets": [1024, 532, 1024, 1024], "games": 3667, "seconds": 1406.58}
+{"source_games": 3676, "positions_written": 3607, "buckets": [1024, 535, 1024, 1024], "seconds": 1410.26}
+{"queried": 26112, "accepted_candidates": 3607, "buckets": [1024, 535, 1024, 1024], "games": 3685, "seconds": 1413.19}
+{"queried": 26240, "accepted_candidates": 3607, "buckets": [1024, 535, 1024, 1024], "games": 3698, "seconds": 1419.64}
+{"source_games": 3701, "positions_written": 3607, "buckets": [1024, 535, 1024, 1024], "seconds": 1421.13}
+{"queried": 26368, "accepted_candidates": 3614, "buckets": [1024, 542, 1024, 1024], "games": 3717, "seconds": 1426.83}
+{"source_games": 3726, "positions_written": 3615, "buckets": [1024, 543, 1024, 1024], "seconds": 1430.39}
+{"queried": 26496, "accepted_candidates": 3615, "buckets": [1024, 543, 1024, 1024], "games": 3731, "seconds": 1433.42}
+{"queried": 26624, "accepted_candidates": 3615, "buckets": [1024, 543, 1024, 1024], "games": 3747, "seconds": 1440.37}
+{"source_games": 3751, "positions_written": 3620, "buckets": [1024, 548, 1024, 1024], "seconds": 1443.1}
+{"queried": 26752, "accepted_candidates": 3624, "buckets": [1024, 552, 1024, 1024], "games": 3756, "seconds": 1447.17}
+{"queried": 26880, "accepted_candidates": 3633, "buckets": [1024, 561, 1024, 1024], "games": 3765, "seconds": 1453.42}
+{"source_games": 3776, "positions_written": 3633, "buckets": [1024, 561, 1024, 1024], "seconds": 1455.63}
+{"queried": 27008, "accepted_candidates": 3633, "buckets": [1024, 561, 1024, 1024], "games": 3788, "seconds": 1460.68}
+{"queried": 27136, "accepted_candidates": 3643, "buckets": [1024, 571, 1024, 1024], "games": 3799, "seconds": 1467.08}
+{"source_games": 3801, "positions_written": 3644, "buckets": [1024, 572, 1024, 1024], "seconds": 1467.81}
+{"queried": 27264, "accepted_candidates": 3648, "buckets": [1024, 576, 1024, 1024], "games": 3825, "seconds": 1474.47}
+{"source_games": 3826, "positions_written": 3648, "buckets": [1024, 576, 1024, 1024], "seconds": 1474.65}
+{"queried": 27392, "accepted_candidates": 3649, "buckets": [1024, 577, 1024, 1024], "games": 3843, "seconds": 1481.26}
+{"source_games": 3851, "positions_written": 3649, "buckets": [1024, 577, 1024, 1024], "seconds": 1482.82}
+{"queried": 27520, "accepted_candidates": 3653, "buckets": [1024, 581, 1024, 1024], "games": 3863, "seconds": 1488.2}
+{"source_games": 3876, "positions_written": 3660, "buckets": [1024, 588, 1024, 1024], "seconds": 1494.28}
+{"queried": 27648, "accepted_candidates": 3660, "buckets": [1024, 588, 1024, 1024], "games": 3876, "seconds": 1494.54}
+{"queried": 27776, "accepted_candidates": 3660, "buckets": [1024, 588, 1024, 1024], "games": 3896, "seconds": 1501.7}
+{"source_games": 3901, "positions_written": 3660, "buckets": [1024, 588, 1024, 1024], "seconds": 1503.52}
+{"queried": 27904, "accepted_candidates": 3660, "buckets": [1024, 588, 1024, 1024], "games": 3913, "seconds": 1508.07}
+{"queried": 28032, "accepted_candidates": 3664, "buckets": [1024, 592, 1024, 1024], "games": 3925, "seconds": 1514.63}
+{"source_games": 3926, "positions_written": 3664, "buckets": [1024, 592, 1024, 1024], "seconds": 1514.64}
+{"queried": 28160, "accepted_candidates": 3667, "buckets": [1024, 595, 1024, 1024], "games": 3945, "seconds": 1521.43}
+{"source_games": 3951, "positions_written": 3667, "buckets": [1024, 595, 1024, 1024], "seconds": 1522.92}
+{"queried": 28288, "accepted_candidates": 3667, "buckets": [1024, 595, 1024, 1024], "games": 3964, "seconds": 1528.47}
+{"source_games": 3976, "positions_written": 3667, "buckets": [1024, 595, 1024, 1024], "seconds": 1531.9}
+{"queried": 28416, "accepted_candidates": 3671, "buckets": [1024, 599, 1024, 1024], "games": 3988, "seconds": 1536.06}
+{"queried": 28544, "accepted_candidates": 3677, "buckets": [1024, 605, 1024, 1024], "games": 4000, "seconds": 1542.54}
+{"source_games": 4001, "positions_written": 3683, "buckets": [1024, 611, 1024, 1024], "seconds": 1543.26}
+{"queried": 28672, "accepted_candidates": 3683, "buckets": [1024, 611, 1024, 1024], "games": 4012, "seconds": 1548.88}
+{"source_games": 4026, "positions_written": 3683, "buckets": [1024, 611, 1024, 1024], "seconds": 1553.87}
+{"queried": 28800, "accepted_candidates": 3683, "buckets": [1024, 611, 1024, 1024], "games": 4032, "seconds": 1556.15}
+{"queried": 28928, "accepted_candidates": 3687, "buckets": [1024, 615, 1024, 1024], "games": 4045, "seconds": 1562.64}
+{"source_games": 4051, "positions_written": 3687, "buckets": [1024, 615, 1024, 1024], "seconds": 1563.99}
+{"queried": 29056, "accepted_candidates": 3693, "buckets": [1024, 621, 1024, 1024], "games": 4061, "seconds": 1569.49}
+{"source_games": 4076, "positions_written": 3693, "buckets": [1024, 621, 1024, 1024], "seconds": 1574.74}
+{"queried": 29184, "accepted_candidates": 3695, "buckets": [1024, 623, 1024, 1024], "games": 4079, "seconds": 1576.53}
+{"queried": 29312, "accepted_candidates": 3701, "buckets": [1024, 629, 1024, 1024], "games": 4097, "seconds": 1583.45}
+{"source_games": 4101, "positions_written": 3701, "buckets": [1024, 629, 1024, 1024], "seconds": 1585.09}
+{"queried": 29440, "accepted_candidates": 3703, "buckets": [1024, 631, 1024, 1024], "games": 4115, "seconds": 1590.25}
+{"source_games": 4126, "positions_written": 3703, "buckets": [1024, 631, 1024, 1024], "seconds": 1594.45}
+{"queried": 29568, "accepted_candidates": 3703, "buckets": [1024, 631, 1024, 1024], "games": 4131, "seconds": 1597.31}
+{"queried": 29696, "accepted_candidates": 3710, "buckets": [1024, 638, 1024, 1024], "games": 4146, "seconds": 1604.15}
+{"source_games": 4151, "positions_written": 3710, "buckets": [1024, 638, 1024, 1024], "seconds": 1606.29}
+{"queried": 29824, "accepted_candidates": 3710, "buckets": [1024, 638, 1024, 1024], "games": 4160, "seconds": 1610.67}
+{"queried": 29952, "accepted_candidates": 3716, "buckets": [1024, 644, 1024, 1024], "games": 4173, "seconds": 1617.65}
+{"source_games": 4176, "positions_written": 3716, "buckets": [1024, 644, 1024, 1024], "seconds": 1617.78}
+{"queried": 30080, "accepted_candidates": 3716, "buckets": [1024, 644, 1024, 1024], "games": 4189, "seconds": 1624.4}
+{"source_games": 4201, "positions_written": 3717, "buckets": [1024, 645, 1024, 1024], "seconds": 1630.63}
+{"queried": 30208, "accepted_candidates": 3717, "buckets": [1024, 645, 1024, 1024], "games": 4201, "seconds": 1630.97}
+{"source_games": 4226, "positions_written": 3723, "buckets": [1024, 651, 1024, 1024], "seconds": 1638.27}
+{"queried": 30336, "accepted_candidates": 3723, "buckets": [1024, 651, 1024, 1024], "games": 4226, "seconds": 1638.46}
+{"queried": 30464, "accepted_candidates": 3723, "buckets": [1024, 651, 1024, 1024], "games": 4250, "seconds": 1645.57}
+{"source_games": 4251, "positions_written": 3723, "buckets": [1024, 651, 1024, 1024], "seconds": 1645.74}
+{"queried": 30592, "accepted_candidates": 3730, "buckets": [1024, 658, 1024, 1024], "games": 4271, "seconds": 1652.43}
+{"source_games": 4276, "positions_written": 3730, "buckets": [1024, 658, 1024, 1024], "seconds": 1654.78}
+{"queried": 30720, "accepted_candidates": 3730, "buckets": [1024, 658, 1024, 1024], "games": 4286, "seconds": 1658.84}
+{"source_games": 4301, "positions_written": 3730, "buckets": [1024, 658, 1024, 1024], "seconds": 1663.59}
+{"queried": 30848, "accepted_candidates": 3730, "buckets": [1024, 658, 1024, 1024], "games": 4304, "seconds": 1665.43}
+{"queried": 30976, "accepted_candidates": 3730, "buckets": [1024, 658, 1024, 1024], "games": 4316, "seconds": 1671.51}
+{"source_games": 4326, "positions_written": 3735, "buckets": [1024, 663, 1024, 1024], "seconds": 1676.07}
+{"queried": 31104, "accepted_candidates": 3735, "buckets": [1024, 663, 1024, 1024], "games": 4334, "seconds": 1678.17}
+{"source_games": 4351, "positions_written": 3736, "buckets": [1024, 664, 1024, 1024], "seconds": 1683.83}
+{"queried": 31232, "accepted_candidates": 3736, "buckets": [1024, 664, 1024, 1024], "games": 4354, "seconds": 1684.93}
+{"source_games": 4376, "positions_written": 3736, "buckets": [1024, 664, 1024, 1024], "seconds": 1689.71}
+{"queried": 31360, "accepted_candidates": 3738, "buckets": [1024, 666, 1024, 1024], "games": 4386, "seconds": 1692.76}
+{"source_games": 4401, "positions_written": 3738, "buckets": [1024, 666, 1024, 1024], "seconds": 1697.92}
+{"queried": 31488, "accepted_candidates": 3738, "buckets": [1024, 666, 1024, 1024], "games": 4409, "seconds": 1700.09}
+{"queried": 31616, "accepted_candidates": 3745, "buckets": [1024, 673, 1024, 1024], "games": 4422, "seconds": 1706.28}
+{"source_games": 4426, "positions_written": 3745, "buckets": [1024, 673, 1024, 1024], "seconds": 1708.25}
+{"queried": 31744, "accepted_candidates": 3750, "buckets": [1024, 678, 1024, 1024], "games": 4438, "seconds": 1713.02}
+{"source_games": 4451, "positions_written": 3751, "buckets": [1024, 679, 1024, 1024], "seconds": 1718.94}
+{"queried": 31872, "accepted_candidates": 3753, "buckets": [1024, 681, 1024, 1024], "games": 4454, "seconds": 1719.93}
+{"queried": 32000, "accepted_candidates": 3754, "buckets": [1024, 682, 1024, 1024], "games": 4470, "seconds": 1726.66}
+{"source_games": 4476, "positions_written": 3754, "buckets": [1024, 682, 1024, 1024], "seconds": 1728.35}
+{"queried": 32128, "accepted_candidates": 3754, "buckets": [1024, 682, 1024, 1024], "games": 4491, "seconds": 1733.47}
+{"source_games": 4501, "positions_written": 3757, "buckets": [1024, 685, 1024, 1024], "seconds": 1738.33}
+{"queried": 32256, "accepted_candidates": 3758, "buckets": [1024, 686, 1024, 1024], "games": 4505, "seconds": 1740.18}
+{"source_games": 4526, "positions_written": 3759, "buckets": [1024, 687, 1024, 1024], "seconds": 1745.98}
+{"queried": 32384, "accepted_candidates": 3759, "buckets": [1024, 687, 1024, 1024], "games": 4533, "seconds": 1747.45}
+{"queried": 32512, "accepted_candidates": 3763, "buckets": [1024, 691, 1024, 1024], "games": 4545, "seconds": 1753.94}
+{"source_games": 4551, "positions_written": 3763, "buckets": [1024, 691, 1024, 1024], "seconds": 1756.6}
+{"queried": 32640, "accepted_candidates": 3765, "buckets": [1024, 693, 1024, 1024], "games": 4563, "seconds": 1760.55}
+{"source_games": 4576, "positions_written": 3768, "buckets": [1024, 696, 1024, 1024], "seconds": 1764.67}
+{"queried": 32768, "accepted_candidates": 3768, "buckets": [1024, 696, 1024, 1024], "games": 4579, "seconds": 1767.29}
+{"queried": 32896, "accepted_candidates": 3771, "buckets": [1024, 699, 1024, 1024], "games": 4596, "seconds": 1773.91}
+{"source_games": 4601, "positions_written": 3771, "buckets": [1024, 699, 1024, 1024], "seconds": 1775.28}
+{"queried": 33024, "accepted_candidates": 3771, "buckets": [1024, 699, 1024, 1024], "games": 4620, "seconds": 1780.72}
+{"source_games": 4626, "positions_written": 3771, "buckets": [1024, 699, 1024, 1024], "seconds": 1781.85}
+{"queried": 33152, "accepted_candidates": 3779, "buckets": [1024, 707, 1024, 1024], "games": 4642, "seconds": 1788.09}
+{"source_games": 4651, "positions_written": 3781, "buckets": [1024, 709, 1024, 1024], "seconds": 1790.68}
+{"queried": 33280, "accepted_candidates": 3784, "buckets": [1024, 712, 1024, 1024], "games": 4657, "seconds": 1794.96}
+{"source_games": 4676, "positions_written": 3784, "buckets": [1024, 712, 1024, 1024], "seconds": 1801.39}
+{"queried": 33408, "accepted_candidates": 3784, "buckets": [1024, 712, 1024, 1024], "games": 4677, "seconds": 1801.99}
+{"queried": 33536, "accepted_candidates": 3792, "buckets": [1024, 720, 1024, 1024], "games": 4692, "seconds": 1808.64}
+{"source_games": 4701, "positions_written": 3792, "buckets": [1024, 720, 1024, 1024], "seconds": 1812.02}
+{"queried": 33664, "accepted_candidates": 3792, "buckets": [1024, 720, 1024, 1024], "games": 4710, "seconds": 1815.71}
+{"queried": 33792, "accepted_candidates": 3792, "buckets": [1024, 720, 1024, 1024], "games": 4719, "seconds": 1821.89}
+{"source_games": 4726, "positions_written": 3793, "buckets": [1024, 721, 1024, 1024], "seconds": 1824.52}
+{"queried": 33920, "accepted_candidates": 3793, "buckets": [1024, 721, 1024, 1024], "games": 4740, "seconds": 1828.56}
+{"source_games": 4751, "positions_written": 3793, "buckets": [1024, 721, 1024, 1024], "seconds": 1832.36}
+{"queried": 34048, "accepted_candidates": 3795, "buckets": [1024, 723, 1024, 1024], "games": 4757, "seconds": 1835.19}
+{"source_games": 4776, "positions_written": 3796, "buckets": [1024, 724, 1024, 1024], "seconds": 1840.39}
+{"queried": 34176, "accepted_candidates": 3796, "buckets": [1024, 724, 1024, 1024], "games": 4784, "seconds": 1842.49}
+{"source_games": 4801, "positions_written": 3796, "buckets": [1024, 724, 1024, 1024], "seconds": 1848.0}
+{"queried": 34304, "accepted_candidates": 3797, "buckets": [1024, 725, 1024, 1024], "games": 4807, "seconds": 1849.76}
+{"source_games": 4826, "positions_written": 3806, "buckets": [1024, 734, 1024, 1024], "seconds": 1856.83}
+{"queried": 34432, "accepted_candidates": 3806, "buckets": [1024, 734, 1024, 1024], "games": 4827, "seconds": 1857.15}
+{"queried": 34560, "accepted_candidates": 3810, "buckets": [1024, 738, 1024, 1024], "games": 4842, "seconds": 1863.69}
+{"source_games": 4851, "positions_written": 3810, "buckets": [1024, 738, 1024, 1024], "seconds": 1866.04}
+{"queried": 34688, "accepted_candidates": 3810, "buckets": [1024, 738, 1024, 1024], "games": 4867, "seconds": 1871.28}
+{"source_games": 4876, "positions_written": 3810, "buckets": [1024, 738, 1024, 1024], "seconds": 1873.68}
+{"queried": 34816, "accepted_candidates": 3810, "buckets": [1024, 738, 1024, 1024], "games": 4892, "seconds": 1878.73}
+{"source_games": 4901, "positions_written": 3810, "buckets": [1024, 738, 1024, 1024], "seconds": 1880.51}
+{"queried": 34944, "accepted_candidates": 3810, "buckets": [1024, 738, 1024, 1024], "games": 4919, "seconds": 1885.96}
+{"source_games": 4926, "positions_written": 3810, "buckets": [1024, 738, 1024, 1024], "seconds": 1888.58}
+{"queried": 35072, "accepted_candidates": 3810, "buckets": [1024, 738, 1024, 1024], "games": 4933, "seconds": 1892.72}
+{"queried": 35200, "accepted_candidates": 3813, "buckets": [1024, 741, 1024, 1024], "games": 4947, "seconds": 1899.65}
+{"source_games": 4951, "positions_written": 3816, "buckets": [1024, 744, 1024, 1024], "seconds": 1902.3}
+{"queried": 35328, "accepted_candidates": 3816, "buckets": [1024, 744, 1024, 1024], "games": 4956, "seconds": 1905.65}
+{"source_games": 4976, "positions_written": 3817, "buckets": [1024, 745, 1024, 1024], "seconds": 1910.74}
+{"queried": 35456, "accepted_candidates": 3817, "buckets": [1024, 745, 1024, 1024], "games": 4982, "seconds": 1912.48}
+{"queried": 35584, "accepted_candidates": 3818, "buckets": [1024, 746, 1024, 1024], "games": 5000, "seconds": 1919.17}
+{"source_games": 5001, "positions_written": 3818, "buckets": [1024, 746, 1024, 1024], "seconds": 1919.72}
+{"queried": 35712, "accepted_candidates": 3820, "buckets": [1024, 748, 1024, 1024], "games": 5011, "seconds": 1925.2}
+{"source_games": 5026, "positions_written": 3829, "buckets": [1024, 757, 1024, 1024], "seconds": 1930.8}
+{"queried": 35840, "accepted_candidates": 3829, "buckets": [1024, 757, 1024, 1024], "games": 5035, "seconds": 1932.93}
+{"source_games": 5051, "positions_written": 3829, "buckets": [1024, 757, 1024, 1024], "seconds": 1937.48}
+{"queried": 35968, "accepted_candidates": 3829, "buckets": [1024, 757, 1024, 1024], "games": 5060, "seconds": 1940.06}
+{"source_games": 5076, "positions_written": 3829, "buckets": [1024, 757, 1024, 1024], "seconds": 1945.84}
+{"queried": 36096, "accepted_candidates": 3830, "buckets": [1024, 758, 1024, 1024], "games": 5077, "seconds": 1947.08}
+{"queried": 36224, "accepted_candidates": 3831, "buckets": [1024, 759, 1024, 1024], "games": 5092, "seconds": 1953.56}
+{"source_games": 5101, "positions_written": 3831, "buckets": [1024, 759, 1024, 1024], "seconds": 1957.64}
+{"queried": 36352, "accepted_candidates": 3831, "buckets": [1024, 759, 1024, 1024], "games": 5108, "seconds": 1959.91}
+{"queried": 36480, "accepted_candidates": 3834, "buckets": [1024, 762, 1024, 1024], "games": 5121, "seconds": 1966.42}
+{"source_games": 5126, "positions_written": 3834, "buckets": [1024, 762, 1024, 1024], "seconds": 1967.82}
+{"queried": 36608, "accepted_candidates": 3834, "buckets": [1024, 762, 1024, 1024], "games": 5134, "seconds": 1973.25}
+{"queried": 36736, "accepted_candidates": 3837, "buckets": [1024, 765, 1024, 1024], "games": 5144, "seconds": 1979.37}
+{"source_games": 5151, "positions_written": 3837, "buckets": [1024, 765, 1024, 1024], "seconds": 1981.6}
+{"queried": 36864, "accepted_candidates": 3838, "buckets": [1024, 766, 1024, 1024], "games": 5159, "seconds": 1986.01}
+{"source_games": 5176, "positions_written": 3840, "buckets": [1024, 768, 1024, 1024], "seconds": 1992.71}
+{"queried": 36992, "accepted_candidates": 3840, "buckets": [1024, 768, 1024, 1024], "games": 5177, "seconds": 1992.98}
+{"queried": 37120, "accepted_candidates": 3841, "buckets": [1024, 769, 1024, 1024], "games": 5194, "seconds": 1999.73}
+{"source_games": 5201, "positions_written": 3841, "buckets": [1024, 769, 1024, 1024], "seconds": 2001.07}
+{"queried": 37248, "accepted_candidates": 3842, "buckets": [1024, 770, 1024, 1024], "games": 5215, "seconds": 2006.48}
+{"source_games": 5226, "positions_written": 3844, "buckets": [1024, 772, 1024, 1024], "seconds": 2009.89}
+{"queried": 37376, "accepted_candidates": 3846, "buckets": [1024, 774, 1024, 1024], "games": 5232, "seconds": 2013.58}
+{"source_games": 5251, "positions_written": 3846, "buckets": [1024, 774, 1024, 1024], "seconds": 2018.33}
+{"queried": 37504, "accepted_candidates": 3847, "buckets": [1024, 775, 1024, 1024], "games": 5258, "seconds": 2020.89}
+{"source_games": 5276, "positions_written": 3847, "buckets": [1024, 775, 1024, 1024], "seconds": 2026.24}
+{"queried": 37632, "accepted_candidates": 3850, "buckets": [1024, 778, 1024, 1024], "games": 5280, "seconds": 2028.05}
+{"queried": 37760, "accepted_candidates": 3851, "buckets": [1024, 779, 1024, 1024], "games": 5297, "seconds": 2034.71}
+{"source_games": 5301, "positions_written": 3851, "buckets": [1024, 779, 1024, 1024], "seconds": 2036.97}
+{"queried": 37888, "accepted_candidates": 3852, "buckets": [1024, 780, 1024, 1024], "games": 5309, "seconds": 2041.26}
+{"source_games": 5326, "positions_written": 3860, "buckets": [1024, 788, 1024, 1024], "seconds": 2048.02}
+{"queried": 38016, "accepted_candidates": 3860, "buckets": [1024, 788, 1024, 1024], "games": 5327, "seconds": 2048.33}
+{"queried": 38144, "accepted_candidates": 3861, "buckets": [1024, 789, 1024, 1024], "games": 5344, "seconds": 2054.65}
+{"source_games": 5351, "positions_written": 3867, "buckets": [1024, 795, 1024, 1024], "seconds": 2058.5}
+{"queried": 38272, "accepted_candidates": 3868, "buckets": [1024, 796, 1024, 1024], "games": 5359, "seconds": 2061.51}
+{"source_games": 5376, "positions_written": 3868, "buckets": [1024, 796, 1024, 1024], "seconds": 2067.19}
+{"queried": 38400, "accepted_candidates": 3868, "buckets": [1024, 796, 1024, 1024], "games": 5385, "seconds": 2068.81}
+{"source_games": 5401, "positions_written": 3869, "buckets": [1024, 797, 1024, 1024], "seconds": 2075.4}
+{"queried": 38528, "accepted_candidates": 3869, "buckets": [1024, 797, 1024, 1024], "games": 5402, "seconds": 2075.99}
+{"source_games": 5426, "positions_written": 3870, "buckets": [1024, 798, 1024, 1024], "seconds": 2082.79}
+{"queried": 38656, "accepted_candidates": 3873, "buckets": [1024, 801, 1024, 1024], "games": 5429, "seconds": 2083.58}
+{"source_games": 5451, "positions_written": 3875, "buckets": [1024, 803, 1024, 1024], "seconds": 2088.38}
+{"queried": 38784, "accepted_candidates": 3875, "buckets": [1024, 803, 1024, 1024], "games": 5460, "seconds": 2091.39}
+{"source_games": 5476, "positions_written": 3882, "buckets": [1024, 810, 1024, 1024], "seconds": 2097.83}
+{"queried": 38912, "accepted_candidates": 3882, "buckets": [1024, 810, 1024, 1024], "games": 5479, "seconds": 2098.71}
+{"queried": 39040, "accepted_candidates": 3882, "buckets": [1024, 810, 1024, 1024], "games": 5493, "seconds": 2105.16}
+{"source_games": 5501, "positions_written": 3884, "buckets": [1024, 812, 1024, 1024], "seconds": 2108.21}
+{"queried": 39168, "accepted_candidates": 3885, "buckets": [1024, 813, 1024, 1024], "games": 5512, "seconds": 2112.01}
+{"source_games": 5526, "positions_written": 3885, "buckets": [1024, 813, 1024, 1024], "seconds": 2117.56}
+{"queried": 39296, "accepted_candidates": 3885, "buckets": [1024, 813, 1024, 1024], "games": 5531, "seconds": 2119.04}
+{"queried": 39424, "accepted_candidates": 3886, "buckets": [1024, 814, 1024, 1024], "games": 5550, "seconds": 2126.06}
+{"source_games": 5551, "positions_written": 3886, "buckets": [1024, 814, 1024, 1024], "seconds": 2126.68}
+{"queried": 39552, "accepted_candidates": 3893, "buckets": [1024, 821, 1024, 1024], "games": 5565, "seconds": 2132.76}
+{"source_games": 5576, "positions_written": 3893, "buckets": [1024, 821, 1024, 1024], "seconds": 2136.42}
+{"queried": 39680, "accepted_candidates": 3893, "buckets": [1024, 821, 1024, 1024], "games": 5582, "seconds": 2139.92}
+{"source_games": 5601, "positions_written": 3896, "buckets": [1024, 824, 1024, 1024], "seconds": 2146.65}
+{"queried": 39808, "accepted_candidates": 3896, "buckets": [1024, 824, 1024, 1024], "games": 5603, "seconds": 2147.08}
+{"queried": 39936, "accepted_candidates": 3898, "buckets": [1024, 826, 1024, 1024], "games": 5616, "seconds": 2153.92}
+{"source_games": 5626, "positions_written": 3900, "buckets": [1024, 828, 1024, 1024], "seconds": 2158.15}
+{"queried": 40064, "accepted_candidates": 3910, "buckets": [1024, 838, 1024, 1024], "games": 5628, "seconds": 2160.56}
+{"queried": 40192, "accepted_candidates": 3913, "buckets": [1024, 841, 1024, 1024], "games": 5644, "seconds": 2166.98}
+{"source_games": 5651, "positions_written": 3913, "buckets": [1024, 841, 1024, 1024], "seconds": 2169.31}
+{"queried": 40320, "accepted_candidates": 3913, "buckets": [1024, 841, 1024, 1024], "games": 5662, "seconds": 2173.66}
+{"source_games": 5676, "positions_written": 3914, "buckets": [1024, 842, 1024, 1024], "seconds": 2177.05}
+{"queried": 40448, "accepted_candidates": 3921, "buckets": [1024, 849, 1024, 1024], "games": 5683, "seconds": 2181.01}
+{"queried": 40576, "accepted_candidates": 3921, "buckets": [1024, 849, 1024, 1024], "games": 5698, "seconds": 2187.65}
+{"source_games": 5701, "positions_written": 3922, "buckets": [1024, 850, 1024, 1024], "seconds": 2188.46}
+{"queried": 40704, "accepted_candidates": 3925, "buckets": [1024, 853, 1024, 1024], "games": 5714, "seconds": 2194.55}
+{"source_games": 5726, "positions_written": 3925, "buckets": [1024, 853, 1024, 1024], "seconds": 2197.86}
+{"queried": 40832, "accepted_candidates": 3925, "buckets": [1024, 853, 1024, 1024], "games": 5743, "seconds": 2202.14}
+{"source_games": 5751, "positions_written": 3925, "buckets": [1024, 853, 1024, 1024], "seconds": 2204.46}
+{"queried": 40960, "accepted_candidates": 3926, "buckets": [1024, 854, 1024, 1024], "games": 5757, "seconds": 2208.67}
+{"queried": 41088, "accepted_candidates": 3930, "buckets": [1024, 858, 1024, 1024], "games": 5766, "seconds": 2214.71}
+{"source_games": 5776, "positions_written": 3931, "buckets": [1024, 859, 1024, 1024], "seconds": 2218.1}
+{"queried": 41216, "accepted_candidates": 3938, "buckets": [1024, 866, 1024, 1024], "games": 5787, "seconds": 2221.7}
+{"source_games": 5801, "positions_written": 3939, "buckets": [1024, 867, 1024, 1024], "seconds": 2226.7}
+{"queried": 41344, "accepted_candidates": 3939, "buckets": [1024, 867, 1024, 1024], "games": 5804, "seconds": 2228.44}
+{"queried": 41472, "accepted_candidates": 3942, "buckets": [1024, 870, 1024, 1024], "games": 5815, "seconds": 2235.31}
+{"source_games": 5826, "positions_written": 3942, "buckets": [1024, 870, 1024, 1024], "seconds": 2238.76}
+{"queried": 41600, "accepted_candidates": 3944, "buckets": [1024, 872, 1024, 1024], "games": 5832, "seconds": 2242.28}
+{"queried": 41728, "accepted_candidates": 3951, "buckets": [1024, 879, 1024, 1024], "games": 5848, "seconds": 2249.05}
+{"source_games": 5851, "positions_written": 3951, "buckets": [1024, 879, 1024, 1024], "seconds": 2249.84}
+{"queried": 41856, "accepted_candidates": 3954, "buckets": [1024, 882, 1024, 1024], "games": 5869, "seconds": 2256.04}
+{"source_games": 5876, "positions_written": 3954, "buckets": [1024, 882, 1024, 1024], "seconds": 2260.05}
+{"queried": 41984, "accepted_candidates": 3954, "buckets": [1024, 882, 1024, 1024], "games": 5883, "seconds": 2262.81}
+{"source_games": 5901, "positions_written": 3955, "buckets": [1024, 883, 1024, 1024], "seconds": 2268.34}
+{"queried": 42112, "accepted_candidates": 3955, "buckets": [1024, 883, 1024, 1024], "games": 5903, "seconds": 2269.77}
+{"queried": 42240, "accepted_candidates": 3955, "buckets": [1024, 883, 1024, 1024], "games": 5924, "seconds": 2276.72}
+{"source_games": 5926, "positions_written": 3955, "buckets": [1024, 883, 1024, 1024], "seconds": 2277.56}
+{"source_games": 5951, "positions_written": 3955, "buckets": [1024, 883, 1024, 1024], "seconds": 2284.19}
+{"queried": 42368, "accepted_candidates": 3955, "buckets": [1024, 883, 1024, 1024], "games": 5951, "seconds": 2284.58}
+{"queried": 42496, "accepted_candidates": 3955, "buckets": [1024, 883, 1024, 1024], "games": 5970, "seconds": 2291.23}
+{"source_games": 5976, "positions_written": 3955, "buckets": [1024, 883, 1024, 1024], "seconds": 2293.21}
+{"queried": 42624, "accepted_candidates": 3956, "buckets": [1024, 884, 1024, 1024], "games": 5986, "seconds": 2297.84}
+{"source_games": 6001, "positions_written": 3956, "buckets": [1024, 884, 1024, 1024], "seconds": 2301.96}
+{"queried": 42752, "accepted_candidates": 3958, "buckets": [1024, 886, 1024, 1024], "games": 6011, "seconds": 2305.32}
+{"queried": 42880, "accepted_candidates": 3960, "buckets": [1024, 888, 1024, 1024], "games": 6022, "seconds": 2311.84}
+{"source_games": 6026, "positions_written": 3961, "buckets": [1024, 889, 1024, 1024], "seconds": 2313.47}
+{"queried": 43008, "accepted_candidates": 3966, "buckets": [1024, 894, 1024, 1024], "games": 6041, "seconds": 2318.69}
+{"source_games": 6051, "positions_written": 3969, "buckets": [1024, 897, 1024, 1024], "seconds": 2322.12}
+{"queried": 43136, "accepted_candidates": 3969, "buckets": [1024, 897, 1024, 1024], "games": 6060, "seconds": 2325.78}
+{"queried": 43264, "accepted_candidates": 3972, "buckets": [1024, 900, 1024, 1024], "games": 6075, "seconds": 2332.22}
+{"source_games": 6076, "positions_written": 3972, "buckets": [1024, 900, 1024, 1024], "seconds": 2332.33}
+{"queried": 43392, "accepted_candidates": 3974, "buckets": [1024, 902, 1024, 1024], "games": 6089, "seconds": 2338.33}
+{"source_games": 6101, "positions_written": 3976, "buckets": [1024, 904, 1024, 1024], "seconds": 2344.05}
+{"queried": 43520, "accepted_candidates": 3976, "buckets": [1024, 904, 1024, 1024], "games": 6101, "seconds": 2344.58}
+{"queried": 43648, "accepted_candidates": 3977, "buckets": [1024, 905, 1024, 1024], "games": 6120, "seconds": 2351.31}
+{"source_games": 6126, "positions_written": 3977, "buckets": [1024, 905, 1024, 1024], "seconds": 2352.76}
+{"queried": 43776, "accepted_candidates": 3977, "buckets": [1024, 905, 1024, 1024], "games": 6141, "seconds": 2358.7}
+{"source_games": 6151, "positions_written": 3980, "buckets": [1024, 908, 1024, 1024], "seconds": 2363.28}
+{"queried": 43904, "accepted_candidates": 3980, "buckets": [1024, 908, 1024, 1024], "games": 6152, "seconds": 2365.11}
+{"queried": 44032, "accepted_candidates": 3984, "buckets": [1024, 912, 1024, 1024], "games": 6163, "seconds": 2371.1}
+{"source_games": 6176, "positions_written": 3989, "buckets": [1024, 917, 1024, 1024], "seconds": 2374.44}
+{"queried": 44160, "accepted_candidates": 3990, "buckets": [1024, 918, 1024, 1024], "games": 6186, "seconds": 2378.72}
+{"source_games": 6201, "positions_written": 3991, "buckets": [1024, 919, 1024, 1024], "seconds": 2383.58}
+{"queried": 44288, "accepted_candidates": 3991, "buckets": [1024, 919, 1024, 1024], "games": 6202, "seconds": 2385.55}
+{"queried": 44416, "accepted_candidates": 3995, "buckets": [1024, 923, 1024, 1024], "games": 6219, "seconds": 2391.98}
+{"source_games": 6226, "positions_written": 3998, "buckets": [1024, 926, 1024, 1024], "seconds": 2394.9}
+{"queried": 44544, "accepted_candidates": 3998, "buckets": [1024, 926, 1024, 1024], "games": 6233, "seconds": 2397.79}
+{"source_games": 6251, "positions_written": 3998, "buckets": [1024, 926, 1024, 1024], "seconds": 2403.08}
+{"queried": 44672, "accepted_candidates": 3998, "buckets": [1024, 926, 1024, 1024], "games": 6254, "seconds": 2404.65}
+{"queried": 44800, "accepted_candidates": 3998, "buckets": [1024, 926, 1024, 1024], "games": 6265, "seconds": 2411.06}
+{"source_games": 6276, "positions_written": 4001, "buckets": [1024, 929, 1024, 1024], "seconds": 2415.09}
+{"queried": 44928, "accepted_candidates": 4001, "buckets": [1024, 929, 1024, 1024], "games": 6284, "seconds": 2417.96}
+{"queried": 45056, "accepted_candidates": 4009, "buckets": [1024, 937, 1024, 1024], "games": 6298, "seconds": 2424.8}
+{"source_games": 6301, "positions_written": 4009, "buckets": [1024, 937, 1024, 1024], "seconds": 2426.05}
+{"queried": 45184, "accepted_candidates": 4012, "buckets": [1024, 940, 1024, 1024], "games": 6308, "seconds": 2430.91}
+{"queried": 45312, "accepted_candidates": 4018, "buckets": [1024, 946, 1024, 1024], "games": 6322, "seconds": 2437.78}
+{"source_games": 6326, "positions_written": 4018, "buckets": [1024, 946, 1024, 1024], "seconds": 2439.71}
+{"queried": 45440, "accepted_candidates": 4018, "buckets": [1024, 946, 1024, 1024], "games": 6342, "seconds": 2444.62}
+{"source_games": 6351, "positions_written": 4019, "buckets": [1024, 947, 1024, 1024], "seconds": 2448.37}
+{"queried": 45568, "accepted_candidates": 4019, "buckets": [1024, 947, 1024, 1024], "games": 6358, "seconds": 2451.4}
+{"source_games": 6376, "positions_written": 4020, "buckets": [1024, 948, 1024, 1024], "seconds": 2458.31}
+{"queried": 45696, "accepted_candidates": 4020, "buckets": [1024, 948, 1024, 1024], "games": 6376, "seconds": 2458.44}
+{"queried": 45824, "accepted_candidates": 4023, "buckets": [1024, 951, 1024, 1024], "games": 6387, "seconds": 2464.88}
+{"source_games": 6401, "positions_written": 4027, "buckets": [1024, 955, 1024, 1024], "seconds": 2467.76}
+{"queried": 45952, "accepted_candidates": 4032, "buckets": [1024, 960, 1024, 1024], "games": 6410, "seconds": 2472.07}
+{"queried": 46080, "accepted_candidates": 4035, "buckets": [1024, 963, 1024, 1024], "games": 6420, "seconds": 2478.12}
+{"source_games": 6426, "positions_written": 4035, "buckets": [1024, 963, 1024, 1024], "seconds": 2479.11}
+{"queried": 46208, "accepted_candidates": 4036, "buckets": [1024, 964, 1024, 1024], "games": 6443, "seconds": 2485.52}
+{"source_games": 6451, "positions_written": 4036, "buckets": [1024, 964, 1024, 1024], "seconds": 2487.83}
+{"queried": 46336, "accepted_candidates": 4037, "buckets": [1024, 965, 1024, 1024], "games": 6462, "seconds": 2492.56}
+{"source_games": 6476, "positions_written": 4037, "buckets": [1024, 965, 1024, 1024], "seconds": 2497.55}
+{"queried": 46464, "accepted_candidates": 4037, "buckets": [1024, 965, 1024, 1024], "games": 6484, "seconds": 2499.55}
+{"source_games": 6501, "positions_written": 4038, "buckets": [1024, 966, 1024, 1024], "seconds": 2504.14}
+{"queried": 46592, "accepted_candidates": 4038, "buckets": [1024, 966, 1024, 1024], "games": 6504, "seconds": 2506.43}
+{"queried": 46720, "accepted_candidates": 4038, "buckets": [1024, 966, 1024, 1024], "games": 6525, "seconds": 2513.71}
+{"source_games": 6526, "positions_written": 4038, "buckets": [1024, 966, 1024, 1024], "seconds": 2513.72}
+{"queried": 46848, "accepted_candidates": 4041, "buckets": [1024, 969, 1024, 1024], "games": 6547, "seconds": 2520.81}
+{"source_games": 6551, "positions_written": 4041, "buckets": [1024, 969, 1024, 1024], "seconds": 2524.32}
+{"queried": 46976, "accepted_candidates": 4041, "buckets": [1024, 969, 1024, 1024], "games": 6556, "seconds": 2527.31}
+{"source_games": 6576, "positions_written": 4041, "buckets": [1024, 969, 1024, 1024], "seconds": 2533.71}
+{"queried": 47104, "accepted_candidates": 4041, "buckets": [1024, 969, 1024, 1024], "games": 6576, "seconds": 2533.94}
+{"queried": 47232, "accepted_candidates": 4043, "buckets": [1024, 971, 1024, 1024], "games": 6593, "seconds": 2540.55}
+{"source_games": 6601, "positions_written": 4043, "buckets": [1024, 971, 1024, 1024], "seconds": 2544.47}
+{"queried": 47360, "accepted_candidates": 4043, "buckets": [1024, 971, 1024, 1024], "games": 6606, "seconds": 2546.86}
+{"source_games": 6626, "positions_written": 4044, "buckets": [1024, 972, 1024, 1024], "seconds": 2552.57}
+{"queried": 47488, "accepted_candidates": 4044, "buckets": [1024, 972, 1024, 1024], "games": 6626, "seconds": 2553.64}
+{"queried": 47616, "accepted_candidates": 4046, "buckets": [1024, 974, 1024, 1024], "games": 6643, "seconds": 2560.55}
+{"source_games": 6651, "positions_written": 4046, "buckets": [1024, 974, 1024, 1024], "seconds": 2564.34}
+{"queried": 47744, "accepted_candidates": 4047, "buckets": [1024, 975, 1024, 1024], "games": 6654, "seconds": 2567.0}
+{"source_games": 6676, "positions_written": 4047, "buckets": [1024, 975, 1024, 1024], "seconds": 2573.4}
+{"queried": 47872, "accepted_candidates": 4047, "buckets": [1024, 975, 1024, 1024], "games": 6677, "seconds": 2574.34}
+{"queried": 48000, "accepted_candidates": 4049, "buckets": [1024, 977, 1024, 1024], "games": 6696, "seconds": 2581.44}
+{"source_games": 6701, "positions_written": 4049, "buckets": [1024, 977, 1024, 1024], "seconds": 2584.51}
+{"queried": 48128, "accepted_candidates": 4049, "buckets": [1024, 977, 1024, 1024], "games": 6713, "seconds": 2588.34}
+{"source_games": 6726, "positions_written": 4052, "buckets": [1024, 980, 1024, 1024], "seconds": 2592.71}
+{"queried": 48256, "accepted_candidates": 4052, "buckets": [1024, 980, 1024, 1024], "games": 6728, "seconds": 2594.68}
+{"queried": 48384, "accepted_candidates": 4052, "buckets": [1024, 980, 1024, 1024], "games": 6743, "seconds": 2601.36}
+{"source_games": 6751, "positions_written": 4056, "buckets": [1024, 984, 1024, 1024], "seconds": 2604.41}
+{"queried": 48512, "accepted_candidates": 4057, "buckets": [1024, 985, 1024, 1024], "games": 6765, "seconds": 2608.27}
+{"source_games": 6776, "positions_written": 4065, "buckets": [1024, 993, 1024, 1024], "seconds": 2613.8}
+{"queried": 48640, "accepted_candidates": 4065, "buckets": [1024, 993, 1024, 1024], "games": 6777, "seconds": 2614.97}
+{"queried": 48768, "accepted_candidates": 4066, "buckets": [1024, 994, 1024, 1024], "games": 6790, "seconds": 2621.44}
+{"source_games": 6801, "positions_written": 4068, "buckets": [1024, 996, 1024, 1024], "seconds": 2625.31}
+{"queried": 48896, "accepted_candidates": 4068, "buckets": [1024, 996, 1024, 1024], "games": 6809, "seconds": 2628.38}
+{"queried": 49024, "accepted_candidates": 4068, "buckets": [1024, 996, 1024, 1024], "games": 6824, "seconds": 2634.86}
+{"source_games": 6826, "positions_written": 4068, "buckets": [1024, 996, 1024, 1024], "seconds": 2635.6}
+{"queried": 49152, "accepted_candidates": 4070, "buckets": [1024, 998, 1024, 1024], "games": 6846, "seconds": 2641.93}
+{"source_games": 6851, "positions_written": 4070, "buckets": [1024, 998, 1024, 1024], "seconds": 2643.82}
+{"queried": 49280, "accepted_candidates": 4070, "buckets": [1024, 998, 1024, 1024], "games": 6868, "seconds": 2649.09}
+{"source_games": 6876, "positions_written": 4070, "buckets": [1024, 998, 1024, 1024], "seconds": 2651.27}
+{"queried": 49408, "accepted_candidates": 4070, "buckets": [1024, 998, 1024, 1024], "games": 6892, "seconds": 2656.08}
+{"source_games": 6901, "positions_written": 4071, "buckets": [1024, 999, 1024, 1024], "seconds": 2660.15}
+{"queried": 49536, "accepted_candidates": 4073, "buckets": [1024, 1001, 1024, 1024], "games": 6906, "seconds": 2662.88}
+{"source_games": 6926, "positions_written": 4073, "buckets": [1024, 1001, 1024, 1024], "seconds": 2668.09}
+{"queried": 49664, "accepted_candidates": 4074, "buckets": [1024, 1002, 1024, 1024], "games": 6930, "seconds": 2670.19}
+{"source_games": 6951, "positions_written": 4074, "buckets": [1024, 1002, 1024, 1024], "seconds": 2676.99}
+{"queried": 49792, "accepted_candidates": 4074, "buckets": [1024, 1002, 1024, 1024], "games": 6952, "seconds": 2677.36}
+{"queried": 49920, "accepted_candidates": 4078, "buckets": [1024, 1006, 1024, 1024], "games": 6964, "seconds": 2683.89}
+{"source_games": 6976, "positions_written": 4078, "buckets": [1024, 1006, 1024, 1024], "seconds": 2687.46}
+{"queried": 50048, "accepted_candidates": 4079, "buckets": [1024, 1007, 1024, 1024], "games": 6985, "seconds": 2690.85}
+{"source_games": 7001, "positions_written": 4079, "buckets": [1024, 1007, 1024, 1024], "seconds": 2696.7}
+{"queried": 50176, "accepted_candidates": 4079, "buckets": [1024, 1007, 1024, 1024], "games": 7005, "seconds": 2697.66}
+{"queried": 50304, "accepted_candidates": 4084, "buckets": [1024, 1012, 1024, 1024], "games": 7023, "seconds": 2704.72}
+{"source_games": 7026, "positions_written": 4084, "buckets": [1024, 1012, 1024, 1024], "seconds": 2705.65}
+{"queried": 50432, "accepted_candidates": 4090, "buckets": [1024, 1018, 1024, 1024], "games": 7036, "seconds": 2711.2}
+{"source_games": 7051, "positions_written": 4095, "buckets": [1024, 1023, 1024, 1024], "seconds": 2717.65}
+{"queried": 50560, "accepted_candidates": 4095, "buckets": [1024, 1023, 1024, 1024], "games": 7053, "seconds": 2718.06}
+{"complete": true, "positions": 4096, "source_games": 7070, "queried": 50639, "source_unresolved": 6}

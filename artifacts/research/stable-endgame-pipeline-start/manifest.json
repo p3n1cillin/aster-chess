@@ -1,0 +1,414 @@
+{
+  "created_utc": "2026-10-04T19:46:45.972729+00:00",
+  "plan_sha256": "d36914bbd359be33b49eac898cc7e6a67b15390969e39f8ad51af6799283f478",
+  "source_files": [
+    {
+      "path": "declare_stable_endgames.py",
+      "sha256": "e94e70fb5db9fab01cde3dd6bd063ca1c8c42d8435186169d4380b7df2271c87"
+    },
+    {
+      "path": "generate_stable_endgames.py",
+      "sha256": "6215d646c0c79dad2a7702dde3afc198054eeb93c905f7cd11e0641613f074fe"
+    },
+    {
+      "path": "audit_stable_endgames.py",
+      "sha256": "aef85fc53d2aa48b23369aafa4dcbc8e88fa3fc50996983e6e6a02efd3369529"
+    },
+    {
+      "path": "prepare_stable_training.py",
+      "sha256": "df173fc2665e71ab912b5ae642650429284a4985ce4cc9e8bb9c95688eaff036"
+    },
+    {
+      "path": "test_fixed_split.py",
+      "sha256": "69ed1ff0a9e9c4f5fda6f6fb066a914aa65828a5f4b607c65f3cf7f5c76dc032"
+    },
+    {
+      "path": "train_stable_endgames.py",
+      "sha256": "679ec9b23412624f955d9813e13dae98d9b63175dfa0763b7fe30b692fde1efa"
+    },
+    {
+      "path": "train_network.py",
+      "sha256": "d498578785c43ab886311220bf2975356ed46047df23fd0666f2dd85fb35c566"
+    },
+    {
+      "path": "neural_format.py",
+      "sha256": "304897abff22a599e5523ad08492f76d91dde8def54e54497716969602970efa"
+    },
+    {
+      "path": "report_stable_fit.py",
+      "sha256": "ee8216cbfbd961ff2db83ba38ee1e544645902538b52e96308b66197f3b6e81e"
+    },
+    {
+      "path": "prepare_stable_openings.py",
+      "sha256": "a7403854d6afc5cc36ce4884eb67f1f458a62d20990ad514128270dfd5bddcd6"
+    },
+    {
+      "path": "check_stable_endgames.py",
+      "sha256": "de3f54b06b035404d778fa6ab1933c1f7ea72c35ed98bb7d3c44498d23a99128"
+    },
+    {
+      "path": "freeze_stable_pipeline.py",
+      "sha256": "50cd8e099a685aaf4e849341462bb09c006c3d14bfbd58b674c14ca4e7f9bd54"
+    },
+    {
+      "path": "run_stable_endgames.py",
+      "sha256": "72664ad73b11ac910ba64a581b9855b687aaaac43ba72ae30ebd15a57179ff0d"
+    },
+    {
+      "path": "assess_stable_endgames.py",
+      "sha256": "9bc444f7b67b9341d5f273d5e283e0f4e61557c8c0a6616d8d53760193bf37d1"
+    },
+    {
+      "path": "preserve_stable_endgames.py",
+      "sha256": "9bd0609d0261e76c9b04a61e491e23e8f3282d778e450c42ac3352df127b8fdf"
+    },
+    {
+      "path": "generate_endgame_diagnostic.py",
+      "sha256": "9a56c1ba91fead0f5f071426114680f3e3be8d002e69d388cde271a5ad485e6a"
+    },
+    {
+      "path": "generate_openings.py",
+      "sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746"
+    },
+    {
+      "path": "audit_openings.py",
+      "sha256": "0c97723cf8a0404f9e3681a90f5d9d09dcfc4978721748222ee80a679a6fca5d"
+    },
+    {
+      "path": "verify_network.py",
+      "sha256": "be2ffe96b1a70f2e2ac24d4df640cd1682ab49c161c985a7f3aecd51de50fada"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    },
+    {
+      "path": "tactics.py",
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    },
+    {
+      "path": "compare_search.py",
+      "sha256": "a8162c85b4ea4aae46546ca8a02d4b04c083bf56abb6a28d64f322b2331b6dd9"
+    },
+    {
+      "path": "match.py",
+      "sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8"
+    },
+    {
+      "path": "audit_match.py",
+      "sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6"
+    },
+    {
+      "path": "analyze_rating.py",
+      "sha256": "f6fe53073c006e91760b885adab9803f92cd50fa3c3a7ba6ada90f0a8e5b8d13"
+    },
+    {
+      "path": "run_rating.py",
+      "sha256": "6e8a31adefd0aeb5d51eac2f5672396f4518f779947713f86dac138ff00f661a"
+    },
+    {
+      "path": "uci_client.py",
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "freeze_engine_source.py",
+      "sha256": "db919e19f9b75ade115a3d834ad48cc57e01a6165130ef03a775279f4c89acb7"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "artifacts/validation/stable-endgame-bench7.txt",
+      "sha256": "178e5b472f11547b832c1b73500a13ac3cac4f2e777aca50ab9050dd6b02a38e"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-build.txt",
+      "sha256": "a9a601e2a8db3819eccaf768ab581c5d797b4f7696908ac801016a63f0c1b6a7"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-candidate-endgames-5000nodes.txt",
+      "sha256": "ef4e645f8ea67b03b31bbb891a18f192680d3ff359c2bd10e014b1541b2db39b"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-candidate-network.json",
+      "sha256": "9145459f25ed4e1beabbd4e5943a324dc3583bd500530ed6301d407d3aaa1223"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-candidate-network.txt",
+      "sha256": "9b998cc8cf447e878460163e274707b6e1076cb0da7283957c2bf3a6bdb1e7ed"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-candidate-rules.json",
+      "sha256": "cfc6270e5f5cba08388115346d05453ca86fc05a005209439c02d26b7973e4f3"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-candidate-rules.txt",
+      "sha256": "edc8ca80a2529971ccf320d67a1404850da40cdcfd8aa89ef5d4094dee79cd44"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-candidate-tactics-5000nodes.txt",
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-candidate-tactics-depth8.txt",
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-candidate-tactics-quiet-5000nodes.txt",
+      "sha256": "42def545db2a70966cb6bc37906897a006ce19db515c280022a24195ce77c43f"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-candidate-tactics-quiet-depth8.txt",
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-ci-test-evidence.txt",
+      "sha256": "9255b66ef2f4d2c52f4105719820b191ba51145c8bd53afc2687d4dc108c170f"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-ci.json",
+      "sha256": "8fe646ce9e09474e14bf96660132bb2674454bb1f820034a7ab92938e89c6971"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-classical-100ms-audit.json",
+      "sha256": "3487bc22b4c6b0acace49bcc7e169ff58e9147bdd6da6d540f21e7c27a779dee"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-classical-30ms-audit.json",
+      "sha256": "881629e69db21cb05722f5f1ba2d89140bd956680c95bc3e83b9e529a42989fd"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-common-heldout-fit-v1.json",
+      "sha256": "e536cf6a02fd7a48add70d198c17981f0db2ec4cd15bdc0ddb46c2e5da705b68"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-control-30ms-audit.json",
+      "sha256": "d12dde42283d70cfc11626175a00a801c085d747c5011c52b63ecdbcac769cfb"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-control-endgames-5000nodes.txt",
+      "sha256": "ef4e645f8ea67b03b31bbb891a18f192680d3ff359c2bd10e014b1541b2db39b"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-control-network.json",
+      "sha256": "dfefe77c4853133063d07ef83246f21c4e4ecddd5babed4800d6a09a7604015d"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-control-network.txt",
+      "sha256": "3faae3c09878f8f679135e48c68af94e821822b3a6609e8c097a126a2c7f94e8"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-control-rules.json",
+      "sha256": "1c79ec158b8efaee53d6ceab7a9d101ef61df4ed62655f761d05ddb5a9391664"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-control-rules.txt",
+      "sha256": "72fe3926070eae223505d093e98d8a7bc1dd7641efdd7edae33bfed371002ccd"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-control-tactics-5000nodes.txt",
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-control-tactics-depth8.txt",
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-control-tactics-quiet-5000nodes.txt",
+      "sha256": "42def545db2a70966cb6bc37906897a006ce19db515c280022a24195ce77c43f"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-control-tactics-quiet-depth8.txt",
+      "sha256": "ea91da7afa4f6c815c58e7ec58e599406c1ff35a88e12fdbb14eb4323803620d"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-data-audit-v1.json",
+      "sha256": "f54e99005035bfc8a3287d806c8901e0b31b775bc827f60146da829f8892dc0a"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-data-audit.txt",
+      "sha256": "f92a18399082ea04f01e8b3ba599aa07178a5699c83c1aaa487d253542ad3db7"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-default-rules.json",
+      "sha256": "b868451f83aae4ac2f9b73131d10bff23682643e1c04760ca1ac211f720acdaa"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-default-rules.txt",
+      "sha256": "5a8c5a88c9518fe793bb93bcd79aeb62f0b0b3cb58e9a5d7a29ae7d72d164dd7"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-default-tests.txt",
+      "sha256": "7ab0bab8842289b65dd56eebe446b6cecfa06b1d2265a8cbbd8f71e36aae173d"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-fixed-split-tests.json",
+      "sha256": "79d4d079fff136422220a7215cb95ff37419a98d332861eba1aea0f110efdc96"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-frozen-default-rules.json",
+      "sha256": "149b087bd0da5f188265d73ad7266b346f189e7fb3157fe267ceab3104cdd67b"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-frozen-default-rules.txt",
+      "sha256": "d6da386f6cdf487ada33a3c9ce417534d69a062d479733b328f8edd075015c81"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-generation.txt",
+      "sha256": "89e31f626dda7d84c01f83187f7e70d0e1ced14439abdf8685de27b8524ea0cf"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-opening-generation.txt",
+      "sha256": "b3209709105b1400d23f74aa105a66b53306953b9d6f3fb36184f02f96de5d79"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-parent-audit.json",
+      "sha256": "ba96cdef2598e32d5ad81a169493062814fb5ff2b1cc3a3d87a7847286a056cd"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-preflight-driver.txt",
+      "sha256": "66520cbb01a51658a00b109fbcdfc0d0b4c8520bf8fab1d0fe6236593e0f9273"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-preflight.json",
+      "sha256": "53bd4cb765dff14261e82c6e4ca8738677505f3cfef49acee00504475abf10a9"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-rebuild-comparison.txt",
+      "sha256": "e8a8b6f31ab6f28128fad7ca1d97f2d8a28c3368850139ec8f65b414f38d3c03"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-training-candidate.txt",
+      "sha256": "781e275fa7eb82d7365ea277efed2254b76cb5b1c274ecf50b3fcfea0dca6b3c"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-training-control.txt",
+      "sha256": "33db67ecc4f441b2def7ade18f506424f33ee0e5a2251fc420bcb92f080568bb"
+    },
+    {
+      "path": "artifacts/validation/stable-endgame-training-driver.txt",
+      "sha256": "dbd991131c433d616171492382d207e5b4e0ed23c06aa4ae9ed15d88181e90b1"
+    },
+    {
+      "path": "artifacts/tactics/stable-endgame-candidate-endgames-5000nodes.json",
+      "sha256": "3aab3b97d1a310086add6ca9adead0155280cde0ad161eb994a0d9a996840fb1"
+    },
+    {
+      "path": "artifacts/tactics/stable-endgame-candidate-tactics-5000nodes.json",
+      "sha256": "7ed7b4c72117fe4d2c92d25dbd26b2d2b690ce01b2468ab18e29cd64ce5f0581"
+    },
+    {
+      "path": "artifacts/tactics/stable-endgame-candidate-tactics-depth8.json",
+      "sha256": "12c8b0f46f9d4160f026065bfaefae249126d8c13412d8b4c7726bf5810e5530"
+    },
+    {
+      "path": "artifacts/tactics/stable-endgame-candidate-tactics-quiet-5000nodes.json",
+      "sha256": "0106e8e40f294c1ce41c0c351e51aee2a42f2811337039ce39c665c9f02a57a1"
+    },
+    {
+      "path": "artifacts/tactics/stable-endgame-candidate-tactics-quiet-depth8.json",
+      "sha256": "1bc1edb267c30fdfba21347fb18c5ebd2479f1c47b939f63ea0049a8ab24565f"
+    },
+    {
+      "path": "artifacts/tactics/stable-endgame-control-endgames-5000nodes.json",
+      "sha256": "a8e6ba1d388ac52450c983b39b8ca2604facc47f77ab5706a014ab442dd442da"
+    },
+    {
+      "path": "artifacts/tactics/stable-endgame-control-tactics-5000nodes.json",
+      "sha256": "e377c01a8e7f74dddb15906c5c60d164d60c1bdfd6e6e50aeb2b6d77cc80ec84"
+    },
+    {
+      "path": "artifacts/tactics/stable-endgame-control-tactics-depth8.json",
+      "sha256": "14060764768d5587a3ede780477575ce2886641931476041e00f77f7e48a4ca0"
+    },
+    {
+      "path": "artifacts/tactics/stable-endgame-control-tactics-quiet-5000nodes.json",
+      "sha256": "d5acbb6b8aab0627304873847d0fc8f140cb670013a4c872f309fb03927b1a7b"
+    },
+    {
+      "path": "artifacts/tactics/stable-endgame-control-tactics-quiet-depth8.json",
+      "sha256": "7694451c57aec07b00eb0a8c889b30bdd0f52e8218a58909060a43f7154b833b"
+    },
+    {
+      "path": "artifacts/benchmarks/stable-endgame-rebuild-depth8.json",
+      "sha256": "2c10e7d1559deca53cd5369730ec0f00474537c8002c2f43081f5477021a123f"
+    },
+    {
+      "path": "tests/fixtures/stable-endgame-classical-100ms-v1.json",
+      "sha256": "4682375ee99e6043c9a2face29f6ae3bd9bc46fa66c3978005ac09f09d32afe6"
+    },
+    {
+      "path": "tests/fixtures/stable-endgame-classical-30ms-v1.json",
+      "sha256": "03139c4b9c389d6a607425a1fa64a3ddae9d92824fbdab765fd1138a2440f848"
+    },
+    {
+      "path": "tests/fixtures/stable-endgame-control-30ms-v1.json",
+      "sha256": "19e001548702c754b8f97e37b7274b065880bc279c968954219bf356111be8fc"
+    },
+    {
+      "path": "tests/fixtures/stable-endgame-parent-v1.json",
+      "sha256": "ee8a6137df3a3a0da43dcf783565e974483101bb41aeb956d52772f39fc06a19"
+    },
+    {
+      "path": "artifacts/data/stable-endgame-4096-v1.jsonl",
+      "sha256": "3c1ca1842da3059433028b3bd5cd9d6ebf9074226f63783238199563f34e5065"
+    },
+    {
+      "path": "artifacts/data/stable-endgame-4096-v1.jsonl.candidates.jsonl",
+      "sha256": "560d15d291a3a5e26ae2fe1d3f7f8d8a992fa3374f10935dbf9716ce65312210"
+    },
+    {
+      "path": "artifacts/data/stable-endgame-4096-v1.jsonl.manifest.json",
+      "sha256": "2ec01fad5cb35252818716e2e875929efd4cdb175073231ae22a8f40d21b624d"
+    },
+    {
+      "path": "artifacts/data/stable-endgame-4096-v1.jsonl.source.pgn",
+      "sha256": "db2d451715fb8ffcd47b16d5d15e1c72fe691532ab68b5f6a1aad6456b87174a"
+    },
+    {
+      "path": "artifacts/data/stable-endgame-candidate-64096-v1-classical.jsonl",
+      "sha256": "24bc1fb466745dab174c48c014f4b9c4dbf215064aa0b9aa682c232fd0b5d1a4"
+    },
+    {
+      "path": "artifacts/data/stable-endgame-candidate-64096-v1-classical.jsonl.classical.json",
+      "sha256": "b05962ca5ab0834df97e5ca9941f6578e8a93c0e72c1ded9e11da3aaff796f2a"
+    },
+    {
+      "path": "artifacts/data/stable-endgame-control-64096-v1-classical.jsonl",
+      "sha256": "f5bd7e88b8f718d59a342504efe507867d21c5fca417deb14d18e2591fe2f284"
+    },
+    {
+      "path": "artifacts/data/stable-endgame-control-64096-v1-classical.jsonl.classical.json",
+      "sha256": "a3ac420a6e0921c13835183b58913a53cea0a0010c2eeaa0b922b99b7d5d1a62"
+    },
+    {
+      "path": "artifacts/research/stable-endgame-plan-v1.json",
+      "sha256": "d36914bbd359be33b49eac898cc7e6a67b15390969e39f8ad51af6799283f478"
+    },
+    {
+      "path": "artifacts/research/stable-endgame-split-v1.json",
+      "sha256": "141162f3d47667d34ce7ba2bbfd6649672dbc1158342146deec9cebf12875e83"
+    },
+    {
+      "path": "artifacts/research/stable-endgame-training-data-v1.json",
+      "sha256": "4b2f06d4a495189ebd4614fd302f3f6129090881eab7f03313548b7875fa6646"
+    },
+    {
+      "path": "artifacts/research/stable-endgame-training-execution-v1.json",
+      "sha256": "ca6fed9d710cfdf3d763dc982611d500ee0f20362b96ed9efec4b22d7e389444"
+    }
+  ],
+  "engine_sha256": "ac907eac90bba15acab80c15d16f195044a8ac2b59a7964f5a065bc0caaa0ae8",
+  "models": {
+    "control": {
+      "path": "artifacts/training/stable-endgame-control-v1/model.ann",
+      "sha256": "9900079c170813aeda3026834ce58654595705a7998457426252071499c0778f",
+      "training_sha256": "d982eb4e0f8b609b1c43c136e05fcfc4284c3060ed3bed08c389105c82333cd1"
+    },
+    "candidate": {
+      "path": "artifacts/training/stable-endgame-candidate-v1/model.ann",
+      "sha256": "723870f955d642c14b36998f9ed6e7187bbbb0296cf5de40e5898396475be2de",
+      "training_sha256": "a14f730a5d2fb73b157694753a4d61987180b02a8c5f4388c75fe80de08531c2"
+    }
+  },
+  "interpretation": "Frozen after both trainings/correctness/tactics, before matches. All256 short games run regardless of tactical failures. No retuning/adaptive extension."
+}

@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "complete": true,
+  "plan_sha256": "d36914bbd359be33b49eac898cc7e6a67b15390969e39f8ad51af6799283f478",
+  "preparer_sha256": "df173fc2665e71ab912b5ae642650429284a4985ce4cc9e8bb9c95688eaff036",
+  "data_audit_sha256": "f54e99005035bfc8a3287d806c8901e0b31b775bc827f60146da829f8892dc0a",
+  "split_path": "artifacts/research/stable-endgame-split-v1.json",
+  "split_sha256": "141162f3d47667d34ce7ba2bbfd6649672dbc1158342146deec9cebf12875e83",
+  "datasets": {
+    "control": {
+      "path": "artifacts/data/stable-endgame-control-64096-v1-classical.jsonl",
+      "sha256": "f5bd7e88b8f718d59a342504efe507867d21c5fca417deb14d18e2591fe2f284",
+      "classical_provenance_sha256": "a3ac420a6e0921c13835183b58913a53cea0a0010c2eeaa0b922b99b7d5d1a62",
+      "output": "artifacts/training/stable-endgame-control-v1"
+    },
+    "candidate": {
+      "path": "artifacts/data/stable-endgame-candidate-64096-v1-classical.jsonl",
+      "sha256": "24bc1fb466745dab174c48c014f4b9c4dbf215064aa0b9aa682c232fd0b5d1a4",
+      "classical_provenance_sha256": "b05962ca5ab0834df97e5ca9941f6578e8a93c0e72c1ded9e11da3aaff796f2a",
+      "output": "artifacts/training/stable-endgame-candidate-v1"
+    }
+  },
+  "positions": 64096,
+  "old_rows_byte_identical": true,
+  "different_fresh_targets": 4047,
+  "old_validation_games": 269,
+  "fresh_games": 1304,
+  "fresh_validation_games": 130
+}

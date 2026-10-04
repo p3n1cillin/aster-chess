@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "status": "complete",
+  "started_utc": "2026-10-04T19:41:11.813004+00:00",
+  "plan_sha256": "d36914bbd359be33b49eac898cc7e6a67b15390969e39f8ad51af6799283f478",
+  "bundle_sha256": "4b2f06d4a495189ebd4614fd302f3f6129090881eab7f03313548b7875fa6646",
+  "scripts": {
+    "train_network.py": "d498578785c43ab886311220bf2975356ed46047df23fd0666f2dd85fb35c566",
+    "neural_format.py": "304897abff22a599e5523ad08492f76d91dde8def54e54497716969602970efa",
+    "train_stable_endgames.py": "679ec9b23412624f955d9813e13dae98d9b63175dfa0763b7fe30b692fde1efa"
+  },
+  "completed": [
+    {
+      "role": "control",
+      "training_sha256": "d982eb4e0f8b609b1c43c136e05fcfc4284c3060ed3bed08c389105c82333cd1",
+      "model_sha256": "9900079c170813aeda3026834ce58654595705a7998457426252071499c0778f",
+      "selected_epoch": 10,
+      "quantized_mae_cp": 128.35830458353868
+    },
+    {
+      "role": "candidate",
+      "training_sha256": "a14f730a5d2fb73b157694753a4d61987180b02a8c5f4388c75fe80de08531c2",
+      "model_sha256": "723870f955d642c14b36998f9ed6e7187bbbb0296cf5de40e5898396475be2de",
+      "selected_epoch": 9,
+      "quantized_mae_cp": 130.759158863151
+    }
+  ],
+  "updated_utc": "2026-10-04T19:43:25.810691+00:00"
+}

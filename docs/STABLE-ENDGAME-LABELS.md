@@ -35,8 +35,57 @@ and 64 against the matched static control at 30ms/move, then 32 against classica
 at 100ms/move only if all declared gates pass. Both short screens finish even
 if tactics fail. There is no adaptive extension or tuning on their results.
 
-Collection is currently running. No training, match result, strength gain or
-new rating is claimed. The last exact calibrated binary remains Aster
+Collection completed within its fixed budget: 4096 positions, 7070 source
+games, 50639 queries and six unresolved source games. The independent audit
+replayed all 847572 source plies and 840449 PV plies, checked every accepted
+classical score and exactly reproduced all 64 randomly selected teacher
+labels at both search budgets and their static scores. Rejections comprised
+16957 native mate labels, 13318 changed first moves, 6782 unstable values,
+1254 scores outside the range and 8232 already-full bucket samples.
+
+The audit exposed a sampling limitation: **every fresh position is White to
+move**, because sampling at multiples of four from the initial board always
+reaches that side. The dataset is balanced by absolute score range, not side
+to move. No positions or parameters were replaced after observing this. The
+old 60000 rows retain both sides and their existing turn-pair supervision.
+The deeper diagnostic preserved the first move in 22 of 32 positions at
+262144 nodes. Three finite labels became native mate scores; the remaining
+29 changed by 87 centipawns on average in absolute value. Local label
+stability is not proof of an oracle value.
+
+Both prepared datasets contain exactly 64096 positions, with the first 60000
+rows byte-identical to the old data. Only 4047 fresh target values actually
+differ. The fixed split retains 269 old held-out games and selects 130 of
+1304 fresh source groups with the declared seed. There are 6087 held-out
+positions, including 397 fresh endgames.
+
+Both 50-epoch trainings completed. Complete initial state, random state,
+whole-game splits and every epoch's ordinary/pair batch order matched.
+Ordinary held-out loss selected epoch 10 for the control and epoch 9 for
+the candidate. Their model SHA256s are respectively
+`9900079c170813aeda3026834ce58654595705a7998457426252071499c0778f`
+and `723870f955d642c14b36998f9ed6e7187bbbb0296cf5de40e5898396475be2de`.
+
+On the same 397 held-out fresh positions, quantized errors were:
+
+| Model | Static target MAE, cp | Deeper target MAE, cp |
+|---|---:|---:|
+| Matched static control | 149.635 | 182.275 |
+| Stable-label candidate | 151.277 | 182.315 |
+
+There is no held-out deeper-label fit improvement here. Each model's own
+mixed-target metric uses a different fresh target set and must not be
+compared as if the targets were identical.
+
+Both models passed 525 exact Python/C# inference checks and 2614 independent
+rules/protocol cases. Both solved 32/32 original tactics at depth 8 and 5000
+nodes, and 13/13 endgames. Quiet tactics: the control solved 31/32 at depth 8
+and 24/32 at 5000 nodes; the candidate solved 32/32 and 24/32 respectively.
+The candidate misses the required 25 at the node budget, so promotion and
+conditional longer confirmation are blocked. Both declared short match
+screens are running. No match result, strength gain or new rating is claimed.
+
+The last exact calibrated binary remains Aster
 0.7.6-q-evasion-dev: **2319**, local 95% interval **2277–2360**, on the
 Stockfish 19 UCI_Elo-setting scale at 30ms/move, one thread and 64MiB hash.
 Public-pool ratings and superiority to full-strength Stockfish remain

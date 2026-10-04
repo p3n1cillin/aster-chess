@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "correctness_passed": true,
+  "candidate_tactics_passed": false,
+  "models": {
+    "control": {
+      "path": "artifacts/training/stable-endgame-control-v1/model.ann",
+      "sha256": "9900079c170813aeda3026834ce58654595705a7998457426252071499c0778f",
+      "training_sha256": "d982eb4e0f8b609b1c43c136e05fcfc4284c3060ed3bed08c389105c82333cd1"
+    },
+    "candidate": {
+      "path": "artifacts/training/stable-endgame-candidate-v1/model.ann",
+      "sha256": "723870f955d642c14b36998f9ed6e7187bbbb0296cf5de40e5898396475be2de",
+      "training_sha256": "a14f730a5d2fb73b157694753a4d61987180b02a8c5f4388c75fe80de08531c2"
+    }
+  },
+  "tactics": {
+    "control": {
+      "tactics-depth8": {
+        "solved": 32,
+        "minimum": 32,
+        "passed": true
+      },
+      "tactics-5000nodes": {
+        "solved": 32,
+        "minimum": 32,
+        "passed": true
+      },
+      "tactics-quiet-depth8": {
+        "solved": 31,
+        "minimum": 32,
+        "passed": false
+      },
+      "tactics-quiet-5000nodes": {
+        "solved": 24,
+        "minimum": 25,
+        "passed": false
+      },
+      "endgames-5000nodes": {
+        "solved": 13,
+        "minimum": 13,
+        "passed": true
+      }
+    },
+    "candidate": {
+      "tactics-depth8": {
+        "solved": 32,
+        "minimum": 32,
+        "passed": true
+      },
+      "tactics-5000nodes": {
+        "solved": 32,
+        "minimum": 32,
+        "passed": true
+      },
+      "tactics-quiet-depth8": {
+        "solved": 32,
+        "minimum": 32,
+        "passed": true
+      },
+      "tactics-quiet-5000nodes": {
+        "solved": 24,
+        "minimum": 25,
+        "passed": false
+      },
+      "endgames-5000nodes": {
+        "solved": 13,
+        "minimum": 13,
+        "passed": true
+      }
+    }
+  },
+  "engine": "artifacts/publish/mate-proof-dev-v2/Aster.dll",
+  "engine_sha256": "ac907eac90bba15acab80c15d16f195044a8ac2b59a7964f5a065bc0caaa0ae8",
+  "source_manifest": "artifacts/research/mate-proof-source-v2/manifest.json",
+  "source_manifest_sha256": "b90d8b01c71906fe4718922c84410db5b9e0c5a51a01a9b5bd3baf31929f589a",
+  "rebuilt_default_equivalent_positions": 32,
+  "plan_sha256": "d36914bbd359be33b49eac898cc7e6a67b15390969e39f8ad51af6799283f478",
+  "bundle_sha256": "4b2f06d4a495189ebd4614fd302f3f6129090881eab7f03313548b7875fa6646",
+  "script_sha256": "de3f54b06b035404d778fa6ab1933c1f7ea72c35ed98bb7d3c44498d23a99128",
+  "interpretation": "Frozen0.7.9 runtime with both models; exact inference, rules and tactics. Both short screens run even if tactics fail. Ratings do not transfer to these models."
+}

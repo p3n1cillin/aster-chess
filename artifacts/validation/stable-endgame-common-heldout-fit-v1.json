@@ -1,0 +1,247 @@
+{
+  "schema": 1,
+  "complete": true,
+  "plan_sha256": "d36914bbd359be33b49eac898cc7e6a67b15390969e39f8ad51af6799283f478",
+  "bundle_sha256": "4b2f06d4a495189ebd4614fd302f3f6129090881eab7f03313548b7875fa6646",
+  "reporter_sha256": "ee8216cbfbd961ff2db83ba38ee1e544645902538b52e96308b66197f3b6e81e",
+  "validation_rows": 6087,
+  "fresh_validation_rows": 397,
+  "split_sha256": "141162f3d47667d34ce7ba2bbfd6649672dbc1158342146deec9cebf12875e83",
+  "models": {
+    "control": {
+      "model_sha256": "9900079c170813aeda3026834ce58654595705a7998457426252071499c0778f",
+      "selected_epoch": 10,
+      "own_target_mae_cp": 128.35830458353868,
+      "common_targets": {
+        "all": {
+          "positions": 6087,
+          "static": {
+            "mae_cp": 128.35830458353868,
+            "rmse_cp": 176.08340458095077
+          },
+          "stable": {
+            "mae_cp": 130.48710366354527,
+            "rmse_cp": 178.93002588892986
+          }
+        },
+        "old": {
+          "positions": 5690,
+          "static": {
+            "mae_cp": 126.8738137082601,
+            "rmse_cp": 173.8834872416732
+          },
+          "stable": {
+            "mae_cp": 126.8738137082601,
+            "rmse_cp": 173.8834872416732
+          }
+        },
+        "fresh": {
+          "positions": 397,
+          "static": {
+            "mae_cp": 149.63476070528966,
+            "rmse_cp": 205.0364039680297
+          },
+          "stable": {
+            "mae_cp": 182.27455919395467,
+            "rmse_cp": 239.86407254890867
+          }
+        },
+        "phase_0_8": {
+          "positions": 2937,
+          "static": {
+            "mae_cp": 138.6040177051413,
+            "rmse_cp": 182.67632794076437
+          },
+          "stable": {
+            "mae_cp": 143.0160027238679,
+            "rmse_cp": 188.32182373585698
+          }
+        },
+        "phase_9_16": {
+          "positions": 1257,
+          "static": {
+            "mae_cp": 133.58472553699283,
+            "rmse_cp": 188.29899293372972
+          },
+          "stable": {
+            "mae_cp": 133.58472553699283,
+            "rmse_cp": 188.29899293372972
+          }
+        },
+        "phase_17_24": {
+          "positions": 1893,
+          "static": {
+            "mae_cp": 108.99154780771262,
+            "rmse_cp": 156.14081478333728
+          },
+          "stable": {
+            "mae_cp": 108.99154780771262,
+            "rmse_cp": 156.14081478333728
+          }
+        },
+        "fresh_bucket_0": {
+          "positions": 88,
+          "static": {
+            "mae_cp": 102.29545454545455,
+            "rmse_cp": 128.21528415485062
+          },
+          "stable": {
+            "mae_cp": 114.72727272727273,
+            "rmse_cp": 151.26902585069482
+          }
+        },
+        "fresh_bucket_1": {
+          "positions": 96,
+          "static": {
+            "mae_cp": 129.75,
+            "rmse_cp": 164.34085513549778
+          },
+          "stable": {
+            "mae_cp": 172.57291666666666,
+            "rmse_cp": 216.4973777747281
+          }
+        },
+        "fresh_bucket_2": {
+          "positions": 101,
+          "static": {
+            "mae_cp": 146.65346534653466,
+            "rmse_cp": 188.7006115307505
+          },
+          "stable": {
+            "mae_cp": 202.86138613861385,
+            "rmse_cp": 256.46475063219054
+          }
+        },
+        "fresh_bucket_3": {
+          "positions": 112,
+          "static": {
+            "mae_cp": 206.5625,
+            "rmse_cp": 284.32320956967266
+          },
+          "stable": {
+            "mae_cp": 225.09821428571428,
+            "rmse_cp": 294.0608993048889
+          }
+        }
+      }
+    },
+    "candidate": {
+      "model_sha256": "723870f955d642c14b36998f9ed6e7187bbbb0296cf5de40e5898396475be2de",
+      "selected_epoch": 9,
+      "own_target_mae_cp": 130.759158863151,
+      "common_targets": {
+        "all": {
+          "positions": 6087,
+          "static": {
+            "mae_cp": 128.7348447511089,
+            "rmse_cp": 176.5074393034362
+          },
+          "stable": {
+            "mae_cp": 130.759158863151,
+            "rmse_cp": 179.18316981696321
+          }
+        },
+        "old": {
+          "positions": 5690,
+          "static": {
+            "mae_cp": 127.16203866432338,
+            "rmse_cp": 174.15746364744888
+          },
+          "stable": {
+            "mae_cp": 127.16203866432338,
+            "rmse_cp": 174.15746364744888
+          }
+        },
+        "fresh": {
+          "positions": 397,
+          "static": {
+            "mae_cp": 151.27707808564233,
+            "rmse_cp": 207.28151071704042
+          },
+          "stable": {
+            "mae_cp": 182.3148614609572,
+            "rmse_cp": 239.91259428534684
+          }
+        },
+        "phase_0_8": {
+          "positions": 2937,
+          "static": {
+            "mae_cp": 139.25093632958803,
+            "rmse_cp": 183.4378709605888
+          },
+          "stable": {
+            "mae_cp": 143.44637385086824,
+            "rmse_cp": 188.73775296410466
+          }
+        },
+        "phase_9_16": {
+          "positions": 1257,
+          "static": {
+            "mae_cp": 133.08910103420843,
+            "rmse_cp": 187.93920080198993
+          },
+          "stable": {
+            "mae_cp": 133.08910103420843,
+            "rmse_cp": 187.93920080198993
+          }
+        },
+        "phase_17_24": {
+          "positions": 1893,
+          "static": {
+            "mae_cp": 109.52773375594295,
+            "rmse_cp": 156.58231085903887
+          },
+          "stable": {
+            "mae_cp": 109.52773375594295,
+            "rmse_cp": 156.58231085903887
+          }
+        },
+        "fresh_bucket_0": {
+          "positions": 88,
+          "static": {
+            "mae_cp": 103.56818181818181,
+            "rmse_cp": 130.0955068751066
+          },
+          "stable": {
+            "mae_cp": 116.22727272727273,
+            "rmse_cp": 152.5069297978411
+          }
+        },
+        "fresh_bucket_1": {
+          "positions": 96,
+          "static": {
+            "mae_cp": 131.55208333333334,
+            "rmse_cp": 167.29810593667818
+          },
+          "stable": {
+            "mae_cp": 173.39583333333334,
+            "rmse_cp": 218.36523303859522
+          }
+        },
+        "fresh_bucket_2": {
+          "positions": 101,
+          "static": {
+            "mae_cp": 146.17821782178217,
+            "rmse_cp": 188.60698306108907
+          },
+          "stable": {
+            "mae_cp": 201.13861386138615,
+            "rmse_cp": 255.22079355990283
+          }
+        },
+        "fresh_bucket_3": {
+          "positions": 112,
+          "static": {
+            "mae_cp": 210.26785714285714,
+            "rmse_cp": 287.9766855642509
+          },
+          "stable": {
+            "mae_cp": 224.91071428571428,
+            "rmse_cp": 293.49044764207036
+          }
+        }
+      }
+    }
+  },
+  "interpretation": "Common-target held-out teacher fit only; no epoch/model selection from these diagnostics or matches. Playing-strength gates are separate."
+}

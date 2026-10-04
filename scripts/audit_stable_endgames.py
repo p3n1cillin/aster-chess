@@ -1,8 +1,11 @@
 """Independently replay every source game and audit stable endgame selection."""
+import argparse
 import collections
 import json
 import pathlib
 import random
+import re
+import statistics
 import time
 
 import chess
@@ -20,6 +23,9 @@ def rows(path):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--allow-incomplete",action="store_true",help="Audit terminal exhausted source-game budget; never authorize training")
+    args = parser.parse_args()
     started = time.monotonic()
     report_path = ROOT / "artifacts/validation/stable-endgame-data-audit-v1.json"
     if report_path.exists(): raise ValueError("Audit report already exists; preserve it")
@@ -29,12 +35,17 @@ def main():
     candidate_path = pathlib.Path(str(data_path) + ".candidates.jsonl")
     pgn_path = pathlib.Path(str(data_path) + ".source.pgn")
     meta = read(pathlib.Path(str(data_path) + ".manifest.json"))
-    assert meta["complete"] and meta["status"] == "complete"
+    if meta["complete"]: assert meta["status"] == "complete"
+    else:
+        assert args.allow_incomplete and meta["status"] == "failed"
+        assert meta["source_games_completed"] == setup["games"]
+        assert "Source-game budget exhausted" in meta["error"]
     assert digest(plan_path) == meta["plan_sha256"]
     assert digest(data_path) == meta["data_sha256"] and digest(candidate_path) == meta["candidates_sha256"]
     assert digest(pgn_path) == meta["source_pgn_sha256"]
     accepted = rows(data_path); candidates = rows(candidate_path)
-    assert len(accepted) == setup["positions"] == meta["positions_written"]
+    assert len(accepted) == meta["positions_written"] <= setup["positions"]
+    assert (len(accepted) == setup["positions"]) == meta["complete"]
     assert len(candidates) == meta["queried"]
     excluded = set()
     for entry in meta["exclusions"]:
@@ -78,7 +89,8 @@ def main():
         assert (row["acceptance"], row["bucket"]) == (reason, bucket)
         if reason == "accepted": counts[bucket] += 1; selected.append(row)
         else: rejected[reason] += 1
-    assert counts == [setup["quota_each"]]*4 == meta["bucket_counts"]
+    assert counts == meta["bucket_counts"] and all(count <= setup["quota_each"] for count in counts)
+    if meta["complete"]: assert counts == [setup["quota_each"]]*4
     assert dict(rejected) == meta["rejection_counts"] and len(selected) == len(accepted)
     for original, row in zip(selected, accepted):
         assert all(row[field] == value for field,value in original.items())
@@ -128,14 +140,21 @@ def main():
             assert row["classical_white_cp"] == (value if chess.Board(row["fen"]).turn else -value)
             classical_checks += 1
     rng = random.Random(setup["seed"]+1)
-    requery_indices = sorted(rng.sample(range(len(accepted)),64))
-    deeper_indices = sorted(rng.sample(range(len(accepted)),32))
+    requery_indices = sorted(rng.sample(range(len(accepted)),64)) if meta["complete"] else []
+    deeper_indices = sorted(rng.sample(range(len(accepted)),32)) if meta["complete"] else []
     rechecks = []; deeper = []
-    with chess.engine.SimpleEngine.popen_uci(engine_command(teacher_path), timeout=30) as teacher:
+    with chess.engine.SimpleEngine.popen_uci(engine_command(teacher_path), timeout=30) as teacher, UciClient(teacher_path) as static:
         teacher.configure({"Threads":1,"Hash":64})
+        static.send("setoption name Threads value 1"); static.send("setoption name Hash value 64"); static.ready()
         for index in requery_indices:
             row = accepted[index]; board = chess.Board(row["fen"])
             checks = {}
+            static.send("position fen "+row["fen"])
+            trace = static.command("eval","Final evaluation")
+            native_static = re.search(r"Final evaluation\s+([+-]\d+\.\d+)\s+\(white side\)",trace)
+            assert native_static and int(round(float(native_static.group(1))*100)) == row["static_white_cp"]
+            checks["static_white_cp"] = row["static_white_cp"]
+            checks["static_trace"] = trace
             for name, nodes in (("sample",setup["sample_nodes"]),("verified",setup["verify_nodes"])):
                 checks[name] = label(teacher, board, nodes)
                 assert checks[name] == row[name], (index,name,checks[name],row[name])
@@ -145,14 +164,23 @@ def main():
             deeper.append({"index":index,"id":row["id"],"label":result,
                 "first_move_stable":result["pv"][0] == row["verified"]["pv"][0],
                 "cp_difference":result["white_cp"]-row["verified"]["white_cp"] if result["white_cp"] is not None else None})
-    write_new(report_path,{"schema":1,"complete":True,"plan_sha256":digest(plan_path),"auditor_sha256":digest(__file__),
+    descriptions = []
+    for bucket in range(4):
+        group = [row for row in accepted if row["bucket"] == bucket]
+        descriptions.append({"bucket":bucket,"positions":len(group),"source_games":len({row["game"] for row in group}),
+            "phase_counts":dict(collections.Counter(row["phase"] for row in group)),
+            "side_to_move_counts":dict(collections.Counter(row["fen"].split()[1] for row in group)),
+            "static_vs_verified_mae_cp":statistics.mean(abs(row["static_white_cp"]-row["verified"]["white_cp"]) for row in group) if group else None,
+            "sample_vs_verified_mae_cp":statistics.mean(abs(row["sample"]["white_cp"]-row["verified"]["white_cp"]) for row in group) if group else None})
+    write_new(report_path,{"schema":1,"complete":meta["complete"],"checks_passed":True,"plan_sha256":digest(plan_path),"auditor_sha256":digest(__file__),
         "inputs":[{"path":str(path.relative_to(ROOT)).replace("\\","/"),"sha256":digest(path)} for path in (data_path,candidate_path,pgn_path)],
         "games":games,"source_plies":total_plies,"source_outcomes":dict(outcomes),"source_unresolved":outcomes["*"],
         "candidates":len(candidates),"accepted":len(accepted),"buckets":counts,"rejections":dict(rejected),"native_pv_plies":pv_plies,
         "classical_score_checks":classical_checks,"requery_seed":setup["seed"]+1,"exact_requeries":rechecks,"deeper_diagnostic":deeper,
+        "bucket_descriptions":descriptions,
         "deeper_first_move_stable":sum(item["first_move_stable"] for item in deeper),"seconds":round(time.monotonic()-started,3),
         "interpretation":"Legal history/outcome/selection audit and independent re-query only. No deeper diagnostic post-filtering; teacher scores and source results are not oracles."})
-    print(json.dumps({"complete":True,"report_sha256":digest(report_path),"exact_requeries":64,"deeper_diagnostic":32}),flush=True)
+    print(json.dumps({"complete":meta["complete"],"checks_passed":True,"report_sha256":digest(report_path),"exact_requeries":len(rechecks),"deeper_diagnostic":len(deeper)}),flush=True)
 
 
 if __name__ == "__main__": main()

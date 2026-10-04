@@ -1,0 +1,3473 @@
+{
+  "schema": 1,
+  "complete": true,
+  "checks_passed": true,
+  "plan_sha256": "d36914bbd359be33b49eac898cc7e6a67b15390969e39f8ad51af6799283f478",
+  "auditor_sha256": "aef85fc53d2aa48b23369aafa4dcbc8e88fa3fc50996983e6e6a02efd3369529",
+  "inputs": [
+    {
+      "path": "artifacts/data/stable-endgame-4096-v1.jsonl",
+      "sha256": "3c1ca1842da3059433028b3bd5cd9d6ebf9074226f63783238199563f34e5065"
+    },
+    {
+      "path": "artifacts/data/stable-endgame-4096-v1.jsonl.candidates.jsonl",
+      "sha256": "560d15d291a3a5e26ae2fe1d3f7f8d8a992fa3374f10935dbf9716ce65312210"
+    },
+    {
+      "path": "artifacts/data/stable-endgame-4096-v1.jsonl.source.pgn",
+      "sha256": "db2d451715fb8ffcd47b16d5d15e1c72fe691532ab68b5f6a1aad6456b87174a"
+    }
+  ],
+  "games": 7070,
+  "source_plies": 847572,
+  "source_outcomes": {
+    "1/2-1/2": 979,
+    "0-1": 2715,
+    "1-0": 3370,
+    "*": 6
+  },
+  "source_unresolved": 6,
+  "candidates": 50639,
+  "accepted": 4096,
+  "buckets": [
+    1024,
+    1024,
+    1024,
+    1024
+  ],
+  "rejections": {
+    "unstable_value": 6782,
+    "unstable_first_move": 13318,
+    "native_mate_label": 16957,
+    "outside_score_range": 1254,
+    "bucket_full": 8232
+  },
+  "native_pv_plies": 840449,
+  "classical_score_checks": 4096,
+  "requery_seed": 20261117,
+  "exact_requeries": [
+    {
+      "index": 24,
+      "id": "stable-candidate-000080",
+      "static_white_cp": -659,
+      "static_trace": "Final evaluation      -6.59 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -695,
+        "white_mate": null,
+        "depth": 13,
+        "reported_nodes": 16396,
+        "pv": [
+          "f2f1",
+          "h6h5",
+          "f1a1",
+          "e7e8",
+          "a1e1",
+          "f7f6",
+          "d2c1",
+          "e8a8"
+        ]
+      },
+      "verified": {
+        "white_cp": -711,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65607,
+        "pv": [
+          "f2f1",
+          "e7e8",
+          "f1g1",
+          "h6h5",
+          "g1e1",
+          "h7g6",
+          "d2c1",
+          "f7f6",
+          "c1d2",
+          "g6g5"
+        ]
+      }
+    },
+    {
+      "index": 88,
+      "id": "stable-candidate-000403",
+      "static_white_cp": -488,
+      "static_trace": "Final evaluation      -4.88 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -468,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16392,
+        "pv": [
+          "h3h4",
+          "c5e4",
+          "f2f3",
+          "e4c5"
+        ]
+      },
+      "verified": {
+        "white_cp": -514,
+        "white_mate": null,
+        "depth": 16,
+        "reported_nodes": 65579,
+        "pv": [
+          "h3h4",
+          "d5c4",
+          "e1d2",
+          "c5e4",
+          "d2e2",
+          "c4c3",
+          "f2f3",
+          "e4c5",
+          "g2g4",
+          "c5d7",
+          "g4h5",
+          "g6h5",
+          "f3f4",
+          "d7c5",
+          "e2f3",
+          "f6f5",
+          "f3f2"
+        ]
+      }
+    },
+    {
+      "index": 119,
+      "id": "stable-candidate-000514",
+      "static_white_cp": -469,
+      "static_trace": "Final evaluation      -4.69 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -419,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16405,
+        "pv": [
+          "h2h1",
+          "f3d4",
+          "b5b4",
+          "d4c6",
+          "b4b3",
+          "f6e6",
+          "c4c5",
+          "e6f6",
+          "h1h2",
+          "f6f3",
+          "b3c2"
+        ]
+      },
+      "verified": {
+        "white_cp": -421,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65613,
+        "pv": [
+          "h2h1",
+          "f7g6",
+          "c4c5",
+          "h6h5",
+          "c5c6",
+          "f3d4",
+          "b5c4",
+          "d4c6",
+          "h1h5",
+          "g6h5",
+          "c4b3",
+          "f6f3",
+          "b3a4"
+        ]
+      }
+    },
+    {
+      "index": 199,
+      "id": "stable-candidate-000807",
+      "static_white_cp": 569,
+      "static_trace": "Final evaluation      +5.69 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 549,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16412,
+        "pv": [
+          "a3a4",
+          "e5e4",
+          "a4a5",
+          "d5d3",
+          "e1e4",
+          "d3d1",
+          "h1g2",
+          "d1d2",
+          "g2g3",
+          "d2d3",
+          "g3f4"
+        ]
+      },
+      "verified": {
+        "white_cp": 548,
+        "white_mate": null,
+        "depth": 17,
+        "reported_nodes": 65541,
+        "pv": [
+          "a3a4",
+          "g8h7",
+          "h1g2",
+          "h7g6",
+          "a4a5",
+          "g6g5",
+          "g2g3",
+          "h6h5",
+          "h2h4",
+          "g5g6",
+          "e1e3",
+          "h5g4",
+          "g3g4",
+          "g6f7",
+          "e3e2",
+          "g7g6",
+          "e2e4",
+          "f7f6"
+        ]
+      }
+    },
+    {
+      "index": 497,
+      "id": "stable-candidate-002161",
+      "static_white_cp": 728,
+      "static_trace": "Final evaluation      +7.28 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 630,
+        "white_mate": null,
+        "depth": 13,
+        "reported_nodes": 16394,
+        "pv": [
+          "b8b7",
+          "g7g8",
+          "f2f3",
+          "d5d4",
+          "b7d7",
+          "d4d3",
+          "h2h3",
+          "g8f8"
+        ]
+      },
+      "verified": {
+        "white_cp": 593,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65540,
+        "pv": [
+          "b8b7",
+          "g7g8",
+          "b7b8",
+          "g8g7",
+          "b8d8",
+          "a5a2",
+          "f4g3",
+          "a2a1",
+          "h2h4",
+          "a1g1",
+          "g3f4",
+          "g1f1",
+          "d8d7",
+          "g7f8"
+        ]
+      }
+    },
+    {
+      "index": 576,
+      "id": "stable-candidate-002452",
+      "static_white_cp": -327,
+      "static_trace": "Final evaluation      -3.27 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -639,
+        "white_mate": null,
+        "depth": 13,
+        "reported_nodes": 16403,
+        "pv": [
+          "g1f1",
+          "e2e8",
+          "c8c7",
+          "d3d2",
+          "f1g2",
+          "d2d1q",
+          "c7d7",
+          "d5c6",
+          "d7d1",
+          "c2d1q"
+        ]
+      },
+      "verified": {
+        "white_cp": -669,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 65572,
+        "pv": [
+          "g1f1",
+          "e2e7",
+          "f1g2",
+          "d3d2",
+          "c8d8",
+          "d5c4",
+          "d8c8",
+          "c4b3",
+          "g2f2",
+          "c2c1q",
+          "c8b8",
+          "b3a4"
+        ]
+      }
+    },
+    {
+      "index": 596,
+      "id": "stable-candidate-002539",
+      "static_white_cp": 184,
+      "static_trace": "Final evaluation      +1.84 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 213,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16395,
+        "pv": [
+          "a7c7",
+          "b2b4",
+          "h5g6",
+          "b4e4",
+          "e3f3",
+          "e4b4",
+          "c7h7",
+          "g8f8",
+          "g6f5",
+          "h6h5",
+          "h7h5",
+          "f8e7"
+        ]
+      },
+      "verified": {
+        "white_cp": 199,
+        "white_mate": null,
+        "depth": 16,
+        "reported_nodes": 65567,
+        "pv": [
+          "a7c7",
+          "b2b4",
+          "e3f3",
+          "g8f8",
+          "h5g6",
+          "f8g8",
+          "g6e8",
+          "b4e4",
+          "e8f7",
+          "g8h8",
+          "c7b7",
+          "e4b4",
+          "f7g6",
+          "h8g8"
+        ]
+      }
+    },
+    {
+      "index": 616,
+      "id": "stable-candidate-002608",
+      "static_white_cp": -315,
+      "static_trace": "Final evaluation      -3.15 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -316,
+        "white_mate": null,
+        "depth": 13,
+        "reported_nodes": 16391,
+        "pv": [
+          "b3b2",
+          "g1g2",
+          "b2b3",
+          "c6b5",
+          "d4a4",
+          "g2g8",
+          "c3c4",
+          "b5a6",
+          "a4a2",
+          "g8f7"
+        ]
+      },
+      "verified": {
+        "white_cp": -326,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65560,
+        "pv": [
+          "b3b2",
+          "g1e3",
+          "d4b4",
+          "e3d2",
+          "b2b3",
+          "d2e2",
+          "b4b6",
+          "c6c5",
+          "b6b8",
+          "e2e5",
+          "b8b4",
+          "e5d5",
+          "b3b2",
+          "d5d2",
+          "b2b3",
+          "d2c1",
+          "b4c4",
+          "c5b5"
+        ]
+      }
+    },
+    {
+      "index": 632,
+      "id": "stable-candidate-002682",
+      "static_white_cp": 451,
+      "static_trace": "Final evaluation      +4.51 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 478,
+        "white_mate": null,
+        "depth": 13,
+        "reported_nodes": 16407,
+        "pv": [
+          "a8c6",
+          "h3c8",
+          "g1g2",
+          "c8h3",
+          "g2f3",
+          "h3c8",
+          "a3a4",
+          "c8g4",
+          "f3g2"
+        ]
+      },
+      "verified": {
+        "white_cp": 494,
+        "white_mate": null,
+        "depth": 16,
+        "reported_nodes": 65586,
+        "pv": [
+          "a8c6",
+          "h3f5",
+          "g1g2",
+          "f5e6",
+          "a3a1",
+          "h4g4",
+          "a1a4",
+          "g4g5",
+          "g2g3",
+          "h5h4",
+          "g3f3",
+          "h4h3"
+        ]
+      }
+    },
+    {
+      "index": 716,
+      "id": "stable-candidate-002994",
+      "static_white_cp": 488,
+      "static_trace": "Final evaluation      +4.88 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 865,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16392,
+        "pv": [
+          "g5g6",
+          "d5d4"
+        ]
+      },
+      "verified": {
+        "white_cp": 903,
+        "white_mate": null,
+        "depth": 19,
+        "reported_nodes": 65561,
+        "pv": [
+          "g5g6",
+          "g8f8",
+          "b4c5",
+          "f8e7",
+          "h6h7",
+          "e7f6",
+          "h7h8q",
+          "f6g6",
+          "h8f8",
+          "g6g5",
+          "f8f4",
+          "g5g6"
+        ]
+      }
+    },
+    {
+      "index": 794,
+      "id": "stable-candidate-003330",
+      "static_white_cp": -700,
+      "static_trace": "Final evaluation      -7.00 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -775,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16389,
+        "pv": [
+          "h3g4",
+          "a2a5",
+          "g4f3",
+          "a5a4",
+          "f3f2",
+          "g6f5"
+        ]
+      },
+      "verified": {
+        "white_cp": -801,
+        "white_mate": null,
+        "depth": 18,
+        "reported_nodes": 65600,
+        "pv": [
+          "h3g4",
+          "a2a4",
+          "g4f3",
+          "g6f5",
+          "f3e3",
+          "f5e5",
+          "e3e2",
+          "e5e4"
+        ]
+      }
+    },
+    {
+      "index": 930,
+      "id": "stable-candidate-003893",
+      "static_white_cp": 444,
+      "static_trace": "Final evaluation      +4.44 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 747,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16384,
+        "pv": [
+          "c6b6",
+          "b3a2"
+        ]
+      },
+      "verified": {
+        "white_cp": 747,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 65624,
+        "pv": [
+          "c6b6",
+          "b3a2"
+        ]
+      }
+    },
+    {
+      "index": 969,
+      "id": "stable-candidate-004056",
+      "static_white_cp": 0,
+      "static_trace": "Final evaluation      +0.00 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -2,
+        "white_mate": null,
+        "depth": 12,
+        "reported_nodes": 16420,
+        "pv": [
+          "c7d8",
+          "a4c6"
+        ]
+      },
+      "verified": {
+        "white_cp": -9,
+        "white_mate": null,
+        "depth": 13,
+        "reported_nodes": 65597,
+        "pv": [
+          "c7d8",
+          "a4c2"
+        ]
+      }
+    },
+    {
+      "index": 970,
+      "id": "stable-candidate-004057",
+      "static_white_cp": 1,
+      "static_trace": "Final evaluation      +0.01 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -1,
+        "white_mate": null,
+        "depth": 13,
+        "reported_nodes": 16399,
+        "pv": [
+          "b6b7",
+          "d3e4",
+          "b7c6",
+          "e4e3",
+          "c6d7",
+          "c2f5",
+          "d7e7"
+        ]
+      },
+      "verified": {
+        "white_cp": -19,
+        "white_mate": null,
+        "depth": 13,
+        "reported_nodes": 65541,
+        "pv": [
+          "b6b7",
+          "d3e3"
+        ]
+      }
+    },
+    {
+      "index": 986,
+      "id": "stable-candidate-004110",
+      "static_white_cp": -531,
+      "static_trace": "Final evaluation      -5.31 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -623,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16388,
+        "pv": [
+          "c5d3",
+          "g2g3",
+          "d3e5",
+          "b6b2",
+          "c2c3",
+          "b2e2",
+          "c3d4"
+        ]
+      },
+      "verified": {
+        "white_cp": -643,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65613,
+        "pv": [
+          "c5d3",
+          "g2g3",
+          "d3c5",
+          "h6h5",
+          "c2c3",
+          "b6c6",
+          "c3d4",
+          "h5h4",
+          "c5e4",
+          "g3f4",
+          "e4f2",
+          "c6a6"
+        ]
+      }
+    },
+    {
+      "index": 1032,
+      "id": "stable-candidate-004233",
+      "static_white_cp": -457,
+      "static_trace": "Final evaluation      -4.57 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -517,
+        "white_mate": null,
+        "depth": 13,
+        "reported_nodes": 16393,
+        "pv": [
+          "f5e4",
+          "d8d4",
+          "e4h1",
+          "d4d6",
+          "h1g2",
+          "d6d3",
+          "b3b2"
+        ]
+      },
+      "verified": {
+        "white_cp": -525,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65557,
+        "pv": [
+          "f5e4",
+          "d8d4",
+          "e4h1",
+          "d4d2",
+          "h1e4",
+          "d2d6",
+          "e4g2"
+        ]
+      }
+    },
+    {
+      "index": 1053,
+      "id": "stable-candidate-004311",
+      "static_white_cp": -30,
+      "static_trace": "Final evaluation      -0.30 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -117,
+        "white_mate": null,
+        "depth": 12,
+        "reported_nodes": 16396,
+        "pv": [
+          "c2c4",
+          "d1d4"
+        ]
+      },
+      "verified": {
+        "white_cp": -136,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 65570,
+        "pv": [
+          "c2c4",
+          "d1d4"
+        ]
+      }
+    },
+    {
+      "index": 1087,
+      "id": "stable-candidate-004475",
+      "static_white_cp": 641,
+      "static_trace": "Final evaluation      +6.41 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 796,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16398,
+        "pv": [
+          "c4d5",
+          "g8h7",
+          "f2e3",
+          "h7g6",
+          "e3d3",
+          "g6f6",
+          "h2g4",
+          "f6g5",
+          "e4d4",
+          "g5h5"
+        ]
+      },
+      "verified": {
+        "white_cp": 844,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65597,
+        "pv": [
+          "c4d5",
+          "g8h7",
+          "h2f3",
+          "g7g6",
+          "e4d4",
+          "h6h5",
+          "f2e3",
+          "h7g7"
+        ]
+      }
+    },
+    {
+      "index": 1104,
+      "id": "stable-candidate-004537",
+      "static_white_cp": -1,
+      "static_trace": "Final evaluation      -0.01 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -7,
+        "white_mate": null,
+        "depth": 11,
+        "reported_nodes": 16388,
+        "pv": [
+          "f6c3",
+          "g2h3"
+        ]
+      },
+      "verified": {
+        "white_cp": 0,
+        "white_mate": null,
+        "depth": 17,
+        "reported_nodes": 65585,
+        "pv": [
+          "f6c3",
+          "f5h7",
+          "c3a5",
+          "g2f1",
+          "a5d2",
+          "h7g6",
+          "d2b4",
+          "g6h7",
+          "b4a5",
+          "h7f5",
+          "a5d2"
+        ]
+      }
+    },
+    {
+      "index": 1161,
+      "id": "stable-candidate-004834",
+      "static_white_cp": 5,
+      "static_trace": "Final evaluation      +0.05 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 0,
+        "white_mate": null,
+        "depth": 23,
+        "reported_nodes": 16392,
+        "pv": [
+          "g6f6",
+          "b4c4",
+          "f6e5",
+          "c4d3",
+          "e5d5",
+          "d3e3",
+          "d5e5"
+        ]
+      },
+      "verified": {
+        "white_cp": 0,
+        "white_mate": null,
+        "depth": 29,
+        "reported_nodes": 65561,
+        "pv": [
+          "g6f6",
+          "b4c4",
+          "f6e5",
+          "c4d3",
+          "e5d5",
+          "d3e3",
+          "d5e6",
+          "e3d4",
+          "e6f5",
+          "d4d5",
+          "f5f4",
+          "d5e6",
+          "f4e4",
+          "e6f6",
+          "e4d4",
+          "f6f5",
+          "d4d5",
+          "f5f4",
+          "d5e6",
+          "f4e4",
+          "e6f6",
+          "e4e3"
+        ]
+      }
+    },
+    {
+      "index": 1193,
+      "id": "stable-candidate-004939",
+      "static_white_cp": 779,
+      "static_trace": "Final evaluation      +7.79 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 714,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16406,
+        "pv": [
+          "g3g4",
+          "e7a7",
+          "g4g5",
+          "a7d7",
+          "f3g4",
+          "f4f3",
+          "h3h4",
+          "d7d4",
+          "g4g3"
+        ]
+      },
+      "verified": {
+        "white_cp": 698,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65536,
+        "pv": [
+          "g3g4",
+          "e7b7",
+          "h3h4",
+          "g7f8",
+          "f3f4",
+          "b7f7",
+          "f4g3",
+          "f7b7",
+          "h4h5",
+          "f8e7",
+          "g3g2"
+        ]
+      }
+    },
+    {
+      "index": 1352,
+      "id": "stable-candidate-005543",
+      "static_white_cp": 760,
+      "static_trace": "Final evaluation      +7.60 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 965,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16385,
+        "pv": [
+          "b5c7",
+          "g7g6",
+          "e3e8",
+          "g6h5",
+          "f1e1",
+          "h5h4"
+        ]
+      },
+      "verified": {
+        "white_cp": 1009,
+        "white_mate": null,
+        "depth": 16,
+        "reported_nodes": 65600,
+        "pv": [
+          "b5c7",
+          "g7g6",
+          "f1e1",
+          "g5g4",
+          "e3e6",
+          "g6h7",
+          "h1g2",
+          "h6h5",
+          "e6e7",
+          "h7h8",
+          "e7e8",
+          "h8h7"
+        ]
+      }
+    },
+    {
+      "index": 1354,
+      "id": "stable-candidate-005561",
+      "static_white_cp": 530,
+      "static_trace": "Final evaluation      +5.30 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 492,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 16397,
+        "pv": [
+          "h5g6",
+          "f7g6",
+          "e5d4",
+          "h6h5",
+          "d4g1",
+          "g6f6",
+          "g1e3",
+          "b7a8",
+          "e3d4",
+          "f6g6",
+          "f4e5",
+          "h5h4"
+        ]
+      },
+      "verified": {
+        "white_cp": 518,
+        "white_mate": null,
+        "depth": 16,
+        "reported_nodes": 65557,
+        "pv": [
+          "h5g6",
+          "f7g6",
+          "e5c3",
+          "h6h5",
+          "c3d4",
+          "b7a6",
+          "d4e3",
+          "a6c8",
+          "e3f2",
+          "c8b7",
+          "f4e5",
+          "g6g5",
+          "f2e3",
+          "g5g6"
+        ]
+      }
+    },
+    {
+      "index": 1361,
+      "id": "stable-candidate-005577",
+      "static_white_cp": -580,
+      "static_trace": "Final evaluation      -5.80 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -495,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16397,
+        "pv": [
+          "e3h3",
+          "g7f6",
+          "h3h4",
+          "f6h4",
+          "e8d7",
+          "h4e1",
+          "d7c6",
+          "f4f1",
+          "c6d7",
+          "f1g1"
+        ]
+      },
+      "verified": {
+        "white_cp": -489,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65567,
+        "pv": [
+          "e3h3",
+          "g7f6",
+          "h3h4",
+          "f6h4",
+          "e8d7",
+          "h4e1",
+          "d7c6",
+          "f4f1",
+          "c6d7",
+          "h6h5",
+          "d7e8",
+          "e1h4",
+          "e8d7",
+          "f1a1"
+        ]
+      }
+    },
+    {
+      "index": 1366,
+      "id": "stable-candidate-005585",
+      "static_white_cp": -547,
+      "static_trace": "Final evaluation      -5.47 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -778,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16397,
+        "pv": [
+          "g2f2",
+          "b4b3",
+          "f2e2",
+          "b3b2",
+          "e2d2",
+          "b2b1r",
+          "d2c2",
+          "b1e1",
+          "c2d2",
+          "e1e5"
+        ]
+      },
+      "verified": {
+        "white_cp": -778,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65646,
+        "pv": [
+          "g2f2",
+          "b4b3",
+          "f2e2",
+          "b3b2",
+          "e2d2",
+          "b2b1r",
+          "d2c2",
+          "b1e1",
+          "c2d2",
+          "e1e5"
+        ]
+      }
+    },
+    {
+      "index": 1412,
+      "id": "stable-candidate-005865",
+      "static_white_cp": 17,
+      "static_trace": "Final evaluation      +0.17 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 1,
+        "white_mate": null,
+        "depth": 13,
+        "reported_nodes": 16400,
+        "pv": [
+          "e6d5",
+          "f5g7",
+          "d5e4",
+          "g7f5",
+          "d1e1",
+          "f5h4",
+          "e1g1",
+          "g6f7",
+          "f2f3",
+          "f7e6",
+          "g1d1",
+          "e6f7"
+        ]
+      },
+      "verified": {
+        "white_cp": 2,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65541,
+        "pv": [
+          "e6d5",
+          "f5g7",
+          "d1b1",
+          "g6f5",
+          "d5d6",
+          "g7h5",
+          "d6e7",
+          "h5f4"
+        ]
+      }
+    },
+    {
+      "index": 1439,
+      "id": "stable-candidate-005996",
+      "static_white_cp": -675,
+      "static_trace": "Final evaluation      -6.75 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -804,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16397,
+        "pv": [
+          "h2h3",
+          "b7b6",
+          "f2f3",
+          "e1e2",
+          "g2g3",
+          "e2e5",
+          "g3h4"
+        ]
+      },
+      "verified": {
+        "white_cp": -853,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65615,
+        "pv": [
+          "h2h3",
+          "c7c5",
+          "g2f3",
+          "e1h1",
+          "f3g3",
+          "b7b6",
+          "b3b4",
+          "h1e4",
+          "b4c5",
+          "b6c5",
+          "h3h4",
+          "e4c4",
+          "g3h3"
+        ]
+      }
+    },
+    {
+      "index": 1540,
+      "id": "stable-candidate-006300",
+      "static_white_cp": -333,
+      "static_trace": "Final evaluation      -3.33 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -422,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16385,
+        "pv": [
+          "c6d4",
+          "g6f6",
+          "d4f3",
+          "e6e5",
+          "f3h4",
+          "a4a3",
+          "e3e4",
+          "f6e6",
+          "h4f3",
+          "a3a4",
+          "e4e3",
+          "e6d5",
+          "f3h4",
+          "a4a3",
+          "e3f2"
+        ]
+      },
+      "verified": {
+        "white_cp": -399,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65553,
+        "pv": [
+          "c6d4",
+          "g6f6",
+          "d4e2",
+          "f6e5",
+          "e2c3",
+          "a4a3",
+          "e3d2",
+          "e5f5",
+          "d2d3",
+          "a3b3",
+          "d3c4",
+          "b3b2",
+          "c4d3"
+        ]
+      }
+    },
+    {
+      "index": 1589,
+      "id": "stable-candidate-006488",
+      "static_white_cp": 595,
+      "static_trace": "Final evaluation      +5.95 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 625,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16385,
+        "pv": [
+          "b6f6",
+          "f8g7",
+          "f6f7",
+          "a7b8",
+          "f7g7",
+          "a8a5",
+          "a2b1",
+          "a5a7",
+          "g7g8",
+          "b8b7",
+          "b1b2",
+          "b7c7"
+        ]
+      },
+      "verified": {
+        "white_cp": 625,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65563,
+        "pv": [
+          "b6f6",
+          "a8c8",
+          "a2b3",
+          "c8b8",
+          "b3a4",
+          "b8e8",
+          "f6f7",
+          "e8e7",
+          "f7f8",
+          "e7e3",
+          "f8f7",
+          "a7a8",
+          "a5a6",
+          "e3d3"
+        ]
+      }
+    },
+    {
+      "index": 1657,
+      "id": "stable-candidate-006787",
+      "static_white_cp": -568,
+      "static_trace": "Final evaluation      -5.68 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -711,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16407,
+        "pv": [
+          "g3f4",
+          "a3a2",
+          "f4g3",
+          "a2a1q",
+          "g3h2",
+          "a1e5",
+          "h2h1"
+        ]
+      },
+      "verified": {
+        "white_cp": -731,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65590,
+        "pv": [
+          "g3f4",
+          "a3a2",
+          "f4g5",
+          "d6c4",
+          "g5h4",
+          "a2a1q",
+          "h4g5",
+          "a1e5",
+          "g5h4",
+          "e5c5"
+        ]
+      }
+    },
+    {
+      "index": 1678,
+      "id": "stable-candidate-006870",
+      "static_white_cp": -778,
+      "static_trace": "Final evaluation      -7.78 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -795,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16410,
+        "pv": [
+          "h2h1",
+          "g8f6",
+          "h1g2",
+          "e8h8",
+          "g2f1",
+          "h8a8"
+        ]
+      },
+      "verified": {
+        "white_cp": -817,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65538,
+        "pv": [
+          "h2h1",
+          "g8e7",
+          "h1g2",
+          "e7c6",
+          "b6b7",
+          "f7f6",
+          "b7b8r",
+          "e8b8",
+          "g2f3",
+          "b8e8",
+          "f3g2",
+          "c6d4",
+          "g2g3",
+          "d4b3"
+        ]
+      }
+    },
+    {
+      "index": 1761,
+      "id": "stable-candidate-007229",
+      "static_white_cp": -532,
+      "static_trace": "Final evaluation      -5.32 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -584,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16385,
+        "pv": [
+          "e3b6",
+          "h5h4",
+          "b6c7",
+          "e6d7",
+          "c7b8",
+          "h4h3",
+          "b8g3",
+          "d7c6",
+          "g3b8"
+        ]
+      },
+      "verified": {
+        "white_cp": -620,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65601,
+        "pv": [
+          "e3b6",
+          "e6d5",
+          "f2f3",
+          "h5h4",
+          "b6c7",
+          "h4h3",
+          "c7b8",
+          "g4g2",
+          "b8f4",
+          "g2c2",
+          "f4b8",
+          "h3h2",
+          "b8h2",
+          "c2h2",
+          "f3f4"
+        ]
+      }
+    },
+    {
+      "index": 1773,
+      "id": "stable-candidate-007295",
+      "static_white_cp": -791,
+      "static_trace": "Final evaluation      -7.91 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -872,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16399,
+        "pv": [
+          "a4b5",
+          "f7g6",
+          "b5b6",
+          "g6d3",
+          "g3g4",
+          "g8f7",
+          "h3h4",
+          "f7e6",
+          "g4h5"
+        ]
+      },
+      "verified": {
+        "white_cp": -881,
+        "white_mate": null,
+        "depth": 16,
+        "reported_nodes": 65622,
+        "pv": [
+          "a4b5",
+          "b3d3",
+          "g3g4",
+          "d3d4",
+          "g4f5",
+          "d4c4",
+          "b5b6",
+          "f7d5",
+          "f5e5"
+        ]
+      }
+    },
+    {
+      "index": 1919,
+      "id": "stable-candidate-007966",
+      "static_white_cp": 637,
+      "static_trace": "Final evaluation      +6.37 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 644,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16403,
+        "pv": [
+          "d1e3",
+          "d5c5",
+          "e3g4",
+          "c5b6"
+        ]
+      },
+      "verified": {
+        "white_cp": 647,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65620,
+        "pv": [
+          "d1e3",
+          "d5c5",
+          "c1c2",
+          "c5b4",
+          "e3g4",
+          "b4c4",
+          "g4e5",
+          "c4b5",
+          "b2c3",
+          "b5b6",
+          "e5g6",
+          "b6a6",
+          "c3e5"
+        ]
+      }
+    },
+    {
+      "index": 1926,
+      "id": "stable-candidate-008009",
+      "static_white_cp": 0,
+      "static_trace": "Final evaluation      +0.00 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 0,
+        "white_mate": null,
+        "depth": 13,
+        "reported_nodes": 16386,
+        "pv": [
+          "c7a5",
+          "d4d3",
+          "f4g5",
+          "d5e6",
+          "f3f4",
+          "e6f7",
+          "g5h5"
+        ]
+      },
+      "verified": {
+        "white_cp": 0,
+        "white_mate": null,
+        "depth": 20,
+        "reported_nodes": 65577,
+        "pv": [
+          "c7a5",
+          "d7e8",
+          "f4g5",
+          "d4d3",
+          "g5f6",
+          "e8b5",
+          "f6g5",
+          "b5e8"
+        ]
+      }
+    },
+    {
+      "index": 2067,
+      "id": "stable-candidate-008990",
+      "static_white_cp": -783,
+      "static_trace": "Final evaluation      -7.83 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -829,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16395,
+        "pv": [
+          "f1e2",
+          "h7h5",
+          "e2d3",
+          "g5c1",
+          "d3e2",
+          "c1a3",
+          "e2f3",
+          "a3f8",
+          "f3e2"
+        ]
+      },
+      "verified": {
+        "white_cp": -870,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65571,
+        "pv": [
+          "f1e2",
+          "g5d8",
+          "e2f3",
+          "d8d3",
+          "f3f2",
+          "d3e4",
+          "f2g3",
+          "e4f4",
+          "g3g2",
+          "h7h6"
+        ]
+      }
+    },
+    {
+      "index": 2330,
+      "id": "stable-candidate-011135",
+      "static_white_cp": 62,
+      "static_trace": "Final evaluation      +0.62 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 48,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16403,
+        "pv": [
+          "f2f3",
+          "h6h5"
+        ]
+      },
+      "verified": {
+        "white_cp": 89,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65579,
+        "pv": [
+          "f2f3",
+          "h6h5"
+        ]
+      }
+    },
+    {
+      "index": 2402,
+      "id": "stable-candidate-011499",
+      "static_white_cp": 17,
+      "static_trace": "Final evaluation      +0.17 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 18,
+        "white_mate": null,
+        "depth": 10,
+        "reported_nodes": 16395,
+        "pv": [
+          "h3h5",
+          "a3g3"
+        ]
+      },
+      "verified": {
+        "white_cp": 10,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 65589,
+        "pv": [
+          "h3h5",
+          "a3g3"
+        ]
+      }
+    },
+    {
+      "index": 2422,
+      "id": "stable-candidate-011643",
+      "static_white_cp": 742,
+      "static_trace": "Final evaluation      +7.42 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 864,
+        "white_mate": null,
+        "depth": 13,
+        "reported_nodes": 16386,
+        "pv": [
+          "e4e5",
+          "h8g7",
+          "e5g5",
+          "g7f7",
+          "g5d5",
+          "f7e6",
+          "d5d8",
+          "e6f7"
+        ]
+      },
+      "verified": {
+        "white_cp": 867,
+        "white_mate": null,
+        "depth": 18,
+        "reported_nodes": 65580,
+        "pv": [
+          "e4e5",
+          "h8g7",
+          "e5g5",
+          "g7h6",
+          "g5h5",
+          "h6g7",
+          "g1h2",
+          "g7g6",
+          "h5b5",
+          "g6h6",
+          "b5b4",
+          "h6g5",
+          "b4c4",
+          "g5h4",
+          "c4c3",
+          "h4g5",
+          "h2g2",
+          "g5g6"
+        ]
+      }
+    },
+    {
+      "index": 2463,
+      "id": "stable-candidate-012094",
+      "static_white_cp": -20,
+      "static_trace": "Final evaluation      -0.20 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -17,
+        "white_mate": null,
+        "depth": 10,
+        "reported_nodes": 16398,
+        "pv": [
+          "b4c5",
+          "f6e5"
+        ]
+      },
+      "verified": {
+        "white_cp": -2,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 65576,
+        "pv": [
+          "b4c5",
+          "f6e5",
+          "c5c6",
+          "e5e6",
+          "c6c5",
+          "e6d7",
+          "c5b6",
+          "d7c8",
+          "b6c6",
+          "c8b8",
+          "c6d6",
+          "b8b7",
+          "d6e5"
+        ]
+      }
+    },
+    {
+      "index": 2471,
+      "id": "stable-candidate-012163",
+      "static_white_cp": 369,
+      "static_trace": "Final evaluation      +3.69 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 799,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16397,
+        "pv": [
+          "f3c6",
+          "c7c6",
+          "g6g7",
+          "c6d6",
+          "g7g8q",
+          "d6e7",
+          "g8g7",
+          "e7e8",
+          "g7e5",
+          "e8f7",
+          "e5f5",
+          "f7g7",
+          "f5g4",
+          "g7h8"
+        ]
+      },
+      "verified": {
+        "white_cp": 827,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65656,
+        "pv": [
+          "f3c6",
+          "c7c6",
+          "g6g7",
+          "c6d6",
+          "g7g8q",
+          "d6e7",
+          "g8g7",
+          "e7e8",
+          "g7e5",
+          "e8f7",
+          "e5f5",
+          "f7g8",
+          "f5g6",
+          "g8f8"
+        ]
+      }
+    },
+    {
+      "index": 2479,
+      "id": "stable-candidate-012242",
+      "static_white_cp": 357,
+      "static_trace": "Final evaluation      +3.57 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 309,
+        "white_mate": null,
+        "depth": 12,
+        "reported_nodes": 16415,
+        "pv": [
+          "b7b3",
+          "e2e1",
+          "b3g3",
+          "e1e2",
+          "h2h1",
+          "e2f2",
+          "g3g7"
+        ]
+      },
+      "verified": {
+        "white_cp": 287,
+        "white_mate": null,
+        "depth": 16,
+        "reported_nodes": 65594,
+        "pv": [
+          "b7b3",
+          "e2d2",
+          "h2g3",
+          "d2c2",
+          "b3a3",
+          "c2d2",
+          "g3f2",
+          "d2c2",
+          "f2e3",
+          "c2b1",
+          "e3d3",
+          "b1b2"
+        ]
+      }
+    },
+    {
+      "index": 2509,
+      "id": "stable-candidate-012430",
+      "static_white_cp": -424,
+      "static_trace": "Final evaluation      -4.24 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -407,
+        "white_mate": null,
+        "depth": 13,
+        "reported_nodes": 16393,
+        "pv": [
+          "h4g5",
+          "d5f7",
+          "g5g4",
+          "f7e8",
+          "g4h4",
+          "e8b5"
+        ]
+      },
+      "verified": {
+        "white_cp": -394,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65591,
+        "pv": [
+          "h4g5",
+          "a6b5",
+          "g5g6",
+          "b5c6",
+          "g6g7",
+          "c3c4",
+          "g7h6"
+        ]
+      }
+    },
+    {
+      "index": 2688,
+      "id": "stable-candidate-013931",
+      "static_white_cp": -621,
+      "static_trace": "Final evaluation      -6.21 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -913,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 16387,
+        "pv": [
+          "b5a6",
+          "b7a6",
+          "h1b1",
+          "g5g4",
+          "b1b2",
+          "f2e1",
+          "a1a2",
+          "a6a5",
+          "b2c2"
+        ]
+      },
+      "verified": {
+        "white_cp": -913,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65537,
+        "pv": [
+          "b5a6",
+          "b7a6",
+          "h1b1",
+          "g5g4",
+          "b1b2",
+          "f2e1",
+          "a1a2",
+          "a6a5",
+          "b2c2"
+        ]
+      }
+    },
+    {
+      "index": 2804,
+      "id": "stable-candidate-014825",
+      "static_white_cp": -3,
+      "static_trace": "Final evaluation      -0.03 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 2,
+        "white_mate": null,
+        "depth": 13,
+        "reported_nodes": 16385,
+        "pv": [
+          "e5d3",
+          "e1d2",
+          "d3f4",
+          "e6f5",
+          "c8b7",
+          "f5f4"
+        ]
+      },
+      "verified": {
+        "white_cp": 10,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65588,
+        "pv": [
+          "e5d3",
+          "e1d2"
+        ]
+      }
+    },
+    {
+      "index": 2813,
+      "id": "stable-candidate-014887",
+      "static_white_cp": -58,
+      "static_trace": "Final evaluation      -0.58 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 0,
+        "white_mate": null,
+        "depth": 13,
+        "reported_nodes": 16386,
+        "pv": [
+          "e4e5",
+          "c5d5",
+          "e5e6",
+          "f7e6",
+          "f5f6",
+          "d5d6",
+          "c3c4",
+          "e6e5",
+          "f6f7",
+          "d6e7",
+          "c4d5",
+          "e5e4"
+        ]
+      },
+      "verified": {
+        "white_cp": 8,
+        "white_mate": null,
+        "depth": 22,
+        "reported_nodes": 65571,
+        "pv": [
+          "e4e5",
+          "c5d5",
+          "e5e6",
+          "f7e6",
+          "f5f6",
+          "d5d6",
+          "c3c4",
+          "e6e5",
+          "f6f7",
+          "d6e7",
+          "f7f8q",
+          "e7f8",
+          "c4d5",
+          "f8f7",
+          "d5e5",
+          "f7g6",
+          "e5f4",
+          "g6f6",
+          "f4g4",
+          "f6g7",
+          "g4h4",
+          "g7f6"
+        ]
+      }
+    },
+    {
+      "index": 2823,
+      "id": "stable-candidate-014949",
+      "static_white_cp": 166,
+      "static_trace": "Final evaluation      +1.66 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 56,
+        "white_mate": null,
+        "depth": 10,
+        "reported_nodes": 16405,
+        "pv": [
+          "d4c3",
+          "b4h4",
+          "c8h8",
+          "e7g5",
+          "h8h7",
+          "f7e8",
+          "c3g7",
+          "h4h1",
+          "f3f4",
+          "g5e7",
+          "g3f3",
+          "h1d1"
+        ]
+      },
+      "verified": {
+        "white_cp": 57,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 65566,
+        "pv": [
+          "d4c3",
+          "b4h4"
+        ]
+      }
+    },
+    {
+      "index": 2835,
+      "id": "stable-candidate-015024",
+      "static_white_cp": 351,
+      "static_trace": "Final evaluation      +3.51 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 339,
+        "white_mate": null,
+        "depth": 13,
+        "reported_nodes": 16389,
+        "pv": [
+          "e2d3",
+          "a2b2",
+          "c7c8",
+          "f8f7",
+          "c8c4",
+          "b2b1",
+          "c4e4"
+        ]
+      },
+      "verified": {
+        "white_cp": 318,
+        "white_mate": null,
+        "depth": 16,
+        "reported_nodes": 65553,
+        "pv": [
+          "e2d3",
+          "a2b2",
+          "c7c1",
+          "f8f7",
+          "c1g1",
+          "b2a2",
+          "d2c3"
+        ]
+      }
+    },
+    {
+      "index": 2867,
+      "id": "stable-candidate-015151",
+      "static_white_cp": 3,
+      "static_trace": "Final evaluation      +0.03 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 13,
+        "white_mate": null,
+        "depth": 12,
+        "reported_nodes": 16401,
+        "pv": [
+          "a3e3",
+          "e7c6"
+        ]
+      },
+      "verified": {
+        "white_cp": 21,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 65569,
+        "pv": [
+          "a3e3",
+          "e7c6",
+          "g7f6",
+          "d6c5",
+          "e3e4",
+          "c5b5",
+          "f6g6"
+        ]
+      }
+    },
+    {
+      "index": 2896,
+      "id": "stable-candidate-015366",
+      "static_white_cp": -22,
+      "static_trace": "Final evaluation      -0.22 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -10,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 16405,
+        "pv": [
+          "g6g7",
+          "c3c2",
+          "g7g8q",
+          "c2c1q",
+          "g8b8",
+          "c1h6",
+          "b8b7",
+          "h6h3",
+          "f5g5",
+          "h3e3",
+          "g5f6",
+          "e3f2",
+          "f6g6",
+          "f2g1",
+          "g6h6"
+        ]
+      },
+      "verified": {
+        "white_cp": -15,
+        "white_mate": null,
+        "depth": 16,
+        "reported_nodes": 65594,
+        "pv": [
+          "g6g7",
+          "c3c2"
+        ]
+      }
+    },
+    {
+      "index": 2908,
+      "id": "stable-candidate-015493",
+      "static_white_cp": -740,
+      "static_trace": "Final evaluation      -7.40 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -859,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16415,
+        "pv": [
+          "g1h2",
+          "e4f3",
+          "h2g1",
+          "f7f6",
+          "g1f1",
+          "f3h1",
+          "f1e2",
+          "h1b1",
+          "f2f3",
+          "g7g5",
+          "e2f2",
+          "b1c2",
+          "f2g3"
+        ]
+      },
+      "verified": {
+        "white_cp": -905,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65635,
+        "pv": [
+          "g1h2",
+          "e4b1",
+          "h3h4",
+          "b1f1",
+          "f2f4",
+          "f1f2",
+          "h2h1",
+          "f2f3",
+          "h1g1"
+        ]
+      }
+    },
+    {
+      "index": 3031,
+      "id": "stable-candidate-016306",
+      "static_white_cp": -41,
+      "static_trace": "Final evaluation      -0.41 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -51,
+        "white_mate": null,
+        "depth": 12,
+        "reported_nodes": 16404,
+        "pv": [
+          "h4f3",
+          "h8h2"
+        ]
+      },
+      "verified": {
+        "white_cp": -57,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 65560,
+        "pv": [
+          "h4f3",
+          "h8h2"
+        ]
+      }
+    },
+    {
+      "index": 3136,
+      "id": "stable-candidate-017178",
+      "static_white_cp": 3,
+      "static_trace": "Final evaluation      +0.03 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -1,
+        "white_mate": null,
+        "depth": 13,
+        "reported_nodes": 16406,
+        "pv": [
+          "d2d3",
+          "f3f2",
+          "d3d4",
+          "f2g1",
+          "d4e4",
+          "c8b7",
+          "e4d3"
+        ]
+      },
+      "verified": {
+        "white_cp": 1,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 65598,
+        "pv": [
+          "d2d3",
+          "f3g4",
+          "d3c4",
+          "g4h4",
+          "c4c5"
+        ]
+      }
+    },
+    {
+      "index": 3145,
+      "id": "stable-candidate-017298",
+      "static_white_cp": 994,
+      "static_trace": "Final evaluation      +9.94 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 954,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16409,
+        "pv": [
+          "h3h4",
+          "g7f7",
+          "d3c4",
+          "f7f8",
+          "e1f2",
+          "f8e7",
+          "h4h5",
+          "e7d7"
+        ]
+      },
+      "verified": {
+        "white_cp": 973,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65582,
+        "pv": [
+          "h3h4",
+          "g7f8",
+          "a7b5",
+          "f8g7",
+          "e1f2",
+          "g7g8",
+          "d3c4",
+          "g8h7",
+          "f2g3",
+          "h7g7",
+          "h4h5",
+          "g7h8",
+          "c6c5"
+        ]
+      }
+    },
+    {
+      "index": 3224,
+      "id": "stable-candidate-017763",
+      "static_white_cp": -3,
+      "static_trace": "Final evaluation      -0.03 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -3,
+        "white_mate": null,
+        "depth": 16,
+        "reported_nodes": 16410,
+        "pv": [
+          "f1f2",
+          "h5h4",
+          "f6e5",
+          "g4f5",
+          "e5h2",
+          "f5g6",
+          "f2f3",
+          "g6g5",
+          "f3f2",
+          "g5h5",
+          "f2f3",
+          "h4h3",
+          "f3g3",
+          "h5g5",
+          "g3f3",
+          "g5f5",
+          "f3g3",
+          "f5e5"
+        ]
+      },
+      "verified": {
+        "white_cp": 0,
+        "white_mate": null,
+        "depth": 19,
+        "reported_nodes": 65567,
+        "pv": [
+          "f1f2",
+          "h5h4",
+          "f6e5",
+          "g4f5",
+          "e5h2",
+          "h4h3",
+          "f2f3",
+          "f5g5",
+          "f3g3",
+          "g5f6",
+          "g3f2",
+          "f6f5"
+        ]
+      }
+    },
+    {
+      "index": 3268,
+      "id": "stable-candidate-018157",
+      "static_white_cp": 874,
+      "static_trace": "Final evaluation      +8.74 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 854,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16409,
+        "pv": [
+          "g3g4",
+          "h5h4",
+          "g4h4",
+          "h7g6",
+          "h2h3",
+          "g6g7",
+          "c5f2",
+          "g7g6"
+        ]
+      },
+      "verified": {
+        "white_cp": 831,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65599,
+        "pv": [
+          "g3g4",
+          "h7h6",
+          "g4b4",
+          "h5c5",
+          "b3c5",
+          "h6g6",
+          "g2g3",
+          "g6h5",
+          "g3g4",
+          "h5g6",
+          "c5a6",
+          "g6f6"
+        ]
+      }
+    },
+    {
+      "index": 3470,
+      "id": "stable-candidate-020433",
+      "static_white_cp": 1159,
+      "static_trace": "Final evaluation      +11.59 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 1359,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16405,
+        "pv": [
+          "a8a7",
+          "e7f6",
+          "d2h6",
+          "f6e5",
+          "h6h7",
+          "e6c7",
+          "f2f4",
+          "e5d6",
+          "h7d3",
+          "d6c5",
+          "d3e3",
+          "c5c6"
+        ]
+      },
+      "verified": {
+        "white_cp": 1323,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 65574,
+        "pv": [
+          "a8a7",
+          "e7f6",
+          "d2h6",
+          "f6e5",
+          "h6h7",
+          "e6c7",
+          "f2f4",
+          "e5d6",
+          "h7d3",
+          "d6e7",
+          "d3e3",
+          "e7f8",
+          "e3c5",
+          "f8e8"
+        ]
+      }
+    },
+    {
+      "index": 3569,
+      "id": "stable-candidate-024235",
+      "static_white_cp": 342,
+      "static_trace": "Final evaluation      +3.42 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 299,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16398,
+        "pv": [
+          "f3f4",
+          "a5a4",
+          "h3h4",
+          "e7d6",
+          "f4d4",
+          "d6e5",
+          "d4d5",
+          "e5c3",
+          "h4h5",
+          "a4a8",
+          "g3g4"
+        ]
+      },
+      "verified": {
+        "white_cp": 349,
+        "white_mate": null,
+        "depth": 17,
+        "reported_nodes": 65610,
+        "pv": [
+          "f3f4",
+          "a5b5"
+        ]
+      }
+    },
+    {
+      "index": 3682,
+      "id": "stable-candidate-028560",
+      "static_white_cp": -337,
+      "static_trace": "Final evaluation      -3.37 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -286,
+        "white_mate": null,
+        "depth": 12,
+        "reported_nodes": 16394,
+        "pv": [
+          "e5e6",
+          "b1b6",
+          "e6d7",
+          "b6a6"
+        ]
+      },
+      "verified": {
+        "white_cp": -255,
+        "white_mate": null,
+        "depth": 13,
+        "reported_nodes": 65639,
+        "pv": [
+          "e5e6",
+          "b1b6",
+          "e6d7",
+          "h7g6",
+          "d7e7",
+          "g6f5",
+          "e7d8"
+        ]
+      }
+    },
+    {
+      "index": 3809,
+      "id": "stable-candidate-034535",
+      "static_white_cp": -90,
+      "static_trace": "Final evaluation      -0.90 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -289,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 16387,
+        "pv": [
+          "a4a5",
+          "f2f3",
+          "d3e2",
+          "f3c3",
+          "e2d1",
+          "h8e5",
+          "a5a6",
+          "c3a3",
+          "d1e2",
+          "e5d6",
+          "g3g4",
+          "a3a6"
+        ]
+      },
+      "verified": {
+        "white_cp": -272,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 65589,
+        "pv": [
+          "a4a5",
+          "f2f3"
+        ]
+      }
+    },
+    {
+      "index": 3858,
+      "id": "stable-candidate-037970",
+      "static_white_cp": 211,
+      "static_trace": "Final evaluation      +2.11 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 378,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 16393,
+        "pv": [
+          "e4e6",
+          "d6d5",
+          "e6e5",
+          "d5c4",
+          "f2g3",
+          "c4d3",
+          "g3g4",
+          "c7c5",
+          "d4c5",
+          "d3e2",
+          "g4g5",
+          "h1h2",
+          "g5g6"
+        ]
+      },
+      "verified": {
+        "white_cp": 382,
+        "white_mate": null,
+        "depth": 16,
+        "reported_nodes": 65587,
+        "pv": [
+          "e4e6",
+          "d6d5",
+          "f2g3",
+          "c7c5",
+          "e6e5",
+          "d5c4",
+          "d4c5",
+          "c4b3",
+          "f4f5",
+          "b3c2",
+          "g3g4",
+          "h1g2",
+          "g4h5",
+          "g2f3",
+          "h5g6"
+        ]
+      }
+    },
+    {
+      "index": 3945,
+      "id": "stable-candidate-041626",
+      "static_white_cp": 257,
+      "static_trace": "Final evaluation      +2.57 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 331,
+        "white_mate": null,
+        "depth": 12,
+        "reported_nodes": 16388,
+        "pv": [
+          "a3a5",
+          "e5f6",
+          "h5g4",
+          "c2f2",
+          "a5a6",
+          "f6g7",
+          "g4h5",
+          "g7h7",
+          "a6e6",
+          "h7g7",
+          "e6g6",
+          "g7h7",
+          "g6g5",
+          "h7h6"
+        ]
+      },
+      "verified": {
+        "white_cp": 332,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 65574,
+        "pv": [
+          "a3a5",
+          "e5f6",
+          "h5g4",
+          "c2c1",
+          "a5a6",
+          "f6e5",
+          "a6g6",
+          "e5f4",
+          "g6e6",
+          "c1e1"
+        ]
+      }
+    },
+    {
+      "index": 3986,
+      "id": "stable-candidate-044072",
+      "static_white_cp": -151,
+      "static_trace": "Final evaluation      -1.51 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": -274,
+        "white_mate": null,
+        "depth": 12,
+        "reported_nodes": 16391,
+        "pv": [
+          "d4d3",
+          "g3g2",
+          "c5d5",
+          "e1f2",
+          "d3d4",
+          "h6h5",
+          "d8e6",
+          "h5h4",
+          "e6f4",
+          "g2f3",
+          "f4e6",
+          "h4h3",
+          "d4f4",
+          "f3g3",
+          "f4f2",
+          "g3f2"
+        ]
+      },
+      "verified": {
+        "white_cp": -257,
+        "white_mate": null,
+        "depth": 14,
+        "reported_nodes": 65562,
+        "pv": [
+          "d4d3",
+          "g3f2"
+        ]
+      }
+    },
+    {
+      "index": 3997,
+      "id": "stable-candidate-044435",
+      "static_white_cp": 185,
+      "static_trace": "Final evaluation      +1.85 (white side) [with scaled NNUE, ...]",
+      "sample": {
+        "white_cp": 216,
+        "white_mate": null,
+        "depth": 11,
+        "reported_nodes": 16403,
+        "pv": [
+          "a5b5",
+          "b4b3"
+        ]
+      },
+      "verified": {
+        "white_cp": 225,
+        "white_mate": null,
+        "depth": 16,
+        "reported_nodes": 65595,
+        "pv": [
+          "a5b5",
+          "b4b3",
+          "f2f3",
+          "c3c2",
+          "g2h3",
+          "b3b2",
+          "b5b7",
+          "g7h6",
+          "h3g3",
+          "f7f6",
+          "g3f4",
+          "c2f2",
+          "b7b8",
+          "h6h7"
+        ]
+      }
+    }
+  ],
+  "deeper_diagnostic": [
+    {
+      "index": 396,
+      "id": "stable-candidate-001683",
+      "label": {
+        "white_cp": -249,
+        "white_mate": null,
+        "depth": 19,
+        "reported_nodes": 262358,
+        "pv": [
+          "c4d3",
+          "d6d5"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": -66
+    },
+    {
+      "index": 428,
+      "id": "stable-candidate-001792",
+      "label": {
+        "white_cp": -953,
+        "white_mate": null,
+        "depth": 23,
+        "reported_nodes": 262172,
+        "pv": [
+          "c3b3",
+          "b6d7",
+          "b5b6",
+          "h5h4",
+          "b3a3",
+          "g3g2",
+          "a3b4",
+          "h4h3",
+          "b4b5",
+          "h3h2",
+          "b6b7",
+          "h2h1q",
+          "b7b8n",
+          "d7b8",
+          "b5b6",
+          "h1c1",
+          "b6a5"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": -225
+    },
+    {
+      "index": 619,
+      "id": "stable-candidate-002631",
+      "label": {
+        "white_cp": -1142,
+        "white_mate": null,
+        "depth": 17,
+        "reported_nodes": 262297,
+        "pv": [
+          "h4h5",
+          "c2c6",
+          "g3f3",
+          "a5a4",
+          "h5h6",
+          "c6h6",
+          "f3g2"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": -303
+    },
+    {
+      "index": 710,
+      "id": "stable-candidate-002958",
+      "label": {
+        "white_cp": 1661,
+        "white_mate": null,
+        "depth": 22,
+        "reported_nodes": 262153,
+        "pv": [
+          "a4a5",
+          "f5f4",
+          "a5a6",
+          "f4e5",
+          "c5d3",
+          "e5e6",
+          "a6a7",
+          "e6f7",
+          "a7a8q",
+          "h5h4",
+          "b3b7",
+          "f7g6",
+          "a8d8",
+          "g6h6",
+          "d8h8",
+          "h6g6",
+          "h8g8",
+          "g6f5",
+          "g8d5",
+          "f5f6"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": 779
+    },
+    {
+      "index": 754,
+      "id": "stable-candidate-003158",
+      "label": {
+        "white_cp": -644,
+        "white_mate": null,
+        "depth": 20,
+        "reported_nodes": 262277,
+        "pv": [
+          "g4e3",
+          "f6f5",
+          "g3h2",
+          "g8g7",
+          "e3d5",
+          "f4g4",
+          "h2h1",
+          "g4a4",
+          "h1g2",
+          "a4h4",
+          "h5h6",
+          "g7g6",
+          "d5e7",
+          "g6f6"
+        ]
+      },
+      "first_move_stable": false,
+      "cp_difference": -172
+    },
+    {
+      "index": 993,
+      "id": "stable-candidate-004148",
+      "label": {
+        "white_cp": -382,
+        "white_mate": null,
+        "depth": 18,
+        "reported_nodes": 262177,
+        "pv": [
+          "a2a3",
+          "e6e5"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": -70
+    },
+    {
+      "index": 1177,
+      "id": "stable-candidate-004895",
+      "label": {
+        "white_cp": -569,
+        "white_mate": null,
+        "depth": 20,
+        "reported_nodes": 262307,
+        "pv": [
+          "g5h4",
+          "f5f4",
+          "h4f2",
+          "c3c2",
+          "g2g1",
+          "e4f3",
+          "f2b6",
+          "c2g2",
+          "g1h1",
+          "f3g3",
+          "b6a5",
+          "f4f3",
+          "a5c7",
+          "g3h3",
+          "c7b6",
+          "g2c2",
+          "b6a7",
+          "f3f2"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": -28
+    },
+    {
+      "index": 1323,
+      "id": "stable-candidate-005438",
+      "label": {
+        "white_cp": -1,
+        "white_mate": null,
+        "depth": 18,
+        "reported_nodes": 262241,
+        "pv": [
+          "c5b6",
+          "e6b6"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": 8
+    },
+    {
+      "index": 1408,
+      "id": "stable-candidate-005828",
+      "label": {
+        "white_cp": null,
+        "white_mate": -6,
+        "depth": 35,
+        "reported_nodes": 262165,
+        "pv": [
+          "b3c3",
+          "g5g4",
+          "c3b3",
+          "g4g3",
+          "b3c2",
+          "g3g2",
+          "c2b3",
+          "g2g1q",
+          "b3c3",
+          "g1c1",
+          "c3d3",
+          "f4c4"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": null
+    },
+    {
+      "index": 1466,
+      "id": "stable-candidate-006072",
+      "label": {
+        "white_cp": 5,
+        "white_mate": null,
+        "depth": 25,
+        "reported_nodes": 262284,
+        "pv": [
+          "b3a5",
+          "b7b6"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": 0
+    },
+    {
+      "index": 1469,
+      "id": "stable-candidate-006076",
+      "label": {
+        "white_cp": 6,
+        "white_mate": null,
+        "depth": 19,
+        "reported_nodes": 262477,
+        "pv": [
+          "e3f4",
+          "b5d4",
+          "e4c3",
+          "d5e6",
+          "f4e4",
+          "d4f5",
+          "c3d5",
+          "f5h4"
+        ]
+      },
+      "first_move_stable": false,
+      "cp_difference": 0
+    },
+    {
+      "index": 1550,
+      "id": "stable-candidate-006330",
+      "label": {
+        "white_cp": 1310,
+        "white_mate": null,
+        "depth": 23,
+        "reported_nodes": 262441,
+        "pv": [
+          "e8e6",
+          "g3f4"
+        ]
+      },
+      "first_move_stable": false,
+      "cp_difference": 445
+    },
+    {
+      "index": 1554,
+      "id": "stable-candidate-006352",
+      "label": {
+        "white_cp": -9,
+        "white_mate": null,
+        "depth": 17,
+        "reported_nodes": 262223,
+        "pv": [
+          "e4d4",
+          "g8g4"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": 6
+    },
+    {
+      "index": 1767,
+      "id": "stable-candidate-007272",
+      "label": {
+        "white_cp": 0,
+        "white_mate": null,
+        "depth": 17,
+        "reported_nodes": 262459,
+        "pv": [
+          "e1e2",
+          "c8g4",
+          "e2e3",
+          "g7f6",
+          "e3f4",
+          "f6e6",
+          "f4e4",
+          "g4d1",
+          "c1a3"
+        ]
+      },
+      "first_move_stable": false,
+      "cp_difference": -17
+    },
+    {
+      "index": 1906,
+      "id": "stable-candidate-007911",
+      "label": {
+        "white_cp": -540,
+        "white_mate": null,
+        "depth": 18,
+        "reported_nodes": 262309,
+        "pv": [
+          "d3e1",
+          "e6f5",
+          "d2d3",
+          "d5e7",
+          "d3d4",
+          "g6g5",
+          "d4e3",
+          "b6b5",
+          "e1d3",
+          "h5h4",
+          "e3f3"
+        ]
+      },
+      "first_move_stable": false,
+      "cp_difference": 7
+    },
+    {
+      "index": 1918,
+      "id": "stable-candidate-007959",
+      "label": {
+        "white_cp": 731,
+        "white_mate": null,
+        "depth": 18,
+        "reported_nodes": 262471,
+        "pv": [
+          "c2b1",
+          "g8f7",
+          "b3b4",
+          "f7e6",
+          "b6e3",
+          "e6d7",
+          "b2d1",
+          "d7e8",
+          "b4b5",
+          "e8f7",
+          "b5b6",
+          "f7g7"
+        ]
+      },
+      "first_move_stable": false,
+      "cp_difference": 17
+    },
+    {
+      "index": 2113,
+      "id": "stable-candidate-009320",
+      "label": {
+        "white_cp": 4,
+        "white_mate": null,
+        "depth": 17,
+        "reported_nodes": 262307,
+        "pv": [
+          "b1g6",
+          "b6c7",
+          "g6e8",
+          "e7f6",
+          "e8d7",
+          "f6g6",
+          "d7g4",
+          "g6h6"
+        ]
+      },
+      "first_move_stable": false,
+      "cp_difference": 1
+    },
+    {
+      "index": 2119,
+      "id": "stable-candidate-009328",
+      "label": {
+        "white_cp": 2,
+        "white_mate": null,
+        "depth": 19,
+        "reported_nodes": 262292,
+        "pv": [
+          "a2a3",
+          "h7g6"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": -8
+    },
+    {
+      "index": 2307,
+      "id": "stable-candidate-010975",
+      "label": {
+        "white_cp": 0,
+        "white_mate": null,
+        "depth": 21,
+        "reported_nodes": 262443,
+        "pv": [
+          "e2h5",
+          "e4d4",
+          "g3f3",
+          "e3e2",
+          "f3f2",
+          "d4c3",
+          "f2e1",
+          "c3c2",
+          "h5g6",
+          "c2c3",
+          "g6f7",
+          "c3c2"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": 22
+    },
+    {
+      "index": 2330,
+      "id": "stable-candidate-011135",
+      "label": {
+        "white_cp": 138,
+        "white_mate": null,
+        "depth": 18,
+        "reported_nodes": 262262,
+        "pv": [
+          "f2f3",
+          "c6a4",
+          "h2g3",
+          "a4c2",
+          "g3f2",
+          "c2d1",
+          "f2e3",
+          "h6g7",
+          "e3d4",
+          "g7f6",
+          "h3h4",
+          "d1f3",
+          "a2a4",
+          "f3e2",
+          "d4c5",
+          "e2d3",
+          "e4e5",
+          "f6f5",
+          "h4h5",
+          "d3e2",
+          "h5h6",
+          "f5g6",
+          "b4b5",
+          "a6b5",
+          "a4b5",
+          "g6h6",
+          "b5b6",
+          "e2f3"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": 49
+    },
+    {
+      "index": 2376,
+      "id": "stable-candidate-011361",
+      "label": {
+        "white_cp": -7,
+        "white_mate": null,
+        "depth": 21,
+        "reported_nodes": 262375,
+        "pv": [
+          "f1e2",
+          "h5h4"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": 5
+    },
+    {
+      "index": 2597,
+      "id": "stable-candidate-013068",
+      "label": {
+        "white_cp": 0,
+        "white_mate": null,
+        "depth": 23,
+        "reported_nodes": 262469,
+        "pv": [
+          "a1a6",
+          "e6d5",
+          "a6a5",
+          "d5e6"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": -6
+    },
+    {
+      "index": 2652,
+      "id": "stable-candidate-013659",
+      "label": {
+        "white_cp": -263,
+        "white_mate": null,
+        "depth": 16,
+        "reported_nodes": 262319,
+        "pv": [
+          "d7e8",
+          "c2c5"
+        ]
+      },
+      "first_move_stable": false,
+      "cp_difference": 36
+    },
+    {
+      "index": 2716,
+      "id": "stable-candidate-014098",
+      "label": {
+        "white_cp": null,
+        "white_mate": 6,
+        "depth": 38,
+        "reported_nodes": 262369,
+        "pv": [
+          "h7g5",
+          "e8d8",
+          "g5e6",
+          "d8c8",
+          "e6d4",
+          "c8d8",
+          "d4c6",
+          "d8e8",
+          "h6g7",
+          "b3b2",
+          "f7e7"
+        ]
+      },
+      "first_move_stable": false,
+      "cp_difference": null
+    },
+    {
+      "index": 2909,
+      "id": "stable-candidate-015495",
+      "label": {
+        "white_cp": null,
+        "white_mate": -9,
+        "depth": 29,
+        "reported_nodes": 262426,
+        "pv": [
+          "h2g2",
+          "b1d1",
+          "g2h2",
+          "h6g5",
+          "h2g2",
+          "g5f5",
+          "e3e4",
+          "f5e4",
+          "g2h2",
+          "e4f4",
+          "h2g2",
+          "d1e2",
+          "g2h2",
+          "f4f3",
+          "h2h1",
+          "e2f1",
+          "h1h2",
+          "f1g2"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": null
+    },
+    {
+      "index": 3068,
+      "id": "stable-candidate-016713",
+      "label": {
+        "white_cp": -886,
+        "white_mate": null,
+        "depth": 18,
+        "reported_nodes": 262203,
+        "pv": [
+          "d8f8",
+          "g7f8",
+          "g1h2",
+          "f5g4",
+          "g2g3",
+          "g4e4",
+          "h2h3",
+          "e4e3",
+          "h3g4",
+          "e3e4",
+          "g4h3",
+          "f7f5",
+          "h3h2",
+          "e4g4",
+          "h2g2"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": -24
+    },
+    {
+      "index": 3438,
+      "id": "stable-candidate-020033",
+      "label": {
+        "white_cp": -332,
+        "white_mate": null,
+        "depth": 18,
+        "reported_nodes": 262378,
+        "pv": [
+          "d6d5",
+          "h7g8",
+          "d5d6",
+          "g8f7",
+          "d6e5",
+          "b2d2",
+          "e5e4",
+          "f7e6",
+          "e4e3",
+          "d2c2",
+          "e3d3",
+          "c2h2",
+          "d3e3"
+        ]
+      },
+      "first_move_stable": false,
+      "cp_difference": 11
+    },
+    {
+      "index": 3850,
+      "id": "stable-candidate-037734",
+      "label": {
+        "white_cp": -291,
+        "white_mate": null,
+        "depth": 20,
+        "reported_nodes": 262203,
+        "pv": [
+          "a5a4",
+          "g8f7"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": 1
+    },
+    {
+      "index": 3885,
+      "id": "stable-candidate-039377",
+      "label": {
+        "white_cp": -422,
+        "white_mate": null,
+        "depth": 18,
+        "reported_nodes": 262429,
+        "pv": [
+          "a1c1",
+          "e8d7",
+          "c3a1",
+          "d3h3",
+          "c1c5",
+          "e7e6",
+          "c5b5",
+          "h3h5",
+          "f2f3",
+          "d7e8",
+          "f3f4",
+          "e8f8",
+          "b5b1",
+          "c6e7",
+          "a1c3",
+          "h5h4",
+          "f4g3"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": -54
+    },
+    {
+      "index": 4005,
+      "id": "stable-candidate-045032",
+      "label": {
+        "white_cp": -287,
+        "white_mate": null,
+        "depth": 18,
+        "reported_nodes": 262476,
+        "pv": [
+          "f5e6",
+          "h2h7",
+          "e6f6",
+          "c2b3",
+          "f6g6",
+          "h7h2",
+          "g6g5",
+          "h2h3",
+          "g5g4",
+          "h3h6",
+          "g4f5"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": 22
+    },
+    {
+      "index": 4028,
+      "id": "stable-candidate-045935",
+      "label": {
+        "white_cp": 355,
+        "white_mate": null,
+        "depth": 18,
+        "reported_nodes": 262180,
+        "pv": [
+          "e7f7",
+          "g2g3",
+          "f7f8",
+          "g3g4",
+          "a1b2",
+          "g4g3",
+          "b2c2",
+          "g3g4",
+          "c2d3",
+          "g4g5",
+          "d3e4",
+          "g5g6",
+          "e4e5",
+          "g6g7",
+          "f8f3",
+          "g7g6",
+          "f3h3",
+          "g6f7",
+          "e5f5",
+          "f7g7",
+          "h3e3",
+          "g7f7"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": -1
+    },
+    {
+      "index": 4055,
+      "id": "stable-candidate-048424",
+      "label": {
+        "white_cp": 422,
+        "white_mate": null,
+        "depth": 15,
+        "reported_nodes": 262296,
+        "pv": [
+          "b5b6",
+          "c5b6"
+        ]
+      },
+      "first_move_stable": true,
+      "cp_difference": 140
+    }
+  ],
+  "bucket_descriptions": [
+    {
+      "bucket": 0,
+      "positions": 1024,
+      "source_games": 250,
+      "phase_counts": {
+        "4": 257,
+        "6": 121,
+        "0": 101,
+        "2": 233,
+        "5": 43,
+        "8": 57,
+        "7": 38,
+        "1": 80,
+        "3": 94
+      },
+      "side_to_move_counts": {
+        "w": 1024
+      },
+      "static_vs_verified_mae_cp": 35.7275390625,
+      "sample_vs_verified_mae_cp": 8.568359375
+    },
+    {
+      "bucket": 1,
+      "positions": 1024,
+      "source_games": 432,
+      "phase_counts": {
+        "4": 143,
+        "8": 103,
+        "3": 160,
+        "5": 132,
+        "2": 305,
+        "7": 45,
+        "6": 110,
+        "0": 12,
+        "1": 14
+      },
+      "side_to_move_counts": {
+        "w": 1024
+      },
+      "static_vs_verified_mae_cp": 85.76953125,
+      "sample_vs_verified_mae_cp": 21.7177734375
+    },
+    {
+      "bucket": 2,
+      "positions": 1024,
+      "source_games": 329,
+      "phase_counts": {
+        "3": 193,
+        "2": 153,
+        "5": 172,
+        "6": 80,
+        "8": 51,
+        "0": 54,
+        "1": 84,
+        "4": 199,
+        "7": 38
+      },
+      "side_to_move_counts": {
+        "w": 1024
+      },
+      "static_vs_verified_mae_cp": 100.7880859375,
+      "sample_vs_verified_mae_cp": 18.5537109375
+    },
+    {
+      "bucket": 3,
+      "positions": 1024,
+      "source_games": 582,
+      "phase_counts": {
+        "5": 141,
+        "4": 282,
+        "7": 76,
+        "6": 151,
+        "0": 37,
+        "3": 176,
+        "1": 44,
+        "2": 78,
+        "8": 39
+      },
+      "side_to_move_counts": {
+        "w": 1024
+      },
+      "static_vs_verified_mae_cp": 165.9833984375,
+      "sample_vs_verified_mae_cp": 17.763671875
+    }
+  ],
+  "deeper_first_move_stable": 22,
+  "seconds": 48.838,
+  "interpretation": "Legal history/outcome/selection audit and independent re-query only. No deeper diagnostic post-filtering; teacher scores and source results are not oracles."
+}

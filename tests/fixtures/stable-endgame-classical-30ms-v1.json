@@ -1,0 +1,691 @@
+{
+  "schema": 1,
+  "seed": 20261118,
+  "plies": 20,
+  "selection_nodes": 2048,
+  "verification_nodes": 20000,
+  "max_abs_teacher_cp": 80,
+  "teacher": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "training_exclusion": null,
+  "training_exclusions": [
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\teacher-turn-60k-static-v1-classical.jsonl",
+      "sha256": "bfea2a0226b65879961c7cde551dde3d715a9e59ef9e99adf627e3744f2be162",
+      "positions": 60000
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\teacher-20k-v1.jsonl",
+      "sha256": "191c4bbd054ad307860d8935f2cb4f6cbcf73e60b68a3a397e646e8b6d691527",
+      "positions": 20000
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\endgame-diagnostic-512-v1.jsonl",
+      "sha256": "f07976034c668f3ae636ef96cf584891b1bb1a7cc1648e73d975e837277b29a3",
+      "positions": 512
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\stable-endgame-4096-v1.jsonl",
+      "sha256": "3c1ca1842da3059433028b3bd5cd9d6ebf9074226f63783238199563f34e5065",
+      "positions": 4096
+    }
+  ],
+  "prior_suites_excluded": [
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v1.json",
+      "sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de",
+      "positions": 64
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v2.json",
+      "sha256": "cdcc99af780b795546a22e84b2557bd20168097c2694cc9b12ce2e242f74bc25",
+      "positions": 64
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v3.json",
+      "sha256": "b2c84b63c566712b33102e1a5f246d47a010a0341f8396c5e036937c74e241f3",
+      "positions": 64
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v4.json",
+      "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d",
+      "positions": 64
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v5.json",
+      "sha256": "e63c68d4024428bef2f84a4289db06c4aee70e60aa9f081cf437d2a6d237c46e",
+      "positions": 64
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\rating-parent-v1.json",
+      "sha256": "6c4d7453e3572cadf786d81be8ad8b0b85fb9c461d5e93847612959836efb112",
+      "positions": 144
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\lazy-order-parent-v1.json",
+      "sha256": "d8ac1c505d3c46c819b87da63fe8308cebd18a234a1889a9215fbc2e75101f3a",
+      "positions": 208
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\q-evasion-parent-v1.json",
+      "sha256": "13c3a7a689f83064490766a76d112589ef2098f93a9d92ebbfcee805f1c385f4",
+      "positions": 288
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\iir-parent-v1.json",
+      "sha256": "46868852f9af1c2b95bc9bfaec9b68bb0b45fd916d0bfc27f792fe9596855baa",
+      "positions": 448
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\phase-parent-v1.json",
+      "sha256": "35fd8dc040ab40538966d73d0f9c54d38ce490175e90fba10c9cf4c82363063f",
+      "positions": 80
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\mate-proof-parent-v1.json",
+      "sha256": "85553f4ff2dcc2ce9896e002ce5730d4ca54061c82f1032bdb47f0c83ae750c4",
+      "positions": 32
+    }
+  ],
+  "attempts_used": 282,
+  "teacher_options": {
+    "Threads": 1,
+    "Hash": 64
+  },
+  "generator_sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746",
+  "interpretation": "Seeded near-best MultiPV continuations from the start, distinct final positions, balanced under a bounded teacher check. Teacher scores do not prove equality; this is a regression suite, not an independent final superiority test.",
+  "openings": [
+    {
+      "id": "opening-065",
+      "moves": "g1f3 c7c6 c2c3 g8f6 a2a4 d8c7 g2g3 e7e5 d2d3 h7h6 e2e4 d7d5 f1g2 f8e7 e1g1 c8g4 h2h3 g4e6 d1e2 e7d6",
+      "fen": "rn2k2r/ppq2pp1/2pbbn1p/3pp3/P3P3/2PP1NPP/1P2QPB1/RNB2RK1 w kq - 3 11",
+      "teacher_white_cp": 14,
+      "teacher_depth": 11,
+      "attempt": 107
+    },
+    {
+      "id": "opening-084",
+      "moves": "e2e4 b8c6 b1c3 e7e6 g1f3 a7a6 d1e2 e6e5 g2g3 g8f6 c3d5 f8c5 a2a3 a6a5 c2c3 d7d6 a3a4 c8e6 f3g5 e6d7",
+      "fen": "r2qk2r/1ppb1ppp/2np1n2/p1bNp1N1/P3P3/2P3P1/1P1PQP1P/R1B1KB1R w KQkq - 3 11",
+      "teacher_white_cp": -37,
+      "teacher_depth": 12,
+      "attempt": 142
+    },
+    {
+      "id": "opening-124",
+      "moves": "d2d4 d7d5 c1f4 c8f5 c2c4 c7c6 g1f3 d8b6 b1d2 e7e6 d1b3 h7h6 e2e3 b6b3 d2b3 f7f6 f4g3 f8e7 f1e2 a7a5",
+      "fen": "rn2k1nr/1p2b1p1/2p1pp1p/p2p1b2/2PP4/1N2PNB1/PP2BPPP/R3K2R w KQkq - 0 11",
+      "teacher_white_cp": 76,
+      "teacher_depth": 12,
+      "attempt": 210
+    },
+    {
+      "id": "opening-145",
+      "moves": "c2c3 g8f6 d2d4 c7c6 b1d2 d7d6 d1c2 d6d5 e2e4 g7g6 f1d3 d5e4 d2e4 f8g7 e4f6 e7f6 c1e3 c8e6 a1d1 e6d5",
+      "fen": "rn1qk2r/pp3pbp/2p2pp1/3b4/3P4/2PBB3/PPQ2PPP/3RK1NR w Kkq - 4 11",
+      "teacher_white_cp": 37,
+      "teacher_depth": 9,
+      "attempt": 250
+    },
+    {
+      "id": "opening-126",
+      "moves": "e2e4 e7e5 f1e2 d7d6 g1f3 b8d7 c2c4 g8f6 b1c3 f8e7 d1c2 a7a5 d2d4 c7c6 a1b1 e8g8 e1g1 d8c7 f1d1 h7h6",
+      "fen": "r1b2rk1/1pqnbpp1/2pp1n1p/p3p3/2PPP3/2N2N2/PPQ1BPPP/1RBR2K1 w - - 0 11",
+      "teacher_white_cp": 79,
+      "teacher_depth": 12,
+      "attempt": 215
+    },
+    {
+      "id": "opening-003",
+      "moves": "c2c3 d7d5 d2d4 a7a6 c1f4 c7c6 e2e3 g7g6 g1f3 f8h6 f4h6 g8h6 f1d3 c8f5 e1g1 e7e6 f1e1 d8c7 e3e4 d5e4",
+      "fen": "rn2k2r/1pq2p1p/p1p1p1pn/5b2/3Pp3/2PB1N2/PP3PPP/RN1QR1K1 w kq - 0 11",
+      "teacher_white_cp": 18,
+      "teacher_depth": 12,
+      "attempt": 5
+    },
+    {
+      "id": "opening-039",
+      "moves": "e2e4 c7c5 f1c4 a7a6 c2c3 g8f6 d2d3 b8c6 g1f3 b7b5 c4d5 g7g6 d1b3 f6d5 b3d5 d8b6 c1e3 d7d6 a2a4 a8b8",
+      "fen": "1rb1kb1r/4pp1p/pqnp2p1/1ppQ4/P3P3/2PPBN2/1P3PPP/RN2K2R w KQk - 1 11",
+      "teacher_white_cp": -1,
+      "teacher_depth": 10,
+      "attempt": 67
+    },
+    {
+      "id": "opening-132",
+      "moves": "d2d4 g8f6 b1c3 b8c6 d4d5 c6b8 c1f4 e7e6 d5e6 f7e6 e2e4 d7d6 f1b5 b8c6 g1f3 a7a6 b5c6 b7c6 e4e5 f6d5",
+      "fen": "r1bqkb1r/2p3pp/p1ppp3/3nP3/5B2/2N2N2/PPP2PPP/R2QK2R w KQkq - 1 11",
+      "teacher_white_cp": 32,
+      "teacher_depth": 11,
+      "attempt": 228
+    },
+    {
+      "id": "opening-122",
+      "moves": "d2d4 g8f6 b1c3 c7c6 e2e4 d7d5 e4d5 f6d5 g1f3 d8a5 f1c4 d5c3 d1d2 b8d7 c4b3 d7f6 f3e5 f6e4 b3f7 e8d8",
+      "fen": "r1bk1b1r/pp2pBpp/2p5/q3N3/3Pn3/2n5/PPPQ1PPP/R1B1K2R w KQ - 1 11",
+      "teacher_white_cp": 17,
+      "teacher_depth": 12,
+      "attempt": 207
+    },
+    {
+      "id": "opening-061",
+      "moves": "d2d4 d7d5 g1f3 e7e6 e2e3 g8f6 c2c4 c7c5 a2a3 b7b6 b1c3 d5c4 d1a4 d8d7 f1c4 d7a4 c3a4 b8d7 e1g1 a7a6",
+      "fen": "r1b1kb1r/3n1ppp/pp2pn2/2p5/N1BP4/P3PN2/1P3PPP/R1B2RK1 w kq - 0 11",
+      "teacher_white_cp": 17,
+      "teacher_depth": 13,
+      "attempt": 97
+    },
+    {
+      "id": "opening-063",
+      "moves": "c2c3 e7e6 e2e3 g8f6 g1f3 a7a6 f1e2 b7b6 a2a4 f8e7 e1g1 h7h6 d2d4 c7c5 c3c4 d7d5 b2b3 c8b7 c4d5 b7d5",
+      "fen": "rn1qk2r/4bpp1/pp2pn1p/2pb4/P2P4/1P2PN2/4BPPP/RNBQ1RK1 w kq - 0 11",
+      "teacher_white_cp": 9,
+      "teacher_depth": 11,
+      "attempt": 100
+    },
+    {
+      "id": "opening-130",
+      "moves": "c2c3 e7e6 g2g3 g8f6 g1f3 h7h6 e2e3 f8e7 a2a3 d7d5 d2d4 b8d7 f1d3 c7c5 b1d2 a7a5 e1g1 b7b6 f1e1 e8g8",
+      "fen": "r1bq1rk1/3nbpp1/1p2pn1p/p1pp4/3P4/P1PBPNP1/1P1N1P1P/R1BQR1K1 w - - 2 11",
+      "teacher_white_cp": -42,
+      "teacher_depth": 12,
+      "attempt": 224
+    },
+    {
+      "id": "opening-101",
+      "moves": "d2d4 c7c6 c2c4 g7g6 e2e4 d7d5 c4d5 f8g7 d1a4 b7b5 a4d1 g8f6 b1c3 d8a5 f2f3 b5b4 d1a4 a5b6 c3e2 a7a5",
+      "fen": "rnb1k2r/4ppbp/1qp2np1/p2P4/Qp1PP3/5P2/PP2N1PP/R1B1KBNR w KQkq - 0 11",
+      "teacher_white_cp": -20,
+      "teacher_depth": 12,
+      "attempt": 170
+    },
+    {
+      "id": "opening-135",
+      "moves": "d2d4 d7d5 e2e3 c7c6 g1f3 e7e6 b1d2 g8f6 f1d3 b8d7 c2c3 f8e7 e3e4 e6e5 e1g1 d5e4 d3e4 e5d4 c3d4 d7b6",
+      "fen": "r1bqk2r/pp2bppp/1np2n2/8/3PB3/5N2/PP1N1PPP/R1BQ1RK1 w kq - 1 11",
+      "teacher_white_cp": 1,
+      "teacher_depth": 11,
+      "attempt": 233
+    },
+    {
+      "id": "opening-055",
+      "moves": "g1f3 g8f6 c2c4 c7c5 e2e3 b8c6 f1e2 e7e5 b1c3 d7d5 d2d4 e5d4 e3d4 c5d4 c4d5 d4c3 d5c6 d8d1 e1d1 f8b4",
+      "fen": "r1b1k2r/pp3ppp/2P2n2/8/1b6/2p2N2/PP2BPPP/R1BK3R w kq - 1 11",
+      "teacher_white_cp": -19,
+      "teacher_depth": 14,
+      "attempt": 87
+    },
+    {
+      "id": "opening-129",
+      "moves": "d2d4 d7d5 g1f3 c7c6 c2c4 g7g6 c1g5 c8g4 b1d2 g8f6 d1b3 d8b6 e2e3 f8g7 f1d3 b8d7 h2h3 g4e6 b3c3 e8g8",
+      "fen": "r4rk1/pp1nppbp/1qp1bnp1/3p2B1/2PP4/2QBPN1P/PP1N1PP1/R3K2R w KQ - 3 11",
+      "teacher_white_cp": 64,
+      "teacher_depth": 11,
+      "attempt": 218
+    },
+    {
+      "id": "opening-119",
+      "moves": "g1f3 d7d5 b2b3 b8c6 c1b2 g8f6 g2g3 d5d4 f1g2 c8f5 c2c3 d4d3 e1g1 d3e2 d1e2 f5d3 e2e3 f6g4 e3g5 d3f1",
+      "fen": "r2qkb1r/ppp1pppp/2n5/6Q1/6n1/1PP2NP1/PB1P1PBP/RN3bK1 w kq - 0 11",
+      "teacher_white_cp": -66,
+      "teacher_depth": 12,
+      "attempt": 202
+    },
+    {
+      "id": "opening-095",
+      "moves": "e2e4 b8c6 f1c4 e7e6 d2d4 a7a6 d4d5 b7b5 c4b3 c6a5 b1c3 a5b3 c2b3 c8b7 g1e2 f8d6 c1f4 e6e5 f4c1 d6c5",
+      "fen": "r2qk1nr/1bpp1ppp/p7/1pbPp3/4P3/1PN5/PP2NPPP/R1BQK2R w KQkq - 2 11",
+      "teacher_white_cp": 1,
+      "teacher_depth": 13,
+      "attempt": 163
+    },
+    {
+      "id": "opening-067",
+      "moves": "d2d4 d7d5 e2e3 e7e6 c2c4 f8e7 h2h3 c7c6 g1f3 b7b6 b2b3 g8f6 c1b2 b8d7 b1c3 c8a6 f1e2 e8g8 e2d3 d5c4",
+      "fen": "r2q1rk1/p2nbppp/bpp1pn2/8/2pP4/1PNBPN1P/PB3PP1/R2QK2R w KQ - 0 11",
+      "teacher_white_cp": 26,
+      "teacher_depth": 14,
+      "attempt": 109
+    },
+    {
+      "id": "opening-082",
+      "moves": "e2e4 e7e5 b1c3 c7c5 f2f4 e5f4 d1f3 g8e7 g1h3 e7c6 f3h5 g7g6 h5f3 f8h6 d2d4 c6d4 f3f2 d7d6 h3f4 h6g7",
+      "fen": "rnbqk2r/pp3pbp/3p2p1/2p5/3nPN2/2N5/PPP2QPP/R1B1KB1R w KQkq - 1 11",
+      "teacher_white_cp": -49,
+      "teacher_depth": 13,
+      "attempt": 140
+    },
+    {
+      "id": "opening-042",
+      "moves": "c2c3 e7e6 g2g3 g8f6 d2d3 d7d5 c1f4 f6h5 f4c1 e6e5 g1f3 d8d6 b1d2 b8c6 a2a4 c8e6 f1g2 f7f5 e2e4 d5e4",
+      "fen": "r3kb1r/ppp3pp/2nqb3/4pp1n/P3p3/2PP1NP1/1P1N1PBP/R1BQK2R w KQkq - 0 11",
+      "teacher_white_cp": 74,
+      "teacher_depth": 12,
+      "attempt": 71
+    },
+    {
+      "id": "opening-019",
+      "moves": "e2e4 e7e5 f1e2 b8c6 b1c3 f8c5 e2b5 g8e7 g1e2 c6d4 e2d4 c5d4 b5c4 e8g8 d2d3 h7h6 d1h5 a7a6 e1g1 b7b5",
+      "fen": "r1bq1rk1/2ppnpp1/p6p/1p2p2Q/2BbP3/2NP4/PPP2PPP/R1B2RK1 w - - 0 11",
+      "teacher_white_cp": 38,
+      "teacher_depth": 11,
+      "attempt": 33
+    },
+    {
+      "id": "opening-076",
+      "moves": "d2d4 g8f6 b1c3 c7c6 a2a3 d8a5 b2b4 a5c7 c1g5 d7d6 e2e3 g7g6 a1b1 f8g7 f1d3 a7a5 b4b5 e8g8 h2h3 a5a4",
+      "fen": "rnb2rk1/1pq1ppbp/2pp1np1/1P4B1/p2P4/P1NBP2P/2P2PP1/1R1QK1NR w K - 0 11",
+      "teacher_white_cp": 5,
+      "teacher_depth": 14,
+      "attempt": 131
+    },
+    {
+      "id": "opening-127",
+      "moves": "d2d4 d7d5 c2c4 e7e6 g1f3 f8e7 e2e3 b7b6 f1d3 g8f6 d1a4 c8d7 a4d1 a7a6 c4d5 f6d5 c1d2 e8g8 a2a3 d5f6",
+      "fen": "rn1q1rk1/2pbbppp/pp2pn2/8/3P4/P2BPN2/1P1B1PPP/RN1QK2R w KQ - 1 11",
+      "teacher_white_cp": 28,
+      "teacher_depth": 12,
+      "attempt": 216
+    },
+    {
+      "id": "opening-138",
+      "moves": "c2c3 e7e5 d2d4 b8c6 e2e4 a7a6 d4d5 c6b8 a2a4 g8f6 g1f3 d7d6 f3d2 g7g6 b1a3 f8g7 a4a5 b8d7 a3c4 f6h5",
+      "fen": "r1bqk2r/1ppn1pbp/p2p2p1/P2Pp2n/2N1P3/2P5/1P1N1PPP/R1BQKB1R w KQkq - 3 11",
+      "teacher_white_cp": 49,
+      "teacher_depth": 11,
+      "attempt": 240
+    },
+    {
+      "id": "opening-012",
+      "moves": "g1f3 d7d5 b2b3 c8f5 c1b2 e7e6 g2g3 h7h6 f1g2 g8f6 d2d4 f5h7 b1d2 a7a5 c2c4 b8d7 a1c1 a8c8 e1g1 c8a8",
+      "fen": "r2qkb1r/1ppn1ppb/4pn1p/p2p4/2PP4/1P3NP1/PB1NPPBP/2RQ1RK1 w k - 5 11",
+      "teacher_white_cp": 22,
+      "teacher_depth": 13,
+      "attempt": 21
+    },
+    {
+      "id": "opening-060",
+      "moves": "c2c3 e7e6 g2g3 c7c5 d2d3 f8e7 f1g2 g8f6 e2e4 d7d5 e4d5 f6d5 h2h4 b8c6 d1e2 f7f6 h4h5 a7a5 b1a3 e8g8",
+      "fen": "r1bq1rk1/1p2b1pp/2n1pp2/p1pn3P/8/N1PP2P1/PP2QPB1/R1B1K1NR w KQ - 2 11",
+      "teacher_white_cp": -9,
+      "teacher_depth": 11,
+      "attempt": 96
+    },
+    {
+      "id": "opening-141",
+      "moves": "g1f3 d7d5 e2e3 e7e6 c2c4 g8f6 b2b3 b7b6 f1e2 f8d6 c1b2 e8g8 b1c3 c7c6 e1g1 c8b7 h2h3 f8e8 a2a4 h7h6",
+      "fen": "rn1qr1k1/pb3pp1/1ppbpn1p/3p4/P1P5/1PN1PN1P/1B1PBPP1/R2Q1RK1 w - - 0 11",
+      "teacher_white_cp": 17,
+      "teacher_depth": 11,
+      "attempt": 245
+    },
+    {
+      "id": "opening-140",
+      "moves": "d2d4 c7c6 c2c3 d7d5 h2h3 f7f6 b1d2 f6f5 d1c2 e7e6 h3h4 d8c7 h4h5 h7h6 g1f3 f8e7 d2b3 b8d7 g2g3 g8f6",
+      "fen": "r1b1k2r/ppqnb1p1/2p1pn1p/3p1p1P/3P4/1NP2NP1/PPQ1PP2/R1B1KB1R w KQkq - 1 11",
+      "teacher_white_cp": 35,
+      "teacher_depth": 13,
+      "attempt": 242
+    },
+    {
+      "id": "opening-131",
+      "moves": "g1f3 c7c5 e2e3 d7d5 d2d4 g8f6 b1c3 c8g4 f1e2 b8c6 e1g1 a8c8 f3e5 g4e2 c3e2 e7e6 a2a4 c6e5 d4e5 f6d7",
+      "fen": "2rqkb1r/pp1n1ppp/4p3/2ppP3/P7/4P3/1PP1NPPP/R1BQ1RK1 w k - 1 11",
+      "teacher_white_cp": 1,
+      "teacher_depth": 13,
+      "attempt": 227
+    },
+    {
+      "id": "opening-154",
+      "moves": "d2d4 g8f6 c2c4 d7d6 e2e3 e7e5 b1c3 f8e7 f1e2 e5d4 e3d4 c8f5 e2f3 b8c6 c1f4 h7h6 f4e3 d8d7 d1b3 a8b8",
+      "fen": "1r2k2r/pppqbpp1/2np1n1p/5b2/2PP4/1QN1BB2/PP3PPP/R3K1NR w KQk - 4 11",
+      "teacher_white_cp": 24,
+      "teacher_depth": 12,
+      "attempt": 269
+    },
+    {
+      "id": "opening-150",
+      "moves": "e2e4 g8f6 d2d3 c7c5 c2c3 d7d6 f1e2 e7e5 c1g5 f8e7 a2a4 b8c6 b1d2 f6g8 g5e7 g8e7 h2h4 a8b8 h4h5 e8g8",
+      "fen": "1rbq1rk1/pp2nppp/2np4/2p1p2P/P3P3/2PP4/1P1NBPP1/R2QK1NR w KQ - 1 11",
+      "teacher_white_cp": -18,
+      "teacher_depth": 12,
+      "attempt": 260
+    },
+    {
+      "id": "opening-160",
+      "moves": "g1f3 c7c6 e2e4 d7d5 e4d5 c6d5 h2h3 a7a6 c2c3 e7e6 f1d3 g8f6 d3c2 f8d6 d2d4 b8c6 d1e2 d8c7 c1g5 c8d7",
+      "fen": "r3k2r/1pqb1ppp/p1nbpn2/3p2B1/3P4/2P2N1P/PPB1QPP1/RN2K2R w KQkq - 5 11",
+      "teacher_white_cp": -54,
+      "teacher_depth": 12,
+      "attempt": 281
+    },
+    {
+      "id": "opening-083",
+      "moves": "g1f3 g8f6 d2d4 d7d5 c1f4 f6h5 f4d2 c8f5 g2g3 f5e4 c2c4 h5f6 f1g2 d5c4 d1a4 b8d7 a4c4 d7b6 c4c3 e7e6",
+      "fen": "r2qkb1r/ppp2ppp/1n2pn2/8/3Pb3/2Q2NP1/PP1BPPBP/RN2K2R w KQkq - 0 11",
+      "teacher_white_cp": 27,
+      "teacher_depth": 11,
+      "attempt": 141
+    },
+    {
+      "id": "opening-025",
+      "moves": "g1f3 d7d5 e2e3 e7e6 b2b3 c7c5 c2c4 g8f6 g2g3 b8c6 c4d5 f6d5 a2a3 f8d6 f1g2 d8f6 a1a2 d6e7 e1g1 f6g6",
+      "fen": "r1b1k2r/pp2bppp/2n1p1q1/2pn4/8/PP2PNP1/R2P1PBP/1NBQ1RK1 w kq - 7 11",
+      "teacher_white_cp": 10,
+      "teacher_depth": 13,
+      "attempt": 46
+    },
+    {
+      "id": "opening-029",
+      "moves": "d2d4 b8c6 d4d5 c6e5 e2e4 e7e6 b1c3 e6d5 d1d5 f8d6 c3b5 d8e7 g1e2 g8f6 b5d6 c7d6 d5d2 f6e4 d2d5 e4f6",
+      "fen": "r1b1k2r/pp1pqppp/3p1n2/3Qn3/8/8/PPP1NPPP/R1B1KB1R w KQkq - 2 11",
+      "teacher_white_cp": 23,
+      "teacher_depth": 11,
+      "attempt": 52
+    },
+    {
+      "id": "opening-113",
+      "moves": "e2e4 g8f6 e4e5 f6e4 d1e2 d7d5 c2c3 e4c5 e2b5 b8d7 b5e2 d5d4 c3d4 c5e6 d4d5 e6d4 e2e4 c7c5 b1c3 d7b6",
+      "fen": "r1bqkb1r/pp2pppp/1n6/2pPP3/3nQ3/2N5/PP1P1PPP/R1B1KBNR w KQkq - 2 11",
+      "teacher_white_cp": 55,
+      "teacher_depth": 13,
+      "attempt": 192
+    },
+    {
+      "id": "opening-112",
+      "moves": "d2d4 g8f6 c1f4 f6h5 f4g3 h5g3 h2g3 d7d5 e2e3 b8d7 c2c4 e7e6 b1c3 d7b6 g1f3 c7c6 a1c1 h7h6 b2b3 f8a3",
+      "fen": "r1bqk2r/pp3pp1/1np1p2p/3p4/2PP4/bPN1PNP1/P4PP1/2RQKB1R w Kkq - 1 11",
+      "teacher_white_cp": 17,
+      "teacher_depth": 12,
+      "attempt": 190
+    },
+    {
+      "id": "opening-147",
+      "moves": "g1f3 c7c5 b1c3 a7a6 e2e4 b7b5 d2d4 c5d4 d1d4 h7h5 f1d3 c8b7 d4e3 h5h4 f3g5 e7e6 c1d2 b8c6 h2h3 d8c7",
+      "fen": "r3kbnr/1bqp1pp1/p1n1p3/1p4N1/4P2p/2NBQ2P/PPPB1PP1/R3K2R w KQkq - 1 11",
+      "teacher_white_cp": -8,
+      "teacher_depth": 11,
+      "attempt": 256
+    },
+    {
+      "id": "opening-100",
+      "moves": "e2e4 b8c6 d2d4 e7e6 d4d5 e6d5 e4d5 d8e7 f1e2 c6e5 c1e3 g8f6 d1d4 c7c5 d4d1 d7d6 b1c3 f6g4 e3d2 a7a6",
+      "fen": "r1b1kb1r/1p2qppp/p2p4/2pPn3/6n1/2N5/PPPBBPPP/R2QK1NR w KQkq - 0 11",
+      "teacher_white_cp": 34,
+      "teacher_depth": 11,
+      "attempt": 169
+    },
+    {
+      "id": "opening-096",
+      "moves": "g1f3 c7c6 c2c4 g8f6 d1c2 d7d5 d2d3 d5c4 c2c4 g7g6 c4c2 f8g7 g2g3 a7a5 b1c3 a5a4 c1d2 c8g4 f3e5 g4f5",
+      "fen": "rn1qk2r/1p2ppbp/2p2np1/4Nb2/p7/2NP2P1/PPQBPP1P/R3KB1R w KQkq - 4 11",
+      "teacher_white_cp": 8,
+      "teacher_depth": 11,
+      "attempt": 164
+    },
+    {
+      "id": "opening-123",
+      "moves": "e2e4 c7c5 h2h3 e7e6 g1f3 d7d5 e4d5 d8d5 f1b5 b8c6 d2d3 c8d7 e1g1 a7a6 c2c4 d5d6 b5a4 g8f6 b1c3 f8e7",
+      "fen": "r3k2r/1p1bbppp/p1nqpn2/2p5/B1P5/2NP1N1P/PP3PP1/R1BQ1RK1 w kq - 5 11",
+      "teacher_white_cp": -11,
+      "teacher_depth": 11,
+      "attempt": 209
+    },
+    {
+      "id": "opening-066",
+      "moves": "c2c3 e7e5 d2d4 b8c6 e2e4 a7a6 d4e5 c6e5 c1e3 g8f6 e3d4 e5g6 h2h4 h7h5 f1d3 b7b5 e4e5 f6d5 d3e4 c8b7",
+      "fen": "r2qkb1r/1bpp1pp1/p5n1/1p1nP2p/3BB2P/2P5/PP3PP1/RN1QK1NR w KQkq - 3 11",
+      "teacher_white_cp": 54,
+      "teacher_depth": 13,
+      "attempt": 108
+    },
+    {
+      "id": "opening-052",
+      "moves": "g1f3 c7c5 e2e4 e7e6 d2d4 d7d5 b1c3 a7a6 d4c5 g8f6 e4d5 f8c5 c1g5 e8g8 f1c4 b7b5 c4d3 e6d5 e1g1 c8b7",
+      "fen": "rn1q1rk1/1b3ppp/p4n2/1pbp2B1/8/2NB1N2/PPP2PPP/R2Q1RK1 w - - 2 11",
+      "teacher_white_cp": 6,
+      "teacher_depth": 12,
+      "attempt": 84
+    },
+    {
+      "id": "opening-153",
+      "moves": "c2c3 e7e6 g1f3 d7d5 d2d4 a7a6 c1g5 f7f6 g5c1 b7b6 d1c2 c8b7 b1d2 f6f5 a2a4 f8d6 b2b4 g8f6 g2g3 a6a5",
+      "fen": "rn1qk2r/1bp3pp/1p1bpn2/p2p1p2/PP1P4/2P2NP1/2QNPP1P/R1B1KB1R w KQkq - 0 11",
+      "teacher_white_cp": -27,
+      "teacher_depth": 12,
+      "attempt": 265
+    },
+    {
+      "id": "opening-050",
+      "moves": "e2e4 e7e5 g1f3 d7d6 f1c4 b8c6 d2d3 f8e7 c2c3 d8d7 d1b3 e7d8 b3a4 g8f6 a2a3 e8g8 b1d2 d7e8 a4c2 c8e6",
+      "fen": "r2bqrk1/ppp2ppp/2npbn2/4p3/2B1P3/P1PP1N2/1PQN1PPP/R1B1K2R w KQ - 5 11",
+      "teacher_white_cp": 23,
+      "teacher_depth": 12,
+      "attempt": 81
+    },
+    {
+      "id": "opening-074",
+      "moves": "d2d4 c7c6 e2e4 d7d5 b1d2 e7e6 g1f3 c6c5 c2c4 g8f6 e4e5 f6d7 f1d3 a7a5 d1e2 f8e7 e1g1 e8g8 d3c2 b8c6",
+      "fen": "r1bq1rk1/1p1nbppp/2n1p3/p1ppP3/2PP4/5N2/PPBNQPPP/R1B2RK1 w - - 6 11",
+      "teacher_white_cp": -5,
+      "teacher_depth": 11,
+      "attempt": 129
+    },
+    {
+      "id": "opening-047",
+      "moves": "g1f3 c7c5 e2e3 b8c6 d2d4 c5d4 f3d4 e7e6 f1d3 d7d5 e1g1 c8d7 b1d2 a8c8 a2a4 c6b4 d2f3 b4d3 c2d3 f7f6",
+      "fen": "2rqkbnr/pp1b2pp/4pp2/3p4/P2N4/3PPN2/1P3PPP/R1BQ1RK1 w k - 0 11",
+      "teacher_white_cp": 32,
+      "teacher_depth": 14,
+      "attempt": 77
+    },
+    {
+      "id": "opening-062",
+      "moves": "d2d4 g8f6 c2c4 c7c6 d1c2 g7g6 g1f3 f8g7 b1c3 d7d6 c2b3 e8g8 e2e4 c6c5 d4c5 f8e8 c5d6 b8d7 f1e2 e7d6",
+      "fen": "r1bqr1k1/pp1n1pbp/3p1np1/8/2P1P3/1QN2N2/PP2BPPP/R1B1K2R w KQ - 0 11",
+      "teacher_white_cp": 12,
+      "teacher_depth": 12,
+      "attempt": 99
+    },
+    {
+      "id": "opening-114",
+      "moves": "d2d4 c7c6 g1f3 g7g6 b1c3 d7d5 a2a3 f8g7 e2e3 b8d7 f1d3 d8c7 h2h3 g8f6 e1g1 e8g8 a3a4 a7a5 f1e1 b7b6",
+      "fen": "r1b2rk1/2qnppbp/1pp2np1/p2p4/P2P4/2NBPN1P/1PP2PP1/R1BQR1K1 w - - 0 11",
+      "teacher_white_cp": 25,
+      "teacher_depth": 12,
+      "attempt": 193
+    },
+    {
+      "id": "opening-157",
+      "moves": "d2d4 d7d5 c1f4 g8f6 c2c3 g7g6 e2e3 c7c6 g1f3 d8b6 d1d2 f8g7 h2h3 e8g8 f1e2 b8d7 a2a4 a7a5 d2c1 f8e8",
+      "fen": "r1b1r1k1/1p1nppbp/1qp2np1/p2p4/P2P1B2/2P1PN1P/1P2BPP1/RNQ1K2R w KQ - 2 11",
+      "teacher_white_cp": 34,
+      "teacher_depth": 14,
+      "attempt": 274
+    },
+    {
+      "id": "opening-079",
+      "moves": "e2e4 g8f6 d2d3 c7c5 b1c3 b8c6 g1f3 d7d5 e4d5 c6d4 c3e4 d4f3 d1f3 f6d5 d3d4 c5d4 e4g5 d5f6 c1d2 d8c7",
+      "fen": "r1b1kb1r/ppq1pppp/5n2/6N1/3p4/5Q2/PPPB1PPP/R3KB1R w KQkq - 4 11",
+      "teacher_white_cp": -36,
+      "teacher_depth": 11,
+      "attempt": 134
+    },
+    {
+      "id": "opening-109",
+      "moves": "e2e4 b8c6 d2d4 e7e6 c2c3 e6e5 g1f3 d7d5 e4d5 d8d5 d1b3 d5b3 a2b3 e5d4 c1f4 c8f5 f1c4 e8c8 e1g1 f7f6",
+      "fen": "2kr1bnr/ppp3pp/2n2p2/5b2/2Bp1B2/1PP2N2/1P3PPP/RN3RK1 w - - 0 11",
+      "teacher_white_cp": -6,
+      "teacher_depth": 12,
+      "attempt": 184
+    },
+    {
+      "id": "opening-032",
+      "moves": "d2d4 g8f6 c1f4 d7d5 e2e3 b8c6 b1d2 c8f5 a2a4 c6b4 a1c1 e7e6 g1f3 f8e7 c2c3 b4d3 f1d3 f5d3 h2h3 h7h6",
+      "fen": "r2qk2r/ppp1bpp1/4pn1p/3p4/P2P1B2/2PbPN1P/1P1N1PP1/2RQK2R w Kkq - 0 11",
+      "teacher_white_cp": 21,
+      "teacher_depth": 11,
+      "attempt": 55
+    },
+    {
+      "id": "opening-001",
+      "moves": "d2d4 d7d5 g1f3 c7c6 c1g5 h7h6 g5h4 a7a6 e2e3 c8f5 b1d2 d8b6 c2c4 g7g5 c4c5 b6b2 h4g3 b8d7 f1e2 f5c2",
+      "fen": "r3kbnr/1p1npp2/p1p4p/2Pp2p1/3P4/4PNB1/PqbNBPPP/R2QK2R w KQkq - 4 11",
+      "teacher_white_cp": -7,
+      "teacher_depth": 13,
+      "attempt": 2
+    },
+    {
+      "id": "opening-006",
+      "moves": "d2d4 d7d5 c1f4 b8c6 h2h3 e7e6 g1f3 a7a6 a2a3 c8d7 b1c3 g8f6 h3h4 f8d6 f3e5 f6h5 f4g5 h5f6 g5f4 f6h5",
+      "fen": "r2qk2r/1ppb1ppp/p1nbp3/3pN2n/3P1B1P/P1N5/1PP1PPP1/R2QKB1R w KQkq - 7 11",
+      "teacher_white_cp": 18,
+      "teacher_depth": 12,
+      "attempt": 10
+    },
+    {
+      "id": "opening-107",
+      "moves": "g1f3 c7c5 e2e3 b8c6 c2c4 g8f6 b1c3 e7e5 e3e4 g7g6 d2d3 h7h6 f1e2 d7d6 c1d2 f8g7 a1b1 a7a5 b2b3 b7b6",
+      "fen": "r1bqk2r/5pb1/1pnp1npp/p1p1p3/2P1P3/1PNP1N2/P2BBPPP/1R1QK2R w Kkq - 0 11",
+      "teacher_white_cp": -1,
+      "teacher_depth": 11,
+      "attempt": 182
+    },
+    {
+      "id": "opening-149",
+      "moves": "e2e4 b8c6 f1c4 e7e5 d1h5 d8e7 h5d1 d7d6 d2d3 c6a5 c4d5 c7c6 b2b4 c6d5 e4d5 b7b5 b4a5 e7c7 g1f3 g8e7",
+      "fen": "r1b1kb1r/p1q1nppp/3p4/Pp1Pp3/8/3P1N2/P1P2PPP/RNBQK2R w KQkq - 3 11",
+      "teacher_white_cp": -70,
+      "teacher_depth": 10,
+      "attempt": 259
+    },
+    {
+      "id": "opening-027",
+      "moves": "c2c3 e7e5 c3c4 f8c5 d2d3 a7a5 g1f3 d7d6 b1c3 h7h6 h2h3 g8f6 g2g3 c8e6 c1d2 b8c6 f1g2 c5b6 e1g1 e8g8",
+      "fen": "r2q1rk1/1pp2pp1/1bnpbn1p/p3p3/2P5/2NP1NPP/PP1BPPB1/R2Q1RK1 w - - 7 11",
+      "teacher_white_cp": -17,
+      "teacher_depth": 9,
+      "attempt": 49
+    },
+    {
+      "id": "opening-111",
+      "moves": "g1f3 c7c5 e2e3 e7e6 e3e4 f8e7 c2c4 b7b6 a2a3 c8b7 f1d3 a7a6 b1c3 d8c7 b2b3 d7d6 d3c2 g7g5 e1g1 e7f6",
+      "fen": "rn2k1nr/1bq2p1p/pp1ppb2/2p3p1/2P1P3/PPN2N2/2BP1PPP/R1BQ1RK1 w kq - 2 11",
+      "teacher_white_cp": -70,
+      "teacher_depth": 10,
+      "attempt": 189
+    },
+    {
+      "id": "opening-108",
+      "moves": "g1f3 c7c6 e2e4 d7d5 e4e5 c8f5 d2d4 e7e6 h2h3 c6c5 c2c3 h7h6 f1e2 d8b6 b1a3 f5e4 e1g1 a7a6 f3d2 e4f5",
+      "fen": "rn2kbnr/1p3pp1/pq2p2p/2ppPb2/3P4/N1P4P/PP1NBPP1/R1BQ1RK1 w kq - 2 11",
+      "teacher_white_cp": 80,
+      "teacher_depth": 13,
+      "attempt": 183
+    },
+    {
+      "id": "opening-105",
+      "moves": "d2d4 d7d5 g1f3 a7a6 c2c4 e7e6 a2a3 f8e7 b1c3 b7b6 c4d5 e6d5 g2g3 g8f6 c1f4 e8g8 a1c1 c7c5 e2e3 c8e6",
+      "fen": "rn1q1rk1/4bppp/pp2bn2/2pp4/3P1B2/P1N1PNP1/1P3P1P/2RQKB1R w K - 1 11",
+      "teacher_white_cp": 26,
+      "teacher_depth": 13,
+      "attempt": 179
+    },
+    {
+      "id": "opening-028",
+      "moves": "c2c3 e7e6 e2e3 d7d5 b2b4 b8d7 a2a4 c7c6 d2d4 f8d6 b1d2 e6e5 d1b3 g8e7 c3c4 a7a5 c4c5 d6b8 b4b5 h7h5",
+      "fen": "rbbqk2r/1p1nnpp1/2p5/pPPpp2p/P2P4/1Q2P3/3N1PPP/R1B1KBNR w KQkq - 0 11",
+      "teacher_white_cp": -14,
+      "teacher_depth": 11,
+      "attempt": 51
+    },
+    {
+      "id": "opening-125",
+      "moves": "d2d4 c7c6 g1f3 f7f5 c1g5 g8f6 e2e3 a7a5 f1d3 g7g6 g5f6 e7f6 e1g1 b8a6 d3a6 a8a6 c2c4 b7b5 d1c2 f8e7",
+      "fen": "2bqk2r/3pb2p/r1p2pp1/pp3p2/2PP4/4PN2/PPQ2PPP/RN3RK1 w k - 2 11",
+      "teacher_white_cp": 58,
+      "teacher_depth": 11,
+      "attempt": 213
+    }
+  ],
+  "experiment_role": "classical-30ms",
+  "parent_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63
+  ],
+  "parent_suite": {
+    "path": "tests/fixtures/stable-endgame-parent-v1.json",
+    "sha256": "ee8a6137df3a3a0da43dcf783565e974483101bb41aeb956d52772f39fc06a19"
+  },
+  "plan_sha256": "d36914bbd359be33b49eac898cc7e6a67b15390969e39f8ad51af6799283f478",
+  "splitter_sha256": "a7403854d6afc5cc36ce4884eb67f1f458a62d20990ad514128270dfd5bddcd6"
+}
