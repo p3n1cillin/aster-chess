@@ -105,9 +105,10 @@ all 576 regression/confirmation games. It preserves 416 complete search traces
 and shows a 5.29% warm speed gain. The ordinary build repeats those traces;
 the rating remains attached to the exact matched candidate. A rating gain
 over the previous 2300 estimate is unproven.
-The next opt-in [unseeded secondary search experiment](docs/INTERNAL-REDUCTIONS.md)
-passes correctness and tactical checks; its frozen 640-game regression has
-pending results. It remains disabled in ordinary builds.
+The opt-in [unseeded secondary search experiment](docs/INTERNAL-REDUCTIONS.md)
+passes correctness and tactics, but its 640 audited regression games do not
+clear the frozen confidence gate. It remains disabled in ordinary builds;
+the reserved rating run is skipped.
 Version 0.6.0 adds king-region-conditioned features, lazy accumulator rebuilds
 and vectorized integer output, retaining compatibility with earlier Aster models.
 The tested trained models regressed in matches, so the classical evaluator

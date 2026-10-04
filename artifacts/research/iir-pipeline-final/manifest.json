@@ -1,0 +1,112 @@
+{
+  "source_files": [
+    {
+      "path": "artifacts/research/iir-pipeline-final/AGENTS.md",
+      "sha256": "eadef7c286c1847cc2300fefcfb46890fa0d2d4f47db720d31430923299d3487"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/analyze_iir_rating.py",
+      "sha256": "9679be5bf884194980163e6338712b0bf21896b3526eef2b5acacb673279c156"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/analyze_rating.py",
+      "sha256": "f6fe53073c006e91760b885adab9803f92cd50fa3c3a7ba6ada90f0a8e5b8d13"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/assess_iir.py",
+      "sha256": "5d1d8c8678b0913d556de08026d677eb325124bc4239fac235b45ca8d22e8344"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/audit_match.py",
+      "sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/audit_openings.py",
+      "sha256": "0c97723cf8a0404f9e3681a90f5d9d09dcfc4978721748222ee80a679a6fca5d"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/compare_search.py",
+      "sha256": "a8162c85b4ea4aae46546ca8a02d4b04c083bf56abb6a28d64f322b2331b6dd9"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/declare_iir.py",
+      "sha256": "57324264a069f73d7fbc36f77bdaa960c841fcde2a7219bac4d6a8fdf7087ca7"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/freeze_engine_source.py",
+      "sha256": "db919e19f9b75ade115a3d834ad48cc57e01a6165130ef03a775279f4c89acb7"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/freeze_iir_pipeline.py",
+      "sha256": "067dc0a528bbf1ecf51c406e87b0d48de71593477aa5f1221aead0682cb55a84"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/generate_openings.py",
+      "sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/INTERNAL-REDUCTIONS.md",
+      "sha256": "cfe133f3b9660ca6f33eec02295fb63a16ebc93e3c063e1066dd03d4c8f7ec54"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/match.py",
+      "sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/prepare_iir.py",
+      "sha256": "7fd9666111df86a0458a426584c619f28bc39cddca577fdcca2b0a4d9f63ecc9"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/preserve_iir.py",
+      "sha256": "e72b373737fba92743ba05f50bb76f84e445c9bfe5a055825791a936b7bae932"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/PROGRESS.md",
+      "sha256": "03c4a47c7e49d0f0fd1b33563be2ff71f13d58d08379e2d439c76fb1f74b70cb"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/RATING.md",
+      "sha256": "da2fe8be2932c7e338c284d273f825f6f08c89f565474443ed17acedbc5fb302"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/README.md",
+      "sha256": "772c68e2cfb456f6ac714cb97b597e82913f8acff86a32b2cc3c9f24e51f984b"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/ROADMAP.md",
+      "sha256": "b9809a57efc82cccd3e80d63fe70b348ea05ad0a0b28b514fe8c378f490d576f"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/run_iir.py",
+      "sha256": "960192e6e7a644c8f740e477b72f514f8f5ecfa703faf5cd64067e8a27235458"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/run_rating.py",
+      "sha256": "6e8a31adefd0aeb5d51eac2f5672396f4518f779947713f86dac138ff00f661a"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/tactics.py",
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/uci_client.py",
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/verify.py",
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/verify_iir.py",
+      "sha256": "64cea6687275b181ab759d3de0da62c6a9efedf6387a745f0532da9a9fc55293"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/verify_q_evasion.py",
+      "sha256": "ab366b0a2be974fc7b33a506e1290205d943c4f5a30a6fe20481c9a391b88438"
+    },
+    {
+      "path": "artifacts/research/iir-pipeline-final/VERSION-CONTROL.md",
+      "sha256": "b2c3689cd4da8946694eedbf65be5f4f0e0f896576a01bc8ae986a9e5225f5f3"
+    }
+  ]
+}

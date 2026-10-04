@@ -1,0 +1,27 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-04T16:21:27.716177+00:00",
+  "plan_sha256": "0477165d2df4a02f96e77564810dbd6cf0d7fa618d45d140a30cd710d59d68dc",
+  "runner_sha256": "960192e6e7a644c8f740e477b72f514f8f5ecfa703faf5cd64067e8a27235458",
+  "match_script_sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8",
+  "phases": [
+    {
+      "label": "vs-0.7.6-30ms",
+      "games": 512,
+      "report": "artifacts/matches/iir-vs-0.7.6-30ms.json",
+      "report_sha256": "7ae78481007e6bd9024e6fd97115bd04193f59b6c13893eec54092c8cf61345a"
+    },
+    {
+      "label": "vs-0.7.6-100ms",
+      "games": 128,
+      "report": "artifacts/matches/iir-vs-0.7.6-100ms.json",
+      "report_sha256": "733ea984260359d3f585a364055fc4f0cf1667cd00d2ee284c91c24398ad6e06"
+    }
+  ],
+  "eligible_for_engineering_promotion": false,
+  "failed_gates": [
+    "match-30ms"
+  ],
+  "conditional_rating": "Skipped; reserved openings remain unused by Aster",
+  "updated_utc": "2026-10-04T17:14:57.588119+00:00"
+}

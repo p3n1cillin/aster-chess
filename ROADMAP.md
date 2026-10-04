@@ -118,11 +118,16 @@ Next pursue more capable search/evaluation rather than interpreting this
 same-work speed gain as a demonstrated strength increase. Broaden endgame
 coverage and proof-backed plans alongside the playing-strength work.
 
-An opt-in one-ply reduction of deep unseeded secondary nodes is now frozen for
-a 640-game paired regression with independent openings and explicit confidence
-gates. It preserves root/PV/check/history/late-clock/pawn-only boundaries and
-stores only the searched depth. Correctness, tactics and limit/undo checks pass;
-playing-strength results are pending. See `docs/INTERNAL-REDUCTIONS.md`.
+An opt-in one-ply reduction of deep unseeded secondary nodes preserves
+root/PV/check/history/late-clock/pawn-only boundaries and stores only searched
+depth. Correctness, tactics and limit/undo checks pass. All 640 independently
+audited games finish: 51.37% at 30 ms and 51.56% at 100 ms, with 95% family intervals
+48.20%..54.52% and 45.49%..57.79%. The declared short-control confidence gate
+fails, so the alternative stays disabled and 128 reserved rating openings are
+unused. See `docs/INTERNAL-REDUCTIONS.md`. Next prioritize broader, stable
+supervision and phase-aware learned evaluation, confirmed in actual search
+and paired matches. Continue extending native proof-backed plans alongside
+the playing-strength work.
 
 ## 3. Learn an evaluation
 

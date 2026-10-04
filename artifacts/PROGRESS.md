@@ -8,7 +8,7 @@ the classical evaluator is the default. Optional trained neural prototypes
 exist but regressed in matches. The opt-in KPK solver generates its own table;
 there is no general tablebase probing or parallel search.
 
-## Current experiment: unseeded secondary search
+## Completed experiment: unseeded secondary search remains opt-in
 
 Version control now preserves the project in the private
 [p3n1cillin/aster-chess repository](https://github.com/p3n1cillin/aster-chess).
@@ -34,13 +34,23 @@ audited. A dataset filename typo is corrected before fixture/opening/tactical/
 match queries; the original plan remains preserved and all seeds/gates/budgets
 are unchanged. The 512-game 30 ms phase is complete: **153 W / 220 D / 139 L**,
 score **51.37%**, all PGNs independently audited, no forfeits or unresolved
-games. Its four report/PGN/audit/log files are now committed. The 128-game
-100 ms phase is running; acceptance remains pending full frozen analysis.
+games. The 128-game 100 ms phase finishes **36 W / 60 D / 32 L**, score
+**51.56%**, again fully audited with no forfeits or unresolved games. Primary
+95% family intervals are **48.20%..54.52%** and **45.49%..57.79%**.
+The short-control lower bound fails the frozen strictly-above-50% gate.
+All **640 games** finish; no strength gain or regression is established.
+The candidate stays opt-in and **128 reserved rating openings remain unused**.
+The runner exits successfully without extending the budget or running conditional rating.
 Both default and opt-in builds pass Windows/Linux CI (51/52 tests and all
 rule/tactical/endgame checks). Ordinary source keeps the experiment disabled.
 The default passes **51 tests**, **1,614 checks**, **146,772-node**
 benchmark and exact 64-position baseline moves/scores/nodes. Details and
 promotion rules: [internal reductions](../docs/INTERNAL-REDUCTIONS.md).
+After the runner exits, working source and current DLL hashes still match the
+verified default snapshot; no playing-code edits occurred during the matches.
+See the [decision](research/iir-decision-v1.json),
+[session rating reference](ratings/session-20261004-iir.json) and
+[complete preservation](research/iir-experiment-v1-manifest.json).
 
 Latest measured rating remains the exact **0.7.6-q-evasion-dev = 2319**, with
 95% local interval **2277..2360**, at 30 ms/move, one thread and 64 MiB hash on

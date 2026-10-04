@@ -59,20 +59,34 @@ receive a 256-game local rating confirmation against SF19's previously fixed
 2300 strength setting. The maximum is **896 games**, with no adaptive extension,
 retuning or selecting a new opponent setting from these results.
 
-The 512-game 30 ms regression is complete and independently audited:
-**153 wins, 220 draws, 139 losses**, a **51.37%** score, with no forfeits or
-unresolved games. Its exact report, PGN, audit and log are committed at
-`artifacts/matches/iir-vs-0.7.6-30ms.*`. The 128-game 100 ms phase is running.
-Acceptance remains pending the complete budget and frozen confidence gates;
-the short-control point score alone does not establish stronger play.
+All **640 regression games** are complete and independently audited:
+
+| Control | Games | W | D | L | Score | 95% family interval |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| 30 ms/move | 512 | 153 | 220 | 139 | 51.37% | 48.20%..54.52% |
+| 100 ms/move | 128 | 36 | 60 | 32 | 51.56% | 45.49%..57.79% |
+
+There are no forfeits or unresolved games. The **30 ms confidence gate fails**:
+its primary lower bound is not strictly above 50%. Both intervals contain 50%.
+Neither a strength gain nor a regression is established. The candidate stays
+opt-in under the original rules; no parameters, thresholds or budgets changed.
+The conditional rating run is skipped and **128 reserved rating openings remain
+unused by Aster**. The actual runner exited successfully after applying these
+gates. Exact reports, PGNs, audits and logs are preserved at
+`artifacts/matches/iir-vs-0.7.6-{30ms,100ms}.*`.
 Windows/Linux CI also passes the ordinary and opt-in builds (51/52 tests),
 independent rules, both tactical suites and endgame diagnostics.
 
-The candidate stays opt-in. `scripts/run_iir.py` refuses
+`scripts/run_iir.py` refuses
 to overwrite/restart an existing execution. Inspect the authoritative process
 handle before treating a run as stopped; `iir-execution-v1.json` is a progress
-record, not proof that a process is live. Reports and PGNs will be audited and
-preserved. The pipeline and rating analyzer are frozen before matches.
+record, not proof that a process is live. The pipeline and rating analyzer were
+frozen before matches. The final audit/preservation script was frozen while
+the first match was still incomplete, and its live-run refusal check passes.
+The [decision](../artifacts/research/iir-decision-v1.json) keeps the verified
+ordinary source and exact pre-match DLL: their hashes still match after the
+runner exits. The required checks remain valid without rebuilding unchanged
+playing code. No new rating is attached to the candidate.
 
 The ordinary 0.7.6 build passes its required Release build, **51 tests**,
 **1,614 independent checks** and unchanged **146,772-node** benchmark. Its
@@ -84,6 +98,16 @@ with the earlier exact **0.7.6-q-evasion-dev** binary: **2319 (95% interval
 one thread, 64 MiB. The IIR candidate and renamed ordinary binary are not
 separately rated. Public Elo and full-strength Stockfish superiority remain
 unestablished.
+
+The [session record](../artifacts/ratings/session-20261004-iir.json) retains
+the last measured exact-binary rating and records the failed gate. Every source,
+binary, fixture, report, PGN, audit, correction and pipeline copy is indexed in
+the [preservation manifest](../artifacts/research/iir-experiment-v1-manifest.json).
+Recheck it without replacing evidence:
+
+```powershell
+.venv/Scripts/python.exe scripts/preserve_iir.py --verify
+```
 
 ```powershell
 dotnet publish src/Engine/Engine.csproj -c Release -p:DefineConstants=ASTER_IIR -o artifacts/publish/new-iir-run

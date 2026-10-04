@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "gates": {
+    "correctness": true,
+    "history_and_limits": true,
+    "opening_behavior": true,
+    "tactics-depth8": true,
+    "tactics-5000nodes": true,
+    "tactics-quiet-depth8": true,
+    "tactics-quiet-5000nodes": true,
+    "endgames-5000nodes": true,
+    "profile_trigger": true,
+    "match-30ms": false,
+    "match-100ms": true
+  },
+  "failed_gates": [
+    "match-30ms"
+  ],
+  "eligible_for_engineering_promotion": false,
+  "matches": [
+    {
+      "label": "30ms",
+      "games": 512,
+      "wins": 153,
+      "draws": 220,
+      "losses": 139,
+      "unresolved": 0,
+      "forfeits": 0,
+      "score_bounds": [
+        0.513671875,
+        0.513671875
+      ],
+      "primary_95_percent_interval": [
+        0.482,
+        0.5451807228915663
+      ],
+      "families": 161
+    },
+    {
+      "label": "100ms",
+      "games": 128,
+      "wins": 36,
+      "draws": 60,
+      "losses": 32,
+      "unresolved": 0,
+      "forfeits": 0,
+      "score_bounds": [
+        0.515625,
+        0.515625
+      ],
+      "primary_95_percent_interval": [
+        0.45491803278688525,
+        0.5778688524590164
+      ],
+      "families": 55
+    }
+  ],
+  "profile_reduced_nodes": 202,
+  "candidate_sha256": "e6c1ea589dfb28441a610e23c93d7287c5a5ea52d5741112e542ddb18acfe85e",
+  "baseline_sha256": "3801b8cbc1cbbb98e2435ab5b00b161d08c2be16d4a18af7cc56e3eb2f43e343",
+  "evidence": [
+    {
+      "path": "artifacts/matches/iir-vs-0.7.6-30ms.json",
+      "sha256": "7ae78481007e6bd9024e6fd97115bd04193f59b6c13893eec54092c8cf61345a",
+      "pgn_sha256": "8e76fd637e21320cafe0016fabecdefb514bfe58c65c6294376926be96c35b18",
+      "audit_sha256": "754768c985e8316b64ba7ef7e491c8af54426bfad8a4ea2b5dc112bddc0dcea0"
+    },
+    {
+      "path": "artifacts/matches/iir-vs-0.7.6-100ms.json",
+      "sha256": "733ea984260359d3f585a364055fc4f0cf1667cd00d2ee284c91c24398ad6e06",
+      "pgn_sha256": "1e90ddb882abcc29163698f11016f3fadca0ef8707ae0386eb8e38e66ae0caa6",
+      "audit_sha256": "1d14b07d403a65464e74d3e360b5275f208f45f8898d76f0c8d53f1e89dee590"
+    }
+  ],
+  "plan_sha256": "0477165d2df4a02f96e77564810dbd6cf0d7fa618d45d140a30cd710d59d68dc",
+  "assessor_sha256": "5d1d8c8678b0913d556de08026d677eb325124bc4239fac235b45ca8d22e8344",
+  "interpretation": "Predeclared paired strength-regression qualification. A positive result here is bounded to this baseline, controls and opening selection; not Stockfish superiority or a public Elo."
+}

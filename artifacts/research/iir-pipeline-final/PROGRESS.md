@@ -1,0 +1,1094 @@
+# Project progress — 4 October 2026
+
+The production engine is **Aster 0.6.0**, with experimental source identified
+as **0.7.6-feature-dev**, with optional threat, KPK, conversion, proof,
+**0.7.5-lazy-order-dev**, **0.7.6-q-evasion-dev** and **0.7.7-iir-dev** builds. The goal of surpassing Stockfish remains
+active and has not been achieved. The current engine uses a classical evaluator;
+the classical evaluator is the default. Optional trained neural prototypes
+exist but regressed in matches. The opt-in KPK solver generates its own table;
+there is no general tablebase probing or parallel search.
+
+## Completed experiment: unseeded secondary search remains opt-in
+
+Version control now preserves the project in the private
+[p3n1cillin/aster-chess repository](https://github.com/p3n1cillin/aster-chess).
+Initial commit `f38c88d3f7528ecbcb83dd08c10353e8eb16982d` and its Windows/Linux
+CI checks are complete. Source, datasets, checkpoints, binaries, reports,
+PGNs and source snapshots are tracked with exact-byte preservation; local
+dependencies/caches and downloaded Stockfish binaries are excluded, with
+the pinned release manifest retained.
+
+The opt-in **0.7.7-iir-dev** build reduces unseeded secondary non-PV nodes by
+one ply from depth five, with check/root/PV/history/clock/material/mate-bound
+guards. Stored depth reflects actual work. It passes **52 tests**, **2,614
+independent checks**, all existing tactical thresholds and **256** legal-PV,
+node-budget, searchmoves, history/clock and restoration cases. Profile depth
+nine records **202** triggers and **591,552** nodes. Its 64 fresh depth-eight
+positions search **4,994,060 versus 5,043,413** baseline nodes; 58 moves and
+49 scores agree. These work differences do not establish playing strength.
+
+The [plan](research/iir-plan-v2.json) freezes **640 paired regression games**,
+512 at 30 ms and 128 at 100 ms, plus at most **256 conditional rating games**.
+All 448 parent openings and eleven exclusion sources are independently
+audited. A dataset filename typo is corrected before fixture/opening/tactical/
+match queries; the original plan remains preserved and all seeds/gates/budgets
+are unchanged. The 512-game 30 ms phase is complete: **153 W / 220 D / 139 L**,
+score **51.37%**, all PGNs independently audited, no forfeits or unresolved
+games. The 128-game 100 ms phase finishes **36 W / 60 D / 32 L**, score
+**51.56%**, again fully audited with no forfeits or unresolved games. Primary
+95% family intervals are **48.20%..54.52%** and **45.49%..57.79%**.
+The short-control lower bound fails the frozen strictly-above-50% gate.
+All **640 games** finish; no strength gain or regression is established.
+The candidate stays opt-in and **128 reserved rating openings remain unused**.
+The runner exits0 without extending the budget or running conditional rating.
+Both default and opt-in builds pass Windows/Linux CI (51/52 tests and all
+rule/tactical/endgame checks). Ordinary source keeps the experiment disabled.
+The default passes **51 tests**, **1,614 checks**, **146,772-node**
+benchmark and exact 64-position baseline moves/scores/nodes. Details and
+promotion rules: [internal reductions](../docs/INTERNAL-REDUCTIONS.md).
+After the runner exits, working source and current DLL hashes still match the
+verified default snapshot; no playing-code edits occurred during the matches.
+See the [decision](research/iir-decision-v1.json),
+[session rating reference](ratings/session-20261004-iir.json) and
+[complete preservation](research/iir-experiment-v1-manifest.json).
+
+Latest measured rating remains the exact **0.7.6-q-evasion-dev = 2319**, with
+95% local interval **2277..2360**, at 30 ms/move, one thread and 64 MiB hash on
+the **SF19 UCI_Elo-setting equivalent** scale. The new candidate is unrated.
+Public Elo and full-strength Stockfish superiority remain unestablished.
+
+## Completed optimization: quiescence evasion legality
+
+The tested **0.7.6-q-evasion-dev** candidate uses the full legal-evasion loop
+to establish mate, avoiding the earlier duplicate existence query in checked
+quiescence positions. Non-check stalemate handling, rule-50/mate precedence,
+maximum-ply legality and speculative move restoration remain intact.
+It passes **51 engine tests**, including explicit horizon-boundary and
+interrupted-evasion tests, and **1,614 independent rule/protocol checks**.
+
+All **160 fresh opening traces** and **256 seeded history/clock/warm-cache/
+restricted-search cases** agree completely with the frozen ordinary control
+after excluding time/nps fields. Depth-eight work totals **11,259,452 nodes**
+in each engine. Tactical results retain the baseline's 32/32 original/quiet
+depth-eight, 32/32 original 5,000-node, 25/32 quiet 5,000-node and 13/16 endgame results.
+
+Depth-nine profile output and **604,209 nodes** are identical. Existence
+queries fall **480,859 -> 453,395**, avoiding 27,464 calls. Two warmup and six
+measured depth-ten passes retain all outputs and show a median elapsed ratio
+**1.05291**, a **5.29%** local speed gain, passing the declared 5% gate.
+This speed result does not establish stronger play or Elo.
+
+All gates in the [frozen plan](research/q-evasion-plan-v1.json) pass. The
+256-game 30 ms regression finishes **76 W / 119 D / 61 L**, score **52.93%**,
+95% family interval **48.89%..56.96%**. The 64-game 100 ms regression finishes
+**13 W / 38 D / 13 L**, score **50%**, interval **41.94%..58.09%**.
+Both intervals contain 50%; stronger play is unproven. The conditional
+256-game confirmation against SF19's 2300 setting finishes **107 W / 56 D /
+93 L**, score **52.73%**. All **576** PGNs audit cleanly with no forfeits or
+unresolved games. The disjoint 288-opening parent and ten exclusions remain
+frozen. The process has exited successfully; no games were added or retuned.
+
+The optimization is promoted to ordinary **0.7.6-feature-dev** source.
+Release build, **51 tests**, **1,614 independent checks**, **146,772-node**
+depth-seven benchmark and replay of all **416** saved candidate traces pass.
+Default DLL SHA-256 is
+`3801b8cbc1cbbb98e2435ab5b00b161d08c2be16d4a18af7cc56e3eb2f43e343`.
+See [experiment details](../docs/QUIESCENCE-EVASIONS.md) and
+[complete preservation](research/q-evasion-experiment-v1-manifest.json).
+
+Latest measured **0.7.6-q-evasion-dev = 2319 (95% local interval 2277..2360)**
+at 30 ms/move, one thread and 64 MiB hash on the **SF19 UCI_Elo-setting equivalent**
+scale. The [record](ratings/session-20261004-q-evasion-confirmation.json) belongs
+to the exact matched candidate, rather than automatically transferring to
+the renamed ordinary build. Its interval overlaps the previous 2300 estimate.
+Public Elo and full-strength Stockfish superiority remain unestablished.
+
+## Previous iteration: deferred capture scoring rejected
+
+The opt-in **0.7.5-lazy-order-dev** build scores other captures only after the
+generated TT move fails to end a main/quiescence node. Quiet history/killer
+scores are captured before that child, so descendant history updates cannot
+change the original ordering. No pruning, reductions or scoring formula changes.
+
+All **80 fresh depth-eight opening traces** and **256 retained-history,
+clock, warm-TT and restricted-search cases** agree with the frozen ordinary
+0.7.4 control. Both engines search **6,101,786 nodes** over the fresh suite.
+The candidate passes **49 tests**, **1,614 independent checks**, original/quiet
+depth-eight tactics **32/32**, original 5,000-node tactics **32/32**, and endgame
+diagnostics **13/16**. The initial plan mistakenly requires quiet **32/32** at
+5,000 nodes; both frozen control and candidate actually solve **25/32**, with identical
+moves/depths/nodes. The failed original gate and a correction declared before
+timing/matches remain preserved; no candidate parameter or match threshold changes.
+
+Profiled depth-nine work remains **604,209 nodes**, with unchanged outputs.
+SEE calls fall **558,458 -> 521,244**, or **6.66%**. Two warmup and six measured
+depth-ten passes preserve complete outputs, but their median baseline/candidate
+elapsed ratio is only **1.00664**: **0.66%**, below the declared **5%** gate.
+Bookkeeping offsets most of the work savings.
+
+Both fresh, color-swapped regressions finish and all **160 PGNs** are audited:
+
+| Control | Games | W | D | L | Score | 95% family interval |
+| --- | ---: | ---: | ---: | ---: | ---: | --- |
+| 30 ms/move | 128 | 47 | 53 | 28 | 57.42% | 51.17%..64.02% |
+| 100 ms/move | 32 | 7 | 16 | 9 | 46.88% | 34.38%..59.38% |
+
+There are no forfeits or unresolved games. The longer control does not confirm
+the short-control result and fails the point-score gate. The alternative
+remains disabled; **128 reserved rating openings remain unused by Aster**.
+No Elo gain or Stockfish superiority is inferred. Ordinary source passes
+the required checks and unchanged **146,772-node** benchmark; its 80 fresh
+depth-eight moves/scores/nodes also agree with the frozen control.
+
+**Last measured rating: frozen ordinary 0.7.4 = 2300**, with 95% local interval
+**2265..2335**, on the **SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread,
+64 MiB hash** scale. Public Elo remains unestablished; the opt-in candidate is
+unrated and production 0.6.0 stays preserved. See [experiment details](../docs/DEFERRED-CAPTURES.md),
+[assessment](research/lazy-order-assessment-v1.json), [session rating](ratings/session-20261004-lazy-order.json)
+and [complete preservation](research/lazy-order-experiment-v1-manifest.json).
+Next test the larger profiled duplicate legality work at quiescence check
+evasions as a separate experiment. The original full-strength Stockfish goal
+and expansion of native verifiable explanations remain active.
+
+## Previous iteration: bounded local rating calibration
+
+The frozen ordinary **0.7.4-feature-dev** build has a provisional local estimate
+of **2300 (95% opening-family interval 2265..2335)** on the **SF19 UCI_Elo-setting
+equivalent at 30 ms/move, one thread, 64 MiB hash** scale. Public Elo remains
+**unestablished**. This run does not rate production 0.6.0 or the opt-in
+conversion/proof scoring builds and does not establish full-strength Stockfish
+superiority. No playing code changed or engine package was promoted.
+
+A frozen plan allocates **160 screening games** across settings 1320, 1800,
+2300, 2800 and 3190, followed by **256 confirmation games** on **128 separate,
+color-swapped openings**. The fixed screening rule selects 2300. Confirmation
+finishes **100 wins, 56 draws and 100 losses**, a **50% score**. All **416 PGNs**
+are independently audited, with no forfeits or unresolved games.
+
+The parent 144-opening suite excludes exact development positions and five
+prior suites, and is frozen before Aster match queries. The declared primary
+bootstrap retains color pairs within **94 opening families**; 20,000 samples
+produce a score interval **44.92%..55.07%**. All numeric precision/range gates
+pass. The local logistic reference model does not validate a public rating
+scale; family intervals do not cover opponent-dial calibration error or
+generalization to other controls. The host is a Ryzen 5 7600X on Windows 11.
+
+Release build passes with zero warnings/errors; **49 engine tests**, **1,614
+independent rule/protocol checks** and **14 match/rating-tool tests** pass.
+The fixed-depth benchmark remains **146,772 nodes**, and the checked ordinary
+DLL matches the rated binary. Exact source, tools, options, hardware, fixtures,
+PGNs, reports, audits and analysis are preserved. See the [rating report](ratings/session-20261004-calibration-v1.json),
+[measurement policy](../docs/RATING.md) and [experiment manifest](research/rating-experiment-v1-manifest.json).
+Next strengthen actual play using the frozen baseline and fresh regression
+openings, broaden controls and references, and extend native verifiable
+explanations. The original full-strength Stockfish goal remains active.
+
+## Previous iteration: finish endgames and explain why
+
+Complete-game KPK diagnostics expose a post-promotion weakness: the prior
+KPK build safely promotes in 32/32 initially won pawn-side games against
+control, but checkmates in only 1/32; against pinned Stockfish 19 the totals
+are 16/16 promotions and 2/16 checkmates. The full histories retain repetition
+and fifty-move draws. Correct single moves alone did not ensure conversion.
+
+An original opt-in KQK/KRK mate attractor now has independent WDL agreement
+on all **1,048,576 states** and exact min/max mate recurrence verification
+on **9,224,008 legal edges**. Maximum mate distances are **20 plies** for
+queen and **32** for rook. A guarded strong-side root filter reduces this
+distance, respects `searchmoves`, declines unsafe clocks/history and always
+undoes speculative moves.
+
+The frozen **0.7.3-conversion-dev** build converts **32/32** initial pawn-side
+wins against control and **16/16** against Stockfish at 5,000 nodes per move,
+and holds **32/32** and **16/16** initial defender draws respectively. These
+are selected, inspected endgame diagnostics at equal nodes, not general
+equal-resource Stockfish comparisons. All six complete-game runs total
+**512 audited games**, with no forfeits or unresolved results.
+
+The longer general regression against the frozen ordinary control finishes
+**14 wins, 29 draws and 21 losses** over **64 v5 games at 100 ms per move**:
+**44.53%**, exploratory paired interval **35.94%..53.13%**. This negative,
+inconclusive screen keeps the evaluation/root policy opt-in. Original and
+quiet tactics remain **32/32**; endgame diagnostics remain **13/16**. The
+candidate passes **49 C# tests**, **17,491 rule checks** and **8,192 runtime
+symmetry/clock probes**, including 95 progress and 95 restricted root searches.
+
+Following the user's request for a distinctive capability, **0.7.4-proof-dev**
+adds native `explain` and complete `certify` strategy graphs for KQK/KRK.
+Every defender reply is included and every leaf is checkmate. A rule-only
+Python checker needs no Aster or tablebase data. The pinned Stockfish 19
+binary rejects the native `explain` command; external interfaces could add
+similar capabilities, and this does not imply superior general intelligence.
+Thirty-two seeded certificates independently validate **18,621 positions**
+and **26,102 edges**, plus four retained examples. The 19-ply rook example
+covers 51 positions and 30 defensive replies. Corruption tests reject missing
+replies, nondecreasing bounds and false mates.
+
+The proof build passes **51 C# tests** and **17,491 rule/protocol checks**.
+Core search/evaluation/table sources remain identical to the matched frozen
+conversion build; **66 fixed-node outputs** agree. Explanations use a cloned
+board and do not block `isready`/`stop` during infinite search. Ordinary source
+passes **49 C# tests**, **1,614** required differential checks and retains
+the **146,772-node** benchmark. Production 0.6.0 remains preserved.
+
+**Rating at the close of this proof iteration: unestablished.** These samples cannot assign a calibrated
+Elo; do not invent a number from tactical totals or selected endgames. The
+session rating status is recorded alongside the evidence. Next run a
+predeclared calibration on a named local scale, broaden equal-time regression
+coverage and extend verifiable explanations. Surpassing Stockfish remains
+unachieved. See [conversion](../docs/ENDGAME-CONVERSION.md),
+[native proofs](../docs/STRATEGY-PROOFS.md), [rating policy](../docs/RATING.md)
+and [complete provenance](research/conversion-proof-experiment-manifest.json).
+
+## Previous iteration: independently verified KPK knowledge
+
+Implemented an original finite-state king-and-pawn win attractor. It runs only
+as an evaluation override in the explicitly enabled `ASTER_KPK` experiment;
+production 0.6.0 and ordinary scoring remain unchanged. Neither Stockfish code
+nor external table data enters the runtime. Both classical and neural estimates
+yield to KPK knowledge; raw neural accumulators are preserved.
+
+All **196,608** normalized entries agree with the pinned independent Syzygy
+development oracle: **111,282 wins**, **54,394 draws**, **30,932 invalid states**.
+A separate certificate checks **772,036 legal successor edges**, including
+**51,084 promotion edges**, and proves a strictly decreasing winning strategy
+with a conservative conversion bound of at most **38 plies**. These bounds are
+not optimal mate, conversion or zeroing distances. Near rule-50 winning probes
+fall back to ordinary evaluation; repetition and terminal rules remain in search.
+
+On **256 frozen positions at 5,000 nodes**, the KPK build preserves oracle
+WDL on **256/256**, versus **246/256** for 0.6.0. The two strata are 128
+pawn-side wins (128 versus 122 preserved) and 128 defender-side draws (128
+versus 124). This is specific evidence of improved endgame decisions, not an
+Elo estimate or proof of general strength.
+
+The candidate passes **46 C# tests**, **17,491 independent rule/protocol
+checks**, and **4,096 runtime normalization/clock checks**. Original and quiet
+tactics remain **32/32** at depth 8; fresh endgame diagnostics remain **13/16**.
+Three initial neural integration test failures and their resolution are retained.
+
+The predeclared **64-game** color-swapped v5 regression against frozen 0.6.0
+uses one thread, 64 MiB hash and 30 ms per move. Result: **23 wins, 25 draws,
+16 losses**, **55.47%**, with exploratory paired opening-cluster interval
+**48.44%..62.50%**. All games complete and pass independent PGN auditing,
+with **zero forfeits and unresolved games**. Three mainlines reach KPK,
+covering 33 positions; the report does not attribute the match score to KPK.
+The sample is inconclusive, so the implementation remains opt-in.
+
+The ordinary build passes **45 C# tests**, the required **1,614** differential
+checks, an additional **17,491** check run on its frozen native package, and
+the required depth-7 benchmark retains **146,772 nodes**. The KPK candidate
+has **146,766 nodes** at that depth, a six-node change where the endgame
+knowledge becomes reachable; no speed or strength claim follows.
+
+The goal remains active and unachieved. Next test endgame conversion over
+complete legal histories and longer controls, retaining the production
+baseline until wider evidence supports promotion. See
+[design and reproduction](../docs/KPK.md) and
+[complete provenance](research/kpk-experiment-manifest.json).
+
+## Previous iteration: fresh endgame diagnostics
+
+Generated **512 fresh endgame positions** from **187 played source games**;
+140 games contribute positions and **7** reach the move cap unresolved. Keep
+the complete PGNs, histories and played outcomes separately from FEN-only
+static/search labels. All positions exclude the two development datasets,
+five opening suites and two tactical suites. The independent audit validates
+all source histories, outcomes, native label/PV forms and exact exclusions.
+
+Deeper labels include **409 centipawn scores** and **103 native mate scores**;
+only **164** finite positions fall within the earlier +/-600-cp training window.
+On finite labels, static teacher scores differ from 65,536-node search scores
+by **144.57 cp MAE**, while 8,192-node search differs by **78.33 cp**. Lower
+value errors from learned models again do not prove stronger play.
+
+Froze a separate **16-position endgame suite** before inspecting Aster moves,
+using one position per source game and stable unique finite-score best moves
+at two teacher budgets. Classical/threat/static-hybrid builds solve **13/16**
+at depth 8 and **14/16** at 25,000 nodes; moderate paired training solves
+**14/16** and **15/16**. These small diagnostic differences do not change the
+default or replace the original tactical gates.
+
+A **128-position** stratified re-query at **262,144 nodes** confirms all **16**
+fixture best moves. In the broader sample, **41** best moves change, **8**
+scores switch between mate and centipawn form, and the 88 pairs remaining
+finite change by **47.68 cp MAE**. Retain that uncertainty and the frozen
+fixture unchanged. Next prioritize fresh balanced endgames and stable targets
+outside these now-frozen diagnostics before further fitting.
+
+The ordinary build passes **43 tests**, **1,614 rule/protocol checks**, and the
+required depth-7 benchmark retains **146,772 nodes**. No runtime or production
+change was made. The goal remains active and unachieved.
+See [design/evidence](../docs/ENDGAME-DIAGNOSTIC.md) and
+[complete provenance](research/endgame-diagnostic-experiment-manifest.json).
+
+## Previous iteration: fitted geometric threats and fresh openings
+
+Added seven original threat features for loose material and defended pieces
+attacked by lower-valued pieces. Fourteen phase-specific weights are fit on
+**45,288 training positions** only, with the existing whole-game partition.
+On **4,712 held-out positions**, static teacher MAE falls from 140.70 to
+137.42 cp; on 1,877 positions with nonzero net threat counts it falls from
+158.65 to 150.42 cp. The existing data therefore covers geometric threats;
+these features partly explain teacher residuals, not playing strength.
+
+The separate experimental build passes **43 tests**, agrees with independent
+Python feature/scoring calculations on **1,842 positions**, and passes
+**17,491 rule/protocol checks**. Original tactics remain **32/32**, but quiet
+tactics regress to **30/32** against the baseline's 32/32. Both misses are
+sparse endgames also missed by the earlier static-label model.
+
+A new **64-opening v5 suite** excludes canonical positions in the two training
+datasets and four older suites; all histories/exclusions/provenance pass an
+independent audit. The first 32 color-swapped pairs at 30 ms/move, one thread
+and 64 MiB hash finish **24 wins / 23 draws / 17 losses**, a **55.47%** score
+with exploratory interval **45.31%..64.84%**. All **64 games** complete and
+pass PGN audits with no forfeits or unresolved outcomes. The result is
+inconclusive and the quiet-tactic regressions independently prohibit promotion.
+
+The ordinary build preserves all **60,000 static scores** and all moves,
+scores and **5,155,458 nodes** in 64 depth-8 searches against frozen 0.6.0.
+Its required depth-7 benchmark remains **146,772 nodes**. Production retains
+its original SHA-256. The threat correction is enabled only by an experimental
+compile flag; it is disabled in the default. No Elo or Stockfish superiority
+is claimed, and the full goal remains active and unachieved.
+
+See [design and evidence](../docs/GEOMETRIC-THREATS.md) and
+[complete provenance](research/geometric-threats-experiment-manifest.json).
+Next investigate fresh endgame coverage and outcome/search-label differences,
+rather than tuning to the two known tactical answers.
+
+## Previous iteration: direct turn-difference supervision
+
+Added optional paired supervision to the offline trainer, keeping both members
+in their original whole-game partition and selecting epochs by ordinary
+held-out position loss. The engine runtime and production binary are unchanged.
+Seven malformed-input/partition and independent numerical-gradient checks pass.
+Both trained models agree with independent integer inference on 525 positions.
+
+On the same 978 held-out pairs, moderate paired loss reduces turn-difference MAE
+from 47.22 to 41.99 cp and increases predicted difference standard deviation
+from 4.46 to 31.81 cp. Stronger paired loss increases variation to 45.53 cp but
+does not improve difference error. These are teacher-fit measurements.
+
+| Pair-loss candidate vs 0.6.0 | Depth-8 original/quiet tactics | W/D/L | Score | Exploratory interval |
+| --- | --- | --- | ---: | --- |
+| Moderate, weight 1 | 32/32; 32/32 | 10 / 9 / 13 | 45.31% | 34.38%..56.25% |
+| Strong, weight 4 | 32/32; 30/32 | 12 / 11 / 9 | 54.69% | 40.63%..68.75% |
+
+All **64 games** completed and passed independent PGN audits, with no forfeits
+or unresolved games. Screens swap colors across the first 16 v4 openings at
+30 ms/move, one thread and 64 MiB hash. The moderate model fails the declared
+positive-score confirmation threshold; the stronger one fails the quiet
+tactical gate. No longer confirmation or new default is selected.
+The goal of surpassing Stockfish remains active and unachieved.
+
+The build passes all **42 tests**, default rule verification covers **1,614
+positions**, the moderate model passes **17,491 rule/protocol checks**, and the
+required depth-7 benchmark remains **146,772 nodes**. Exact trainers,
+checkpoints, models, sources, dataset hashes, verification and all match evidence
+are frozen in [provenance](research/pair-loss-experiment-manifest.json).
+See [design and results](../docs/PAIR-LOSS.md). Next investigate tactical
+features or label coverage; avoid repeated loss tuning on these same screens.
+
+## Previous iteration: initialization and static-label checks
+
+Isolated the larger feature-weight initialization using the earlier clipped
+activation, then relabelled the same **60,000 positions** with the pinned
+teacher's static evaluation. Original search scores and every source game
+group are retained. The dataset passes legality, canonical deduplication,
+all four exact-opening exclusions, complete provenance checks and an
+independent **128-label** re-query. Static label magnitudes reach 885 cp;
+retained source search budgets are explicitly distinguished from relabeling.
+[Dataset audit](validation/turn-static-data-audit-v2.json),
+[label/group audit](validation/turn-static-label-audit.json).
+
+Trained three H=64 models with the same whole-game split. All agree with
+independent Python integer inference on **525 positions** and solve **32/32**
+original tactics. Quiet-suite results are 31/32 for the initialization
+ablation, 30/32 for static clipped activation and 31/32 for static squared
+activation. Static-label fit improves against classical scoring, but fit is
+not playing strength. [Design and evidence](../docs/LABEL-INITIALIZATION.md).
+
+| Candidate/test | W | D | L | Score | Exploratory cluster interval |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Larger-init clipped vs 0.6.0, v4 30 ms, 32 games | 7 | 12 | 13 | 40.6% | 28.1%..53.1% |
+| Static clipped vs 0.6.0, v4 30 ms, 32 games | 16 | 8 | 8 | 62.5% | 48.4%..75.0% |
+| Static squared vs 0.6.0, v4 30 ms, 32 games | 12 | 6 | 14 | 46.9% | 28.1%..65.6% |
+| Larger-init clipped vs squared, v4 30 ms, 32 games | 12 | 13 | 7 | 57.8% | 45.3%..70.3% |
+| Static clipped confirmation vs 0.6.0, v2 100 ms, 64 games | 21 | 20 | 23 | 48.4% | 39.1%..57.8% |
+
+All **192 games** completed and passed independent PGN audits, with no
+forfeits or unresolved games. Every match swaps colors, uses one thread and
+64 MiB hash, and pins binary/source/model/options/openings/time control.
+The candidate selected from the noisy short screens did not confirm its gain
+on different openings at a longer control. The classical evaluator remains
+default; no Elo or Stockfish superiority is claimed.
+
+The 978 held-out marked pairs also show inadequate learned turn variation:
+static teacher differences have 61.49-cp standard deviation, while the two
+static models predict only 4.46/4.23 cp. Their lower average teacher error did
+not establish stronger play. Next, test direct paired-turn supervision and
+richer tactical features rather than selecting from favorable short screens.
+[Held-out pair diagnostic](validation/turn-static-heldout-pair-diagnostic.json).
+
+No runtime change was made. The final build passes **42 tests**, the selected
+model passes **17,491 rule/protocol checks**, and the required depth-7
+benchmark remains **146,772 nodes**. Production 0.6.0 retains its original
+hash. Exact trainers, checkpoints, datasets, source snapshots, verification,
+reports, PGNs and analyses are preserved in
+[initialization provenance](research/wide-init-turn-experiment-manifest.json)
+and [static-label provenance](research/turn-static-experiment-manifest.json).
+
+## Previous iteration: nonlinear hidden activation
+
+Added experimental formats 7/8 that square clipped hidden activations before
+the turn-aware output. This permits feature interactions even when hidden
+values remain inside the unclipped range. An independent two-pawn example
+verifies that representational difference; it does not establish strength.
+Earlier formats retain their behavior. All **42 tests** pass with and without
+hardware intrinsics, including special moves, undo, null caches, serialization
+and extreme 64-bit sums.
+[Design and evidence](../docs/SQUARED-ACTIVATION.md).
+
+Trained three H=64 models on the preserved 60,000-position paired dataset,
+with the same held-out game groups. Each agrees with independent Python
+integer inference on **525 positions**. The squared hybrid passes **17,491**
+rule/protocol checks, the standalone **2,614**, and legacy v5 still agrees
+exactly. All **64** classical depth-8 searches retain moves, scores and
+**5,155,458 nodes**; the depth-7 benchmark remains **146,772 nodes**.
+
+| Candidate vs frozen 0.6.0 | Original held-out MAE | Original/quiet tactics | W/D/L | Score |
+| --- | ---: | --- | --- | ---: |
+| Squared hybrid, initial std 0.02 | 153.09 cp | 32/32; 32/32 | 5 / 12 / 15 | 34.4% |
+| Squared standalone, initial std 0.02 | 152.21 cp | 32/32; 31/32 | 6 / 7 / 19 | 29.7% |
+| Squared hybrid, initial std 0.10 | 152.32 cp | 31/32; 30/32 | 14 / 4 / 14 | 50.0% |
+
+Each 32-game match swaps colors across the first 16 v4 openings at 30 ms/move,
+one thread and 64 MiB hash. All **96 games** completed and passed independent
+PGN audits without forfeits or unresolved results. The wider initialization
+reaches parity in this small development sample, with exploratory interval
+37.5%..62.5%, but fails the original tactical gate. Neither parity nor better
+teacher fit establishes a gain. The classical evaluator remains the default;
+no Elo or Stockfish superiority is claimed.
+
+Learned turn differences still vary much less than teacher differences on the
+preserved diagnostic. Its 27 pairs beyond the ±600-cp training label range
+limit interpretation; substantial teacher variation also remains within the
+bound. Next, isolate initialization with the previous activation and investigate
+target and tactical feature coverage before treating model capacity as a gain.
+[Turn-variation comparison](validation/squared-turn-variation-comparison.json).
+
+The frozen experimental binary/source, exact trainers, checkpoints, datasets,
+verification, diagnostic reports and all JSON/PGN/analysis files are bound by
+[experiment provenance](research/squared-experiment-manifest.json).
+The production 0.6.0 package remains unchanged.
+
+## Previous iteration: turn-aware learned evaluation
+
+Added optional formats 5/6 with separate moving-side and opponent output
+weights, per-turn cached values for null moves, and safe 64-bit accumulation.
+All **41 tests** pass with and without hardware intrinsics. Independent
+integer inference agrees on **525 positions** for each of four trained models;
+legacy v2/v4 models also retain exact agreement. The hybrid runtime passes
+**17,491 independent rule/protocol checks**; the paired standalone passes
+**2,614**. The classical default is retained.
+[Implementation and experiment details](../docs/TURN-AWARE.md).
+
+A preserved **128-pair counterfactual diagnostic** shows a mean absolute
+teacher turn effect of 263.0 cp; position-only models always predict 24 cp.
+The resulting 125.4-cp mean pair-error bound applies to that diagnostic,
+not ordinary training data or playing strength. Turn-aware output learned
+mostly an average tempo, with modest differences between tested models.
+
+Generated **10,000 opposite-turn labels**, retaining all 50,000 original
+positions, their game groups and the same pinned teacher. The 60,000-position
+dataset passes legality, deduplication, exact-regression-exclusion and
+independent parent-pair audits. Combined training/held-out sizes are
+54,310/5,690; original-sample comparisons still use the same 4,712 held-out
+positions. Counterfactual FENs lack played histories, an explicit limitation.
+[Dataset audit](validation/teacher-turn-augmented-60k-v1.json),
+[parent-pair audit](validation/teacher-turn-pairs-10k-v1.json).
+
+| Candidate vs frozen 0.6.0 | Original held-out MAE | Original/quiet tactics | W/D/L | Score |
+| --- | ---: | --- | --- | ---: |
+| Initial turn-aware hybrid | 152.21 cp | 32/32; 32/32 | 6 / 12 / 14 | 37.5% |
+| Initial turn-aware standalone | 151.34 cp | 32/32; 31/32 | 9 / 6 / 17 | 37.5% |
+| Paired-data hybrid | 153.04 cp | 32/32; 31/32 | 6 / 8 / 18 | 31.3% |
+| Paired-data standalone | 151.31 cp | 32/32; 30/32 | 6 / 4 / 22 | 25.0% |
+
+Each match uses 16 color-swapped v4 opening pairs at 30 ms/move, one thread
+and 64 MiB hash. All **128 games** completed and passed independent PGN audits,
+with no forfeits or unresolved games. These are small development regression
+samples; no candidate is accepted as default, and no Elo or Stockfish gain
+is claimed. Checkpoints, exact trainers, native binaries, source manifests,
+datasets, diagnostics, match reports, PGNs and analyses are preserved.
+[Experiment provenance](research/turn-aware-experiment-manifest.json).
+
+The final build has zero warnings/errors, passes **41 tests**, and preserves
+the **146,772-node depth-7 benchmark**. All **64** classical depth-8 searches
+match frozen 0.6.0 in moves, scores and **5,155,458 nodes**.
+[Classical comparison](benchmarks/turn-aware-classical-vs-0.6.0-depth8.json).
+The production package retains its original 0.6.0 hash. Next, test richer
+nonlinear feature interactions; turn-dependent output and paired labels
+alone did not improve strength.
+
+## Previous iteration: late quiet move pruning
+
+Tested omitting late quiet non-checking moves at shallow non-PV nodes, guarded
+against checks, pawn-only endings, repetition, draw boundaries and losing-mate
+scores. It passes 39 tests, 2,614 independent checks and all 32 original tactics
+at both depth 8 and 5,000 nodes. It searches 53.2% fewer nodes at fixed depth,
+but changes many scores/moves and does not establish a playing-strength gain.
+
+| Candidate against frozen 0.6.0 | W | D | L | Score | Exploratory opening-cluster interval |
+| --- | ---: | ---: | ---: | ---: | --- |
+| v3, 30 ms/move, 64 games | 18 | 26 | 20 | 48.4% | 39.1%..57.8% |
+| v3, 100 ms/move, 32 games | 14 | 10 | 8 | 59.4% | 46.9%..70.3% |
+| Fresh v4, 100 ms/move, 64 games | 15 | 36 | 13 | 51.6% | 43.0%..59.4% |
+
+All **160 games** completed and passed independent PGN audits, with no forfeits
+or unresolved outcomes. The fresh sample did not confirm the initial longer-
+control signal, so pruning was removed from the default. Binary/source manifests,
+reports, analyses and PGNs remain preserved. No Elo or Stockfish gain is claimed.
+[Design and evidence](../docs/LATE-QUIET-PRUNING.md).
+
+Added a frozen **32-position quiet-move tactical suite**, generated from 99 games
+and independently audited against both training datasets and the original
+fixtures. Both engines solve 32/32 at depth 8; at 5,000 nodes, the candidate
+solves 26 and the baseline 25. Added **64 fresh 20-ply v4 opening positions**,
+excluding both datasets, all earlier regression suites and training openings.
+[Quiet-suite audit](validation/tactics-quiet-v1-audit.json),
+[opening audit](validation/openings-v4-holdout.json).
+
+The match runner can verify explicit frozen binary/source manifests and record
+their fingerprints directly for native candidates and opponents. Generators now
+verify teacher hashes and record multiple data exclusions, budgets and source
+fingerprints. The optional quiet-pruning counter compiles out of normal builds.
+
+Restored source passes **39 tests**, **17,491 independent rule/protocol checks**,
+all **32 new quiet tactics**, and the required **146,772-node depth-7 benchmark**.
+All **64** depth-8 searches match frozen 0.6.0 in move, score and **5,155,458 nodes**.
+The production Windows package retains its original 0.6.0 hash.
+[Restored verification](validation/aster-0.6.0-post-pruning-research.json),
+[restored search comparison](benchmarks/restored-0.6.0-after-pruning-depth8.json).
+[Experiment provenance](research/late-quiet-pruning-experiment-manifest.json)
+binds all three report/PGN/analysis files, the frozen candidate and baseline
+source manifests, the restored source and both new fixtures.
+
+## Previous iteration: king-context neural evaluation
+
+Added an independent optional neural architecture with 16 own-king regions,
+13,056 possible features, lazy accumulator rebuilds when a king changes region,
+and vectorized integer output. Hybrid format v3 retains the classical evaluator
+with a bounded correction; standalone v4 uses the learned evaluation directly.
+Earlier Aster model formats remain supported. The runtime uses neither
+Stockfish nor python-chess.
+[Design and experiments](../docs/KING-CONTEXT.md).
+
+Generated and audited **50,000** positions with stronger bounded teacher labels,
+from **2,695 sampled games** (3,014 generated games), excluding exact positions
+in all three regression suites. There are no canonical duplicates, illegal,
+terminal or checked positions. Endgames constitute 44.3% of the data. The
+manifest pins teacher/options, openings, seeds and budgets; classical-score
+augmentation pins frozen 0.5.1 and both datasets.
+[Data audit](validation/teacher-balanced-50k-v1.json).
+
+Four models use the same whole-game split: 45,288 training and 4,712 validation
+positions. Quantized teacher-fit MAE improves from the classical baseline's
+**162.01 cp** to 155.23, 152.43, 151.29 and 152.57 cp. Each model passes 525
+exact integer reference comparisons and all 32 tactics at depth 8. All four
+regressed in paired matches against classical 0.5.1:
+
+| Neural candidate, 30 ms/move, 32 games each | W | D | L | Score | Exploratory opening-cluster interval |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Hybrid, 128 units | 8 | 7 | 17 | 35.9% | 23.4%..48.4% |
+| Hybrid, 64 units | 7 | 11 | 14 | 39.1% | 26.6%..51.6% |
+| Standalone, 64 units | 3 | 10 | 19 | 25.0% | 12.5%..37.5% |
+| Hybrid, 64 units, zero initial bias | 7 | 11 | 14 | 39.1% | 26.6%..53.1% |
+
+All **128 games** completed without forfeits or unresolved outcomes and passed
+independent PGN audits. No model became the default. The suite was reused for
+development and is not a final held-out superiority test. Improved teacher fit
+does not establish stronger play. Reports preserve binary/model hashes,
+options, opening history, search diagnostics and outcomes; checkpoints and
+PGNs remain available.
+[128-unit hybrid](matches/king-context-balanced-vs-0.5.1-30ms.json),
+[64-unit hybrid](matches/king-context-balanced-slow-vs-0.5.1-30ms.json),
+[standalone](matches/king-context-standalone-vs-0.5.1-30ms.json),
+[zero-bias hybrid](matches/king-context-nonlinear-vs-0.5.1-30ms.json).
+
+Vectorizing output preserves all 64 checked depth-8 searches with the same
+64-unit hybrid: moves, scores and **5,854,047 nodes** are identical. Elapsed
+time was **4.691 vs 4.914 seconds**, about 4.5% less in that short run. Its
+separate 32-game ablation scored **9/17/6 W/D/L**, 54.7% with an exploratory
+interval of 43.8%..65.6%, providing no established strength gain. All games
+completed and were audited. Neural candidates search fewer nodes than the
+classical opponent at equal time; inference cost and evaluation quality remain
+open problems, and these games do not isolate their contributions.
+[Inference comparison](benchmarks/king-context-vector-vs-scalar-depth8.json),
+[ablation match](matches/king-context-vector-vs-scalar-30ms.json).
+
+The **0.6.0 package** releases optional inference capability while retaining
+the classical default. It passes **39 C# tests**, **17,491 independent rule/
+protocol checks** with a trained hybrid, **2,614 default checks**, all **32
+classical tactics**, and 525-position exact inference comparisons for all four
+new models and a legacy hybrid. All **64** default depth-8 opening searches
+match frozen 0.5.1 in move, score and **5,155,458 nodes**. The required depth-7
+benchmark searches **146,772 nodes**. No default playing-strength gain is claimed.
+[Extended neural verification](validation/aster-0.6.0-king-context-extended.json),
+[default verification](validation/aster-0.6.0-default.json),
+[packaged search comparison](benchmarks/aster-0.6.0-classical-vs-0.5.1-depth8.json),
+[release source/build manifest](research/king-context-release-source/manifest.json).
+
+Both scalar and vector development binaries have source/build manifests. The
+final Python pipeline snapshot has source hashes; earlier training runs predate
+the activation diagnostics, so it is not presented as their byte-exact trainer.
+Training reports retain actual arguments, dataset/model hashes and checkpoints.
+[Combined experiment provenance](research/king-context-experiment-manifest.json)
+cross-links all six matches to preserved engine/source manifests, the pinned
+Stockfish source tree, four models/checkpoints and the training data.
+
+The packaged classical default lost all **8 games** against pinned full-strength
+Stockfish 19 at 50 ms/move on four color-swapped v3 openings. All games completed
+and passed independent PGN auditing. This is a small smoke match, not an Elo
+estimate; the engine remains far below the project target.
+[Stockfish report](matches/aster-0.6.0-vs-stockfish19-50ms.json),
+[PGN](matches/aster-0.6.0-vs-stockfish19-50ms.pgn).
+
+## Previous iteration: search ordering and reduction experiments
+
+Tested giving a late quiet move one extra ply when its successful-cutoff history
+reached 4,096. It passed 37 tests, all 32 tactics at depth 8 and at 5,000 nodes,
+and independent rules/protocol checks. However, it searched **15.7% more nodes**
+at fixed depth and scored **13/28/23 W/D/L** against frozen 0.5.1 over 64 games
+at 30 ms/move: **42.2%**, exploratory opening-cluster interval **32.8%..51.6%**.
+It was rejected; the default depth policy was restored. All games finished and
+passed independent audits. Binary, source, JSON and PGN remain preserved.
+[Design and profiling](../docs/HISTORY-REDUCTIONS.md),
+[match](matches/history-lmr-vs-0.5.1-fresh-30ms.json),
+[PGN](matches/history-lmr-vs-0.5.1-fresh-30ms.pgn),
+[analysis](matches/history-lmr-vs-0.5.1-fresh-30ms.analysis.json).
+
+Tested countermove ordering separately: remember a quiet cutoff reply using the
+previous moving piece and destination, then order it below killers and above
+ordinary history moves. Real-move context is recorded at every ply; null moves
+carry no response context. It passed the same correctness/tactical gates and
+searched **5.3% fewer nodes** at fixed depth, but its paired results against
+frozen 0.5.1 were inconclusive and provided no reason to retain it:
+
+| Countermove candidate | W | D | L | Score | Exploratory opening-cluster interval |
+| --- | ---: | ---: | ---: | ---: | --- |
+| 30 ms/move, 64 games, 32 openings | 19 | 30 | 15 | 53.1% | 43.8%..62.5% |
+| 100 ms/move, 32 games, 16 openings | 8 | 13 | 11 | 45.3% | 29.7%..60.9% |
+
+Countermove ordering was also removed from the default. All **160 games** across
+both experiments completed without forfeits or unresolved outcomes and passed
+independent PGN audits. Both frozen candidates, matching source/build manifests,
+JSON reports and PGNs are preserved. These samples cannot establish Elo or
+Stockfish superiority. The production package remains 0.5.1.
+[Countermove design](../docs/COUNTERMOVES.md),
+[short match](matches/countermove-vs-0.5.1-fresh-30ms.json),
+[short analysis](matches/countermove-vs-0.5.1-fresh-30ms.analysis.json),
+[longer match](matches/countermove-vs-0.5.1-fresh-100ms.json),
+[longer analysis](matches/countermove-vs-0.5.1-fresh-100ms.analysis.json).
+
+After restoring the baseline policies, the working source passes **37 tests**,
+**2,614** independent rule/protocol checks and the required depth-7 benchmark.
+[Restored-source verification](validation/aster-0.5.1-post-search-research.json).
+All 64 depth-8 opening searches again match frozen 0.5.1 in best move, score
+and node count (5,155,458). The published Windows executable retains its original
+0.5.1 hash; only optional profiling diagnostics and research fixtures remain
+from this iteration.
+[Restored search comparison](benchmarks/restored-0.5.1-depth8.json),
+[baseline reduction profile](benchmarks/restored-0.5.1-profile-depth9.json).
+
+Generated and independently audited a third frozen regression suite: **64**
+distinct 20-ply positions, seed 20261009, excluding the 20,000 training positions
+and both previous suites. It includes legal histories and the pinned teacher's
+budgets and binary hash. This is regression material, not the final held-out
+superiority test. [Opening audit](validation/openings-v3-holdout.json).
+
+The diagnostic build now counts reduced searches and total reduced plies.
+Normal builds compile out these counters. The rejected candidate's archived
+profile additionally records its 2,629 history-depth discounts in the five
+depth-9 positions. [Profile](benchmarks/history-lmr-profile-depth9.json).
+
+## Previous iteration: shared attack maps and evaluation ablation
+
+The evaluator now builds pawn attacks once per color and accumulates piece
+attack maps during mobility evaluation. King safety reads these shared maps
+instead of repeating attack queries. This preserves all **20,000** checked
+static evaluations against frozen 0.5.0. All **64** depth-8 opening searches
+also preserve their move, score and node count (5,155,458 nodes). Elapsed time
+was **2.857 vs 3.177 seconds**, about **10.1% less time** in that run; short
+timings include JIT and machine effects.
+[Static comparison](validation/shared-attacks-evaluation.json),
+[search comparison](benchmarks/shared-attacks-vs-0.5-depth8.json),
+[implementation and experiment](../docs/EVALUATION.md).
+
+A separate coordinated king-pressure scoring term passed rules and tactics,
+but scored **18/24/22 W/D/L** against the frozen shared-map evaluator over
+64 games at 30 ms/move. Its **46.9%** score had an exploratory opening-cluster
+interval of **36.7%..57.0%**. It was removed from the default. The candidate
+binary, source, report and PGN remain preserved. All games passed the audit.
+[Rejected candidate match](matches/king-coordination-vs-shared-attacks-30ms.json),
+[PGN](matches/king-coordination-vs-shared-attacks-30ms.pgn),
+[analysis](matches/king-coordination-vs-shared-attacks-30ms.analysis.json).
+
+The retained refactor's final native package scored **31/24/9 W/D/L** against
+frozen 0.5.0 at 30 ms/move over 64 games and 32 swapped-color openings. Its
+**67.2%** score had an exploratory interval of **60.2%..74.2%**. All games
+finished with no forfeits or unresolved outcomes and passed independent PGN
+audits. This supports the optimization under these conditions; it does not
+establish an Elo rating or Stockfish superiority.
+[Regression match](matches/shared-attacks-vs-0.5-30ms.json),
+[PGN](matches/shared-attacks-vs-0.5-30ms.pgn),
+[analysis](matches/shared-attacks-vs-0.5-30ms.analysis.json).
+
+At **100 ms/move**, the refactor scored **12/14/6 W/D/L** over 32 games and
+16 swapped-color openings: **59.4%**, exploratory interval **48.4%..70.3%**.
+All games finished and passed audits. This longer-control sample is inconclusive
+for a gain. Both controls use the same frozen v2 regression suite, so neither
+is an independent held-out final test.
+[Longer match](matches/shared-attacks-vs-0.5-100ms.json),
+[PGN](matches/shared-attacks-vs-0.5-100ms.pgn),
+[analysis](matches/shared-attacks-vs-0.5-100ms.analysis.json).
+
+Against pinned full-strength Stockfish 19 at **50 ms/move**, the final package
+scored **0/1/7 W/D/L** over eight games on four swapped-color openings. Every
+game passed the audit, with no forfeits or unresolved outcomes. A single draw
+in this smoke sample does not demonstrate a strength gain against Stockfish.
+The goal remains unachieved.
+[Stockfish report](matches/aster-0.5.1-vs-stockfish19-50ms.json),
+[PGN](matches/aster-0.5.1-vs-stockfish19-50ms.pgn).
+
+**37 C# tests pass**, including a new color/rank symmetry property checked on
+reference positions and seeded legal playouts. The native package passed
+**17,491** independent legal/FEN/predicate checks, **14** reference perft
+positions, protocol/PV checks and **32/32** tactical fixtures. Optional hybrid
+static inference matches the independent quantized reference on **525** positions.
+[Rules/protocol](validation/aster-0.5.1.json),
+[tactics](tactics/aster-0.5.1-depth8.json),
+[neural inference](validation/aster-0.5.1-nn-hybrid-static.json),
+[depth-7 benchmark](benchmarks/aster-0.5.1-depth7.json).
+The final native package also preserves all 20,000 checked static scores:
+[release static comparison](validation/aster-0.5.1-evaluation.json).
+Its separate 64-position depth-8 comparison preserves every move, score and
+node count too, with 2.503 vs 3.141 seconds in that run. Timing variation across
+runs limits any precise speed claim.
+[Release search comparison](benchmarks/aster-0.5.1-vs-0.5-depth8.json).
+
+The installed-runtime Windows single-file package is
+`artifacts/publish/win-x64/Aster.exe`, SHA-256
+`6f6d781e7e8294757949a90cbc3a113c18f39ba6cfb88e6a30b89f91eb892313`.
+The exact source, project/build configuration and file hashes are preserved in
+[release manifest](research/shared-attacks-release-source/manifest.json).
+
+## Previous iteration: profiling and faster legal-move existence
+
+Tested a quiet-history penalty that reduced the priority of legal quiet moves
+searched unsuccessfully before a quiet cutoff. It passed correctness and tactics,
+but its 64-game fresh-opening match against 0.4.0 finished **22/20/22 W/D/L**
+(50.0%, exploratory interval 43.0%..57.0%). It was rejected as a default and its
+binary, source and reports are preserved.
+[Rejected experiment](matches/history-malus-vs-0.4-fresh-30ms.json).
+
+Added an optional compile-time profiler. Its first depth-9 run identified
+legal-move-existence checks as a substantial cost: 134.334 ms across the five
+positions, including 60.357 ms of the 247 ms Kiwipete search. Instrumented
+timings include measurement overhead; static exchange overlaps move ordering.
+Normal builds compile out all profiling timers and counters.
+[Profiling instructions and scope](../docs/PROFILING.md).
+
+Added `Board.HasAnyLegalMove`: outside check, an ordinary move by an unpinned
+non-king piece can prove that a legal move exists without speculative make/undo.
+Orthogonal and diagonal slider x-rays identify absolute pins. Uncertain positions,
+checks, king moves, castling and en passant retain complete legality checking.
+Draw adjudication remains separate. The `haslegal` diagnostic lets the verifier
+compare this predicate directly against python-chess.
+
+Across all 64 depth-8 opening comparisons, **moves, scores and node counts match
+0.4.0 exactly**: 5,155,458 nodes for each. Elapsed time fell from 3.708 to 3.193
+seconds (**13.9% less time** in that run). The separate five-position benchmark
+retains 240,108 nodes. Short timings include JIT and machine effects, so matches
+also tested the practical effect under equal requested time.
+[Behavior/work comparison](benchmarks/fast-legal-diverse-depth8.json),
+[native benchmark](benchmarks/aster-0.5-depth8.json).
+
+Generated a second frozen suite of **64 distinct 20-ply positions**, excluding
+the training dataset and the previous opening suite. Teacher budgets, balance
+checks, legal histories, seed and exclusions are recorded in the fixture. Both
+matches below used this fresh suite, swapped colors and pinned binaries/options.
+
+| Fast-legal candidate vs frozen 0.4.0 | W | D | L | Score | Exploratory opening-cluster interval |
+| --- | ---: | ---: | ---: | ---: | --- |
+| 30 ms/move, 64 games, 32 openings | 20 | 27 | 17 | 52.3% | 43.8%..60.9% |
+| 100 ms/move, 32 games, 16 openings | 16 | 11 | 5 | 67.2% | 53.1%..81.3% |
+
+All **96 games** finished without forfeits or unresolved outcomes, and every
+PGN passed independent audits. The longer sample supports retaining the speedup;
+the shorter sample is inconclusive. Small samples, shared opening dependence,
+short controls and exploratory analysis limit generalization. Neither match
+establishes an Elo rating or Stockfish superiority.
+
+- [Short match](matches/fast-legal-vs-0.4-fresh-30ms.json),
+  [analysis](matches/fast-legal-vs-0.4-fresh-30ms.analysis.json)
+- [Longer match](matches/fast-legal-vs-0.4-fresh-100ms.json),
+  [analysis](matches/fast-legal-vs-0.4-fresh-100ms.analysis.json)
+
+**36 C# tests pass**, including predicate agreement and state restoration over
+random playouts plus explicit mate, stalemate and pinned-piece cases. The final
+native package passed **17,491** independent legal/FEN/predicate checks, including
+2,000 valid random material configurations (370 checks, 13 checkmates and two
+stalemates), **14 reference perft positions**, and protocol/PV checks. It solved
+**32/32** tactical fixtures. The optional hybrid static network matched independent
+quantized inference on **525 positions**; the classical evaluator is the default.
+The final package differs from the matched candidate only in version metadata
+and its UCI name. Native verification:
+[legality/protocol](validation/aster-0.5.json),
+[tactics](tactics/aster-0.5-depth8.json),
+[network](validation/aster-0.5-nn-hybrid-static.json).
+
+The final executable lost **all eight games** against full-strength Stockfish 19
+at 50 ms per move on four fresh color-swapped openings. Every game was audited,
+with no forfeits or unresolved outcomes. The project remains far from its full
+objective. [Stockfish report](matches/aster-0.5-vs-stockfish19-fresh-50ms.json),
+[PGN](matches/aster-0.5-vs-stockfish19-fresh-50ms.pgn).
+
+The 0.5.0 installed-runtime Windows single-file package at release had SHA-256
+`b16225608ead6f1602078c706c98e5a8bd2b3a8ddd00d4e60d2681c46225a93e`.
+
+## Previous iteration: horizon cache and broader regression sampling
+
+Added guarded quiescence transposition caching and protected deeper table entries
+from horizon replacement. Repetition, insufficient material and rule-50 draws
+are checked before reuse. Check-evasion nodes and prior occurrences are excluded;
+only horizon entries can cut off a horizon search. The revised implementation
+reuses the legal-move proof established when that entry was created. New tests
+cover warm-cache terminal rules, legal PVs and signed mate distances.
+[Implementation invariants and experiment notes](../docs/SEARCH-CACHE.md).
+
+Generated a frozen suite of **64 distinct 16-ply opening positions**, sampled
+from seeded near-best teacher continuations and checked within 80 cp of equality
+at a 20,000-node budget. Complete legal histories and teacher provenance are
+retained. Independent canonical-position verification found no overlap with
+the 20,000-position training dataset, including en-passant normalization.
+The match harness validates the suite, pins its hash, rejects transposed
+duplicates and does not repeat entries. New reports retain per-move depth,
+nodes, scores and measured time, and the auditor checks opening/history and
+search-log consistency. This is a regression suite, not a final held-out test.
+
+The five-position depth-8 benchmark uses **240,108 nodes** versus 296,271 in
+0.3.1 (**19.0% fewer**), preserving all five best moves and scores. Across all
+64 openings at depth 8, the revised cache uses 5,155,458 versus 5,517,147 nodes
+(**6.6% fewer**). Moves agree in 54 positions and scores in 46; ordering and
+selectivity affect behavior outside the small benchmark. The broader run took
+3.660 versus 3.821 seconds, while shallower timings were mixed. JIT and short
+durations limit timing conclusions. Reports: [fixed benchmark](benchmarks/aster-0.4-depth8.json),
+[broader comparison](benchmarks/qcache-legal-diverse-depth8.json).
+
+| Candidate vs frozen 0.3.1 | W | D | L | Score | Exploratory opening-cluster interval |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Initial cache, 30 ms/move, 64 games | 23 | 27 | 14 | 57.0% | 47.7%..65.6% |
+| Initial cache, 100 ms/move, 64 games | 19 | 27 | 18 | 50.8% | 43.0%..58.6% |
+| Revised cache, 30 ms/move, 64 games | 17 | 31 | 16 | 50.8% | 43.0%..58.6% |
+
+All **192 games** finished without forfeits or unresolved outcomes, and their
+PGNs passed independent audits. Each run used 32 distinct color-swapped pairs,
+one thread per engine, 64 MiB Hash and Move Overhead 0. The longer run's median
+completed depth was 10 for both engines. All intervals include 50%, so no general
+strength gain is established. The cache is retained as a tested engineering
+change for further research; it is not evidence of Stockfish superiority.
+The legal-proof revision preserved moves, scores and node counts on all 64
+depth-6 comparisons against the initial cache candidate.
+
+- [Initial short match](matches/qcache-vs-0.3.1-diverse-30ms.json),
+  [analysis](matches/qcache-vs-0.3.1-diverse-30ms.analysis.json)
+- [Initial longer match](matches/qcache-vs-0.3.1-diverse-100ms.json),
+  [analysis](matches/qcache-vs-0.3.1-diverse-100ms.analysis.json)
+- [Revised short match](matches/qcache-legal-vs-0.3.1-diverse-30ms.json),
+  [analysis](matches/qcache-legal-vs-0.3.1-diverse-30ms.analysis.json)
+
+The final 0.4.0 package differs from the revised match candidate only in version
+metadata and its UCI name. **35 C# tests pass**. The packaged native executable
+passed independent legal/FEN checks over **15,486 positions**, nine reference
+perft positions and protocol/PV checks, and solved **32/32** tactical fixtures.
+The optional hybrid static network matched independent quantized inference on
+520 positions; the classical evaluator remains the default.
+[Native verification](validation/aster-0.4.json),
+[tactical report](tactics/aster-0.4-depth8.json).
+
+The packaged 0.4.0 executable lost **all eight games** against full-strength
+Stockfish 19 at 50 ms per move on four distinct paired openings. All games were
+audited, with no forfeits or unresolved outcomes. This is a smoke sample, but
+it provides no evidence that the project target is close to achieved.
+[Stockfish report](matches/aster-0.4-vs-stockfish19-diverse-50ms.json),
+[PGN](matches/aster-0.4-vs-stockfish19-diverse-50ms.pgn).
+
+The installed-runtime Windows single-file package is
+`artifacts/publish/win-x64/Aster.exe`, SHA-256
+`d0e27aa3fdbbe5e14acf48e51f3a753599c99b6612b5727439249e85972fc69d`.
+
+## Previous iteration: search and learned-evaluation research
+
+Implemented an original versioned integer network runtime with lazy incremental
+accumulators, CPU training/export, teacher data generation, game-held-out
+validation, quantization checks and explicit `EvalFile` selection. Generated
+20,000 distinct positions from 913 games and trained three small models. Each
+matched independent Python quantized inference exactly over 520 positions, but
+all regressed in 32-game matches against the classical baseline and were
+rejected as defaults. [Full neural results and reproduction](../docs/NEURAL.md).
+
+Added guarded shallow reverse-futility pruning and legal-move checks before
+null-move pruning. Draw, mate and stalemate rules remain checked before speculative
+cutoffs. Pawn-only endgames, checks, PV nodes, prior repetitions and the rule-50
+boundary are excluded from the new shallow pruning.
+
+The new classical build solved **32/32** fresh teacher-verified tactical positions
+at depth 8; the preserved 0.2.0 build solved **30/32**. These positions came from
+fresh games, excluded all training FENs, and retained a unique move with a score
+gap under two teacher search budgets. They are a regression suite, not a proof
+of general strength. Reports: [0.2](tactics/aster-0.2-depth8.json),
+[0.3.1](tactics/aster-0.3.1-depth8.json).
+
+The depth-7 engineering benchmark now searches **177,029 nodes**, down from
+318,175 in 0.2.0 (**44.4% fewer**). Best moves/scores changed in two positions;
+this is a selective search change, not a behavior-preserving speed optimization.
+
+| 0.3.1 candidate vs 0.2.0 | W | D | L | Score | Exploratory opening-cluster interval |
+| --- | ---: | ---: | ---: | ---: | --- |
+| 30 ms/move, 64 games | 30 | 23 | 11 | 64.8% | 51.6%..76.6% |
+| 100 ms/move, 32 games | 7 | 17 | 8 | 48.4% | 35.9%..60.9% |
+
+The shorter-control result supports retaining the guarded search change for
+further research; the longer-control result is inconclusive. Eight repeated
+opening lines, exploratory analysis and short budgets limit the claim. This
+does not establish a general Elo gain or Stockfish superiority. Both runs had
+no forfeits or unresolved games, and every PGN was audited against the report.
+
+- [30 ms match](matches/rfp-0.3.1-vs-0.2-30ms.json),
+  [analysis](matches/rfp-0.3.1-vs-0.2-30ms.analysis.json)
+- [100 ms match](matches/rfp-0.3.1-vs-0.2-100ms.json),
+  [analysis](matches/rfp-0.3.1-vs-0.2-100ms.analysis.json)
+
+**33 C# tests pass**, including independent scalar accumulator checks, model
+serialization, hybrid correction bounds, underpromotion to avoid a quiescence
+stalemate, and mate taking precedence over a new rule-50 claim at the horizon.
+Default and neural UCI integration checks passed. The Windows package has been
+rebuilt. The match candidate was named `0.3.1-dev`; the release changes its name
+and assembly version, with the same tested search/evaluation behavior.
+
+The published executable passed **15,486 independent legality/FEN positions**,
+nine perft comparisons, the UCI checks, **32/32 tactical positions**, and exact
+reference inference for all three experimental models. The
+[published verification report](verification/aster-0.3.1-published.json) pins
+its SHA-256. The final release again scored **0 wins, 0 draws and 8 losses**
+against Stockfish 19 at 50 ms/move; [report](matches/aster-0.3.1-vs-stockfish19-50ms.json).
+Those PGNs were audited. Stockfish superiority is still contradicted by the
+available evidence, so the full project goal remains active.
+
+Next: broaden opening diversity and longer-control testing, profile the new
+search, add controlled ablations, improve training sampling and king/threat
+features, and keep rejecting neural defaults until actual playing results improve.
+
+## Previous milestone: 0.2.0
+
+## Delivered
+
+- Independent .NET 8 engine with bitboards, legal standard chess and UCI.
+- Selective alpha-beta search, classical evaluation and static exchange handling.
+- A dependency-free C# test runner and an independent python-chess verifier.
+- Reproducible paired matches, official Stockfish fetching with digest checks,
+  PGN/report auditing, fixed-depth benchmarks and Windows/Linux CI configuration.
+- A Windows single-file build at `publish/win-x64/Aster.exe`, using the installed
+  .NET 8 runtime. `scripts/build.ps1 -Publish` recreates it.
+
+## Correctness evidence
+
+Release build: zero warnings and zero errors. **27 internal tests passed**.
+The published executable passed an independent comparison over **15,486
+positions**, including nine perft comparisons and UCI integration checks. A
+separate default verifier run checked 1,609 positions.
+
+The internal perft suite includes startpos depth 5 (4,865,609), Kiwipete depth 4
+(4,085,603), rook/pawn endgames, promotions, pins and castling. Other checks cover
+incremental hashing/evaluation, full undo, en passant pins and repetition keys,
+underpromotion, terminal draws/mates, PV legality, cancellation and node limits.
+Static exchange tests include pinned recapturers, king safety, promotions,
+en passant and randomized pseudo-legal captures.
+
+The extended executable verification report is
+[saved here](verification/aster-0.2-published.json). CI has been configured for
+Windows and Linux; the local execution was on Windows, and remote CI has not
+been run because no repository has been published.
+
+## Search benchmark
+
+Five fixed positions, requested depth 7 (mate detection terminates one position
+at depth 1):
+
+| Build | Nodes | Recorded elapsed time | Best moves/scores |
+| --- | ---: | ---: | --- |
+| 0.1.0 | 585,046 | 700 ms | Reference |
+| 0.2.0 | 318,175 | 501 ms | Same on all five positions |
+
+Static exchange ordering and conservative quiescence pruning reduced this
+suite's node count by **45.6%**. Times include JIT and were recorded while
+independent verification was running; do not interpret the timing difference
+as a controlled performance or playing-strength result. Nodes are deterministic
+for these fixed-depth, clean-table benchmark runs.
+
+Reports: [0.1](benchmarks/aster-0.1-depth7.json),
+[0.2](benchmarks/aster-0.2-depth7.json). The baseline binary remains locally in
+`publish/baseline-0.1.0/` for future regression matches.
+
+## Playing-strength baseline
+
+All matches used paired opening lines with swapped colors, one thread per
+engine, 64 MiB Hash settings, Move Overhead 0, no opening book or tablebases,
+and equal requested move time. Draw claims were adjudicated by python-chess;
+games reaching the cap would remain unresolved. These runs had no unresolved
+games or forfeits. All 32 saved PGNs were independently audited against their
+reports, including terminal outcomes and W/D/L accounting.
+
+| Candidate | Opponent | Time per move | W | D | L | Interpretation |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 0.1.0 | Stockfish 19 | 50 ms | 0 | 0 | 8 | Clearly below this reference in the smoke sample |
+| 0.2.0 | 0.1.0 | 30 ms | 7 | 3 | 6 | 53.1% score; inconclusive for a strength gain |
+| 0.2.0 | Stockfish 19 | 50 ms | 0 | 0 | 8 | Still far from the project target |
+
+These samples are too small for an Elo rating or a significant superiority
+claim. The short time controls and eight opening lines limit generalization.
+Reports retain binary and source fingerprints: minor later changes to UCI error
+reporting changed the current binary fingerprint without changing the search
+algorithm tested in the matches.
+
+- [0.1 vs Stockfish report](matches/aster-0.1-vs-stockfish19-50ms.json),
+  [PGN](matches/aster-0.1-vs-stockfish19-50ms.pgn)
+- [0.2 vs 0.1 report](matches/aster-0.2-vs-0.1-30ms.json),
+  [PGN](matches/aster-0.2-vs-0.1-30ms.pgn)
+- [0.2 vs Stockfish report](matches/aster-0.2-vs-stockfish19-50ms.json),
+  [PGN](matches/aster-0.2-vs-stockfish19-50ms.pgn)
+
+Stockfish reference: official `sf_19` Windows x64 universal archive, SHA-256
+`3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7`.
+Source, license and download manifest are retained locally under ignored
+`tools/stockfish/`. Stockfish is a test opponent, never the implementation of
+Aster's engine.
+
+## Next work
+
+1. Target stronger king safety/endgame behavior with better features and
+   parameter tuning; the untuned coordinated-attack term was rejected.
+   Test history-aware reductions separately against the 0.5.1 baseline;
+   a simple quiet-history penalty was inconclusive and rejected.
+   Use fresh opening samples and longer controls before claiming a strength gain.
+2. Broaden tactical/endgame and protocol coverage, especially draw-history
+   effects, and preserve all candidate reports and source fingerprints.
+3. Improve neural data sampling and king/threat features. Keep game-held-out
+   validation and exact quantized inference checks, and measure each model in
+   actual search before scaling training or selecting a new default.
+
+The full research path and eventual success criterion are in
+[ROADMAP.md](../ROADMAP.md).

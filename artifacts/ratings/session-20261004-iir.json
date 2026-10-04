@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "timestamp_utc": "2026-10-04T17:18:42.166680+00:00",
+  "status": "last measured reference retained; experimental IIR candidate unrated",
+  "public_elo": null,
+  "last_measured_local_rating": 2319.019359271422,
+  "primary_95_percent_local_interval": [
+    2277.370617879139,
+    2360.3589099588767
+  ],
+  "local_scale": "SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash",
+  "rated_engine": "artifacts/publish/q-evasion-dev/Aster.dll",
+  "rated_engine_sha256": "a3994e4f350b2cfa261db5edc1e4ae5c332d85d4b3eaf34c0730267f3603d9a0",
+  "rated_version": "Aster 0.7.6-q-evasion-dev",
+  "reference_record": {
+    "path": "artifacts/ratings/session-20261004-q-evasion-confirmation.json",
+    "sha256": "78eeab42081af15787be31f35b9307143355c0b55a93119b741e7f95e81ca736"
+  },
+  "candidate_sha256": "e6c1ea589dfb28441a610e23c93d7287c5a5ea52d5741112e542ddb18acfe85e",
+  "failed_gates": [
+    "match-30ms"
+  ],
+  "candidate_general_regression": [
+    {
+      "label": "30ms",
+      "games": 512,
+      "wins": 153,
+      "draws": 220,
+      "losses": 139,
+      "unresolved": 0,
+      "forfeits": 0,
+      "score_bounds": [
+        0.513671875,
+        0.513671875
+      ],
+      "primary_95_percent_interval": [
+        0.482,
+        0.5451807228915663
+      ],
+      "families": 161
+    },
+    {
+      "label": "100ms",
+      "games": 128,
+      "wins": 36,
+      "draws": 60,
+      "losses": 32,
+      "unresolved": 0,
+      "forfeits": 0,
+      "score_bounds": [
+        0.515625,
+        0.515625
+      ],
+      "primary_95_percent_interval": [
+        0.45491803278688525,
+        0.5778688524590164
+      ],
+      "families": 55
+    }
+  ],
+  "reason": "Primary short-control confidence lower bound does not exceed50%; candidate stays opt-in, conditional rating not run,128 reserved openings unused by Aster. No Elo inferred from regression or node reduction."
+}

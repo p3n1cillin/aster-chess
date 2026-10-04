@@ -21,6 +21,13 @@ candidate. Public ratings and full-strength Stockfish superiority remain
 unestablished. The following earlier calibration fixes the reference setting
 and measurement policy; its artifacts remain intact.
 
+The subsequent **0.7.7-iir-dev** candidate completes 640 audited regression
+games but fails its predeclared short-control confidence gate. Its 256-game
+conditional rating is skipped; 128 reserved openings remain unused. The
+[session record](../artifacts/ratings/session-20261004-iir.json) retains the
+exact 0.7.6-q-evasion estimate above. No Elo is inferred from the two slightly
+positive baseline-regression point scores or reduced fixed-depth work.
+
 The frozen ordinary **Aster 0.7.4-feature-dev** has a provisional local estimate
 of **2300**, with a **95% opening-family interval of 2265..2335**, on the
 **SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash** scale.

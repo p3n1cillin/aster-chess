@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "timestamp_utc": "2026-10-04T17:18:42.167213+00:00",
+  "candidate_promoted": false,
+  "assessment_sha256": "61f22fecbe48df4b049fc884f45405e571d1a9e8117612d71bad2d8090cd1ec5",
+  "failed_gates": [
+    "match-30ms"
+  ],
+  "default_source_manifest": "artifacts/research/iir-default-source/manifest.json",
+  "default_verification": {
+    "rules": "artifacts/validation/iir-default-rules.json",
+    "tests": "artifacts/validation/iir-default-engine-tests.txt",
+    "benchmark": "artifacts/benchmarks/iir-default-depth7.json",
+    "behavior": "artifacts/benchmarks/iir-default-vs-baseline-depth8.json"
+  },
+  "verification": [
+    {
+      "path": "artifacts/validation/iir-default-rules.json",
+      "sha256": "49f95a84a6c7b1b90da1f353bb4a5cc454cb46bfca0580963aff88e98832dd8f"
+    },
+    {
+      "path": "artifacts/validation/iir-default-engine-tests.txt",
+      "sha256": "7db0345510ba17cc0000ad06be166e784947d25d4dd0fde8d420787ab874400a"
+    },
+    {
+      "path": "artifacts/benchmarks/iir-default-depth7.json",
+      "sha256": "f6628ec59568b88b274347ee659596485681b3bd1a556d2d2d1d93ac4c85a0b6"
+    },
+    {
+      "path": "artifacts/benchmarks/iir-default-vs-baseline-depth8.json",
+      "sha256": "adc43306e7b6e196b807e7a30e43093f4768deefa67613852d988834aaa9e515"
+    },
+    {
+      "path": "artifacts/validation/iir-default-build.txt",
+      "sha256": "94da83985f47384b00bf077210e0de1c690aac32840a1280137be947d8dfd25b"
+    },
+    {
+      "path": "artifacts/validation/iir-final-source-check.json",
+      "sha256": "9bdac012f177ef1c6b3d62795dde5a7adc31750447545b01fdf3213fdab5d1d1"
+    },
+    {
+      "path": "artifacts/validation/iir-final-ci.json",
+      "sha256": "c793fb133df494d26b59528be56ac88fa0226f4e91a498d3aebbebeb0385eabc"
+    },
+    {
+      "path": "artifacts/ratings/session-20261004-iir.json",
+      "sha256": "ac93b7d76598924a26dbc60ad2b41fa2c98f07081bbfb3329475a9259c302336"
+    }
+  ],
+  "reason": "Keep IIR opt-in under unchanged frozen gates. Same verified ordinary0.7.6 source, DLL,51 tests,1614 rules/protocol checks,146772 benchmark nodes and64 same-work opening comparisons. No unrelated engine edits since verification; hashes rechecked after the actual runner exited0. Public Elo and full-strength Stockfish superiority unestablished."
+}
