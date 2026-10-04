@@ -1,0 +1,173 @@
+{
+  "created_utc": "2026-10-04T16:21:11.767145+00:00",
+  "plan_sha256": "0477165d2df4a02f96e77564810dbd6cf0d7fa618d45d140a30cd710d59d68dc",
+  "source_files": [
+    {
+      "path": "match.py",
+      "sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8"
+    },
+    {
+      "path": "audit_match.py",
+      "sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6"
+    },
+    {
+      "path": "run_iir.py",
+      "sha256": "960192e6e7a644c8f740e477b72f514f8f5ecfa703faf5cd64067e8a27235458"
+    },
+    {
+      "path": "assess_iir.py",
+      "sha256": "5d1d8c8678b0913d556de08026d677eb325124bc4239fac235b45ca8d22e8344"
+    },
+    {
+      "path": "analyze_iir_rating.py",
+      "sha256": "9679be5bf884194980163e6338712b0bf21896b3526eef2b5acacb673279c156"
+    },
+    {
+      "path": "verify_iir.py",
+      "sha256": "64cea6687275b181ab759d3de0da62c6a9efedf6387a745f0532da9a9fc55293"
+    },
+    {
+      "path": "declare_iir.py",
+      "sha256": "57324264a069f73d7fbc36f77bdaa960c841fcde2a7219bac4d6a8fdf7087ca7"
+    },
+    {
+      "path": "prepare_iir.py",
+      "sha256": "7fd9666111df86a0458a426584c619f28bc39cddca577fdcca2b0a4d9f63ecc9"
+    },
+    {
+      "path": "generate_openings.py",
+      "sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746"
+    },
+    {
+      "path": "audit_openings.py",
+      "sha256": "0c97723cf8a0404f9e3681a90f5d9d09dcfc4978721748222ee80a679a6fca5d"
+    },
+    {
+      "path": "analyze_rating.py",
+      "sha256": "f6fe53073c006e91760b885adab9803f92cd50fa3c3a7ba6ada90f0a8e5b8d13"
+    },
+    {
+      "path": "run_rating.py",
+      "sha256": "6e8a31adefd0aeb5d51eac2f5672396f4518f779947713f86dac138ff00f661a"
+    },
+    {
+      "path": "uci_client.py",
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    },
+    {
+      "path": "verify_q_evasion.py",
+      "sha256": "ab366b0a2be974fc7b33a506e1290205d943c4f5a30a6fe20481c9a391b88438"
+    },
+    {
+      "path": "tactics.py",
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    },
+    {
+      "path": "compare_search.py",
+      "sha256": "a8162c85b4ea4aae46546ca8a02d4b04c083bf56abb6a28d64f322b2331b6dd9"
+    },
+    {
+      "path": "freeze_engine_source.py",
+      "sha256": "db919e19f9b75ade115a3d834ad48cc57e01a6165130ef03a775279f4c89acb7"
+    },
+    {
+      "path": "freeze_iir_pipeline.py",
+      "sha256": "067dc0a528bbf1ecf51c406e87b0d48de71593477aa5f1221aead0682cb55a84"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "artifacts/validation/iir-100ms-audit.json",
+      "sha256": "e518814b90f28080dcb01b1ba9ec7ecb04ab91fa74bac366b0bc7e44d534af5d"
+    },
+    {
+      "path": "artifacts/validation/iir-30ms-audit.json",
+      "sha256": "0bf2972ead2b871a3bcc19bbf0d3820339d6cc26095aa5f1d7d018e5d14209f5"
+    },
+    {
+      "path": "artifacts/validation/iir-behavior-audit.json",
+      "sha256": "462ce451c2689928d8d4926c498f20676f5cacf2f5d413184f62eda86c591d19"
+    },
+    {
+      "path": "artifacts/validation/iir-default-rules.json",
+      "sha256": "49f95a84a6c7b1b90da1f353bb4a5cc454cb46bfca0580963aff88e98832dd8f"
+    },
+    {
+      "path": "artifacts/validation/iir-differential.json",
+      "sha256": "048040f097057a339ec9250d29ae7905f1e560857394d289f69e51c2a98ddb3b"
+    },
+    {
+      "path": "artifacts/validation/iir-parent-audit.json",
+      "sha256": "bd493cf82b40cb23f53b0d4959edc6a13044f7775588326712dce7ff537c75be"
+    },
+    {
+      "path": "artifacts/validation/iir-rating-audit.json",
+      "sha256": "c7f2c1031a73570d7221cf804c19e5a7de9b943685306dcbfc53f1cf2e671d00"
+    },
+    {
+      "path": "artifacts/validation/iir-rules.json",
+      "sha256": "0be2629d0e5d667330e9c76ca86b0ad947bb8ee00ee495639569171b082dc9de"
+    },
+    {
+      "path": "artifacts/benchmarks/iir-default-depth7.json",
+      "sha256": "f6628ec59568b88b274347ee659596485681b3bd1a556d2d2d1d93ac4c85a0b6"
+    },
+    {
+      "path": "artifacts/benchmarks/iir-default-vs-baseline-depth8.json",
+      "sha256": "adc43306e7b6e196b807e7a30e43093f4768deefa67613852d988834aaa9e515"
+    },
+    {
+      "path": "artifacts/benchmarks/iir-fixed-depth8-v1.json",
+      "sha256": "1b989a08b8008cf07d537684a551dd7f98b7e197a3ff0ac682f2a587cee3b406"
+    },
+    {
+      "path": "artifacts/benchmarks/iir-profile-depth9.json",
+      "sha256": "50362b6d49ce4c2f7259b9c797956f195261d8820ed5e3ffae238724b55573f1"
+    },
+    {
+      "path": "artifacts/tactics/iir-endgames-5000nodes.json",
+      "sha256": "8e02a5ad35605e57a71d6d3921a1bb6b90d21fb7ae99cd3327c6abe3601c6a05"
+    },
+    {
+      "path": "artifacts/tactics/iir-tactics-5000nodes.json",
+      "sha256": "53c40b766b3f373c3980bb107effc67536162ca45d5bf4a3da3d4b86fb4a49f6"
+    },
+    {
+      "path": "artifacts/tactics/iir-tactics-depth8.json",
+      "sha256": "d758caf914187653345c219cf962f5549da69c3d48d727618dda2b0ce91ee76a"
+    },
+    {
+      "path": "artifacts/tactics/iir-tactics-quiet-5000nodes.json",
+      "sha256": "d51a55b83abec9751ec40c921778b98d80fe5ed16b94e550d79d35a466a11246"
+    },
+    {
+      "path": "artifacts/tactics/iir-tactics-quiet-depth8.json",
+      "sha256": "d80b99d2903b511d91c1d56683044cb8abae12d4a4d810f75a326c6383db971d"
+    },
+    {
+      "path": "tests/fixtures/iir-100ms-v1.json",
+      "sha256": "0b2e40c88ada4064628909ddba0293ce3594774520eaffae50daafcca41ecace"
+    },
+    {
+      "path": "tests/fixtures/iir-30ms-v1.json",
+      "sha256": "de119d1f9630b753d18a634031c90cefac64853d43e11e386aee535b53bf4307"
+    },
+    {
+      "path": "tests/fixtures/iir-behavior-v1.json",
+      "sha256": "b3680be4939c0e82ddb125c5a70a90b8c75312440333e9bc0b8d443f51fc0d15"
+    },
+    {
+      "path": "tests/fixtures/iir-parent-v1.json",
+      "sha256": "46868852f9af1c2b95bc9bfaec9b68bb0b45fd916d0bfc27f792fe9596855baa"
+    },
+    {
+      "path": "tests/fixtures/iir-rating-v1.json",
+      "sha256": "ce491f6df3345245f016f9b1b8f7658769da750a0826a422f4732b16eaf2653f"
+    }
+  ],
+  "interpretation": "Frozen before regression matches, including conditional rating analyzer. No adaptive extension or retuning."
+}

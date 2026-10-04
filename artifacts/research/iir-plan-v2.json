@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "status": "Missing dataset filename corrected after unit/rule checks, before fixture generation or opening/tactical/match queries",
+  "hypothesis": "A one-ply reduction at depth>=5 without a TT move reallocates work from unseeded nonPV branches. Root/PV/check/history/rule50/mate-bound/pawn-only safeguards remain. Store only reduced searched depth. No parameter tuning or combination with rejected experiments.",
+  "candidate": "artifacts/publish/iir-dev/Aster.dll",
+  "candidate_sha256": "e6c1ea589dfb28441a610e23c93d7287c5a5ea52d5741112e542ddb18acfe85e",
+  "candidate_source": "artifacts/research/iir-source/manifest.json",
+  "baseline": "artifacts/publish/q-evasion-default-dotnet/Aster.dll",
+  "baseline_sha256": "3801b8cbc1cbbb98e2435ab5b00b161d08c2be16d4a18af7cc56e3eb2f43e343",
+  "baseline_source": "artifacts/research/q-evasion-default-source/manifest.json",
+  "generation": {
+    "positions": 448,
+    "attempts": 4096,
+    "seed": 20261108,
+    "plies": 20,
+    "nodes": 2048,
+    "verify_nodes": 20000,
+    "max_cp": 80,
+    "partition": "First256 pairs30ms; next64 pairs100ms; final128 conditional rating. Behavior first32 of each regression partition. All frozen before Aster queries.",
+    "exclude_data": [
+      "artifacts/data/teacher-20k-v1.jsonl",
+      "artifacts/data/teacher-turn-augmented-60k-v1.jsonl",
+      "artifacts/data/endgame-diagnostic-512-v1.jsonl"
+    ],
+    "exclude_suites": [
+      "tests/fixtures/openings-v1.json",
+      "tests/fixtures/openings-v2.json",
+      "tests/fixtures/openings-v3.json",
+      "tests/fixtures/openings-v4.json",
+      "tests/fixtures/openings-v5.json",
+      "tests/fixtures/rating-parent-v1.json",
+      "tests/fixtures/lazy-order-parent-v1.json",
+      "tests/fixtures/q-evasion-parent-v1.json"
+    ]
+  },
+  "correctness": "52 candidate C# tests, including actual TT stored-depth/guarded-root/PV/clock/pawn cases; full required legality/perft/protocol verifier. Speculative undo, terminal precedence and legal PVs preserved.",
+  "tactics": {
+    "tactics-depth8": 32,
+    "tactics-5000nodes": 32,
+    "tactics-quiet-depth8": 32,
+    "tactics-quiet-5000nodes": 25,
+    "endgames-5000nodes": 13
+  },
+  "behavior": "64 depth8 opening comparisons and256 seeded warm/history/FEN/rule50/searchmoves cases, with independent legality/root-restoration checks. Changed nodes/scores expected; no same-work gate. Instrumented depth9 must demonstrate trigger; profiling is not strength.",
+  "matches": [
+    {
+      "label": "30ms",
+      "pairs": 256,
+      "seconds_per_move": 0.03,
+      "minimum_score": 0.5,
+      "family_lower_strictly_above": 0.5
+    },
+    {
+      "label": "100ms",
+      "pairs": 64,
+      "seconds_per_move": 0.1,
+      "minimum_score": 0.5,
+      "minimum_family_lower": 0.45
+    }
+  ],
+  "resources": {
+    "Threads": 1,
+    "Hash": 64,
+    "Move Overhead": 0,
+    "max_additional_plies": 400
+  },
+  "uncertainty": {
+    "bootstrap_samples": 20000,
+    "seed": 20261109,
+    "primary": "First4 legal UCI ply families, retain both colors and every pair; unresolved0/1 bounds included"
+  },
+  "promotion": "All correctness/tactical/profile/behavior gates, zero forfeits/unresolved, primary family lower>50% at30ms and score>=50% with lower>=45% at100ms. Otherwise opt-in. No superiority claim across engines/controls from this regression.",
+  "conditional_rating": {
+    "pairs": 128,
+    "setting": 2300,
+    "seconds_per_move": 0.03,
+    "opponent_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "model": "2300+400*log10(p/(1-p)); localSF19 strength-setting equivalent, one thread64MiB, not public Elo",
+    "numeric_gates": "All896 games audited, zero unresolved/forfeits, finite primary CI<=200units and point/CI within1320..3190. No rating transfer to a different binary."
+  },
+  "no_adaptive_extension": true,
+  "maximum_game_budget": 896,
+  "decision": "Always complete640 regression games, even failed tactics. Conditional256 rating games only if frozen promotion gates pass. Preserve every result, binary/source, options/control/openings/hardware/PGN/audit. No retuning after outcomes. Full-strength Stockfish superiority remains unachieved.",
+  "previous_plan": {
+    "path": "artifacts/research/iir-plan-v1.json",
+    "sha256": "fc2aab1d835ee3c486848e51babafd445ebc40e08523e27c9d2062911fa577aa"
+  },
+  "correction": "Only the intended512-position development dataset pathname changes; all algorithms, budgets, seeds and gates remain exactly as originally declared. Original plan retained."
+}

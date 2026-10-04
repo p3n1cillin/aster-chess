@@ -118,6 +118,12 @@ Next pursue more capable search/evaluation rather than interpreting this
 same-work speed gain as a demonstrated strength increase. Broaden endgame
 coverage and proof-backed plans alongside the playing-strength work.
 
+An opt-in one-ply reduction of deep unseeded secondary nodes is now frozen for
+a 640-game paired regression with independent openings and explicit confidence
+gates. It preserves root/PV/check/history/late-clock/pawn-only boundaries and
+stores only the searched depth. Correctness, tactics and limit/undo checks pass;
+playing-strength results are pending. See `docs/INTERNAL-REDUCTIONS.md`.
+
 ## 3. Learn an evaluation
 
 Implemented: a versioned original network format, lazy incremental integer

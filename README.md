@@ -6,6 +6,10 @@ early, working foundation and is far below that target: version 0.6.0 lost all
 eight games in its full-strength Stockfish 19 smoke match. Detailed progress,
 regressions and preserved reports are in [measured progress](artifacts/PROGRESS.md).
 
+Source and research history are maintained in the private
+[GitHub repository](https://github.com/p3n1cillin/aster-chess).
+See [version control](docs/VERSION-CONTROL.md) for tracked evidence and exact-byte preservation.
+
 ## Build and run
 
 Install the .NET 8 SDK, then run from this directory:
@@ -101,6 +105,9 @@ all 576 regression/confirmation games. It preserves 416 complete search traces
 and shows a 5.29% warm speed gain. The ordinary build repeats those traces;
 the rating remains attached to the exact matched candidate. A rating gain
 over the previous 2300 estimate is unproven.
+The next opt-in [unseeded secondary search experiment](docs/INTERNAL-REDUCTIONS.md)
+passes correctness and tactical checks; its frozen 640-game regression has
+pending results. It remains disabled in ordinary builds.
 Version 0.6.0 adds king-region-conditioned features, lazy accumulator rebuilds
 and vectorized integer output, retaining compatibility with earlier Aster models.
 The tested trained models regressed in matches, so the classical evaluator

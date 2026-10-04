@@ -138,6 +138,19 @@ public sealed class Search(TranspositionTable table)
             return ttScore;
         int staticEval = inCheck ? -Infinity : Eval.Evaluate(board);
         bool hasNonPawnMaterial = (board.Colors[board.Side] & ~(board.Pieces[board.Side * 6] | board.Pieces[board.Side * 6 + 5])) != 0;
+#if ASTER_IIR
+        // Spend less depth on an unseeded secondary branch. The reduced depth
+        // also governs pruning and TT storage: never advertise work not done.
+        // Root/PV, check evasions and history-sensitive boundaries stay intact.
+        if (ply > 0 && !isPv && !inCheck && !repeated && ttMove == Move.None
+            && depth >= 5 && hasNonPawnMaterial && board.HalfmoveClock < 90 && Math.Abs(beta) < MateThreshold)
+        {
+            depth--;
+#if ASTER_PROFILE
+            SearchProfile.RecordInternalReduction();
+#endif
+        }
+#endif
         // Shallow reverse futility is restricted to non-PV, non-check nodes
         // with non-pawn material. Establish a legal move before pruning so a
         // stalemate can never be assigned a stand-pat value.

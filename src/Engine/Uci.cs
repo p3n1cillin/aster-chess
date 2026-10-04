@@ -40,7 +40,9 @@ public sealed class Uci
                 switch (tokens[0])
                 {
                     case "uci":
-#if ASTER_LAZY_ORDER
+#if ASTER_IIR
+                        Write("id name Aster 0.7.7-iir-dev");
+#elif ASTER_LAZY_ORDER
                         Write("id name Aster 0.7.5-lazy-order-dev");
 #elif ASTER_CONVERSION
                         Write("id name Aster 0.7.4-proof-dev");

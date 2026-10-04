@@ -860,5 +860,32 @@ Test("a stopped quiescence evasion always restores its root", () =>
     Equal(new Board(fen).Key, b.Key);
 });
 
+#if ASTER_IIR
+Test("unseeded secondary search stores only its actual depth and preserves guarded nodes", () =>
+{
+    const System.Reflection.BindingFlags flags = System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic;
+    void CheckDepth(Board board, int ply, int alpha, int beta, bool seedMove, int expected)
+    {
+        string fen = board.ToFen(); ulong key = board.Key; int evaluation = Evaluation.Evaluate(board);
+        var table = new TranspositionTable(1); var search = new Search(table);
+        _ = search.Run(board, new SearchLimits(Nodes: 1));
+        table.Clear();
+        if (seedMove) table.Store(board.SearchKey, board.ParseMove("e2e4"), 0, 0, Bound.Upper, ply);
+        typeof(Search).GetField("limits", flags)!.SetValue(search, new SearchLimits(Nodes: 500000));
+        typeof(Search).GetField("nodes", flags)!.SetValue(search, 0L);
+        _ = typeof(Search).GetMethod("Negamax", flags)!.Invoke(search, [5, ply, alpha, beta, true]);
+        Require(table.Probe(board.SearchKey, ply, out _, out _, out int depth, out _), "No completed node bound");
+        Equal(expected, depth);
+        Equal(fen, board.ToFen()); Equal(key, board.Key); Equal(evaluation, Evaluation.Evaluate(board));
+    }
+    CheckDepth(new Board(), 1, 5000, 5001, false, 4);
+    CheckDepth(new Board(), 1, 5000, 5001, true, 5);
+    CheckDepth(new Board(), 0, 5000, 5001, false, 5);
+    CheckDepth(new Board(), 1, -1000, 1000, false, 5);
+    CheckDepth(new Board(Board.StartFen.Replace("0 1", "90 1")), 1, 5000, 5001, false, 5);
+    CheckDepth(new Board("8/7k/8/8/8/8/P7/K7 w - - 0 1"), 1, 5000, 5001, false, 5);
+});
+#endif
+
 Console.WriteLine($"\n{passed} passed, {failed} failed.");
 return failed == 0 ? 0 : 1;

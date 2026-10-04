@@ -11,6 +11,7 @@ internal static class SearchProfile
     private static long evaluationCalls, exchangeCalls, legalCalls, orderingCalls;
     private static long reducedSearches, reducedPlies, prunedQuietMoves;
     private static long deferredCaptures, resumedCaptures;
+    private static long internalReductions;
 
     public static void Reset()
     {
@@ -18,6 +19,7 @@ internal static class SearchProfile
         evaluationCalls = exchangeCalls = legalCalls = orderingCalls = 0;
         reducedSearches = reducedPlies = prunedQuietMoves = 0;
         deferredCaptures = resumedCaptures = 0;
+        internalReductions = 0;
     }
 
     public static int Evaluate(Board board)
@@ -42,6 +44,7 @@ internal static class SearchProfile
         reducedSearches++; reducedPlies += reduction;
     }
     public static void RecordQuietPrune() => prunedQuietMoves++;
+    public static void RecordInternalReduction() => internalReductions++;
     public static void RecordDeferredCapture(bool scored)
     {
         if (scored) resumedCaptures++; else deferredCaptures++;
@@ -54,6 +57,7 @@ internal static class SearchProfile
         moveOrdering = new { calls = orderingCalls, milliseconds = Milliseconds(orderingTicks) },
         staticExchange = new { calls = exchangeCalls, milliseconds = Milliseconds(exchangeTicks) },
         lateMoveReduction = new { reducedSearches, reducedPlies },
+        internalIterativeReduction = new { reducedNodes = internalReductions },
         lateQuietPruning = new { prunedQuietMoves },
         deferredCaptureScoring = new { deferredCaptures, resumedCaptures, avoided = deferredCaptures - resumedCaptures },
         interpretation = "Instrumented timings include measurement overhead. Static exchange is mostly included in move ordering; categories overlap and must not be summed. Fixed-depth work, not playing strength."

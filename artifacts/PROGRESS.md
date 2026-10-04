@@ -2,11 +2,45 @@
 
 The production engine is **Aster 0.6.0**, with experimental source identified
 as **0.7.6-feature-dev**, with optional threat, KPK, conversion, proof,
-**0.7.5-lazy-order-dev** and **0.7.6-q-evasion-dev** builds. The goal of surpassing Stockfish remains
+**0.7.5-lazy-order-dev**, **0.7.6-q-evasion-dev** and **0.7.7-iir-dev** builds. The goal of surpassing Stockfish remains
 active and has not been achieved. The current engine uses a classical evaluator;
 the classical evaluator is the default. Optional trained neural prototypes
 exist but regressed in matches. The opt-in KPK solver generates its own table;
 there is no general tablebase probing or parallel search.
+
+## Current experiment: unseeded secondary search
+
+Version control now preserves the project in the private
+[p3n1cillin/aster-chess repository](https://github.com/p3n1cillin/aster-chess).
+Initial commit `f38c88d3f7528ecbcb83dd08c10353e8eb16982d` and its Windows/Linux
+CI checks are complete. Source, datasets, checkpoints, binaries, reports,
+PGNs and source snapshots are tracked with exact-byte preservation; local
+dependencies/caches and downloaded Stockfish binaries are excluded, with
+the pinned release manifest retained.
+
+The opt-in **0.7.7-iir-dev** build reduces unseeded secondary non-PV nodes by
+one ply from depth five, with check/root/PV/history/clock/material/mate-bound
+guards. Stored depth reflects actual work. It passes **52 tests**, **2,614
+independent checks**, all existing tactical thresholds and **256** legal-PV,
+node-budget, searchmoves, history/clock and restoration cases. Profile depth
+nine records **202** triggers and **591,552** nodes. Its 64 fresh depth-eight
+positions search **4,994,060 versus 5,043,413** baseline nodes; 58 moves and
+49 scores agree. These work differences do not establish playing strength.
+
+The [plan](research/iir-plan-v2.json) freezes **640 paired regression games**,
+512 at 30 ms and 128 at 100 ms, plus at most **256 conditional rating games**.
+All 448 parent openings and eleven exclusion sources are independently
+audited. A dataset filename typo is corrected before fixture/opening/tactical/
+match queries; the original plan remains preserved and all seeds/gates/budgets
+are unchanged. Results are pending and ordinary source keeps the change
+disabled. The default passes **51 tests**, **1,614 checks**, **146,772-node**
+benchmark and exact 64-position baseline moves/scores/nodes. Details and
+promotion rules: [internal reductions](../docs/INTERNAL-REDUCTIONS.md).
+
+Latest measured rating remains the exact **0.7.6-q-evasion-dev = 2319**, with
+95% local interval **2277..2360**, at 30 ms/move, one thread and 64 MiB hash on
+the **SF19 UCI_Elo-setting equivalent** scale. The new candidate is unrated.
+Public Elo and full-strength Stockfish superiority remain unestablished.
 
 ## Completed optimization: quiescence evasion legality
 

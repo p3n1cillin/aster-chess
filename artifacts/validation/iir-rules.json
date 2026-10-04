@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\iir-dev\\Aster.dll",
+  "binary_sha256": "e6c1ea589dfb28441a610e23c93d7287c5a5ea52d5741112e542ddb18acfe85e",
+  "positions_checked": 2614,
+  "reference_perft_positions": 14,
+  "protocol_checks": "passed",
+  "seed": 20261003,
+  "seconds": 1.24,
+  "legal_move_existence_positions": 2614,
+  "random_setups": {
+    "positions": 1000,
+    "in_check": 172,
+    "checkmates": 6,
+    "stalemates": 1
+  },
+  "eval_file": null
+}
