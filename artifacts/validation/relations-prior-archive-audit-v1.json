@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "script_sha256": "dca146001dfef7f9e57e10afc346567fd5318dac95e240255bed4afdc91e1513",
+  "prior_experiments": [
+    {
+      "experiment": "capacity",
+      "manifest": "artifacts/research/capacity-experiment-v1-manifest.json",
+      "manifest_sha256": "99d6b684c868d6123d823e28b180c8bb3534039e35eb5b4297d91952c187e4db",
+      "archived_artifacts": 211
+    },
+    {
+      "experiment": "deep-turn",
+      "manifest": "artifacts/research/deep-turn-experiment-v1-manifest.json",
+      "manifest_sha256": "a7d77481456c0d409435e7cd450b6ab88b548b47dbf20b7c23dd24c68444211f",
+      "archived_artifacts": 206
+    }
+  ],
+  "scope": "Archived artifacts only. Root training helpers intentionally changed for the new feature format; old archived copies retain their exact hashes."
+}

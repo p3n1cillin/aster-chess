@@ -75,5 +75,35 @@ eight (required 32), 25/32 quiet positions at 5000 nodes and 13/16 endgames.
 Two tactical gates fail. The short screens still run as declared, but the
 candidate is ineligible for promotion and longer confirmation.
 
-Playing results are pending. No strength improvement, model rating
-or superiority over full-strength Stockfish is established by these checks.
+Both short screens complete and all 256 PGNs pass independent legality/outcome
+audit with no forfeits or unresolved games. The frozen family bootstrap uses
+20000 samples and seed 20261128:
+
+| Opponent | W / D / L | Score | 95% opening-family interval | Families |
+| --- | --- | --- | --- | --- |
+| Classical Aster | 35 / 40 / 53 | 42.97% | 36.51%..49.25% | 53 |
+| Matched H64 control | 44 / 55 / 29 | 55.86% | 49.56%..61.62% | 53 |
+
+The control tolerance gate passes, but its interval includes 50%, so this
+screen does not establish a relative playing gain. The classical gate and two
+tactical thresholds fail. No model is promoted or retuned. Longer confirmation
+is skipped, leaving the final 32 reserved opening pairs unused by Aster.
+
+Saved first searches at identical opening histories have median depths 6/7
+against classical and 6/6 against control. Median paired node ratios are 0.4123
+and 0.8140 respectively. Evaluations change search trees; these observations do
+not prove that cost alone causes the match results. A separate metadata audit
+checks exact runtime/source/model fingerprints, applied resources, time
+controls, ply caps and opening partitions. All 211 capacity and 206 deep-turn
+archived artifacts remain byte-identical. All four Windows/Linux default/IIR
+setup CI jobs pass on commit `240c515ea060324412bdd13779214f5ff2e8b36b`.
+
+The selected features improve held-out label fit at this budget, but have not
+produced an evaluator ready to replace classical play. Further feature work
+should isolate inference expense and the compatibility of mixed static/deep
+targets, using fresh playing gates and preserving the failed tactical cases.
+No model rating or superiority over full-strength Stockfish is established.
+The last measured exact reference remains 2319, interval 2277..2360, on the
+SF19 UCI_Elo-setting-equivalent scale at 30ms/move, one thread and 64MiB hash.
+The new runtime and both models remain separately uncalibrated. See
+[the session record](../artifacts/ratings/session-20261004-relations.json).

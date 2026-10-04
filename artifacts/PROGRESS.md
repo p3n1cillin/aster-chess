@@ -1,12 +1,55 @@
 # Project progress — 4 October 2026
 
 The production engine is **Aster 0.6.0**, with experimental source identified
-as **0.7.9-mate-proof-dev**, with optional threat, KPK, conversion, proof,
+as **0.8.0-relations-dev**, with optional threat, KPK, conversion, proof,
 **0.7.5-lazy-order-dev**, **0.7.6-q-evasion-dev** and **0.7.7-iir-dev** builds. The goal of surpassing Stockfish remains
 active and has not been achieved. The current engine uses a classical evaluator;
 the classical evaluator is the default. Optional trained neural prototypes
 exist but regressed in matches. The opt-in KPK solver generates its own table;
 there is no general tablebase probing or parallel search.
+
+## Completed experiment: geometric relation features
+
+The optional H64 evaluator adds 80 geometric attack/defense count features,
+retaining all shared parameters and starting the new rows at zero. Initial
+predictions agree exactly across all **63826** rows. The matched 50-epoch
+control reproduces its prior model byte for byte; both select epoch 9 and
+consume identical batches. Quantized held-out MAE improves from **131.54** to
+**127.72cp**, and fresh endgame MAE from **201.59** to **189.63cp**.
+
+The required build, **57** native tests, default rules/protocol verifier and
+**146772**-node benchmark pass. All 32 classical depth-eight moves, scores
+and nodes agree with the prior runtime. Independent geometric extraction
+agrees at **4232** positions; nonzero synthetic H16/H256 and both selected
+models pass exact quantized inference. Each selected model also passes **2614**
+rules/protocol checks. Candidate original-depth tactics solve **31/32** and
+quiet-depth tactics **30/32**, failing required 32; quiet node-budget tactics
+reach **25/32** and endgames **13/16**. A frozen legal-operation cost trace,
+with independent score checksum audit, costs **1.427 times** H64 control.
+This is an isolated local cost measurement, not search speed or strength.
+
+All **256** predeclared short games pass independent PGN audit with no
+forfeits or unresolved games. Against classical: **35 W / 40 D / 53 L**,
+**42.97%**, family interval **36.51%..49.25%** over 53 families. Against
+matched control: **44 W / 55 D / 29 L**, **55.86%**, interval
+**49.56%..61.62%** over 53 families. The control tolerance gate passes, but
+the interval includes 50%, so relative improvement is not established.
+Classical and tactical promotion gates fail; 32 reserved long-control pairs
+remain unused. Classical stays default and the optional model is not retuned.
+
+Metadata audits confirm exact applied resources, models, source, openings and
+time controls. Saved first-root searches show median depths 6/7 versus
+classical and 6/6 versus control; different evaluations alter trees, so node
+ratios are descriptive. All four setup CI jobs pass. All **417** artifacts
+from the two prior archived experiments remain unchanged. Complete sources,
+models, initial/final checkpoints, cost evidence, reports and PGNs are retained
+in version control. See [relation features](../docs/RELATIONS.md).
+
+Improved label fit has not produced a replacement for classical playing.
+Continue with isolated inference-cost and mixed-target compatibility research.
+The last exact local reference remains **2319**, interval **2277..2360**, on
+the SF19 setting-equivalent scale at 30ms/move. The new runtime/models have no
+separate rating. Full-strength Stockfish superiority remains unachieved.
 
 ## Completed experiment: nested hidden capacity
 

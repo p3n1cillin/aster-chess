@@ -21,6 +21,16 @@ candidate. Public ratings and full-strength Stockfish superiority remain
 unestablished. The following earlier calibration fixes the reference setting
 and measurement policy; its artifacts remain intact.
 
+The subsequent **0.8.0-relations-dev** runtime and optional geometric feature
+model complete 256 audited paired regression games. The candidate improves
+held-out label fit, scores 55.86% against matched neural control (family interval
+49.56%..61.62%) and 42.97% against classical (36.51%..49.25%), and fails two
+tactical thresholds. The control interval includes 50%; no relative gain is
+established. It remains experimental, with 32 conditional long-control pairs
+unused. The [relation session record](../artifacts/ratings/session-20261004-relations.json)
+retains the exact prior calibrated reference. Neither new runtime nor model
+receives an Elo estimate from these screens.
+
 The subsequent **0.7.7-iir-dev** candidate completes 640 audited regression
 games but fails its predeclared short-control confidence gate. Its 256-game
 conditional rating is skipped; 128 reserved openings remain unused. The

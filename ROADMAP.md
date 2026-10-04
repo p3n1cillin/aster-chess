@@ -241,6 +241,17 @@ Neither model is promoted or calibrated. See `docs/CAPACITY.md`. Isolate richer
 feature interactions and compatibility of static/deep targets next, preserving
 initial functions, budgets, fresh playing tests and measured inference cost.
 
+The geometric relation experiment adds 80 attack/defense count features to H64
+with zero new initial rows and exactly matched initial predictions and batches.
+Held-out MAE improves from 131.54 to 127.72cp, but local legal-operation
+inference costs 1.427 times control and two tactical gates fail. All 256 short
+games pass audit: 42.97% against classical (family interval 36.51%..49.25%) and
+55.86% against matched neural control (49.56%..61.62%). The control interval
+includes 50%, so a relative gain is not established. No model is promoted or
+calibrated; 32 reserved long-control pairs remain unused. See `docs/RELATIONS.md`.
+Isolate geometric inference expense and mixed static/deep target compatibility
+before expanding feature count or training budget, retaining fresh playing gates.
+
 Next, extend feature interactions and the reproducible data pipeline using
 diverse legal self-play positions and scored outcomes or explicitly documented
 teacher labels. Partition by game to avoid train/test leakage; remove duplicate
