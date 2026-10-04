@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-10-04T16:28:30.487616+00:00",
+  "source_files": [
+    {
+      "path": "preserve_iir.py",
+      "sha256": "e72b373737fba92743ba05f50bb76f84e445c9bfe5a055825791a936b7bae932"
+    }
+  ],
+  "check": "Live incomplete run rejected; no final snapshot created",
+  "plan_sha256": "0477165d2df4a02f96e77564810dbd6cf0d7fa618d45d140a30cd710d59d68dc"
+}
