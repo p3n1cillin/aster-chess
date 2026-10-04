@@ -1,0 +1,920 @@
+{
+  "passed": true,
+  "engine_sha256": "eaa0f7a92851596baed83063f45f32942c704fed701c9ae294a6da274be5033d",
+  "script_sha256": "561f7d15c588a22c70880b74efea924a8ae251e1c51bb63ce10d39018e8c69c4",
+  "verifier_sha256": "9bd2c170d989cb04eb9fccf9cabe26de0e89a8d148c53758cd934004beb3bbfe",
+  "certificates": [
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-0-white.json",
+      "sha256": "da6f0929268bb9e3af7c7fae4f0a02db6086924fb48bddee5ef4b3e1481910a8",
+      "visits": 3,
+      "strong_side": "white",
+      "passed": true,
+      "positions": 2,
+      "edges": 1,
+      "covered_defensive_replies": 0,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 1,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-0-black.json",
+      "sha256": "04d41d28aba93ea9dfddcc43c88f2ca630e85768c86594075dd8915bcc26e80a",
+      "visits": 3,
+      "strong_side": "black",
+      "passed": true,
+      "positions": 2,
+      "edges": 1,
+      "covered_defensive_replies": 0,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 1,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-1-white.json",
+      "sha256": "7b110445c2c7450040037ce8e1bb44847fe2fe7e27ab7d1ef783a28dc681d7ee",
+      "visits": 2136,
+      "strong_side": "white",
+      "passed": true,
+      "positions": 6,
+      "edges": 5,
+      "covered_defensive_replies": 2,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 5,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/defender-1-white.json",
+      "sha256": "e0ef704130c3d0b38a43879056694352f87241ea05970c5b2bc2a3932b1eafcc",
+      "visits": 133,
+      "strong_side": "white",
+      "passed": true,
+      "positions": 5,
+      "edges": 4,
+      "covered_defensive_replies": 2,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 4,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-1-black.json",
+      "sha256": "b7cdc6050096c7c5ebdb3b88d818cac02cdffaecd69811d0c617eb43d55db23d",
+      "visits": 2786,
+      "strong_side": "black",
+      "passed": true,
+      "positions": 6,
+      "edges": 5,
+      "covered_defensive_replies": 2,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 5,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/defender-1-black.json",
+      "sha256": "794448ef92876f27b276310e0d3cd03e055c0c304267d3099d36a64101266b92",
+      "visits": 139,
+      "strong_side": "black",
+      "passed": true,
+      "positions": 5,
+      "edges": 4,
+      "covered_defensive_replies": 2,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 4,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-2-white.json",
+      "sha256": "47b68ea73a5c1c1287702bc4c9de101158d8098600511e7caca6e53ffa33337a",
+      "visits": 3,
+      "strong_side": "white",
+      "passed": true,
+      "positions": 2,
+      "edges": 1,
+      "covered_defensive_replies": 0,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 1,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-2-black.json",
+      "sha256": "546b71998d8b1006ef31217db4ec2dd1e28a8e29cb01b6da2638b576fbfb8e84",
+      "visits": 3,
+      "strong_side": "black",
+      "passed": true,
+      "positions": 2,
+      "edges": 1,
+      "covered_defensive_replies": 0,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 1,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-3-white.json",
+      "sha256": "8ad18208b640372ce29fb080b9212a938f0a31146b7d0647cfae991d0015ce30",
+      "visits": 3,
+      "strong_side": "white",
+      "passed": true,
+      "positions": 2,
+      "edges": 1,
+      "covered_defensive_replies": 0,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 1,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-3-black.json",
+      "sha256": "ff6daa2fa8020fb0f9d95a80bd745a97dfcacfa57f4ed36a1e1e7c23b87d47ae",
+      "visits": 3,
+      "strong_side": "black",
+      "passed": true,
+      "positions": 2,
+      "edges": 1,
+      "covered_defensive_replies": 0,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 1,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-4-white.json",
+      "sha256": "8477f782783f7fdc2577715ca45a536b65ad5aca22160c059f89d50353beecca",
+      "visits": 3,
+      "strong_side": "white",
+      "passed": true,
+      "positions": 2,
+      "edges": 1,
+      "covered_defensive_replies": 0,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 1,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-4-black.json",
+      "sha256": "a66de0c82f97b3a5df0057c0d4595f89667350356a6538e39454ea529965ea8b",
+      "visits": 3,
+      "strong_side": "black",
+      "passed": true,
+      "positions": 2,
+      "edges": 1,
+      "covered_defensive_replies": 0,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 1,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-5-white.json",
+      "sha256": "7a3fdd01fa241b11411c1f496b34ebebce937ecdddb7c05d62c37c3b41ac6aa7",
+      "visits": 26990,
+      "strong_side": "white",
+      "passed": true,
+      "positions": 18,
+      "edges": 17,
+      "covered_defensive_replies": 8,
+      "checkmate_leaves": 6,
+      "mate_upper_bound_plies": 5,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/defender-5-white.json",
+      "sha256": "52461b9151fe654a20dd7fc617e259ef937275f573a8c0b7f68ba6c3170d2e30",
+      "visits": 150,
+      "strong_side": "white",
+      "passed": true,
+      "positions": 17,
+      "edges": 16,
+      "covered_defensive_replies": 8,
+      "checkmate_leaves": 6,
+      "mate_upper_bound_plies": 4,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-5-black.json",
+      "sha256": "0dfbd96bc6b417bd2d0b9e344e0579030def44c9aa7231b3d7442a316f0132f2",
+      "visits": 35918,
+      "strong_side": "black",
+      "passed": true,
+      "positions": 18,
+      "edges": 17,
+      "covered_defensive_replies": 8,
+      "checkmate_leaves": 6,
+      "mate_upper_bound_plies": 5,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/defender-5-black.json",
+      "sha256": "1ee1f3ae2d9efa2fd4780762e324769f2d5cd6dce4fbf715a2638c823f5d6624",
+      "visits": 156,
+      "strong_side": "black",
+      "passed": true,
+      "positions": 17,
+      "edges": 16,
+      "covered_defensive_replies": 8,
+      "checkmate_leaves": 6,
+      "mate_upper_bound_plies": 4,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/seeded-7.json",
+      "sha256": "2fbbf16505710b005dc558ce07ad68d5448f69896a4f64f48cae356516557da1",
+      "visits": 7,
+      "strong_side": "black",
+      "passed": true,
+      "positions": 2,
+      "edges": 1,
+      "covered_defensive_replies": 0,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 1,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/seeded-21.json",
+      "sha256": "6ba5a162fd442c359683c3f47b4ac3adad7734ddf2b430dd7a450a9fb9c09dd6",
+      "visits": 9,
+      "strong_side": "black",
+      "passed": true,
+      "positions": 2,
+      "edges": 1,
+      "covered_defensive_replies": 0,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 1,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/seeded-27.json",
+      "sha256": "fd2ff42aa3399b43d10bb3e3a8a04915d0eee78e4ed1f48d4bce7046435e165e",
+      "visits": 1677,
+      "strong_side": "black",
+      "passed": true,
+      "positions": 4,
+      "edges": 3,
+      "covered_defensive_replies": 1,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 3,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/seeded-33.json",
+      "sha256": "f4118028bdf155a50e84f41770b5ed727f1ba5e67f8f46b3d455ecd5af25c0ab",
+      "visits": 173,
+      "strong_side": "black",
+      "passed": true,
+      "positions": 4,
+      "edges": 3,
+      "covered_defensive_replies": 1,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 3,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/seeded-46.json",
+      "sha256": "55dd2b4e1bf4ae8289c4866cbff42a2047a6c9f1c9d82c247c461b698c482ed2",
+      "visits": 5,
+      "strong_side": "white",
+      "passed": true,
+      "positions": 2,
+      "edges": 1,
+      "covered_defensive_replies": 0,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 1,
+      "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history."
+    }
+  ],
+  "certificate_positions": 122,
+  "certificate_edges": 101,
+  "differential_seed": 20261115,
+  "differential_attempts": 134,
+  "differential_cases": [
+    {
+      "fen": "3B4/1p4Q1/3K4/8/8/5k2/r7/8 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 1312,
+      "oracle_proved": false,
+      "oracle_visits": 1225
+    },
+    {
+      "fen": "8/3r4/8/2P5/8/1k3K2/r7/8 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 1323,
+      "oracle_proved": false,
+      "oracle_visits": 1229
+    },
+    {
+      "fen": "8/8/4p3/N6R/6K1/8/6k1/8 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 473,
+      "oracle_proved": false,
+      "oracle_visits": 401
+    },
+    {
+      "fen": "8/8/1K1P4/8/1k3n1n/8/8/8 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 368,
+      "oracle_proved": false,
+      "oracle_visits": 320
+    },
+    {
+      "fen": "2k5/8/7R/5R2/8/8/6pK/8 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 978,
+      "oracle_proved": false,
+      "oracle_visits": 992
+    },
+    {
+      "fen": "7k/8/2P4n/8/8/8/4K3/q7 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 832,
+      "oracle_proved": false,
+      "oracle_visits": 790
+    },
+    {
+      "fen": "8/2k5/8/8/K7/8/1p3R2/2N5 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 576,
+      "oracle_proved": false,
+      "oracle_visits": 540
+    },
+    {
+      "fen": "1R6/2K1k3/8/1r5P/7q/8/8/8 b - - 0 1",
+      "native_complete": true,
+      "native_reason": "complete",
+      "native_visits": 7,
+      "oracle_proved": true,
+      "oracle_visits": 681
+    },
+    {
+      "fen": "7R/8/6B1/8/4p3/8/7K/3k4 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 699,
+      "oracle_proved": false,
+      "oracle_visits": 573
+    },
+    {
+      "fen": "8/3K4/8/8/2kb2P1/5b2/8/8 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 992,
+      "oracle_proved": false,
+      "oracle_visits": 872
+    },
+    {
+      "fen": "2Q2K2/8/3k4/2p5/5r2/8/8/3B4 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 116,
+      "oracle_proved": false,
+      "oracle_visits": 101
+    },
+    {
+      "fen": "5k2/7K/8/8/n1rR4/6P1/8/8 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 376,
+      "oracle_proved": false,
+      "oracle_visits": 240
+    },
+    {
+      "fen": "K7/8/3k4/4N3/7p/8/Q7/8 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 1094,
+      "oracle_proved": false,
+      "oracle_visits": 1006
+    },
+    {
+      "fen": "8/4bn2/8/3K4/2P2k2/8/8/8 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 487,
+      "oracle_proved": false,
+      "oracle_visits": 421
+    },
+    {
+      "fen": "1R6/5N2/8/8/6k1/K2p4/8/8 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 719,
+      "oracle_proved": false,
+      "oracle_visits": 641
+    },
+    {
+      "fen": "8/8/2br4/8/8/4KP1k/8/8 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 771,
+      "oracle_proved": false,
+      "oracle_visits": 611
+    },
+    {
+      "fen": "6N1/8/8/8/7p/K7/3k4/6N1 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 199,
+      "oracle_proved": false,
+      "oracle_visits": 158
+    },
+    {
+      "fen": "8/6K1/1q2k3/8/6P1/8/4b3/8 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 1278,
+      "oracle_proved": false,
+      "oracle_visits": 1286
+    },
+    {
+      "fen": "8/4B3/2Q5/8/8/3p4/3r2K1/1k6 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 160,
+      "oracle_proved": false,
+      "oracle_visits": 231
+    },
+    {
+      "fen": "8/8/7k/8/3K4/3P3n/8/1q6 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 846,
+      "oracle_proved": false,
+      "oracle_visits": 798
+    },
+    {
+      "fen": "B7/8/8/k7/2K5/B7/4p3/8 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 503,
+      "oracle_proved": false,
+      "oracle_visits": 463
+    },
+    {
+      "fen": "2K5/1r6/8/4q1P1/5k2/8/8/8 b - - 0 1",
+      "native_complete": true,
+      "native_reason": "complete",
+      "native_visits": 9,
+      "oracle_proved": true,
+      "oracle_visits": 45
+    },
+    {
+      "fen": "5K2/3k2r1/8/3p4/8/8/2B5/2N5 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 277,
+      "oracle_proved": false,
+      "oracle_visits": 232
+    },
+    {
+      "fen": "2K5/8/8/4n3/2R5/2q5/2P5/3k4 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 780,
+      "oracle_proved": false,
+      "oracle_visits": 697
+    },
+    {
+      "fen": "8/3N4/5B2/8/8/4k3/2p5/6K1 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 493,
+      "oracle_proved": false,
+      "oracle_visits": 432
+    },
+    {
+      "fen": "k7/8/8/8/7r/7b/3P3K/8 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 598,
+      "oracle_proved": false,
+      "oracle_visits": 532
+    },
+    {
+      "fen": "1B6/6r1/p7/8/N7/8/1K6/7k w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 430,
+      "oracle_proved": false,
+      "oracle_visits": 373
+    },
+    {
+      "fen": "8/1k6/1P6/q7/8/7K/8/q7 b - - 0 1",
+      "native_complete": true,
+      "native_reason": "complete",
+      "native_visits": 1677,
+      "oracle_proved": true,
+      "oracle_visits": 1583
+    },
+    {
+      "fen": "5N2/8/8/8/4K3/8/2p5/1k3B2 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 443,
+      "oracle_proved": false,
+      "oracle_visits": 406
+    },
+    {
+      "fen": "8/8/2P3k1/5b2/7r/R7/8/4K3 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 1003,
+      "oracle_proved": false,
+      "oracle_visits": 909
+    },
+    {
+      "fen": "8/5B2/2k5/8/2p5/3R4/8/7K w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 693,
+      "oracle_proved": false,
+      "oracle_visits": 610
+    },
+    {
+      "fen": "8/8/7b/5K2/8/P3b3/8/1k6 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 481,
+      "oracle_proved": false,
+      "oracle_visits": 421
+    },
+    {
+      "fen": "8/3r4/p1B5/7K/2N5/3k4/8/8 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 617,
+      "oracle_proved": false,
+      "oracle_visits": 546
+    },
+    {
+      "fen": "1K6/8/8/2q4P/3q4/6k1/8/8 b - - 0 1",
+      "native_complete": true,
+      "native_reason": "complete",
+      "native_visits": 173,
+      "oracle_proved": true,
+      "oracle_visits": 148
+    },
+    {
+      "fen": "8/Q5p1/r7/8/8/5K2/1B6/3k4 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 1159,
+      "oracle_proved": false,
+      "oracle_visits": 1119
+    },
+    {
+      "fen": "8/7P/r7/8/8/1k1n4/8/7K b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 992,
+      "oracle_proved": false,
+      "oracle_visits": 899
+    },
+    {
+      "fen": "2K5/2p5/8/8/8/4Q3/B5k1/8 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 1437,
+      "oracle_proved": false,
+      "oracle_visits": 1270
+    },
+    {
+      "fen": "8/2K3P1/8/r7/8/3k4/8/4n3 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 752,
+      "oracle_proved": false,
+      "oracle_visits": 671
+    },
+    {
+      "fen": "4KB2/8/8/8/7p/8/k3N3/8 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 405,
+      "oracle_proved": false,
+      "oracle_visits": 351
+    },
+    {
+      "fen": "8/5K2/8/4r3/2P1k3/1r2R3/8/8 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 150,
+      "oracle_proved": false,
+      "oracle_visits": 132
+    },
+    {
+      "fen": "8/K6R/4p3/5k2/8/8/8/3Q4 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 1688,
+      "oracle_proved": false,
+      "oracle_visits": 1565
+    },
+    {
+      "fen": "7b/3R4/8/1P5k/5n2/8/K7/8 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 479,
+      "oracle_proved": false,
+      "oracle_visits": 413
+    },
+    {
+      "fen": "8/3p4/8/2K5/5k2/8/8/N4B2 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 255,
+      "oracle_proved": false,
+      "oracle_visits": 288
+    },
+    {
+      "fen": "8/3k4/5K2/6P1/8/5n2/5n2/8 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 476,
+      "oracle_proved": false,
+      "oracle_visits": 403
+    },
+    {
+      "fen": "8/B7/1R5r/5p2/8/1K6/4k3/8 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 573,
+      "oracle_proved": false,
+      "oracle_visits": 514
+    },
+    {
+      "fen": "4K3/8/6P1/k7/2b4n/8/R7/8 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 96,
+      "oracle_proved": false,
+      "oracle_visits": 81
+    },
+    {
+      "fen": "3k4/8/3K2p1/8/2Q1B3/8/8/8 w - - 0 1",
+      "native_complete": true,
+      "native_reason": "complete",
+      "native_visits": 5,
+      "oracle_proved": true,
+      "oracle_visits": 39
+    },
+    {
+      "fen": "1b6/8/P7/3r4/8/7K/3k4/8 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 880,
+      "oracle_proved": false,
+      "oracle_visits": 796
+    },
+    {
+      "fen": "8/k7/8/6BR/8/6p1/8/7K w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 219,
+      "oracle_proved": false,
+      "oracle_visits": 417
+    },
+    {
+      "fen": "8/8/8/n7/8/3P4/k1b3K1/8 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 321,
+      "oracle_proved": false,
+      "oracle_visits": 268
+    },
+    {
+      "fen": "8/8/8/3K4/7B/3p1k2/8/4B3 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 455,
+      "oracle_proved": false,
+      "oracle_visits": 395
+    },
+    {
+      "fen": "8/6P1/5k1K/8/R7/8/8/3q3b b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 418,
+      "oracle_proved": false,
+      "oracle_visits": 1697
+    },
+    {
+      "fen": "8/8/8/1K6/3r2R1/1k4p1/6B1/8 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 669,
+      "oracle_proved": false,
+      "oracle_visits": 585
+    },
+    {
+      "fen": "3K4/8/6P1/8/8/3n3q/8/5k2 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 1065,
+      "oracle_proved": false,
+      "oracle_visits": 934
+    },
+    {
+      "fen": "1K6/6r1/8/8/8/p6k/7N/3R4 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 450,
+      "oracle_proved": false,
+      "oracle_visits": 390
+    },
+    {
+      "fen": "8/4K3/4b3/2P5/4k3/8/8/7b b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 523,
+      "oracle_proved": false,
+      "oracle_visits": 457
+    },
+    {
+      "fen": "8/6K1/1r6/6R1/3B4/2p5/2k5/8 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 820,
+      "oracle_proved": false,
+      "oracle_visits": 701
+    },
+    {
+      "fen": "8/4K3/1b6/q7/8/1P6/5k2/8 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 1221,
+      "oracle_proved": false,
+      "oracle_visits": 1107
+    },
+    {
+      "fen": "8/8/6p1/8/7k/1N6/1KQ5/8 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 1127,
+      "oracle_proved": false,
+      "oracle_visits": 1010
+    },
+    {
+      "fen": "r2k4/1b6/1K6/8/1P6/8/8/8 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 582,
+      "oracle_proved": false,
+      "oracle_visits": 508
+    },
+    {
+      "fen": "3B4/8/6kp/8/8/4K3/6N1/8 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 427,
+      "oracle_proved": false,
+      "oracle_visits": 352
+    },
+    {
+      "fen": "1K6/R7/8/2q4P/8/8/7k/3n4 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 1196,
+      "oracle_proved": false,
+      "oracle_visits": 1033
+    },
+    {
+      "fen": "7R/8/6R1/8/4kp2/8/8/3K4 w - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 1131,
+      "oracle_proved": false,
+      "oracle_visits": 1022
+    },
+    {
+      "fen": "8/1P4k1/3b4/2q5/8/8/3K4/8 b - - 0 1",
+      "native_complete": false,
+      "native_reason": "unproven_within_bound",
+      "native_visits": 1651,
+      "oracle_proved": false,
+      "oracle_visits": 1488
+    }
+  ],
+  "corruptions_rejected": [
+    "missing defense",
+    "illegal edge",
+    "cycle",
+    "false bound",
+    "false leaf",
+    "clock mismatch",
+    "unreachable node",
+    "wrong winner",
+    "incomplete claim",
+    "unsupported horizon",
+    "false work budget"
+  ],
+  "legacy_certificates": [
+    {
+      "path": "artifacts/proofs/queen-distant-v1.json",
+      "passed": true,
+      "positions": 31,
+      "edges": 34,
+      "covered_defensive_replies": 18,
+      "checkmate_leaves": 4,
+      "mate_upper_bound_plies": 13,
+      "strong_side": "white",
+      "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+    },
+    {
+      "path": "artifacts/proofs/queen-v1.json",
+      "passed": true,
+      "positions": 4,
+      "edges": 3,
+      "covered_defensive_replies": 1,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 3,
+      "strong_side": "white",
+      "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+    },
+    {
+      "path": "artifacts/proofs/rook-distant-v1.json",
+      "passed": true,
+      "positions": 51,
+      "edges": 57,
+      "covered_defensive_replies": 30,
+      "checkmate_leaves": 5,
+      "mate_upper_bound_plies": 19,
+      "strong_side": "white",
+      "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+    },
+    {
+      "path": "artifacts/proofs/rook-v1.json",
+      "passed": true,
+      "positions": 4,
+      "edges": 3,
+      "covered_defensive_replies": 1,
+      "checkmate_leaves": 1,
+      "mate_upper_bound_plies": 3,
+      "strong_side": "white",
+      "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+    }
+  ],
+  "controls": [
+    {
+      "fixture_correction": "Initial expected en passant mate had a g6 escape because f6 blocks the a6 rook. Replace that rook with a bishop on h7 to defend g6. First failed test log retained; algorithm unchanged.",
+      "original_escape_moves": [
+        "h5g6"
+      ]
+    }
+  ],
+  "protocol": {
+    "ready_seconds": 0.0007555000047432259,
+    "stop_seconds": 0.00020680000307038426,
+    "cancellations": [
+      {
+        "reason": "cancelled",
+        "seconds": 0.001388399992720224
+      },
+      {
+        "reason": "cancelled",
+        "seconds": 0.00012119999155402184
+      },
+      {
+        "reason": "cancelled",
+        "seconds": 7.879998884163797e-05
+      },
+      {
+        "reason": "cancelled",
+        "seconds": 5.3499999921768904e-05
+      },
+      {
+        "reason": "cancelled",
+        "seconds": 5.469999450724572e-05
+      },
+      {
+        "reason": "cancelled",
+        "seconds": 4.980000085197389e-05
+      },
+      {
+        "reason": "cancelled",
+        "seconds": 4.909999552182853e-05
+      },
+      {
+        "reason": "cancelled",
+        "seconds": 5.8599995099939406e-05
+      }
+    ],
+    "explanation_during_infinite_search": {
+      "kind": "bounded_mate",
+      "complete": true,
+      "reason": "complete",
+      "summary": "White can force checkmate within 5 plies. The certificate covers every legal defensive reply in 18 positions; every path ends in checkmate.",
+      "rootFen": "8/8/4K3/1k6/8/1p6/8/Q1R5 w - - 0 1",
+      "strongSide": 0,
+      "bound": 5,
+      "maxPlies": 7,
+      "visits": 26990,
+      "positions": 18,
+      "move": "a1a3"
+    },
+    "overwrite_refused": true,
+    "incomplete_export_refused": true
+  },
+  "interpretation": "Independent winning strategies and bounded oracle agreement. Unknown budgets are retained. Covers general material, both colors, attacker/defender roots, special moves, cancellation and protocol. No playing strength or Stockfish superiority inferred."
+}

@@ -866,6 +866,82 @@ Test("major-piece mate tables distinguish mate, capture and stalemate", () =>
         Require(!won, "Capture/stalemate cannot be won");
     }
 });
+Test("general mate certificates cover every defense, terminal leaf and special move", () =>
+{
+    var cases = new (string Fen, int Bound)[]
+    {
+        ("6k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1", 1),
+        ("7k/7p/4K1Q1/8/8/8/8/8 w - - 0 1", 5),
+        ("k7/p1P5/2K5/8/8/8/8/8 w - - 0 1", 1),
+        ("5B2/7B/6P1/R4pPk/8/7K/8/8 w - f6 0 1", 1),
+        ("5k2/4p1p1/8/3B3B/8/8/8/4K2R w K - 0 1", 1)
+    };
+    foreach (var test in cases)
+    {
+        var b = new Board(test.Fen); ulong key = b.Key; int score = Evaluation.Evaluate(b);
+        MateStrategyProof proof = MateProof.Build(b, b.Side, test.Bound);
+        Require(proof.Complete, proof.Summary); Equal(test.Bound, proof.RootDistance);
+        Equal(test.Fen, b.ToFen()); Equal(key, b.Key); Equal(score, Evaluation.Evaluate(b));
+        var seen = new HashSet<int>();
+        void Check(int id, Board current)
+        {
+            Require(seen.Add(id), "Repeated certificate node");
+            ProofNode node = proof.Nodes[id]; Equal(current.ToFen(), node.Fen);
+            Span<Move> moves = stackalloc Move[256]; int count = current.GenerateLegal(moves);
+            if (count == 0)
+            {
+                Require(current.InCheck && current.Side != proof.StrongSide, "False mate leaf");
+                Equal(0, node.Distance); Equal(0, node.Edges.Count); return;
+            }
+            Require(!current.InsufficientMaterial() && !current.IsRepetition() && current.HalfmoveClock < 100, "Draw in winning certificate");
+            Equal(current.Side == proof.StrongSide ? 1 : count, node.Edges.Count);
+            foreach (ProofEdge edge in node.Edges)
+            {
+                Require(current.TryMakeMove(current.ParseMove(edge.Move)), "Illegal proof edge");
+                try { Require(proof.Nodes[edge.To].Distance < node.Distance, "Nondecreasing bound"); Check(edge.To, current); }
+                finally { current.UnmakeMove(); }
+            }
+            Equal(node.Fen, current.ToFen());
+        }
+        Check(0, new Board(test.Fen)); Equal(proof.Nodes.Count, seen.Count);
+        Require(proof.Nodes.Count <= proof.Visits && proof.Visits <= proof.NodeLimit, "Budget exceeded");
+        if (test.Bound == 5)
+        {
+            Require(!MateProof.Build(b, b.Side, 3).Complete, "Mate claimed outside horizon");
+            Play(b, proof.Nodes[0].Edges[0].Move);
+            var defender = new Board(b.ToFen());
+            MateStrategyProof defense = MateProof.Build(defender, proof.StrongSide, 4);
+            Require(defense.Complete && defense.RootDistance == 4, "Defender-root proof failed");
+            Equal(defender.GenerateLegal(new Move[256]), defense.Nodes[0].Edges.Count);
+            b.UnmakeMove(); Equal(test.Fen, b.ToFen());
+        }
+    }
+});
+Test("general mate proof refuses incomplete, drawn, unsafe or cancelled guarantees", () =>
+{
+    var b = new Board(); ulong key = b.Key;
+    MateStrategyProof limited = MateProof.Build(b, 0, 7, 1);
+    Equal("node_limit", limited.Reason); Require(!limited.Complete && limited.Nodes.Count == 0 && limited.Visits == 1, "Partial guarantee escaped");
+    using var canceled = new CancellationTokenSource(); canceled.Cancel();
+    var result = MateProof.Build(b, 0, cancellation: canceled.Token);
+    Equal("cancelled", result.Reason); Require(!result.Complete && result.Nodes.Count == 0, "Cancelled guarantee escaped");
+    Equal(Board.StartFen, b.ToFen()); Equal(key, b.Key);
+    var history = new Board(); Play(history, "g1f3", "g8f6"); Equal("prior_history", MateProof.Build(history, 0).Reason);
+    Play(history, "e2e4"); Require(MateProof.Build(history, 1, 0).Reason != "prior_history", "Reset clock rejected");
+    foreach (string fen in new[] { "7k/5Q2/6K1/8/8/8/8/8 b - - 0 1", "7k/8/8/8/8/8/8/K7 w - - 0 1" })
+        Require(!MateProof.Build(new Board(fen), 0, 3).Complete, "Draw certified as mate");
+    string mate = "7k/6Q1/6K1/8/8/8/8/8 b - - 100 1";
+    Require(MateProof.Build(new Board(mate), 0, 0, 1).Complete, "Rule50 overrode existing mate");
+    Require(!MateProof.Build(new Board(mate), 1, 0).Complete, "Mated side assigned the win");
+    Equal("rule50_boundary", MateProof.Build(new Board("6k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 99 1"), 0, 1).Reason);
+    Equal("invalid_position", MateProof.Build(new Board("7k/5KP1/8/8/8/8/8/8 w - - 0 1"), 0).Reason);
+    Equal("invalid_position", MateProof.Build(new Board("4k3/8/8/8/8/8/8/4K3 w K - 0 1"), 0).Reason);
+    Equal("invalid_position", MateProof.Build(new Board("4r2k/8/8/8/1b6/5n2/8/4K3 w - - 0 1"), 1).Reason);
+    foreach (int bound in new[] { -1, 8 })
+        try { MateProof.Build(b, 0, bound); throw new Exception("Invalid bound accepted"); } catch (ArgumentOutOfRangeException) { }
+    foreach (int budget in new[] { 0, 100001 })
+        try { MateProof.Build(b, 0, nodeLimit: budget); throw new Exception("Invalid budget accepted"); } catch (ArgumentOutOfRangeException) { }
+});
 Test("strategy proof covers every defense, respects limits and leaves the board intact", () =>
 {
     var board = new Board("7k/8/5K2/8/1R6/8/8/8 w - - 0 1");

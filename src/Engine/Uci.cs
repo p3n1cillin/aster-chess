@@ -10,6 +10,7 @@ public sealed class Uci
     private Task? running;
     private Task? explaining;
     private CancellationTokenSource? cancellation;
+    private CancellationTokenSource? explanationCancellation;
     private readonly object outputLock = new();
     private int moveOverhead = 20;
     private NeuralNetwork? network;
@@ -51,7 +52,7 @@ public sealed class Uci
 #elif ASTER_THREATS
                         Write("id name Aster 0.7.1-threat-dev");
 #else
-                        Write("id name Aster 0.7.8-phase-dev");
+                        Write("id name Aster 0.7.9-mate-proof-dev");
 #endif
                         Write("id author Aster contributors");
                         Write("option name Hash type spin default 64 min 1 max 1024");
@@ -60,9 +61,9 @@ public sealed class Uci
                         Write("option name EvalFile type string default <classical>");
                         Write("option name Clear Hash type button"); Write("uciok"); break;
                     case "isready": Write("readyok"); break;
-                    case "ucinewgame": await StopAsync(); table.Clear(); position = new Board(network: network); break;
-                    case "setoption": await StopAsync(); SetOption(tokens); break;
-                    case "position": await StopAsync(); SetPosition(tokens); break;
+                    case "ucinewgame": await StopAsync(); await StopExplanationAsync(); table.Clear(); position = new Board(network: network); break;
+                    case "setoption": await StopAsync(); await StopExplanationAsync(); SetOption(tokens); break;
+                    case "position": await StopAsync(); await StopExplanationAsync(); SetPosition(tokens); break;
                     case "go":
                         await StopAsync();
                         SearchLimits limits = ParseLimits(tokens);
@@ -86,24 +87,40 @@ public sealed class Uci
                             }
                         });
                         break;
-                    case "stop": await StopAsync(); break;
-                    case "quit": await StopAsync(); return;
+                    case "stop": await StopAsync(); await StopExplanationAsync(); break;
+                    case "quit": await StopAsync(); await StopExplanationAsync(); return;
                     case "d": Write($"info string fen {position.ToFen()}"); break;
                     case "legal": PrintLegal(); break;
                     case "haslegal": Write($"info string haslegal {(position.HasAnyLegalMove() ? "true" : "false")}"); break;
                     case "eval": Write($"info string eval {Evaluation.Evaluate(position)}"); break;
                     case "explain":
+                        bool generalMate = tokens.Length > 1;
+                        if (generalMate && (tokens[1] != "mate" || tokens.Length > 4)) throw new FormatException("Expected explain mate [plies0..7] [visits1..100000].");
+                        int proofPlies = tokens.Length >= 3 ? ParseInteger(tokens, 2, 0, 7) : 7;
+                        int proofVisits = tokens.Length >= 4 ? ParseInteger(tokens, 3, 1, 100000) : 50000;
                         if (explaining is { IsCompleted: false }) { Write("info string explanation busy"); break; }
+                        explanationCancellation?.Dispose(); explanationCancellation = new CancellationTokenSource();
+                        CancellationToken proofToken = explanationCancellation.Token;
                         Board explanationRoot = position.Clone();
                         explaining = Task.Run(() =>
                         {
                             try
                             {
-                                StrategyProof explanation = EndgameProof.Build(explanationRoot);
-                                Write("info string explanation " + System.Text.Json.JsonSerializer.Serialize(new
+                                StrategyProof? explanation = generalMate ? null : EndgameProof.Build(explanationRoot, cancellation: proofToken);
+                                if (explanation == null || explanation.Reason == "unsupported_material")
+                                {
+                                    MateStrategyProof mate = MateProof.Build(explanationRoot, explanationRoot.Side, proofPlies, proofVisits, proofToken);
+                                    Write("info string explanation " + System.Text.Json.JsonSerializer.Serialize(new
+                                        { kind = "bounded_mate", complete = mate.Complete, reason = mate.Reason, summary = mate.Summary,
+                                          rootFen = mate.RootFen, strongSide = mate.StrongSide, bound = mate.RootDistance, maxPlies = mate.MaxPlies, visits = mate.Visits,
+                                          positions = mate.Nodes.Count, move = mate.Nodes.Count > 0 && mate.Nodes[0].Edges.Count > 0 ? mate.Nodes[0].Edges[0].Move : null }));
+                                }
+                                else Write("info string explanation " + System.Text.Json.JsonSerializer.Serialize(new
                                     { complete = explanation.Complete, reason = explanation.Reason, summary = explanation.Summary,
                                       positions = explanation.Nodes.Count, alternatives = explanation.Alternatives }));
                             }
+                            catch (OperationCanceledException) when (proofToken.IsCancellationRequested)
+                            { Write("info string explanation {\"complete\":false,\"reason\":\"cancelled\"}"); }
                             catch (Exception error) { Write("info string explanation error " + System.Text.Json.JsonSerializer.Serialize(error.Message)); }
                         });
                         break;
@@ -137,6 +154,14 @@ public sealed class Uci
             { Write($"info string error: {error.Message}"); }
         }
         await StopAsync();
+        await StopExplanationAsync();
+    }
+    private async Task StopExplanationAsync()
+    {
+        if (explaining == null) return;
+        explanationCancellation?.Cancel();
+        await explaining;
+        explaining = null; explanationCancellation?.Dispose(); explanationCancellation = null;
     }
     private void PrintLegal()
     {

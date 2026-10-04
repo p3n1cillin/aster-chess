@@ -12,6 +12,17 @@ public static class Program
             if (args.Length == 0) { await new Uci().RunAsync(); return 0; }
             switch (args[0])
             {
+                case "certify-mate":
+                    if (args.Length < 5) throw new ArgumentException("certify-mate requires a new output path, plies0..7, white|black and FEN.");
+                    int matePlies = int.Parse(args[2]);
+                    int attacker = args[3] switch { "white" => 0, "black" => 1, _ => throw new ArgumentException("Expected white or black.") };
+                    MateStrategyProof mateProof = MateProof.Build(new Board(string.Join(' ', args[4..])), attacker, matePlies);
+                    if (!mateProof.Complete) { Console.Error.WriteLine(mateProof.Summary); return 2; }
+                    // CreateNew closes the race between checking and writing.
+                    using (var certificate = new FileStream(args[1], FileMode.CreateNew, FileAccess.Write))
+                        JsonSerializer.Serialize(certificate, mateProof, new JsonSerializerOptions
+                            { PropertyNamingPolicy = JsonNamingPolicy.CamelCase, WriteIndented = true });
+                    Console.WriteLine(mateProof.Summary); return 0;
                 case "certify":
                     if (args.Length < 3) throw new ArgumentException("certify requires a new output path and FEN.");
                     if (File.Exists(args[1])) throw new IOException("Preserve existing strategy certificates.");
@@ -68,7 +79,7 @@ public static class Program
                     Console.WriteLine(JsonSerializer.Serialize(new { totalNodes, milliseconds = benchTimer.ElapsedMilliseconds, nps = totalNodes * 1000 / Math.Max(1, benchTimer.ElapsedMilliseconds) }));
                     return 0;
                 default:
-                    Console.Error.WriteLine("Usage: Aster [perft [depth] [fen] | bench [depth] [evalfile] | kpkdump <path> | majordump queen|rook <path> | certify <path> <fen>]; no arguments starts UCI."); return 2;
+                    Console.Error.WriteLine("Usage: Aster [perft [depth] [fen] | bench [depth] [evalfile] | kpkdump <path> | majordump queen|rook <path> | certify <path> <fen> | certify-mate <path> <plies0..7> <white|black> <fen>]; no arguments starts UCI."); return 2;
             }
         }
         catch (Exception error) when (error is ArgumentException or FormatException or OverflowException or IOException or UnauthorizedAccessException)

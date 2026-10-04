@@ -1,0 +1,147 @@
+{
+  "created_utc": "2026-10-04T18:32:06.076063+00:00",
+  "plan_sha256": "76a88c4bd07699229bbf3fb3a974319c48912b6014f892f9720dfc8b16c3328e",
+  "source_files": [
+    {
+      "path": "declare_mate_proof.py",
+      "sha256": "8ed1ef76f4f55d3a1dbd36879d5303eea697188131083fd0b47dc274955448b6"
+    },
+    {
+      "path": "prepare_mate_proof.py",
+      "sha256": "a956159dace5289058edda6c5e408e884eefab0e29e6463b1c8dda35e9376c53"
+    },
+    {
+      "path": "verify_general_proofs.py",
+      "sha256": "5ccde4cb0c951c4dc20217608d3e51678cc64c28c52d6b2e104fa8fe6c480c69"
+    },
+    {
+      "path": "verify_mate_proof.py",
+      "sha256": "9bd2c170d989cb04eb9fccf9cabe26de0e89a8d148c53758cd934004beb3bbfe"
+    },
+    {
+      "path": "verify_strategy_proof.py",
+      "sha256": "d2829747b735c367984e72832e27edf9df2589edc41a2f28df4b74c09053b28e"
+    },
+    {
+      "path": "check_mate_proof.py",
+      "sha256": "718dbe7b344543e745b150241951d8240b52528312d0a49c8e1d86320643edc3"
+    },
+    {
+      "path": "run_mate_proof.py",
+      "sha256": "2ecbb86585abc49b96eaee7a24f878731edcfed01e921d8d49618d1df27acf7a"
+    },
+    {
+      "path": "preserve_mate_proof.py",
+      "sha256": "d9310bb22822fd27026942f0447d7e952d25ff6d6e2a3552232ba6d708a7c6f8"
+    },
+    {
+      "path": "freeze_mate_proof_pipeline.py",
+      "sha256": "9189c5b23308ac631ea464d9330f3db688bd572bc4e18c8f4fb2a1a21eefc43b"
+    },
+    {
+      "path": "match.py",
+      "sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8"
+    },
+    {
+      "path": "audit_match.py",
+      "sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6"
+    },
+    {
+      "path": "run_rating.py",
+      "sha256": "6e8a31adefd0aeb5d51eac2f5672396f4518f779947713f86dac138ff00f661a"
+    },
+    {
+      "path": "uci_client.py",
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    },
+    {
+      "path": "tactics.py",
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    },
+    {
+      "path": "compare_search.py",
+      "sha256": "a8162c85b4ea4aae46546ca8a02d4b04c083bf56abb6a28d64f322b2331b6dd9"
+    },
+    {
+      "path": "generate_openings.py",
+      "sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746"
+    },
+    {
+      "path": "audit_openings.py",
+      "sha256": "0c97723cf8a0404f9e3681a90f5d9d09dcfc4978721748222ee80a679a6fca5d"
+    },
+    {
+      "path": "freeze_engine_source.py",
+      "sha256": "db919e19f9b75ade115a3d834ad48cc57e01a6165130ef03a775279f4c89acb7"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "artifacts/validation/mate-proof-general-v2.json",
+      "sha256": "bb0931d61db1c65400575b0f9aaa56dd0fc90c77722772f27d1eb49d0217a978"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-general.json",
+      "sha256": "fcdce8a8f7a33392a98e0d498b126b4f8f50584d54513d7404146444fa2d26ac"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-match-audit.json",
+      "sha256": "0f12bad7f612bcd99c29648406c262bd00b72ae23f7aaf03d929d92f959461d1"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-parent-audit.json",
+      "sha256": "55f118780f98ab16ffe3a91d1b8572b4a4d2bc95ebee69cb5d4625796809755b"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-preflight.json",
+      "sha256": "d15c128e301e3d3bf468b2d4337131b6b0dd001191895909fdaf6116eb0af23c"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-rules-v2.json",
+      "sha256": "cf88cd312f549fa6101f8bca9c1be941c73430751a9c496aabafaaee715fc723"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-rules.json",
+      "sha256": "23bc7f6f251c07470acb341cab1488ad20698425a307ce414ecb1f8b5f2eea89"
+    },
+    {
+      "path": "artifacts/benchmarks/mate-proof-default-vs-phase-depth8.json",
+      "sha256": "79b157d9b4d51b9253df1138d42c64dd8b7b366d47b0d8e9a897699b89261b85"
+    },
+    {
+      "path": "artifacts/tactics/mate-proof-endgames-nodes.json",
+      "sha256": "bb29306c227e919fed76b1f8e339a85f9c648ea5b4c911b02382faaa8c481d20"
+    },
+    {
+      "path": "artifacts/tactics/mate-proof-original-depth8.json",
+      "sha256": "c06f14a04a8df4d95d8930340108505f646de04828fc465822d2b082a60d70b8"
+    },
+    {
+      "path": "artifacts/tactics/mate-proof-original-nodes.json",
+      "sha256": "4f46f48d4a46c0582d26f6c46708587f1156dbe2af68acba72ebb8aa66c9315f"
+    },
+    {
+      "path": "artifacts/tactics/mate-proof-quiet-depth8.json",
+      "sha256": "5a573da108dada75abfdbef0cc4338d3319a699c927fa990d35acc0a6c66ff92"
+    },
+    {
+      "path": "artifacts/tactics/mate-proof-quiet-nodes.json",
+      "sha256": "0e23e365e584820c7d76b85e4781165c391f14ee9974c08fffe5e6df1fa53bc3"
+    },
+    {
+      "path": "tests/fixtures/mate-proof-match-v1.json",
+      "sha256": "14286109ef669ec3abab5d4bfeb8f5de1ca6468969b72b8fd0cd658ba94edc0a"
+    },
+    {
+      "path": "tests/fixtures/mate-proof-parent-v1.json",
+      "sha256": "85553f4ff2dcc2ce9896e002ce5730d4ca54061c82f1032bdb47f0c83ae750c4"
+    }
+  ],
+  "candidate_sha256": "ac907eac90bba15acab80c15d16f195044a8ac2b59a7964f5a065bc0caaa0ae8",
+  "candidate_source_sha256": "b90d8b01c71906fe4718922c84410db5b9e0c5a51a01a9b5bd3baf31929f589a",
+  "interpretation": "Frozen before fixed32-game unchanged-play regression. Certificate capability verified separately. No adaptive extension or strength inference."
+}

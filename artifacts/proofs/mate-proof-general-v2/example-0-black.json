@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "complete": true,
+  "reason": "complete",
+  "summary": "Black can force checkmate within 1 plies. The certificate covers every legal defensive reply in 2 positions; every path ends in checkmate.",
+  "rootFen": "3q2k1/5ppp/8/8/8/8/5PPP/6K1 b - - 0 1",
+  "strongSide": 1,
+  "rootDistance": 1,
+  "maxPlies": 7,
+  "visits": 3,
+  "nodeLimit": 50000,
+  "nodes": [
+    {
+      "id": 0,
+      "fen": "3q2k1/5ppp/8/8/8/8/5PPP/6K1 b - - 0 1",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "d8d1",
+          "to": 1
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "fen": "6k1/5ppp/8/8/8/8/5PPP/3q2K1 w - - 1 2",
+      "distance": 0,
+      "edges": []
+    }
+  ]
+}

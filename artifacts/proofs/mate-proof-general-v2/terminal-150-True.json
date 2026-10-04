@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "complete": true,
+  "reason": "complete",
+  "summary": "The defender is already checkmated.",
+  "rootFen": "8/8/8/8/8/6k1/6q1/7K w - - 150 1",
+  "strongSide": 1,
+  "rootDistance": 0,
+  "maxPlies": 0,
+  "visits": 1,
+  "nodeLimit": 50000,
+  "nodes": [
+    {
+      "id": 0,
+      "fen": "8/8/8/8/8/6k1/6q1/7K w - - 150 1",
+      "distance": 0,
+      "edges": []
+    }
+  ]
+}

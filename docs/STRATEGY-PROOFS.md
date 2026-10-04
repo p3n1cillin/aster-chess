@@ -64,7 +64,10 @@ ordinary source build exposes these diagnostics but leaves the experimental
 evaluation/root constraints disabled. It passes 49 engine tests, 1,614
 required differential checks and the unchanged 146,772-node benchmark.
 
-General winning plans, tactical sacrifices and ordinary middlegame
-explanations remain future work. Extend proof coverage with concrete,
+The later ordinary **0.7.9-mate-proof-dev** source also exports bounded
+[general-material mating certificates](GENERAL-MATE-PROOFS.md). It preserves
+these endgame explanations and all 36 legacy certificates. General winning
+plans and ordinary non-mating middlegame explanations remain future work.
+Extend proof coverage with concrete,
 independently checkable claims; do not turn a search score or single PV into
 a claimed guarantee.

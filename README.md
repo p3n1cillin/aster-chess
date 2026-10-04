@@ -44,6 +44,9 @@ dotnet publish src/Engine/Engine.csproj -c Release -r win-x64 --self-contained f
 
 ## Engine capabilities
 
+Current development source also exports [general mating strategy certificates](docs/GENERAL-MATE-PROOFS.md),
+covering every legal defense with independent rule-only verification.
+
 - Bitboards, legal move generation, FEN, all standard castling rules, en passant,
   and all four promotion choices.
 - Incremental Zobrist hashing and tapered classical evaluation, pawn structure,

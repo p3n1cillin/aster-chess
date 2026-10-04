@@ -12,10 +12,11 @@ public sealed record StrategyProof(bool Complete, string Reason, string Summary,
 public static class EndgameProof
 {
     private sealed class ProofLimitException : Exception;
-    public static StrategyProof Build(Board position, int nodeLimit = 50000)
+    public static StrategyProof Build(Board position, int nodeLimit = 50000, CancellationToken cancellation = default)
     {
         if (nodeLimit is < 1 or > 100000) throw new ArgumentOutOfRangeException(nameof(nodeLimit));
         var board = position.Clone(); string rootFen = board.ToFen();
+        cancellation.ThrowIfCancellationRequested();
         var nodes = new List<ProofNode>(); var alternatives = new List<ProofAlternative>();
         int strong = 0, distance = 0;
         StrategyProof Result(bool complete, string reason, string summary) =>
@@ -30,6 +31,7 @@ public static class EndgameProof
         Span<Move> rootMoves = stackalloc Move[256]; int rootCount = board.GenerateLegal(rootMoves);
         for (int i = 0; i < rootCount; i++)
         {
+            cancellation.ThrowIfCancellationRequested();
             Move move = rootMoves[i]; if (!board.TryMakeMove(move)) continue;
             try
             {
@@ -44,6 +46,7 @@ public static class EndgameProof
         var visited = new Dictionary<ulong, int>();
         int Visit()
         {
+            cancellation.ThrowIfCancellationRequested();
             if (visited.TryGetValue(board.Key, out int known)) return known;
             if (nodes.Count >= nodeLimit) throw new ProofLimitException();
             if (!MajorMateBitbase.Probe(board, out _, out bool nodeWon, out int remaining) || !nodeWon)

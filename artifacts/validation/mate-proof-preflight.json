@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "candidate": "artifacts/publish/mate-proof-dev-v2/Aster.dll",
+  "candidate_sha256": "ac907eac90bba15acab80c15d16f195044a8ac2b59a7964f5a065bc0caaa0ae8",
+  "candidate_source": "artifacts/research/mate-proof-source-v2/manifest.json",
+  "candidate_source_sha256": "b90d8b01c71906fe4718922c84410db5b9e0c5a51a01a9b5bd3baf31929f589a",
+  "plan_sha256": "76a88c4bd07699229bbf3fb3a974319c48912b6014f892f9720dfc8b16c3328e",
+  "general_verification_sha256": "bb0931d61db1c65400575b0f9aaa56dd0fc90c77722772f27d1eb49d0217a978",
+  "unchanged_playing_files": [
+    {
+      "path": "src/Engine/Attacks.cs",
+      "sha256": "10a2eb8139f9786d5b097d92f3e385a889a24c8940a0d1fade1b1a987a37b9c6"
+    },
+    {
+      "path": "src/Engine/Board.cs",
+      "sha256": "af1db55d63700255db50bd2c5b538d15c7ae1558ba3296a21f0e54bf2bfa16d9"
+    },
+    {
+      "path": "src/Engine/Evaluation.cs",
+      "sha256": "b7c1ad0014eebea5d59c13ba37861616df60db253f906f6b94b4fb88e7d3bbe5"
+    },
+    {
+      "path": "src/Engine/KpkBitbase.cs",
+      "sha256": "a13112931282526f774ca2b5ea1e87736f0c21e4b24d1fa9da8ae18560bfcc39"
+    },
+    {
+      "path": "src/Engine/MajorMateBitbase.cs",
+      "sha256": "2ff38a71882eb9f8a5a1305745f569bb6849bb44f8d2a2c329ecba9a74617b48"
+    },
+    {
+      "path": "src/Engine/Move.cs",
+      "sha256": "9cee181118dc8dbf01687b7c5210ad81aa07826e70ce7fb9b512b321b69bdc85"
+    },
+    {
+      "path": "src/Engine/NeuralNetwork.cs",
+      "sha256": "4961c8545975f63e5ace2913c21ead67bee6a1cbb2d3b25a8fdcc2bbdc07cbf2"
+    },
+    {
+      "path": "src/Engine/Perft.cs",
+      "sha256": "7e679e005a22d3cd3e003f6034495d4e62c8fd5ca79b89822c9a7e78b2fd085e"
+    },
+    {
+      "path": "src/Engine/Search.cs",
+      "sha256": "f0efbc3320594503c91efe78f38622e5ee3412817af9aebc146cd90d5052c919"
+    },
+    {
+      "path": "src/Engine/SearchProfile.cs",
+      "sha256": "60ed1caee10ce09adf20d9542d0eac06fc613a29881f04bd0f15a826109d405c"
+    },
+    {
+      "path": "src/Engine/StaticExchange.cs",
+      "sha256": "36208f3889d346dac33deba7ad7f9e20cd67deeb465c910f2355cbde8fd57af9"
+    },
+    {
+      "path": "src/Engine/ThreatEvaluation.cs",
+      "sha256": "b956761ca5157dc70faecdd28faa1d45a52cd574cefb9866cd45a11f5df364bd"
+    },
+    {
+      "path": "src/Engine/TranspositionTable.cs",
+      "sha256": "6b6a3a5581678ebf8c36640f02e1ed27ee9055ed55f1eaa205ab7d38bbf45001"
+    },
+    {
+      "path": "src/Engine/Zobrist.cs",
+      "sha256": "116806963b5b3a5b9bd10c9b988fffd78ce56f7abfa3a2bf716203d42c687ac2"
+    }
+  ],
+  "behavior": {
+    "positions": 32,
+    "same_move": 32,
+    "same_score": 32,
+    "candidate_nodes": 2371866,
+    "candidate_elapsed_seconds": 1.454,
+    "opponent_nodes": 2371866,
+    "opponent_elapsed_seconds": 1.282
+  },
+  "tactics": {
+    "original-depth8": 32,
+    "original-nodes": 32,
+    "quiet-depth8": 32,
+    "quiet-nodes": 25,
+    "endgames-nodes": 13
+  },
+  "native_stockfish_reference": {
+    "manifest": {
+      "tag": "sf_19",
+      "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+      "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+      "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+      "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+      "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+      "uci_name": "Stockfish 19"
+    },
+    "responses": [
+      "Unknown command: 'explain mate 3'. Type help for more information.",
+      "readyok"
+    ]
+  },
+  "candidate_revision": "Additional invalid-root triple-check rejection, expanded terminal clock/legacy tests, before matches. Original binary/source/diagnostics retained. No valid-position proof algorithm, playing code or declared gate changes.",
+  "interpretation": "New native general certificate interface passes independent strategy/protocol checks. Pinned Stockfish does not natively return this explanation command; external tools can add such functionality. Exact normal playing outputs retained, not a strength improvement claim."
+}
