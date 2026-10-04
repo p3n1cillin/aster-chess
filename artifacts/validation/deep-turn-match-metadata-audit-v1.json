@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "passed": true,
+  "post_match_audit": true,
+  "script_sha256": "27ce7d41cf72769b2b28c6bed629424bfcfe998fbbda045754970d4a05a0fbdb",
+  "plan_sha256": "70e19c063e26fe4c5bd289f0807ec3ef01ff0c44f3e6309de9cc4abbcb183c8b",
+  "phases": [
+    {
+      "phase": "classical-30ms",
+      "games": 128,
+      "report_sha256": "3531ad7e3124df28715f0c86fd64ecca65feea86bb6bee539f5677dd1eb8da91",
+      "opening_sha256": "1ffa275e525d665757213fa34a93aa4bed17982fd844d444299b01d556fd0255",
+      "seconds_per_move": 0.03
+    },
+    {
+      "phase": "control-30ms",
+      "games": 128,
+      "report_sha256": "2aa1e6231e80e66b77aca33c3297d8ab3a119fd727a6eb2d281ac65439b392d3",
+      "opening_sha256": "99889d267db0879be7131c4039dd80d258ad2221fe54222133dd32709b595e03",
+      "seconds_per_move": 0.03
+    }
+  ],
+  "scope": "Exact applied resource options, evaluator fingerprints, frozen source manifests, time controls, ply caps and opening partitions. Independent PGN legality/outcome audits are retained separately. No gate changes or tuning."
+}

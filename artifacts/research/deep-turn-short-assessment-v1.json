@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "plan_sha256": "70e19c063e26fe4c5bd289f0807ec3ef01ff0c44f3e6309de9cc4abbcb183c8b",
+  "assessor_sha256": "40bd8a0f2f261bfcd9d7742cbb6c05020d3c845822d541b081c09c9cff0349c3",
+  "results": {
+    "classical-30ms": {
+      "games": 128,
+      "wins": 37,
+      "draws": 36,
+      "losses": 55,
+      "unresolved": 0,
+      "forfeits": 0,
+      "score": 0.4296875,
+      "primary_95_percent_family_interval": [
+        0.3588709677419355,
+        0.5
+      ],
+      "families": 56,
+      "report_sha256": "3531ad7e3124df28715f0c86fd64ecca65feea86bb6bee539f5677dd1eb8da91",
+      "pgn_sha256": "dba065294bab8e8fe2fa5faaf3dd661d831d3ea585eefc5a2905d883ecdd48a7",
+      "audit_sha256": "c99d034099e04df4653bffd5f7aa7351bef155d51a46641e3e9f7b09cb6d2d3f"
+    },
+    "control-30ms": {
+      "games": 128,
+      "wins": 25,
+      "draws": 56,
+      "losses": 47,
+      "unresolved": 0,
+      "forfeits": 0,
+      "score": 0.4140625,
+      "primary_95_percent_family_interval": [
+        0.34701492537313433,
+        0.484375
+      ],
+      "families": 51,
+      "report_sha256": "2aa1e6231e80e66b77aca33c3297d8ab3a119fd727a6eb2d281ac65439b392d3",
+      "pgn_sha256": "3384c93d1081614ec625f12ba2eb0ea14a665ceb0446d3af73d2d83d9bc2e763",
+      "audit_sha256": "e0f415da57c08659d7a5bc1a2f2ff2bc9afb82b346edb60a3690d30405de26c5"
+    }
+  },
+  "gates": {
+    "correctness": true,
+    "tactics": true,
+    "classical_short": false,
+    "control_short": false,
+    "short_zero_unresolved_forfeits": true
+  },
+  "failed_gates": [
+    "classical_short",
+    "control_short"
+  ],
+  "eligible_for_long_confirmation": false,
+  "eligible_for_promotion": false,
+  "interpretation": "Predeclared fresh paired-turn objective ablation. No Elo or Stockfish superiority inferred; any failed gate keeps the candidate experimental."
+}

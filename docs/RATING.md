@@ -55,6 +55,16 @@ model is promoted or calibrated. The [session record](../artifacts/ratings/sessi
 retains the same exact **2319 / 2277..2360** reference above. Regression
 scores and teacher-label fit are not new Elo measurements.
 
+The subsequent [fresh deep paired-turn objective ablation](DEEP-TURN-PAIRS.md)
+trains two models on identical **63826** rows with matched initialization,
+splits and all batch streams. The candidate passes every tactical threshold
+but its **256 audited games** score **42.97%** against classical and **41.41%**
+against matched control, missing both playing gates. Longer confirmation is
+skipped, with 32 reserved pairs unused; neither model is promoted or calibrated.
+The [session record](../artifacts/ratings/session-20261004-deep-turn.json)
+retains the exact **2319 / 2277..2360** local reference. These models and the
+metadata-only rebuilt assembly do not inherit the calibrated binary's rating.
+
 The frozen ordinary **Aster 0.7.4-feature-dev** has a provisional local estimate
 of **2300**, with a **95% opening-family interval of 2265..2335**, on the
 **SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash** scale.

@@ -89,6 +89,9 @@ Fresh endgame label coverage and a separately frozen move suite are recorded
 in [endgame diagnostics](docs/ENDGAME-DIAGNOSTIC.md).
 Fresh balanced score ranges and a matched static/deeper teacher-label ablation
 are documented in [stable endgame labels](docs/STABLE-ENDGAME-LABELS.md).
+Identical-data training with a separate fresh paired-turn objective is documented
+in [deep turn pairs](docs/DEEP-TURN-PAIRS.md), including counterfactual provenance,
+matched batch streams and tactical/playing gates.
 An original, opt-in king-and-pawn solver is documented in
 [KPK endgame research](docs/KPK.md), with exhaustive oracle validation and
 independent move-choice checks. It is disabled in ordinary builds.

@@ -215,6 +215,19 @@ The sampling interval made every fresh position White to move, and three of
 and paired-turn search supervision before drawing broad conclusions; isolate
 feature/capacity experiments from data changes. See `docs/STABLE-ENDGAME-LABELS.md`.
 
+The fresh paired-turn objective ablation completes both trainings on **63826** shared
+rows: unchanged old data plus **1913** fresh deep-labelled White/Black pairs.
+Counterfactual states retain no fabricated played outcomes. Only fresh-pair
+objective weight differs; complete initialization, split and batch orders
+match. Candidate passes all tactical gates, while common held-out ordinary
+and paired MAE worsen. All **256** short games pass independent audit: **42.97%**
+against classical (family interval **35.89%..50.00%**) and **41.41%** against
+matched control (**34.70%..48.44%**). Both playing gates fail; longer confirmation
+is skipped, with 32 reserved pairs unused. Neither model is promoted or rated.
+See `docs/DEEP-TURN-PAIRS.md`. Isolate representation/capacity and compatibility
+of static/deep supervision next, including quantized inference and actual
+search cost; do not select an objective by tactical fit alone.
+
 Next, extend feature interactions and the reproducible data pipeline using
 diverse legal self-play positions and scored outcomes or explicitly documented
 teacher labels. Partition by game to avoid train/test leakage; remove duplicate

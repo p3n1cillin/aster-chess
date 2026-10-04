@@ -1,0 +1,386 @@
+{
+  "schema": 1,
+  "complete": true,
+  "post_training_post_pipeline_freeze_diagnostic": true,
+  "bundle_sha256": "8d6ad0c50c62a631e1f02f206d9287a5580037001392f440dd947c9a22714e78",
+  "reporter_sha256": "b640b08e29f4a096f8be272760d3765861185f069c2f124c1f020bd031f0c89e",
+  "models": {
+    "control": {
+      "model_sha256": "460736dd293709d72817ba1bee67e3186edabd097c456fc61ad0425d2a6b7725",
+      "training_sha256": "74058b47a22146ecb4e5ed1a28cc6578121df4219b140301106520630f31ebb5"
+    },
+    "candidate": {
+      "model_sha256": "a580568f773a61d53e86661a5ac572bc6313aa626a29487c17754afc62ed36c3",
+      "training_sha256": "915fb5d4072a6cedc66a0ec371ae97624d6408c260034c7430f3dcfc2a8ed840"
+    }
+  },
+  "ordinary": {
+    "all": {
+      "classical": {
+        "positions": 6050,
+        "mae_cp": 145.13735537190084,
+        "rmse_cp": 200.4640933615612,
+        "mean_error_cp": 8.380330578512396,
+        "prediction_mean_cp": 4.093388429752066,
+        "prediction_std_cp": 273.05022098403003,
+        "target_mean_cp": -4.286942148760331,
+        "target_std_cp": 282.6724997714019,
+        "pearson_correlation": 0.7407290099349746
+      },
+      "control": {
+        "positions": 6050,
+        "mae_cp": 131.5398347107438,
+        "rmse_cp": 181.7476881524503,
+        "mean_error_cp": 3.609586776859504,
+        "prediction_mean_cp": -0.6773553719008264,
+        "prediction_std_cp": 244.52303655192938,
+        "target_mean_cp": -4.286942148760331,
+        "target_std_cp": 282.6724997714019,
+        "pearson_correlation": 0.7716736125331493
+      },
+      "candidate": {
+        "positions": 6050,
+        "mae_cp": 135.56892561983472,
+        "rmse_cp": 186.24269778796386,
+        "mean_error_cp": 4.971900826446281,
+        "prediction_mean_cp": 0.6849586776859504,
+        "prediction_std_cp": 251.0773268432464,
+        "target_mean_cp": -4.286942148760331,
+        "target_std_cp": 282.6724997714019,
+        "pearson_correlation": 0.762842693164087
+      }
+    },
+    "old": {
+      "classical": {
+        "positions": 5690,
+        "mae_cp": 140.21300527240774,
+        "rmse_cp": 193.15172924327155,
+        "mean_error_cp": 4.103690685413005,
+        "prediction_mean_cp": 0.8065026362038664,
+        "prediction_std_cp": 249.7925226793993,
+        "target_mean_cp": -3.2971880492091388,
+        "target_std_cp": 256.4680607031019,
+        "pearson_correlation": 0.7093039659316691
+      },
+      "control": {
+        "positions": 5690,
+        "mae_cp": 127.1079086115993,
+        "rmse_cp": 174.26286731380503,
+        "mean_error_cp": -0.47557117750439365,
+        "prediction_mean_cp": -3.7727592267135326,
+        "prediction_std_cp": 221.26442648653395,
+        "target_mean_cp": -3.2971880492091388,
+        "target_std_cp": 256.4680607031019,
+        "pearson_correlation": 0.743353020618161
+      },
+      "candidate": {
+        "positions": 5690,
+        "mae_cp": 131.15465729349737,
+        "rmse_cp": 179.19031227736548,
+        "mean_error_cp": 0.6681898066783831,
+        "prediction_mean_cp": -2.6289982425307556,
+        "prediction_std_cp": 226.86645414592903,
+        "target_mean_cp": -3.2971880492091388,
+        "target_std_cp": 256.4680607031019,
+        "pearson_correlation": 0.7316060542748528
+      }
+    },
+    "fresh": {
+      "classical": {
+        "positions": 360,
+        "mae_cp": 222.96944444444443,
+        "rmse_cp": 292.7087052192181,
+        "mean_error_cp": 75.975,
+        "prediction_mean_cp": 56.044444444444444,
+        "prediction_std_cp": 513.6965903269947,
+        "target_mean_cp": -19.930555555555557,
+        "target_std_cp": 550.4020935842392,
+        "pearson_correlation": 0.8610755804511275
+      },
+      "control": {
+        "positions": 360,
+        "mae_cp": 201.5888888888889,
+        "rmse_cp": 274.13298678642167,
+        "mean_error_cp": 68.17777777777778,
+        "prediction_mean_cp": 48.24722222222222,
+        "prediction_std_cp": 477.99271553381965,
+        "target_mean_cp": -19.930555555555557,
+        "target_std_cp": 550.4020935842392,
+        "pearson_correlation": 0.8759777725146872
+      },
+      "candidate": {
+        "positions": 360,
+        "mae_cp": 205.3388888888889,
+        "rmse_cp": 274.62705013648355,
+        "mean_error_cp": 72.99444444444444,
+        "prediction_mean_cp": 53.06388888888889,
+        "prediction_std_cp": 492.96619089208775,
+        "target_mean_cp": -19.930555555555557,
+        "target_std_cp": 550.4020935842392,
+        "pearson_correlation": 0.8769154949631485
+      }
+    },
+    "fresh_white": {
+      "classical": {
+        "positions": 180,
+        "mae_cp": 192.15,
+        "rmse_cp": 240.29684188982222,
+        "mean_error_cp": -8.63888888888889,
+        "prediction_mean_cp": 68.04444444444445,
+        "prediction_std_cp": 513.5564106440307,
+        "target_mean_cp": 76.68333333333334,
+        "target_std_cp": 529.4110928926384,
+        "pearson_correlation": 0.8944092039982579
+      },
+      "control": {
+        "positions": 180,
+        "mae_cp": 171.65555555555557,
+        "rmse_cp": 225.33417159607393,
+        "mean_error_cp": -2.1444444444444444,
+        "prediction_mean_cp": 74.53888888888889,
+        "prediction_std_cp": 477.3674378399479,
+        "target_mean_cp": 76.68333333333334,
+        "target_std_cp": 529.4110928926384,
+        "pearson_correlation": 0.9049112449593202
+      },
+      "candidate": {
+        "positions": 180,
+        "mae_cp": 179.7277777777778,
+        "rmse_cp": 232.07186386979356,
+        "mean_error_cp": 18.127777777777776,
+        "prediction_mean_cp": 94.81111111111112,
+        "prediction_std_cp": 492.8825281374963,
+        "target_mean_cp": 76.68333333333334,
+        "target_std_cp": 529.4110928926384,
+        "pearson_correlation": 0.8999867745100616
+      }
+    },
+    "fresh_black": {
+      "classical": {
+        "positions": 180,
+        "mae_cp": 253.7888888888889,
+        "rmse_cp": 337.06705564323545,
+        "mean_error_cp": 160.5888888888889,
+        "prediction_mean_cp": 44.044444444444444,
+        "prediction_std_cp": 513.5564106440307,
+        "target_mean_cp": -116.54444444444445,
+        "target_std_cp": 554.0219642880419,
+        "pearson_correlation": 0.848538795446667
+      },
+      "control": {
+        "positions": 180,
+        "mae_cp": 231.5222222222222,
+        "rmse_cp": 315.47155180776605,
+        "mean_error_cp": 138.5,
+        "prediction_mean_cp": 21.955555555555556,
+        "prediction_std_cp": 477.17072209502896,
+        "target_mean_cp": -116.54444444444445,
+        "target_std_cp": 554.0219642880419,
+        "pearson_correlation": 0.8592202398463322
+      },
+      "candidate": {
+        "positions": 180,
+        "mae_cp": 230.95,
+        "rmse_cp": 311.4204285741919,
+        "mean_error_cp": 127.86111111111111,
+        "prediction_mean_cp": 11.316666666666666,
+        "prediction_std_cp": 489.50228095030934,
+        "target_mean_cp": -116.54444444444445,
+        "target_std_cp": 554.0219642880419,
+        "pearson_correlation": 0.8590102587247429
+      }
+    },
+    "phase_0_8": {
+      "classical": {
+        "positions": 2900,
+        "mae_cp": 164.6455172413793,
+        "rmse_cp": 218.79506708175654,
+        "mean_error_cp": 21.392413793103447,
+        "prediction_mean_cp": 12.885172413793104,
+        "prediction_std_cp": 327.1024614137003,
+        "target_mean_cp": -8.507241379310345,
+        "target_std_cp": 331.0893601889391,
+        "pearson_correlation": 0.7811741120204285
+      },
+      "control": {
+        "positions": 2900,
+        "mae_cp": 145.10689655172413,
+        "rmse_cp": 193.42598691435725,
+        "mean_error_cp": 8.821379310344827,
+        "prediction_mean_cp": 0.31413793103448273,
+        "prediction_std_cp": 293.1942881907919,
+        "target_mean_cp": -8.507241379310345,
+        "target_std_cp": 331.0893601889391,
+        "pearson_correlation": 0.8150898249050058
+      },
+      "candidate": {
+        "positions": 2900,
+        "mae_cp": 153.1741379310345,
+        "rmse_cp": 201.80537483016855,
+        "mean_error_cp": 10.767931034482759,
+        "prediction_mean_cp": 2.260689655172414,
+        "prediction_std_cp": 303.89406668285187,
+        "target_mean_cp": -8.507241379310345,
+        "target_std_cp": 331.0893601889391,
+        "pearson_correlation": 0.8018712705429394
+      }
+    },
+    "phase_9_16": {
+      "classical": {
+        "positions": 1257,
+        "mae_cp": 141.1145584725537,
+        "rmse_cp": 204.04401345593953,
+        "mean_error_cp": -4.866348448687351,
+        "prediction_mean_cp": 7.310262529832936,
+        "prediction_std_cp": 248.557603499569,
+        "target_mean_cp": 12.176610978520287,
+        "target_std_cp": 265.0728375791183,
+        "pearson_correlation": 0.68629445443593
+      },
+      "control": {
+        "positions": 1257,
+        "mae_cp": 133.39061256961017,
+        "rmse_cp": 188.6441215998015,
+        "mean_error_cp": -5.159904534606206,
+        "prediction_mean_cp": 7.016706443914081,
+        "prediction_std_cp": 221.97755992781634,
+        "target_mean_cp": 12.176610978520287,
+        "target_std_cp": 265.0728375791183,
+        "pearson_correlation": 0.7136076643144427
+      },
+      "candidate": {
+        "positions": 1257,
+        "mae_cp": 134.43357199681782,
+        "rmse_cp": 189.03377607300777,
+        "mean_error_cp": -4.84884645982498,
+        "prediction_mean_cp": 7.327764518695306,
+        "prediction_std_cp": 223.71181484812075,
+        "target_mean_cp": 12.176610978520287,
+        "target_std_cp": 265.0728375791183,
+        "pearson_correlation": 0.7133257532704511
+      }
+    },
+    "phase_17_24": {
+      "classical": {
+        "positions": 1893,
+        "mae_cp": 117.92287374537771,
+        "rmse_cp": 165.6819393249885,
+        "mean_error_cp": -2.7575277337559427,
+        "prediction_mean_cp": -11.51135763338616,
+        "prediction_std_cp": 181.58951725373703,
+        "target_mean_cp": -8.753829899630217,
+        "target_std_cp": 201.3788644820527,
+        "pearson_correlation": 0.6301265083242118
+      },
+      "control": {
+        "positions": 1893,
+        "mae_cp": 109.52667723190703,
+        "rmse_cp": 156.9201498819885,
+        "mean_error_cp": 1.4484944532488113,
+        "prediction_mean_cp": -7.305335446381405,
+        "prediction_std_cp": 163.0863147936065,
+        "target_mean_cp": -8.753829899630217,
+        "target_std_cp": 201.3788644820527,
+        "pearson_correlation": 0.6474724525119825
+      },
+      "candidate": {
+        "positions": 1893,
+        "mae_cp": 109.35235076597992,
+        "rmse_cp": 157.28705323607974,
+        "mean_error_cp": 2.613840464870576,
+        "prediction_mean_cp": -6.139989434759641,
+        "prediction_std_cp": 163.35008361365266,
+        "target_mean_cp": -8.753829899630217,
+        "target_std_cp": 201.3788644820527,
+        "pearson_correlation": 0.6460553773077669
+      }
+    }
+  },
+  "paired_differences": {
+    "old": {
+      "pairs": 978,
+      "negative_teacher_differences": 63,
+      "optimistic_independent_cap_floor_mae_cp": 0.0,
+      "models": {
+        "classical": {
+          "positions": 978,
+          "mae_cp": 50.24642126789366,
+          "rmse_cp": 73.07627608731417,
+          "mean_error_cp": -39.48159509202454,
+          "prediction_mean_cp": 24.0,
+          "prediction_std_cp": 0.0,
+          "target_mean_cp": 63.48159509202454,
+          "target_std_cp": 61.49264814413825,
+          "pearson_correlation": null
+        },
+        "control": {
+          "positions": 978,
+          "mae_cp": 40.96830265848671,
+          "rmse_cp": 56.55054564439619,
+          "mean_error_cp": -2.3997955010224947,
+          "prediction_mean_cp": 61.081799591002046,
+          "prediction_std_cp": 29.691760991731396,
+          "target_mean_cp": 63.48159509202454,
+          "target_std_cp": 61.49264814413825,
+          "pearson_correlation": 0.40276073641175425
+        },
+        "candidate": {
+          "positions": 978,
+          "mae_cp": 60.23108384458078,
+          "rmse_cp": 85.71354537609966,
+          "mean_error_cp": 7.137014314928425,
+          "prediction_mean_cp": 70.61860940695297,
+          "prediction_std_cp": 69.11715211931592,
+          "target_mean_cp": 63.48159509202454,
+          "target_std_cp": 61.49264814413825,
+          "pearson_correlation": 0.14854037231989198
+        }
+      }
+    },
+    "fresh": {
+      "pairs": 180,
+      "negative_teacher_differences": 26,
+      "optimistic_independent_cap_floor_mae_cp": 34.93888888888889,
+      "models": {
+        "classical": {
+          "positions": 180,
+          "mae_cp": 189.59444444444443,
+          "rmse_cp": 330.2418726395011,
+          "mean_error_cp": -169.2277777777778,
+          "prediction_mean_cp": 24.0,
+          "prediction_std_cp": 0.0,
+          "target_mean_cp": 193.2277777777778,
+          "target_std_cp": 283.58711831259103,
+          "pearson_correlation": null
+        },
+        "control": {
+          "positions": 180,
+          "mae_cp": 179.62222222222223,
+          "rmse_cp": 312.74449990722815,
+          "mean_error_cp": -140.64444444444445,
+          "prediction_mean_cp": 52.583333333333336,
+          "prediction_std_cp": 26.042459987916317,
+          "target_mean_cp": 193.2277777777778,
+          "target_std_cp": 283.58711831259103,
+          "pearson_correlation": 0.20795352625451508
+        },
+        "candidate": {
+          "positions": 180,
+          "mae_cp": 196.1,
+          "rmse_cp": 309.50855310385924,
+          "mean_error_cp": -109.73333333333333,
+          "prediction_mean_cp": 83.49444444444444,
+          "prediction_std_cp": 95.50238491624887,
+          "target_mean_cp": 193.2277777777778,
+          "target_std_cp": 283.58711831259103,
+          "pearson_correlation": 0.1068597754062854
+        }
+      }
+    }
+  },
+  "clipped_fraction": {
+    "control": 0.005454545454545455,
+    "candidate": 0.006115702479338843
+  },
+  "interpretation": "Shared held-out quantized CP fit. Pair difference is White-turn minus Black-turn White-relative score, not an observed game outcome or proof of zugzwang. Optimistic cap bound assumes independent perfect per-position corrections; not a realizable model. No selection, retuning, gate changes or strength inference."
+}

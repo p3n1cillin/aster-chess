@@ -8,6 +8,49 @@ the classical evaluator is the default. Optional trained neural prototypes
 exist but regressed in matches. The opt-in KPK solver generates its own table;
 there is no general tablebase probing or parallel search.
 
+## Completed experiment: fresh deep paired-turn supervision
+
+Both matched 50-epoch trainings are complete on **63826** identical rows,
+including **1913** fresh deep-labelled turn pairs. All 4096 prior White parents
+were visited once, with **4034** eligible Black roots queried at both budgets.
+Old 60000 rows remain byte-identical. Fresh side counts are equal; **1733**
+pairs train and **180** remain held out by their inherited whole-game split.
+Counterfactual Black roots have no observed outcome or invented history.
+Independent audit replays **461828** source plies and **70109** PV plies,
+checks every paired classical score and exactly re-queries **256** analyses.
+
+The candidate's added fresh-pair objective passes all tactical thresholds:
+**32/32** original positions at both depth 8 and 5000 nodes, **32/32** quiet
+depth-eight and **25/32** quiet node-budget positions, **14/16** endgames.
+Control scores 32, 32, 30, 24 and 13. Both models pass exact inference and
+**2614** rules/protocol cases; the required build, **55** native tests and
+benchmark pass. Four Windows/Linux default/IIR CI jobs pass for the pushed
+setup. Complete initialization, RNG, data, splits and all batch orders match.
+Ordinary held-out MAE worsens from **131.54** to **135.57cp**; fresh quantized
+pair-difference MAE worsens from **179.62** to **196.10cp** despite more
+predicted variation. Fit and tactics are not playing-strength measurements.
+
+Both frozen **128-game** short screens finish and all **256** PGNs pass audit
+with zero forfeits or unresolved games. Against classical: **37 W / 36 D / 55 L**,
+**42.97%**, 95% family interval **35.89%..50.00%** over 56 families. Against
+matched control: **25 W / 56 D / 47 L**, **41.41%**, interval **34.70%..48.44%**
+over 51 families. Both playing gates fail despite passing candidate tactics.
+Longer confirmation is skipped and **32** reserved pairs remain unused.
+The added objective is not promoted; classical remains the default. No tuning,
+extension or new calibration occurs. Exact applied options, evaluator/source
+hashes, controls, opening partitions and ply caps also pass a separate audit.
+
+Saved first searches at identical opening histories have median candidate/classical
+depth 6/7 and paired node ratio 0.582; candidate/control depths 6/6 and ratio
+0.933. Evaluation changes search trees, so these are descriptive observations,
+not controlled speed or strength measurements. Together with worse old static
+pair fit (40.97 to 60.23cp), they motivate separate representation/capacity,
+supervision-compatibility and search-cost experiments. Completed data, models,
+checkpoints, source, diagnostics, reports and PGNs are preserved in GitHub.
+Last exact local rating remains
+**2319**, 95% interval **2277..2360**, at 30ms/move on the SF19 setting-equivalent
+scale. See [deep turn pairs](../docs/DEEP-TURN-PAIRS.md).
+
 ## Completed experiment: stable endgame supervision
 
 A predeclared static/deeper label ablation collects **4096** fresh endgames,
