@@ -32,8 +32,13 @@ The [plan](research/iir-plan-v2.json) freezes **640 paired regression games**,
 All 448 parent openings and eleven exclusion sources are independently
 audited. A dataset filename typo is corrected before fixture/opening/tactical/
 match queries; the original plan remains preserved and all seeds/gates/budgets
-are unchanged. Results are pending and ordinary source keeps the change
-disabled. The default passes **51 tests**, **1,614 checks**, **146,772-node**
+are unchanged. The 512-game 30 ms phase is complete: **153 W / 220 D / 139 L**,
+score **51.37%**, all PGNs independently audited, no forfeits or unresolved
+games. Its four report/PGN/audit/log files are now committed. The 128-game
+100 ms phase is running; acceptance remains pending full frozen analysis.
+Both default and opt-in builds pass Windows/Linux CI (51/52 tests and all
+rule/tactical/endgame checks). Ordinary source keeps the experiment disabled.
+The default passes **51 tests**, **1,614 checks**, **146,772-node**
 benchmark and exact 64-position baseline moves/scores/nodes. Details and
 promotion rules: [internal reductions](../docs/INTERNAL-REDUCTIONS.md).
 

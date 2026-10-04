@@ -59,7 +59,16 @@ receive a 256-game local rating confirmation against SF19's previously fixed
 2300 strength setting. The maximum is **896 games**, with no adaptive extension,
 retuning or selecting a new opponent setting from these results.
 
-Results are pending; the candidate stays opt-in. `scripts/run_iir.py` refuses
+The 512-game 30 ms regression is complete and independently audited:
+**153 wins, 220 draws, 139 losses**, a **51.37%** score, with no forfeits or
+unresolved games. Its exact report, PGN, audit and log are committed at
+`artifacts/matches/iir-vs-0.7.6-30ms.*`. The 128-game 100 ms phase is running.
+Acceptance remains pending the complete budget and frozen confidence gates;
+the short-control point score alone does not establish stronger play.
+Windows/Linux CI also passes the ordinary and opt-in builds (51/52 tests),
+independent rules, both tactical suites and endgame diagnostics.
+
+The candidate stays opt-in. `scripts/run_iir.py` refuses
 to overwrite/restart an existing execution. Inspect the authoritative process
 handle before treating a run as stopped; `iir-execution-v1.json` is a progress
 record, not proof that a process is live. Reports and PGNs will be audited and

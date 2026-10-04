@@ -23,6 +23,8 @@ on Windows and Linux for each push and pull request.
 Its matrix covers both the ordinary build and the opt-in IIR candidate, with
 unit/rule/protocol checks, both tactical suites at depth/node limits, endgame
 diagnostics and the depth-seven benchmark.
+Changes confined to research artifacts or Markdown documentation skip these
+build jobs; source, scripts, test fixtures and workflow changes trigger them.
 
 ```powershell
 git status --short
