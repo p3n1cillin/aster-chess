@@ -83,7 +83,34 @@ nodes, and 13/13 endgames. Quiet tactics: the control solved 31/32 at depth 8
 and 24/32 at 5000 nodes; the candidate solved 32/32 and 24/32 respectively.
 The candidate misses the required 25 at the node budget, so promotion and
 conditional longer confirmation are blocked. Both declared short match
-screens are running. No match result, strength gain or new rating is claimed.
+screens completed, totaling 256 audited games. The classical screen has 32 wins, 43 draws
+and 53 losses in 128 games: 41.797%, 95% opening-family interval
+35.246%..48.413%, across 55 families. Its PGNs are independently audited,
+with zero forfeits or unresolved outcomes. The classical confidence gate
+also fails. Against the matched fresh-static model, the candidate has
+44 wins, 54 draws and 30 losses: 55.469%, 95% family interval
+48.864%..61.885%, across 56 families. That interval includes 50%; this
+positive point score does not establish a gain. All 256 games have zero
+forfeits/unresolved outcomes. The last 32 reserved pairs remain unused by
+Aster; no conditional long games, retuning or extension occur. The classical
+default is retained. No strength gain or new rating is claimed.
+
+A separate post-training diagnostic computes an optimistic per-position
+fit bound from the fixed ±250 cp residual cap. On the 397 fresh held-out
+positions, the deeper-target floor is 43.118 cp, versus the candidate's
+182.315 cp error. Only 0.504% of its corrections are clipped. This suggests
+checking supervision/feature capacity before attributing the error solely
+to the cap. The bound uses perfect access to teacher labels; it is not a
+realizable evaluator or a strength estimate. This diagnostic does not alter
+data, models, epochs, gates or matches.
+
+The experiment's immutable manifest retains its plan, source snapshots,
+generation queries/PGNs, native teacher scores, datasets/split, model weights
+and checkpoints, runtime packages, diagnostics and all match reports/PGNs.
+All four Windows/Linux default/IIR CI jobs passed for the data/model commit.
+The next research step is two-sided endgame and paired-turn search supervision,
+with feature/capacity changes isolated in separate ablations. The observed
+White-only sampling and unstable deeper labels are explicit design limits.
 
 The last exact calibrated binary remains Aster
 0.7.6-q-evasion-dev: **2319**, local 95% interval **2277–2360**, on the

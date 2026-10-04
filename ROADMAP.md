@@ -202,6 +202,19 @@ limited neural ablation improvement does not establish broad strength.
 See `docs/PHASE-OUTPUT.md`. Broaden stable endgame supervision and feature
 interactions separately; preserve the classical default and fresh confirmation.
 
+A fresh stable-label endgame ablation now preserves 4096 positions across
+four score ranges, all 50639 teacher queries and 7070 source PGNs. Its two
+models use identical old/new positions, initial states, splits and batch
+orders; only 4047 fresh targets differ. Common-target held-out deeper error
+does not improve. All 256 short paired games are audited: 41.80% against
+classical (95% family interval 35.25%..48.41%) and 55.47% against the matched
+static model (48.86%..61.89%). Quiet-node tactics and the classical gate fail,
+so both neural prototypes remain optional; 32 longer-control pairs are unused.
+The sampling interval made every fresh position White to move, and three of
+32 deeper diagnostic labels became native mates. Address two-sided sampling
+and paired-turn search supervision before drawing broad conclusions; isolate
+feature/capacity experiments from data changes. See `docs/STABLE-ENDGAME-LABELS.md`.
+
 Next, extend feature interactions and the reproducible data pipeline using
 diverse legal self-play positions and scored outcomes or explicitly documented
 teacher labels. Partition by game to avoid train/test leakage; remove duplicate

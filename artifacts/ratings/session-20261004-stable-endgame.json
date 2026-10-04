@@ -1,0 +1,71 @@
+{
+  "public_elo": null,
+  "last_measured_local_rating": 2319.019359271422,
+  "primary_95_percent_local_interval": [
+    2277.370617879139,
+    2360.3589099588767
+  ],
+  "local_scale": "SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash",
+  "rated_engine": "artifacts/publish/q-evasion-dev/Aster.dll",
+  "rated_engine_sha256": "a3994e4f350b2cfa261db5edc1e4ae5c332d85d4b3eaf34c0730267f3603d9a0",
+  "rated_version": "Aster 0.7.6-q-evasion-dev",
+  "reference_record": {
+    "path": "artifacts/ratings/session-20261004-q-evasion-confirmation.json",
+    "sha256": "78eeab42081af15787be31f35b9307143355c0b55a93119b741e7f95e81ca736"
+  },
+  "schema": 1,
+  "timestamp_utc": "2026-10-04T20:02:29.717946+00:00",
+  "status": "Prior exact calibrated reference retained; stable-label models receive no rating from regression screens",
+  "plan": {
+    "path": "artifacts/research/stable-endgame-plan-v1.json",
+    "sha256": "d36914bbd359be33b49eac898cc7e6a67b15390969e39f8ad51af6799283f478"
+  },
+  "runtime_binary_sha256": "ac907eac90bba15acab80c15d16f195044a8ac2b59a7964f5a065bc0caaa0ae8",
+  "model_sha256": {
+    "control": "9900079c170813aeda3026834ce58654595705a7998457426252071499c0778f",
+    "candidate": "723870f955d642c14b36998f9ed6e7187bbbb0296cf5de40e5898396475be2de"
+  },
+  "failed_gates": [
+    "tactics",
+    "classical_short"
+  ],
+  "paired_screens": {
+    "classical-30ms": {
+      "games": 128,
+      "wins": 32,
+      "draws": 43,
+      "losses": 53,
+      "unresolved": 0,
+      "forfeits": 0,
+      "score": 0.41796875,
+      "primary_95_percent_family_interval": [
+        0.3524590163934426,
+        0.48412698412698413
+      ],
+      "families": 55,
+      "report_sha256": "ca198c245cc48c91156ce2e9653a827d0862bb53ae29ab024ed997df5e3f2d3f",
+      "pgn_sha256": "57ee07f0860e37cf98fe1808f3624e6914b244b0458a35d8c86d82b8cfccc0a7",
+      "audit_sha256": "4387330574f8f7ea72d22dddaaddcc19b1c8b496dce9a74b58880528f6032f2f"
+    },
+    "control-30ms": {
+      "games": 128,
+      "wins": 44,
+      "draws": 54,
+      "losses": 30,
+      "unresolved": 0,
+      "forfeits": 0,
+      "score": 0.5546875,
+      "primary_95_percent_family_interval": [
+        0.48863636363636365,
+        0.6188524590163934
+      ],
+      "families": 56,
+      "report_sha256": "755832cbde90d79556181a7b87ac318ea90caa0e1f921b404c8925fefae914b0",
+      "pgn_sha256": "95563d70923ba43111d9f3bcfcc166212dcee2f3ac79755baee28614c99c0354",
+      "audit_sha256": "f74a1fc89c3dbe4a0f050c0a013298f763097b41501fe8e51107dd3b5ba12914"
+    }
+  },
+  "decision_sha256": "63712f0ed93df40533f446afcb8083f815e0f1cee5ed8a94428c182b56ff3c34",
+  "recorder_sha256": "be7439dccd8c9c860428034c37f3cbe3c9781149f2f9611f71e69fa0bc062026",
+  "reason": "This fixed-budget teacher-label ablation is not a rating calibration. Neither model inherits the old exact binary's estimate. Public Elo and superiority to full-strength Stockfish remain unestablished."
+}

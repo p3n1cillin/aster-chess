@@ -8,6 +8,50 @@ the classical evaluator is the default. Optional trained neural prototypes
 exist but regressed in matches. The opt-in KPK solver generates its own table;
 there is no general tablebase probing or parallel search.
 
+## Completed experiment: stable endgame supervision
+
+A predeclared static/deeper label ablation collects **4096** fresh endgames,
+exactly **1024** in each of four absolute-score ranges. All **50639 queries**,
+native mate labels, rejected candidates and **7070 source PGNs** are retained,
+including **six unresolved source games**. Independent verification replays
+**847572 source plies / 840449 PV plies**, checks all accepted classical
+scores and exactly re-queries **64** sampled teacher/static labels. A deeper
+32-position diagnostic preserves 22 first moves and changes three finite
+labels to mates. The fixed sampling interval makes every fresh position
+White to move; this is an explicit limit, not color-balanced training.
+
+Both models train for **50 epochs** on identical **64096 positions**, with
+the old 60000 rows byte-identical. Full initial weights/RNG, whole-game
+partitions and all epoch batch orders match. Only **4047** fresh target
+values differ. The split retains **269** old held-out games plus **130** of
+1304 fresh groups. On 397 fresh held-out positions, deeper-target MAE is
+**182.275 cp** for static control and **182.315 cp** for the candidate:
+no common-target fit improvement. Each model passes **525** exact inference
+checks and **2614** independent rules/protocol cases. Original tactics/endgame
+checks pass; the candidate solves all 32 quiet depth-eight positions but
+**24** quiet node-budget positions, below the required **25**.
+
+All **256 predeclared short games** are audited, with zero forfeits/unresolved.
+Against frozen classical 0.7.9: **32 W / 43 D / 53 L**, **41.80%**, primary
+95% family interval **35.25%..48.41%** over 55 families. Against the matched
+static control: **44 W / 54 D / 30 L**, **55.47%**, interval **48.86%..61.89%**
+over 56 families; that interval includes 50%. The quiet-node and classical
+confidence gates fail. Longer confirmation is skipped, leaving **32** reserved
+pairs unused. No tuning/extension occurs; neither neural model is promoted.
+The classical default remains. All four Windows/Linux default/IIR CI jobs
+pass for the data/model milestone, with 55/56 native tests.
+
+A post-training residual-cap diagnostic finds a deeper-target optimistic
+floor of **43.118 cp**, versus 182.315 actual error, with only **0.504%** of
+candidate corrections clipped. This motivates investigating two-sided and
+paired-turn supervision/feature capacity before treating the cap as the
+sole explanation. It changes no gates or models. Data, scripts, source,
+models/checkpoints, diagnostics, reports and PGNs are preserved in version
+control. See [stable labels](../docs/STABLE-ENDGAME-LABELS.md).
+No new calibration occurs: the last exact local reference is **2319**,
+95% interval **2277..2360**, on the 30ms SF19 setting-equivalent scale.
+Public Elo and superiority to full-strength Stockfish remain unestablished.
+
 ## Completed capability: general mating strategy certificates
 
 The ordinary **0.7.9-mate-proof-dev** interface now exports complete forced-mate

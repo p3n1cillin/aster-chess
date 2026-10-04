@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "status": "complete",
+  "started_utc": "2026-10-04T19:46:46.672527+00:00",
+  "plan_sha256": "d36914bbd359be33b49eac898cc7e6a67b15390969e39f8ad51af6799283f478",
+  "runner_sha256": "72664ad73b11ac910ba64a581b9855b687aaaac43ba72ae30ebd15a57179ff0d",
+  "pipeline_manifest_sha256": "2e09ae9530a19c1893e4364cd3af72929938df27961720d641e42c20fb85c883",
+  "phases": [
+    {
+      "label": "classical-30ms",
+      "games": 128,
+      "report_sha256": "ca198c245cc48c91156ce2e9653a827d0862bb53ae29ab024ed997df5e3f2d3f"
+    },
+    {
+      "label": "control-30ms",
+      "games": 128,
+      "report_sha256": "755832cbde90d79556181a7b87ac318ea90caa0e1f921b404c8925fefae914b0"
+    }
+  ],
+  "conditional_long": "Skipped; last32 reserved opening pairs unused by Aster",
+  "updated_utc": "2026-10-04T20:02:06.188850+00:00"
+}

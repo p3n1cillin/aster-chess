@@ -1,0 +1,5 @@
+{"phase": "classical-30ms", "games": 128}
+{"phase": "classical-30ms", "complete": true, "wins": 32, "draws": 43, "losses": 53, "unresolved": 0, "forfeits": 0}
+{"phase": "control-30ms", "games": 128}
+{"phase": "control-30ms", "complete": true, "wins": 44, "draws": 54, "losses": 30, "unresolved": 0, "forfeits": 0}
+{"complete": true, "eligible_for_promotion": false, "failed_gates": ["tactics", "classical_short"]}

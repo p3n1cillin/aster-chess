@@ -45,6 +45,16 @@ The [session record](../artifacts/ratings/session-20261004-mate-proof.json)
 retains the exact earlier local reference above; the new DLL is not separately
 calibrated and the paired score does not establish an Elo rating.
 
+The subsequent [stable endgame label ablation](STABLE-ENDGAME-LABELS.md) trains
+two optional models on identical 64096 positions with matched initial states,
+game splits and batch orders. Its **256 audited games** score **41.80%**
+against frozen classical 0.7.9 and **55.47%** against its matched static model.
+The latter's 95% family interval **48.86%..61.89%** includes 50%, and the
+candidate fails quiet-node tactics and the classical confidence gate. Neither
+model is promoted or calibrated. The [session record](../artifacts/ratings/session-20261004-stable-endgame.json)
+retains the same exact **2319 / 2277..2360** reference above. Regression
+scores and teacher-label fit are not new Elo measurements.
+
 The frozen ordinary **Aster 0.7.4-feature-dev** has a provisional local estimate
 of **2300**, with a **95% opening-family interval of 2265..2335**, on the
 **SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash** scale.

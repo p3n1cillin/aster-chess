@@ -87,6 +87,8 @@ are documented in [geometric threats](docs/GEOMETRIC-THREATS.md); the correction
 is disabled in ordinary builds after quiet-tactic regressions.
 Fresh endgame label coverage and a separately frozen move suite are recorded
 in [endgame diagnostics](docs/ENDGAME-DIAGNOSTIC.md).
+Fresh balanced score ranges and a matched static/deeper teacher-label ablation
+are documented in [stable endgame labels](docs/STABLE-ENDGAME-LABELS.md).
 An original, opt-in king-and-pawn solver is documented in
 [KPK endgame research](docs/KPK.md), with exhaustive oracle validation and
 independent move-choice checks. It is disabled in ordinary builds.

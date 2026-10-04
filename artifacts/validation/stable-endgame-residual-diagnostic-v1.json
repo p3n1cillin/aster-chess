@@ -1,0 +1,402 @@
+{
+  "schema": 1,
+  "complete": true,
+  "post_training_diagnostic": true,
+  "script_sha256": "c647d33d906b99ee318a5a51324298e14aa0b38031805a989a906b7bbb20e9fa",
+  "bundle_sha256": "4b2f06d4a495189ebd4614fd302f3f6129090881eab7f03313548b7875fa6646",
+  "split_sha256": "141162f3d47667d34ce7ba2bbfd6649672dbc1158342146deec9cebf12875e83",
+  "groups": {
+    "all": {
+      "positions": 6087,
+      "targets": {
+        "static": {
+          "classical_mae_cp": 142.74355183177263,
+          "optimistic_cap_floor_mae_cp": 22.24987678659438,
+          "targets_outside_cap_fraction": 0.17463446689666504,
+          "models": {
+            "control": {
+              "mae_cp": 128.35830458353868,
+              "clipped_fraction": 0.007721373418761295,
+              "mae_above_optimistic_floor_cp": 106.10842779694431
+            },
+            "candidate": {
+              "mae_cp": 128.7348447511089,
+              "clipped_fraction": 0.005585674388040086,
+              "mae_above_optimistic_floor_cp": 106.48496796451454
+            }
+          }
+        },
+        "stable": {
+          "classical_mae_cp": 144.0206998521439,
+          "optimistic_cap_floor_mae_cp": 22.55971743058978,
+          "targets_outside_cap_fraction": 0.1777558731723345,
+          "models": {
+            "control": {
+              "mae_cp": 130.48710366354527,
+              "clipped_fraction": 0.007721373418761295,
+              "mae_above_optimistic_floor_cp": 107.92738623295548
+            },
+            "candidate": {
+              "mae_cp": 130.759158863151,
+              "clipped_fraction": 0.005585674388040086,
+              "mae_above_optimistic_floor_cp": 108.1994414325612
+            }
+          }
+        }
+      }
+    },
+    "old": {
+      "positions": 5690,
+      "targets": {
+        "static": {
+          "classical_mae_cp": 140.21300527240774,
+          "optimistic_cap_floor_mae_cp": 21.12530755711775,
+          "targets_outside_cap_fraction": 0.17170474516695958,
+          "models": {
+            "control": {
+              "mae_cp": 126.8738137082601,
+              "clipped_fraction": 0.007381370826010545,
+              "mae_above_optimistic_floor_cp": 105.74850615114235
+            },
+            "candidate": {
+              "mae_cp": 127.16203866432338,
+              "clipped_fraction": 0.00562390158172232,
+              "mae_above_optimistic_floor_cp": 106.03673110720563
+            }
+          }
+        },
+        "stable": {
+          "classical_mae_cp": 140.21300527240774,
+          "optimistic_cap_floor_mae_cp": 21.12530755711775,
+          "targets_outside_cap_fraction": 0.17170474516695958,
+          "models": {
+            "control": {
+              "mae_cp": 126.8738137082601,
+              "clipped_fraction": 0.007381370826010545,
+              "mae_above_optimistic_floor_cp": 105.74850615114235
+            },
+            "candidate": {
+              "mae_cp": 127.16203866432338,
+              "clipped_fraction": 0.00562390158172232,
+              "mae_above_optimistic_floor_cp": 106.03673110720563
+            }
+          }
+        }
+      }
+    },
+    "fresh": {
+      "positions": 397,
+      "targets": {
+        "static": {
+          "classical_mae_cp": 179.0125944584383,
+          "optimistic_cap_floor_mae_cp": 38.367758186397985,
+          "targets_outside_cap_fraction": 0.21662468513853905,
+          "models": {
+            "control": {
+              "mae_cp": 149.63476070528966,
+              "clipped_fraction": 0.012594458438287154,
+              "mae_above_optimistic_floor_cp": 111.26700251889169
+            },
+            "candidate": {
+              "mae_cp": 151.27707808564233,
+              "clipped_fraction": 0.005037783375314861,
+              "mae_above_optimistic_floor_cp": 112.90931989924434
+            }
+          }
+        },
+        "stable": {
+          "classical_mae_cp": 198.59445843828715,
+          "optimistic_cap_floor_mae_cp": 43.1183879093199,
+          "targets_outside_cap_fraction": 0.26448362720403024,
+          "models": {
+            "control": {
+              "mae_cp": 182.27455919395467,
+              "clipped_fraction": 0.012594458438287154,
+              "mae_above_optimistic_floor_cp": 139.15617128463475
+            },
+            "candidate": {
+              "mae_cp": 182.3148614609572,
+              "clipped_fraction": 0.005037783375314861,
+              "mae_above_optimistic_floor_cp": 139.19647355163727
+            }
+          }
+        }
+      }
+    },
+    "fresh_bucket_0": {
+      "positions": 88,
+      "targets": {
+        "static": {
+          "classical_mae_cp": 141.29545454545453,
+          "optimistic_cap_floor_mae_cp": 10.340909090909092,
+          "targets_outside_cap_fraction": 0.13636363636363635,
+          "models": {
+            "control": {
+              "mae_cp": 102.29545454545455,
+              "clipped_fraction": 0.0,
+              "mae_above_optimistic_floor_cp": 91.95454545454545
+            },
+            "candidate": {
+              "mae_cp": 103.56818181818181,
+              "clipped_fraction": 0.0,
+              "mae_above_optimistic_floor_cp": 93.22727272727273
+            }
+          }
+        },
+        "stable": {
+          "classical_mae_cp": 152.13636363636363,
+          "optimistic_cap_floor_mae_cp": 14.75,
+          "targets_outside_cap_fraction": 0.14772727272727273,
+          "models": {
+            "control": {
+              "mae_cp": 114.72727272727273,
+              "clipped_fraction": 0.0,
+              "mae_above_optimistic_floor_cp": 99.97727272727273
+            },
+            "candidate": {
+              "mae_cp": 116.22727272727273,
+              "clipped_fraction": 0.0,
+              "mae_above_optimistic_floor_cp": 101.47727272727273
+            }
+          }
+        }
+      }
+    },
+    "fresh_bucket_1": {
+      "positions": 96,
+      "targets": {
+        "static": {
+          "classical_mae_cp": 146.375,
+          "optimistic_cap_floor_mae_cp": 20.010416666666668,
+          "targets_outside_cap_fraction": 0.125,
+          "models": {
+            "control": {
+              "mae_cp": 129.75,
+              "clipped_fraction": 0.010416666666666666,
+              "mae_above_optimistic_floor_cp": 109.73958333333333
+            },
+            "candidate": {
+              "mae_cp": 131.55208333333334,
+              "clipped_fraction": 0.010416666666666666,
+              "mae_above_optimistic_floor_cp": 111.54166666666667
+            }
+          }
+        },
+        "stable": {
+          "classical_mae_cp": 183.15625,
+          "optimistic_cap_floor_mae_cp": 34.5625,
+          "targets_outside_cap_fraction": 0.25,
+          "models": {
+            "control": {
+              "mae_cp": 172.57291666666666,
+              "clipped_fraction": 0.010416666666666666,
+              "mae_above_optimistic_floor_cp": 138.01041666666666
+            },
+            "candidate": {
+              "mae_cp": 173.39583333333334,
+              "clipped_fraction": 0.010416666666666666,
+              "mae_above_optimistic_floor_cp": 138.83333333333334
+            }
+          }
+        }
+      }
+    },
+    "fresh_bucket_2": {
+      "positions": 101,
+      "targets": {
+        "static": {
+          "classical_mae_cp": 151.96039603960395,
+          "optimistic_cap_floor_mae_cp": 20.386138613861387,
+          "targets_outside_cap_fraction": 0.1485148514851485,
+          "models": {
+            "control": {
+              "mae_cp": 146.65346534653466,
+              "clipped_fraction": 0.0,
+              "mae_above_optimistic_floor_cp": 126.26732673267327
+            },
+            "candidate": {
+              "mae_cp": 146.17821782178217,
+              "clipped_fraction": 0.0,
+              "mae_above_optimistic_floor_cp": 125.79207920792079
+            }
+          }
+        },
+        "stable": {
+          "classical_mae_cp": 190.88118811881188,
+          "optimistic_cap_floor_mae_cp": 36.83168316831683,
+          "targets_outside_cap_fraction": 0.19801980198019803,
+          "models": {
+            "control": {
+              "mae_cp": 202.86138613861385,
+              "clipped_fraction": 0.0,
+              "mae_above_optimistic_floor_cp": 166.02970297029702
+            },
+            "candidate": {
+              "mae_cp": 201.13861386138615,
+              "clipped_fraction": 0.0,
+              "mae_above_optimistic_floor_cp": 164.30693069306932
+            }
+          }
+        }
+      }
+    },
+    "fresh_bucket_3": {
+      "positions": 112,
+      "targets": {
+        "static": {
+          "classical_mae_cp": 261.01785714285717,
+          "optimistic_cap_floor_mae_cp": 92.33928571428571,
+          "targets_outside_cap_fraction": 0.41964285714285715,
+          "models": {
+            "control": {
+              "mae_cp": 206.5625,
+              "clipped_fraction": 0.03571428571428571,
+              "mae_above_optimistic_floor_cp": 114.22321428571429
+            },
+            "candidate": {
+              "mae_cp": 210.26785714285714,
+              "clipped_fraction": 0.008928571428571428,
+              "mae_above_optimistic_floor_cp": 117.92857142857143
+            }
+          }
+        },
+        "stable": {
+          "classical_mae_cp": 255.28571428571428,
+          "optimistic_cap_floor_mae_cp": 78.41071428571429,
+          "targets_outside_cap_fraction": 0.42857142857142855,
+          "models": {
+            "control": {
+              "mae_cp": 225.09821428571428,
+              "clipped_fraction": 0.03571428571428571,
+              "mae_above_optimistic_floor_cp": 146.6875
+            },
+            "candidate": {
+              "mae_cp": 224.91071428571428,
+              "clipped_fraction": 0.008928571428571428,
+              "mae_above_optimistic_floor_cp": 146.5
+            }
+          }
+        }
+      }
+    },
+    "phase_0_8": {
+      "positions": 2937,
+      "targets": {
+        "static": {
+          "classical_mae_cp": 159.43854273067757,
+          "optimistic_cap_floor_mae_cp": 26.061967994552266,
+          "targets_outside_cap_fraction": 0.20531154239019409,
+          "models": {
+            "control": {
+              "mae_cp": 138.6040177051413,
+              "clipped_fraction": 0.012597889002383384,
+              "mae_above_optimistic_floor_cp": 112.54204971058904
+            },
+            "candidate": {
+              "mae_cp": 139.25093632958803,
+              "clipped_fraction": 0.009193054136874362,
+              "mae_above_optimistic_floor_cp": 113.18896833503575
+            }
+          }
+        },
+        "stable": {
+          "classical_mae_cp": 162.08546135512427,
+          "optimistic_cap_floor_mae_cp": 26.704119850187265,
+          "targets_outside_cap_fraction": 0.21178072863466121,
+          "models": {
+            "control": {
+              "mae_cp": 143.0160027238679,
+              "clipped_fraction": 0.012597889002383384,
+              "mae_above_optimistic_floor_cp": 116.31188287368063
+            },
+            "candidate": {
+              "mae_cp": 143.44637385086824,
+              "clipped_fraction": 0.009193054136874362,
+              "mae_above_optimistic_floor_cp": 116.74225400068097
+            }
+          }
+        }
+      }
+    },
+    "phase_9_16": {
+      "positions": 1257,
+      "targets": {
+        "static": {
+          "classical_mae_cp": 141.1145584725537,
+          "optimistic_cap_floor_mae_cp": 25.79156722354813,
+          "targets_outside_cap_fraction": 0.1726332537788385,
+          "models": {
+            "control": {
+              "mae_cp": 133.58472553699283,
+              "clipped_fraction": 0.005568814638027049,
+              "mae_above_optimistic_floor_cp": 107.7931583134447
+            },
+            "candidate": {
+              "mae_cp": 133.08910103420843,
+              "clipped_fraction": 0.003977724741447892,
+              "mae_above_optimistic_floor_cp": 107.2975338106603
+            }
+          }
+        },
+        "stable": {
+          "classical_mae_cp": 141.1145584725537,
+          "optimistic_cap_floor_mae_cp": 25.79156722354813,
+          "targets_outside_cap_fraction": 0.1726332537788385,
+          "models": {
+            "control": {
+              "mae_cp": 133.58472553699283,
+              "clipped_fraction": 0.005568814638027049,
+              "mae_above_optimistic_floor_cp": 107.7931583134447
+            },
+            "candidate": {
+              "mae_cp": 133.08910103420843,
+              "clipped_fraction": 0.003977724741447892,
+              "mae_above_optimistic_floor_cp": 107.2975338106603
+            }
+          }
+        }
+      }
+    },
+    "phase_17_24": {
+      "positions": 1893,
+      "targets": {
+        "static": {
+          "classical_mae_cp": 117.92287374537771,
+          "optimistic_cap_floor_mae_cp": 13.983623877443211,
+          "targets_outside_cap_fraction": 0.12836767036450078,
+          "models": {
+            "control": {
+              "mae_cp": 108.99154780771262,
+              "clipped_fraction": 0.001584786053882726,
+              "mae_above_optimistic_floor_cp": 95.00792393026941
+            },
+            "candidate": {
+              "mae_cp": 109.52773375594295,
+              "clipped_fraction": 0.0010565240359218173,
+              "mae_above_optimistic_floor_cp": 95.54410987849974
+            }
+          }
+        },
+        "stable": {
+          "classical_mae_cp": 117.92287374537771,
+          "optimistic_cap_floor_mae_cp": 13.983623877443211,
+          "targets_outside_cap_fraction": 0.12836767036450078,
+          "models": {
+            "control": {
+              "mae_cp": 108.99154780771262,
+              "clipped_fraction": 0.001584786053882726,
+              "mae_above_optimistic_floor_cp": 95.00792393026941
+            },
+            "candidate": {
+              "mae_cp": 109.52773375594295,
+              "clipped_fraction": 0.0010565240359218173,
+              "mae_above_optimistic_floor_cp": 95.54410987849974
+            }
+          }
+        }
+      }
+    }
+  },
+  "residual_cap_cp": 250,
+  "interpretation": "Optimistic independent per-position correction bound, with perfect access to each teacher label. It is not a realizable evaluator, does not make labels oracles, and estimates no strength. Post-training descriptive diagnostic only; gates/models/epochs/data unchanged."
+}

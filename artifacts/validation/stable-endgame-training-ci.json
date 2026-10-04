@@ -1,0 +1,692 @@
+{
+  "conclusion": "success",
+  "headSha": "5a01b57d2b60fb711b6b12f63138832783433880",
+  "jobs": [
+    {
+      "completedAt": "2026-10-04T19:49:15Z",
+      "conclusion": "success",
+      "databaseId": 111516485300,
+      "name": "engine (ubuntu-latest, default)",
+      "startedAt": "2026-10-04T19:48:20Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-04T19:48:21Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-04T19:48:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:33Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-04T19:48:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:34Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-dotnet@v4",
+          "number": 3,
+          "startedAt": "2026-10-04T19:48:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:34Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5",
+          "number": 4,
+          "startedAt": "2026-10-04T19:48:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:50Z",
+          "conclusion": "success",
+          "name": "Run dotnet build Aster.sln -c Release",
+          "number": 5,
+          "startedAt": "2026-10-04T19:48:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:50Z",
+          "conclusion": "skipped",
+          "name": "Run dotnet build Aster.sln -c Release -p:DefineConstants=ASTER_IIR",
+          "number": 6,
+          "startedAt": "2026-10-04T19:48:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:56Z",
+          "conclusion": "success",
+          "name": "Run dotnet run --project tests/Engine.Tests -c Release --no-build",
+          "number": 7,
+          "startedAt": "2026-10-04T19:48:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:59Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install -r requirements-dev.txt",
+          "number": 8,
+          "startedAt": "2026-10-04T19:48:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:02Z",
+          "conclusion": "success",
+          "name": "Run python scripts/verify.py --setups 1000",
+          "number": 9,
+          "startedAt": "2026-10-04T19:48:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:03Z",
+          "conclusion": "success",
+          "name": "Run python scripts/smoke_mate_proof.py",
+          "number": 10,
+          "startedAt": "2026-10-04T19:49:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:06Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-v1.json --depth 8 --require-solved 32 --output artifacts/tactics/ci.json",
+          "number": 11,
+          "startedAt": "2026-10-04T19:49:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:07Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-v1.json --nodes 5000 --require-solved 32 --output artifacts/tactics/ci-nodes.json",
+          "number": 12,
+          "startedAt": "2026-10-04T19:49:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:11Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-quiet-v1.json --depth 8 --require-solved 32 --output artifacts/tactics/ci-quiet-depth.json",
+          "number": 13,
+          "startedAt": "2026-10-04T19:49:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:11Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-quiet-v1.json --nodes 5000 --require-solved 25 --output artifacts/tactics/ci-quiet-nodes.json",
+          "number": 14,
+          "startedAt": "2026-10-04T19:49:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:12Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/endgames-v1.json --nodes 5000 --require-solved 13 --output artifacts/tactics/ci-endgames.json",
+          "number": 15,
+          "startedAt": "2026-10-04T19:49:11Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:12Z",
+          "conclusion": "success",
+          "name": "Run dotnet src/Engine/bin/Release/net8.0/Aster.dll bench 7",
+          "number": 16,
+          "startedAt": "2026-10-04T19:49:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:13Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@v5",
+          "number": 30,
+          "startedAt": "2026-10-04T19:49:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:13Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-dotnet@v4",
+          "number": 31,
+          "startedAt": "2026-10-04T19:49:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:13Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 32,
+          "startedAt": "2026-10-04T19:49:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:13Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 33,
+          "startedAt": "2026-10-04T19:49:13Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/p3n1cillin/aster-chess/actions/runs/37229664392/job/111516485300"
+    },
+    {
+      "completedAt": "2026-10-04T19:49:18Z",
+      "conclusion": "success",
+      "databaseId": 111516485395,
+      "name": "engine (ubuntu-latest, iir)",
+      "startedAt": "2026-10-04T19:48:20Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-04T19:48:22Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-04T19:48:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:32Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-04T19:48:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:33Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-dotnet@v4",
+          "number": 3,
+          "startedAt": "2026-10-04T19:48:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:33Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5",
+          "number": 4,
+          "startedAt": "2026-10-04T19:48:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:33Z",
+          "conclusion": "skipped",
+          "name": "Run dotnet build Aster.sln -c Release",
+          "number": 5,
+          "startedAt": "2026-10-04T19:48:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:54Z",
+          "conclusion": "success",
+          "name": "Run dotnet build Aster.sln -c Release -p:DefineConstants=ASTER_IIR",
+          "number": 6,
+          "startedAt": "2026-10-04T19:48:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:00Z",
+          "conclusion": "success",
+          "name": "Run dotnet run --project tests/Engine.Tests -c Release --no-build",
+          "number": 7,
+          "startedAt": "2026-10-04T19:48:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:03Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install -r requirements-dev.txt",
+          "number": 8,
+          "startedAt": "2026-10-04T19:49:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:06Z",
+          "conclusion": "success",
+          "name": "Run python scripts/verify.py --setups 1000",
+          "number": 9,
+          "startedAt": "2026-10-04T19:49:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:07Z",
+          "conclusion": "success",
+          "name": "Run python scripts/smoke_mate_proof.py",
+          "number": 10,
+          "startedAt": "2026-10-04T19:49:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:09Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-v1.json --depth 8 --require-solved 32 --output artifacts/tactics/ci.json",
+          "number": 11,
+          "startedAt": "2026-10-04T19:49:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:10Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-v1.json --nodes 5000 --require-solved 32 --output artifacts/tactics/ci-nodes.json",
+          "number": 12,
+          "startedAt": "2026-10-04T19:49:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:13Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-quiet-v1.json --depth 8 --require-solved 32 --output artifacts/tactics/ci-quiet-depth.json",
+          "number": 13,
+          "startedAt": "2026-10-04T19:49:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:14Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-quiet-v1.json --nodes 5000 --require-solved 25 --output artifacts/tactics/ci-quiet-nodes.json",
+          "number": 14,
+          "startedAt": "2026-10-04T19:49:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:15Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/endgames-v1.json --nodes 5000 --require-solved 13 --output artifacts/tactics/ci-endgames.json",
+          "number": 15,
+          "startedAt": "2026-10-04T19:49:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:15Z",
+          "conclusion": "success",
+          "name": "Run dotnet src/Engine/bin/Release/net8.0/Aster.dll bench 7",
+          "number": 16,
+          "startedAt": "2026-10-04T19:49:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:15Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@v5",
+          "number": 30,
+          "startedAt": "2026-10-04T19:49:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:15Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-dotnet@v4",
+          "number": 31,
+          "startedAt": "2026-10-04T19:49:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:16Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 32,
+          "startedAt": "2026-10-04T19:49:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:16Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 33,
+          "startedAt": "2026-10-04T19:49:16Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/p3n1cillin/aster-chess/actions/runs/37229664392/job/111516485395"
+    },
+    {
+      "completedAt": "2026-10-04T19:49:48Z",
+      "conclusion": "success",
+      "databaseId": 111516485409,
+      "name": "engine (windows-latest, default)",
+      "startedAt": "2026-10-04T19:48:20Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-04T19:48:22Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-04T19:48:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:40Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-04T19:48:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:43Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-dotnet@v4",
+          "number": 3,
+          "startedAt": "2026-10-04T19:48:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:43Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5",
+          "number": 4,
+          "startedAt": "2026-10-04T19:48:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:10Z",
+          "conclusion": "success",
+          "name": "Run dotnet build Aster.sln -c Release",
+          "number": 5,
+          "startedAt": "2026-10-04T19:48:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:10Z",
+          "conclusion": "skipped",
+          "name": "Run dotnet build Aster.sln -c Release -p:DefineConstants=ASTER_IIR",
+          "number": 6,
+          "startedAt": "2026-10-04T19:49:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:16Z",
+          "conclusion": "success",
+          "name": "Run dotnet run --project tests/Engine.Tests -c Release --no-build",
+          "number": 7,
+          "startedAt": "2026-10-04T19:49:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:31Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install -r requirements-dev.txt",
+          "number": 8,
+          "startedAt": "2026-10-04T19:49:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:34Z",
+          "conclusion": "success",
+          "name": "Run python scripts/verify.py --setups 1000",
+          "number": 9,
+          "startedAt": "2026-10-04T19:49:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:36Z",
+          "conclusion": "success",
+          "name": "Run python scripts/smoke_mate_proof.py",
+          "number": 10,
+          "startedAt": "2026-10-04T19:49:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:38Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-v1.json --depth 8 --require-solved 32 --output artifacts/tactics/ci.json",
+          "number": 11,
+          "startedAt": "2026-10-04T19:49:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:39Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-v1.json --nodes 5000 --require-solved 32 --output artifacts/tactics/ci-nodes.json",
+          "number": 12,
+          "startedAt": "2026-10-04T19:49:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:43Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-quiet-v1.json --depth 8 --require-solved 32 --output artifacts/tactics/ci-quiet-depth.json",
+          "number": 13,
+          "startedAt": "2026-10-04T19:49:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:44Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-quiet-v1.json --nodes 5000 --require-solved 25 --output artifacts/tactics/ci-quiet-nodes.json",
+          "number": 14,
+          "startedAt": "2026-10-04T19:49:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:44Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/endgames-v1.json --nodes 5000 --require-solved 13 --output artifacts/tactics/ci-endgames.json",
+          "number": 15,
+          "startedAt": "2026-10-04T19:49:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:45Z",
+          "conclusion": "success",
+          "name": "Run dotnet src/Engine/bin/Release/net8.0/Aster.dll bench 7",
+          "number": 16,
+          "startedAt": "2026-10-04T19:49:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:45Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@v5",
+          "number": 30,
+          "startedAt": "2026-10-04T19:49:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:46Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-dotnet@v4",
+          "number": 31,
+          "startedAt": "2026-10-04T19:49:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:47Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 32,
+          "startedAt": "2026-10-04T19:49:46Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:47Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 33,
+          "startedAt": "2026-10-04T19:49:47Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/p3n1cillin/aster-chess/actions/runs/37229664392/job/111516485409"
+    },
+    {
+      "completedAt": "2026-10-04T19:49:42Z",
+      "conclusion": "success",
+      "databaseId": 111516485442,
+      "name": "engine (windows-latest, iir)",
+      "startedAt": "2026-10-04T19:48:20Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-04T19:48:22Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-04T19:48:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:39Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-04T19:48:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:42Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-dotnet@v4",
+          "number": 3,
+          "startedAt": "2026-10-04T19:48:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:42Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5",
+          "number": 4,
+          "startedAt": "2026-10-04T19:48:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:48:42Z",
+          "conclusion": "skipped",
+          "name": "Run dotnet build Aster.sln -c Release",
+          "number": 5,
+          "startedAt": "2026-10-04T19:48:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:08Z",
+          "conclusion": "success",
+          "name": "Run dotnet build Aster.sln -c Release -p:DefineConstants=ASTER_IIR",
+          "number": 6,
+          "startedAt": "2026-10-04T19:48:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:14Z",
+          "conclusion": "success",
+          "name": "Run dotnet run --project tests/Engine.Tests -c Release --no-build",
+          "number": 7,
+          "startedAt": "2026-10-04T19:49:08Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:25Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install -r requirements-dev.txt",
+          "number": 8,
+          "startedAt": "2026-10-04T19:49:14Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:28Z",
+          "conclusion": "success",
+          "name": "Run python scripts/verify.py --setups 1000",
+          "number": 9,
+          "startedAt": "2026-10-04T19:49:25Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:29Z",
+          "conclusion": "success",
+          "name": "Run python scripts/smoke_mate_proof.py",
+          "number": 10,
+          "startedAt": "2026-10-04T19:49:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:32Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-v1.json --depth 8 --require-solved 32 --output artifacts/tactics/ci.json",
+          "number": 11,
+          "startedAt": "2026-10-04T19:49:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:33Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-v1.json --nodes 5000 --require-solved 32 --output artifacts/tactics/ci-nodes.json",
+          "number": 12,
+          "startedAt": "2026-10-04T19:49:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:36Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-quiet-v1.json --depth 8 --require-solved 32 --output artifacts/tactics/ci-quiet-depth.json",
+          "number": 13,
+          "startedAt": "2026-10-04T19:49:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:37Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-quiet-v1.json --nodes 5000 --require-solved 25 --output artifacts/tactics/ci-quiet-nodes.json",
+          "number": 14,
+          "startedAt": "2026-10-04T19:49:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:38Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/endgames-v1.json --nodes 5000 --require-solved 13 --output artifacts/tactics/ci-endgames.json",
+          "number": 15,
+          "startedAt": "2026-10-04T19:49:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:39Z",
+          "conclusion": "success",
+          "name": "Run dotnet src/Engine/bin/Release/net8.0/Aster.dll bench 7",
+          "number": 16,
+          "startedAt": "2026-10-04T19:49:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:39Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@v5",
+          "number": 30,
+          "startedAt": "2026-10-04T19:49:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:39Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-dotnet@v4",
+          "number": 31,
+          "startedAt": "2026-10-04T19:49:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:41Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 32,
+          "startedAt": "2026-10-04T19:49:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-04T19:49:41Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 33,
+          "startedAt": "2026-10-04T19:49:41Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/p3n1cillin/aster-chess/actions/runs/37229664392/job/111516485442"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/p3n1cillin/aster-chess/actions/runs/37229664392"
+}
