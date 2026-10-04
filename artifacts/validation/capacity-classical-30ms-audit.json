@@ -1,0 +1,105 @@
+{
+  "passed": true,
+  "positions": 64,
+  "suite_sha256": "01e773465168914fc65c45ac13df8db197f8e0cb4e37d4a25557e4f19701bdf8",
+  "exclusions": [
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\teacher-turn-60k-static-v1-classical.jsonl",
+      "sha256": "bfea2a0226b65879961c7cde551dde3d715a9e59ef9e99adf627e3744f2be162",
+      "positions": 60000
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\teacher-20k-v1.jsonl",
+      "sha256": "191c4bbd054ad307860d8935f2cb4f6cbcf73e60b68a3a397e646e8b6d691527",
+      "positions": 20000
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\endgame-diagnostic-512-v1.jsonl",
+      "sha256": "f07976034c668f3ae636ef96cf584891b1bb1a7cc1648e73d975e837277b29a3",
+      "positions": 512
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\stable-endgame-4096-v1.jsonl",
+      "sha256": "3c1ca1842da3059433028b3bd5cd9d6ebf9074226f63783238199563f34e5065",
+      "positions": 4096
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\stable-endgame-candidate-64096-v1-classical.jsonl",
+      "sha256": "24bc1fb466745dab174c48c014f4b9c4dbf215064aa0b9aa682c232fd0b5d1a4",
+      "positions": 64096
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\deep-turn-training-v1-classical.jsonl",
+      "sha256": "a493a35960ba61d25af4fecf491e1f2a4f0de228fe6b0cba5c38a1f170b3894b",
+      "positions": 63826
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v1.json",
+      "sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de",
+      "positions": 64
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v2.json",
+      "sha256": "cdcc99af780b795546a22e84b2557bd20168097c2694cc9b12ce2e242f74bc25",
+      "positions": 64
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v3.json",
+      "sha256": "b2c84b63c566712b33102e1a5f246d47a010a0341f8396c5e036937c74e241f3",
+      "positions": 64
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v4.json",
+      "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d",
+      "positions": 64
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v5.json",
+      "sha256": "e63c68d4024428bef2f84a4289db06c4aee70e60aa9f081cf437d2a6d237c46e",
+      "positions": 64
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\rating-parent-v1.json",
+      "sha256": "6c4d7453e3572cadf786d81be8ad8b0b85fb9c461d5e93847612959836efb112",
+      "positions": 144
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\lazy-order-parent-v1.json",
+      "sha256": "d8ac1c505d3c46c819b87da63fe8308cebd18a234a1889a9215fbc2e75101f3a",
+      "positions": 208
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\q-evasion-parent-v1.json",
+      "sha256": "13c3a7a689f83064490766a76d112589ef2098f93a9d92ebbfcee805f1c385f4",
+      "positions": 288
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\iir-parent-v1.json",
+      "sha256": "46868852f9af1c2b95bc9bfaec9b68bb0b45fd916d0bfc27f792fe9596855baa",
+      "positions": 448
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\phase-parent-v1.json",
+      "sha256": "35fd8dc040ab40538966d73d0f9c54d38ce490175e90fba10c9cf4c82363063f",
+      "positions": 80
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\mate-proof-parent-v1.json",
+      "sha256": "85553f4ff2dcc2ce9896e002ce5730d4ca54061c82f1032bdb47f0c83ae750c4",
+      "positions": 32
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\stable-endgame-parent-v1.json",
+      "sha256": "ee8a6137df3a3a0da43dcf783565e974483101bb41aeb956d52772f39fc06a19",
+      "positions": 160
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\deep-turn-parent-v1.json",
+      "sha256": "5addfa8b6a03c8fd844ff43ec8c8dc71f6c2d3184460d919fc7dee2676865237",
+      "positions": 160
+    }
+  ],
+  "teacher_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+  "source_sha256": "0c97723cf8a0404f9e3681a90f5d9d09dcfc4978721748222ee80a679a6fca5d",
+  "interpretation": "Legal complete histories, canonical deduplication, exact exclusions and provenance. Recorded bounded scores are not re-queried; no final strength claim."
+}

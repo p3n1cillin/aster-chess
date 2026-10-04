@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "checkpoint_validation_cases": 8,
+  "shared_columns_and_four_heads_exact": true,
+  "extra_output_initially_zero": true,
+  "extra_output_gradient_numeric_check": true,
+  "all_rows_initial_function_error_cp": 0.0
+}

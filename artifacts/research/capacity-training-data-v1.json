@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "complete": true,
+  "plan_sha256": "7db54c8e65f7a0578ac16011416a6bd18f92755e95aa8e3df906d6dbe95481d0",
+  "preparer_sha256": "cb0b15d6f2ff6a39ecc42e5babe894a11c606742a24d7ecc62735448e5f1dd76",
+  "data": "artifacts/data/deep-turn-training-v1-classical.jsonl",
+  "data_sha256": "a493a35960ba61d25af4fecf491e1f2a4f0de228fe6b0cba5c38a1f170b3894b",
+  "split_path": "artifacts/research/deep-turn-split-v1.json",
+  "split_sha256": "8297c020afa90f89cc2e87b15dd1a911c17501df58cf20c75873cb28e22ddd0e",
+  "classical_provenance_sha256": "42f271ec918787654e5c121d41540d356b2a1e034332d3d50f28c613ef3089a7",
+  "positions": 63826,
+  "initial_function_max_error_cp": 0.0,
+  "common_training_rng_sha256": "0c26277be56d3e384d3502d1d143ff6b98dba6224b6889686e2c6d4a2a186d2d",
+  "outputs": {
+    "control": {
+      "initial_checkpoint": "artifacts/research/capacity-initial-v1/control.pt",
+      "sha256": "82b9216af89063b4347753482c611baf43162c3e46b0271a7c6e9f83b43e1079",
+      "initial_state_sha256": "3929d12930a807e34c621872f229067227422a45213b107f9fc44b051382de5e",
+      "output": "artifacts/training/capacity-control-v1"
+    },
+    "candidate": {
+      "initial_checkpoint": "artifacts/research/capacity-initial-v1/candidate.pt",
+      "sha256": "3ae0a4737115614a2d95aa01eaddb841fd77eb18a25243b8e3039058106c119f",
+      "initial_state_sha256": "6e0c32a6cd7ac985f6bbec95851c0121375afe7fad4698b4bc8b7b49b4569a66",
+      "output": "artifacts/training/capacity-candidate-v1"
+    }
+  }
+}

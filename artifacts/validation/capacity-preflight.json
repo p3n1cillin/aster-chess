@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "correctness_passed": true,
+  "candidate_tactics_passed": false,
+  "models": {
+    "control": {
+      "path": "artifacts/training/capacity-control-v1/model.ann",
+      "sha256": "460736dd293709d72817ba1bee67e3186edabd097c456fc61ad0425d2a6b7725",
+      "training_sha256": "6cf220107de07e3611bb484ac6b589e01a8b899edcd1389ab43d2c73134c9d0f"
+    },
+    "candidate": {
+      "path": "artifacts/training/capacity-candidate-v1/model.ann",
+      "sha256": "668b96e42471d4ca20605ced76134caec8c99aba90db1aa95fdd1afbc44e181e",
+      "training_sha256": "426a4bdef1029252e49fb85a7d26e666da522f84bdbd1550ad76fc18f524a939"
+    }
+  },
+  "tactics": {
+    "control": {
+      "tactics-depth8": {
+        "solved": 32,
+        "minimum": 32,
+        "passed": true
+      },
+      "tactics-5000nodes": {
+        "solved": 32,
+        "minimum": 32,
+        "passed": true
+      },
+      "tactics-quiet-depth8": {
+        "solved": 30,
+        "minimum": 32,
+        "passed": false
+      },
+      "tactics-quiet-5000nodes": {
+        "solved": 24,
+        "minimum": 25,
+        "passed": false
+      },
+      "endgames-5000nodes": {
+        "solved": 13,
+        "minimum": 13,
+        "passed": true
+      }
+    },
+    "candidate": {
+      "tactics-depth8": {
+        "solved": 32,
+        "minimum": 32,
+        "passed": true
+      },
+      "tactics-5000nodes": {
+        "solved": 32,
+        "minimum": 32,
+        "passed": true
+      },
+      "tactics-quiet-depth8": {
+        "solved": 32,
+        "minimum": 32,
+        "passed": true
+      },
+      "tactics-quiet-5000nodes": {
+        "solved": 24,
+        "minimum": 25,
+        "passed": false
+      },
+      "endgames-5000nodes": {
+        "solved": 12,
+        "minimum": 13,
+        "passed": false
+      }
+    }
+  },
+  "engine": "artifacts/publish/mate-proof-dev-v2/Aster.dll",
+  "engine_sha256": "ac907eac90bba15acab80c15d16f195044a8ac2b59a7964f5a065bc0caaa0ae8",
+  "source_manifest": "artifacts/research/mate-proof-source-v2/manifest.json",
+  "source_manifest_sha256": "b90d8b01c71906fe4718922c84410db5b9e0c5a51a01a9b5bd3baf31929f589a",
+  "rebuilt_default_equivalent_positions": 32,
+  "plan_sha256": "7db54c8e65f7a0578ac16011416a6bd18f92755e95aa8e3df906d6dbe95481d0",
+  "bundle_sha256": "848412a82505938d59a7ac9166d98fd493797fb5a6fac872d6e18fbf0c119f24",
+  "script_sha256": "df043629b16217d79f123c6d60762f78fd29faee81e3866b7d6b23466b26b5f5",
+  "interpretation": "Training-only objective ablation on unchanged runtime; same targets/split/initial function/batches. Failures block longer confirmation, never either declared short screen."
+}

@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "status": "Declared before nested initialization, new training or opening/candidate queries",
+  "hypothesis": "Increasing hidden capacity from64 to128 improves playing strength on unchanged data and objective. Extra output weights start zero, preserving the H64 initial function; fresh-pair loss remains zero for both roles, following the completed stronger control.",
+  "prior_experiment": "artifacts/research/deep-turn-experiment-v1-manifest.json",
+  "prior_experiment_sha256": "a7d77481456c0d409435e7cd450b6ab88b548b47dbf20b7c23dd24c68444211f",
+  "data": "artifacts/data/deep-turn-training-v1-classical.jsonl",
+  "data_sha256": "a493a35960ba61d25af4fecf491e1f2a4f0de228fe6b0cba5c38a1f170b3894b",
+  "split_path": "artifacts/research/deep-turn-split-v1.json",
+  "split_sha256": "8297c020afa90f89cc2e87b15dd1a911c17501df58cf20c75873cb28e22ddd0e",
+  "data_bundle": "artifacts/research/deep-turn-training-data-v1.json",
+  "data_bundle_sha256": "8d6ad0c50c62a631e1f02f206d9287a5580037001392f440dd947c9a22714e78",
+  "baseline": "artifacts/publish/mate-proof-dev-v2/Aster.dll",
+  "baseline_sha256": "ac907eac90bba15acab80c15d16f195044a8ac2b59a7964f5a065bc0caaa0ae8",
+  "baseline_source": "artifacts/research/mate-proof-source-v2/manifest.json",
+  "training": {
+    "epochs": 50,
+    "batch_size": 512,
+    "learning_rate": 0.0002,
+    "threads": 4,
+    "seed": 20261014,
+    "classical_base": true,
+    "king_context": true,
+    "turn_output": true,
+    "phase_output": true,
+    "squared_activation": false,
+    "activation_bias": 0.5,
+    "transformer_std": 0.1,
+    "pair_loss_weight": 1.0,
+    "control_hidden": 64,
+    "candidate_hidden": 128,
+    "fresh_pair_loss_weight": 0.0,
+    "extra_initial_seed": 20261123,
+    "initialization": "Recreate the original H64 initial state and post-initialization Torch RNG. Embed every shared column and four output blocks unchanged in H128; add independent seeded ordinary-feature columns, zero king-context/padding columns, bias0.5 and zero extra outputs. Freeze both explicit initialization files. Same post-H64 RNG restored before batch shuffles; dimensions differ, so complete state hashes cannot match. Verify shared tensors, zero extra outputs and initial function within0.0001cp on all63826 rows; no labels select initialization.",
+    "control_reproduction": "H64 must reproduce the prior deep-turn control model byte for byte, with identical selected epoch, full initial state, RNG and all50 batch-order hashes. A failure stops before candidate training.",
+    "selection": "Only shared ordinary held-out target loss selects each epoch. Capacity is the sole intended model change; no different data, loss weights, budgets, retuning or post-filtering."
+  },
+  "validation": {
+    "tactics": {
+      "tactics-depth8": 32,
+      "tactics-5000nodes": 32,
+      "tactics-quiet-depth8": 32,
+      "tactics-quiet-5000nodes": 25,
+      "endgames-5000nodes": 13
+    },
+    "policy": "Required build/native rules/protocol/bench, exact Python/C# inference, explicit initialization and batch checks, common held-out diagnostics and frozen tactical thresholds. No fit-only promotion."
+  },
+  "matches": {
+    "short_pairs_each": 64,
+    "seconds_per_move": 0.03,
+    "conditional_long_pairs": 32,
+    "long_seconds_per_move": 0.1,
+    "resources": {
+      "Threads": 1,
+      "Hash": 64,
+      "Move Overhead": 0,
+      "max_additional_plies": 400
+    },
+    "bootstrap_samples": 20000,
+    "bootstrap_seed": 20261125,
+    "gate": "Always finish both128-game short screens. Long64-game classical confirmation only with correctness/tactics,zero forfeits/unresolved,classical short95% family lower>50%,control point>=50% and family lower>=45%. Promotion additionally long point>=50%,family lower>=45%,zero issues. No extension/retuning.",
+    "openings": {
+      "positions": 160,
+      "attempts": 2048,
+      "seed": 20261124,
+      "plies": 20,
+      "nodes": 2048,
+      "verify_nodes": 20000,
+      "max_cp": 80,
+      "partition": "160 new parent pairs; first64 classical30ms,next64 H64control30ms,last32 conditional classical100ms. Exclude all old/current data, all prior parents including deep-turn, and tactical fixtures; freeze before candidate queries."
+    }
+  },
+  "cost_diagnostic": {
+    "positions": 64,
+    "rounds": 9,
+    "warmup_rounds": 3,
+    "repetitions_per_round": 300,
+    "policy": "Separate original BCL-only harness linked to the frozen runtime. Identical frozen legal make/eval/undo/eval operations for classical,H64,H128 in seeded counterbalanced order. Check root restoration and repeatable score checksums. Preserve raw timings and harness source/binary. Descriptive cost, not a strength or promotion gate; do not contend with matches or training."
+  },
+  "maximum_match_games": 320,
+  "rating": "No new calibration; last exact0.7.6-q-evasion estimate2319,local95%2277..2360 retained. Models do not inherit it.",
+  "limits": "Same finite-label and endgame-biased source and historical static/deep mix. More capacity may worsen search cost; matched epoch count is not equal training compute. Extra units start zero-output, so initial function matches but optimization geometry differs. Teacher fit, timing and tactical gains do not establish Stockfish superiority."
+}

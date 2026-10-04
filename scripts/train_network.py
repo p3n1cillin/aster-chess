@@ -140,6 +140,36 @@ def pair_partitions(rows: list[dict], validation_games: set) -> dict[str,list]:
     return result
 
 
+def load_initial_checkpoint(model: PositionNetwork, path: str) -> dict:
+    """Load an explicit initial function and training RNG, never optimizer state."""
+    source = pathlib.Path(path)
+    checksum = hashlib.sha256(source.read_bytes()).hexdigest()
+    checkpoint = torch.load(source,map_location="cpu",weights_only=True)
+    architecture = {"hidden":model.bias.numel(),"classical_base":model.classical_base,
+        "king_context":model.features == CONTEXT_FEATURES,"turn_output":model.turn_output,
+        "phase_output":model.phase_output,"squared_activation":model.squared_activation}
+    if checkpoint.get("schema") != 1 or checkpoint.get("kind") != "aster_initial_state" or checkpoint.get("architecture") != architecture:
+        raise ValueError("Initial checkpoint architecture mismatch")
+    state = checkpoint.get("state_dict",{})
+    expected = model.state_dict()
+    if set(state) != set(expected): raise ValueError("Initial checkpoint parameter mismatch")
+    for key,value in state.items():
+        if not isinstance(value,torch.Tensor) or value.dtype != torch.float32 or value.shape != expected[key].shape or not torch.isfinite(value).all():
+            raise ValueError("Invalid initial tensor: "+key)
+        bound = {"linear.weight":100,"transformer.weight":8,"bias":16,"output":1.25}[key]
+        if (value.abs()>bound).any(): raise ValueError("Initial tensor exceeds training bound: "+key)
+    if state["linear.weight"][-1].count_nonzero() or state["transformer.weight"][-1].count_nonzero():
+        raise ValueError("Initial padding features must be zero")
+    rng = checkpoint.get("training_rng_state")
+    if not isinstance(rng,torch.Tensor) or rng.dtype != torch.uint8 or rng.shape != torch.get_rng_state().shape:
+        raise ValueError("Invalid initial training RNG")
+    try: torch.Generator().set_state(rng)
+    except RuntimeError as error: raise ValueError("Invalid initial training RNG payload") from error
+    model.load_state_dict(state,strict=True); torch.set_rng_state(rng)
+    return {"path":str(source.resolve()),"sha256":checksum,"architecture":architecture,
+        "scope":"Explicit model initialization and post-initialization batch RNG; no optimizer or trained checkpoint resume."}
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("data")
@@ -151,6 +181,7 @@ def main() -> None:
     parser.add_argument("--threads", type=int, default=4)
     parser.add_argument("--seed", type=int, default=20261003)
     parser.add_argument("--validation-games", help="Frozen JSON list or object with validation_games; whole-game split")
+    parser.add_argument("--initial-checkpoint", help="Explicit aster_initial_state weights and batch RNG; dimensions and padding validated")
     parser.add_argument("--classical-base", action="store_true", help="Learn bounded corrections on the frozen classical evaluator")
     parser.add_argument("--king-context", action="store_true", help="Add own-king-region conditioned piece features")
     parser.add_argument("--turn-output", action="store_true", help="Learn separate moving/opponent perspective output weights; requires king context")
@@ -253,6 +284,7 @@ def main() -> None:
         if len(pairs) and (not torch.equal(white[pairs[:, 0]], white[pairs[:, 1]]) or not torch.equal(black[pairs[:, 0]], black[pairs[:, 1]])):
             raise ValueError("Turn-pair features differ")
     model = PositionNetwork(args.hidden, args.classical_base, args.king_context, args.activation_bias, args.turn_output, args.squared_activation, args.transformer_std, args.phase_output)
+    initial_checkpoint = load_initial_checkpoint(model,args.initial_checkpoint) if args.initial_checkpoint else None
     initial_shared = hashlib.sha256()
     for tensor in (model.linear.weight, model.transformer.weight, model.bias, model.output[:args.hidden * (2 if args.turn_output else 1)]):
         initial_shared.update(tensor.detach().numpy().tobytes())
@@ -383,6 +415,10 @@ def main() -> None:
               "quantization_mae_cp": float(np.abs(qp - float_predictions).mean()), "quantization_max_error_cp": float(np.abs(qp - float_predictions).max()),
               "seconds": round(time.monotonic() - started, 3), "interpretation": "Teacher fit on held-out games, not playing strength or evidence of surpassing Stockfish."}
     report["initial_activation"] = initial_activation
+    if initial_checkpoint is not None:
+        if hashlib.sha256(pathlib.Path(args.initial_checkpoint).read_bytes()).hexdigest() != initial_checkpoint["sha256"]:
+            raise ValueError("Initial checkpoint changed during training")
+        report["initial_checkpoint"] = initial_checkpoint
     report["selected_activation"] = activation_stats()
     report["classical_base"] = args.classical_base
     if classical_provenance is not None:

@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "passed": true,
+  "plan_sha256": "7db54c8e65f7a0578ac16011416a6bd18f92755e95aa8e3df906d6dbe95481d0",
+  "script_sha256": "cfd891f63e6c6097987f8c05a4be905a5f5f67edc9eae65b55750c8438759f42",
+  "raw_sha256": "015b2ceb0aa5ff30c544dd8bf359f74ed7fa07c80670b66e1d09f6406a5f2913",
+  "trace_sha256": "a7b0bd8e4a448fa3aa70c46505cae5e14c62bc3591d0a2c94cba184038c3a75e",
+  "harness_sha256": "0d4263e504faa3e8ab38d77f671dc3357efce22e1812b3647ad9322315ef7bbd",
+  "runtime_sha256": "ac907eac90bba15acab80c15d16f195044a8ac2b59a7964f5a065bc0caaa0ae8",
+  "models": {
+    "control": "460736dd293709d72817ba1bee67e3186edabd097c456fc61ad0425d2a6b7725",
+    "candidate": "668b96e42471d4ca20605ced76134caec8c99aba90db1aa95fdd1afbc44e181e"
+  },
+  "median_milliseconds": {
+    "classical": 8.8607,
+    "control": 27.5918,
+    "candidate": 43.8127
+  },
+  "candidate_over_control_median": 1.5878884306206917,
+  "control_over_classical_median": 3.1139526222533207,
+  "interpretation": "Identical frozen make/eval/undo/eval workload and checked roots/checksums. Local counterbalanced warmed cost diagnostic; not broad search speed, a promotion gate, Elo or strength. No retuning from timings."
+}

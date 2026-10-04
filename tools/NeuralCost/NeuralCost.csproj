@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>Aster.NeuralCost</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aster">
+      <HintPath>../../artifacts/publish/mate-proof-dev-v2/Aster.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

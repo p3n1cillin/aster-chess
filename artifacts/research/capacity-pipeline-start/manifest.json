@@ -1,0 +1,462 @@
+{
+  "created_utc": "2026-10-04T21:44:05.061236+00:00",
+  "plan_sha256": "7db54c8e65f7a0578ac16011416a6bd18f92755e95aa8e3df906d6dbe95481d0",
+  "source_files": [
+    {
+      "path": "declare_capacity.py",
+      "sha256": "6935a09ee7b4c79607e8f248311af55d01a0fd98f9f3aff1fb65ee41b218a7b2"
+    },
+    {
+      "path": "prepare_capacity.py",
+      "sha256": "cb0b15d6f2ff6a39ecc42e5babe894a11c606742a24d7ecc62735448e5f1dd76"
+    },
+    {
+      "path": "prepare_capacity_cost.py",
+      "sha256": "26469019cf44966d23931dbddc6c9d9bd17299a62e779303128feca71b19ca5d"
+    },
+    {
+      "path": "test_capacity_initial.py",
+      "sha256": "d53a062a4dbd4e621078ec71712ec1a295de2c75d475e0c02817dae461d42dca"
+    },
+    {
+      "path": "train_capacity.py",
+      "sha256": "cc14e9c59234b926b68ce10d32d1754ad42286b8d4a1309e58256450d7119f51"
+    },
+    {
+      "path": "train_network.py",
+      "sha256": "f4fdc068625b578d27760eb875f0370cc98391c018647aab3d1347268c52498a"
+    },
+    {
+      "path": "neural_format.py",
+      "sha256": "304897abff22a599e5523ad08492f76d91dde8def54e54497716969602970efa"
+    },
+    {
+      "path": "prepare_capacity_openings.py",
+      "sha256": "115fd71e395bbce112ef2f7ceb3a057c1e0d4dc20a699d0c17e0908bbdd0dfe1"
+    },
+    {
+      "path": "validate_capacity_baseline.py",
+      "sha256": "10d121caa716e1ca0488e6e5e592d8831af0042917537f295177cdc204c0d5a1"
+    },
+    {
+      "path": "run_capacity_cost.py",
+      "sha256": "cfd891f63e6c6097987f8c05a4be905a5f5f67edc9eae65b55750c8438759f42"
+    },
+    {
+      "path": "report_capacity_fit.py",
+      "sha256": "5f80074c13247755867235a59fd5e76ffb3d7330bd89e7e7148fb796cce646f5"
+    },
+    {
+      "path": "check_capacity.py",
+      "sha256": "df043629b16217d79f123c6d60762f78fd29faee81e3866b7d6b23466b26b5f5"
+    },
+    {
+      "path": "freeze_capacity_pipeline.py",
+      "sha256": "d89eba9c80dab350794bf6a7ec61f75afa363ca3bf97168e38b907d71e19f8cd"
+    },
+    {
+      "path": "run_capacity.py",
+      "sha256": "6ff88db23b5e3e07ed60b477f2fb9f708e586a8a74af7c8151d2f3c168a9cf00"
+    },
+    {
+      "path": "assess_capacity.py",
+      "sha256": "367a5192dab71f480e75b0fee0665815889360eb8c49e78534721ac1a6ac558e"
+    },
+    {
+      "path": "preserve_capacity.py",
+      "sha256": "dedfbe82794bc71d4c39cf093ee7445a6716fff9bb401451cd0c03ded91cd469"
+    },
+    {
+      "path": "record_capacity_session.py",
+      "sha256": "7a96fb90613275abe0965b69434efbf6cf610f621795eac970d449288809f181"
+    },
+    {
+      "path": "audit_capacity_match_metadata.py",
+      "sha256": "6ca2d5ab1792053d201f0f77c57c7728efc6c61aee03d358e827b46be26223d0"
+    },
+    {
+      "path": "report_capacity_initial_search.py",
+      "sha256": "3113bcfa974152c33e39ff6a03f41fbcafceb1bf0079120d313def4692f733f2"
+    },
+    {
+      "path": "generate_openings.py",
+      "sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746"
+    },
+    {
+      "path": "audit_openings.py",
+      "sha256": "0c97723cf8a0404f9e3681a90f5d9d09dcfc4978721748222ee80a679a6fca5d"
+    },
+    {
+      "path": "verify_network.py",
+      "sha256": "be2ffe96b1a70f2e2ac24d4df640cd1682ab49c161c985a7f3aecd51de50fada"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    },
+    {
+      "path": "tactics.py",
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    },
+    {
+      "path": "compare_search.py",
+      "sha256": "a8162c85b4ea4aae46546ca8a02d4b04c083bf56abb6a28d64f322b2331b6dd9"
+    },
+    {
+      "path": "match.py",
+      "sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8"
+    },
+    {
+      "path": "audit_match.py",
+      "sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6"
+    },
+    {
+      "path": "analyze_rating.py",
+      "sha256": "f6fe53073c006e91760b885adab9803f92cd50fa3c3a7ba6ada90f0a8e5b8d13"
+    },
+    {
+      "path": "run_rating.py",
+      "sha256": "6e8a31adefd0aeb5d51eac2f5672396f4518f779947713f86dac138ff00f661a"
+    },
+    {
+      "path": "uci_client.py",
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "freeze_engine_source.py",
+      "sha256": "db919e19f9b75ade115a3d834ad48cc57e01a6165130ef03a775279f4c89acb7"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "artifacts/benchmarks/capacity-rebuild-depth8.json",
+      "sha256": "15e231b8c57ec666847a5e77d9c269deba13811560051008fdfdae5142ce3038"
+    },
+    {
+      "path": "artifacts/data/deep-turn-training-v1-classical.jsonl",
+      "sha256": "a493a35960ba61d25af4fecf491e1f2a4f0de228fe6b0cba5c38a1f170b3894b"
+    },
+    {
+      "path": "artifacts/data/deep-turn-training-v1-classical.jsonl.classical.json",
+      "sha256": "42f271ec918787654e5c121d41540d356b2a1e034332d3d50f28c613ef3089a7"
+    },
+    {
+      "path": "artifacts/publish/capacity-cost/Aster.dll",
+      "sha256": "ac907eac90bba15acab80c15d16f195044a8ac2b59a7964f5a065bc0caaa0ae8"
+    },
+    {
+      "path": "artifacts/publish/capacity-cost/Aster.NeuralCost.deps.json",
+      "sha256": "a31b541e4066d6727615407635d6637a8983e5352000fc7986324e2d60b25382"
+    },
+    {
+      "path": "artifacts/publish/capacity-cost/Aster.NeuralCost.dll",
+      "sha256": "0d4263e504faa3e8ab38d77f671dc3357efce22e1812b3647ad9322315ef7bbd"
+    },
+    {
+      "path": "artifacts/publish/capacity-cost/Aster.NeuralCost.exe",
+      "sha256": "ec02ffeb2b4b92b91fec3c87d54ef4cfc097acfdc7a84dfacfbbe5ded4b7c3c6"
+    },
+    {
+      "path": "artifacts/publish/capacity-cost/Aster.NeuralCost.pdb",
+      "sha256": "171a708c65428cbc3406803667cf333eeb3c7cce6dc93ba8ac6fde6be1ab9bb5"
+    },
+    {
+      "path": "artifacts/publish/capacity-cost/Aster.NeuralCost.runtimeconfig.json",
+      "sha256": "28329cf08f6505e73806b17558b187c02f0c1c516fe47ebfb7a013d082aaa306"
+    },
+    {
+      "path": "artifacts/publish/capacity-cost/Aster.pdb",
+      "sha256": "e6c91afd09cd0c2603eda77130026df76cd78d08f96a4be3889cee4ffe62077a"
+    },
+    {
+      "path": "artifacts/research/capacity-cost-source-v1/NeuralCost.csproj",
+      "sha256": "b13178d39de809cecdfc1967a5e5b53d2a76903e862e208e70f907e0e4b7ae77"
+    },
+    {
+      "path": "artifacts/research/capacity-cost-source-v1/Program.cs",
+      "sha256": "2f98a58949facb8e587ddb8b978802971a1969302371d7bc6cb0abad048ce9af"
+    },
+    {
+      "path": "artifacts/research/capacity-cost-trace-v1.json",
+      "sha256": "a7b0bd8e4a448fa3aa70c46505cae5e14c62bc3591d0a2c94cba184038c3a75e"
+    },
+    {
+      "path": "artifacts/research/capacity-initial-v1/candidate.pt",
+      "sha256": "3ae0a4737115614a2d95aa01eaddb841fd77eb18a25243b8e3039058106c119f"
+    },
+    {
+      "path": "artifacts/research/capacity-initial-v1/control.pt",
+      "sha256": "82b9216af89063b4347753482c611baf43162c3e46b0271a7c6e9f83b43e1079"
+    },
+    {
+      "path": "artifacts/research/capacity-plan-v1.json",
+      "sha256": "7db54c8e65f7a0578ac16011416a6bd18f92755e95aa8e3df906d6dbe95481d0"
+    },
+    {
+      "path": "artifacts/research/capacity-training-data-v1.json",
+      "sha256": "848412a82505938d59a7ac9166d98fd493797fb5a6fac872d6e18fbf0c119f24"
+    },
+    {
+      "path": "artifacts/research/capacity-training-execution-v1.json",
+      "sha256": "29335381cd01608171934c902dc5cd3ef0264268b3acdc8373a2a0071e648674"
+    },
+    {
+      "path": "artifacts/research/deep-turn-experiment-v1-manifest.json",
+      "sha256": "a7d77481456c0d409435e7cd450b6ab88b548b47dbf20b7c23dd24c68444211f"
+    },
+    {
+      "path": "artifacts/research/deep-turn-split-v1.json",
+      "sha256": "8297c020afa90f89cc2e87b15dd1a911c17501df58cf20c75873cb28e22ddd0e"
+    },
+    {
+      "path": "artifacts/research/deep-turn-training-data-v1.json",
+      "sha256": "8d6ad0c50c62a631e1f02f206d9287a5580037001392f440dd947c9a22714e78"
+    },
+    {
+      "path": "artifacts/tactics/capacity-candidate-endgames-5000nodes.json",
+      "sha256": "55da6fdf06e8c8adba95ccb411bf9ea7dab482d3f21265891f1d00777d88ada4"
+    },
+    {
+      "path": "artifacts/tactics/capacity-candidate-tactics-5000nodes.json",
+      "sha256": "617ad884673723417bbc993d9e51a410518d93d38c4aad644a07cddc83eb96f6"
+    },
+    {
+      "path": "artifacts/tactics/capacity-candidate-tactics-depth8.json",
+      "sha256": "b60e6df5b0cf83e8800d1c634ce7ced106baa7f9e476718aeb8dc9764e82a3eb"
+    },
+    {
+      "path": "artifacts/tactics/capacity-candidate-tactics-quiet-5000nodes.json",
+      "sha256": "3ea71c937f1b060feb2d65045504b0a4df9e35a556b7af259a337dc3646ef74a"
+    },
+    {
+      "path": "artifacts/tactics/capacity-candidate-tactics-quiet-depth8.json",
+      "sha256": "32e99c1d8e0a6560d7b1392ddb76eaf81a7d8c986807655ce7720431b87a28a6"
+    },
+    {
+      "path": "artifacts/tactics/capacity-control-endgames-5000nodes.json",
+      "sha256": "1147f2c08e1f32a7b6b39a719d0117894499cce2b68a566037cfbdbdd2cda133"
+    },
+    {
+      "path": "artifacts/tactics/capacity-control-tactics-5000nodes.json",
+      "sha256": "3fa2f8f694a6a0f4221c13a2137af8d67330d288f2d06d35050fbbb630a1cb60"
+    },
+    {
+      "path": "artifacts/tactics/capacity-control-tactics-depth8.json",
+      "sha256": "d667a82be21c061f208da687e74661d13bfce722de38f7f323c036e5c86539f9"
+    },
+    {
+      "path": "artifacts/tactics/capacity-control-tactics-quiet-5000nodes.json",
+      "sha256": "2033635cada6a868ca84ab546757e5d6544f9f52c5ed00e9bad0d933842a7abb"
+    },
+    {
+      "path": "artifacts/tactics/capacity-control-tactics-quiet-depth8.json",
+      "sha256": "d02f2416377ff214136bcff1e47a321f00ff9aef237362656d53a411f649c86e"
+    },
+    {
+      "path": "artifacts/validation/capacity-baseline-driver.txt",
+      "sha256": "1cf5b334a8305a5658ddf1b10de71784d196a1bd85d190e504fbbec3d947c245"
+    },
+    {
+      "path": "artifacts/validation/capacity-bench7.txt",
+      "sha256": "e985a75df359f8294aa0c778dcb60e5673b92327b4938cc6fac8ed80a5aee4ac"
+    },
+    {
+      "path": "artifacts/validation/capacity-build.txt",
+      "sha256": "2c1e2aa67d398fc690b90aaa4d1fcf0f61e83e9765c17a52f9714fc7825ecf43"
+    },
+    {
+      "path": "artifacts/validation/capacity-candidate-endgames-5000nodes.txt",
+      "sha256": "3027cd62a9f457f0c13961d222316c51a093a8e6ab0e00771f444d9cab4cc058"
+    },
+    {
+      "path": "artifacts/validation/capacity-candidate-network.json",
+      "sha256": "f603a35e34d140bca1ec4c82c28c479d47452321e609dc4812a62cfea0c5fd33"
+    },
+    {
+      "path": "artifacts/validation/capacity-candidate-network.txt",
+      "sha256": "dd45e57d5c602547e547ac3198de671c00836f57d55cce9d5615d2e2b398bacd"
+    },
+    {
+      "path": "artifacts/validation/capacity-candidate-rules.json",
+      "sha256": "93ac6e07d0e7ca766d35f5787c76a1435c9e71841ef3f97b9e7d5bbc2794139d"
+    },
+    {
+      "path": "artifacts/validation/capacity-candidate-rules.txt",
+      "sha256": "80ec1b55e16ae5c35dab105e3218f6fe65318a1591b948ee2b3e1dbd910cb4f9"
+    },
+    {
+      "path": "artifacts/validation/capacity-candidate-tactics-5000nodes.txt",
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/capacity-candidate-tactics-depth8.txt",
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/capacity-candidate-tactics-quiet-5000nodes.txt",
+      "sha256": "42def545db2a70966cb6bc37906897a006ce19db515c280022a24195ce77c43f"
+    },
+    {
+      "path": "artifacts/validation/capacity-candidate-tactics-quiet-depth8.txt",
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/capacity-classical-100ms-audit.json",
+      "sha256": "db7b98d14df86dccbdc63c4ec51e24083386e35e87a073994798495ce9445c95"
+    },
+    {
+      "path": "artifacts/validation/capacity-classical-30ms-audit.json",
+      "sha256": "63a864c0ca459bc81358c62cf8b4c9a27f1813162ef8ee59b4bd79e8c6e10b48"
+    },
+    {
+      "path": "artifacts/validation/capacity-control-30ms-audit.json",
+      "sha256": "f219b072244e4fb5041e130623fe75f75b0ad3a6d0a2112038ecfe166cf1596f"
+    },
+    {
+      "path": "artifacts/validation/capacity-control-endgames-5000nodes.txt",
+      "sha256": "ef4e645f8ea67b03b31bbb891a18f192680d3ff359c2bd10e014b1541b2db39b"
+    },
+    {
+      "path": "artifacts/validation/capacity-control-network.json",
+      "sha256": "d53bf9a775aea76bfdf89c79b5c2926dc05731ab2bcafb486c1472183203c550"
+    },
+    {
+      "path": "artifacts/validation/capacity-control-network.txt",
+      "sha256": "3b3133c074e2b7a7d0c49d5b41ba40f2dcf3b10a2650cfa861a75cdef1da4770"
+    },
+    {
+      "path": "artifacts/validation/capacity-control-rules.json",
+      "sha256": "00e5b8bed6b6dd6fce6d8e0a4bde80ffa4b4a13a4f19603489265160721c4a7b"
+    },
+    {
+      "path": "artifacts/validation/capacity-control-rules.txt",
+      "sha256": "4e62bc833c4f9834adf45d9c32586f68b0992ac3f6cc0b9a9a787bbb8422b7f5"
+    },
+    {
+      "path": "artifacts/validation/capacity-control-tactics-5000nodes.txt",
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/capacity-control-tactics-depth8.txt",
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/capacity-control-tactics-quiet-5000nodes.txt",
+      "sha256": "42def545db2a70966cb6bc37906897a006ce19db515c280022a24195ce77c43f"
+    },
+    {
+      "path": "artifacts/validation/capacity-control-tactics-quiet-depth8.txt",
+      "sha256": "6337b334be0c058fb1bf16f4a73c3d5db90443d425f7a0e635d6eb5fd21b2611"
+    },
+    {
+      "path": "artifacts/validation/capacity-cost-build.txt",
+      "sha256": "ad9ceb8093ca4227dfdd21a203020fa2024a308422d05c976214c2a51e93d9c8"
+    },
+    {
+      "path": "artifacts/validation/capacity-cost-driver.txt",
+      "sha256": "30ba1cc08497932348fd85e4c37377d84eafeb67cefa8ee9c51deafd36c15628"
+    },
+    {
+      "path": "artifacts/validation/capacity-cost-raw-v1.json",
+      "sha256": "015b2ceb0aa5ff30c544dd8bf359f74ed7fa07c80670b66e1d09f6406a5f2913"
+    },
+    {
+      "path": "artifacts/validation/capacity-cost-v1.json",
+      "sha256": "ee4ccd4d09175809f2698124c04c2dc133535a748216569d7235838a8c35b679"
+    },
+    {
+      "path": "artifacts/validation/capacity-default-rules.json",
+      "sha256": "bd29575e1de49f89837209dd62c42a43b659b54dc8dffab39e9e09ec52fdc702"
+    },
+    {
+      "path": "artifacts/validation/capacity-default-rules.txt",
+      "sha256": "9877019e04a8092fdf0d6657ae8728753387597acc4c9fd50bb2e43b914c3974"
+    },
+    {
+      "path": "artifacts/validation/capacity-default-tests.txt",
+      "sha256": "53f4d392e6191459095a1bfadef58c681877c4bdb7504c744493ac1ab4b82879"
+    },
+    {
+      "path": "artifacts/validation/capacity-freeze-runtime.txt",
+      "sha256": "933a89114561fe0f2258f8ea46794f3c5dba0250cbc2c5df9b6d94e614ecbb08"
+    },
+    {
+      "path": "artifacts/validation/capacity-frozen-default-rules.json",
+      "sha256": "fb7feb1dace84af98b993eb82481e950a2dc89aa82c7fef4193715dcc354b1bf"
+    },
+    {
+      "path": "artifacts/validation/capacity-frozen-default-rules.txt",
+      "sha256": "e6d231f1ee394b33f3c1614b198d486764bb8834da8ceae719d6d42ed4e7bb90"
+    },
+    {
+      "path": "artifacts/validation/capacity-initial-tests-v1.json",
+      "sha256": "25443760424cba5a72e28a4ff94a481fdbff25e76a105a0d5ded9c7601470808"
+    },
+    {
+      "path": "artifacts/validation/capacity-opening-generation.txt",
+      "sha256": "e5310df9314921cd18ed876e3f2ee7f8e393f69615729658a0871973debd8ac0"
+    },
+    {
+      "path": "artifacts/validation/capacity-parent-audit.json",
+      "sha256": "4e69a4e336ae1ef16f1899814d13c26c64f55e0982fc86e896a3454a70fd7bf8"
+    },
+    {
+      "path": "artifacts/validation/capacity-preflight-driver.txt",
+      "sha256": "827da968b311ed02e6411050328032b1a2bfe543c0a835ecb8767546b1724387"
+    },
+    {
+      "path": "artifacts/validation/capacity-preflight.json",
+      "sha256": "3925a885ca9dd11f060aedf6cfdd6ded84370c43ba579917a2b7d2a8453d0fd4"
+    },
+    {
+      "path": "artifacts/validation/capacity-quantized-heldout-fit-v1.json",
+      "sha256": "5ac797064a402866e5773e3bce1a9428a839ba9e3d4c6d22bf54ef1149f3ca19"
+    },
+    {
+      "path": "artifacts/validation/capacity-rebuild-comparison.txt",
+      "sha256": "f7337f1433151a70d2d75e96009209372e9bcba9ecbc879f48b799b483086c91"
+    },
+    {
+      "path": "artifacts/validation/capacity-training-candidate.txt",
+      "sha256": "e18e728c3daacb2fb1dc4173dd3afe67ee57d046197b8e90250e831fe13e977f"
+    },
+    {
+      "path": "artifacts/validation/capacity-training-control.txt",
+      "sha256": "77007dc6d97952a99be583d390273004a6f866eb94807bcd7d616cf4b934f67c"
+    },
+    {
+      "path": "artifacts/validation/capacity-training-driver.txt",
+      "sha256": "c53e8b8781c102ebbb8273754bf7eb4c9cca763cb79ffd54757e1a427edf29a8"
+    },
+    {
+      "path": "tests/fixtures/capacity-classical-100ms-v1.json",
+      "sha256": "dcbebc58b5c33ec6b9e502031dc4cdc7190d76dbc222ded241970136d958b3f5"
+    },
+    {
+      "path": "tests/fixtures/capacity-classical-30ms-v1.json",
+      "sha256": "01e773465168914fc65c45ac13df8db197f8e0cb4e37d4a25557e4f19701bdf8"
+    },
+    {
+      "path": "tests/fixtures/capacity-control-30ms-v1.json",
+      "sha256": "76c1fefa9817b587f355cccd4dfe763ed5f435b6fc11b57fcee5eb991e2cdd30"
+    },
+    {
+      "path": "tests/fixtures/capacity-parent-v1.json",
+      "sha256": "81e388417a56d17ce865237647a02506e9cc05677232c6bcbe73b1f8d2f7d39b"
+    }
+  ],
+  "engine_sha256": "ac907eac90bba15acab80c15d16f195044a8ac2b59a7964f5a065bc0caaa0ae8",
+  "models": {
+    "control": {
+      "path": "artifacts/training/capacity-control-v1/model.ann",
+      "sha256": "460736dd293709d72817ba1bee67e3186edabd097c456fc61ad0425d2a6b7725",
+      "training_sha256": "6cf220107de07e3611bb484ac6b589e01a8b899edcd1389ab43d2c73134c9d0f"
+    },
+    "candidate": {
+      "path": "artifacts/training/capacity-candidate-v1/model.ann",
+      "sha256": "668b96e42471d4ca20605ced76134caec8c99aba90db1aa95fdd1afbc44e181e",
+      "training_sha256": "426a4bdef1029252e49fb85a7d26e666da522f84bdbd1550ad76fc18f524a939"
+    }
+  },
+  "interpretation": "Frozen after both trainings/correctness/tactics/cost checks, before matches. Both128-game short screens finish regardless of tactical failures. No retuning or adaptive extension."
+}
