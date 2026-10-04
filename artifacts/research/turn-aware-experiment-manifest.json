@@ -1,0 +1,302 @@
+{
+  "schema": 1,
+  "candidate_source": {
+    "path": "artifacts/research/turn-aware-source/manifest.json",
+    "sha256": "5d034350945bc3ab2c527737ea734613cb126ceef3d6e8ebe6bb47054b79e07b"
+  },
+  "baseline_source": {
+    "path": "artifacts/research/king-context-release-source/manifest.json",
+    "sha256": "2f121c2ad3c1cc34e9ba759c3e686da4bd75433543cbb26d08ae9de48b8414cf"
+  },
+  "pipeline_source": {
+    "path": "artifacts/research/turn-aware-pipeline-final/manifest.json",
+    "sha256": "2be9aa9fe179cdea285c8e30ebbbb18719e5cb14b9bde262f2633f010f9a82fd"
+  },
+  "models": [
+    {
+      "model": {
+        "path": "artifacts/training/turn-aware-hybrid-v1/model.ann",
+        "sha256": "39a906871800a2eb41b601628931f5cc048413fb6f77cbc0cd26247761a31206"
+      },
+      "training": {
+        "path": "artifacts/training/turn-aware-hybrid-v1/training.json",
+        "sha256": "13464eee9b269f65a3f4bb046055dfdd90463d831cd07cdc1c2925045b75a27a"
+      },
+      "checkpoint": {
+        "path": "artifacts/training/turn-aware-hybrid-v1/checkpoint.pt",
+        "sha256": "12f49e3410f01471bd32f71a2f6377ee58048b95e751ded5f415a31ad4baefb5"
+      },
+      "trainer_sources": [
+        {
+          "name": "train_network.py",
+          "sha256": "d6b9495769d00abc2b13994582f784cf68b77fdec9affbe7c68cc639a07124c1"
+        },
+        {
+          "name": "neural_format.py",
+          "sha256": "f860c119a3a2bd63a6ef33dd7c837971da3f3f2828caf57e10ac6ab107372095"
+        }
+      ]
+    },
+    {
+      "model": {
+        "path": "artifacts/training/turn-aware-standalone-v1/model.ann",
+        "sha256": "cccad96d5f1fced0a4513f0564e1f01520ed2178fcebad0268002f3ec78aa879"
+      },
+      "training": {
+        "path": "artifacts/training/turn-aware-standalone-v1/training.json",
+        "sha256": "7df18d76854d66e7647bf3312d26b784a3b776c38f97d913edb626e73cbfc1b9"
+      },
+      "checkpoint": {
+        "path": "artifacts/training/turn-aware-standalone-v1/checkpoint.pt",
+        "sha256": "23bb40193db047fc35d475ffe31a6228ddc94db6c002a6e56f9f52f4dc0344bd"
+      },
+      "trainer_sources": [
+        {
+          "name": "train_network.py",
+          "sha256": "d6b9495769d00abc2b13994582f784cf68b77fdec9affbe7c68cc639a07124c1"
+        },
+        {
+          "name": "neural_format.py",
+          "sha256": "f860c119a3a2bd63a6ef33dd7c837971da3f3f2828caf57e10ac6ab107372095"
+        }
+      ]
+    },
+    {
+      "model": {
+        "path": "artifacts/training/turn-aware-paired-hybrid-v1/model.ann",
+        "sha256": "79e177967475fe4d2c24f04c0ff3dd3060971182152b85ddeeed7dd95c3cbdc5"
+      },
+      "training": {
+        "path": "artifacts/training/turn-aware-paired-hybrid-v1/training.json",
+        "sha256": "0dccc582d340132c8ce06260380f3a556afb4c8de069db34c4afed3f504b98d8"
+      },
+      "checkpoint": {
+        "path": "artifacts/training/turn-aware-paired-hybrid-v1/checkpoint.pt",
+        "sha256": "5f0aa416c820ac4c4592aa03404878557cd38ccbde44d90d1486ce1cd438ab64"
+      },
+      "trainer_sources": [
+        {
+          "name": "train_network.py",
+          "sha256": "d6b9495769d00abc2b13994582f784cf68b77fdec9affbe7c68cc639a07124c1"
+        },
+        {
+          "name": "neural_format.py",
+          "sha256": "f860c119a3a2bd63a6ef33dd7c837971da3f3f2828caf57e10ac6ab107372095"
+        }
+      ]
+    },
+    {
+      "model": {
+        "path": "artifacts/training/turn-aware-paired-standalone-v1/model.ann",
+        "sha256": "e94a63c95b83b64b7ad7bb5fcb579dcf0c5a74a3edef31a9cd560ff22581e51f"
+      },
+      "training": {
+        "path": "artifacts/training/turn-aware-paired-standalone-v1/training.json",
+        "sha256": "eef14560ad8df06652645d2040342d9f06100083ab2c5788cf01d14dbc5811ab"
+      },
+      "checkpoint": {
+        "path": "artifacts/training/turn-aware-paired-standalone-v1/checkpoint.pt",
+        "sha256": "d1e79b16fd53e2b9847298ee988f1d3e18a0881c8d34447e7b90902ce29b09b9"
+      },
+      "trainer_sources": [
+        {
+          "name": "train_network.py",
+          "sha256": "d6b9495769d00abc2b13994582f784cf68b77fdec9affbe7c68cc639a07124c1"
+        },
+        {
+          "name": "neural_format.py",
+          "sha256": "f860c119a3a2bd63a6ef33dd7c837971da3f3f2828caf57e10ac6ab107372095"
+        }
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "report": {
+        "path": "artifacts/matches/turn-aware-hybrid-vs-0.6.0-30ms.json",
+        "sha256": "250f862a3da38f01f6622bff266c30afdd9c446fdc673fbd310bae596c5fea25"
+      },
+      "pgn": {
+        "path": "artifacts/matches/turn-aware-hybrid-vs-0.6.0-30ms.pgn",
+        "sha256": "a6bf544d4140f41af1e9cdabff7c550700c2b0ec02838b1cdedeb106e39b3fc3"
+      },
+      "analysis": {
+        "path": "artifacts/matches/turn-aware-hybrid-vs-0.6.0-30ms.analysis.json",
+        "sha256": "7f445cc61296fc57fc769d15db82541827d37e5115e695d6779ff04401f46578"
+      }
+    },
+    {
+      "report": {
+        "path": "artifacts/matches/turn-aware-standalone-vs-0.6.0-30ms.json",
+        "sha256": "4aa01ff958fd4b6beed2619f95bb24fd930302d1b4b0bf04bb7012e9ce8de3d8"
+      },
+      "pgn": {
+        "path": "artifacts/matches/turn-aware-standalone-vs-0.6.0-30ms.pgn",
+        "sha256": "8d3dbe4f845cf68da3cca54655d0a3fd5da66ebda08730e8a48e1585851ae96c"
+      },
+      "analysis": {
+        "path": "artifacts/matches/turn-aware-standalone-vs-0.6.0-30ms.analysis.json",
+        "sha256": "c794481f0618e169216591e3a87541d9bd38a81030102abe5c0447c9707cc2e2"
+      }
+    },
+    {
+      "report": {
+        "path": "artifacts/matches/turn-aware-paired-hybrid-vs-0.6.0-30ms.json",
+        "sha256": "98645df8d9c59d4b3d4a85687aef43816788c5fa1cee09feb3b02266f0fb8f33"
+      },
+      "pgn": {
+        "path": "artifacts/matches/turn-aware-paired-hybrid-vs-0.6.0-30ms.pgn",
+        "sha256": "1afeb0a015cfdf74467876746a55b815057881c6922f7858a1ab3baafa9cce94"
+      },
+      "analysis": {
+        "path": "artifacts/matches/turn-aware-paired-hybrid-vs-0.6.0-30ms.analysis.json",
+        "sha256": "164775bfd940334cd4362c9a18d538b3da14843af01fcc07f7655b226c353f3f"
+      }
+    },
+    {
+      "report": {
+        "path": "artifacts/matches/turn-aware-paired-standalone-vs-0.6.0-30ms.json",
+        "sha256": "50810954295a14beb64d30deb7e75861f06a3b8d802e46644056baf9e6203cb8"
+      },
+      "pgn": {
+        "path": "artifacts/matches/turn-aware-paired-standalone-vs-0.6.0-30ms.pgn",
+        "sha256": "bfb2f9b3d0d3debe6c5417dad9d3816dd2fdee8b87f7b0d2e95de6c32c47cd7a"
+      },
+      "analysis": {
+        "path": "artifacts/matches/turn-aware-paired-standalone-vs-0.6.0-30ms.analysis.json",
+        "sha256": "0af1b542d2546b45eea3a0cafc0f858850a43231ea7b3c7ac6d08817b7ff2677"
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/data/teacher-balanced-50k-v1-classical.jsonl",
+      "sha256": "6e8611691e7edad66f038a655eb38d296d72c680cd5c765ff144935c438de6de"
+    },
+    {
+      "path": "artifacts/data/teacher-balanced-50k-v1.jsonl",
+      "sha256": "12ce8369406bb509436d47df0d676e07838c8f2b5456c59120d84551e9d22636"
+    },
+    {
+      "path": "artifacts/data/teacher-turn-augmented-60k-v1-classical.jsonl",
+      "sha256": "01d47f36fb955547c8c4224c626c1a9690e1103ff247366b3020ce80af4801ec"
+    },
+    {
+      "path": "artifacts/data/teacher-turn-augmented-60k-v1-classical.jsonl.classical.json",
+      "sha256": "7ba658a3e5f5b1b32bdfd698046ae5fdf01e021ce012dc781994ec5b7edb15ff"
+    },
+    {
+      "path": "artifacts/data/teacher-turn-augmented-60k-v1.jsonl",
+      "sha256": "fe56daefb371f3114e72a729dc396b3d364366b49d90edc7588e0316417e12c2"
+    },
+    {
+      "path": "artifacts/data/teacher-turn-augmented-60k-v1.jsonl.manifest.json",
+      "sha256": "53ef5929bbe868844cab60ba9d7cd02f3733f1d9e55c1e893916226fbb3e26e5"
+    },
+    {
+      "path": "artifacts/validation/teacher-turn-augmented-60k-v1.json",
+      "sha256": "06633ef0269c02541845a0e708f04c34a2693a98534277e6a140ee20b8b974c1"
+    },
+    {
+      "path": "artifacts/validation/teacher-turn-pairs-10k-v1.json",
+      "sha256": "3258c1e3e202b10989a65ecfe2d12ee0fabc5788f4918baac36ae3d1f6b7f3b0"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-final-classical-rules.json",
+      "sha256": "db8404ade98fcae6f52725bb59db9e696fb4704173d09b0e53458a5dba674634"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-hybrid-extended.json",
+      "sha256": "d0590bb96c436b5a1543f85805f2d28160dfd4ed172235d5de552d39460ed590"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-hybrid-inference.json",
+      "sha256": "38f78e2c03599a4c8892a7c4bb19289589ce24de15d108e37f9ab27bba91cfc9"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-hybrid-paired-diagnostic.json",
+      "sha256": "0ad21b93750ff4c5f71876b3a3bcf4318c45d9adfaf6de9e6d7fe4acb5691ddd"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-legacy-v2-inference.json",
+      "sha256": "21be30e7c3f89fdc333afa0211095149a649c1ee6543936a3be300bb7dd23897"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-legacy-v3-inference.json",
+      "sha256": "169df5c4ed18a5c9b537c69ab243895a3e6ea6a8f48ae2c1582be15699c49dea"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-legacy-v4-inference.json",
+      "sha256": "0d5e6cfa2c52f71d5febc85c6f6d5f67a06d10063c1ca21e8c16e7274026a9f0"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-paired-hybrid-inference.json",
+      "sha256": "677b0e543d77b1e2840d605e77ae9de973060b1cd80b6a638af19bf3ebce9dd7"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-paired-hybrid-quiet-tactics.json",
+      "sha256": "99e78b108f1fc6df7315c364c508f38944fa985b184430c3d18c7a645c71c779"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-paired-hybrid-tactics.json",
+      "sha256": "d7b13a641c5f9f2de91d52828a83befc590e3501280ac3e2a1c4b9dd5a130b38"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-paired-hybrid-turn-diagnostic.json",
+      "sha256": "b17d57538bb920f856d3dfe5445b76c587632dbb125789c15316796aaebb32b1"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-paired-standalone-inference.json",
+      "sha256": "4cfc315ca25aca188e4cae21d15d24de7ba22c006d9def1e2200a770a37214cc"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-paired-standalone-quiet-tactics.json",
+      "sha256": "49edf9e2d449c2391d8534c9b286c81dd0d2d3adfbcaae26b9241e2bc178e052"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-paired-standalone-rules.json",
+      "sha256": "21d2a7f12d3a74d4181ffff02b71afda3a8f32631234a18ed79b8a9a6d2dda88"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-paired-standalone-tactics.json",
+      "sha256": "b40b88cb5a7bd94d284163d406238cb3226c4a6e945fb4f8589213ba94bc32f8"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-paired-standalone-turn-diagnostic.json",
+      "sha256": "c7b01006414a26a92735fe3763fc2a480cb7fdb3fffefd15e156f01767c78031"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-standalone-inference.json",
+      "sha256": "ded4390a6c0208d7404fda5e0a528a6571fa638108bb3388399f10da5c057e46"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-synthetic-hybrid-inference.json",
+      "sha256": "861e76353ec98c11afaee040ad9defd4c0294b43659bd71ee5aa8dba8a10cb6e"
+    },
+    {
+      "path": "artifacts/validation/turn-aware-synthetic-standalone-inference.json",
+      "sha256": "720b532fd72e6fe33da1f54b541ae5c811ce264f2e02b3d98ae27667b870eedf"
+    },
+    {
+      "path": "artifacts/validation/turn-dependence-128-v1.json",
+      "sha256": "63afcd70820891940370c3b88f101d31940d65e2669556f1542c042ec46825cf"
+    },
+    {
+      "path": "tests/fixtures/openings-v4.json",
+      "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d"
+    },
+    {
+      "path": "tests/fixtures/tactics-quiet-v1.json",
+      "sha256": "3868e2bd596272873251fca177e2a253027cb7bc8dc99b42148cdcb6f86641d9"
+    },
+    {
+      "path": "tests/fixtures/tactics-v1.json",
+      "sha256": "ceb0c13cefcf4a44d2a570e562c52f62316dbf6260d25d912f4fc846595844b3"
+    },
+    {
+      "path": "tools/stockfish/manifest.json",
+      "sha256": "e584d21a94ee3bbde60353857ae6f3ef01f9a3483299adef072c72f08a6f017f"
+    }
+  ],
+  "interpretation": "Independent optional runtime research; no selected neural default, Elo claim or Stockfish superiority."
+}

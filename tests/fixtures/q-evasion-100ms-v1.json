@@ -1,0 +1,377 @@
+{
+  "schema": 1,
+  "seed": 20261105,
+  "plies": 20,
+  "selection_nodes": 2048,
+  "verification_nodes": 20000,
+  "max_abs_teacher_cp": 80,
+  "teacher": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "training_exclusion": null,
+  "training_exclusions": [
+    {
+      "path": "artifacts\\data\\teacher-20k-v1.jsonl",
+      "sha256": "191c4bbd054ad307860d8935f2cb4f6cbcf73e60b68a3a397e646e8b6d691527",
+      "positions": 20000
+    },
+    {
+      "path": "artifacts\\data\\teacher-turn-augmented-60k-v1.jsonl",
+      "sha256": "fe56daefb371f3114e72a729dc396b3d364366b49d90edc7588e0316417e12c2",
+      "positions": 60000
+    },
+    {
+      "path": "artifacts\\data\\endgame-diagnostic-512-v1.jsonl",
+      "sha256": "f07976034c668f3ae636ef96cf584891b1bb1a7cc1648e73d975e837277b29a3",
+      "positions": 512
+    }
+  ],
+  "prior_suites_excluded": [
+    {
+      "path": "tests\\fixtures\\openings-v1.json",
+      "sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v2.json",
+      "sha256": "cdcc99af780b795546a22e84b2557bd20168097c2694cc9b12ce2e242f74bc25",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v3.json",
+      "sha256": "b2c84b63c566712b33102e1a5f246d47a010a0341f8396c5e036937c74e241f3",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v4.json",
+      "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v5.json",
+      "sha256": "e63c68d4024428bef2f84a4289db06c4aee70e60aa9f081cf437d2a6d237c46e",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\rating-parent-v1.json",
+      "sha256": "6c4d7453e3572cadf786d81be8ad8b0b85fb9c461d5e93847612959836efb112",
+      "positions": 144
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-parent-v1.json",
+      "sha256": "d8ac1c505d3c46c819b87da63fe8308cebd18a234a1889a9215fbc2e75101f3a",
+      "positions": 208
+    }
+  ],
+  "attempts_used": 514,
+  "teacher_options": {
+    "Threads": 1,
+    "Hash": 64
+  },
+  "generator_sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746",
+  "interpretation": "Seeded near-best MultiPV continuations from the start, distinct final positions, balanced under a bounded teacher check. Teacher scores do not prove equality; this is a regression suite, not an independent final superiority test.",
+  "openings": [
+    {
+      "id": "opening-245",
+      "moves": "c2c3 g8f6 d1c2 c7c5 g1f3 g7g6 e2e4 d7d5 e4d5 c8g4 f3e5 g4f5 f1b5 f6d7 d2d3 f8g7 g2g4 a7a6 b5d7 f5d7",
+      "fen": "rn1qk2r/1p1bppbp/p5p1/2pPN3/6P1/2PP4/PPQ2P1P/RNB1K2R w KQkq - 0 11",
+      "teacher_white_cp": -51,
+      "teacher_depth": 10,
+      "attempt": 438
+    },
+    {
+      "id": "opening-070",
+      "moves": "c2c3 e7e5 d1a4 g8f6 g2g3 a7a6 d2d4 e5e4 f1g2 b8c6 g1h3 b7b5 a4d1 d8e7 d4d5 c6e5 b1d2 d7d6 d1c2 e4e3",
+      "fen": "r1b1kb1r/2p1qppp/p2p1n2/1p1Pn3/8/2P1p1PN/PPQNPPBP/R1B1K2R w KQkq - 0 11",
+      "teacher_white_cp": 16,
+      "teacher_depth": 11,
+      "attempt": 130
+    },
+    {
+      "id": "opening-285",
+      "moves": "c2c3 e7e5 e2e4 d7d6 d2d3 f8e7 f1e2 h7h6 f2f4 b8d7 d1c2 c7c6 c1e3 e5f4 e3f4 h6h5 b1d2 d7f8 g1f3 d6d5",
+      "fen": "r1bqknnr/pp2bpp1/2p5/3p3p/4PB2/2PP1N2/PPQNB1PP/R3K2R w KQkq - 0 11",
+      "teacher_white_cp": 58,
+      "teacher_depth": 11,
+      "attempt": 507
+    },
+    {
+      "id": "opening-223",
+      "moves": "c2c3 e7e6 g1f3 c7c5 d2d4 d7d5 c1f4 f8d6 e2e3 g8f6 f3e5 e8g8 f1e2 f6e4 b1d2 f7f6 e5f3 d6f4 e3f4 d8b6",
+      "fen": "rnb2rk1/pp4pp/1q2pp2/2pp4/3PnP2/2P2N2/PP1NBPPP/R2QK2R w KQ - 1 11",
+      "teacher_white_cp": 11,
+      "teacher_depth": 13,
+      "attempt": 399
+    },
+    {
+      "id": "opening-177",
+      "moves": "g1f3 d7d5 e2e3 e7e6 c2c3 c7c5 f1b5 b8d7 a2a4 f8d6 e1g1 a7a6 b5d7 c8d7 d2d3 d7c6 d3d4 h7h5 d4c5 d6c5",
+      "fen": "r2qk1nr/1p3pp1/p1b1p3/2bp3p/P7/2P1PN2/1P3PPP/RNBQ1RK1 w kq - 0 11",
+      "teacher_white_cp": -26,
+      "teacher_depth": 12,
+      "attempt": 328
+    },
+    {
+      "id": "opening-253",
+      "moves": "e2e4 b8c6 g1f3 e7e5 f1c4 f8c5 d2d3 h7h6 e1g1 d7d6 c2c3 g8f6 f1e1 c5b6 a2a4 a7a6 b1a3 c8e6 d3d4 e6g4",
+      "fen": "r2qk2r/1pp2pp1/pbnp1n1p/4p3/P1BPP1b1/N1P2N2/1P3PPP/R1BQR1K1 w kq - 1 11",
+      "teacher_white_cp": 25,
+      "teacher_depth": 12,
+      "attempt": 455
+    },
+    {
+      "id": "opening-020",
+      "moves": "c2c3 e7e6 g1f3 d7d5 e2e3 f8d6 d2d4 c7c5 d4c5 d6c5 b2b4 c5b6 a2a3 g8f6 f1e2 e8g8 b1d2 a7a5 d1c2 d8e7",
+      "fen": "rnb2rk1/1p2qppp/1b2pn2/p2p4/1P6/P1P1PN2/2QNBPPP/R1B1K2R w KQ - 2 11",
+      "teacher_white_cp": 6,
+      "teacher_depth": 12,
+      "attempt": 46
+    },
+    {
+      "id": "opening-248",
+      "moves": "g1f3 c7c6 c2c3 d7d5 d1c2 d8c7 e2e4 b8d7 d2d3 g7g6 g2g3 e7e5 e4d5 c6d5 b1a3 f8a3 b2a3 d7c5 a3a4 c8f5",
+      "fen": "r3k1nr/ppq2p1p/6p1/2nppb2/P7/2PP1NP1/P1Q2P1P/R1B1KB1R w KQkq - 1 11",
+      "teacher_white_cp": -77,
+      "teacher_depth": 10,
+      "attempt": 443
+    },
+    {
+      "id": "opening-212",
+      "moves": "e2e4 c7c5 g1f3 b8c6 f1e2 g8f6 d2d3 e7e5 b1c3 d7d6 c3d5 d8a5 f3d2 f8e7 c2c3 e8g8 f2f4 e5f4 d2b3 a5a4",
+      "fen": "r1b2rk1/pp2bppp/2np1n2/2pN4/q3Pp2/1NPP4/PP2B1PP/R1BQK2R w KQ - 2 11",
+      "teacher_white_cp": 78,
+      "teacher_depth": 15,
+      "attempt": 376
+    },
+    {
+      "id": "opening-091",
+      "moves": "e2e4 g8f6 d2d3 d7d5 b1c3 d5d4 c3b1 f6d7 c2c3 c7c5 g1f3 e7e5 f1e2 h7h6 b1d2 b8c6 h2h3 f8d6 a2a3 e8g8",
+      "fen": "r1bq1rk1/pp1n1pp1/2nb3p/2p1p3/3pP3/P1PP1N1P/1P1NBPP1/R1BQK2R w KQ - 1 11",
+      "teacher_white_cp": -79,
+      "teacher_depth": 11,
+      "attempt": 168
+    },
+    {
+      "id": "opening-227",
+      "moves": "c2c3 d7d5 g1f3 c8f5 f3d4 f5c8 g2g3 b8d7 d4b3 e7e5 b1a3 c7c6 d2d3 a7a5 a3c2 f7f5 e2e4 a5a4 b3d2 d7f6",
+      "fen": "r1bqkbnr/1p4pp/2p2n2/3ppp2/p3P3/2PP2P1/PPNN1P1P/R1BQKB1R w KQkq - 2 11",
+      "teacher_white_cp": -2,
+      "teacher_depth": 12,
+      "attempt": 407
+    },
+    {
+      "id": "opening-281",
+      "moves": "c2c3 d7d5 f2f4 c7c5 g1f3 a7a6 d2d4 c8f5 e2e3 b8d7 d1b3 c5c4 b3d1 h7h5 b2b3 c4b3 d1b3 d8b6 b3b6 d7b6",
+      "fen": "r3kbnr/1p2ppp1/pn6/3p1b1p/3P1P2/2P1PN2/P5PP/RNB1KB1R w KQkq - 0 11",
+      "teacher_white_cp": -60,
+      "teacher_depth": 10,
+      "attempt": 501
+    },
+    {
+      "id": "opening-096",
+      "moves": "c2c3 e7e5 d1a4 c7c5 c3c4 f8e7 g2g3 a7a6 f1g2 h7h6 d2d3 d8c7 a4d1 g8f6 a2a3 b8c6 c1d2 d7d6 b2b3 a8b8",
+      "fen": "1rb1k2r/1pq1bpp1/p1np1n1p/2p1p3/2P5/PP1P2P1/3BPPBP/RN1QK1NR w KQk - 1 11",
+      "teacher_white_cp": -12,
+      "teacher_depth": 11,
+      "attempt": 177
+    },
+    {
+      "id": "opening-146",
+      "moves": "g1f3 c7c6 c2c4 a7a6 d2d4 d7d6 d1b3 d8a5 b1c3 b8d7 c1d2 g8f6 g2g3 a5c7 a1d1 h7h6 f1g2 e7e6 b3c2 f8e7",
+      "fen": "r1b1k2r/1pqnbpp1/p1pppn1p/8/2PP4/2N2NP1/PPQBPPBP/3RK2R w Kkq - 2 11",
+      "teacher_white_cp": 55,
+      "teacher_depth": 11,
+      "attempt": 261
+    },
+    {
+      "id": "opening-139",
+      "moves": "d2d4 c7c6 g1f3 f7f5 e2e3 e7e6 b1d2 g8f6 a2a3 d7d5 b2b3 f6e4 c2c4 b8d7 d1c2 a7a5 f3e5 f8e7 e5d3 b7b6",
+      "fen": "r1bqk2r/3nb1pp/1pp1p3/p2p1p2/2PPn3/PP1NP3/2QN1PPP/R1B1KB1R w KQkq - 0 11",
+      "teacher_white_cp": 59,
+      "teacher_depth": 12,
+      "attempt": 249
+    },
+    {
+      "id": "opening-100",
+      "moves": "e2e4 b8c6 d2d4 e7e6 c2c3 d7d6 f2f4 g7g6 f1b5 f7f5 e4f5 g6f5 d1e2 g8f6 g1h3 c8d7 b5d3 c6e7 h3g5 d8c8",
+      "fen": "r1q1kb1r/pppbn2p/3ppn2/5pN1/3P1P2/2PB4/PP2Q1PP/RNB1K2R w KQkq - 8 11",
+      "teacher_white_cp": 31,
+      "teacher_depth": 12,
+      "attempt": 185
+    },
+    {
+      "id": "opening-101",
+      "moves": "c2c3 d7d5 d1c2 g8f6 a2a3 g7g6 d2d3 f8g7 c1g5 e8g8 e2e3 f8e8 g5h4 e7e5 b1d2 a7a5 f1e2 c7c5 g1f3 a5a4",
+      "fen": "rnbqr1k1/1p3pbp/5np1/2ppp3/p6B/P1PPPN2/1PQNBPPP/R3K2R w KQ - 0 11",
+      "teacher_white_cp": -68,
+      "teacher_depth": 10,
+      "attempt": 189
+    },
+    {
+      "id": "opening-089",
+      "moves": "c2c3 d7d5 d2d4 h7h6 c1f4 b8d7 e2e3 e7e6 h2h3 f8d6 f4d6 c7d6 f1d3 e6e5 d1g4 e8f8 g4e2 g8e7 c3c4 d5c4",
+      "fen": "r1bq1k1r/pp1nnpp1/3p3p/4p3/2pP4/3BP2P/PP2QPP1/RN2K1NR w KQ - 0 11",
+      "teacher_white_cp": 5,
+      "teacher_depth": 14,
+      "attempt": 163
+    },
+    {
+      "id": "opening-143",
+      "moves": "c2c3 e7e5 d2d4 d7d6 d4e5 b8c6 b1d2 d6e5 e2e4 f8c5 a2a4 g8f6 h2h3 a7a5 d1c2 h7h6 f1b5 d8d6 g1e2 d6e7",
+      "fen": "r1b1k2r/1pp1qpp1/2n2n1p/pBb1p3/P3P3/2P4P/1PQNNPP1/R1B1K2R w KQkq - 4 11",
+      "teacher_white_cp": 15,
+      "teacher_depth": 12,
+      "attempt": 255
+    },
+    {
+      "id": "opening-046",
+      "moves": "c2c3 g8f6 d2d4 c7c6 h2h3 d8c7 c1g5 d7d5 g1f3 b8d7 e2e3 f6h5 c3c4 h7h6 g5h4 g7g5 g2g4 g5h4 g4h5 d5c4",
+      "fen": "r1b1kb1r/ppqnpp2/2p4p/7P/2pP3p/4PN1P/PP3P2/RN1QKB1R w KQkq - 0 11",
+      "teacher_white_cp": 35,
+      "teacher_depth": 14,
+      "attempt": 94
+    },
+    {
+      "id": "opening-086",
+      "moves": "g1f3 c7c6 c2c4 g8f6 e2e3 h7h6 d2d4 e7e6 f1d3 f8b4 c1d2 a7a5 e3e4 d7d6 h2h3 b8d7 d3c2 b7b5 a2a3 b4d2",
+      "fen": "r1bqk2r/3n1pp1/2pppn1p/pp6/2PPP3/P4N1P/1PBb1PP1/RN1QK2R w KQkq - 0 11",
+      "teacher_white_cp": 29,
+      "teacher_depth": 15,
+      "attempt": 158
+    },
+    {
+      "id": "opening-277",
+      "moves": "g1f3 c7c5 c2c4 b8c6 e2e3 g8f6 d2d4 e7e6 a2a3 a7a6 f1e2 d7d6 b1c3 d6d5 b2b3 c5d4 e3d4 h7h6 b3b4 f8d6",
+      "fen": "r1bqk2r/1p3pp1/p1nbpn1p/3p4/1PPP4/P1N2N2/4BPPP/R1BQK2R w KQkq - 1 11",
+      "teacher_white_cp": 33,
+      "teacher_depth": 13,
+      "attempt": 494
+    },
+    {
+      "id": "opening-147",
+      "moves": "d2d4 d7d5 c1f4 b8c6 h2h3 c8f5 d1d2 g8f6 g1f3 a7a6 g2g4 f5d7 b1c3 f6e4 d2e3 e4c3 e3c3 h7h5 h1g1 e7e5",
+      "fen": "r2qkb1r/1ppb1pp1/p1n5/3pp2p/3P1BP1/2Q2N1P/PPP1PP2/R3KBR1 w Qkq - 0 11",
+      "teacher_white_cp": -43,
+      "teacher_depth": 14,
+      "attempt": 263
+    },
+    {
+      "id": "opening-265",
+      "moves": "d2d4 g8f6 c2c3 b7b6 c1f4 c7c5 h2h3 c5d4 c3d4 c8b7 e2e3 f6d5 f4h2 g7g6 a2a3 f8g7 g1f3 a7a6 f1c4 b6b5",
+      "fen": "rn1qk2r/1b1pppbp/p5p1/1p1n4/2BP4/P3PN1P/1P3PPB/RN1QK2R w KQkq - 0 11",
+      "teacher_white_cp": 25,
+      "teacher_depth": 11,
+      "attempt": 475
+    },
+    {
+      "id": "opening-240",
+      "moves": "d2d4 g8f6 c2c3 d7d5 a2a4 c7c5 e2e3 c8g4 g1f3 b8c6 h2h3 g4f3 d1f3 c5c4 g2g4 d8c7 b1d2 e7e6 e3e4 d5e4",
+      "fen": "r3kb1r/ppq2ppp/2n1pn2/8/P1pPp1P1/2P2Q1P/1P1N1P2/R1B1KB1R w KQkq - 0 11",
+      "teacher_white_cp": 58,
+      "teacher_depth": 13,
+      "attempt": 426
+    },
+    {
+      "id": "opening-278",
+      "moves": "e2e4 b8c6 d2d4 d7d5 f1b5 a7a6 b5c6 b7c6 g1f3 e7e6 b1c3 d5e4 c3e4 f8e7 h2h3 g8f6 e4f6 g7f6 d1e2 c6c5",
+      "fen": "r1bqk2r/2p1bp1p/p3pp2/2p5/3P4/5N1P/PPP1QPP1/R1B1K2R w KQkq - 0 11",
+      "teacher_white_cp": 42,
+      "teacher_depth": 13,
+      "attempt": 495
+    },
+    {
+      "id": "opening-016",
+      "moves": "g1f3 g8f6 d2d4 c7c6 c2c4 d7d5 d1c2 c8g4 c1f4 e7e6 e2e3 b8d7 f1e2 f8b4 f3d2 g4f5 c2b3 d8b6 e1g1 f5b1",
+      "fen": "r3k2r/pp1n1ppp/1qp1pn2/3p4/1bPP1B2/1Q2P3/PP1NBPPP/Rb3RK1 w kq - 0 11",
+      "teacher_white_cp": 50,
+      "teacher_depth": 13,
+      "attempt": 38
+    },
+    {
+      "id": "opening-270",
+      "moves": "e2e4 b8c6 g1f3 e7e5 f1c4 g8f6 d1e2 f8b4 h2h3 e8g8 e1g1 b4c5 d2d3 a7a6 a2a3 f8e8 b2b4 c6d4 f3d4 c5d4",
+      "fen": "r1bqr1k1/1ppp1ppp/p4n2/4p3/1PBbP3/P2P3P/2P1QPP1/RNB2RK1 w - - 0 11",
+      "teacher_white_cp": 0,
+      "teacher_depth": 13,
+      "attempt": 482
+    },
+    {
+      "id": "opening-126",
+      "moves": "g1f3 g8f6 d2d4 c7c5 e2e3 e7e6 c2c3 b7b6 c3c4 f8e7 d4d5 d7d6 d5e6 c8e6 f1e2 e8g8 b1c3 b8c6 f3g5 e6f5",
+      "fen": "r2q1rk1/p3bppp/1pnp1n2/2p2bN1/2P5/2N1P3/PP2BPPP/R1BQK2R w KQ - 6 11",
+      "teacher_white_cp": 22,
+      "teacher_depth": 12,
+      "attempt": 232
+    },
+    {
+      "id": "opening-191",
+      "moves": "e2e4 e7e5 d2d3 b8c6 g1f3 f8e7 d3d4 c6d4 f3e5 d4c6 e5c4 d7d6 c4e3 g8f6 f2f3 c8e6 b1c3 e8g8 f1e2 a7a5",
+      "fen": "r2q1rk1/1pp1bppp/2npbn2/p7/4P3/2N1NP2/PPP1B1PP/R1BQK2R w KQ - 0 11",
+      "teacher_white_cp": 65,
+      "teacher_depth": 12,
+      "attempt": 342
+    },
+    {
+      "id": "opening-122",
+      "moves": "g1f3 g8f6 b1c3 d7d6 g2g3 d6d5 f1g2 c8g4 b2b3 b8d7 e1g1 e7e6 f1e1 f8e7 c1b2 e8g8 a2a4 c7c6 d2d3 d8c7",
+      "fen": "r4rk1/ppqnbppp/2p1pn2/3p4/P5b1/1PNP1NP1/1BP1PPBP/R2QR1K1 w - - 1 11",
+      "teacher_white_cp": -19,
+      "teacher_depth": 10,
+      "attempt": 223
+    },
+    {
+      "id": "opening-111",
+      "moves": "e2e4 b8c6 d2d4 d7d5 f1b5 a7a6 e4d5 d8d5 b5c6 d5c6 g1f3 c8f5 b1c3 e8c8 d4d5 c6d6 e1g1 g8f6 d1d4 c7c5",
+      "fen": "2kr1b1r/1p2pppp/p2q1n2/2pP1b2/3Q4/2N2N2/PPP2PPP/R1B2RK1 w - c6 0 11",
+      "teacher_white_cp": -15,
+      "teacher_depth": 11,
+      "attempt": 209
+    }
+  ],
+  "experiment_role": "100ms",
+  "parent_suite": {
+    "path": "tests/fixtures/q-evasion-parent-v1.json",
+    "sha256": "13c3a7a689f83064490766a76d112589ef2098f93a9d92ebbfcee805f1c385f4"
+  },
+  "parent_indices": [
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159
+  ],
+  "splitter_sha256": "e7782891cfb7d79c0e51bca93c96bf9d2dd437db8010035704e683374f6fa700"
+}

@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "status": "declared before move-choice and paired-match results",
+  "candidate": "artifacts/publish/kpk-dev/Aster.exe",
+  "baseline": "artifacts/publish/baseline-0.6.0/Aster.exe",
+  "move_choice": {
+    "seed": 20261027,
+    "positions": 256,
+    "nodes": 5000,
+    "strata": ["128 pawn-side wins", "128 bare-king-side draws"],
+    "metric": "independent Syzygy WDL preservation, not Elo"
+  },
+  "match": {
+    "openings": "tests/fixtures/openings-v5.json",
+    "pairs": 32,
+    "movetime_seconds": 0.03,
+    "hash_mib": 64,
+    "threads": 1,
+    "move_overhead_ms": 0,
+    "max_plies": 400
+  },
+  "gates": [
+    "Exhaustive theoretical WDL agreement and independent decreasing-bound certificate",
+    "Runtime normalization, rule-50 guard and protocol checks",
+    "32/32 original and quiet tactics; no loss on 16 endgame diagnostics",
+    "All paired games complete, legal and audited; report scores and paired uncertainty"
+  ],
+  "decision": "Retain as opt-in research build. These small tests cannot establish general strength or Stockfish superiority; production remains 0.6.0."
+}

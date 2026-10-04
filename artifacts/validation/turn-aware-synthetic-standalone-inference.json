@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "model": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\validation\\turn-aware-fixtures\\standalone-v6.ann",
+  "exact_inference_positions": 525,
+  "held_out_evaluation": null,
+  "interpretation": "Inference agreement and teacher fit, not measured playing strength.",
+  "engine_sha256": "79ef83b97cad0f280bece828d3f32713eb25fb7aa86488eba49f2baee7bac5a6",
+  "model_sha256": "8754350fcf93b46b0c3e98889c3608c1881f47eef09f5756f3a1594d3a0f7b02",
+  "engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\src\\Engine\\bin\\Release\\net8.0\\Aster.dll"
+}

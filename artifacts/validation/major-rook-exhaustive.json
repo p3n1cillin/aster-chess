@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "entries": 524288,
+  "piece": "rook",
+  "counts": {
+    "invalid": 125176,
+    "wins": 376868,
+    "draws": 22244,
+    "checkmates": 216
+  },
+  "winning_legal_edges": 4387408,
+  "max_mate_distance": 32,
+  "seconds": 38.131,
+  "dump_sha256": "2813081ce219bd6ebc3b90584a5afa4432687f36b19d61d76d953194dae58da3",
+  "oracle_manifest_sha256": "b6995f13703467b2eb9d5b1ab0dd0da63eaeedd23725236526e7e8a0d241dfaa",
+  "script_sha256": "779c591956551b34c6a93d8046088973ca04085b32a69ebc0515dc87633ef3c4",
+  "interpretation": "All valid theoretical WDL classifications agree independently with Syzygy. Every winning distance satisfies the independent legal min/max mate recurrence. Clock/history guards tested separately."
+}

@@ -1,0 +1,33 @@
+{
+  "selected_setting": 2300,
+  "rule": "Choose smallest absolute difference of screening score from 0.5; tie chooses lower setting. Only for selection, unresolved games contribute 0.5 points.",
+  "plan_sha256": "e9e76802561c4e26ab0b87f7dd0d5bb9b492de45e5e019a9ff5d59acdeff8d12",
+  "screen": [
+    {
+      "setting": 1320,
+      "score_for_selection": 0.96875,
+      "games": 32
+    },
+    {
+      "setting": 1800,
+      "score_for_selection": 0.765625,
+      "games": 32
+    },
+    {
+      "setting": 2300,
+      "score_for_selection": 0.453125,
+      "games": 32
+    },
+    {
+      "setting": 2800,
+      "score_for_selection": 0.09375,
+      "games": 32
+    },
+    {
+      "setting": 3190,
+      "score_for_selection": 0.078125,
+      "games": 32
+    }
+  ],
+  "interpretation": "Independent confirmation still required; screening does not assign an Elo."
+}

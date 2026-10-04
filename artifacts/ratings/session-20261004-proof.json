@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "timestamp_utc": "2026-10-04T13:13:50.163196+00:00",
+  "status": "unestablished",
+  "numeric_elo": null,
+  "rating_scale": null,
+  "production": {
+    "name": "Aster 0.6.0",
+    "path": "artifacts/publish/win-x64/Aster.exe",
+    "sha256": "734d538faba6f43d5533981421b59a0a3cccbec60cf1dbc9980391ef58528b14"
+  },
+  "experimental": [
+    {
+      "path": "artifacts/publish/conversion-dev/Aster.exe",
+      "sha256": "4d18c95d78eb51294944dcd538b07f3ffcd620b78c8ce6dbc7c8f924e74647c4"
+    },
+    {
+      "path": "artifacts/publish/proof-dev/Aster.exe",
+      "sha256": "427fa0f62cda382c6d6005435412972d63027dbd8eac43a523c52e59d97ce921"
+    },
+    {
+      "path": "artifacts/publish/conversion-default-dotnet/Aster.dll",
+      "sha256": "52439f58cf10a4a5dad8d4d48bf9db59db0a3f14b3c1c6216f79182b4a646d9a"
+    }
+  ],
+  "latest_general_regression": {
+    "report": {
+      "path": "artifacts/matches/major-conversion-vs-control-v5-100ms.json",
+      "sha256": "285ba0f0b685eca2304dfe951a2f35ad55ff5c3c60b0facfc858752939dc64ba"
+    },
+    "games": 64,
+    "wins": 14,
+    "draws": 29,
+    "losses": 21,
+    "score": 0.4453125,
+    "exploratory_interval": [
+      0.359375,
+      0.53125
+    ]
+  },
+  "reason": "No calibrated opponent pool and scale support an absolute rating. A small relative regression and selected endgame games cannot establish Elo.",
+  "next": "Predeclare a bounded calibration on a named local scale with a frozen binary, sufficient paired held-out openings, pinned references and uncertainty."
+}

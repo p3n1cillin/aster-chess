@@ -1,0 +1,9 @@
+{"iteration": 0, "warmup": true, "total_seconds": {"candidate": 1.8510058999963803, "baseline": 2.039366199984215}, "speed_ratio": 1.101761047864949}
+{"iteration": 1, "warmup": true, "total_seconds": {"candidate": 1.8580537999951048, "baseline": 1.9668580999714322}, "speed_ratio": 1.0585582075054092}
+{"iteration": 2, "warmup": false, "total_seconds": {"candidate": 1.8780302999948617, "baseline": 1.9840158999577397}, "speed_ratio": 1.0564344462190882}
+{"iteration": 3, "warmup": false, "total_seconds": {"candidate": 1.7702352000051178, "baseline": 1.85796939994907}, "speed_ratio": 1.049560758900116}
+{"iteration": 4, "warmup": false, "total_seconds": {"candidate": 1.8180117000010796, "baseline": 1.9014384999900358}, "speed_ratio": 1.0458890336013276}
+{"iteration": 5, "warmup": false, "total_seconds": {"candidate": 2.016431099997135, "baseline": 2.1152232000022195}, "speed_ratio": 1.0489935411158977}
+{"iteration": 6, "warmup": false, "total_seconds": {"candidate": 1.8918010999914259, "baseline": 1.9982400000153575}, "speed_ratio": 1.0562632615153962}
+{"iteration": 7, "warmup": false, "total_seconds": {"candidate": 1.8818113000161247, "baseline": 1.9895813999755774}, "speed_ratio": 1.057269344677933}
+{"same_work": true, "median_speed_ratio": 1.052912010207756, "timing_gate_passed": true}

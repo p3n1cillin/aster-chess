@@ -1,0 +1,938 @@
+{
+  "schema": 1,
+  "games": 160,
+  "artifacts": [
+    {
+      "path": "artifacts/benchmarks/lazy-order-baseline-profile-depth9.json",
+      "sha256": "161adfc9daecf9c02aa66355ad8b5ea95a73a16af8d644b3f78a2b211f4ed298"
+    },
+    {
+      "path": "artifacts/benchmarks/lazy-order-default-depth7.json",
+      "sha256": "a7a67365b0c7479668578e258da59ed207401f5b8df174809aa07c06c265552a"
+    },
+    {
+      "path": "artifacts/benchmarks/lazy-order-default-vs-rated-depth8.json",
+      "sha256": "17c12d98c0ae1eb45b8fdf437611f49ab68f949977f397e67a3b7885f31cfb57"
+    },
+    {
+      "path": "artifacts/benchmarks/lazy-order-fixed-depth8-v1.json",
+      "sha256": "108ca3b0100e1a44da841c1ff47b5f2e6d637b1deeaa55b8c6ab699ffe2cf9fc"
+    },
+    {
+      "path": "artifacts/benchmarks/lazy-order-profile-depth9.json",
+      "sha256": "3299ab2d6679be8d680c1956a3394c6633a6cba68a449bda5e8c4c54f03aedf5"
+    },
+    {
+      "path": "artifacts/benchmarks/lazy-order-warm-timing-v1.json",
+      "sha256": "9c7ee2414b2cdda51fa244412c69583f434b53c04e6498507e166724407fbc82"
+    },
+    {
+      "path": "artifacts/benchmarks/lazy-order-warm-timing-v1.txt",
+      "sha256": "8fc26b1bedc0da79d707aaf8ad5f2b7d271643342951fc83570cc2908729a04f"
+    },
+    {
+      "path": "artifacts/matches/lazy-order-vs-0.7.4-100ms.audit.json",
+      "sha256": "4c759754df8b5a8b7f8bbac69af452215fe51ba777c62e102ab26d665cc7966f"
+    },
+    {
+      "path": "artifacts/matches/lazy-order-vs-0.7.4-100ms.json",
+      "sha256": "f8a28d70a566fffedd994dad8bceee35f0e6f2753a9ec3ceebf4401e4ecc0055"
+    },
+    {
+      "path": "artifacts/matches/lazy-order-vs-0.7.4-100ms.pgn",
+      "sha256": "b60dfc1da887eeb713fca30cd85a0eaf1a6ef133dec3d599a4d1322238d99a07"
+    },
+    {
+      "path": "artifacts/matches/lazy-order-vs-0.7.4-100ms.txt",
+      "sha256": "465058274bca8600ef801478d1c762e336aeafeb17e90136a3f83bf450eda4b0"
+    },
+    {
+      "path": "artifacts/matches/lazy-order-vs-0.7.4-30ms.audit.json",
+      "sha256": "15af6f239252ad971b6e534497db8c6fc502ebff549490a5db8ed4afd50e5f2b"
+    },
+    {
+      "path": "artifacts/matches/lazy-order-vs-0.7.4-30ms.json",
+      "sha256": "c817f4a6a7bfd04de4ce6ea830bc5f3fd9ac5ed4a300b10d49f6aa4d8b07529f"
+    },
+    {
+      "path": "artifacts/matches/lazy-order-vs-0.7.4-30ms.pgn",
+      "sha256": "98dea917900df59e87435b71200cef992641d8141b5eec51e6677cf5881d1e60"
+    },
+    {
+      "path": "artifacts/matches/lazy-order-vs-0.7.4-30ms.txt",
+      "sha256": "68be932f529cbf2acd3cae9a7ea0028943b79b102fe7988335f8171f4ac9f1e6"
+    },
+    {
+      "path": "artifacts/publish/conversion-default-dotnet/Aster.deps.json",
+      "sha256": "846e5fc4a8c7c44657545ea00b93646fff9dc53574fc62eb7bb2c3d7fe4c6a4c"
+    },
+    {
+      "path": "artifacts/publish/conversion-default-dotnet/Aster.dll",
+      "sha256": "52439f58cf10a4a5dad8d4d48bf9db59db0a3f14b3c1c6216f79182b4a646d9a"
+    },
+    {
+      "path": "artifacts/publish/conversion-default-dotnet/Aster.runtimeconfig.json",
+      "sha256": "60e8700cdee9afcc3894f7e9bbb7ac56bb8d7af7561e8ad47323f3b5ebe4c3af"
+    },
+    {
+      "path": "artifacts/publish/lazy-order-baseline-profile/Aster.deps.json",
+      "sha256": "846e5fc4a8c7c44657545ea00b93646fff9dc53574fc62eb7bb2c3d7fe4c6a4c"
+    },
+    {
+      "path": "artifacts/publish/lazy-order-baseline-profile/Aster.dll",
+      "sha256": "4854ed401bc5ffba8c69489f5c6e5965bb64e48ed67feafa2a9674b0c3957669"
+    },
+    {
+      "path": "artifacts/publish/lazy-order-baseline-profile/Aster.exe",
+      "sha256": "df050007d366f0bd08563404b7c470bd12a860b12f897b681ba703b7e6b46dd1"
+    },
+    {
+      "path": "artifacts/publish/lazy-order-baseline-profile/Aster.pdb",
+      "sha256": "41be4d45c1f7ed4ef67f5b8922c6d0ac6ec14a1e6fd9f73ee3c7df4a5e347ce5"
+    },
+    {
+      "path": "artifacts/publish/lazy-order-baseline-profile/Aster.runtimeconfig.json",
+      "sha256": "60e8700cdee9afcc3894f7e9bbb7ac56bb8d7af7561e8ad47323f3b5ebe4c3af"
+    },
+    {
+      "path": "artifacts/publish/lazy-order-default-dotnet/Aster.deps.json",
+      "sha256": "846e5fc4a8c7c44657545ea00b93646fff9dc53574fc62eb7bb2c3d7fe4c6a4c"
+    },
+    {
+      "path": "artifacts/publish/lazy-order-default-dotnet/Aster.dll",
+      "sha256": "b4784cfe034be043cae4d40be734d021f4d4b08a5f1a64834cd6c51fda1abb84"
+    },
+    {
+      "path": "artifacts/publish/lazy-order-default-dotnet/Aster.runtimeconfig.json",
+      "sha256": "60e8700cdee9afcc3894f7e9bbb7ac56bb8d7af7561e8ad47323f3b5ebe4c3af"
+    },
+    {
+      "path": "artifacts/publish/lazy-order-dev/Aster.deps.json",
+      "sha256": "846e5fc4a8c7c44657545ea00b93646fff9dc53574fc62eb7bb2c3d7fe4c6a4c"
+    },
+    {
+      "path": "artifacts/publish/lazy-order-dev/Aster.dll",
+      "sha256": "5da4badd1232e51edf1622fa347a979a3df61fe6f24473874d3f474e0bddf07d"
+    },
+    {
+      "path": "artifacts/publish/lazy-order-dev/Aster.exe",
+      "sha256": "df050007d366f0bd08563404b7c470bd12a860b12f897b681ba703b7e6b46dd1"
+    },
+    {
+      "path": "artifacts/publish/lazy-order-dev/Aster.pdb",
+      "sha256": "a9178ac4277c172282e3d168281c297dd88ee96990899df5082c684c9e2a70af"
+    },
+    {
+      "path": "artifacts/publish/lazy-order-dev/Aster.runtimeconfig.json",
+      "sha256": "60e8700cdee9afcc3894f7e9bbb7ac56bb8d7af7561e8ad47323f3b5ebe4c3af"
+    },
+    {
+      "path": "artifacts/publish/lazy-order-profile/Aster.deps.json",
+      "sha256": "846e5fc4a8c7c44657545ea00b93646fff9dc53574fc62eb7bb2c3d7fe4c6a4c"
+    },
+    {
+      "path": "artifacts/publish/lazy-order-profile/Aster.dll",
+      "sha256": "705ec9d751472f0ace194265ebdd1aa7ff0d2e1543a79032971117fb8bdce5b4"
+    },
+    {
+      "path": "artifacts/publish/lazy-order-profile/Aster.exe",
+      "sha256": "df050007d366f0bd08563404b7c470bd12a860b12f897b681ba703b7e6b46dd1"
+    },
+    {
+      "path": "artifacts/publish/lazy-order-profile/Aster.pdb",
+      "sha256": "5c577c5ea02687fea92b7fa1de52b663fddd81db514a8f3ab233740e3f49eeb1"
+    },
+    {
+      "path": "artifacts/publish/lazy-order-profile/Aster.runtimeconfig.json",
+      "sha256": "60e8700cdee9afcc3894f7e9bbb7ac56bb8d7af7561e8ad47323f3b5ebe4c3af"
+    },
+    {
+      "path": "artifacts/ratings/session-20261004-calibration-v1.json",
+      "sha256": "a061a91ffe95b169dd69ee8ffb4c4126ad8884315bd15bb5f89c546bf69aa90d"
+    },
+    {
+      "path": "artifacts/ratings/session-20261004-lazy-order.json",
+      "sha256": "9b4d8d57dc284b485d37489c89b73821177374a5dbebae555a2959b77b5a6964"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/Aster.sln",
+      "sha256": "0cce33025d086c048a48c3dcd7543ae1338cf5c518b15060b7cd4b0e5c9864a1"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/Directory.Build.props",
+      "sha256": "aae19899039dcffcd68ffa855c683877cd6c4d6813d36bd974024a26b219badb"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/global.json",
+      "sha256": "d8fc1e71d76ffd7f785d4b7abbae953024544b52cf19fc4b8d687b058e594610"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/manifest.json",
+      "sha256": "4cbf48f70ba636afa221af7aaef666fdc62f7c64d5ce19b58cb762af5fbbafcd"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/src/Engine/Attacks.cs",
+      "sha256": "10a2eb8139f9786d5b097d92f3e385a889a24c8940a0d1fade1b1a987a37b9c6"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/src/Engine/Board.cs",
+      "sha256": "af1db55d63700255db50bd2c5b538d15c7ae1558ba3296a21f0e54bf2bfa16d9"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/src/Engine/EndgameProof.cs",
+      "sha256": "a03d6e4c226d7fa07cda2a50c3852bff0610dc9339472e5aed6f1dc1dec6095e"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/src/Engine/Engine.csproj",
+      "sha256": "7cf064b7199806147a2d4c716a36ff3e916002ca7df76c476d511296a72e6052"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/src/Engine/Evaluation.cs",
+      "sha256": "31a7107e86fdb946087a21883696b65da3a5afbaf1cfde7d5690e9fe839b2b9a"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/src/Engine/KpkBitbase.cs",
+      "sha256": "a13112931282526f774ca2b5ea1e87736f0c21e4b24d1fa9da8ae18560bfcc39"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/src/Engine/MajorMateBitbase.cs",
+      "sha256": "2ff38a71882eb9f8a5a1305745f569bb6849bb44f8d2a2c329ecba9a74617b48"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/src/Engine/Move.cs",
+      "sha256": "9cee181118dc8dbf01687b7c5210ad81aa07826e70ce7fb9b512b321b69bdc85"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/src/Engine/NeuralNetwork.cs",
+      "sha256": "b1f4c9bd9466c66508837d3ae864db4802fdb152a0794481e75034e71becced7"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/src/Engine/Perft.cs",
+      "sha256": "7e679e005a22d3cd3e003f6034495d4e62c8fd5ca79b89822c9a7e78b2fd085e"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/src/Engine/Program.cs",
+      "sha256": "47206d408b8c36c10cbb78247aa04fb13444b28154fda535afd012f4e60ea132"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/src/Engine/Search.cs",
+      "sha256": "747f747e1294201b4ac33310496ed296a2fcddac5a04f6f05e2d89b8fdd06bb3"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/src/Engine/SearchProfile.cs",
+      "sha256": "906f19d27c60811121208edef6d7cdc7417022b4ab4dcc03f8fd0af698935f17"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/src/Engine/StaticExchange.cs",
+      "sha256": "36208f3889d346dac33deba7ad7f9e20cd67deeb465c910f2355cbde8fd57af9"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/src/Engine/ThreatEvaluation.cs",
+      "sha256": "b956761ca5157dc70faecdd28faa1d45a52cd574cefb9866cd45a11f5df364bd"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/src/Engine/TranspositionTable.cs",
+      "sha256": "6b6a3a5581678ebf8c36640f02e1ed27ee9055ed55f1eaa205ab7d38bbf45001"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/src/Engine/Uci.cs",
+      "sha256": "0e29cf8896c63f298e0cf08704a32730758c5c622f57e60f10c4fd04c877a7f7"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/src/Engine/Zobrist.cs",
+      "sha256": "116806963b5b3a5b9bd10c9b988fffd78ce56f7abfa3a2bf716203d42c687ac2"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/tests/Engine.Tests/Engine.Tests.csproj",
+      "sha256": "731df592e64b335e2d2bb5e1aad2c481926ff8c43284e4a81b888cadaf782639"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/tests/Engine.Tests/Program.cs",
+      "sha256": "e77b868e5c329f029e75741ff3d498908cc79dcca975bb73e7eb712d2b4a963b"
+    },
+    {
+      "path": "artifacts/research/lazy-order-assessment-v1.json",
+      "sha256": "f09ac5f0eeb9e0c3cbd05cfeeb185a72ce999ddbced49159d32836ee05c13928"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/Aster.sln",
+      "sha256": "0cce33025d086c048a48c3dcd7543ae1338cf5c518b15060b7cd4b0e5c9864a1"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/Directory.Build.props",
+      "sha256": "aae19899039dcffcd68ffa855c683877cd6c4d6813d36bd974024a26b219badb"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/global.json",
+      "sha256": "d8fc1e71d76ffd7f785d4b7abbae953024544b52cf19fc4b8d687b058e594610"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/manifest.json",
+      "sha256": "2cfd74efdf24a4bca2860108cfe1178fddf0b6a0cce6292bc0403b4e5652a2ee"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/src/Engine/Attacks.cs",
+      "sha256": "10a2eb8139f9786d5b097d92f3e385a889a24c8940a0d1fade1b1a987a37b9c6"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/src/Engine/Board.cs",
+      "sha256": "af1db55d63700255db50bd2c5b538d15c7ae1558ba3296a21f0e54bf2bfa16d9"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/src/Engine/EndgameProof.cs",
+      "sha256": "a03d6e4c226d7fa07cda2a50c3852bff0610dc9339472e5aed6f1dc1dec6095e"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/src/Engine/Engine.csproj",
+      "sha256": "7cf064b7199806147a2d4c716a36ff3e916002ca7df76c476d511296a72e6052"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/src/Engine/Evaluation.cs",
+      "sha256": "31a7107e86fdb946087a21883696b65da3a5afbaf1cfde7d5690e9fe839b2b9a"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/src/Engine/KpkBitbase.cs",
+      "sha256": "a13112931282526f774ca2b5ea1e87736f0c21e4b24d1fa9da8ae18560bfcc39"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/src/Engine/MajorMateBitbase.cs",
+      "sha256": "2ff38a71882eb9f8a5a1305745f569bb6849bb44f8d2a2c329ecba9a74617b48"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/src/Engine/Move.cs",
+      "sha256": "9cee181118dc8dbf01687b7c5210ad81aa07826e70ce7fb9b512b321b69bdc85"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/src/Engine/NeuralNetwork.cs",
+      "sha256": "b1f4c9bd9466c66508837d3ae864db4802fdb152a0794481e75034e71becced7"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/src/Engine/Perft.cs",
+      "sha256": "7e679e005a22d3cd3e003f6034495d4e62c8fd5ca79b89822c9a7e78b2fd085e"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/src/Engine/Program.cs",
+      "sha256": "47206d408b8c36c10cbb78247aa04fb13444b28154fda535afd012f4e60ea132"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/src/Engine/Search.cs",
+      "sha256": "747f747e1294201b4ac33310496ed296a2fcddac5a04f6f05e2d89b8fdd06bb3"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/src/Engine/SearchProfile.cs",
+      "sha256": "906f19d27c60811121208edef6d7cdc7417022b4ab4dcc03f8fd0af698935f17"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/src/Engine/StaticExchange.cs",
+      "sha256": "36208f3889d346dac33deba7ad7f9e20cd67deeb465c910f2355cbde8fd57af9"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/src/Engine/ThreatEvaluation.cs",
+      "sha256": "b956761ca5157dc70faecdd28faa1d45a52cd574cefb9866cd45a11f5df364bd"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/src/Engine/TranspositionTable.cs",
+      "sha256": "6b6a3a5581678ebf8c36640f02e1ed27ee9055ed55f1eaa205ab7d38bbf45001"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/src/Engine/Uci.cs",
+      "sha256": "0e29cf8896c63f298e0cf08704a32730758c5c622f57e60f10c4fd04c877a7f7"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/src/Engine/Zobrist.cs",
+      "sha256": "116806963b5b3a5b9bd10c9b988fffd78ce56f7abfa3a2bf716203d42c687ac2"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/tests/Engine.Tests/Engine.Tests.csproj",
+      "sha256": "731df592e64b335e2d2bb5e1aad2c481926ff8c43284e4a81b888cadaf782639"
+    },
+    {
+      "path": "artifacts/research/lazy-order-baseline-profile-source/tests/Engine.Tests/Program.cs",
+      "sha256": "e77b868e5c329f029e75741ff3d498908cc79dcca975bb73e7eb712d2b4a963b"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/Aster.sln",
+      "sha256": "0cce33025d086c048a48c3dcd7543ae1338cf5c518b15060b7cd4b0e5c9864a1"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/Directory.Build.props",
+      "sha256": "aae19899039dcffcd68ffa855c683877cd6c4d6813d36bd974024a26b219badb"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/global.json",
+      "sha256": "d8fc1e71d76ffd7f785d4b7abbae953024544b52cf19fc4b8d687b058e594610"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/manifest.json",
+      "sha256": "e6789c5b23bead607b9bacd9818b75bfadcccc49cb01affe8db97ad50c5ef1e6"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/src/Engine/Attacks.cs",
+      "sha256": "10a2eb8139f9786d5b097d92f3e385a889a24c8940a0d1fade1b1a987a37b9c6"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/src/Engine/Board.cs",
+      "sha256": "af1db55d63700255db50bd2c5b538d15c7ae1558ba3296a21f0e54bf2bfa16d9"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/src/Engine/EndgameProof.cs",
+      "sha256": "a03d6e4c226d7fa07cda2a50c3852bff0610dc9339472e5aed6f1dc1dec6095e"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/src/Engine/Engine.csproj",
+      "sha256": "7cf064b7199806147a2d4c716a36ff3e916002ca7df76c476d511296a72e6052"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/src/Engine/Evaluation.cs",
+      "sha256": "31a7107e86fdb946087a21883696b65da3a5afbaf1cfde7d5690e9fe839b2b9a"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/src/Engine/KpkBitbase.cs",
+      "sha256": "a13112931282526f774ca2b5ea1e87736f0c21e4b24d1fa9da8ae18560bfcc39"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/src/Engine/MajorMateBitbase.cs",
+      "sha256": "2ff38a71882eb9f8a5a1305745f569bb6849bb44f8d2a2c329ecba9a74617b48"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/src/Engine/Move.cs",
+      "sha256": "9cee181118dc8dbf01687b7c5210ad81aa07826e70ce7fb9b512b321b69bdc85"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/src/Engine/NeuralNetwork.cs",
+      "sha256": "b1f4c9bd9466c66508837d3ae864db4802fdb152a0794481e75034e71becced7"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/src/Engine/Perft.cs",
+      "sha256": "7e679e005a22d3cd3e003f6034495d4e62c8fd5ca79b89822c9a7e78b2fd085e"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/src/Engine/Program.cs",
+      "sha256": "47206d408b8c36c10cbb78247aa04fb13444b28154fda535afd012f4e60ea132"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/src/Engine/Search.cs",
+      "sha256": "0b0bfefdb7ad3beaf71fec7b4ac9066329d85c49bd6ae176d2d2833bf37bed24"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/src/Engine/SearchProfile.cs",
+      "sha256": "bbc69ee408f7015dd121d00fef331050a6c245ae576ebc1015e16fb5ac56c248"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/src/Engine/StaticExchange.cs",
+      "sha256": "36208f3889d346dac33deba7ad7f9e20cd67deeb465c910f2355cbde8fd57af9"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/src/Engine/ThreatEvaluation.cs",
+      "sha256": "b956761ca5157dc70faecdd28faa1d45a52cd574cefb9866cd45a11f5df364bd"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/src/Engine/TranspositionTable.cs",
+      "sha256": "6b6a3a5581678ebf8c36640f02e1ed27ee9055ed55f1eaa205ab7d38bbf45001"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/src/Engine/Uci.cs",
+      "sha256": "fb58a4f8a0d66d7c89837ed0dc72a2791f9bbc9af94b07304bb4f6b61eddbf4f"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/src/Engine/Zobrist.cs",
+      "sha256": "116806963b5b3a5b9bd10c9b988fffd78ce56f7abfa3a2bf716203d42c687ac2"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/tests/Engine.Tests/Engine.Tests.csproj",
+      "sha256": "731df592e64b335e2d2bb5e1aad2c481926ff8c43284e4a81b888cadaf782639"
+    },
+    {
+      "path": "artifacts/research/lazy-order-default-source/tests/Engine.Tests/Program.cs",
+      "sha256": "e77b868e5c329f029e75741ff3d498908cc79dcca975bb73e7eb712d2b4a963b"
+    },
+    {
+      "path": "artifacts/research/lazy-order-execution-v1.json",
+      "sha256": "42c8c3c26662f2a9f34c94dfe362cf7086d2497cc55307bdedfb3f1917664ad6"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/DEFERRED-CAPTURES.md",
+      "sha256": "f6e50ee9182fd1a269ac40538593d68a63ff6da91a1b8c1606b0b7750ceeaa65"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/PROGRESS.md",
+      "sha256": "95713d1d3b1ec6a199951545cde38d9eb252d103111999e2337d9731c290b6ed"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/RATING.md",
+      "sha256": "22b833820288c976ee49edd5efcd370a3a659a0aec490080af2a83b0c5ee3cce"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/README.md",
+      "sha256": "4525cf10cc5e13e78faa3959654900dff2f14b5cc22c80570bcb720b3983d599"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/ROADMAP.md",
+      "sha256": "32793aec457357e3a1c5bd595925186e313cb0ee273ee661d77d8b5377cd3637"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/analyze_rating.py",
+      "sha256": "f6fe53073c006e91760b885adab9803f92cd50fa3c3a7ba6ada90f0a8e5b8d13"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/assess_lazy_order.py",
+      "sha256": "865e8ef8cc84b5509b80cc4262489dda9dc72b88ef5b1b2e2d48bbbfaa514790"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/audit_match.py",
+      "sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/audit_openings.py",
+      "sha256": "0c97723cf8a0404f9e3681a90f5d9d09dcfc4978721748222ee80a679a6fca5d"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/compare_search.py",
+      "sha256": "a8162c85b4ea4aae46546ca8a02d4b04c083bf56abb6a28d64f322b2331b6dd9"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/freeze_engine_source.py",
+      "sha256": "db919e19f9b75ade115a3d834ad48cc57e01a6165130ef03a775279f4c89acb7"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/generate_openings.py",
+      "sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/manifest.json",
+      "sha256": "553e66dfb78479648fca170f23831be1b84f7b7c9b3225bb92ee9afccc1f7905"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/match.py",
+      "sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/preserve_lazy_order.py",
+      "sha256": "692ba8285d3304ff9cada96c6c402b44555093ea5ce15116512d322dc084a74b"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/run_lazy_order.py",
+      "sha256": "29496dd36dcea59881901c2e200c0f4a39862af3432b7ded9d9331464ec82f77"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/run_rating.py",
+      "sha256": "6e8a31adefd0aeb5d51eac2f5672396f4518f779947713f86dac138ff00f661a"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/split_lazy_order_suite.py",
+      "sha256": "206eb6777b3d10f7850269d1522438fdba76d387726c91203de530adf3cf8808"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/tactics.py",
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/time_lazy_order.py",
+      "sha256": "bf26037376fbd1be9d43bbb5646d688d0977df993645a82fc78b15f6881987b4"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/uci_client.py",
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/verify.py",
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/verify_lazy_order.py",
+      "sha256": "6bfecf959ec97783d2dff460797fa63810122af7bc866c48d238bf732bebadff"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-final/verify_lazy_order_openings.py",
+      "sha256": "2e2337462c032cebbf3baebbb086858c0557342969870e04a71b9f3f2feeb152"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-start/analyze_rating.py",
+      "sha256": "f6fe53073c006e91760b885adab9803f92cd50fa3c3a7ba6ada90f0a8e5b8d13"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-start/assess_lazy_order.py",
+      "sha256": "865e8ef8cc84b5509b80cc4262489dda9dc72b88ef5b1b2e2d48bbbfaa514790"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-start/audit_match.py",
+      "sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-start/audit_openings.py",
+      "sha256": "0c97723cf8a0404f9e3681a90f5d9d09dcfc4978721748222ee80a679a6fca5d"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-start/compare_search.py",
+      "sha256": "a8162c85b4ea4aae46546ca8a02d4b04c083bf56abb6a28d64f322b2331b6dd9"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-start/freeze_engine_source.py",
+      "sha256": "db919e19f9b75ade115a3d834ad48cc57e01a6165130ef03a775279f4c89acb7"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-start/generate_openings.py",
+      "sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-start/manifest.json",
+      "sha256": "5b657c2057638600b26f2f561e3da4a52cebc53adfaf6e3d0d2332d62bdd0eaf"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-start/match.py",
+      "sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-start/run_lazy_order.py",
+      "sha256": "29496dd36dcea59881901c2e200c0f4a39862af3432b7ded9d9331464ec82f77"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-start/run_rating.py",
+      "sha256": "6e8a31adefd0aeb5d51eac2f5672396f4518f779947713f86dac138ff00f661a"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-start/split_lazy_order_suite.py",
+      "sha256": "206eb6777b3d10f7850269d1522438fdba76d387726c91203de530adf3cf8808"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-start/tactics.py",
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-start/time_lazy_order.py",
+      "sha256": "bf26037376fbd1be9d43bbb5646d688d0977df993645a82fc78b15f6881987b4"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-start/uci_client.py",
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-start/verify.py",
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-start/verify_lazy_order.py",
+      "sha256": "6bfecf959ec97783d2dff460797fa63810122af7bc866c48d238bf732bebadff"
+    },
+    {
+      "path": "artifacts/research/lazy-order-pipeline-start/verify_lazy_order_openings.py",
+      "sha256": "2e2337462c032cebbf3baebbb086858c0557342969870e04a71b9f3f2feeb152"
+    },
+    {
+      "path": "artifacts/research/lazy-order-plan-amendment-v1.json",
+      "sha256": "e34a7c36ad4cf81ea541a3344a387fe88b4afd1130b4837c970979feef2a0ddf"
+    },
+    {
+      "path": "artifacts/research/lazy-order-plan-v1.json",
+      "sha256": "abadc32d535d36dc1f7186f6ac387202d6c32498702050558bc4105c55f29e08"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/Aster.sln",
+      "sha256": "0cce33025d086c048a48c3dcd7543ae1338cf5c518b15060b7cd4b0e5c9864a1"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/Directory.Build.props",
+      "sha256": "aae19899039dcffcd68ffa855c683877cd6c4d6813d36bd974024a26b219badb"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/global.json",
+      "sha256": "d8fc1e71d76ffd7f785d4b7abbae953024544b52cf19fc4b8d687b058e594610"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/manifest.json",
+      "sha256": "494d4c05bc86cc5080fab762b8d2428f150aebca560c1bab677f58e8745a4d6f"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/src/Engine/Attacks.cs",
+      "sha256": "10a2eb8139f9786d5b097d92f3e385a889a24c8940a0d1fade1b1a987a37b9c6"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/src/Engine/Board.cs",
+      "sha256": "af1db55d63700255db50bd2c5b538d15c7ae1558ba3296a21f0e54bf2bfa16d9"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/src/Engine/EndgameProof.cs",
+      "sha256": "a03d6e4c226d7fa07cda2a50c3852bff0610dc9339472e5aed6f1dc1dec6095e"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/src/Engine/Engine.csproj",
+      "sha256": "7cf064b7199806147a2d4c716a36ff3e916002ca7df76c476d511296a72e6052"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/src/Engine/Evaluation.cs",
+      "sha256": "31a7107e86fdb946087a21883696b65da3a5afbaf1cfde7d5690e9fe839b2b9a"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/src/Engine/KpkBitbase.cs",
+      "sha256": "a13112931282526f774ca2b5ea1e87736f0c21e4b24d1fa9da8ae18560bfcc39"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/src/Engine/MajorMateBitbase.cs",
+      "sha256": "2ff38a71882eb9f8a5a1305745f569bb6849bb44f8d2a2c329ecba9a74617b48"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/src/Engine/Move.cs",
+      "sha256": "9cee181118dc8dbf01687b7c5210ad81aa07826e70ce7fb9b512b321b69bdc85"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/src/Engine/NeuralNetwork.cs",
+      "sha256": "b1f4c9bd9466c66508837d3ae864db4802fdb152a0794481e75034e71becced7"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/src/Engine/Perft.cs",
+      "sha256": "7e679e005a22d3cd3e003f6034495d4e62c8fd5ca79b89822c9a7e78b2fd085e"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/src/Engine/Program.cs",
+      "sha256": "47206d408b8c36c10cbb78247aa04fb13444b28154fda535afd012f4e60ea132"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/src/Engine/Search.cs",
+      "sha256": "0b0bfefdb7ad3beaf71fec7b4ac9066329d85c49bd6ae176d2d2833bf37bed24"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/src/Engine/SearchProfile.cs",
+      "sha256": "bbc69ee408f7015dd121d00fef331050a6c245ae576ebc1015e16fb5ac56c248"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/src/Engine/StaticExchange.cs",
+      "sha256": "36208f3889d346dac33deba7ad7f9e20cd67deeb465c910f2355cbde8fd57af9"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/src/Engine/ThreatEvaluation.cs",
+      "sha256": "b956761ca5157dc70faecdd28faa1d45a52cd574cefb9866cd45a11f5df364bd"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/src/Engine/TranspositionTable.cs",
+      "sha256": "6b6a3a5581678ebf8c36640f02e1ed27ee9055ed55f1eaa205ab7d38bbf45001"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/src/Engine/Uci.cs",
+      "sha256": "fb58a4f8a0d66d7c89837ed0dc72a2791f9bbc9af94b07304bb4f6b61eddbf4f"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/src/Engine/Zobrist.cs",
+      "sha256": "116806963b5b3a5b9bd10c9b988fffd78ce56f7abfa3a2bf716203d42c687ac2"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/tests/Engine.Tests/Engine.Tests.csproj",
+      "sha256": "731df592e64b335e2d2bb5e1aad2c481926ff8c43284e4a81b888cadaf782639"
+    },
+    {
+      "path": "artifacts/research/lazy-order-profile-source/tests/Engine.Tests/Program.cs",
+      "sha256": "e77b868e5c329f029e75741ff3d498908cc79dcca975bb73e7eb712d2b4a963b"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/Aster.sln",
+      "sha256": "0cce33025d086c048a48c3dcd7543ae1338cf5c518b15060b7cd4b0e5c9864a1"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/Directory.Build.props",
+      "sha256": "aae19899039dcffcd68ffa855c683877cd6c4d6813d36bd974024a26b219badb"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/global.json",
+      "sha256": "d8fc1e71d76ffd7f785d4b7abbae953024544b52cf19fc4b8d687b058e594610"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/manifest.json",
+      "sha256": "3efb115d94cfbec4ae2ae1a2630fc1b505c7f241acc631d460d1e1167ef20cb9"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/src/Engine/Attacks.cs",
+      "sha256": "10a2eb8139f9786d5b097d92f3e385a889a24c8940a0d1fade1b1a987a37b9c6"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/src/Engine/Board.cs",
+      "sha256": "af1db55d63700255db50bd2c5b538d15c7ae1558ba3296a21f0e54bf2bfa16d9"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/src/Engine/EndgameProof.cs",
+      "sha256": "a03d6e4c226d7fa07cda2a50c3852bff0610dc9339472e5aed6f1dc1dec6095e"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/src/Engine/Engine.csproj",
+      "sha256": "7cf064b7199806147a2d4c716a36ff3e916002ca7df76c476d511296a72e6052"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/src/Engine/Evaluation.cs",
+      "sha256": "31a7107e86fdb946087a21883696b65da3a5afbaf1cfde7d5690e9fe839b2b9a"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/src/Engine/KpkBitbase.cs",
+      "sha256": "a13112931282526f774ca2b5ea1e87736f0c21e4b24d1fa9da8ae18560bfcc39"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/src/Engine/MajorMateBitbase.cs",
+      "sha256": "2ff38a71882eb9f8a5a1305745f569bb6849bb44f8d2a2c329ecba9a74617b48"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/src/Engine/Move.cs",
+      "sha256": "9cee181118dc8dbf01687b7c5210ad81aa07826e70ce7fb9b512b321b69bdc85"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/src/Engine/NeuralNetwork.cs",
+      "sha256": "b1f4c9bd9466c66508837d3ae864db4802fdb152a0794481e75034e71becced7"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/src/Engine/Perft.cs",
+      "sha256": "7e679e005a22d3cd3e003f6034495d4e62c8fd5ca79b89822c9a7e78b2fd085e"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/src/Engine/Program.cs",
+      "sha256": "47206d408b8c36c10cbb78247aa04fb13444b28154fda535afd012f4e60ea132"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/src/Engine/Search.cs",
+      "sha256": "0b0bfefdb7ad3beaf71fec7b4ac9066329d85c49bd6ae176d2d2833bf37bed24"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/src/Engine/SearchProfile.cs",
+      "sha256": "bbc69ee408f7015dd121d00fef331050a6c245ae576ebc1015e16fb5ac56c248"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/src/Engine/StaticExchange.cs",
+      "sha256": "36208f3889d346dac33deba7ad7f9e20cd67deeb465c910f2355cbde8fd57af9"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/src/Engine/ThreatEvaluation.cs",
+      "sha256": "b956761ca5157dc70faecdd28faa1d45a52cd574cefb9866cd45a11f5df364bd"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/src/Engine/TranspositionTable.cs",
+      "sha256": "6b6a3a5581678ebf8c36640f02e1ed27ee9055ed55f1eaa205ab7d38bbf45001"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/src/Engine/Uci.cs",
+      "sha256": "fb58a4f8a0d66d7c89837ed0dc72a2791f9bbc9af94b07304bb4f6b61eddbf4f"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/src/Engine/Zobrist.cs",
+      "sha256": "116806963b5b3a5b9bd10c9b988fffd78ce56f7abfa3a2bf716203d42c687ac2"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/tests/Engine.Tests/Engine.Tests.csproj",
+      "sha256": "731df592e64b335e2d2bb5e1aad2c481926ff8c43284e4a81b888cadaf782639"
+    },
+    {
+      "path": "artifacts/research/lazy-order-source/tests/Engine.Tests/Program.cs",
+      "sha256": "e77b868e5c329f029e75741ff3d498908cc79dcca975bb73e7eb712d2b4a963b"
+    },
+    {
+      "path": "artifacts/research/rating-experiment-v1-manifest.json",
+      "sha256": "5f4a9e353e97d40c3f3c12bcf79528914e6969be48f7cd623ded8d389bea4c0a"
+    },
+    {
+      "path": "artifacts/tactics/lazy-order-baseline-tactics-quiet-5000nodes.json",
+      "sha256": "051a4d2d4a4a18f08718a07a1bdca7d88a512dcf1d95b76e73851e8a461655f1"
+    },
+    {
+      "path": "artifacts/tactics/lazy-order-endgames-5000nodes.json",
+      "sha256": "a6d7767e4bbde8347d3cd134c39e1071880cddfe42994d21411414b4fa7b3582"
+    },
+    {
+      "path": "artifacts/tactics/lazy-order-tactics-5000nodes.json",
+      "sha256": "ef9376877bdc427f6f7d867e9a1f2d312aa15a247d49526c97b04eb171491e91"
+    },
+    {
+      "path": "artifacts/tactics/lazy-order-tactics-depth8.json",
+      "sha256": "aab74ac291d7946796eef21979f360bbb2cf82a5221cc7cf9ffa51a6e16547a4"
+    },
+    {
+      "path": "artifacts/tactics/lazy-order-tactics-quiet-5000nodes.json",
+      "sha256": "c5495001e3bc54a2fdb845f57f7750d47adcbb4f9c07c2a975a80aaffc6db122"
+    },
+    {
+      "path": "artifacts/tactics/lazy-order-tactics-quiet-depth8.json",
+      "sha256": "c9e6942917f6644c5acf1366a9310bcd13c6d11f9f4c266eae4deb25c57cdf72"
+    },
+    {
+      "path": "artifacts/validation/lazy-order-100ms-audit.json",
+      "sha256": "0f670ee2379565bc814cb9ad40a240261c1baba912f5439300d3f6e4ce646bc0"
+    },
+    {
+      "path": "artifacts/validation/lazy-order-30ms-audit.json",
+      "sha256": "b8a0e6ad4d410ce93fa18f47841beca89b7f7da949b980d5513f136c3d7e4c73"
+    },
+    {
+      "path": "artifacts/validation/lazy-order-baseline-profile-build.txt",
+      "sha256": "7984203d78fc7d616de3338e20f7f74f27209b2b992d3ce339e6bbc23d58ca4c"
+    },
+    {
+      "path": "artifacts/validation/lazy-order-build.txt",
+      "sha256": "f8977f06ec037ab8c4fefe37ea8a03c170662c4ec5419b1ccf38a7f011936abb"
+    },
+    {
+      "path": "artifacts/validation/lazy-order-default-build.txt",
+      "sha256": "06fe1773dd72c5535af30d333d624c199ea733932b32a62a6b64c6d01ff25886"
+    },
+    {
+      "path": "artifacts/validation/lazy-order-default-engine-tests.txt",
+      "sha256": "1fc44c672cbd15ae94429c0f3c35677aff6dfd6d746227cce8bdab7bbc77f7ab"
+    },
+    {
+      "path": "artifacts/validation/lazy-order-default-rules.json",
+      "sha256": "cbe558e9f7c290ed1ac68584eecbb75eb0c62e8a44af1ea93ad1b97dc39b8d85"
+    },
+    {
+      "path": "artifacts/validation/lazy-order-differential.json",
+      "sha256": "a6a76987a11621175fad6496966cdf328cb29757cb30bc870c6882fcd1194040"
+    },
+    {
+      "path": "artifacts/validation/lazy-order-engine-tests.txt",
+      "sha256": "1fc44c672cbd15ae94429c0f3c35677aff6dfd6d746227cce8bdab7bbc77f7ab"
+    },
+    {
+      "path": "artifacts/validation/lazy-order-opening-traces.json",
+      "sha256": "dab4fdf824bd6d8dd8d8d82be3d42af1d9f56756e0c70d0b8a16c87e2fe92b83"
+    },
+    {
+      "path": "artifacts/validation/lazy-order-parent-audit.json",
+      "sha256": "2f5ac17aff781f78719255c6ca85c3e036cbf2831e854262213aa3b359b6fa8b"
+    },
+    {
+      "path": "artifacts/validation/lazy-order-profile-build.txt",
+      "sha256": "f1fb04661d509c3df017b69b89cde675f6b0241f6b40e743507986124bd01dfd"
+    },
+    {
+      "path": "artifacts/validation/lazy-order-publish.txt",
+      "sha256": "b65c074556bea215482b13dd8574a7db4cb418493a34d27b6f2febba8513fb26"
+    },
+    {
+      "path": "artifacts/validation/lazy-order-rating-audit.json",
+      "sha256": "925ac786063be4287ea2a6871703c4c00990ab3ec67fc63d9125888e8d48055f"
+    },
+    {
+      "path": "artifacts/validation/lazy-order-rules.json",
+      "sha256": "73ad2a3f7484b77510f29023d18e3481c78fa9db3dfedde1bb282d99e606c864"
+    },
+    {
+      "path": "tests/fixtures/lazy-order-100ms-v1.json",
+      "sha256": "12ed5a4dd3688e730ba6224b8c88e00bc5b016975aa8dd08e1e918bbb9f7be1e"
+    },
+    {
+      "path": "tests/fixtures/lazy-order-30ms-v1.json",
+      "sha256": "e6f6a4f084d0c06ec7a1bcc8de86a9d13b3fa0faa3053208c3c86359e62ba423"
+    },
+    {
+      "path": "tests/fixtures/lazy-order-behavior-v1.json",
+      "sha256": "00a8de1225c4a1e6b6f0b943c6d1d12565900eea579aa6f644d5a2b347e9f919"
+    },
+    {
+      "path": "tests/fixtures/lazy-order-parent-v1.json",
+      "sha256": "d8ac1c505d3c46c819b87da63fe8308cebd18a234a1889a9215fbc2e75101f3a"
+    },
+    {
+      "path": "tests/fixtures/lazy-order-rating-v1.json",
+      "sha256": "9c7886ac0b66b35fd6cc74c2937bb86ba5506c0363568e87cf769be6bca46652"
+    },
+    {
+      "path": "tools/stockfish/manifest.json",
+      "sha256": "e584d21a94ee3bbde60353857ae6f3ef01f9a3483299adef072c72f08a6f017f"
+    }
+  ],
+  "candidate_promoted": false,
+  "reserved_rating_pairs": 128,
+  "reserved_rating_queried_by_aster": false,
+  "interpretation": "Same deterministic behavior; 6.66% fewer SEE calls but0.66% warm speed gain fails5% gate. All160 paired games audited. Original failed tactical assumption and pre-match amendment retained. Independent chess-engine goal remains active, full-strength Stockfish superiority unachieved."
+}

@@ -1,0 +1,962 @@
+{
+  "schema": 1,
+  "arguments": {
+    "data": "artifacts/data/teacher-turn-60k-static-v1-classical.jsonl",
+    "output": "artifacts/training/pair-loss-strong-v1",
+    "hidden": 64,
+    "epochs": 50,
+    "batch_size": 512,
+    "learning_rate": 0.0002,
+    "threads": 4,
+    "seed": 20261014,
+    "classical_base": true,
+    "king_context": true,
+    "turn_output": true,
+    "squared_activation": false,
+    "activation_bias": 0.5,
+    "transformer_std": 0.1,
+    "pair_loss_weight": 4.0
+  },
+  "torch_version": "2.14.1+cpu",
+  "numpy_version": "2.5.3",
+  "dataset_sha256": "bfea2a0226b65879961c7cde551dde3d715a9e59ef9e99adf627e3744f2be162",
+  "model_sha256": "fb47b3ae39ac8b50b480f339f3aef4ccaaba01f35a2dc0803944978cbe1aba72",
+  "source_files": [
+    {
+      "name": "train_network.py",
+      "sha256": "17e2c855066273743b5befa9ec72a041834f0deaa727294fd34699beb0bce228"
+    },
+    {
+      "name": "neural_format.py",
+      "sha256": "a2d369f0f223e47f8acfbaaad6f01583171a659df7b6b06553feead416824312"
+    }
+  ],
+  "architecture": "shared 13056->H clipped ReLU with linear term; king_context=True; turn_output=True; squared_activation=False",
+  "training_positions": 54310,
+  "validation_positions": 5690,
+  "training_games": 2426,
+  "validation_games": [
+    0,
+    1,
+    2,
+    7,
+    15,
+    20,
+    26,
+    32,
+    36,
+    40,
+    50,
+    72,
+    92,
+    95,
+    114,
+    119,
+    168,
+    171,
+    172,
+    200,
+    204,
+    208,
+    215,
+    218,
+    223,
+    238,
+    239,
+    243,
+    250,
+    263,
+    306,
+    307,
+    311,
+    320,
+    348,
+    352,
+    368,
+    378,
+    394,
+    398,
+    401,
+    403,
+    410,
+    421,
+    428,
+    436,
+    447,
+    469,
+    477,
+    489,
+    501,
+    511,
+    518,
+    531,
+    562,
+    569,
+    600,
+    605,
+    609,
+    622,
+    633,
+    639,
+    641,
+    651,
+    658,
+    673,
+    680,
+    711,
+    712,
+    716,
+    736,
+    739,
+    743,
+    750,
+    772,
+    784,
+    803,
+    851,
+    864,
+    868,
+    872,
+    877,
+    896,
+    903,
+    917,
+    921,
+    924,
+    930,
+    940,
+    953,
+    955,
+    965,
+    976,
+    989,
+    990,
+    1006,
+    1009,
+    1016,
+    1017,
+    1019,
+    1037,
+    1047,
+    1051,
+    1077,
+    1085,
+    1105,
+    1126,
+    1139,
+    1144,
+    1149,
+    1170,
+    1176,
+    1183,
+    1184,
+    1204,
+    1233,
+    1243,
+    1250,
+    1270,
+    1283,
+    1292,
+    1301,
+    1309,
+    1312,
+    1329,
+    1343,
+    1350,
+    1368,
+    1370,
+    1375,
+    1391,
+    1392,
+    1401,
+    1403,
+    1443,
+    1446,
+    1448,
+    1461,
+    1466,
+    1473,
+    1506,
+    1513,
+    1514,
+    1529,
+    1542,
+    1552,
+    1566,
+    1569,
+    1589,
+    1597,
+    1608,
+    1617,
+    1625,
+    1628,
+    1629,
+    1637,
+    1639,
+    1643,
+    1649,
+    1651,
+    1655,
+    1670,
+    1678,
+    1680,
+    1681,
+    1703,
+    1706,
+    1725,
+    1728,
+    1750,
+    1751,
+    1775,
+    1779,
+    1780,
+    1784,
+    1829,
+    1830,
+    1845,
+    1849,
+    1866,
+    1874,
+    1888,
+    1904,
+    1908,
+    1921,
+    1929,
+    1930,
+    1938,
+    1941,
+    1961,
+    1971,
+    1983,
+    1989,
+    1990,
+    1993,
+    2025,
+    2026,
+    2030,
+    2053,
+    2060,
+    2063,
+    2071,
+    2089,
+    2098,
+    2104,
+    2109,
+    2115,
+    2141,
+    2150,
+    2185,
+    2187,
+    2195,
+    2197,
+    2201,
+    2208,
+    2231,
+    2252,
+    2267,
+    2272,
+    2274,
+    2275,
+    2305,
+    2306,
+    2315,
+    2323,
+    2325,
+    2331,
+    2344,
+    2359,
+    2363,
+    2364,
+    2383,
+    2424,
+    2434,
+    2452,
+    2453,
+    2483,
+    2491,
+    2497,
+    2498,
+    2521,
+    2539,
+    2566,
+    2602,
+    2612,
+    2625,
+    2629,
+    2634,
+    2636,
+    2649,
+    2656,
+    2657,
+    2661,
+    2670,
+    2677,
+    2686,
+    2733,
+    2777,
+    2780,
+    2802,
+    2823,
+    2834,
+    2845,
+    2850,
+    2856,
+    2879,
+    2890,
+    2899,
+    2995
+  ],
+  "initial_validation": {
+    "loss": 0.02070377767086029,
+    "mae_cp": 140.31056213378906,
+    "rmse_cp": 193.1680145263672
+  },
+  "selected_validation": {
+    "loss": 0.017851712182164192,
+    "mae_cp": 128.97216796875,
+    "rmse_cp": 176.4929656982422
+  },
+  "selected_epoch": 22,
+  "epochs": [
+    {
+      "epoch": 1,
+      "loss": 0.02019611746072769,
+      "mae_cp": 138.6539306640625,
+      "rmse_cp": 189.86436462402344,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 45.66615676879883,
+        "predicted_std_cp": 5.757970333099365,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 2,
+      "loss": 0.01983690820634365,
+      "mae_cp": 137.1402130126953,
+      "rmse_cp": 187.9024658203125,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 45.67339324951172,
+        "predicted_std_cp": 10.11469554901123,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 3,
+      "loss": 0.019542593508958817,
+      "mae_cp": 135.79129028320312,
+      "rmse_cp": 186.34307861328125,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 44.510643005371094,
+        "predicted_std_cp": 16.535785675048828,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 4,
+      "loss": 0.019293595105409622,
+      "mae_cp": 134.65798950195312,
+      "rmse_cp": 184.9925994873047,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 43.68061447143555,
+        "predicted_std_cp": 21.490583419799805,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 5,
+      "loss": 0.019075041636824608,
+      "mae_cp": 133.65992736816406,
+      "rmse_cp": 183.79840087890625,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 42.83735275268555,
+        "predicted_std_cp": 24.844133377075195,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 6,
+      "loss": 0.018887393176555634,
+      "mae_cp": 132.86781311035156,
+      "rmse_cp": 182.7318878173828,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 42.47441101074219,
+        "predicted_std_cp": 27.851306915283203,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 7,
+      "loss": 0.018705403432250023,
+      "mae_cp": 132.0812530517578,
+      "rmse_cp": 181.7492218017578,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 42.00315475463867,
+        "predicted_std_cp": 30.137840270996094,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 8,
+      "loss": 0.0185919851064682,
+      "mae_cp": 131.7152557373047,
+      "rmse_cp": 180.9494171142578,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 42.938377380371094,
+        "predicted_std_cp": 32.36796188354492,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 9,
+      "loss": 0.018437042832374573,
+      "mae_cp": 131.02159118652344,
+      "rmse_cp": 180.14404296875,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 42.36762237548828,
+        "predicted_std_cp": 33.81551742553711,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 10,
+      "loss": 0.01835339330136776,
+      "mae_cp": 130.79200744628906,
+      "rmse_cp": 179.53016662597656,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 43.15657424926758,
+        "predicted_std_cp": 35.6076545715332,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 11,
+      "loss": 0.018240630626678467,
+      "mae_cp": 130.3480224609375,
+      "rmse_cp": 178.89706420898438,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 43.37360763549805,
+        "predicted_std_cp": 36.86140823364258,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 12,
+      "loss": 0.018120823428034782,
+      "mae_cp": 129.82614135742188,
+      "rmse_cp": 178.35101318359375,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 43.07465362548828,
+        "predicted_std_cp": 37.178627014160156,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 13,
+      "loss": 0.018047962337732315,
+      "mae_cp": 129.55645751953125,
+      "rmse_cp": 177.8979949951172,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 43.48679733276367,
+        "predicted_std_cp": 38.42409133911133,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 14,
+      "loss": 0.01804046332836151,
+      "mae_cp": 129.66514587402344,
+      "rmse_cp": 177.693115234375,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 44.4844856262207,
+        "predicted_std_cp": 40.51716613769531,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 15,
+      "loss": 0.017965232953429222,
+      "mae_cp": 129.33218383789062,
+      "rmse_cp": 177.30764770507812,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 44.67479705810547,
+        "predicted_std_cp": 40.796722412109375,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 16,
+      "loss": 0.017944127321243286,
+      "mae_cp": 129.2645263671875,
+      "rmse_cp": 177.11436462402344,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 45.4931526184082,
+        "predicted_std_cp": 41.353538513183594,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 17,
+      "loss": 0.01787485182285309,
+      "mae_cp": 128.93910217285156,
+      "rmse_cp": 176.8328857421875,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 45.530967712402344,
+        "predicted_std_cp": 42.32992935180664,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 18,
+      "loss": 0.017858140170574188,
+      "mae_cp": 128.89328002929688,
+      "rmse_cp": 176.6858673095703,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 45.56583786010742,
+        "predicted_std_cp": 42.890846252441406,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 19,
+      "loss": 0.017875229939818382,
+      "mae_cp": 129.06410217285156,
+      "rmse_cp": 176.62948608398438,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 46.71575164794922,
+        "predicted_std_cp": 43.71190643310547,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 20,
+      "loss": 0.017896074801683426,
+      "mae_cp": 129.21339416503906,
+      "rmse_cp": 176.635009765625,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 47.66434860229492,
+        "predicted_std_cp": 44.68773651123047,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 21,
+      "loss": 0.017858454957604408,
+      "mae_cp": 129.0304718017578,
+      "rmse_cp": 176.46453857421875,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 47.365203857421875,
+        "predicted_std_cp": 45.45924758911133,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 22,
+      "loss": 0.017851712182164192,
+      "mae_cp": 128.97216796875,
+      "rmse_cp": 176.4929656982422,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 47.5728645324707,
+        "predicted_std_cp": 45.796669006347656,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 23,
+      "loss": 0.01789649948477745,
+      "mae_cp": 129.27020263671875,
+      "rmse_cp": 176.59304809570312,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 48.627384185791016,
+        "predicted_std_cp": 46.86894226074219,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 24,
+      "loss": 0.017904452979564667,
+      "mae_cp": 129.3231658935547,
+      "rmse_cp": 176.6148681640625,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 48.919769287109375,
+        "predicted_std_cp": 47.75094985961914,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 25,
+      "loss": 0.017931390553712845,
+      "mae_cp": 129.462646484375,
+      "rmse_cp": 176.70358276367188,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 49.538238525390625,
+        "predicted_std_cp": 48.175994873046875,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 26,
+      "loss": 0.017916817218065262,
+      "mae_cp": 129.38169860839844,
+      "rmse_cp": 176.6765594482422,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 49.632869720458984,
+        "predicted_std_cp": 49.0303955078125,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 27,
+      "loss": 0.017965400591492653,
+      "mae_cp": 129.66885375976562,
+      "rmse_cp": 176.8182830810547,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 50.5254020690918,
+        "predicted_std_cp": 49.87369918823242,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 28,
+      "loss": 0.017936013638973236,
+      "mae_cp": 129.48770141601562,
+      "rmse_cp": 176.74343872070312,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 50.2552490234375,
+        "predicted_std_cp": 50.05316162109375,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 29,
+      "loss": 0.017938267439603806,
+      "mae_cp": 129.48550415039062,
+      "rmse_cp": 176.7692413330078,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 50.5767822265625,
+        "predicted_std_cp": 50.50934982299805,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 30,
+      "loss": 0.017977070063352585,
+      "mae_cp": 129.7087860107422,
+      "rmse_cp": 176.85952758789062,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 51.19767761230469,
+        "predicted_std_cp": 51.479766845703125,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 31,
+      "loss": 0.018019787967205048,
+      "mae_cp": 129.96629333496094,
+      "rmse_cp": 176.9628143310547,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 51.76824951171875,
+        "predicted_std_cp": 52.34048843383789,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 32,
+      "loss": 0.018008826300501823,
+      "mae_cp": 129.8780517578125,
+      "rmse_cp": 176.98440551757812,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 51.916141510009766,
+        "predicted_std_cp": 52.88615798950195,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 33,
+      "loss": 0.018028132617473602,
+      "mae_cp": 129.9756622314453,
+      "rmse_cp": 177.0600128173828,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 52.60009765625,
+        "predicted_std_cp": 53.74927520751953,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 34,
+      "loss": 0.018072467297315598,
+      "mae_cp": 130.2074737548828,
+      "rmse_cp": 177.20260620117188,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 52.72462844848633,
+        "predicted_std_cp": 54.38132858276367,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 35,
+      "loss": 0.018129615113139153,
+      "mae_cp": 130.50491333007812,
+      "rmse_cp": 177.4034423828125,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 53.5731086730957,
+        "predicted_std_cp": 55.129005432128906,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 36,
+      "loss": 0.018112104386091232,
+      "mae_cp": 130.3814697265625,
+      "rmse_cp": 177.37660217285156,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 53.39131164550781,
+        "predicted_std_cp": 55.210105895996094,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 37,
+      "loss": 0.018169349059462547,
+      "mae_cp": 130.66294860839844,
+      "rmse_cp": 177.5733184814453,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 54.003726959228516,
+        "predicted_std_cp": 55.81992721557617,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 38,
+      "loss": 0.018163390457630157,
+      "mae_cp": 130.59750366210938,
+      "rmse_cp": 177.57630920410156,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 53.9792594909668,
+        "predicted_std_cp": 56.070335388183594,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 39,
+      "loss": 0.018196124583482742,
+      "mae_cp": 130.80230712890625,
+      "rmse_cp": 177.68731689453125,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 54.45737838745117,
+        "predicted_std_cp": 56.775875091552734,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 40,
+      "loss": 0.018238728865981102,
+      "mae_cp": 131.0030975341797,
+      "rmse_cp": 177.87655639648438,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 54.685096740722656,
+        "predicted_std_cp": 57.523441314697266,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 41,
+      "loss": 0.0182492658495903,
+      "mae_cp": 131.0279083251953,
+      "rmse_cp": 177.9445343017578,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 54.84607696533203,
+        "predicted_std_cp": 57.80829620361328,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 42,
+      "loss": 0.018276697024703026,
+      "mae_cp": 131.16146850585938,
+      "rmse_cp": 178.08802795410156,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 55.059814453125,
+        "predicted_std_cp": 58.39911651611328,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 43,
+      "loss": 0.01829732581973076,
+      "mae_cp": 131.2365264892578,
+      "rmse_cp": 178.18692016601562,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 55.119346618652344,
+        "predicted_std_cp": 58.72920227050781,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 44,
+      "loss": 0.018323427066206932,
+      "mae_cp": 131.37722778320312,
+      "rmse_cp": 178.2785186767578,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 55.52495574951172,
+        "predicted_std_cp": 58.96873474121094,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 45,
+      "loss": 0.018349748104810715,
+      "mae_cp": 131.49435424804688,
+      "rmse_cp": 178.39036560058594,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 55.759822845458984,
+        "predicted_std_cp": 59.702945709228516,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 46,
+      "loss": 0.01835763081908226,
+      "mae_cp": 131.48199462890625,
+      "rmse_cp": 178.46377563476562,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 55.91730499267578,
+        "predicted_std_cp": 59.87353515625,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 47,
+      "loss": 0.018445037305355072,
+      "mae_cp": 131.96759033203125,
+      "rmse_cp": 178.7257843017578,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 56.43888854980469,
+        "predicted_std_cp": 60.919403076171875,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 48,
+      "loss": 0.018436327576637268,
+      "mae_cp": 131.8657989501953,
+      "rmse_cp": 178.7743682861328,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 56.60978698730469,
+        "predicted_std_cp": 61.20363998413086,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 49,
+      "loss": 0.018470149487257004,
+      "mae_cp": 132.01791381835938,
+      "rmse_cp": 178.91859436035156,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 56.71066665649414,
+        "predicted_std_cp": 61.52004623413086,
+        "teacher_std_cp": 61.492645263671875
+      }
+    },
+    {
+      "epoch": 50,
+      "loss": 0.018541894853115082,
+      "mae_cp": 132.4023895263672,
+      "rmse_cp": 179.1639404296875,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 57.19301223754883,
+        "predicted_std_cp": 62.3797721862793,
+        "teacher_std_cp": 61.492645263671875
+      }
+    }
+  ],
+  "quantized_validation_mae_cp": 128.95289982425308,
+  "quantization_mae_cp": 1.1558992860095676,
+  "quantization_max_error_cp": 5.417808532714844,
+  "seconds": 54.383,
+  "interpretation": "Teacher fit on held-out games, not playing strength or evidence of surpassing Stockfish.",
+  "initial_activation": {
+    "positions": 1024,
+    "outside_linear_fraction": 0.22735595703125
+  },
+  "selected_activation": {
+    "positions": 1024,
+    "outside_linear_fraction": 0.28885650634765625
+  },
+  "classical_base": true,
+  "classical_score_provenance": {
+    "input": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\teacher-turn-60k-static-v1.jsonl",
+    "classical_engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\baseline-0.6.0\\Aster.exe",
+    "classical_binary_sha256": "734d538faba6f43d5533981421b59a0a3cccbec60cf1dbc9980391ef58528b14",
+    "positions": 60000,
+    "input_sha256": "46b8e7210c93e9e382366e90963901906407e7c4d748838b3424cef6a63adc8a",
+    "output_sha256": "bfea2a0226b65879961c7cde551dde3d715a9e59ef9e99adf627e3744f2be162"
+  },
+  "king_context": true,
+  "turn_output": true,
+  "squared_activation": false,
+  "features": 13056,
+  "paired_supervision": {
+    "weight": 4.0,
+    "training_pairs": 9022,
+    "heldout_pairs": 978,
+    "pair_batch_size": 128,
+    "selected_validation": {
+      "pairs": 978,
+      "difference_mae_cp": 47.5728645324707,
+      "predicted_std_cp": 45.796669006347656,
+      "teacher_std_cp": 61.492645263671875
+    },
+    "selection": "Ordinary held-out position loss only; pair diagnostics do not select epochs."
+  },
+  "residual_cap_cp": 250
+}

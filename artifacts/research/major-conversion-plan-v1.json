@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "status": "declared after exhaustive oracle checks, before revised complete-game or timed-match results",
+  "candidate": "artifacts/publish/conversion-dev/Aster.exe",
+  "candidate_sha256": "4d18c95d78eb51294944dcd538b07f3ffcd620b78c8ce6dbc7c8f924e74647c4",
+  "change": "Original KQK/KRK exact mate distances, guarded root decreasing-distance filter, plus the preceding KPK evaluation experiment",
+  "complete_games": {
+    "suite": "tests/fixtures/kpk-setups-v1.json",
+    "suite_sha256": "550764811ecbb1761c70a30a82c941122450839ef442f56a8f5a5a67ed96dd13",
+    "control": {"pairs": 64, "nodes_per_move": 5000, "max_plies": 256},
+    "stockfish19": {"pairs": 32, "nodes_per_move": 5000, "max_plies": 256},
+    "scope": "Existing diagnostic after failure inspection, not held-out general playing strength. Require all candidate pawn-side initial wins to convert to checkmate and all candidate initial defender draws to remain draws."
+  },
+  "timed_regression": {
+    "opponent": "artifacts/publish/kpk-control-dev/Aster.exe",
+    "suite": "tests/fixtures/openings-v5.json",
+    "pairs": 32,
+    "seconds_per_move": 0.1,
+    "max_plies": 400,
+    "scope": "Longer control on an existing development suite; not a final superiority test."
+  },
+  "gates": ["Complete independent queen/rook WDL and mate recurrences", "Runtime history/clock/symmetry/searchmoves/protocol checks", "Original and quiet tactics 32/32 and endgame suite at least 13/16", "All games complete and audited"],
+  "decision": "Retain opt-in, and report failed gates or inconclusive intervals. Preserve old candidate, control and all failed conversion games. No Elo or Stockfish superiority claim."
+}

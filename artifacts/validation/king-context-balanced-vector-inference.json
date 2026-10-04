@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "model": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\training\\king-context-balanced-v1\\model.ann",
+  "exact_inference_positions": 525,
+  "held_out_evaluation": null,
+  "interpretation": "Inference agreement and teacher fit, not measured playing strength.",
+  "engine_sha256": "efde0c3182c488052d4d754a85afc52e2a06ddcb752948734821a52376e4593e",
+  "model_sha256": "55621526e5bf9c821789a198fe1c111b8fb7e27b5cd9c91fa7dbb3b006bc8d57",
+  "engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\king-context-vector-dev\\Aster.exe"
+}

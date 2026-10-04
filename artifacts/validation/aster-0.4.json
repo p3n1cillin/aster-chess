@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\win-x64\\Aster.exe",
+  "binary_sha256": "d0e27aa3fdbbe5e14acf48e51f3a753599c99b6612b5727439249e85972fc69d",
+  "positions_checked": 15486,
+  "reference_perft_positions": 9,
+  "protocol_checks": "passed",
+  "seed": 20261003,
+  "seconds": 3.252,
+  "eval_file": null
+}

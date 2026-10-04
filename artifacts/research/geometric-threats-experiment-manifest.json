@@ -1,0 +1,152 @@
+{
+  "schema": 1,
+  "engine_sources": [
+    {
+      "path": "artifacts/research/geometric-threats-source/manifest.json",
+      "sha256": "7411aebc1abe01c9de1c352b6e72f3ffbf5d02062a2968cdd9827b0eb743641a"
+    },
+    {
+      "path": "artifacts/research/king-context-release-source/manifest.json",
+      "sha256": "2f121c2ad3c1cc34e9ba759c3e686da4bd75433543cbb26d08ae9de48b8414cf"
+    },
+    {
+      "path": "artifacts/research/geometric-control-source/manifest.json",
+      "sha256": "5b3e0fa8c6d801203ddf0e11725297ad99b77844779aa4af394ba7271f155320"
+    }
+  ],
+  "pipeline": {
+    "path": "artifacts/research/geometric-threats-pipeline-final/manifest.json",
+    "sha256": "1ba877c226074883f6ad21886ae0719f67e01048e1544422f859754e2f6f2919"
+  },
+  "artifacts": [
+    {
+      "path": "artifacts/research/turn-static-experiment-manifest.json",
+      "sha256": "70c85664968e2f2109424e38786c9b5e28ef5c9610ba2e8cca092f57d9fffb94"
+    },
+    {
+      "path": "artifacts/benchmarks/geometric-control-depth7.json",
+      "sha256": "e64e57a5e9c519e1e297c9c4415c189a752e76b89e1bd7b3b869bdb9228a0607"
+    },
+    {
+      "path": "artifacts/benchmarks/geometric-control-vs-0.6.0-depth8.json",
+      "sha256": "623d9d3e200b2d18727d53a57b02b4d1fe59bf142c4215de47b8ca8507d5ce79"
+    },
+    {
+      "path": "artifacts/benchmarks/geometric-threats-depth7.json",
+      "sha256": "51efd47575ebd634ef66d5d2df49af73c999f4a1c69d4c8b6ddbbaceda9e6e9f"
+    },
+    {
+      "path": "artifacts/data/teacher-turn-60k-static-v1-classical.jsonl",
+      "sha256": "bfea2a0226b65879961c7cde551dde3d715a9e59ef9e99adf627e3744f2be162"
+    },
+    {
+      "path": "artifacts/data/teacher-turn-60k-static-v1-classical.jsonl.classical.json",
+      "sha256": "eb35cd3500f303f9b82a41d4be85860db5eecaf1b80c86ff6b0716e5706405f9"
+    },
+    {
+      "path": "artifacts/data/teacher-turn-60k-static-v1.jsonl",
+      "sha256": "46b8e7210c93e9e382366e90963901906407e7c4d748838b3424cef6a63adc8a"
+    },
+    {
+      "path": "artifacts/data/teacher-turn-60k-static-v1.jsonl.manifest.json",
+      "sha256": "04f1b6bce25bd6539a7fa472144498e7fee46150ea5191f4926a401597921410"
+    },
+    {
+      "path": "artifacts/matches/geometric-threats-vs-0.6.0-v5-30ms.analysis.json",
+      "sha256": "e2aecc1e2cc240938b33c90bb72b19a18fd2113f7e59c6fb9639f427e44f7a5a"
+    },
+    {
+      "path": "artifacts/matches/geometric-threats-vs-0.6.0-v5-30ms.audit.json",
+      "sha256": "dfcadf0253681ecfa48c339bc63d4ac717d463cac6643baa5908d54fbf76b125"
+    },
+    {
+      "path": "artifacts/matches/geometric-threats-vs-0.6.0-v5-30ms.json",
+      "sha256": "1ebb9be10114d40ac8938fa485569e482be8af5f75b8032ca0163eae21b64ebc"
+    },
+    {
+      "path": "artifacts/matches/geometric-threats-vs-0.6.0-v5-30ms.pgn",
+      "sha256": "e0c3af4c1c4d3c3e6368edb939474fbc2fa6c44f27f4fa4c19b9c176afa88c19"
+    },
+    {
+      "path": "artifacts/training/geometric-threats-v1/features.npz",
+      "sha256": "1cb6cafee60c251f0c763f0e25a75062bc9ae6636d58b8566dec4e85663edcff"
+    },
+    {
+      "path": "artifacts/training/geometric-threats-v1/fit.json",
+      "sha256": "fe86bf4aedc6bd0c721d9897fd33273c1fb3bc43f30449bd85d839b486052b5a"
+    },
+    {
+      "path": "artifacts/training/geometric-threats-v1/source/fit_threats.py",
+      "sha256": "4762d1390ef4cd99c5c07a2cfa22744e9402b6a978bdecdeeeeb072f4a454f4d"
+    },
+    {
+      "path": "artifacts/training/geometric-threats-v1/source/neural_format.py",
+      "sha256": "a2d369f0f223e47f8acfbaaad6f01583171a659df7b6b06553feead416824312"
+    },
+    {
+      "path": "artifacts/training/geometric-threats-v1/source/train_network.py",
+      "sha256": "17e2c855066273743b5befa9ec72a041834f0deaa727294fd34699beb0bce228"
+    },
+    {
+      "path": "artifacts/validation/geometric-control-engine-tests.txt",
+      "sha256": "8d9a4796677a0f64d069274094f6e8cbc18e5da971a007b8b602678534e36560"
+    },
+    {
+      "path": "artifacts/validation/geometric-control-rules.json",
+      "sha256": "f52e77628f9524b031e3268526948e7b6120cbcba315a6e0444dc613ee7c4ed1"
+    },
+    {
+      "path": "artifacts/validation/geometric-control-vs-0.6.0-evaluation.json",
+      "sha256": "cea3383c6492437457d634dd6796081731f36474f8f2fc84acd90dc27829456a"
+    },
+    {
+      "path": "artifacts/validation/geometric-threats-baseline-quiet-tactics.json",
+      "sha256": "a6d65efb4c33fa219ea0ba459f5acf53f87a0efc9f5a1f3ae4cb3af3001a2013"
+    },
+    {
+      "path": "artifacts/validation/geometric-threats-differential.json",
+      "sha256": "ceae4d53a81a6760e7724ac423c9b236c8fa160c2345b88a0adc46daba1cc1c1"
+    },
+    {
+      "path": "artifacts/validation/geometric-threats-engine-tests.txt",
+      "sha256": "8d9a4796677a0f64d069274094f6e8cbc18e5da971a007b8b602678534e36560"
+    },
+    {
+      "path": "artifacts/validation/geometric-threats-openings-v5-audit.json",
+      "sha256": "bb3f5e91145f2346d84ca2f3b550e887b97382eff502352316d89dd13e1bc7ab"
+    },
+    {
+      "path": "artifacts/validation/geometric-threats-quiet-tactics.json",
+      "sha256": "da5cd0b4c47a8021d77fcba64abdd6bbb76dfab0e2bfad6e41b90df20d31869e"
+    },
+    {
+      "path": "artifacts/validation/geometric-threats-rules.json",
+      "sha256": "00c82c2925f72b03faad09b98d5c475bed92f5d60c39814a942a2cd73ac89fe3"
+    },
+    {
+      "path": "artifacts/validation/geometric-threats-tactics.json",
+      "sha256": "93452e3c7aa7fe85f6c3f1d0ca87e49dd3e7e1b872fc3b0dd7fed969ddcf249e"
+    },
+    {
+      "path": "docs/GEOMETRIC-THREATS.md",
+      "sha256": "a2051a96eaa8058e7f5914363624b7a9a7a54a4eacee391880c3f55fd9e4aec3"
+    },
+    {
+      "path": "tests/fixtures/openings-v5.json",
+      "sha256": "e63c68d4024428bef2f84a4289db06c4aee70e60aa9f081cf437d2a6d237c46e"
+    },
+    {
+      "path": "tests/fixtures/tactics-quiet-v1.json",
+      "sha256": "3868e2bd596272873251fca177e2a253027cb7bc8dc99b42148cdcb6f86641d9"
+    },
+    {
+      "path": "tests/fixtures/tactics-v1.json",
+      "sha256": "ceb0c13cefcf4a44d2a570e562c52f62316dbf6260d25d912f4fc846595844b3"
+    },
+    {
+      "path": "tools/stockfish/manifest.json",
+      "sha256": "e584d21a94ee3bbde60353857ae6f3ef01f9a3483299adef072c72f08a6f017f"
+    }
+  ],
+  "interpretation": "Original fitted geometric threat research. Ordinary evaluator and production remain unchanged; no Elo or Stockfish-superiority claim."
+}

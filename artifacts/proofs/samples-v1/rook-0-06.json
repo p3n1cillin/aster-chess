@@ -1,0 +1,2148 @@
+{
+  "complete": true,
+  "reason": "complete",
+  "summary": "White can force checkmate within 15 plies. The certificate covers every legal defensive reply in 170 positions; every path ends in checkmate.",
+  "rootFen": "8/3R4/3K4/8/8/8/2k5/8 w - - 0 1",
+  "strongSide": 0,
+  "rootDistance": 15,
+  "nodeLimit": 50000,
+  "nodes": [
+    {
+      "id": 0,
+      "fen": "8/3R4/3K4/8/8/8/2k5/8 w - - 0 1",
+      "distance": 15,
+      "edges": [
+        {
+          "move": "d6c5",
+          "to": 1
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "fen": "8/3R4/8/2K5/8/8/2k5/8 b - - 1 1",
+      "distance": 14,
+      "edges": [
+        {
+          "move": "c2b1",
+          "to": 2
+        },
+        {
+          "move": "c2c1",
+          "to": 70
+        },
+        {
+          "move": "c2b2",
+          "to": 76
+        },
+        {
+          "move": "c2b3",
+          "to": 78
+        },
+        {
+          "move": "c2c3",
+          "to": 149
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fen": "8/3R4/8/2K5/8/8/8/1k6 w - - 2 2",
+      "distance": 11,
+      "edges": [
+        {
+          "move": "c5b4",
+          "to": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fen": "8/3R4/8/8/1K6/8/8/1k6 b - - 3 2",
+      "distance": 10,
+      "edges": [
+        {
+          "move": "b1a1",
+          "to": 4
+        },
+        {
+          "move": "b1c1",
+          "to": 8
+        },
+        {
+          "move": "b1a2",
+          "to": 10
+        },
+        {
+          "move": "b1b2",
+          "to": 22
+        },
+        {
+          "move": "b1c2",
+          "to": 41
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fen": "8/3R4/8/8/1K6/8/8/k7 w - - 4 3",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "b4b3",
+          "to": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "fen": "8/3R4/8/8/8/1K6/8/k7 b - - 5 3",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a1b1",
+          "to": 6
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "fen": "8/3R4/8/8/8/1K6/8/1k6 w - - 6 4",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "d7d1",
+          "to": 7
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "fen": "8/8/8/8/8/1K6/8/1k1R4 b - - 7 4",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 8,
+      "fen": "8/3R4/8/8/1K6/8/8/2k5 w - - 4 3",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "b4b3",
+          "to": 9
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "fen": "8/3R4/8/8/8/1K6/8/2k5 b - - 5 3",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "c1b1",
+          "to": 6
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "fen": "8/3R4/8/8/1K6/8/k7/8 w - - 4 3",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "b4c3",
+          "to": 11
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "fen": "8/3R4/8/8/8/2K5/k7/8 b - - 5 3",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "a2a1",
+          "to": 12
+        },
+        {
+          "move": "a2b1",
+          "to": 16
+        },
+        {
+          "move": "a2a3",
+          "to": 20
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "fen": "8/3R4/8/8/8/2K5/8/k7 w - - 6 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "c3c2",
+          "to": 13
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "fen": "8/3R4/8/8/8/8/2K5/k7 b - - 7 4",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a1a2",
+          "to": 14
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "fen": "8/3R4/8/8/8/8/k1K5/8 w - - 8 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "d7a7",
+          "to": 15
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "fen": "8/R7/8/8/8/8/k1K5/8 b - - 9 5",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 16,
+      "fen": "8/3R4/8/8/8/2K5/8/1k6 w - - 6 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d7a7",
+          "to": 17
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "fen": "8/R7/8/8/8/2K5/8/1k6 b - - 7 4",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "b1c1",
+          "to": 18
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "fen": "8/R7/8/8/8/2K5/8/2k5 w - - 8 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "a7a1",
+          "to": 19
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "fen": "8/8/8/8/8/2K5/8/R1k5 b - - 9 5",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 20,
+      "fen": "8/3R4/8/8/8/k1K5/8/8 w - - 6 4",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "d7a7",
+          "to": 21
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "fen": "8/R7/8/8/8/k1K5/8/8 b - - 7 4",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 22,
+      "fen": "8/3R4/8/8/1K6/8/1k6/8 w - - 4 3",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "d7c7",
+          "to": 23
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "fen": "8/2R5/8/8/1K6/8/1k6/8 b - - 5 3",
+      "distance": 6,
+      "edges": [
+        {
+          "move": "b2a1",
+          "to": 24
+        },
+        {
+          "move": "b2b1",
+          "to": 30
+        },
+        {
+          "move": "b2a2",
+          "to": 34
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "fen": "8/2R5/8/8/1K6/8/8/k7 w - - 6 4",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "c7c2",
+          "to": 25
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "fen": "8/8/8/8/1K6/8/2R5/k7 b - - 7 4",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "a1b1",
+          "to": 26
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "fen": "8/8/8/8/1K6/8/2R5/1k6 w - - 8 5",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "b4b3",
+          "to": 27
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "fen": "8/8/8/8/8/1K6/2R5/1k6 b - - 9 5",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "b1a1",
+          "to": 28
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "fen": "8/8/8/8/8/1K6/2R5/k7 w - - 10 6",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "c2c1",
+          "to": 29
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "fen": "8/8/8/8/8/1K6/8/k1R5 b - - 11 6",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 30,
+      "fen": "8/2R5/8/8/1K6/8/8/1k6 w - - 6 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "b4a3",
+          "to": 31
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "fen": "8/2R5/8/8/8/K7/8/1k6 b - - 7 4",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "b1a1",
+          "to": 32
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "fen": "8/2R5/8/8/8/K7/8/k7 w - - 8 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "c7c1",
+          "to": 33
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "fen": "8/8/8/8/8/K7/8/k1R5 b - - 9 5",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 34,
+      "fen": "8/2R5/8/8/1K6/8/k7/8 w - - 6 4",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "b4c3",
+          "to": 35
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "fen": "8/2R5/8/8/8/2K5/k7/8 b - - 7 4",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "a2a1",
+          "to": 36
+        },
+        {
+          "move": "a2b1",
+          "to": 39
+        },
+        {
+          "move": "a2a3",
+          "to": 40
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "fen": "8/2R5/8/8/8/2K5/8/k7 w - - 8 5",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "c3c2",
+          "to": 37
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "fen": "8/2R5/8/8/8/8/2K5/k7 b - - 9 5",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a1a2",
+          "to": 38
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "fen": "8/2R5/8/8/8/8/k1K5/8 w - - 10 6",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "c7a7",
+          "to": 15
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "fen": "8/2R5/8/8/8/2K5/8/1k6 w - - 8 5",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "c7a7",
+          "to": 17
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "fen": "8/2R5/8/8/8/k1K5/8/8 w - - 8 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "c7a7",
+          "to": 21
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "fen": "8/3R4/8/8/1K6/8/2k5/8 w - - 4 3",
+      "distance": 9,
+      "edges": [
+        {
+          "move": "d7d4",
+          "to": 42
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "fen": "8/8/8/8/1K1R4/8/2k5/8 b - - 5 3",
+      "distance": 8,
+      "edges": [
+        {
+          "move": "c2b1",
+          "to": 43
+        },
+        {
+          "move": "c2c1",
+          "to": 50
+        },
+        {
+          "move": "c2b2",
+          "to": 53
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "fen": "8/8/8/8/1K1R4/8/8/1k6 w - - 6 4",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "b4b3",
+          "to": 44
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "fen": "8/8/8/8/3R4/1K6/8/1k6 b - - 7 4",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "b1a1",
+          "to": 45
+        },
+        {
+          "move": "b1c1",
+          "to": 47
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "fen": "8/8/8/8/3R4/1K6/8/k7 w - - 8 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "d4d1",
+          "to": 46
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "fen": "8/8/8/8/8/1K6/8/k2R4 b - - 9 5",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 47,
+      "fen": "8/8/8/8/3R4/1K6/8/2k5 w - - 8 5",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d4d3",
+          "to": 48
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "fen": "8/8/8/8/8/1K1R4/8/2k5 b - - 9 5",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "c1b1",
+          "to": 49
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "fen": "8/8/8/8/8/1K1R4/8/1k6 w - - 10 6",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "d3d1",
+          "to": 7
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "fen": "8/8/8/8/1K1R4/8/8/2k5 w - - 6 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "b4b3",
+          "to": 51
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "fen": "8/8/8/8/3R4/1K6/8/2k5 b - - 7 4",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "c1b1",
+          "to": 52
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "fen": "8/8/8/8/3R4/1K6/8/1k6 w - - 8 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "d4d1",
+          "to": 7
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "fen": "8/8/8/8/1K1R4/8/1k6/8 w - - 6 4",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "d4c4",
+          "to": 54
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "fen": "8/8/8/8/1KR5/8/1k6/8 b - - 7 4",
+      "distance": 6,
+      "edges": [
+        {
+          "move": "b2a1",
+          "to": 55
+        },
+        {
+          "move": "b2b1",
+          "to": 56
+        },
+        {
+          "move": "b2a2",
+          "to": 59
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "fen": "8/8/8/8/1KR5/8/8/k7 w - - 8 5",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "c4c2",
+          "to": 25
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "fen": "8/8/8/8/1KR5/8/8/1k6 w - - 8 5",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "b4a3",
+          "to": 57
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "fen": "8/8/8/8/2R5/K7/8/1k6 b - - 9 5",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "b1a1",
+          "to": 58
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "fen": "8/8/8/8/2R5/K7/8/k7 w - - 10 6",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "c4c1",
+          "to": 33
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "fen": "8/8/8/8/1KR5/8/k7/8 w - - 8 5",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "b4c3",
+          "to": 60
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "fen": "8/8/8/8/2R5/2K5/k7/8 b - - 9 5",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "a2a1",
+          "to": 61
+        },
+        {
+          "move": "a2b1",
+          "to": 65
+        },
+        {
+          "move": "a2a3",
+          "to": 68
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "fen": "8/8/8/8/2R5/2K5/8/k7 w - - 10 6",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "c3c2",
+          "to": 62
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "fen": "8/8/8/8/2R5/8/2K5/k7 b - - 11 6",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a1a2",
+          "to": 63
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "fen": "8/8/8/8/2R5/8/k1K5/8 w - - 12 7",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "c4a4",
+          "to": 64
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "fen": "8/8/8/8/R7/8/k1K5/8 b - - 13 7",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 65,
+      "fen": "8/8/8/8/2R5/2K5/8/1k6 w - - 10 6",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "c4a4",
+          "to": 66
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "fen": "8/8/8/8/R7/2K5/8/1k6 b - - 11 6",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "b1c1",
+          "to": 67
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "fen": "8/8/8/8/R7/2K5/8/2k5 w - - 12 7",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "a4a1",
+          "to": 19
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "fen": "8/8/8/8/2R5/k1K5/8/8 w - - 10 6",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "c3c2",
+          "to": 69
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "fen": "8/8/8/8/2R5/k7/2K5/8 b - - 11 6",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a3a2",
+          "to": 63
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "fen": "8/3R4/8/2K5/8/8/8/2k5 w - - 2 2",
+      "distance": 11,
+      "edges": [
+        {
+          "move": "c5b4",
+          "to": 71
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "fen": "8/3R4/8/8/1K6/8/8/2k5 b - - 3 2",
+      "distance": 10,
+      "edges": [
+        {
+          "move": "c1b1",
+          "to": 72
+        },
+        {
+          "move": "c1b2",
+          "to": 22
+        },
+        {
+          "move": "c1c2",
+          "to": 41
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "fen": "8/3R4/8/8/1K6/8/8/1k6 w - - 4 3",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "b4b3",
+          "to": 73
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "fen": "8/3R4/8/8/8/1K6/8/1k6 b - - 5 3",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "b1a1",
+          "to": 74
+        },
+        {
+          "move": "b1c1",
+          "to": 75
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "fen": "8/3R4/8/8/8/1K6/8/k7 w - - 6 4",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "d7d1",
+          "to": 46
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "fen": "8/3R4/8/8/8/1K6/8/2k5 w - - 6 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d7d3",
+          "to": 48
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "fen": "8/3R4/8/2K5/8/8/1k6/8 w - - 2 2",
+      "distance": 11,
+      "edges": [
+        {
+          "move": "c5b4",
+          "to": 77
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "fen": "8/3R4/8/8/1K6/8/1k6/8 b - - 3 2",
+      "distance": 10,
+      "edges": [
+        {
+          "move": "b2a1",
+          "to": 4
+        },
+        {
+          "move": "b2b1",
+          "to": 72
+        },
+        {
+          "move": "b2c1",
+          "to": 8
+        },
+        {
+          "move": "b2a2",
+          "to": 10
+        },
+        {
+          "move": "b2c2",
+          "to": 41
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "fen": "8/3R4/8/2K5/8/1k6/8/8 w - - 2 2",
+      "distance": 13,
+      "edges": [
+        {
+          "move": "d7d3",
+          "to": 79
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "fen": "8/8/8/2K5/8/1k1R4/8/8 b - - 3 2",
+      "distance": 12,
+      "edges": [
+        {
+          "move": "b3a2",
+          "to": 80
+        },
+        {
+          "move": "b3b2",
+          "to": 106
+        },
+        {
+          "move": "b3c2",
+          "to": 125
+        },
+        {
+          "move": "b3a4",
+          "to": 145
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "fen": "8/8/8/2K5/8/3R4/k7/8 w - - 4 3",
+      "distance": 11,
+      "edges": [
+        {
+          "move": "d3c3",
+          "to": 81
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "fen": "8/8/8/2K5/8/2R5/k7/8 b - - 5 3",
+      "distance": 10,
+      "edges": [
+        {
+          "move": "a2a1",
+          "to": 82
+        },
+        {
+          "move": "a2b1",
+          "to": 92
+        },
+        {
+          "move": "a2b2",
+          "to": 103
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "fen": "8/8/8/2K5/8/2R5/8/k7 w - - 6 4",
+      "distance": 9,
+      "edges": [
+        {
+          "move": "c3b3",
+          "to": 83
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "fen": "8/8/8/2K5/8/1R6/8/k7 b - - 7 4",
+      "distance": 8,
+      "edges": [
+        {
+          "move": "a1a2",
+          "to": 84
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "fen": "8/8/8/2K5/8/1R6/k7/8 w - - 8 5",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "c5b4",
+          "to": 85
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "fen": "8/8/8/8/1K6/1R6/k7/8 b - - 9 5",
+      "distance": 6,
+      "edges": [
+        {
+          "move": "a2a1",
+          "to": 86
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "fen": "8/8/8/8/1K6/1R6/8/k7 w - - 10 6",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "b4c3",
+          "to": 87
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "fen": "8/8/8/8/8/1RK5/8/k7 b - - 11 6",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "a1a2",
+          "to": 88
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "fen": "8/8/8/8/8/1RK5/k7/8 w - - 12 7",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "c3c2",
+          "to": 89
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "fen": "8/8/8/8/8/1R6/k1K5/8 b - - 13 7",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a2a1",
+          "to": 90
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "fen": "8/8/8/8/8/1R6/2K5/k7 w - - 14 8",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "b3a3",
+          "to": 91
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "fen": "8/8/8/8/8/R7/2K5/k7 b - - 15 8",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 92,
+      "fen": "8/8/8/2K5/8/2R5/8/1k6 w - - 6 4",
+      "distance": 9,
+      "edges": [
+        {
+          "move": "c5b4",
+          "to": 93
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "fen": "8/8/8/8/1K6/2R5/8/1k6 b - - 7 4",
+      "distance": 8,
+      "edges": [
+        {
+          "move": "b1a1",
+          "to": 94
+        },
+        {
+          "move": "b1a2",
+          "to": 95
+        },
+        {
+          "move": "b1b2",
+          "to": 102
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "fen": "8/8/8/8/1K6/2R5/8/k7 w - - 8 5",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "c3c2",
+          "to": 25
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "fen": "8/8/8/8/1K6/2R5/k7/8 w - - 8 5",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "c3c2",
+          "to": 96
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "fen": "8/8/8/8/1K6/8/k1R5/8 b - - 9 5",
+      "distance": 6,
+      "edges": [
+        {
+          "move": "a2a1",
+          "to": 97
+        },
+        {
+          "move": "a2b1",
+          "to": 26
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "fen": "8/8/8/8/1K6/8/2R5/k7 w - - 10 6",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "b4a3",
+          "to": 98
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "fen": "8/8/8/8/8/K7/2R5/k7 b - - 11 6",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "a1b1",
+          "to": 99
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "fen": "8/8/8/8/8/K7/2R5/1k6 w - - 12 7",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "c2c3",
+          "to": 100
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "fen": "8/8/8/8/8/K1R5/8/1k6 b - - 13 7",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "b1a1",
+          "to": 101
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "fen": "8/8/8/8/8/K1R5/8/k7 w - - 14 8",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "c3c1",
+          "to": 33
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "fen": "8/8/8/8/1K6/2R5/1k6/8 w - - 8 5",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "c3c4",
+          "to": 54
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "fen": "8/8/8/2K5/8/2R5/1k6/8 w - - 6 4",
+      "distance": 9,
+      "edges": [
+        {
+          "move": "c5b4",
+          "to": 104
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "fen": "8/8/8/8/1K6/2R5/1k6/8 b - - 7 4",
+      "distance": 8,
+      "edges": [
+        {
+          "move": "b2a1",
+          "to": 94
+        },
+        {
+          "move": "b2b1",
+          "to": 105
+        },
+        {
+          "move": "b2a2",
+          "to": 95
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "fen": "8/8/8/8/1K6/2R5/8/1k6 w - - 8 5",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "b4a3",
+          "to": 100
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "fen": "8/8/8/2K5/8/3R4/1k6/8 w - - 4 3",
+      "distance": 11,
+      "edges": [
+        {
+          "move": "c5b4",
+          "to": 107
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "fen": "8/8/8/8/1K6/3R4/1k6/8 b - - 5 3",
+      "distance": 10,
+      "edges": [
+        {
+          "move": "b2a1",
+          "to": 108
+        },
+        {
+          "move": "b2b1",
+          "to": 110
+        },
+        {
+          "move": "b2c1",
+          "to": 114
+        },
+        {
+          "move": "b2a2",
+          "to": 115
+        },
+        {
+          "move": "b2c2",
+          "to": 124
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "fen": "8/8/8/8/1K6/3R4/8/k7 w - - 6 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "b4b3",
+          "to": 109
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "fen": "8/8/8/8/8/1K1R4/8/k7 b - - 7 4",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a1b1",
+          "to": 49
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "fen": "8/8/8/8/1K6/3R4/8/1k6 w - - 6 4",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "b4b3",
+          "to": 111
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "fen": "8/8/8/8/8/1K1R4/8/1k6 b - - 7 4",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "b1a1",
+          "to": 112
+        },
+        {
+          "move": "b1c1",
+          "to": 113
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "fen": "8/8/8/8/8/1K1R4/8/k7 w - - 8 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "d3d1",
+          "to": 46
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "fen": "8/8/8/8/8/1K1R4/8/2k5 w - - 8 5",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d3d4",
+          "to": 51
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "fen": "8/8/8/8/1K6/3R4/8/2k5 w - - 6 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "b4b3",
+          "to": 48
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "fen": "8/8/8/8/1K6/3R4/k7/8 w - - 6 4",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "d3d2",
+          "to": 116
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "fen": "8/8/8/8/1K6/8/k2R4/8 b - - 7 4",
+      "distance": 6,
+      "edges": [
+        {
+          "move": "a2a1",
+          "to": 117
+        },
+        {
+          "move": "a2b1",
+          "to": 120
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "fen": "8/8/8/8/1K6/8/3R4/k7 w - - 8 5",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "b4b3",
+          "to": 118
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "fen": "8/8/8/8/8/1K6/3R4/k7 b - - 9 5",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a1b1",
+          "to": 119
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "fen": "8/8/8/8/8/1K6/3R4/1k6 w - - 10 6",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "d2d1",
+          "to": 7
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "fen": "8/8/8/8/1K6/8/3R4/1k6 w - - 8 5",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "b4b3",
+          "to": 121
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "fen": "8/8/8/8/8/1K6/3R4/1k6 b - - 9 5",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "b1a1",
+          "to": 122
+        },
+        {
+          "move": "b1c1",
+          "to": 123
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "fen": "8/8/8/8/8/1K6/3R4/k7 w - - 10 6",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "d2d1",
+          "to": 46
+        }
+      ]
+    },
+    {
+      "id": 123,
+      "fen": "8/8/8/8/8/1K6/3R4/2k5 w - - 10 6",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d2d3",
+          "to": 48
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "fen": "8/8/8/8/1K6/3R4/2k5/8 w - - 6 4",
+      "distance": 9,
+      "edges": [
+        {
+          "move": "d3d4",
+          "to": 42
+        }
+      ]
+    },
+    {
+      "id": 125,
+      "fen": "8/8/8/2K5/8/3R4/2k5/8 w - - 4 3",
+      "distance": 11,
+      "edges": [
+        {
+          "move": "c5c4",
+          "to": 126
+        }
+      ]
+    },
+    {
+      "id": 126,
+      "fen": "8/8/8/8/2K5/3R4/2k5/8 b - - 5 3",
+      "distance": 10,
+      "edges": [
+        {
+          "move": "c2b1",
+          "to": 127
+        },
+        {
+          "move": "c2c1",
+          "to": 128
+        },
+        {
+          "move": "c2b2",
+          "to": 129
+        }
+      ]
+    },
+    {
+      "id": 127,
+      "fen": "8/8/8/8/2K5/3R4/8/1k6 w - - 6 4",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "c4b3",
+          "to": 111
+        }
+      ]
+    },
+    {
+      "id": 128,
+      "fen": "8/8/8/8/2K5/3R4/8/2k5 w - - 6 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "c4b3",
+          "to": 48
+        }
+      ]
+    },
+    {
+      "id": 129,
+      "fen": "8/8/8/8/2K5/3R4/1k6/8 w - - 6 4",
+      "distance": 9,
+      "edges": [
+        {
+          "move": "d3d2",
+          "to": 130
+        }
+      ]
+    },
+    {
+      "id": 130,
+      "fen": "8/8/8/8/2K5/8/1k1R4/8 b - - 7 4",
+      "distance": 8,
+      "edges": [
+        {
+          "move": "b2a1",
+          "to": 131
+        },
+        {
+          "move": "b2b1",
+          "to": 132
+        },
+        {
+          "move": "b2c1",
+          "to": 133
+        },
+        {
+          "move": "b2a3",
+          "to": 141
+        }
+      ]
+    },
+    {
+      "id": 131,
+      "fen": "8/8/8/8/2K5/8/3R4/k7 w - - 8 5",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "c4b3",
+          "to": 118
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "fen": "8/8/8/8/2K5/8/3R4/1k6 w - - 8 5",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "c4b3",
+          "to": 121
+        }
+      ]
+    },
+    {
+      "id": 133,
+      "fen": "8/8/8/8/2K5/8/3R4/2k5 w - - 8 5",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "c4c3",
+          "to": 134
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "fen": "8/8/8/8/8/2K5/3R4/2k5 b - - 9 5",
+      "distance": 6,
+      "edges": [
+        {
+          "move": "c1b1",
+          "to": 135
+        }
+      ]
+    },
+    {
+      "id": 135,
+      "fen": "8/8/8/8/8/2K5/3R4/1k6 w - - 10 6",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "d2d1",
+          "to": 136
+        }
+      ]
+    },
+    {
+      "id": 136,
+      "fen": "8/8/8/8/8/2K5/8/1k1R4 b - - 11 6",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "b1a2",
+          "to": 137
+        }
+      ]
+    },
+    {
+      "id": 137,
+      "fen": "8/8/8/8/8/2K5/k7/3R4 w - - 12 7",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d1c1",
+          "to": 138
+        }
+      ]
+    },
+    {
+      "id": 138,
+      "fen": "8/8/8/8/8/2K5/k7/2R5 b - - 13 7",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a2a3",
+          "to": 139
+        }
+      ]
+    },
+    {
+      "id": 139,
+      "fen": "8/8/8/8/8/k1K5/8/2R5 w - - 14 8",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "c1a1",
+          "to": 140
+        }
+      ]
+    },
+    {
+      "id": 140,
+      "fen": "8/8/8/8/8/k1K5/8/R7 b - - 15 8",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 141,
+      "fen": "8/8/8/8/2K5/k7/3R4/8 w - - 8 5",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d2c2",
+          "to": 142
+        }
+      ]
+    },
+    {
+      "id": 142,
+      "fen": "8/8/8/8/2K5/k7/2R5/8 b - - 9 5",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a3a4",
+          "to": 143
+        }
+      ]
+    },
+    {
+      "id": 143,
+      "fen": "8/8/8/8/k1K5/8/2R5/8 w - - 10 6",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "c2a2",
+          "to": 144
+        }
+      ]
+    },
+    {
+      "id": 144,
+      "fen": "8/8/8/8/k1K5/8/R7/8 b - - 11 6",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 145,
+      "fen": "8/8/8/2K5/k7/3R4/8/8 w - - 4 3",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d3c3",
+          "to": 146
+        }
+      ]
+    },
+    {
+      "id": 146,
+      "fen": "8/8/8/2K5/k7/2R5/8/8 b - - 5 3",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a4a5",
+          "to": 147
+        }
+      ]
+    },
+    {
+      "id": 147,
+      "fen": "8/8/8/k1K5/8/2R5/8/8 w - - 6 4",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "c3a3",
+          "to": 148
+        }
+      ]
+    },
+    {
+      "id": 148,
+      "fen": "8/8/8/k1K5/8/R7/8/8 b - - 7 4",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 149,
+      "fen": "8/3R4/8/2K5/8/2k5/8/8 w - - 2 2",
+      "distance": 13,
+      "edges": [
+        {
+          "move": "c5b5",
+          "to": 150
+        }
+      ]
+    },
+    {
+      "id": 150,
+      "fen": "8/3R4/8/1K6/8/2k5/8/8 b - - 3 2",
+      "distance": 12,
+      "edges": [
+        {
+          "move": "c3b2",
+          "to": 151
+        },
+        {
+          "move": "c3c2",
+          "to": 152
+        },
+        {
+          "move": "c3b3",
+          "to": 154
+        }
+      ]
+    },
+    {
+      "id": 151,
+      "fen": "8/3R4/8/1K6/8/8/1k6/8 w - - 4 3",
+      "distance": 11,
+      "edges": [
+        {
+          "move": "b5b4",
+          "to": 77
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "fen": "8/3R4/8/1K6/8/8/2k5/8 w - - 4 3",
+      "distance": 9,
+      "edges": [
+        {
+          "move": "b5b4",
+          "to": 153
+        }
+      ]
+    },
+    {
+      "id": 153,
+      "fen": "8/3R4/8/8/1K6/8/2k5/8 b - - 5 3",
+      "distance": 8,
+      "edges": [
+        {
+          "move": "c2b1",
+          "to": 72
+        },
+        {
+          "move": "c2c1",
+          "to": 8
+        },
+        {
+          "move": "c2b2",
+          "to": 22
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "fen": "8/3R4/8/1K6/8/1k6/8/8 w - - 4 3",
+      "distance": 11,
+      "edges": [
+        {
+          "move": "d7c7",
+          "to": 155
+        }
+      ]
+    },
+    {
+      "id": 155,
+      "fen": "8/2R5/8/1K6/8/1k6/8/8 b - - 5 3",
+      "distance": 10,
+      "edges": [
+        {
+          "move": "b3a2",
+          "to": 156
+        },
+        {
+          "move": "b3b2",
+          "to": 163
+        },
+        {
+          "move": "b3a3",
+          "to": 164
+        }
+      ]
+    },
+    {
+      "id": 156,
+      "fen": "8/2R5/8/1K6/8/8/k7/8 w - - 6 4",
+      "distance": 9,
+      "edges": [
+        {
+          "move": "b5a4",
+          "to": 157
+        }
+      ]
+    },
+    {
+      "id": 157,
+      "fen": "8/2R5/8/8/K7/8/k7/8 b - - 7 4",
+      "distance": 8,
+      "edges": [
+        {
+          "move": "a2a1",
+          "to": 158
+        },
+        {
+          "move": "a2b1",
+          "to": 161
+        },
+        {
+          "move": "a2b2",
+          "to": 162
+        }
+      ]
+    },
+    {
+      "id": 158,
+      "fen": "8/2R5/8/8/K7/8/8/k7 w - - 8 5",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "c7c2",
+          "to": 159
+        }
+      ]
+    },
+    {
+      "id": 159,
+      "fen": "8/8/8/8/K7/8/2R5/k7 b - - 9 5",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "a1b1",
+          "to": 160
+        }
+      ]
+    },
+    {
+      "id": 160,
+      "fen": "8/8/8/8/K7/8/2R5/1k6 w - - 10 6",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "a4b3",
+          "to": 27
+        }
+      ]
+    },
+    {
+      "id": 161,
+      "fen": "8/2R5/8/8/K7/8/8/1k6 w - - 8 5",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "a4a3",
+          "to": 31
+        }
+      ]
+    },
+    {
+      "id": 162,
+      "fen": "8/2R5/8/8/K7/8/1k6/8 w - - 8 5",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "a4b4",
+          "to": 23
+        }
+      ]
+    },
+    {
+      "id": 163,
+      "fen": "8/2R5/8/1K6/8/8/1k6/8 w - - 6 4",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "b5b4",
+          "to": 23
+        }
+      ]
+    },
+    {
+      "id": 164,
+      "fen": "8/2R5/8/1K6/8/k7/8/8 w - - 6 4",
+      "distance": 9,
+      "edges": [
+        {
+          "move": "b5c4",
+          "to": 165
+        }
+      ]
+    },
+    {
+      "id": 165,
+      "fen": "8/2R5/8/8/2K5/k7/8/8 b - - 7 4",
+      "distance": 8,
+      "edges": [
+        {
+          "move": "a3a2",
+          "to": 166
+        },
+        {
+          "move": "a3b2",
+          "to": 167
+        },
+        {
+          "move": "a3a4",
+          "to": 168
+        }
+      ]
+    },
+    {
+      "id": 166,
+      "fen": "8/2R5/8/8/2K5/8/k7/8 w - - 8 5",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "c4c3",
+          "to": 35
+        }
+      ]
+    },
+    {
+      "id": 167,
+      "fen": "8/2R5/8/8/2K5/8/1k6/8 w - - 8 5",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "c4b4",
+          "to": 23
+        }
+      ]
+    },
+    {
+      "id": 168,
+      "fen": "8/2R5/8/8/k1K5/8/8/8 w - - 8 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "c7a7",
+          "to": 169
+        }
+      ]
+    },
+    {
+      "id": 169,
+      "fen": "8/R7/8/8/k1K5/8/8/8 b - - 9 5",
+      "distance": 0,
+      "edges": []
+    }
+  ],
+  "alternatives": [
+    {
+      "move": "d7a7",
+      "preservesWin": true,
+      "remainingPlies": 24,
+      "reason": "Keeps a win but leaves 24 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d7b7",
+      "preservesWin": true,
+      "remainingPlies": 24,
+      "reason": "Keeps a win but leaves 24 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d7c7",
+      "preservesWin": true,
+      "remainingPlies": 24,
+      "reason": "Keeps a win but leaves 24 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d7e7",
+      "preservesWin": true,
+      "remainingPlies": 20,
+      "reason": "Keeps a win but leaves 20 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d7f7",
+      "preservesWin": true,
+      "remainingPlies": 24,
+      "reason": "Keeps a win but leaves 24 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d7g7",
+      "preservesWin": true,
+      "remainingPlies": 24,
+      "reason": "Keeps a win but leaves 24 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d7h7",
+      "preservesWin": true,
+      "remainingPlies": 24,
+      "reason": "Keeps a win but leaves 24 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d7d8",
+      "preservesWin": true,
+      "remainingPlies": 24,
+      "reason": "Keeps a win but leaves 24 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d6c5",
+      "preservesWin": true,
+      "remainingPlies": 14,
+      "reason": "Reduces the mate bound from 15 to 14 plies."
+    },
+    {
+      "move": "d6d5",
+      "preservesWin": true,
+      "remainingPlies": 22,
+      "reason": "Keeps a win but leaves 22 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d6e5",
+      "preservesWin": true,
+      "remainingPlies": 20,
+      "reason": "Keeps a win but leaves 20 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d6c6",
+      "preservesWin": true,
+      "remainingPlies": 16,
+      "reason": "Keeps a win but leaves 16 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d6e6",
+      "preservesWin": true,
+      "remainingPlies": 22,
+      "reason": "Keeps a win but leaves 22 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d6c7",
+      "preservesWin": true,
+      "remainingPlies": 20,
+      "reason": "Keeps a win but leaves 20 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d6e7",
+      "preservesWin": true,
+      "remainingPlies": 22,
+      "reason": "Keeps a win but leaves 22 plies; it does not reduce the current bound."
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.03"]
+[Round "1.1"]
+[White "Aster 0.1.0"]
+[Black "Stockfish 19"]
+[Result "0-1"]
+[TimeControl "-"]
+[TimeLimit "0.05s/move"]
+[Termination "checkmate"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. Bxc6 dxc6 6. Nc3 Bg4 7. d3 Nd7 8. O-O Bd6 9. h3 Bh5 10. g4 Bg6 11. a3 h5 12. Be3 Nf8 13. g5 h4 14. d4 Bh5 15. dxe5 Qc8 16. g6 f6 17. exd6 Qxh3 18. Ng5 fxg5 19. Qd4 Bf3 20. d7+ Nxd7 21. Qxd7+ Kxd7 22. Rad1+ Ke8 23. Rd8+ Rxd8 24. Bxg5 Qh1# 0-1
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.03"]
+[Round "1.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.1.0"]
+[Result "1-0"]
+[TimeControl "-"]
+[TimeLimit "0.05s/move"]
+[Termination "checkmate"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O b5 6. Bb3 d5 7. exd5 Nxd5 8. d4 exd4 9. Ng5 Be6 10. Re1 Qd7 11. a4 bxa4 12. Nxe6 fxe6 13. Qh5+ Kd8 14. Bxa4 Bb4 15. c3 dxc3 16. Nxc3 Nxc3 17. bxc3 Bxc3 18. Rd1 Bd4 19. Qf3 Ra7 20. Bxc6 Qd6 21. Rb1 Kc8 22. Rxd4 Qxd4 23. Qb3 Qb6 24. Qxe6+ Kb8 25. Rxb6+ cxb6 26. Bf4+ Rc7 27. Bxc7+ Ka7 28. Qd7 a5 29. Bf4+ Ka6 30. Qb7# 1-0
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.03"]
+[Round "2.1"]
+[White "Aster 0.1.0"]
+[Black "Stockfish 19"]
+[Result "0-1"]
+[TimeControl "-"]
+[TimeLimit "0.05s/move"]
+[Termination "checkmate"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 e6 7. h3 b5 8. a4 b4 9. Nce2 Nbd7 10. Nf4 e5 11. Nd5 exd4 12. Qxd4 Bb7 13. Nxb4 Be7 14. f3 O-O 15. O-O-O Qc7 16. Bxf6 Nxf6 17. Bc4 Rfc8 18. b3 a5 19. Nd5 Nxd5 20. exd5 Ba6 21. Bd3 Bg5+ 22. Kb1 Bf6 23. Qe4 Bxd3 24. Qxd3 Qc5 25. c4 Qa3 26. Rd2 Qa1+ 27. Kc2 Qxh1 28. Qe2 Qa1 29. Qd3 Re8 30. f4 Re1 31. Qxh7+ Kxh7 32. Rd4 Qxd4 33. g3 Qc3# 0-1
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.03"]
+[Round "2.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.1.0"]
+[Result "1-0"]
+[TimeControl "-"]
+[TimeLimit "0.05s/move"]
+[Termination "checkmate"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 e5 6. Bb5+ Nbd7 7. Nf5 a6 8. Ba4 b5 9. Bb3 Nc5 10. Bg5 b4 11. Bxf6 gxf6 12. Nd5 Nxe4 13. Ba4+ Bd7 14. Bxd7+ Kxd7 15. Qh5 Rb8 16. O-O Kc6 17. Rfd1 Rb5 18. Qf3 Ng5 19. Nde7+ Kc7 20. Qc6+ Kb8 21. Rxd6 Bxe7 22. Rxd8+ Bxd8 23. Qxa6 Rb6 24. Qc4 Rg8 25. Kf1 Ne6 26. Rd1 Bc7 27. Ne7 Rg7 28. Nd5 Rb7 29. Nxb4 h5 30. Nc6+ Kc8 31. Qa6 Rg4 32. Qa8+ Bb8 33. c3 Rg8 34. Qa6 Re8 35. b4 Bc7 36. Na7+ Kb8 37. Nc6+ Kc8 38. a3 h4 39. Rd5 h3 40. gxh3 Rh8 41. Ne7+ Kb8 42. Nc6+ Kc8 43. Na7+ Kb8 44. Rb5 Bb6 45. Rxb6 Nd8 46. Nb5 Rg8 47. c4 f5 48. c5 Rg6 49. Rxb7+ Nxb7 50. c6 Rxc6 51. Qxc6 e4 52. Qc7+ Ka8 53. Qc8# 1-0
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.03"]
+[Round "3.1"]
+[White "Aster 0.1.0"]
+[Black "Stockfish 19"]
+[Result "0-1"]
+[TimeControl "-"]
+[TimeLimit "0.05s/move"]
+[Termination "checkmate"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. cxd5 Nxd5 6. Bxe7 Qxe7 7. Nf3 Nxc3 8. bxc3 c5 9. e3 O-O 10. Bd3 b6 11. O-O Bb7 12. g3 Nd7 13. a4 e5 14. a5 e4 15. a6 Bc6 16. d5 Bxd5 17. Bb5 Be6 18. Nd2 Bh3 19. Bc6 Rad8 20. Bxe4 Bxf1 21. Kxf1 Nf6 22. Bf5 Qe5 23. Qc2 Rxd2 24. Bxh7+ Nxh7 25. Qxd2 Qe4 26. Qe1 Ng5 27. h4 Qh1+ 28. Ke2 Qf3+ 29. Kf1 Nh3 30. Ra2 Rd8 31. Ra1 b5 32. Rb1 c4 33. Rc1 b4 34. cxb4 c3 35. Rc2 Rd1 36. Qxd1 Qxd1+ 37. Kg2 Qxc2 38. Kxh3 Qxf2 39. h5 c2 40. e4 c1=Q 41. h6 Qxh6+ 42. Kg4 Qg6+ 43. Kh3 Qfxg3# 0-1
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.03"]
+[Round "3.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.1.0"]
+[Result "1-0"]
+[TimeControl "-"]
+[TimeLimit "0.05s/move"]
+[Termination "checkmate"]
+
+1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. e3 Nc6 6. Rc1 O-O 7. Nf3 a6 8. Be2 dxc4 9. Bxc4 b5 10. Bd3 h6 11. Bxf6 Bxf6 12. Ne4 Nb4 13. Nxf6+ gxf6 14. Bb1 f5 15. Rg1 Nd5 16. g4 fxg4 17. Rxg4+ Kh8 18. Ne5 f5 19. Rg3 Kh7 20. Qh5 Rf6 21. Rg6 Qf8 22. e4 fxe4 23. Bxe4 Rf5 24. Bxf5 exf5 25. Rcc6 Be6 26. Rcxe6 Qb4+ 27. Kf1 Ne3+ 28. fxe3 Qf8 29. Rxh6+ Qxh6 30. Qxh6+ Kg8 31. Rg6# 1-0
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.03"]
+[Round "4.1"]
+[White "Aster 0.1.0"]
+[Black "Stockfish 19"]
+[Result "0-1"]
+[TimeControl "-"]
+[TimeLimit "0.05s/move"]
+[Termination "checkmate"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Bd3 Bg4 7. d5 Nfd7 8. O-O Na6 9. h3 Bxf3 10. gxf3 Bxc3 11. bxc3 e5 12. Rb1 Nac5 13. Bh6 Qh4 14. Bxf8 Rxf8 15. Kh2 Nf6 16. Rb2 Nh5 17. Rg1 Nf4 18. Bf1 Ncd3 19. Rg4 Nxb2 20. Qc2 Qe7 21. Qxb2 c6 22. Kg1 cxd5 23. cxd5 h5 24. Rg3 Rc8 25. a4 Rc5 26. c4 Ra5 27. Qc2 b6 28. Qb3 Qd7 29. Qb2 Qxa4 30. Rg5 Qa1 31. Qxa1 Rxa1 32. Rg3 Re1 33. h4 a5 34. Rg5 a4 35. c5 bxc5 36. Rxe5 dxe5 37. d6 Rd1 38. d7 Rxd7 39. Bc4 Rd2 40. Bb5 Rd4 41. Kh1 a3 42. Kg1 a2 43. Kh2 a1=Q 44. Be2 Nxe2 45. f4 Qg1+ 46. Kh3 Nxf4# 0-1
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.03"]
+[Round "4.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.1.0"]
+[Result "1-0"]
+[TimeControl "-"]
+[TimeLimit "0.05s/move"]
+[Termination "checkmate"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Be2 O-O 6. h4 e5 7. d5 Nbd7 8. h5 gxh5 9. Bxh5 Nc5 10. Bf3 a5 11. Nge2 c6 12. Bg5 a4 13. Kf1 Qb6 14. Ng3 Qxb2 15. Rc1 cxd5 16. Bxf6 Bxf6 17. Rc2 Qb6 18. Qd2 Nxe4 19. Bxe4 dxe4 20. Qh6 Re8 21. Nd5 Qb1+ 22. Rc1 Qd3+ 23. Kg1 Re6 24. Nf5 Qf1+ 25. Rxf1 Bd7 26. Nxf6+ Kh8 27. Qxh7# 1-0
+

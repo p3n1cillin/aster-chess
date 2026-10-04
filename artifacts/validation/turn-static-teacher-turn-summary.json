@@ -1,0 +1,10 @@
+{
+  "paired_rows": 10000,
+  "mean_static_teacher_turn_delta_cp": 64.9631,
+  "static_teacher_turn_delta_std_cp": 67.40720687278179,
+  "median_static_teacher_turn_delta_cp": 49.0,
+  "min_static_teacher_turn_delta_cp": -242,
+  "max_static_teacher_turn_delta_cp": 496,
+  "interpretation": "Descriptive static-label turn variation across the generated pairs, not playing strength.",
+  "data_sha256": "46b8e7210c93e9e382366e90963901906407e7c4d748838b3424cef6a63adc8a"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "status": "declared before complete-game results",
+  "suite": "tests/fixtures/kpk-setups-v1.json",
+  "suite_sha256": "550764811ecbb1761c70a30a82c941122450839ef442f56a8f5a5a67ed96dd13",
+  "candidate": "artifacts/publish/kpk-dev/Aster.exe",
+  "control": "artifacts/publish/kpk-control-dev/Aster.exe",
+  "control_match": {"pairs": 64, "nodes_per_move": 5000, "max_plies": 256},
+  "stockfish_comparisons": {
+    "release": "sf_19",
+    "candidate_and_control_each": {"pairs": 32, "nodes_per_move": 5000, "max_plies": 256},
+    "oracle_scope": "Full-strength pinned development opponent; no Syzygy runtime files or reduced strength. Equal nodes are not equal time or resources."
+  },
+  "options": {"Hash": 64, "Threads": 1, "Move Overhead": 0},
+  "metrics": ["checkmate conversion of initially won pawn-side games", "draw defense of initially drawn bare-king-side games", "first theoretical WDL degradation with full played history retained", "promotions, repetition, fifty-move claims, forfeits and unresolved caps"],
+  "decision": "Keep opt-in absent wider equal-time evidence. Diagnose failures without changing the frozen fixture or existing candidate. No Elo or general Stockfish superiority inference from selected KPK games."
+}

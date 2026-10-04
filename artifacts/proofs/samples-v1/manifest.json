@@ -1,0 +1,588 @@
+{
+  "passed": true,
+  "seed": 20261030,
+  "certificates": [
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-00.json",
+      "sha256": "89020d01182dfd6ff78d242b0a94738d61b2d263124b0f46c430830875992228",
+      "fen": "7Q/3k4/8/8/8/5K2/8/8 w - - 0 1",
+      "piece": "queen",
+      "strong_side": "white",
+      "turn_role": "strong",
+      "verification": {
+        "passed": true,
+        "positions": 209,
+        "edges": 256,
+        "covered_defensive_replies": 143,
+        "checkmate_leaves": 22,
+        "mate_upper_bound_plies": 13,
+        "strong_side": "white",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-01.json",
+      "sha256": "c1ccab18aec74f4307aaa94287fa4ccbd65e8a5d0f426a016315b411040bd306",
+      "fen": "8/8/8/8/1q6/8/4K1k1/8 b - - 0 1",
+      "piece": "queen",
+      "strong_side": "black",
+      "turn_role": "strong",
+      "verification": {
+        "passed": true,
+        "positions": 6,
+        "edges": 5,
+        "covered_defensive_replies": 2,
+        "checkmate_leaves": 1,
+        "mate_upper_bound_plies": 5,
+        "strong_side": "black",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-02.json",
+      "sha256": "21620dbc3fb4968a9b617e7b3d48cd45894d51641bdcc157ee28e686c1fa1f30",
+      "fen": "8/8/8/7Q/2k5/8/8/2K5 w - - 0 1",
+      "piece": "queen",
+      "strong_side": "white",
+      "turn_role": "strong",
+      "verification": {
+        "passed": true,
+        "positions": 30,
+        "edges": 33,
+        "covered_defensive_replies": 16,
+        "checkmate_leaves": 3,
+        "mate_upper_bound_plies": 11,
+        "strong_side": "white",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-03.json",
+      "sha256": "da4a145f5da3f72a0bf5ba7c9d093f983719f562e965ba4b21ffedcffa4b9f6a",
+      "fen": "8/q7/7K/8/8/8/4k3/8 b - - 0 1",
+      "piece": "queen",
+      "strong_side": "black",
+      "turn_role": "strong",
+      "verification": {
+        "passed": true,
+        "positions": 14,
+        "edges": 13,
+        "covered_defensive_replies": 6,
+        "checkmate_leaves": 2,
+        "mate_upper_bound_plies": 9,
+        "strong_side": "black",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-04.json",
+      "sha256": "266533dee0e3f93082b28a71afc3763dd62de9cda8388f7be57e1db64e8acb35",
+      "fen": "6k1/8/8/8/8/8/2K5/4Q3 w - - 0 1",
+      "piece": "queen",
+      "strong_side": "white",
+      "turn_role": "strong",
+      "verification": {
+        "passed": true,
+        "positions": 12,
+        "edges": 11,
+        "covered_defensive_replies": 5,
+        "checkmate_leaves": 1,
+        "mate_upper_bound_plies": 11,
+        "strong_side": "white",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-05.json",
+      "sha256": "038045f8cea1a727604a3cc8605a0824d8bae9b287e8df71f01d424e30bcbc93",
+      "fen": "4q3/8/8/8/8/8/3k4/5K2 b - - 0 1",
+      "piece": "queen",
+      "strong_side": "black",
+      "turn_role": "strong",
+      "verification": {
+        "passed": true,
+        "positions": 8,
+        "edges": 7,
+        "covered_defensive_replies": 3,
+        "checkmate_leaves": 1,
+        "mate_upper_bound_plies": 7,
+        "strong_side": "black",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-06.json",
+      "sha256": "d0bb7846eeb9798f0fb58b43ab3f78623a65f8516c719b84918cba0d6582efbe",
+      "fen": "8/8/8/8/4K1Q1/k7/8/8 w - - 0 1",
+      "piece": "queen",
+      "strong_side": "white",
+      "turn_role": "strong",
+      "verification": {
+        "passed": true,
+        "positions": 75,
+        "edges": 91,
+        "covered_defensive_replies": 52,
+        "checkmate_leaves": 13,
+        "mate_upper_bound_plies": 9,
+        "strong_side": "white",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-07.json",
+      "sha256": "b9836e9d8ef21b816a140e88a8139da89dbd5b8c3a0e06cfc4c0a757310011cc",
+      "fen": "8/3K4/8/8/7q/7k/8/8 b - - 0 1",
+      "piece": "queen",
+      "strong_side": "black",
+      "turn_role": "strong",
+      "verification": {
+        "passed": true,
+        "positions": 149,
+        "edges": 184,
+        "covered_defensive_replies": 102,
+        "checkmate_leaves": 15,
+        "mate_upper_bound_plies": 13,
+        "strong_side": "black",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-00.json",
+      "sha256": "f2c495001ae5a842ef4a533d1406314248026dbc4d8b16ef6a4ded3b800856fe",
+      "fen": "8/8/8/8/8/5k2/2Q5/2K5 b - - 0 1",
+      "piece": "queen",
+      "strong_side": "white",
+      "turn_role": "defender",
+      "verification": {
+        "passed": true,
+        "positions": 476,
+        "edges": 610,
+        "covered_defensive_replies": 326,
+        "checkmate_leaves": 26,
+        "mate_upper_bound_plies": 16,
+        "strong_side": "white",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-01.json",
+      "sha256": "6449db34085ad797cbf753ddf35f94d9d558084516b95ba1e99e879b2e4f1c97",
+      "fen": "3K4/8/8/8/4q3/3k4/8/8 w - - 0 1",
+      "piece": "queen",
+      "strong_side": "black",
+      "turn_role": "defender",
+      "verification": {
+        "passed": true,
+        "positions": 175,
+        "edges": 198,
+        "covered_defensive_replies": 103,
+        "checkmate_leaves": 20,
+        "mate_upper_bound_plies": 12,
+        "strong_side": "black",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-02.json",
+      "sha256": "4c31ad1490fe78f3c6859483d37b79f5fedbf36d4ea4093fea330a5205d11a73",
+      "fen": "8/8/8/8/Q7/8/8/3k1K2 b - - 0 1",
+      "piece": "queen",
+      "strong_side": "white",
+      "turn_role": "defender",
+      "verification": {
+        "passed": true,
+        "positions": 12,
+        "edges": 12,
+        "covered_defensive_replies": 6,
+        "checkmate_leaves": 1,
+        "mate_upper_bound_plies": 10,
+        "strong_side": "white",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-03.json",
+      "sha256": "5f76406e657d366188ed50ae178e3195289b36d2919e17bcda647695b0fae334",
+      "fen": "8/8/4K3/2q5/4k3/8/8/8 w - - 0 1",
+      "piece": "queen",
+      "strong_side": "black",
+      "turn_role": "defender",
+      "verification": {
+        "passed": true,
+        "positions": 71,
+        "edges": 75,
+        "covered_defensive_replies": 39,
+        "checkmate_leaves": 12,
+        "mate_upper_bound_plies": 10,
+        "strong_side": "black",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-04.json",
+      "sha256": "343047ed11fe7dfb1d97f1e8f938fc1af4a9c94cff36d5fdb41dba5cd11a675b",
+      "fen": "2k5/8/8/7K/8/8/3Q4/8 b - - 0 1",
+      "piece": "queen",
+      "strong_side": "white",
+      "turn_role": "defender",
+      "verification": {
+        "passed": true,
+        "positions": 182,
+        "edges": 215,
+        "covered_defensive_replies": 110,
+        "checkmate_leaves": 14,
+        "mate_upper_bound_plies": 14,
+        "strong_side": "white",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-05.json",
+      "sha256": "c50aecd8fc01df12edabb7d410d55baa7d56ba81856b5d7e040dceb5a073ab75",
+      "fen": "5K2/7q/8/8/8/8/7k/8 w - - 0 1",
+      "piece": "queen",
+      "strong_side": "black",
+      "turn_role": "defender",
+      "verification": {
+        "passed": true,
+        "positions": 35,
+        "edges": 39,
+        "covered_defensive_replies": 22,
+        "checkmate_leaves": 5,
+        "mate_upper_bound_plies": 12,
+        "strong_side": "black",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-06.json",
+      "sha256": "11a51a20c7add383b2f2403243d03cda5bfaa5026e5e958498115b1ca35b945b",
+      "fen": "8/8/8/3k4/8/8/1K2Q3/8 b - - 0 1",
+      "piece": "queen",
+      "strong_side": "white",
+      "turn_role": "defender",
+      "verification": {
+        "passed": true,
+        "positions": 150,
+        "edges": 168,
+        "covered_defensive_replies": 86,
+        "checkmate_leaves": 14,
+        "mate_upper_bound_plies": 14,
+        "strong_side": "white",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-07.json",
+      "sha256": "f8e88d31c1be697f93ca5e3eb06fb81b3893ba363b6f71bed1d392d1853d303b",
+      "fen": "8/8/1K6/8/8/8/4kq2/8 w - - 0 1",
+      "piece": "queen",
+      "strong_side": "black",
+      "turn_role": "defender",
+      "verification": {
+        "passed": true,
+        "positions": 365,
+        "edges": 442,
+        "covered_defensive_replies": 237,
+        "checkmate_leaves": 31,
+        "mate_upper_bound_plies": 14,
+        "strong_side": "black",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-00.json",
+      "sha256": "c22a40e311e78b0788321dae994bf3b43f6a0d863dd5f308c009b45bb2242e21",
+      "fen": "6K1/8/8/4k3/8/8/8/7R w - - 0 1",
+      "piece": "rook",
+      "strong_side": "white",
+      "turn_role": "strong",
+      "verification": {
+        "passed": true,
+        "positions": 3428,
+        "edges": 5020,
+        "covered_defensive_replies": 2865,
+        "checkmate_leaves": 110,
+        "mate_upper_bound_plies": 27,
+        "strong_side": "white",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-01.json",
+      "sha256": "60e98d699f5d0d25e5a371e1504c16a058df76960b4ccfef23327814d0cdcd7b",
+      "fen": "4K3/8/8/8/1k6/8/8/2r5 b - - 0 1",
+      "piece": "rook",
+      "strong_side": "black",
+      "turn_role": "strong",
+      "verification": {
+        "passed": true,
+        "positions": 92,
+        "edges": 100,
+        "covered_defensive_replies": 51,
+        "checkmate_leaves": 11,
+        "mate_upper_bound_plies": 17,
+        "strong_side": "black",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-02.json",
+      "sha256": "1d87e04057abab47b14547b55a76ace50ea35cf99692dc3643ed766ed06d4c20",
+      "fen": "2k5/8/8/8/3R4/8/5K2/8 w - - 0 1",
+      "piece": "rook",
+      "strong_side": "white",
+      "turn_role": "strong",
+      "verification": {
+        "passed": true,
+        "positions": 255,
+        "edges": 355,
+        "covered_defensive_replies": 206,
+        "checkmate_leaves": 15,
+        "mate_upper_bound_plies": 19,
+        "strong_side": "white",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-03.json",
+      "sha256": "c4a4f3ab1e643bda4d505cb6e56ebe2684787904ece301de0718d4085fbf393c",
+      "fen": "8/8/8/2k5/8/4K3/5r2/8 b - - 0 1",
+      "piece": "rook",
+      "strong_side": "black",
+      "turn_role": "strong",
+      "verification": {
+        "passed": true,
+        "positions": 1652,
+        "edges": 2308,
+        "covered_defensive_replies": 1288,
+        "checkmate_leaves": 68,
+        "mate_upper_bound_plies": 25,
+        "strong_side": "black",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-04.json",
+      "sha256": "e23a757ed90403107cd1a901e6bb2d82d0f57fd8e4614c2e3e93e5ca06a75f61",
+      "fen": "8/8/8/1R2K3/8/8/7k/8 w - - 0 1",
+      "piece": "rook",
+      "strong_side": "white",
+      "turn_role": "strong",
+      "verification": {
+        "passed": true,
+        "positions": 39,
+        "edges": 43,
+        "covered_defensive_replies": 21,
+        "checkmate_leaves": 6,
+        "mate_upper_bound_plies": 11,
+        "strong_side": "white",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-05.json",
+      "sha256": "1f18eb6ad1612f940f74340e0e06635b0a72ef6936a44aa64e42151df639ba06",
+      "fen": "8/8/2r5/8/8/k2K4/8/8 b - - 0 1",
+      "piece": "rook",
+      "strong_side": "black",
+      "turn_role": "strong",
+      "verification": {
+        "passed": true,
+        "positions": 2164,
+        "edges": 3115,
+        "covered_defensive_replies": 1782,
+        "checkmate_leaves": 92,
+        "mate_upper_bound_plies": 27,
+        "strong_side": "black",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-06.json",
+      "sha256": "29dab6bc3c49b0fd5807a7df2e169dee6dc88b66849f6371ec5b1afd10931dbd",
+      "fen": "8/3R4/3K4/8/8/8/2k5/8 w - - 0 1",
+      "piece": "rook",
+      "strong_side": "white",
+      "turn_role": "strong",
+      "verification": {
+        "passed": true,
+        "positions": 170,
+        "edges": 217,
+        "covered_defensive_replies": 116,
+        "checkmate_leaves": 13,
+        "mate_upper_bound_plies": 15,
+        "strong_side": "white",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-07.json",
+      "sha256": "7f25824e0fdd53c8c339fe816f78e6a354671b084f1f2de5ff083cfb2cbc112a",
+      "fen": "k7/8/K7/7r/8/8/8/8 b - - 0 1",
+      "piece": "rook",
+      "strong_side": "black",
+      "turn_role": "strong",
+      "verification": {
+        "passed": true,
+        "positions": 133,
+        "edges": 151,
+        "covered_defensive_replies": 78,
+        "checkmate_leaves": 5,
+        "mate_upper_bound_plies": 21,
+        "strong_side": "black",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-00.json",
+      "sha256": "dec578093a396ced82e1032d9c401e60a05e643b1c9f10b5b986f4c5e7e3e8c6",
+      "fen": "1K6/8/1k6/8/2R5/8/8/8 b - - 0 1",
+      "piece": "rook",
+      "strong_side": "white",
+      "turn_role": "defender",
+      "verification": {
+        "passed": true,
+        "positions": 242,
+        "edges": 301,
+        "covered_defensive_replies": 169,
+        "checkmate_leaves": 12,
+        "mate_upper_bound_plies": 22,
+        "strong_side": "white",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-01.json",
+      "sha256": "99784b37c893e3e9db5be29b46fd597ddd05776a18ef777b49378cd81d02ad2c",
+      "fen": "8/8/8/8/1k6/8/3K4/7r w - - 0 1",
+      "piece": "rook",
+      "strong_side": "black",
+      "turn_role": "defender",
+      "verification": {
+        "passed": true,
+        "positions": 798,
+        "edges": 1139,
+        "covered_defensive_replies": 656,
+        "checkmate_leaves": 34,
+        "mate_upper_bound_plies": 24,
+        "strong_side": "black",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-02.json",
+      "sha256": "b53f064ee75e2de61b537488a11f6b866475b370653b5d3d0226cd74c4fb649c",
+      "fen": "8/8/8/8/4K3/1k6/8/4R3 b - - 0 1",
+      "piece": "rook",
+      "strong_side": "white",
+      "turn_role": "defender",
+      "verification": {
+        "passed": true,
+        "positions": 719,
+        "edges": 915,
+        "covered_defensive_replies": 492,
+        "checkmate_leaves": 47,
+        "mate_upper_bound_plies": 20,
+        "strong_side": "white",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-03.json",
+      "sha256": "b17722ecee6cfc72429bce60912c911ad1277ad5efc7f52e13ecaa0e77d88e22",
+      "fen": "8/8/r7/8/K7/5k2/8/8 w - - 0 1",
+      "piece": "rook",
+      "strong_side": "black",
+      "turn_role": "defender",
+      "verification": {
+        "passed": true,
+        "positions": 2348,
+        "edges": 3347,
+        "covered_defensive_replies": 1878,
+        "checkmate_leaves": 84,
+        "mate_upper_bound_plies": 26,
+        "strong_side": "black",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-04.json",
+      "sha256": "e936a49633521d0db4368e6de684111f6f4a43e60fb6537964250137b12663f8",
+      "fen": "8/8/8/8/4R1k1/8/8/1K6 b - - 0 1",
+      "piece": "rook",
+      "strong_side": "white",
+      "turn_role": "defender",
+      "verification": {
+        "passed": true,
+        "positions": 1936,
+        "edges": 2884,
+        "covered_defensive_replies": 1655,
+        "checkmate_leaves": 51,
+        "mate_upper_bound_plies": 28,
+        "strong_side": "white",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-05.json",
+      "sha256": "7ae2fd1b1fd49aa6bbdab3de913f9421af264d038f7928d853cc22470f9369e7",
+      "fen": "8/1K6/3k4/r7/8/8/8/8 w - - 0 1",
+      "piece": "rook",
+      "strong_side": "black",
+      "turn_role": "defender",
+      "verification": {
+        "passed": true,
+        "positions": 44,
+        "edges": 49,
+        "covered_defensive_replies": 25,
+        "checkmate_leaves": 6,
+        "mate_upper_bound_plies": 12,
+        "strong_side": "black",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-06.json",
+      "sha256": "92f010b6f845cdbc3a738cba0c1866b329dd7aa0e1615e29c3bf3cd1edecac64",
+      "fen": "8/8/1R6/7k/8/8/4K3/8 b - - 0 1",
+      "piece": "rook",
+      "strong_side": "white",
+      "turn_role": "defender",
+      "verification": {
+        "passed": true,
+        "positions": 865,
+        "edges": 1239,
+        "covered_defensive_replies": 698,
+        "checkmate_leaves": 33,
+        "mate_upper_bound_plies": 26,
+        "strong_side": "white",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-07.json",
+      "sha256": "12a006a5dc1fdba09d917c5301f034f48176c51d2cf451ea9c46df0f2cd07d5b",
+      "fen": "8/K7/8/8/8/8/4k2r/8 w - - 0 1",
+      "piece": "rook",
+      "strong_side": "black",
+      "turn_role": "defender",
+      "verification": {
+        "passed": true,
+        "positions": 1767,
+        "edges": 2560,
+        "covered_defensive_replies": 1449,
+        "checkmate_leaves": 65,
+        "mate_upper_bound_plies": 26,
+        "strong_side": "black",
+        "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed."
+      }
+    }
+  ],
+  "engine_sha256": "427fa0f62cda382c6d6005435412972d63027dbd8eac43a523c52e59d97ce921",
+  "script_sha256": "1b5231bc132a11d7a793e04e12d22cb997deb7f669153286703067b617457ec5",
+  "verifier_sha256": "d2829747b735c367984e72832e27edf9df2589edc41a2f28df4b74c09053b28e",
+  "total_positions": 18621,
+  "total_edges": 26102,
+  "max_positions": 3428
+}

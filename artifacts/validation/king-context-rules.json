@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\src\\Engine\\bin\\Release\\net8.0\\Aster.dll",
+  "binary_sha256": "67b9c8050c04ec0087a30fee256379f435a6b14966ebde522c76704ce919530b",
+  "positions_checked": 2614,
+  "reference_perft_positions": 14,
+  "protocol_checks": "passed",
+  "seed": 20261003,
+  "seconds": 1.291,
+  "legal_move_existence_positions": 2614,
+  "random_setups": {
+    "positions": 1000,
+    "in_check": 172,
+    "checkmates": 6,
+    "stalemates": 1
+  },
+  "eval_file": "artifacts/validation/king-context-fixtures/hybrid-v3.ann"
+}

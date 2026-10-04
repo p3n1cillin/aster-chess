@@ -1,0 +1,76 @@
+{
+  "source_files": [
+    {
+      "path": "scripts/match.py",
+      "sha256": "66cab999d806eb3c1ee86533cb5eabf3f0eb120560f9cfad654924a4f834bef6"
+    },
+    {
+      "path": "scripts/audit_match.py",
+      "sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6"
+    },
+    {
+      "path": "scripts/analyze_match.py",
+      "sha256": "0be089a30e5d5c8c481e96ad9d8dcb6c3245c076ebebb4310c5a272db89ba458"
+    },
+    {
+      "path": "scripts/test_match_setups.py",
+      "sha256": "f4102a181b7a591aebef5e5d9a99772d00db258410f5478b0b13199cfbd0e552"
+    },
+    {
+      "path": "scripts/generate_kpk_setups.py",
+      "sha256": "fc58715434c5ee5b0e786f7fa1799d28d5e8b9d53c1c258152f3048caa9bba49"
+    },
+    {
+      "path": "scripts/analyze_kpk_conversion.py",
+      "sha256": "fa8854799ba8f333950ede9be85f664b060bea3b81078feaf0098023d3ee1a17"
+    },
+    {
+      "path": "scripts/verify_major_mates.py",
+      "sha256": "779c591956551b34c6a93d8046088973ca04085b32a69ebc0515dc87633ef3c4"
+    },
+    {
+      "path": "scripts/verify_major_runtime.py",
+      "sha256": "f8312058c11bb3c4417d57c7b0ab8166f051fcff34bc08cdc5b5020a3a7a63ef"
+    },
+    {
+      "path": "scripts/verify_strategy_proof.py",
+      "sha256": "d2829747b735c367984e72832e27edf9df2589edc41a2f28df4b74c09053b28e"
+    },
+    {
+      "path": "scripts/test_strategy_proof.py",
+      "sha256": "52b936d0110b7ccf3cea51448725ad3a1aa78e013ec1823376e7b0130900d773"
+    },
+    {
+      "path": "scripts/sample_strategy_proofs.py",
+      "sha256": "1b5231bc132a11d7a793e04e12d22cb997deb7f669153286703067b617457ec5"
+    },
+    {
+      "path": "scripts/verify_proof_protocol.py",
+      "sha256": "fc7dce7ca830c618a05ebe83d36ffc3c6dde7f0c8dea12abd6b2b1e3559f0e78"
+    },
+    {
+      "path": "scripts/preserve_conversion_experiment.py",
+      "sha256": "eca2633097719c0e58f865dd354bc7a24975f44e014f7141d84d99e15d1c9bfc"
+    },
+    {
+      "path": "scripts/freeze_engine_source.py",
+      "sha256": "db919e19f9b75ade115a3d834ad48cc57e01a6165130ef03a775279f4c89acb7"
+    },
+    {
+      "path": "scripts/tactics.py",
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    },
+    {
+      "path": "scripts/verify.py",
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    },
+    {
+      "path": "scripts/uci_client.py",
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    }
+  ],
+  "initial_verifier": {
+    "path": "artifacts/research/conversion-proof-pipeline-final/verify_strategy_proof_initial.py",
+    "sha256": "f4e7532cf418fafbbaced3a35f3f7bc110a9985b278436ae55ab14b4ec4add02"
+  }
+}

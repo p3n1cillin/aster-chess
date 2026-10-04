@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "suite": "tests/fixtures/openings-v1.json",
+  "suite_sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de",
+  "opening_positions": 64,
+  "training_dataset": "artifacts/data/teacher-20k-v1.jsonl",
+  "training_dataset_sha256": "191c4bbd054ad307860d8935f2cb4f6cbcf73e60b68a3a397e646e8b6d691527",
+  "training_rows": 20000,
+  "canonical_training_positions": 20000,
+  "overlapping_opening_ids": [],
+  "canonicalization": "python-chess Board.fen first four fields, retaining only legally available en passant"
+}

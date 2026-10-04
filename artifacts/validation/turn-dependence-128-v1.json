@@ -1,0 +1,2337 @@
+{
+  "pairs": [
+    {
+      "source_fen": "3BR3/8/8/3k4/6p1/6K1/1r4P1/8 b - - 14 62",
+      "source_game": 403,
+      "white_to_move": {
+        "white_cp": 483,
+        "nodes": 8197,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": 482,
+        "nodes": 8196,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 1,
+      "model_white_to_move_cp": 385,
+      "model_black_to_move_cp": 361,
+      "position_only_pair_mae_lower_bound_cp": 11.5
+    },
+    {
+      "source_fen": "8/8/8/8/4r3/2K5/8/7k b - - 9 83",
+      "source_game": 348,
+      "white_to_move": {
+        "white_cp": -439,
+        "nodes": 8199,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": -423,
+        "nodes": 8207,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": -16,
+      "model_white_to_move_cp": -519,
+      "model_black_to_move_cp": -543,
+      "position_only_pair_mae_lower_bound_cp": 20.0
+    },
+    {
+      "source_fen": "3k4/1p4p1/p6p/P1P1R2P/5PK1/r5P1/8/8 w - - 3 49",
+      "source_game": 1566,
+      "white_to_move": {
+        "white_cp": 149,
+        "nodes": 8192,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": 97,
+        "nodes": 8197,
+        "depth": 9
+      },
+      "teacher_turn_delta_cp": 52,
+      "model_white_to_move_cp": 114,
+      "model_black_to_move_cp": 90,
+      "position_only_pair_mae_lower_bound_cp": 14.0
+    },
+    {
+      "source_fen": "5r2/1p3kp1/p1pbpqpr/3p2Rp/P2P1P1P/BP1QP3/2P2P2/R3K3 b Q - 2 20",
+      "source_game": 306,
+      "white_to_move": {
+        "white_cp": 760,
+        "nodes": 8192,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": 161,
+        "nodes": 8198,
+        "depth": 10
+      },
+      "teacher_turn_delta_cp": 599,
+      "model_white_to_move_cp": -16,
+      "model_black_to_move_cp": -40,
+      "position_only_pair_mae_lower_bound_cp": 287.5
+    },
+    {
+      "source_fen": "r2q1rk1/1b3pbp/p2pnnp1/1Pp1p3/2P1P1P1/2NP1N1P/1P1B1PB1/R1Q1K2R w KQ - 0 19",
+      "source_game": 1552,
+      "white_to_move": {
+        "white_cp": 48,
+        "nodes": 8205,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": 14,
+        "nodes": 8198,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 34,
+      "model_white_to_move_cp": 38,
+      "model_black_to_move_cp": 14,
+      "position_only_pair_mae_lower_bound_cp": 5.0
+    },
+    {
+      "source_fen": "8/8/4n3/4k3/7K/6P1/8/8 w - - 6 70",
+      "source_game": 1941,
+      "white_to_move": {
+        "white_cp": 0,
+        "nodes": 8194,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": 0,
+        "nodes": 8199,
+        "depth": 9
+      },
+      "teacher_turn_delta_cp": 0,
+      "model_white_to_move_cp": -311,
+      "model_black_to_move_cp": -335,
+      "position_only_pair_mae_lower_bound_cp": 12.0
+    },
+    {
+      "source_fen": "8/3r4/8/8/8/2K5/8/7k b - - 15 86",
+      "source_game": 348,
+      "white_to_move": {
+        "white_cp": -425,
+        "nodes": 8198,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": -429,
+        "nodes": 8194,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 4,
+      "model_white_to_move_cp": -557,
+      "model_black_to_move_cp": -581,
+      "position_only_pair_mae_lower_bound_cp": 10.0
+    },
+    {
+      "source_fen": "8/1p3p1k/2n4p/7K/8/1P2BP2/5P2/8 b - - 0 35",
+      "source_game": 2602,
+      "white_to_move": {
+        "white_cp": 8,
+        "nodes": 8204,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": -3,
+        "nodes": 8201,
+        "depth": 11
+      },
+      "teacher_turn_delta_cp": 11,
+      "model_white_to_move_cp": 10,
+      "model_black_to_move_cp": -14,
+      "position_only_pair_mae_lower_bound_cp": 6.5
+    },
+    {
+      "source_fen": "8/8/8/3r4/1k6/R7/5K2/8 w - - 26 91",
+      "source_game": 1904,
+      "white_to_move": {
+        "white_cp": 0,
+        "nodes": 8202,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": -447,
+        "nodes": 8199,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 447,
+      "model_white_to_move_cp": 39,
+      "model_black_to_move_cp": 15,
+      "position_only_pair_mae_lower_bound_cp": 211.5
+    },
+    {
+      "source_fen": "8/5k2/3p1pp1/3P3p/2pqPQ2/7P/5PPK/8 w - - 3 40",
+      "source_game": 1391,
+      "white_to_move": {
+        "white_cp": -112,
+        "nodes": 8192,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": -561,
+        "nodes": 8199,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 449,
+      "model_white_to_move_cp": -38,
+      "model_black_to_move_cp": -62,
+      "position_only_pair_mae_lower_bound_cp": 212.5
+    },
+    {
+      "source_fen": "2r3k1/4qp2/4pnpp/2Nn4/1b1P4/1Q2PNBP/5PP1/R5K1 b - - 2 29",
+      "source_game": 2185,
+      "white_to_move": {
+        "white_cp": 348,
+        "nodes": 8197,
+        "depth": 15
+      },
+      "black_to_move": {
+        "white_cp": 40,
+        "nodes": 8203,
+        "depth": 10
+      },
+      "teacher_turn_delta_cp": 308,
+      "model_white_to_move_cp": 168,
+      "model_black_to_move_cp": 144,
+      "position_only_pair_mae_lower_bound_cp": 142.0
+    },
+    {
+      "source_fen": "8/8/8/2n2P1B/4k2K/6P1/8/8 w - - 1 64",
+      "source_game": 1941,
+      "white_to_move": {
+        "white_cp": 448,
+        "nodes": 8192,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": 3,
+        "nodes": 8198,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 445,
+      "model_white_to_move_cp": 335,
+      "model_black_to_move_cp": 311,
+      "position_only_pair_mae_lower_bound_cp": 210.5
+    },
+    {
+      "source_fen": "r1b3k1/p3b1pp/1p6/1Np1pr2/8/4B1P1/PPP2P1P/2KRR3 w - - 0 19",
+      "source_game": 641,
+      "white_to_move": {
+        "white_cp": 57,
+        "nodes": 8195,
+        "depth": 9
+      },
+      "black_to_move": {
+        "white_cp": 17,
+        "nodes": 8199,
+        "depth": 10
+      },
+      "teacher_turn_delta_cp": 40,
+      "model_white_to_move_cp": 5,
+      "model_black_to_move_cp": -19,
+      "position_only_pair_mae_lower_bound_cp": 8.0
+    },
+    {
+      "source_fen": "1k5r/1p6/pNnpbnp1/4pp2/2P5/1P2B1P1/P3R1B1/1K6 b - - 1 26",
+      "source_game": 1370,
+      "white_to_move": {
+        "white_cp": -292,
+        "nodes": 8197,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": -441,
+        "nodes": 8199,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 149,
+      "model_white_to_move_cp": -216,
+      "model_black_to_move_cp": -240,
+      "position_only_pair_mae_lower_bound_cp": 62.5
+    },
+    {
+      "source_fen": "r1bk4/1p3R2/2pp4/1p1P3p/1P6/P1N5/2P2KPP/8 w - - 0 31",
+      "source_game": 680,
+      "white_to_move": {
+        "white_cp": 189,
+        "nodes": 8199,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": 53,
+        "nodes": 8193,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 136,
+      "model_white_to_move_cp": 293,
+      "model_black_to_move_cp": 269,
+      "position_only_pair_mae_lower_bound_cp": 56.0
+    },
+    {
+      "source_fen": "3rr1k1/pp1b1p1p/2p3p1/2NpPP2/6P1/7P/1PP1RK2/3R4 w - - 2 28",
+      "source_game": 92,
+      "white_to_move": {
+        "white_cp": 245,
+        "nodes": 8199,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": -26,
+        "nodes": 8194,
+        "depth": 11
+      },
+      "teacher_turn_delta_cp": 271,
+      "model_white_to_move_cp": -31,
+      "model_black_to_move_cp": -55,
+      "position_only_pair_mae_lower_bound_cp": 123.5
+    },
+    {
+      "source_fen": "6k1/R2r4/1p3ppb/1N5p/1B3P2/2P4P/6P1/6K1 b - - 0 35",
+      "source_game": 1639,
+      "white_to_move": {
+        "white_cp": 788,
+        "nodes": 8195,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": 529,
+        "nodes": 8197,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 259,
+      "model_white_to_move_cp": 339,
+      "model_black_to_move_cp": 315,
+      "position_only_pair_mae_lower_bound_cp": 117.5
+    },
+    {
+      "source_fen": "2rq1bk1/1p1n1p2/4pnpp/pP4N1/2NP4/1Q2P1BP/5PP1/R5K1 w - - 0 25",
+      "source_game": 2185,
+      "white_to_move": {
+        "white_cp": -37,
+        "nodes": 8195,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": -584,
+        "nodes": 8200,
+        "depth": 15
+      },
+      "teacher_turn_delta_cp": 547,
+      "model_white_to_move_cp": 81,
+      "model_black_to_move_cp": 57,
+      "position_only_pair_mae_lower_bound_cp": 261.5
+    },
+    {
+      "source_fen": "8/6k1/3NR3/4PK2/8/4bN2/6r1/8 b - - 2 71",
+      "source_game": 511,
+      "white_to_move": {
+        "white_cp": 572,
+        "nodes": 8193,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": 559,
+        "nodes": 8195,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 13,
+      "model_white_to_move_cp": 525,
+      "model_black_to_move_cp": 501,
+      "position_only_pair_mae_lower_bound_cp": 5.5
+    },
+    {
+      "source_fen": "1k1r1br1/ppq5/2p1pn2/5p1p/1PpP4/4PNPP/P1Q2PR1/1R2KB2 w - - 0 22",
+      "source_game": 1392,
+      "white_to_move": {
+        "white_cp": 143,
+        "nodes": 8195,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": -224,
+        "nodes": 8197,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 367,
+      "model_white_to_move_cp": 18,
+      "model_black_to_move_cp": -6,
+      "position_only_pair_mae_lower_bound_cp": 171.5
+    },
+    {
+      "source_fen": "R7/2P2pk1/6b1/8/pKP4p/3r1P2/4N2P/8 b - - 1 41",
+      "source_game": 1908,
+      "white_to_move": {
+        "white_cp": 1202,
+        "nodes": 8201,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": 576,
+        "nodes": 8196,
+        "depth": 14
+      },
+      "teacher_turn_delta_cp": 626,
+      "model_white_to_move_cp": 211,
+      "model_black_to_move_cp": 187,
+      "position_only_pair_mae_lower_bound_cp": 301.0
+    },
+    {
+      "source_fen": "8/4kp1p/1PnNpbp1/2P5/8/5NPP/5P2/r1R3K1 w - - 1 37",
+      "source_game": 569,
+      "white_to_move": {
+        "white_cp": 204,
+        "nodes": 8198,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": -584,
+        "nodes": 8197,
+        "depth": 14
+      },
+      "teacher_turn_delta_cp": 788,
+      "model_white_to_move_cp": 326,
+      "model_black_to_move_cp": 302,
+      "position_only_pair_mae_lower_bound_cp": 382.0
+    },
+    {
+      "source_fen": "8/5pk1/8/R7/6K1/8/8/5r2 b - - 9 71",
+      "source_game": 2657,
+      "white_to_move": {
+        "white_cp": 0,
+        "nodes": 8199,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": 0,
+        "nodes": 8197,
+        "depth": 11
+      },
+      "teacher_turn_delta_cp": 0,
+      "model_white_to_move_cp": -84,
+      "model_black_to_move_cp": -108,
+      "position_only_pair_mae_lower_bound_cp": 12.0
+    },
+    {
+      "source_fen": "rn3rk1/1pq1bppp/2p2n2/3Pp3/p3P1b1/3P1N2/PPQNBPPP/R1B2RK1 w - - 1 13",
+      "source_game": 1597,
+      "white_to_move": {
+        "white_cp": 102,
+        "nodes": 8196,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": 40,
+        "nodes": 8211,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 62,
+      "model_white_to_move_cp": 89,
+      "model_black_to_move_cp": 65,
+      "position_only_pair_mae_lower_bound_cp": 19.0
+    },
+    {
+      "source_fen": "8/3b4/p7/8/8/8/K7/2k5 b - - 3 77",
+      "source_game": 2625,
+      "white_to_move": {
+        "white_cp": -58,
+        "nodes": 8193,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": -40,
+        "nodes": 8199,
+        "depth": 10
+      },
+      "teacher_turn_delta_cp": -18,
+      "model_white_to_move_cp": -446,
+      "model_black_to_move_cp": -470,
+      "position_only_pair_mae_lower_bound_cp": 21.0
+    },
+    {
+      "source_fen": "8/5k2/8/p7/Pb6/8/7K/5B2 b - - 6 56",
+      "source_game": 917,
+      "white_to_move": {
+        "white_cp": 1,
+        "nodes": 8203,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": -1,
+        "nodes": 8197,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 2,
+      "model_white_to_move_cp": -10,
+      "model_black_to_move_cp": -34,
+      "position_only_pair_mae_lower_bound_cp": 11.0
+    },
+    {
+      "source_fen": "1br3k1/3n2pp/1p2p1r1/1P3p2/p1PPbP1q/4Q3/4B1PP/R1B1NRK1 b - - 2 26",
+      "source_game": 1655,
+      "white_to_move": {
+        "white_cp": 178,
+        "nodes": 8193,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": -15,
+        "nodes": 8196,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 193,
+      "model_white_to_move_cp": -65,
+      "model_black_to_move_cp": -89,
+      "position_only_pair_mae_lower_bound_cp": 84.5
+    },
+    {
+      "source_fen": "6k1/4bppp/4p3/R3P2P/8/2rN2P1/4KPN1/8 b - - 0 32",
+      "source_game": 511,
+      "white_to_move": {
+        "white_cp": 566,
+        "nodes": 8195,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": 539,
+        "nodes": 8195,
+        "depth": 14
+      },
+      "teacher_turn_delta_cp": 27,
+      "model_white_to_move_cp": 403,
+      "model_black_to_move_cp": 379,
+      "position_only_pair_mae_lower_bound_cp": 1.5
+    },
+    {
+      "source_fen": "r3b1k1/1p4pp/p1n5/5N2/6P1/1P2P2P/P7/5RK1 b - - 0 29",
+      "source_game": 739,
+      "white_to_move": {
+        "white_cp": -530,
+        "nodes": 8198,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": -662,
+        "nodes": 8193,
+        "depth": 14
+      },
+      "teacher_turn_delta_cp": 132,
+      "model_white_to_move_cp": -140,
+      "model_black_to_move_cp": -164,
+      "position_only_pair_mae_lower_bound_cp": 54.0
+    },
+    {
+      "source_fen": "r2r2k1/1p2q1pp/2n1p3/1N6/4n3/PQ2P2P/1B2BPP1/5RK1 w - - 1 22",
+      "source_game": 1085,
+      "white_to_move": {
+        "white_cp": -4,
+        "nodes": 8192,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": -298,
+        "nodes": 8200,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 294,
+      "model_white_to_move_cp": -14,
+      "model_black_to_move_cp": -38,
+      "position_only_pair_mae_lower_bound_cp": 135.0
+    },
+    {
+      "source_fen": "8/1p6/p2R4/k1p5/2P1P3/PP6/3p2K1/3r4 b - - 0 50",
+      "source_game": 1019,
+      "white_to_move": {
+        "white_cp": 0,
+        "nodes": 8207,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": -27,
+        "nodes": 8192,
+        "depth": 9
+      },
+      "teacher_turn_delta_cp": 27,
+      "model_white_to_move_cp": -66,
+      "model_black_to_move_cp": -90,
+      "position_only_pair_mae_lower_bound_cp": 1.5
+    },
+    {
+      "source_fen": "6k1/5p2/4p1p1/6Pp/p4P1P/P1P4K/1P2Q3/6q1 b - - 10 44",
+      "source_game": 1990,
+      "white_to_move": {
+        "white_cp": -28,
+        "nodes": 8198,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": -27,
+        "nodes": 8199,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": -1,
+      "model_white_to_move_cp": 100,
+      "model_black_to_move_cp": 76,
+      "position_only_pair_mae_lower_bound_cp": 12.5
+    },
+    {
+      "source_fen": "7R/3r4/7P/8/5p2/8/2K2k2/8 w - - 1 61",
+      "source_game": 1961,
+      "white_to_move": {
+        "white_cp": -20,
+        "nodes": 8199,
+        "depth": 9
+      },
+      "black_to_move": {
+        "white_cp": -20,
+        "nodes": 8198,
+        "depth": 8
+      },
+      "teacher_turn_delta_cp": 0,
+      "model_white_to_move_cp": 42,
+      "model_black_to_move_cp": 18,
+      "position_only_pair_mae_lower_bound_cp": 12.0
+    },
+    {
+      "source_fen": "r2q1rk1/pp5p/3b1p2/3Ppb1Q/3p4/1P6/P1P2PPP/R1B2RK1 w - - 0 16",
+      "source_game": 26,
+      "white_to_move": {
+        "white_cp": 67,
+        "nodes": 8198,
+        "depth": 9
+      },
+      "black_to_move": {
+        "white_cp": -667,
+        "nodes": 8194,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 734,
+      "model_white_to_move_cp": -226,
+      "model_black_to_move_cp": -250,
+      "position_only_pair_mae_lower_bound_cp": 355.0
+    },
+    {
+      "source_fen": "1B6/3k4/5p2/1P6/1r6/8/5K2/8 w - - 1 52",
+      "source_game": 2275,
+      "white_to_move": {
+        "white_cp": -403,
+        "nodes": 8201,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": -415,
+        "nodes": 8199,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 12,
+      "model_white_to_move_cp": -210,
+      "model_black_to_move_cp": -234,
+      "position_only_pair_mae_lower_bound_cp": 6.0
+    },
+    {
+      "source_fen": "4n1k1/1p6/p2b3p/3p4/7B/P6P/1P4P1/7K b - - 0 41",
+      "source_game": 600,
+      "white_to_move": {
+        "white_cp": -568,
+        "nodes": 8201,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": -575,
+        "nodes": 8198,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 7,
+      "model_white_to_move_cp": -322,
+      "model_black_to_move_cp": -346,
+      "position_only_pair_mae_lower_bound_cp": 8.5
+    },
+    {
+      "source_fen": "r7/2R5/8/1K6/8/5k2/8/8 w - - 50 88",
+      "source_game": 712,
+      "white_to_move": {
+        "white_cp": 0,
+        "nodes": 8206,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": -3,
+        "nodes": 8205,
+        "depth": 7
+      },
+      "teacher_turn_delta_cp": 3,
+      "model_white_to_move_cp": -8,
+      "model_black_to_move_cp": -32,
+      "position_only_pair_mae_lower_bound_cp": 10.5
+    },
+    {
+      "source_fen": "2r2b1k/p2q1Qp1/1p1B3p/3n4/1P6/P7/6PP/4RRK1 b - - 0 32",
+      "source_game": 1250,
+      "white_to_move": {
+        "white_cp": 1464,
+        "nodes": 8192,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": 353,
+        "nodes": 8199,
+        "depth": 8
+      },
+      "teacher_turn_delta_cp": 1111,
+      "model_white_to_move_cp": 223,
+      "model_black_to_move_cp": 199,
+      "position_only_pair_mae_lower_bound_cp": 543.5
+    },
+    {
+      "source_fen": "4nk2/pb1q2p1/1p2p1Q1/2n1PpN1/3r4/4NP1P/P5P1/2R1B1K1 b - - 3 35",
+      "source_game": 903,
+      "white_to_move": {
+        "white_cp": 468,
+        "nodes": 8196,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": 473,
+        "nodes": 8202,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": -5,
+      "model_white_to_move_cp": 170,
+      "model_black_to_move_cp": 146,
+      "position_only_pair_mae_lower_bound_cp": 14.5
+    },
+    {
+      "source_fen": "1r2k2r/ppP1pp2/5q1p/5b1n/2N3pP/6P1/PPQ1PP2/R3KB1R b KQk - 0 17",
+      "source_game": 1047,
+      "white_to_move": {
+        "white_cp": 3218,
+        "nodes": 8192,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": 79,
+        "nodes": 8193,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 3139,
+      "model_white_to_move_cp": 252,
+      "model_black_to_move_cp": 228,
+      "position_only_pair_mae_lower_bound_cp": 1557.5
+    },
+    {
+      "source_fen": "2k5/1pp4p/p7/6p1/2r1b3/2B1R1P1/PP3K1P/8 b - - 3 29",
+      "source_game": 398,
+      "white_to_move": {
+        "white_cp": -7,
+        "nodes": 8201,
+        "depth": 9
+      },
+      "black_to_move": {
+        "white_cp": -10,
+        "nodes": 8198,
+        "depth": 7
+      },
+      "teacher_turn_delta_cp": 3,
+      "model_white_to_move_cp": -98,
+      "model_black_to_move_cp": -122,
+      "position_only_pair_mae_lower_bound_cp": 10.5
+    },
+    {
+      "source_fen": "1Q4N1/p2k1p2/1pb1p3/8/3n1PPK/r7/8/8 b - - 1 41",
+      "source_game": 1343,
+      "white_to_move": {
+        "white_cp": 335,
+        "nodes": 8198,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": 279,
+        "nodes": 8193,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 56,
+      "model_white_to_move_cp": -237,
+      "model_black_to_move_cp": -261,
+      "position_only_pair_mae_lower_bound_cp": 16.0
+    },
+    {
+      "source_fen": "r3k2r/pp4pp/4pp2/3p4/3PnN1P/2P3P1/PP2bP2/R3K2R w KQkq - 0 19",
+      "source_game": 1403,
+      "white_to_move": {
+        "white_cp": 4,
+        "nodes": 8197,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": -589,
+        "nodes": 8194,
+        "depth": 14
+      },
+      "teacher_turn_delta_cp": 593,
+      "model_white_to_move_cp": -336,
+      "model_black_to_move_cp": -360,
+      "position_only_pair_mae_lower_bound_cp": 284.5
+    },
+    {
+      "source_fen": "rnb1nrk1/p3qppp/2pbp3/8/3P4/P2BPN2/1PQ2PPP/RNB1K2R b KQ - 4 11",
+      "source_game": 2363,
+      "white_to_move": {
+        "white_cp": 452,
+        "nodes": 8201,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": 233,
+        "nodes": 8194,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 219,
+      "model_white_to_move_cp": 112,
+      "model_black_to_move_cp": 88,
+      "position_only_pair_mae_lower_bound_cp": 97.5
+    },
+    {
+      "source_fen": "r1bqr1k1/1pp2ppp/3b4/3nP3/4p3/P1B5/3NBPPP/R2Q1RK1 w - - 0 16",
+      "source_game": 2187,
+      "white_to_move": {
+        "white_cp": -322,
+        "nodes": 8193,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": -723,
+        "nodes": 8197,
+        "depth": 15
+      },
+      "teacher_turn_delta_cp": 401,
+      "model_white_to_move_cp": -143,
+      "model_black_to_move_cp": -167,
+      "position_only_pair_mae_lower_bound_cp": 188.5
+    },
+    {
+      "source_fen": "1R6/8/8/2r5/6k1/1K6/8/8 b - - 23 74",
+      "source_game": 712,
+      "white_to_move": {
+        "white_cp": 0,
+        "nodes": 8196,
+        "depth": 8
+      },
+      "black_to_move": {
+        "white_cp": -1,
+        "nodes": 8204,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 1,
+      "model_white_to_move_cp": 24,
+      "model_black_to_move_cp": 0,
+      "position_only_pair_mae_lower_bound_cp": 11.5
+    },
+    {
+      "source_fen": "8/3k3b/3p4/p2P4/2KP3b/N7/8/8 w - - 4 55",
+      "source_game": 658,
+      "white_to_move": {
+        "white_cp": -556,
+        "nodes": 8195,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": -540,
+        "nodes": 8192,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": -16,
+      "model_white_to_move_cp": -435,
+      "model_black_to_move_cp": -459,
+      "position_only_pair_mae_lower_bound_cp": 20.0
+    },
+    {
+      "source_fen": "2kr4/1ppq1pr1/2n1p2p/3pPPBQ/p2P2P1/3P4/PP2N1P1/R4RK1 b - - 0 20",
+      "source_game": 877,
+      "white_to_move": {
+        "white_cp": 849,
+        "nodes": 8194,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": -5,
+        "nodes": 8193,
+        "depth": 9
+      },
+      "teacher_turn_delta_cp": 854,
+      "model_white_to_move_cp": 477,
+      "model_black_to_move_cp": 453,
+      "position_only_pair_mae_lower_bound_cp": 415.0
+    },
+    {
+      "source_fen": "r4rk1/1p6/1p2pn1b/2ppNp1p/3P4/2P1P3/PP1BK1PP/R4R2 w - - 1 22",
+      "source_game": 119,
+      "white_to_move": {
+        "white_cp": -44,
+        "nodes": 8209,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": -53,
+        "nodes": 8194,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 9,
+      "model_white_to_move_cp": 64,
+      "model_black_to_move_cp": 40,
+      "position_only_pair_mae_lower_bound_cp": 7.5
+    },
+    {
+      "source_fen": "8/8/8/2r4k/1R6/8/K7/8 w - - 20 73",
+      "source_game": 712,
+      "white_to_move": {
+        "white_cp": 1,
+        "nodes": 8207,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": 5,
+        "nodes": 8192,
+        "depth": 11
+      },
+      "teacher_turn_delta_cp": -4,
+      "model_white_to_move_cp": 36,
+      "model_black_to_move_cp": 12,
+      "position_only_pair_mae_lower_bound_cp": 14.0
+    },
+    {
+      "source_fen": "8/8/8/1Bp5/2Pk1b2/6p1/8/5K2 b - - 17 65",
+      "source_game": 976,
+      "white_to_move": {
+        "white_cp": -24,
+        "nodes": 8201,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": -10,
+        "nodes": 8204,
+        "depth": 7
+      },
+      "teacher_turn_delta_cp": -14,
+      "model_white_to_move_cp": -295,
+      "model_black_to_move_cp": -319,
+      "position_only_pair_mae_lower_bound_cp": 19.0
+    },
+    {
+      "source_fen": "r4rk1/3qbnpp/np2pp2/p1pp4/P2PP2P/1NBP1NP1/1P2QP2/R4RK1 w - - 0 16",
+      "source_game": 208,
+      "white_to_move": {
+        "white_cp": -12,
+        "nodes": 8195,
+        "depth": 8
+      },
+      "black_to_move": {
+        "white_cp": -50,
+        "nodes": 8210,
+        "depth": 10
+      },
+      "teacher_turn_delta_cp": 38,
+      "model_white_to_move_cp": -2,
+      "model_black_to_move_cp": -26,
+      "position_only_pair_mae_lower_bound_cp": 7.0
+    },
+    {
+      "source_fen": "r3k2r/1pq2p2/p1nbbnpp/2p1p3/P2pP2N/NP1P3P/2P1BPP1/R1BQ1RK1 b kq - 0 14",
+      "source_game": 633,
+      "white_to_move": {
+        "white_cp": -84,
+        "nodes": 8203,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": -135,
+        "nodes": 8196,
+        "depth": 11
+      },
+      "teacher_turn_delta_cp": 51,
+      "model_white_to_move_cp": -63,
+      "model_black_to_move_cp": -87,
+      "position_only_pair_mae_lower_bound_cp": 13.5
+    },
+    {
+      "source_fen": "4r1k1/7p/p1p3p1/1pB5/1Pb2p2/2P3P1/2NR1P1P/2K5 w - - 0 31",
+      "source_game": 320,
+      "white_to_move": {
+        "white_cp": 569,
+        "nodes": 8196,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": 572,
+        "nodes": 8192,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": -3,
+      "model_white_to_move_cp": 190,
+      "model_black_to_move_cp": 166,
+      "position_only_pair_mae_lower_bound_cp": 13.5
+    },
+    {
+      "source_fen": "8/3k1p1p/6p1/4PP2/4PKPP/2Bb4/8/8 w - - 5 40",
+      "source_game": 428,
+      "white_to_move": {
+        "white_cp": 40,
+        "nodes": 8194,
+        "depth": 8
+      },
+      "black_to_move": {
+        "white_cp": 39,
+        "nodes": 8207,
+        "depth": 8
+      },
+      "teacher_turn_delta_cp": 1,
+      "model_white_to_move_cp": 233,
+      "model_black_to_move_cp": 209,
+      "position_only_pair_mae_lower_bound_cp": 11.5
+    },
+    {
+      "source_fen": "7r/1PR4P/7k/8/4pp2/8/5PK1/8 b - - 0 59",
+      "source_game": 1243,
+      "white_to_move": {
+        "white_cp": 822,
+        "nodes": 8204,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": 566,
+        "nodes": 8193,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 256,
+      "model_white_to_move_cp": 493,
+      "model_black_to_move_cp": 469,
+      "position_only_pair_mae_lower_bound_cp": 116.0
+    },
+    {
+      "source_fen": "2rr1nk1/pb2qpp1/1p2p2p/2ppN3/3PnPP1/P1P1PN2/1PB1Q2P/R3R1K1 w - - 3 19",
+      "source_game": 2498,
+      "white_to_move": {
+        "white_cp": 33,
+        "nodes": 8195,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": -24,
+        "nodes": 8195,
+        "depth": 8
+      },
+      "teacher_turn_delta_cp": 57,
+      "model_white_to_move_cp": -32,
+      "model_black_to_move_cp": -56,
+      "position_only_pair_mae_lower_bound_cp": 16.5
+    },
+    {
+      "source_fen": "1r6/4npk1/pPrp1np1/3p3p/1R1PpNqP/1QP1P3/1P1N1PP1/5RK1 w - - 1 31",
+      "source_game": 1608,
+      "white_to_move": {
+        "white_cp": -52,
+        "nodes": 8196,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": -115,
+        "nodes": 8192,
+        "depth": 10
+      },
+      "teacher_turn_delta_cp": 63,
+      "model_white_to_move_cp": 189,
+      "model_black_to_move_cp": 165,
+      "position_only_pair_mae_lower_bound_cp": 19.5
+    },
+    {
+      "source_fen": "r2r2k1/1b2qpp1/1p3n1p/p1pp4/Pb1P4/1P1QPN2/1B3PPP/1BRR2K1 w - - 2 19",
+      "source_game": 1183,
+      "white_to_move": {
+        "white_cp": 19,
+        "nodes": 8192,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": -4,
+        "nodes": 8201,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 23,
+      "model_white_to_move_cp": 65,
+      "model_black_to_move_cp": 41,
+      "position_only_pair_mae_lower_bound_cp": 0.5
+    },
+    {
+      "source_fen": "rn2kb1r/p1q1pppp/2p2n2/8/PppPN2P/4P1N1/1P2QPP1/R1B1K2R b KQkq - 1 11",
+      "source_game": 1,
+      "white_to_move": {
+        "white_cp": 154,
+        "nodes": 8199,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": 36,
+        "nodes": 8196,
+        "depth": 11
+      },
+      "teacher_turn_delta_cp": 118,
+      "model_white_to_move_cp": 6,
+      "model_black_to_move_cp": -18,
+      "position_only_pair_mae_lower_bound_cp": 47.0
+    },
+    {
+      "source_fen": "r2nr1k1/2qb1pbp/3p2p1/p1p5/2NPPp2/RBP2N2/1PQ2PPP/5RK1 w - - 2 22",
+      "source_game": 1391,
+      "white_to_move": {
+        "white_cp": 146,
+        "nodes": 8192,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": -25,
+        "nodes": 8199,
+        "depth": 10
+      },
+      "teacher_turn_delta_cp": 171,
+      "model_white_to_move_cp": -16,
+      "model_black_to_move_cp": -40,
+      "position_only_pair_mae_lower_bound_cp": 73.5
+    },
+    {
+      "source_fen": "1qr1k2r/4bp1p/pn2p1p1/1P4P1/3N1P2/2P1P3/PB1RQ1bP/2K4R w k - 0 22",
+      "source_game": 2197,
+      "white_to_move": {
+        "white_cp": -31,
+        "nodes": 8196,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": -841,
+        "nodes": 8195,
+        "depth": 15
+      },
+      "teacher_turn_delta_cp": 810,
+      "model_white_to_move_cp": -177,
+      "model_black_to_move_cp": -201,
+      "position_only_pair_mae_lower_bound_cp": 393.0
+    },
+    {
+      "source_fen": "8/1kp4p/5r2/pP2B1p1/3p4/3P3P/6P1/2R3K1 b - - 0 41",
+      "source_game": 403,
+      "white_to_move": {
+        "white_cp": 832,
+        "nodes": 8195,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": 495,
+        "nodes": 8192,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 337,
+      "model_white_to_move_cp": 173,
+      "model_black_to_move_cp": 149,
+      "position_only_pair_mae_lower_bound_cp": 156.5
+    },
+    {
+      "source_fen": "8/8/1K6/8/8/4k2r/8/8 w - - 42 100",
+      "source_game": 348,
+      "white_to_move": {
+        "white_cp": -321,
+        "nodes": 8196,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": -341,
+        "nodes": 8200,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 20,
+      "model_white_to_move_cp": -562,
+      "model_black_to_move_cp": -586,
+      "position_only_pair_mae_lower_bound_cp": 2.0
+    },
+    {
+      "source_fen": "3k4/p3bp2/P2p4/1b1P4/3PN3/2pB1PP1/5K1P/8 w - - 2 40",
+      "source_game": 658,
+      "white_to_move": {
+        "white_cp": 277,
+        "nodes": 8197,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": -459,
+        "nodes": 8200,
+        "depth": 15
+      },
+      "teacher_turn_delta_cp": 736,
+      "model_white_to_move_cp": 201,
+      "model_black_to_move_cp": 177,
+      "position_only_pair_mae_lower_bound_cp": 356.0
+    },
+    {
+      "source_fen": "7k/3pb1p1/q3p3/4P3/1P3B2/n4N1P/5PP1/3Q2K1 b - - 0 35",
+      "source_game": 168,
+      "white_to_move": {
+        "white_cp": 766,
+        "nodes": 8192,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": 453,
+        "nodes": 8192,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 313,
+      "model_white_to_move_cp": 285,
+      "model_black_to_move_cp": 261,
+      "position_only_pair_mae_lower_bound_cp": 144.5
+    },
+    {
+      "source_fen": "8/8/7p/6pk/R7/8/2r5/6K1 w - - 0 73",
+      "source_game": 1401,
+      "white_to_move": {
+        "white_cp": -446,
+        "nodes": 8195,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": -405,
+        "nodes": 8201,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": -41,
+      "model_white_to_move_cp": -310,
+      "model_black_to_move_cp": -334,
+      "position_only_pair_mae_lower_bound_cp": 32.5
+    },
+    {
+      "source_fen": "r1b2r2/1p3kpp/p1n1p3/8/2p2P1P/P2R1Pn1/2P5/R2QKB2 w Q - 0 19",
+      "source_game": 0,
+      "white_to_move": {
+        "white_cp": 461,
+        "nodes": 8197,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": -336,
+        "nodes": 8198,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 797,
+      "model_white_to_move_cp": 116,
+      "model_black_to_move_cp": 92,
+      "position_only_pair_mae_lower_bound_cp": 386.5
+    },
+    {
+      "source_fen": "8/5p2/4p3/pk1bP1pp/1p6/1P3P1P/P2R2P1/6K1 w - - 1 40",
+      "source_game": 921,
+      "white_to_move": {
+        "white_cp": 301,
+        "nodes": 8195,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": 273,
+        "nodes": 8195,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 28,
+      "model_white_to_move_cp": 130,
+      "model_black_to_move_cp": 106,
+      "position_only_pair_mae_lower_bound_cp": 2.0
+    },
+    {
+      "source_fen": "r7/3R2P1/5k1p/5P1P/8/5K2/8/8 b - - 0 83",
+      "source_game": 1566,
+      "white_to_move": {
+        "white_cp": 51,
+        "nodes": 8196,
+        "depth": 9
+      },
+      "black_to_move": {
+        "white_cp": 23,
+        "nodes": 8201,
+        "depth": 8
+      },
+      "teacher_turn_delta_cp": 28,
+      "model_white_to_move_cp": 506,
+      "model_black_to_move_cp": 482,
+      "position_only_pair_mae_lower_bound_cp": 2.0
+    },
+    {
+      "source_fen": "6k1/5p2/4p1p1/6Pp/p4P1P/P1P2K2/1P4Q1/6q1 b - - 4 41",
+      "source_game": 1990,
+      "white_to_move": {
+        "white_cp": 1016,
+        "nodes": 8197,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": -11,
+        "nodes": 8194,
+        "depth": 11
+      },
+      "teacher_turn_delta_cp": 1027,
+      "model_white_to_move_cp": 109,
+      "model_black_to_move_cp": 85,
+      "position_only_pair_mae_lower_bound_cp": 501.5
+    },
+    {
+      "source_fen": "3rr1k1/8/1p1P2pq/2n1ppN1/n7/R1P5/4BPP1/3Q2K1 w - - 0 37",
+      "source_game": 1270,
+      "white_to_move": {
+        "white_cp": -90,
+        "nodes": 8196,
+        "depth": 9
+      },
+      "black_to_move": {
+        "white_cp": -646,
+        "nodes": 8196,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 556,
+      "model_white_to_move_cp": -445,
+      "model_black_to_move_cp": -469,
+      "position_only_pair_mae_lower_bound_cp": 266.0
+    },
+    {
+      "source_fen": "7r/pp4pk/3bN1qp/2pPpb2/8/4QP2/PPP3PP/R3K2R w KQ - 1 22",
+      "source_game": 651,
+      "white_to_move": {
+        "white_cp": 377,
+        "nodes": 8194,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": 246,
+        "nodes": 8200,
+        "depth": 11
+      },
+      "teacher_turn_delta_cp": 131,
+      "model_white_to_move_cp": 277,
+      "model_black_to_move_cp": 253,
+      "position_only_pair_mae_lower_bound_cp": 53.5
+    },
+    {
+      "source_fen": "5R2/5p2/6k1/4Pr2/6p1/8/4K3/8 w - - 3 58",
+      "source_game": 1680,
+      "white_to_move": {
+        "white_cp": -362,
+        "nodes": 8198,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": -428,
+        "nodes": 8193,
+        "depth": 14
+      },
+      "teacher_turn_delta_cp": 66,
+      "model_white_to_move_cp": -209,
+      "model_black_to_move_cp": -233,
+      "position_only_pair_mae_lower_bound_cp": 21.0
+    },
+    {
+      "source_fen": "1rbr2k1/1p6/1Nn1ppp1/Pp5p/3pPPnP/B7/4B1P1/2RR2K1 w - - 0 28",
+      "source_game": 965,
+      "white_to_move": {
+        "white_cp": 120,
+        "nodes": 8200,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": -130,
+        "nodes": 8199,
+        "depth": 10
+      },
+      "teacher_turn_delta_cp": 250,
+      "model_white_to_move_cp": -110,
+      "model_black_to_move_cp": -134,
+      "position_only_pair_mae_lower_bound_cp": 113.0
+    },
+    {
+      "source_fen": "4N3/7k/8/3KP3/8/4R3/8/5r2 b - - 12 80",
+      "source_game": 511,
+      "white_to_move": {
+        "white_cp": 578,
+        "nodes": 8203,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": 534,
+        "nodes": 8194,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 44,
+      "model_white_to_move_cp": 518,
+      "model_black_to_move_cp": 494,
+      "position_only_pair_mae_lower_bound_cp": 10.0
+    },
+    {
+      "source_fen": "8/1p5p/1Pk3p1/1r6/1R6/7P/6PK/8 w - - 2 40",
+      "source_game": 1017,
+      "white_to_move": {
+        "white_cp": -61,
+        "nodes": 8199,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": -724,
+        "nodes": 8198,
+        "depth": 14
+      },
+      "teacher_turn_delta_cp": 663,
+      "model_white_to_move_cp": -2,
+      "model_black_to_move_cp": -26,
+      "position_only_pair_mae_lower_bound_cp": 319.5
+    },
+    {
+      "source_fen": "8/1b4Bp/5p2/4p3/kp2P1P1/7P/1PK5/8 b - - 5 53",
+      "source_game": 501,
+      "white_to_move": {
+        "white_cp": 7,
+        "nodes": 8197,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": 1,
+        "nodes": 8198,
+        "depth": 14
+      },
+      "teacher_turn_delta_cp": 6,
+      "model_white_to_move_cp": -2,
+      "model_black_to_move_cp": -26,
+      "position_only_pair_mae_lower_bound_cp": 9.0
+    },
+    {
+      "source_fen": "1rr3k1/1p3q2/p1nb1p1p/2Np1p2/3P1p2/3QP2P/PP4P1/R1R1B1K1 b - - 1 23",
+      "source_game": 600,
+      "white_to_move": {
+        "white_cp": 36,
+        "nodes": 8198,
+        "depth": 9
+      },
+      "black_to_move": {
+        "white_cp": -39,
+        "nodes": 8198,
+        "depth": 10
+      },
+      "teacher_turn_delta_cp": 75,
+      "model_white_to_move_cp": -5,
+      "model_black_to_move_cp": -29,
+      "position_only_pair_mae_lower_bound_cp": 25.5
+    },
+    {
+      "source_fen": "6k1/Rb5r/1r3p2/1p1Pp2p/1P2P2K/5B1P/5P2/8 w - - 2 43",
+      "source_game": 1649,
+      "white_to_move": {
+        "white_cp": -510,
+        "nodes": 8195,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": -540,
+        "nodes": 8194,
+        "depth": 15
+      },
+      "teacher_turn_delta_cp": 30,
+      "model_white_to_move_cp": -329,
+      "model_black_to_move_cp": -353,
+      "position_only_pair_mae_lower_bound_cp": 3.0
+    },
+    {
+      "source_fen": "2r1kb1r/1pp2ppp/5n2/4q3/p2p1NbP/3P4/PP1BBPP1/R2Q1RK1 b k - 1 14",
+      "source_game": 2325,
+      "white_to_move": {
+        "white_cp": 765,
+        "nodes": 8196,
+        "depth": 15
+      },
+      "black_to_move": {
+        "white_cp": 11,
+        "nodes": 8192,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 754,
+      "model_white_to_move_cp": -103,
+      "model_black_to_move_cp": -127,
+      "position_only_pair_mae_lower_bound_cp": 365.0
+    },
+    {
+      "source_fen": "8/8/2Q5/8/8/8/K6k/6q1 b - - 0 65",
+      "source_game": 872,
+      "white_to_move": {
+        "white_cp": 6,
+        "nodes": 8196,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": -1,
+        "nodes": 8206,
+        "depth": 8
+      },
+      "teacher_turn_delta_cp": 7,
+      "model_white_to_move_cp": 41,
+      "model_black_to_move_cp": 17,
+      "position_only_pair_mae_lower_bound_cp": 8.5
+    },
+    {
+      "source_fen": "2r3k1/8/8/4B3/p1p2P2/bpK1P1P1/P6P/3R4 b - - 1 38",
+      "source_game": 712,
+      "white_to_move": {
+        "white_cp": 220,
+        "nodes": 8194,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": 262,
+        "nodes": 8204,
+        "depth": 10
+      },
+      "teacher_turn_delta_cp": -42,
+      "model_white_to_move_cp": 318,
+      "model_black_to_move_cp": 294,
+      "position_only_pair_mae_lower_bound_cp": 33.0
+    },
+    {
+      "source_fen": "2k5/1p3p2/7R/8/2P1p1qp/3pP1r1/3P1QN1/6K1 b - - 1 35",
+      "source_game": 1751,
+      "white_to_move": {
+        "white_cp": 420,
+        "nodes": 8196,
+        "depth": 15
+      },
+      "black_to_move": {
+        "white_cp": 0,
+        "nodes": 8194,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 420,
+      "model_white_to_move_cp": 85,
+      "model_black_to_move_cp": 61,
+      "position_only_pair_mae_lower_bound_cp": 198.0
+    },
+    {
+      "source_fen": "kr1q1r2/1pBb2p1/p1n4p/P2ppP1P/2p3P1/2P1Q3/2PKN1B1/R4R2 b - - 0 35",
+      "source_game": 263,
+      "white_to_move": {
+        "white_cp": 847,
+        "nodes": 8194,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": -136,
+        "nodes": 8193,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 983,
+      "model_white_to_move_cp": 221,
+      "model_black_to_move_cp": 197,
+      "position_only_pair_mae_lower_bound_cp": 479.5
+    },
+    {
+      "source_fen": "r1bq1rk1/p4ppp/4p3/1B1pN3/3P2P1/2P2R1P/PPQN4/2K1b3 b - - 1 20",
+      "source_game": 1929,
+      "white_to_move": {
+        "white_cp": -263,
+        "nodes": 8195,
+        "depth": 9
+      },
+      "black_to_move": {
+        "white_cp": -341,
+        "nodes": 8193,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 78,
+      "model_white_to_move_cp": -201,
+      "model_black_to_move_cp": -225,
+      "position_only_pair_mae_lower_bound_cp": 27.0
+    },
+    {
+      "source_fen": "5r2/1pr2kp1/p3p1p1/2PpK1Rp/P4P1P/2R1P3/2P2P2/8 b - - 8 29",
+      "source_game": 306,
+      "white_to_move": {
+        "white_cp": 170,
+        "nodes": 8195,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": 32,
+        "nodes": 8202,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 138,
+      "model_white_to_move_cp": -62,
+      "model_black_to_move_cp": -86,
+      "position_only_pair_mae_lower_bound_cp": 57.0
+    },
+    {
+      "source_fen": "8/8/6k1/2r3p1/8/6K1/8/7R w - - 4 73",
+      "source_game": 306,
+      "white_to_move": {
+        "white_cp": 0,
+        "nodes": 8196,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": -3,
+        "nodes": 8207,
+        "depth": 11
+      },
+      "teacher_turn_delta_cp": 3,
+      "model_white_to_move_cp": -161,
+      "model_black_to_move_cp": -185,
+      "position_only_pair_mae_lower_bound_cp": 10.5
+    },
+    {
+      "source_fen": "r2q1bk1/2pb1pp1/p1n4p/1p1p4/3PrB1P/P2B4/1PPQ1PP1/R2N1K1R b - - 1 17",
+      "source_game": 1784,
+      "white_to_move": {
+        "white_cp": 140,
+        "nodes": 8192,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": -85,
+        "nodes": 8197,
+        "depth": 11
+      },
+      "teacher_turn_delta_cp": 225,
+      "model_white_to_move_cp": -76,
+      "model_black_to_move_cp": -100,
+      "position_only_pair_mae_lower_bound_cp": 100.5
+    },
+    {
+      "source_fen": "5k2/1R5p/3r1p2/2p1pPp1/r2pP1P1/3P4/3K4/7R w - - 2 40",
+      "source_game": 562,
+      "white_to_move": {
+        "white_cp": 68,
+        "nodes": 8194,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": -327,
+        "nodes": 8197,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 395,
+      "model_white_to_move_cp": -188,
+      "model_black_to_move_cp": -212,
+      "position_only_pair_mae_lower_bound_cp": 185.5
+    },
+    {
+      "source_fen": "8/3k4/5p2/1r6/3B4/8/5K2/8 b - - 1 53",
+      "source_game": 2275,
+      "white_to_move": {
+        "white_cp": -426,
+        "nodes": 8194,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": -413,
+        "nodes": 8198,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": -13,
+      "model_white_to_move_cp": -388,
+      "model_black_to_move_cp": -412,
+      "position_only_pair_mae_lower_bound_cp": 18.5
+    },
+    {
+      "source_fen": "r2qkb1r/p4p1p/2p2np1/1B1bp3/PP6/Q3P3/1B1P1P1P/RN2K1R1 w Qkq - 0 16",
+      "source_game": 238,
+      "white_to_move": {
+        "white_cp": -145,
+        "nodes": 8198,
+        "depth": 9
+      },
+      "black_to_move": {
+        "white_cp": -622,
+        "nodes": 8197,
+        "depth": 15
+      },
+      "teacher_turn_delta_cp": 477,
+      "model_white_to_move_cp": -33,
+      "model_black_to_move_cp": -57,
+      "position_only_pair_mae_lower_bound_cp": 226.5
+    },
+    {
+      "source_fen": "7r/8/4kp2/8/7P/5P1K/7P/8 w - - 1 58",
+      "source_game": 1006,
+      "white_to_move": {
+        "white_cp": -576,
+        "nodes": 8198,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": -626,
+        "nodes": 8194,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 50,
+      "model_white_to_move_cp": -380,
+      "model_black_to_move_cp": -404,
+      "position_only_pair_mae_lower_bound_cp": 13.0
+    },
+    {
+      "source_fen": "1r4k1/ppq2pb1/3p3p/4r3/2P5/3QP1P1/4NP1P/2R2RK1 b - - 4 26",
+      "source_game": 2686,
+      "white_to_move": {
+        "white_cp": 71,
+        "nodes": 8192,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": 0,
+        "nodes": 8200,
+        "depth": 10
+      },
+      "teacher_turn_delta_cp": 71,
+      "model_white_to_move_cp": 51,
+      "model_black_to_move_cp": 27,
+      "position_only_pair_mae_lower_bound_cp": 23.5
+    },
+    {
+      "source_fen": "r3k2r/pp1bbpp1/2n1p2p/q2pP3/2pP2PP/2P1B3/P1P2PB1/1R1QK1NR w Kkq - 3 16",
+      "source_game": 263,
+      "white_to_move": {
+        "white_cp": -70,
+        "nodes": 8195,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": -358,
+        "nodes": 8194,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 288,
+      "model_white_to_move_cp": 13,
+      "model_black_to_move_cp": -11,
+      "position_only_pair_mae_lower_bound_cp": 132.0
+    },
+    {
+      "source_fen": "4R3/p4qpk/P1Q2p2/7p/4PrP1/7P/8/6K1 w - - 2 43",
+      "source_game": 2802,
+      "white_to_move": {
+        "white_cp": 180,
+        "nodes": 8218,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": -155,
+        "nodes": 8195,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 335,
+      "model_white_to_move_cp": 26,
+      "model_black_to_move_cp": 2,
+      "position_only_pair_mae_lower_bound_cp": 155.5
+    },
+    {
+      "source_fen": "r3r1k1/1p2B1pp/p1p1bp2/2Q5/q7/2P5/PPN2PPP/2KRR3 b - - 3 20",
+      "source_game": 320,
+      "white_to_move": {
+        "white_cp": 864,
+        "nodes": 8205,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": 578,
+        "nodes": 8197,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 286,
+      "model_white_to_move_cp": 382,
+      "model_black_to_move_cp": 358,
+      "position_only_pair_mae_lower_bound_cp": 131.0
+    },
+    {
+      "source_fen": "6k1/8/1n3n2/1rp5/p4P2/P6R/2BKP3/8 w - - 2 55",
+      "source_game": 95,
+      "white_to_move": {
+        "white_cp": -85,
+        "nodes": 8200,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": -216,
+        "nodes": 8192,
+        "depth": 10
+      },
+      "teacher_turn_delta_cp": 131,
+      "model_white_to_move_cp": -117,
+      "model_black_to_move_cp": -141,
+      "position_only_pair_mae_lower_bound_cp": 53.5
+    },
+    {
+      "source_fen": "6k1/p2b1p2/3q2p1/1p1P2P1/7P/PP2Q3/5R2/6K1 w - - 6 43",
+      "source_game": 2498,
+      "white_to_move": {
+        "white_cp": 440,
+        "nodes": 8192,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": 229,
+        "nodes": 8198,
+        "depth": 10
+      },
+      "teacher_turn_delta_cp": 211,
+      "model_white_to_move_cp": 312,
+      "model_black_to_move_cp": 288,
+      "position_only_pair_mae_lower_bound_cp": 93.5
+    },
+    {
+      "source_fen": "r1bq1rk1/1p1nppbp/5np1/pBpp4/P2P4/1PP1PN2/2Q2PPP/RNB2RK1 w - - 3 10",
+      "source_game": 40,
+      "white_to_move": {
+        "white_cp": 36,
+        "nodes": 8197,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": -2,
+        "nodes": 8193,
+        "depth": 10
+      },
+      "teacher_turn_delta_cp": 38,
+      "model_white_to_move_cp": -23,
+      "model_black_to_move_cp": -47,
+      "position_only_pair_mae_lower_bound_cp": 7.0
+    },
+    {
+      "source_fen": "8/8/3kn1K1/8/8/6P1/8/8 b - - 9 71",
+      "source_game": 1941,
+      "white_to_move": {
+        "white_cp": 2,
+        "nodes": 8200,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": 1,
+        "nodes": 8199,
+        "depth": 9
+      },
+      "teacher_turn_delta_cp": 1,
+      "model_white_to_move_cp": -246,
+      "model_black_to_move_cp": -270,
+      "position_only_pair_mae_lower_bound_cp": 11.5
+    },
+    {
+      "source_fen": "2r5/8/5K2/8/3k4/7R/8/8 w - - 1 91",
+      "source_game": 320,
+      "white_to_move": {
+        "white_cp": 3,
+        "nodes": 8197,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": -1,
+        "nodes": 8192,
+        "depth": 11
+      },
+      "teacher_turn_delta_cp": 4,
+      "model_white_to_move_cp": -10,
+      "model_black_to_move_cp": -34,
+      "position_only_pair_mae_lower_bound_cp": 10.0
+    },
+    {
+      "source_fen": "1br3k1/6pp/1p4r1/1P6/p1P1bPp1/8/5RPP/R1B1N1K1 w - - 0 31",
+      "source_game": 1655,
+      "white_to_move": {
+        "white_cp": -27,
+        "nodes": 8198,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": -266,
+        "nodes": 8203,
+        "depth": 10
+      },
+      "teacher_turn_delta_cp": 239,
+      "model_white_to_move_cp": -87,
+      "model_black_to_move_cp": -111,
+      "position_only_pair_mae_lower_bound_cp": 107.5
+    },
+    {
+      "source_fen": "R7/3k1p1R/2p5/2Bb1r1p/1P6/6P1/3b3P/6K1 w - - 3 37",
+      "source_game": 1829,
+      "white_to_move": {
+        "white_cp": 318,
+        "nodes": 8196,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": 273,
+        "nodes": 8194,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 45,
+      "model_white_to_move_cp": 273,
+      "model_black_to_move_cp": 249,
+      "position_only_pair_mae_lower_bound_cp": 10.5
+    },
+    {
+      "source_fen": "8/4k3/8/8/5P2/6P1/1nr3B1/6K1 b - - 18 65",
+      "source_game": 2325,
+      "white_to_move": {
+        "white_cp": -453,
+        "nodes": 8192,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": -506,
+        "nodes": 8195,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 53,
+      "model_white_to_move_cp": -188,
+      "model_black_to_move_cp": -212,
+      "position_only_pair_mae_lower_bound_cp": 14.5
+    },
+    {
+      "source_fen": "7r/2q1kp1p/2bbpp2/1p1p4/1PpP4/2P1P2P/2QNBPP1/2R3K1 b - - 6 20",
+      "source_game": 609,
+      "white_to_move": {
+        "white_cp": 36,
+        "nodes": 8194,
+        "depth": 8
+      },
+      "black_to_move": {
+        "white_cp": -1,
+        "nodes": 8197,
+        "depth": 9
+      },
+      "teacher_turn_delta_cp": 37,
+      "model_white_to_move_cp": 76,
+      "model_black_to_move_cp": 52,
+      "position_only_pair_mae_lower_bound_cp": 6.5
+    },
+    {
+      "source_fen": "2rBk2r/1p1n1ppp/p3p3/3p4/3Pb3/PN2P3/1P1K1PPP/2R2B1R b k - 0 17",
+      "source_game": 1514,
+      "white_to_move": {
+        "white_cp": 843,
+        "nodes": 8196,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": 31,
+        "nodes": 8195,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 812,
+      "model_white_to_move_cp": 369,
+      "model_black_to_move_cp": 345,
+      "position_only_pair_mae_lower_bound_cp": 394.0
+    },
+    {
+      "source_fen": "r1bq3r/1k2n1b1/1pn1p3/p2pP1Qp/P2P4/1N6/1P1BBPP1/R1R1N1K1 b - - 0 20",
+      "source_game": 2539,
+      "white_to_move": {
+        "white_cp": 746,
+        "nodes": 8198,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": 48,
+        "nodes": 8204,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 698,
+      "model_white_to_move_cp": 263,
+      "model_black_to_move_cp": 239,
+      "position_only_pair_mae_lower_bound_cp": 337.0
+    },
+    {
+      "source_fen": "r2qr2k/1p4p1/4Qn1p/2pp1P2/2P4N/Pp5P/1Bb3P1/4RRK1 w - - 1 28",
+      "source_game": 352,
+      "white_to_move": {
+        "white_cp": -239,
+        "nodes": 8193,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": -760,
+        "nodes": 8199,
+        "depth": 14
+      },
+      "teacher_turn_delta_cp": 521,
+      "model_white_to_move_cp": -164,
+      "model_black_to_move_cp": -188,
+      "position_only_pair_mae_lower_bound_cp": 248.5
+    },
+    {
+      "source_fen": "3R4/5k1p/2p3p1/Pp1b4/3N4/r1P3B1/2K2P1P/8 b - - 0 38",
+      "source_game": 320,
+      "white_to_move": {
+        "white_cp": 551,
+        "nodes": 8193,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": 471,
+        "nodes": 8194,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 80,
+      "model_white_to_move_cp": 385,
+      "model_black_to_move_cp": 361,
+      "position_only_pair_mae_lower_bound_cp": 28.0
+    },
+    {
+      "source_fen": "k2r3r/1pb2p2/p4P2/2pp3n/8/P1PBPN2/1P1K1P2/2R4R w - - 1 40",
+      "source_game": 1443,
+      "white_to_move": {
+        "white_cp": 173,
+        "nodes": 8194,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": 42,
+        "nodes": 8193,
+        "depth": 8
+      },
+      "teacher_turn_delta_cp": 131,
+      "model_white_to_move_cp": 78,
+      "model_black_to_move_cp": 54,
+      "position_only_pair_mae_lower_bound_cp": 53.5
+    },
+    {
+      "source_fen": "2k3rr/1bqn1p2/p5p1/1p1pp1P1/2nN4/2P3Bp/5P1P/R1Q1RBK1 b - - 0 32",
+      "source_game": 1706,
+      "white_to_move": {
+        "white_cp": -391,
+        "nodes": 8193,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": -469,
+        "nodes": 8197,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 78,
+      "model_white_to_move_cp": -125,
+      "model_black_to_move_cp": -149,
+      "position_only_pair_mae_lower_bound_cp": 27.0
+    },
+    {
+      "source_fen": "4kr2/1pq1p3/3p3p/p2P1Qp1/P1p1P1P1/1Pbn1NP1/5PK1/1R3R2 w - - 0 40",
+      "source_game": 1569,
+      "white_to_move": {
+        "white_cp": 512,
+        "nodes": 8195,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": -672,
+        "nodes": 8200,
+        "depth": 14
+      },
+      "teacher_turn_delta_cp": 1184,
+      "model_white_to_move_cp": 177,
+      "model_black_to_move_cp": 153,
+      "position_only_pair_mae_lower_bound_cp": 580.0
+    },
+    {
+      "source_fen": "4r2k/1p4pp/2n5/1N6/4P3/P4P1P/2nB2PK/5B2 b - - 0 35",
+      "source_game": 1085,
+      "white_to_move": {
+        "white_cp": 21,
+        "nodes": 8200,
+        "depth": 9
+      },
+      "black_to_move": {
+        "white_cp": 1,
+        "nodes": 8201,
+        "depth": 11
+      },
+      "teacher_turn_delta_cp": 20,
+      "model_white_to_move_cp": 122,
+      "model_black_to_move_cp": 98,
+      "position_only_pair_mae_lower_bound_cp": 2.0
+    },
+    {
+      "source_fen": "r3kb1r/p1qn1pp1/2p1p2p/1p1nP2P/2pP4/2N3N1/PP2QPP1/R1BR2K1 b kq - 2 14",
+      "source_game": 1921,
+      "white_to_move": {
+        "white_cp": 14,
+        "nodes": 8193,
+        "depth": 9
+      },
+      "black_to_move": {
+        "white_cp": -50,
+        "nodes": 8192,
+        "depth": 10
+      },
+      "teacher_turn_delta_cp": 64,
+      "model_white_to_move_cp": -13,
+      "model_black_to_move_cp": -37,
+      "position_only_pair_mae_lower_bound_cp": 20.0
+    },
+    {
+      "source_fen": "6k1/3b1pp1/pbPr4/1p5p/1P3P1P/P4P2/R3R1K1/8 b - - 0 41",
+      "source_game": 1784,
+      "white_to_move": {
+        "white_cp": 540,
+        "nodes": 8194,
+        "depth": 15
+      },
+      "black_to_move": {
+        "white_cp": -513,
+        "nodes": 8200,
+        "depth": 14
+      },
+      "teacher_turn_delta_cp": 1053,
+      "model_white_to_move_cp": -98,
+      "model_black_to_move_cp": -122,
+      "position_only_pair_mae_lower_bound_cp": 514.5
+    },
+    {
+      "source_fen": "2r1k2r/1p1bppb1/p5p1/3pP2p/3P4/1PN1P3/1P2B1P1/R1B2R1K w k - 0 19",
+      "source_game": 2201,
+      "white_to_move": {
+        "white_cp": 544,
+        "nodes": 8202,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": 551,
+        "nodes": 8196,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": -7,
+      "model_white_to_move_cp": 150,
+      "model_black_to_move_cp": 126,
+      "position_only_pair_mae_lower_bound_cp": 15.5
+    },
+    {
+      "source_fen": "4r1k1/5pp1/3R2b1/p6p/1pp2N1P/P4P2/1PP3P1/2K5 b - - 0 32",
+      "source_game": 1312,
+      "white_to_move": {
+        "white_cp": 85,
+        "nodes": 8196,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": -8,
+        "nodes": 8201,
+        "depth": 14
+      },
+      "teacher_turn_delta_cp": 93,
+      "model_white_to_move_cp": 58,
+      "model_black_to_move_cp": 34,
+      "position_only_pair_mae_lower_bound_cp": 34.5
+    },
+    {
+      "source_fen": "3k1r2/1b6/pP1pr1p1/P1p1pP1p/2P4P/2NKPP2/3R4/5R2 b - - 0 41",
+      "source_game": 2780,
+      "white_to_move": {
+        "white_cp": 743,
+        "nodes": 8200,
+        "depth": 14
+      },
+      "black_to_move": {
+        "white_cp": 280,
+        "nodes": 8194,
+        "depth": 11
+      },
+      "teacher_turn_delta_cp": 463,
+      "model_white_to_move_cp": 280,
+      "model_black_to_move_cp": 256,
+      "position_only_pair_mae_lower_bound_cp": 219.5
+    },
+    {
+      "source_fen": "8/8/8/2K5/8/3r4/7k/8 w - - 24 91",
+      "source_game": 348,
+      "white_to_move": {
+        "white_cp": -432,
+        "nodes": 8199,
+        "depth": 12
+      },
+      "black_to_move": {
+        "white_cp": -443,
+        "nodes": 8200,
+        "depth": 12
+      },
+      "teacher_turn_delta_cp": 11,
+      "model_white_to_move_cp": -584,
+      "model_black_to_move_cp": -608,
+      "position_only_pair_mae_lower_bound_cp": 6.5
+    },
+    {
+      "source_fen": "4R3/7k/7p/p2r1p2/Pb1Bp3/4P3/5PKP/8 b - - 1 35",
+      "source_game": 1183,
+      "white_to_move": {
+        "white_cp": 68,
+        "nodes": 8202,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": 70,
+        "nodes": 8197,
+        "depth": 8
+      },
+      "teacher_turn_delta_cp": -2,
+      "model_white_to_move_cp": 32,
+      "model_black_to_move_cp": 8,
+      "position_only_pair_mae_lower_bound_cp": 13.0
+    },
+    {
+      "source_fen": "2k2br1/pp6/1qp5/3pPp2/1PP1n3/3BP1p1/P1Q2P2/1R2K2R w K - 0 22",
+      "source_game": 489,
+      "white_to_move": {
+        "white_cp": 74,
+        "nodes": 8199,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": -435,
+        "nodes": 8197,
+        "depth": 13
+      },
+      "teacher_turn_delta_cp": 509,
+      "model_white_to_move_cp": 164,
+      "model_black_to_move_cp": 140,
+      "position_only_pair_mae_lower_bound_cp": 242.5
+    },
+    {
+      "source_fen": "1k2r3/p6p/R4b2/2Pr4/2RP1pp1/1P1K4/6PP/8 b - - 1 35",
+      "source_game": 2634,
+      "white_to_move": {
+        "white_cp": 503,
+        "nodes": 8194,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": -380,
+        "nodes": 8197,
+        "depth": 11
+      },
+      "teacher_turn_delta_cp": 883,
+      "model_white_to_move_cp": -249,
+      "model_black_to_move_cp": -273,
+      "position_only_pair_mae_lower_bound_cp": 429.5
+    },
+    {
+      "source_fen": "r5k1/5pp1/7p/p7/Pb2p1P1/4P3/1B3P1P/2R3K1 b - - 2 29",
+      "source_game": 1183,
+      "white_to_move": {
+        "white_cp": 73,
+        "nodes": 8193,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": 39,
+        "nodes": 8195,
+        "depth": 10
+      },
+      "teacher_turn_delta_cp": 34,
+      "model_white_to_move_cp": 29,
+      "model_black_to_move_cp": 5,
+      "position_only_pair_mae_lower_bound_cp": 5.0
+    },
+    {
+      "source_fen": "6k1/6p1/5p2/7p/R2P4/4K1P1/P4P2/7r w - - 1 34",
+      "source_game": 2098,
+      "white_to_move": {
+        "white_cp": 125,
+        "nodes": 8195,
+        "depth": 11
+      },
+      "black_to_move": {
+        "white_cp": 54,
+        "nodes": 8194,
+        "depth": 9
+      },
+      "teacher_turn_delta_cp": 71,
+      "model_white_to_move_cp": 125,
+      "model_black_to_move_cp": 101,
+      "position_only_pair_mae_lower_bound_cp": 23.5
+    },
+    {
+      "source_fen": "6k1/R7/7p/p4r1P/5P1K/6P1/8/8 w - - 12 64",
+      "source_game": 1566,
+      "white_to_move": {
+        "white_cp": 82,
+        "nodes": 8198,
+        "depth": 10
+      },
+      "black_to_move": {
+        "white_cp": 118,
+        "nodes": 8198,
+        "depth": 11
+      },
+      "teacher_turn_delta_cp": -36,
+      "model_white_to_move_cp": 179,
+      "model_black_to_move_cp": 155,
+      "position_only_pair_mae_lower_bound_cp": 30.0
+    },
+    {
+      "source_fen": "7r/4kp2/3b2p1/1pr1p1P1/7P/P3PN2/1K1R4/3R4 b - - 0 35",
+      "source_game": 2197,
+      "white_to_move": {
+        "white_cp": 534,
+        "nodes": 8192,
+        "depth": 15
+      },
+      "black_to_move": {
+        "white_cp": -56,
+        "nodes": 8198,
+        "depth": 9
+      },
+      "teacher_turn_delta_cp": 590,
+      "model_white_to_move_cp": -53,
+      "model_black_to_move_cp": -77,
+      "position_only_pair_mae_lower_bound_cp": 283.0
+    },
+    {
+      "source_fen": "1r6/2pk4/3b1pp1/2p2n1p/2r2P1P/2P1B3/P1B2P2/KR5R b - - 1 29",
+      "source_game": 2661,
+      "white_to_move": {
+        "white_cp": 712,
+        "nodes": 8195,
+        "depth": 13
+      },
+      "black_to_move": {
+        "white_cp": -51,
+        "nodes": 8200,
+        "depth": 8
+      },
+      "teacher_turn_delta_cp": 763,
+      "model_white_to_move_cp": 15,
+      "model_black_to_move_cp": -9,
+      "position_only_pair_mae_lower_bound_cp": 369.5
+    }
+  ],
+  "positions_examined": 136,
+  "arguments": {
+    "data": "artifacts/data/teacher-balanced-50k-v1-classical.jsonl",
+    "model": "artifacts/training/king-context-balanced-slow-v1/model.ann",
+    "pairs": 128,
+    "nodes": 8192,
+    "seed": 20261018,
+    "output": "artifacts/validation/turn-dependence-128-v1.json"
+  },
+  "teacher": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "teacher_options": {
+    "Threads": 1,
+    "Hash": 64
+  },
+  "data_sha256": "6e8611691e7edad66f038a655eb38d296d72c680cd5c765ff144935c438de6de",
+  "model_sha256": "f8cc607580c3043c6b8870a75a0a29364d6a99167ba7b504ca968f49ce67295f",
+  "source_sha256": "4c01ffd13f26f8c1c17ebfd5f0b250266f41d58e66b6c2b0fe26b6a13f4c233f",
+  "mean_abs_teacher_turn_delta_cp": 263.0078125,
+  "mean_position_only_mae_lower_bound_cp": 125.36328125,
+  "median_position_only_mae_lower_bound_cp": 29.0,
+  "interpretation": "Counterfactual structurally legal FEN pairs, without game history. Bounded teacher-label representational diagnostic, not a strength test or general MAE lower bound on the original dataset."
+}

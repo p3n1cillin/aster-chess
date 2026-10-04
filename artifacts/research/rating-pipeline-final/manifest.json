@@ -1,0 +1,60 @@
+{
+  "source_files": [
+    {
+      "path": "artifacts/research/rating-pipeline-final/match.py",
+      "sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8"
+    },
+    {
+      "path": "artifacts/research/rating-pipeline-final/audit_match.py",
+      "sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6"
+    },
+    {
+      "path": "artifacts/research/rating-pipeline-final/run_rating.py",
+      "sha256": "6e8a31adefd0aeb5d51eac2f5672396f4518f779947713f86dac138ff00f661a"
+    },
+    {
+      "path": "artifacts/research/rating-pipeline-final/analyze_rating.py",
+      "sha256": "f6fe53073c006e91760b885adab9803f92cd50fa3c3a7ba6ada90f0a8e5b8d13"
+    },
+    {
+      "path": "artifacts/research/rating-pipeline-final/verify_rating_result.py",
+      "sha256": "9f396ba3ae72748e54732c152c84bf88129ce93063f483ebc06ef5300b958910"
+    },
+    {
+      "path": "artifacts/research/rating-pipeline-final/test_rating_analysis.py",
+      "sha256": "b59fa81582e6f1f5e3e3c311fd75284349fa02a402e63402bfb4ce28894f0f77"
+    },
+    {
+      "path": "artifacts/research/rating-pipeline-final/test_match_strength.py",
+      "sha256": "021420375f1370602b636947db21029f0df720db757b9c9c6ac71bf4c535f0a3"
+    },
+    {
+      "path": "artifacts/research/rating-pipeline-final/test_match_setups.py",
+      "sha256": "f4102a181b7a591aebef5e5d9a99772d00db258410f5478b0b13199cfbd0e552"
+    },
+    {
+      "path": "artifacts/research/rating-pipeline-final/split_rating_suite.py",
+      "sha256": "2e9435aec82297f3759aada40e3691cc3b709686d63efbb759b2c262bf8ce5f6"
+    },
+    {
+      "path": "artifacts/research/rating-pipeline-final/generate_openings.py",
+      "sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746"
+    },
+    {
+      "path": "artifacts/research/rating-pipeline-final/audit_openings.py",
+      "sha256": "0c97723cf8a0404f9e3681a90f5d9d09dcfc4978721748222ee80a679a6fca5d"
+    },
+    {
+      "path": "artifacts/research/rating-pipeline-final/uci_client.py",
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "artifacts/research/rating-pipeline-final/verify.py",
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    },
+    {
+      "path": "artifacts/research/rating-pipeline-final/preserve_rating_experiment.py",
+      "sha256": "61423d6f171582c4722f24daaef9827869134703089bfa5985074c757d49c9fb"
+    }
+  ]
+}

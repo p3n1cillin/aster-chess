@@ -1,0 +1,1582 @@
+{
+  "timestamp_utc": "2026-10-04T02:57:41.194068+00:00",
+  "engines": [
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\king-context-vector-dev\\Aster.exe",
+      "sha256": "efde0c3182c488052d4d754a85afc52e2a06ddcb752948734821a52376e4593e",
+      "name": "Aster 0.6.0-context-dev",
+      "options": {
+        "Hash": 64,
+        "Threads": 1,
+        "Move Overhead": 0,
+        "EvalFile": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\training\\king-context-balanced-slow-v1\\model.ann"
+      },
+      "model": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\training\\king-context-balanced-slow-v1\\model.ann",
+      "model_sha256": "f8cc607580c3043c6b8870a75a0a29364d6a99167ba7b504ca968f49ce67295f"
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\king-context-dev\\Aster.exe",
+      "sha256": "c598d27d407890c31d9d8498afb22d86d8e719d7d33c4ce438d14d72909aed34",
+      "name": "Aster 0.6.0-context-dev",
+      "options": {
+        "Hash": 64,
+        "Threads": 1,
+        "Move Overhead": 0,
+        "EvalFile": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\training\\king-context-balanced-slow-v1\\model.ann"
+      },
+      "model": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\training\\king-context-balanced-slow-v1\\model.ann",
+      "model_sha256": "f8cc607580c3043c6b8870a75a0a29364d6a99167ba7b504ca968f49ce67295f"
+    }
+  ],
+  "suite": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v1.json",
+  "suite_sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de",
+  "depth": 8,
+  "summary": {
+    "positions": 64,
+    "same_move": 64,
+    "same_score": 64,
+    "candidate_nodes": 5854047,
+    "candidate_elapsed_seconds": 4.691,
+    "opponent_nodes": 5854047,
+    "opponent_elapsed_seconds": 4.914
+  },
+  "positions": [
+    {
+      "id": "opening-026",
+      "fen": "r1bqkb1r/pp3p2/2n3pn/2p1p2p/3pPP2/2PP2P1/PP3NBP/RNBQK2R w KQkq - 0 9",
+      "candidate": {
+        "move": "f4f5",
+        "white_cp": -4,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 175700,
+        "reported_seconds": 0.431,
+        "elapsed_seconds": 0.459156
+      },
+      "opponent": {
+        "move": "f4f5",
+        "white_cp": -4,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 175700,
+        "reported_seconds": 0.424,
+        "elapsed_seconds": 0.435168
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-030",
+      "fen": "rn1q1rk1/pbp2pbp/1p2pnp1/3p4/1P1P4/2N1PN2/PBP1BPPP/R2Q1RK1 w - - 0 9",
+      "opponent": {
+        "move": "d1d2",
+        "white_cp": 7,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 88747,
+        "reported_seconds": 0.063,
+        "elapsed_seconds": 0.065647
+      },
+      "candidate": {
+        "move": "d1d2",
+        "white_cp": 7,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 88747,
+        "reported_seconds": 0.06,
+        "elapsed_seconds": 0.062127
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-048",
+      "fen": "r1bqkb1r/1p2pp1p/p1pp1np1/8/4PP2/2NP4/PPP1QP1P/R1B1KBR1 w Qkq - 0 9",
+      "candidate": {
+        "move": "c1d2",
+        "white_cp": 25,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 47345,
+        "reported_seconds": 0.034,
+        "elapsed_seconds": 0.036331
+      },
+      "opponent": {
+        "move": "c1d2",
+        "white_cp": 25,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 47345,
+        "reported_seconds": 0.036,
+        "elapsed_seconds": 0.037854
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-001",
+      "fen": "rn1qk2r/pp2bppp/4bn2/2pp4/3P4/2N1PN2/PP2BPPP/R1BQK2R w KQkq - 6 9",
+      "opponent": {
+        "move": "d1b3",
+        "white_cp": 45,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 268448,
+        "reported_seconds": 0.218,
+        "elapsed_seconds": 0.219799
+      },
+      "candidate": {
+        "move": "d1b3",
+        "white_cp": 45,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 268448,
+        "reported_seconds": 0.198,
+        "elapsed_seconds": 0.200099
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-053",
+      "fen": "rnbqk2r/1p3ppp/p2bpn2/2pp4/P2P3B/N1P2N2/1P2PPPP/R2QKB1R w KQkq - 0 9",
+      "candidate": {
+        "move": "d4c5",
+        "white_cp": -6,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 90111,
+        "reported_seconds": 0.066,
+        "elapsed_seconds": 0.068677
+      },
+      "opponent": {
+        "move": "d4c5",
+        "white_cp": -6,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 90111,
+        "reported_seconds": 0.07,
+        "elapsed_seconds": 0.072644
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-049",
+      "fen": "rnq1kb1r/pp3ppp/4pn2/3p4/3P4/NQ3P2/PP2PP1P/R1B1KB1R w KQkq - 0 9",
+      "opponent": {
+        "move": "c1d2",
+        "white_cp": 7,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 85806,
+        "reported_seconds": 0.071,
+        "elapsed_seconds": 0.072822
+      },
+      "candidate": {
+        "move": "c1d2",
+        "white_cp": 7,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 85806,
+        "reported_seconds": 0.065,
+        "elapsed_seconds": 0.067387
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-022",
+      "fen": "rn2k2r/pp1b1ppp/1q2pn2/2pp4/3P4/2P1PNb1/PPQN1PPP/R3KB1R w KQkq - 0 9",
+      "candidate": {
+        "move": "h2g3",
+        "white_cp": 47,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 53736,
+        "reported_seconds": 0.04,
+        "elapsed_seconds": 0.042124
+      },
+      "opponent": {
+        "move": "h2g3",
+        "white_cp": 47,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 53736,
+        "reported_seconds": 0.042,
+        "elapsed_seconds": 0.044317
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-032",
+      "fen": "r2qk2r/pp2bppp/2np1n2/2p1p3/2P3bP/P2P1NP1/1P2PP2/RNBQKB1R w KQkq - 5 9",
+      "opponent": {
+        "move": "b1c3",
+        "white_cp": -30,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 62126,
+        "reported_seconds": 0.05,
+        "elapsed_seconds": 0.052428
+      },
+      "candidate": {
+        "move": "b1c3",
+        "white_cp": -30,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 62126,
+        "reported_seconds": 0.046,
+        "elapsed_seconds": 0.048387
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-016",
+      "fen": "r1b1k2r/ppppqppp/5n2/1B2b3/3QP3/2N5/PPP2PPP/R1B2RK1 w kq - 3 9",
+      "candidate": {
+        "move": "d4d3",
+        "white_cp": -21,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 59064,
+        "reported_seconds": 0.045,
+        "elapsed_seconds": 0.046865
+      },
+      "opponent": {
+        "move": "d4d3",
+        "white_cp": -21,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 59064,
+        "reported_seconds": 0.046,
+        "elapsed_seconds": 0.048581
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-005",
+      "fen": "r1bqk1nr/pp2b2p/2n1pp2/2ppP1N1/P2P1Pp1/8/1PP1B1PP/RNBQK2R w KQkq - 0 9",
+      "opponent": {
+        "move": "e5f6",
+        "white_cp": -7,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 52286,
+        "reported_seconds": 0.044,
+        "elapsed_seconds": 0.046281
+      },
+      "candidate": {
+        "move": "e5f6",
+        "white_cp": -7,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 52286,
+        "reported_seconds": 0.042,
+        "elapsed_seconds": 0.043911
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-027",
+      "fen": "rn1qk1nr/pp2bpp1/3pb2p/4p3/4P3/1PN2N2/P3BPPP/R1BQ1RK1 w kq - 0 9",
+      "candidate": {
+        "move": "c3d5",
+        "white_cp": 28,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 125705,
+        "reported_seconds": 0.088,
+        "elapsed_seconds": 0.090215
+      },
+      "opponent": {
+        "move": "c3d5",
+        "white_cp": 28,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 125705,
+        "reported_seconds": 0.094,
+        "elapsed_seconds": 0.096136
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-003",
+      "fen": "rnbqk2r/1p2bppp/4pn2/p2p4/2Pp4/1PN1PN2/PBQ2PPP/R3KB1R w KQkq - 0 9",
+      "opponent": {
+        "move": "f3d4",
+        "white_cp": 17,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 41159,
+        "reported_seconds": 0.031,
+        "elapsed_seconds": 0.032756
+      },
+      "candidate": {
+        "move": "f3d4",
+        "white_cp": 17,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 41159,
+        "reported_seconds": 0.028,
+        "elapsed_seconds": 0.03051
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-047",
+      "fen": "r1bqk2r/pp3ppp/2nbpn2/2pp4/3P4/P1P2NPP/1P1BPP2/RN1QKB1R w KQkq - 3 9",
+      "candidate": {
+        "move": "d2e3",
+        "white_cp": -62,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 74628,
+        "reported_seconds": 0.051,
+        "elapsed_seconds": 0.052608
+      },
+      "opponent": {
+        "move": "d2e3",
+        "white_cp": -62,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 74628,
+        "reported_seconds": 0.053,
+        "elapsed_seconds": 0.054889
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-050",
+      "fen": "1rb1kb1r/pp2pp1p/2p2np1/q2pN3/2PP2P1/2N5/PP2PP1P/R2QKB1R w KQk - 1 9",
+      "opponent": {
+        "move": "g4g5",
+        "white_cp": -60,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 48898,
+        "reported_seconds": 0.038,
+        "elapsed_seconds": 0.039968
+      },
+      "candidate": {
+        "move": "g4g5",
+        "white_cp": -60,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 48898,
+        "reported_seconds": 0.036,
+        "elapsed_seconds": 0.037955
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-029",
+      "fen": "r2qkbnr/pp2p1pp/2p2p2/3pBb2/8/2PP2P1/PP2PPBP/RN1QK2R w KQkq - 0 9",
+      "candidate": {
+        "move": "e5d4",
+        "white_cp": -20,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 73602,
+        "reported_seconds": 0.051,
+        "elapsed_seconds": 0.052854
+      },
+      "opponent": {
+        "move": "e5d4",
+        "white_cp": -20,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 73602,
+        "reported_seconds": 0.056,
+        "elapsed_seconds": 0.058072
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-063",
+      "fen": "rnbq1rk1/1pp1b1pp/3ppn2/5p2/p2P1B1P/2P1PN2/PP1N1PP1/1R1QKB1R w K - 1 9",
+      "opponent": {
+        "move": "d1c2",
+        "white_cp": 24,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 111987,
+        "reported_seconds": 0.081,
+        "elapsed_seconds": 0.083134
+      },
+      "candidate": {
+        "move": "d1c2",
+        "white_cp": 24,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 111987,
+        "reported_seconds": 0.076,
+        "elapsed_seconds": 0.078386
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-018",
+      "fen": "r2qkb1r/1bpn1pp1/p3pn1p/1p1pN3/1P1P4/P7/1BP1PPPP/RN1QKB1R w KQkq - 2 9",
+      "candidate": {
+        "move": "e2e3",
+        "white_cp": -51,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 112319,
+        "reported_seconds": 0.081,
+        "elapsed_seconds": 0.083185
+      },
+      "opponent": {
+        "move": "e2e3",
+        "white_cp": -51,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 112319,
+        "reported_seconds": 0.084,
+        "elapsed_seconds": 0.086292
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-038",
+      "fen": "r1b1kb1r/2qp1ppp/p1n1pn2/1p6/2p1P3/2P2N2/PPBPQPPP/RNB2RK1 w kq - 4 9",
+      "opponent": {
+        "move": "a2a4",
+        "white_cp": 36,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 69874,
+        "reported_seconds": 0.053,
+        "elapsed_seconds": 0.055311
+      },
+      "candidate": {
+        "move": "a2a4",
+        "white_cp": 36,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 69874,
+        "reported_seconds": 0.05,
+        "elapsed_seconds": 0.052235
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-043",
+      "fen": "rnbq1rk1/pp3ppp/4pn2/2b5/2p5/P3PN2/1PQ1BPPP/RNB1K2R w KQ - 0 9",
+      "candidate": {
+        "move": "e2c4",
+        "white_cp": -26,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 104895,
+        "reported_seconds": 0.075,
+        "elapsed_seconds": 0.077113
+      },
+      "opponent": {
+        "move": "e2c4",
+        "white_cp": -26,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 104895,
+        "reported_seconds": 0.079,
+        "elapsed_seconds": 0.081002
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-024",
+      "fen": "r1bq1rk1/pp2bppp/2n1p3/2pn4/8/2N3P1/PPPPNPBP/R1BQR1K1 w - - 0 9",
+      "opponent": {
+        "move": "c3d5",
+        "white_cp": 122,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 15979,
+        "reported_seconds": 0.012,
+        "elapsed_seconds": 0.014008
+      },
+      "candidate": {
+        "move": "c3d5",
+        "white_cp": 122,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 15979,
+        "reported_seconds": 0.011,
+        "elapsed_seconds": 0.013319
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-052",
+      "fen": "r1bqk1nr/p2pb1pp/8/1pp2p2/QnP1p3/2N1P3/PP1P1PPP/RBB1K1NR w KQkq - 0 9",
+      "candidate": {
+        "move": "c4b5",
+        "white_cp": 83,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 78824,
+        "reported_seconds": 0.058,
+        "elapsed_seconds": 0.059811
+      },
+      "opponent": {
+        "move": "c4b5",
+        "white_cp": 83,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 78824,
+        "reported_seconds": 0.064,
+        "elapsed_seconds": 0.066557
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-012",
+      "fen": "r1b1kb1r/p1p1qppp/2pn4/3pN3/8/2PP4/PPQ2PPP/RNB1K2R w KQkq - 1 9",
+      "opponent": {
+        "move": "c2e2",
+        "white_cp": -20,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 40358,
+        "reported_seconds": 0.032,
+        "elapsed_seconds": 0.034337
+      },
+      "candidate": {
+        "move": "c2e2",
+        "white_cp": -20,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 40358,
+        "reported_seconds": 0.032,
+        "elapsed_seconds": 0.033696
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-046",
+      "fen": "r1bqk2r/2p1bppp/2pp1n2/p7/4P3/2NB4/PPP2PPP/R1BQK2R w KQkq - 2 9",
+      "candidate": {
+        "move": "e1g1",
+        "white_cp": 51,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 48802,
+        "reported_seconds": 0.032,
+        "elapsed_seconds": 0.034059
+      },
+      "opponent": {
+        "move": "e1g1",
+        "white_cp": 51,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 48802,
+        "reported_seconds": 0.034,
+        "elapsed_seconds": 0.036402
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-009",
+      "fen": "rn1qkb1r/1pp2ppp/4p3/p2p1b1n/3P1B2/2P1PN2/PP1N1PPP/R2QKB1R w KQk - 6 9",
+      "opponent": {
+        "move": "f4g5",
+        "white_cp": 61,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 99255,
+        "reported_seconds": 0.075,
+        "elapsed_seconds": 0.076651
+      },
+      "candidate": {
+        "move": "f4g5",
+        "white_cp": 61,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 99255,
+        "reported_seconds": 0.07,
+        "elapsed_seconds": 0.072529
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-031",
+      "fen": "r1bqk2r/pp2bppp/2ppnn2/4p3/8/2PP1NP1/PPQ1PPBP/RNB2RK1 w kq - 1 9",
+      "candidate": {
+        "move": "b1a3",
+        "white_cp": 24,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 159839,
+        "reported_seconds": 0.115,
+        "elapsed_seconds": 0.11664
+      },
+      "opponent": {
+        "move": "b1a3",
+        "white_cp": 24,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 159839,
+        "reported_seconds": 0.12,
+        "elapsed_seconds": 0.122403
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-042",
+      "fen": "r2q1rk1/pb1pbppp/1pn1pn2/2p5/3P4/1PP1PN2/PB2BPPP/RN1Q1RK1 w - - 7 9",
+      "opponent": {
+        "move": "b1a3",
+        "white_cp": -39,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 90093,
+        "reported_seconds": 0.064,
+        "elapsed_seconds": 0.066181
+      },
+      "candidate": {
+        "move": "b1a3",
+        "white_cp": -39,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 90093,
+        "reported_seconds": 0.061,
+        "elapsed_seconds": 0.062467
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-034",
+      "fen": "rnbqk2r/pp1nbppp/2pp4/8/4P3/2NB1N1P/PP3PP1/R1BQ1RK1 w kq - 2 9",
+      "candidate": {
+        "move": "c1f4",
+        "white_cp": 33,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 172293,
+        "reported_seconds": 0.123,
+        "elapsed_seconds": 0.125005
+      },
+      "opponent": {
+        "move": "c1f4",
+        "white_cp": 33,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 172293,
+        "reported_seconds": 0.13,
+        "elapsed_seconds": 0.132348
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-028",
+      "fen": "r2q1rk1/ppp2pp1/2nbbn1p/3pp3/4P3/2PP1N2/PPQ1BPPP/R1B1KN1R w KQ - 5 9",
+      "opponent": {
+        "move": "f1g3",
+        "white_cp": -35,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 121113,
+        "reported_seconds": 0.094,
+        "elapsed_seconds": 0.096238
+      },
+      "candidate": {
+        "move": "f1g3",
+        "white_cp": -35,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 121113,
+        "reported_seconds": 0.091,
+        "elapsed_seconds": 0.093349
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-004",
+      "fen": "r1b1kbnr/p2p1ppp/1qp1p3/8/2PpP3/5N2/PP3PPP/RNBQ1RK1 w kq - 0 9",
+      "candidate": {
+        "move": "f3d4",
+        "white_cp": -3,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 70209,
+        "reported_seconds": 0.052,
+        "elapsed_seconds": 0.053706
+      },
+      "opponent": {
+        "move": "f3d4",
+        "white_cp": -3,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 70209,
+        "reported_seconds": 0.052,
+        "elapsed_seconds": 0.05353
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-039",
+      "fen": "r1b1kb1r/1p2pppp/2q2n2/1pp5/3P4/P3PN2/1P3PPP/RNBQK2R w KQkq - 1 9",
+      "opponent": {
+        "move": "e1g1",
+        "white_cp": 46,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 48377,
+        "reported_seconds": 0.036,
+        "elapsed_seconds": 0.037908
+      },
+      "candidate": {
+        "move": "e1g1",
+        "white_cp": 46,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 48377,
+        "reported_seconds": 0.033,
+        "elapsed_seconds": 0.035476
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-015",
+      "fen": "rnb2rk1/ppq1bppp/2p5/3pP3/4n3/2P1BNP1/PPQ1PP1P/RN2KB1R w KQ - 5 9",
+      "candidate": {
+        "move": "f1g2",
+        "white_cp": 11,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 144076,
+        "reported_seconds": 0.106,
+        "elapsed_seconds": 0.108156
+      },
+      "opponent": {
+        "move": "f1g2",
+        "white_cp": 11,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 144076,
+        "reported_seconds": 0.113,
+        "elapsed_seconds": 0.115344
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-058",
+      "fen": "rn1q1rk1/pb2ppbp/1p1p1np1/2p5/P2P4/1P2PN1P/1BP1BPP1/RN1QK2R w KQ - 0 9",
+      "opponent": {
+        "move": "e1g1",
+        "white_cp": 5,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 58173,
+        "reported_seconds": 0.04,
+        "elapsed_seconds": 0.041734
+      },
+      "candidate": {
+        "move": "e1g1",
+        "white_cp": 5,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 58173,
+        "reported_seconds": 0.038,
+        "elapsed_seconds": 0.039573
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-060",
+      "fen": "rnbq1rk1/2p2pp1/p2bpn1p/1p1p4/1P1P4/1NP1PN2/P1Q2PPP/R1B1KB1R w KQ - 1 9",
+      "candidate": {
+        "move": "f1d3",
+        "white_cp": 19,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 47906,
+        "reported_seconds": 0.032,
+        "elapsed_seconds": 0.034378
+      },
+      "opponent": {
+        "move": "f1d3",
+        "white_cp": 19,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 47906,
+        "reported_seconds": 0.034,
+        "elapsed_seconds": 0.035615
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-021",
+      "fen": "r1bqkbnr/pp4pp/2ppp3/3Pn3/3Q4/2N4P/PPP1P1P1/R1B1KBNR w KQkq - 0 9",
+      "opponent": {
+        "move": "d5e6",
+        "white_cp": 27,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 110801,
+        "reported_seconds": 0.084,
+        "elapsed_seconds": 0.085988
+      },
+      "candidate": {
+        "move": "d5e6",
+        "white_cp": 27,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 110801,
+        "reported_seconds": 0.079,
+        "elapsed_seconds": 0.080848
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-040",
+      "fen": "r1bqk1nr/p2p1ppp/1pn1p3/8/1bP1P3/5N2/PP2BPPP/RNBQ1K1R w kq - 5 9",
+      "candidate": {
+        "move": "c1g5",
+        "white_cp": 15,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 131759,
+        "reported_seconds": 0.096,
+        "elapsed_seconds": 0.098115
+      },
+      "opponent": {
+        "move": "c1g5",
+        "white_cp": 15,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 131759,
+        "reported_seconds": 0.101,
+        "elapsed_seconds": 0.103646
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-059",
+      "fen": "r1bqkb1r/1pp2ppp/p1n1p3/4P3/3p4/2N1B3/PPP1BPPP/R2QK1NR w KQkq - 0 9",
+      "opponent": {
+        "move": "e3d4",
+        "white_cp": 10,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 53769,
+        "reported_seconds": 0.041,
+        "elapsed_seconds": 0.042725
+      },
+      "candidate": {
+        "move": "e3d4",
+        "white_cp": 10,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 53769,
+        "reported_seconds": 0.039,
+        "elapsed_seconds": 0.040699
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-014",
+      "fen": "r2qkb1r/pppn1ppp/4pn2/8/3P1B1N/2NpP3/PP3PPP/R2QK2R w KQkq - 0 9",
+      "candidate": {
+        "move": "d1d3",
+        "white_cp": 17,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 95444,
+        "reported_seconds": 0.068,
+        "elapsed_seconds": 0.06997
+      },
+      "opponent": {
+        "move": "d1d3",
+        "white_cp": 17,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 95444,
+        "reported_seconds": 0.075,
+        "elapsed_seconds": 0.07749
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-035",
+      "fen": "r2qkb1r/1p3pp1/p1npbn1p/2p1p1B1/P1B1P3/3P1N1P/1PP1QPP1/RN2K2R w KQkq - 0 9",
+      "opponent": {
+        "move": "c4e6",
+        "white_cp": 13,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 44974,
+        "reported_seconds": 0.036,
+        "elapsed_seconds": 0.037888
+      },
+      "candidate": {
+        "move": "c4e6",
+        "white_cp": 13,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 44974,
+        "reported_seconds": 0.035,
+        "elapsed_seconds": 0.036959
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-033",
+      "fen": "r1b1kb1r/1pqn1ppp/p1pp1n2/8/2PNP3/2N5/PPQ2PPP/R1B1KB1R w KQkq - 0 9",
+      "candidate": {
+        "move": "c1f4",
+        "white_cp": 81,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 169775,
+        "reported_seconds": 0.13,
+        "elapsed_seconds": 0.131786
+      },
+      "opponent": {
+        "move": "c1f4",
+        "white_cp": 81,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 169775,
+        "reported_seconds": 0.136,
+        "elapsed_seconds": 0.137905
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-041",
+      "fen": "rnb1k1nr/pp2qppp/2pp4/8/2Pp4/5N2/PPQBPPPP/R3KB1R w KQkq - 0 9",
+      "opponent": {
+        "move": "f3d4",
+        "white_cp": 66,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 173324,
+        "reported_seconds": 0.135,
+        "elapsed_seconds": 0.137497
+      },
+      "candidate": {
+        "move": "f3d4",
+        "white_cp": 66,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 173324,
+        "reported_seconds": 0.128,
+        "elapsed_seconds": 0.130393
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-056",
+      "fen": "r1bqkb1r/ppp1np2/2np3p/8/7p/N1P1QN2/PP2PPP1/R1B1KB1R w KQkq - 2 9",
+      "candidate": {
+        "move": "h1h4",
+        "white_cp": 70,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 97103,
+        "reported_seconds": 0.069,
+        "elapsed_seconds": 0.071322
+      },
+      "opponent": {
+        "move": "h1h4",
+        "white_cp": 70,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 97103,
+        "reported_seconds": 0.075,
+        "elapsed_seconds": 0.076536
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-061",
+      "fen": "r1bqk2r/1pp1bpp1/2np1n1p/4p1B1/p3P3/2PP1NP1/PP1N1PBP/R2QK2R w KQkq - 0 9",
+      "opponent": {
+        "move": "g5f6",
+        "white_cp": -11,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 38285,
+        "reported_seconds": 0.03,
+        "elapsed_seconds": 0.032227
+      },
+      "candidate": {
+        "move": "g5f6",
+        "white_cp": -11,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 38285,
+        "reported_seconds": 0.028,
+        "elapsed_seconds": 0.029672
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-044",
+      "fen": "r1bqkb1r/5ppp/p1p1pn2/3p4/8/2P3B1/PPQ1PPPP/RN2KB1R w KQkq - 0 9",
+      "candidate": {
+        "move": "b1d2",
+        "white_cp": 17,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 71830,
+        "reported_seconds": 0.049,
+        "elapsed_seconds": 0.051244
+      },
+      "opponent": {
+        "move": "b1d2",
+        "white_cp": 17,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 71830,
+        "reported_seconds": 0.052,
+        "elapsed_seconds": 0.053471
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-037",
+      "fen": "rnb1k2r/ppp2ppp/1b6/3q4/5B2/3P1N2/PPP3PP/R2QKB1R w KQkq - 0 9",
+      "opponent": {
+        "move": "d1e2",
+        "white_cp": -91,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 95757,
+        "reported_seconds": 0.074,
+        "elapsed_seconds": 0.076315
+      },
+      "candidate": {
+        "move": "d1e2",
+        "white_cp": -91,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 95757,
+        "reported_seconds": 0.069,
+        "elapsed_seconds": 0.070757
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-045",
+      "fen": "r2qkbnr/1ppb1pp1/2n1p2p/pB1p4/P2P1B2/1QP1PN2/1P3PPP/RN2K2R w KQkq - 2 9",
+      "candidate": {
+        "move": "b1d2",
+        "white_cp": 70,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 110188,
+        "reported_seconds": 0.084,
+        "elapsed_seconds": 0.085685
+      },
+      "opponent": {
+        "move": "b1d2",
+        "white_cp": 70,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 110188,
+        "reported_seconds": 0.089,
+        "elapsed_seconds": 0.090821
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-007",
+      "fen": "r2qk2r/ppp2pp1/2nbbn1p/3pp3/4P3/P1PP1N2/1PQNBPPP/R1B1K2R w KQkq - 3 9",
+      "opponent": {
+        "move": "e4d5",
+        "white_cp": -33,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 90219,
+        "reported_seconds": 0.07,
+        "elapsed_seconds": 0.071735
+      },
+      "candidate": {
+        "move": "e4d5",
+        "white_cp": -33,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 90219,
+        "reported_seconds": 0.066,
+        "elapsed_seconds": 0.068373
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-008",
+      "fen": "r1bq1rk1/pp1nbppp/2p1pn2/8/2pP4/1P1BPN2/PB1N1PPP/R2QK2R w KQ - 0 9",
+      "candidate": {
+        "move": "b3c4",
+        "white_cp": 13,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 85398,
+        "reported_seconds": 0.062,
+        "elapsed_seconds": 0.064194
+      },
+      "opponent": {
+        "move": "b3c4",
+        "white_cp": 13,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 85398,
+        "reported_seconds": 0.064,
+        "elapsed_seconds": 0.065551
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-025",
+      "fen": "r1bqk2r/pp2b1pp/2n1p3/2pn1p2/8/2PP1NPP/PP2QP2/RNB1KB1R w KQkq - 2 9",
+      "opponent": {
+        "move": "b1d2",
+        "white_cp": -32,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 153992,
+        "reported_seconds": 0.129,
+        "elapsed_seconds": 0.131021
+      },
+      "candidate": {
+        "move": "b1d2",
+        "white_cp": -32,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 153992,
+        "reported_seconds": 0.12,
+        "elapsed_seconds": 0.121952
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-017",
+      "fen": "r1bqkb1r/1p1n1ppp/p3pn2/2p5/2BP4/2N1PN2/PPQ2PPP/R1B1K2R w KQkq - 0 9",
+      "candidate": {
+        "move": "e1g1",
+        "white_cp": 52,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 80857,
+        "reported_seconds": 0.06,
+        "elapsed_seconds": 0.062059
+      },
+      "opponent": {
+        "move": "e1g1",
+        "white_cp": 52,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 80857,
+        "reported_seconds": 0.064,
+        "elapsed_seconds": 0.065764
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-013",
+      "fen": "r1bqkb1r/3n1ppp/1pp1pn2/p7/1PBP4/P3PN2/5PPP/RNBQK2R w KQkq - 0 9",
+      "opponent": {
+        "move": "e1g1",
+        "white_cp": 11,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 68549,
+        "reported_seconds": 0.049,
+        "elapsed_seconds": 0.051202
+      },
+      "candidate": {
+        "move": "e1g1",
+        "white_cp": 11,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 68549,
+        "reported_seconds": 0.046,
+        "elapsed_seconds": 0.04813
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-064",
+      "fen": "r1bq1rk1/ppp2pp1/2np1n1p/4p3/2B1P3/P1PQB3/1PP2PPP/R3K1NR w KQ - 2 9",
+      "candidate": {
+        "move": "e1c1",
+        "white_cp": -8,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 85427,
+        "reported_seconds": 0.062,
+        "elapsed_seconds": 0.06426
+      },
+      "opponent": {
+        "move": "e1c1",
+        "white_cp": -8,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 85427,
+        "reported_seconds": 0.065,
+        "elapsed_seconds": 0.067629
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-002",
+      "fen": "rn2kb1r/pp2qppp/3pb3/3p4/8/2N2N2/PPPP1PPP/R1BQ1K1R w kq - 4 9",
+      "opponent": {
+        "move": "f1g1",
+        "white_cp": 70,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 83810,
+        "reported_seconds": 0.063,
+        "elapsed_seconds": 0.064457
+      },
+      "candidate": {
+        "move": "f1g1",
+        "white_cp": 70,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 83810,
+        "reported_seconds": 0.06,
+        "elapsed_seconds": 0.061562
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-010",
+      "fen": "r1bqkb1r/1p3pp1/p1n1pn1p/3p4/3P4/P4NP1/1P2PPBP/RNBQ1RK1 w kq - 0 9",
+      "candidate": {
+        "move": "b1c3",
+        "white_cp": 13,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 71819,
+        "reported_seconds": 0.05,
+        "elapsed_seconds": 0.052237
+      },
+      "opponent": {
+        "move": "b1c3",
+        "white_cp": 13,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 71819,
+        "reported_seconds": 0.054,
+        "elapsed_seconds": 0.056098
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-062",
+      "fen": "rnbqkb1r/pp2pppp/2p2n2/3pB3/3P4/1QP1PP1N/PP4PP/RN2KB1R w KQkq - 2 9",
+      "opponent": {
+        "move": "b1d2",
+        "white_cp": 15,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 49965,
+        "reported_seconds": 0.037,
+        "elapsed_seconds": 0.038419
+      },
+      "candidate": {
+        "move": "b1d2",
+        "white_cp": 15,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 49965,
+        "reported_seconds": 0.034,
+        "elapsed_seconds": 0.035814
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-019",
+      "fen": "r2q1rk1/pbp1bppp/np2pn2/3p4/2PP4/2NBPN2/PPQ2PPP/R1B2RK1 w - - 4 9",
+      "candidate": {
+        "move": "a2a3",
+        "white_cp": 47,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 68293,
+        "reported_seconds": 0.045,
+        "elapsed_seconds": 0.047074
+      },
+      "opponent": {
+        "move": "a2a3",
+        "white_cp": 47,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 68293,
+        "reported_seconds": 0.048,
+        "elapsed_seconds": 0.04967
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-011",
+      "fen": "r1bqkbnr/pp3ppp/2n5/3p4/2p2N2/P1NB4/1PP2PPP/R1BQK2R w KQkq - 0 9",
+      "opponent": {
+        "move": "d3f1",
+        "white_cp": 0,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 143954,
+        "reported_seconds": 0.106,
+        "elapsed_seconds": 0.107898
+      },
+      "candidate": {
+        "move": "d3f1",
+        "white_cp": 0,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 143954,
+        "reported_seconds": 0.103,
+        "elapsed_seconds": 0.1047
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-051",
+      "fen": "r2qkbnr/1p1n2pp/2p2p2/p2pp2b/3P4/2PBPNB1/PP3PPP/RN1QK2R w KQkq - 0 9",
+      "candidate": {
+        "move": "d3e2",
+        "white_cp": 39,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 81127,
+        "reported_seconds": 0.059,
+        "elapsed_seconds": 0.061219
+      },
+      "opponent": {
+        "move": "d3e2",
+        "white_cp": 39,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 81127,
+        "reported_seconds": 0.062,
+        "elapsed_seconds": 0.063668
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-055",
+      "fen": "r3kbnr/ppqb1ppp/2n1p3/2ppP3/3P4/P1P5/1P2NPPP/R1BQKBNR w KQkq - 1 9",
+      "opponent": {
+        "move": "g1f3",
+        "white_cp": -29,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 101816,
+        "reported_seconds": 0.081,
+        "elapsed_seconds": 0.08344
+      },
+      "candidate": {
+        "move": "g1f3",
+        "white_cp": -29,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 101816,
+        "reported_seconds": 0.077,
+        "elapsed_seconds": 0.078859
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-020",
+      "fen": "r1bqk1nr/1p1nbppp/p7/2pp4/3P4/1P1BPN2/P1Q2PPP/RNB1K2R w KQkq - 0 9",
+      "candidate": {
+        "move": "e1g1",
+        "white_cp": 88,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 79385,
+        "reported_seconds": 0.057,
+        "elapsed_seconds": 0.059092
+      },
+      "opponent": {
+        "move": "e1g1",
+        "white_cp": 88,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 79385,
+        "reported_seconds": 0.06,
+        "elapsed_seconds": 0.062471
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-036",
+      "fen": "rnbqkb1r/1p2pnpp/2p2p2/p2p4/3P3P/2P2N2/PP2PPP1/RNBQKB1R w KQkq - 1 9",
+      "opponent": {
+        "move": "g2g3",
+        "white_cp": 0,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 67872,
+        "reported_seconds": 0.049,
+        "elapsed_seconds": 0.050531
+      },
+      "candidate": {
+        "move": "g2g3",
+        "white_cp": 0,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 67872,
+        "reported_seconds": 0.044,
+        "elapsed_seconds": 0.045873
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-054",
+      "fen": "r1bqk2r/3pbpp1/p1n1pn1p/1pp5/3PPB2/2P2N2/PP1NBPPP/R2QK2R w KQkq - 0 9",
+      "candidate": {
+        "move": "a2a4",
+        "white_cp": 11,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 86010,
+        "reported_seconds": 0.06,
+        "elapsed_seconds": 0.061823
+      },
+      "opponent": {
+        "move": "a2a4",
+        "white_cp": 11,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 86010,
+        "reported_seconds": 0.064,
+        "elapsed_seconds": 0.066131
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-023",
+      "fen": "r2qk1nr/1p3pp1/p1npp2p/3p1b2/Q2P4/P1P2N2/1P1NPPPP/R3KB1R w KQkq - 0 9",
+      "opponent": {
+        "move": "a4b3",
+        "white_cp": 23,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 118115,
+        "reported_seconds": 0.087,
+        "elapsed_seconds": 0.089443
+      },
+      "candidate": {
+        "move": "a4b3",
+        "white_cp": 23,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 118115,
+        "reported_seconds": 0.082,
+        "elapsed_seconds": 0.083869
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-057",
+      "fen": "rnbqkb1r/1p2pp1p/2p2np1/p2p4/3P4/PQP2N1P/1P1NPPP1/R1B1KB1R w KQkq - 3 9",
+      "candidate": {
+        "move": "f3e5",
+        "white_cp": 9,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 54830,
+        "reported_seconds": 0.039,
+        "elapsed_seconds": 0.040704
+      },
+      "opponent": {
+        "move": "f3e5",
+        "white_cp": 9,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 54830,
+        "reported_seconds": 0.041,
+        "elapsed_seconds": 0.043354
+      },
+      "same_move": true,
+      "same_score": true
+    },
+    {
+      "id": "opening-006",
+      "fen": "rnb1k2r/pp2qpbp/2p2np1/4p3/2P1P3/2NP1N1P/PP4P1/R1BQKB1R w KQkq - 2 9",
+      "opponent": {
+        "move": "c1e3",
+        "white_cp": -35,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 147867,
+        "reported_seconds": 0.118,
+        "elapsed_seconds": 0.120253
+      },
+      "candidate": {
+        "move": "c1e3",
+        "white_cp": -35,
+        "white_mate": null,
+        "depth": 8,
+        "nodes": 147867,
+        "reported_seconds": 0.117,
+        "elapsed_seconds": 0.119304
+      },
+      "same_move": true,
+      "same_score": true
+    }
+  ],
+  "interpretation": "Fixed-depth work and behavior comparison with legal PV checks, not a strength test. Selective search and ordering can change scores; timing is affected by JIT and machine load."
+}

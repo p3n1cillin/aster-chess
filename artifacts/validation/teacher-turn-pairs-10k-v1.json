@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "source_positions": 50000,
+  "paired_positions": 10000,
+  "original_rows_preserved": true,
+  "cross_game_pairs": 0,
+  "source_sha256": "12ce8369406bb509436d47df0d676e07838c8f2b5456c59120d84551e9d22636",
+  "augmented_sha256": "fe56daefb371f3114e72a729dc396b3d364366b49d90edc7588e0316417e12c2",
+  "auditor_sha256": "fc0dee1f9442e361b58c4e2fc8cf9bf77d3a8d06b151e215c8b966cd0e15b277",
+  "interpretation": "Opposite-turn FEN labels without histories; parent groups are preserved for game-level splits."
+}

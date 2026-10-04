@@ -1,0 +1,228 @@
+{
+  "schema": 1,
+  "seed": 20261102,
+  "plies": 20,
+  "selection_nodes": 2048,
+  "verification_nodes": 20000,
+  "max_abs_teacher_cp": 80,
+  "teacher": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "training_exclusion": null,
+  "training_exclusions": [
+    {
+      "path": "artifacts\\data\\teacher-20k-v1.jsonl",
+      "sha256": "191c4bbd054ad307860d8935f2cb4f6cbcf73e60b68a3a397e646e8b6d691527",
+      "positions": 20000
+    },
+    {
+      "path": "artifacts\\data\\teacher-turn-augmented-60k-v1.jsonl",
+      "sha256": "fe56daefb371f3114e72a729dc396b3d364366b49d90edc7588e0316417e12c2",
+      "positions": 60000
+    },
+    {
+      "path": "artifacts\\data\\endgame-diagnostic-512-v1.jsonl",
+      "sha256": "f07976034c668f3ae636ef96cf584891b1bb1a7cc1648e73d975e837277b29a3",
+      "positions": 512
+    }
+  ],
+  "prior_suites_excluded": [
+    {
+      "path": "tests\\fixtures\\openings-v1.json",
+      "sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v2.json",
+      "sha256": "cdcc99af780b795546a22e84b2557bd20168097c2694cc9b12ce2e242f74bc25",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v3.json",
+      "sha256": "b2c84b63c566712b33102e1a5f246d47a010a0341f8396c5e036937c74e241f3",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v4.json",
+      "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v5.json",
+      "sha256": "e63c68d4024428bef2f84a4289db06c4aee70e60aa9f081cf437d2a6d237c46e",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\rating-parent-v1.json",
+      "sha256": "6c4d7453e3572cadf786d81be8ad8b0b85fb9c461d5e93847612959836efb112",
+      "positions": 144
+    }
+  ],
+  "attempts_used": 365,
+  "teacher_options": {
+    "Threads": 1,
+    "Hash": 64
+  },
+  "generator_sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746",
+  "interpretation": "Seeded near-best MultiPV continuations from the start, distinct final positions, balanced under a bounded teacher check. Teacher scores do not prove equality; this is a regression suite, not an independent final superiority test.",
+  "openings": [
+    {
+      "id": "opening-125",
+      "moves": "d2d4 b8c6 c2c4 d7d5 c4d5 d8d5 e2e3 e7e6 c1d2 d5d8 f1e2 e6e5 b1c3 e5d4 e3d4 c6d4 d2e3 f8c5 d1d2 d4e2",
+      "fen": "r1bqk1nr/ppp2ppp/8/2b5/8/2N1B3/PP1QnPPP/R3K1NR w KQkq - 0 11",
+      "teacher_white_cp": -64,
+      "teacher_depth": 14,
+      "attempt": 216
+    },
+    {
+      "id": "opening-117",
+      "moves": "c2c3 d7d5 f2f4 e7e6 e2e3 f8d6 f1e2 c7c5 g1f3 g8h6 d2d4 h6f5 e1g1 c8d7 e2d3 d8c7 b1a3 c5d4 e3d4 d6a3",
+      "fen": "rn2k2r/ppqb1ppp/4p3/3p1n2/3P1P2/b1PB1N2/PP4PP/R1BQ1RK1 w kq - 0 11",
+      "teacher_white_cp": -5,
+      "teacher_depth": 11,
+      "attempt": 200
+    },
+    {
+      "id": "opening-041",
+      "moves": "g1f3 c7c5 b1c3 g7g6 e2e4 b8c6 d2d4 c5d4 f3d4 d7d6 h2h3 a7a6 c1e3 c8d7 d1d2 a8c8 f2f4 f8g7 g2g4 g8f6",
+      "fen": "2rqk2r/1p1bppbp/p1np1np1/8/3NPPP1/2N1B2P/PPPQ4/R3KB1R w KQk - 1 11",
+      "teacher_white_cp": 24,
+      "teacher_depth": 11,
+      "attempt": 68
+    },
+    {
+      "id": "opening-089",
+      "moves": "d2d4 g8f6 c2c4 d7d6 g1f3 c8f5 d4d5 e7e5 b1c3 h7h6 g2g3 f8e7 f3h4 f5c8 e2e4 f6h7 h4f3 f7f5 e4f5 c8f5",
+      "fen": "rn1qk2r/ppp1b1pn/3p3p/3Ppb2/2P5/2N2NP1/PP3P1P/R1BQKB1R w KQkq - 0 11",
+      "teacher_white_cp": 9,
+      "teacher_depth": 12,
+      "attempt": 146
+    },
+    {
+      "id": "opening-204",
+      "moves": "g1f3 g8f6 d2d4 d7d5 c2c4 e7e6 b1c3 a7a6 c1g5 f8b4 d1b3 b4c3 b2c3 b7b5 c4d5 d8d5 g5f6 d5b3 a2b3 g7f6",
+      "fen": "rnb1k2r/2p2p1p/p3pp2/1p6/3P4/1PP2N2/4PPPP/R3KB1R w KQkq - 0 11",
+      "teacher_white_cp": 45,
+      "teacher_depth": 12,
+      "attempt": 360
+    },
+    {
+      "id": "opening-151",
+      "moves": "c2c3 d7d5 f2f4 g8f6 d2d3 c7c5 g2g3 e7e6 f1g2 b7b6 g1f3 c8a6 b1d2 f6g4 d2b1 f8e7 a2a4 a6b7 b1a3 g4f6",
+      "fen": "rn1qk2r/pb2bppp/1p2pn2/2pp4/P4P2/N1PP1NP1/1P2P1BP/R1BQK2R w KQkq - 3 11",
+      "teacher_white_cp": 4,
+      "teacher_depth": 11,
+      "attempt": 258
+    },
+    {
+      "id": "opening-011",
+      "moves": "e2e4 e7e5 f1e2 g8f6 b1c3 d7d5 c3d5 f6e4 d5e3 d8h4 g2g3 h4e7 e2f3 e4c5 f3g2 c8d7 b2b4 c5a4 b4b5 a7a6",
+      "fen": "rn2kb1r/1ppbqppp/p7/1P2p3/n7/4N1P1/P1PP1PBP/R1BQK1NR w KQkq - 0 11",
+      "teacher_white_cp": 68,
+      "teacher_depth": 15,
+      "attempt": 15
+    },
+    {
+      "id": "opening-160",
+      "moves": "e2e4 b8c6 b1c3 g8f6 g1f3 d7d5 c3d5 f6e4 f1c4 c8e6 d5e3 d8d7 d1e2 g7g6 c2c3 a8d8 c4e6 d7e6 d2d4 e6d7",
+      "fen": "3rkb1r/pppqpp1p/2n3p1/8/3Pn3/2P1NN2/PP2QPPP/R1B1K2R w KQk - 1 11",
+      "teacher_white_cp": 72,
+      "teacher_depth": 12,
+      "attempt": 277
+    },
+    {
+      "id": "opening-078",
+      "moves": "g1f3 g8f6 e2e3 g7g6 f1e2 e7e6 e1g1 f8g7 c2c4 d8e7 a2a3 e6e5 d2d3 c7c6 d3d4 e5d4 e3d4 d7d5 f1e1 c8e6",
+      "fen": "rn2k2r/pp2qpbp/2p1bnp1/3p4/2PP4/P4N2/1P2BPPP/RNBQR1K1 w kq - 2 11",
+      "teacher_white_cp": 72,
+      "teacher_depth": 12,
+      "attempt": 124
+    },
+    {
+      "id": "opening-018",
+      "moves": "c2c3 e7e6 e2e3 g8f6 f1e2 b7b6 b2b3 c7c5 d2d4 d7d5 c1b2 f8e7 d1c2 b8c6 g1f3 c5d4 e2b5 c8d7 e3d4 d8c8",
+      "fen": "r1q1k2r/p2bbppp/1pn1pn2/1B1p4/3P4/1PP2N2/PBQ2PPP/RN2K2R w KQkq - 1 11",
+      "teacher_white_cp": 22,
+      "teacher_depth": 12,
+      "attempt": 27
+    },
+    {
+      "id": "opening-097",
+      "moves": "g1f3 c7c6 c2c3 d7d5 a2a4 c8g4 d2d3 d8c7 e2e4 d5e4 d3e4 g4h5 a4a5 b8d7 f1e2 g8f6 f3g5 h5g6 f2f3 a7a6",
+      "fen": "r3kb1r/1pqnpppp/p1p2nb1/P5N1/4P3/2P2P2/1P2B1PP/RNBQK2R w KQkq - 0 11",
+      "teacher_white_cp": 62,
+      "teacher_depth": 12,
+      "attempt": 162
+    },
+    {
+      "id": "opening-137",
+      "moves": "c2c3 g8f6 d2d3 d7d5 d3d4 e7e6 e2e3 f8d6 f1e2 c7c5 b1d2 e8g8 g1f3 b8c6 b2b3 f8e8 c1b2 d8c7 b2a3 c7a5",
+      "fen": "r1b1r1k1/pp3ppp/2nbpn2/q1pp4/3P4/BPP1PN2/P2NBPPP/R2QK2R w KQ - 5 11",
+      "teacher_white_cp": -6,
+      "teacher_depth": 13,
+      "attempt": 236
+    },
+    {
+      "id": "opening-057",
+      "moves": "e2e4 c7c5 h2h3 d7d6 f1b5 b8c6 g1f3 a7a6 b5e2 g8f6 e2d3 e7e5 e1g1 f6h5 b1c3 h5f4 d3c4 h7h5 d2d4 c5d4",
+      "fen": "r1bqkb1r/1p3pp1/p1np4/4p2p/2BpPn2/2N2N1P/PPP2PP1/R1BQ1RK1 w kq - 0 11",
+      "teacher_white_cp": 46,
+      "teacher_depth": 12,
+      "attempt": 96
+    },
+    {
+      "id": "opening-045",
+      "moves": "c2c3 e7e6 d2d4 g8f6 c1f4 c7c5 g1f3 d7d5 d1c2 c5d4 c3d4 f8b4 f3d2 b8c6 e2e3 e8g8 h2h3 c8d7 f1d3 b4a5",
+      "fen": "r2q1rk1/pp1b1ppp/2n1pn2/b2p4/3P1B2/3BP2P/PPQN1PP1/RN2K2R w KQ - 3 11",
+      "teacher_white_cp": -3,
+      "teacher_depth": 14,
+      "attempt": 75
+    },
+    {
+      "id": "opening-161",
+      "moves": "d2d4 d7d5 c2c4 e7e6 a2a3 f8e7 c4c5 e6e5 b2b4 a7a5 c1b2 e5e4 b1c3 e4e3 f2e3 a5b4 a3b4 a8a1 d1a1 g8f6",
+      "fen": "1nbqk2r/1pp1bppp/5n2/2Pp4/1P1P4/2N1P3/1B2P1PP/Q3KBNR w Kk - 1 11",
+      "teacher_white_cp": 27,
+      "teacher_depth": 14,
+      "attempt": 280
+    },
+    {
+      "id": "opening-100",
+      "moves": "c2c3 e7e6 g2g3 c7c6 f1g2 d7d5 g1f3 b8d7 a2a4 a7a5 b2b3 f8d6 d2d4 g8f6 e1g1 h7h6 b1d2 b7b5 a4b5 c6b5",
+      "fen": "r1bqk2r/3n1pp1/3bpn1p/pp1p4/3P4/1PP2NP1/3NPPBP/R1BQ1RK1 w kq - 0 11",
+      "teacher_white_cp": 22,
+      "teacher_depth": 13,
+      "attempt": 168
+    }
+  ],
+  "experiment_role": "100ms",
+  "parent_suite": {
+    "path": "tests/fixtures/lazy-order-parent-v1.json",
+    "sha256": "d8ac1c505d3c46c819b87da63fe8308cebd18a234a1889a9215fbc2e75101f3a"
+  },
+  "parent_indices": [
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79
+  ],
+  "splitter_sha256": "206eb6777b3d10f7850269d1522438fdba76d387726c91203de530adf3cf8808"
+}

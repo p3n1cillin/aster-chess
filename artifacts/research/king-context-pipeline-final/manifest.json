@@ -1,0 +1,69 @@
+{
+  "note": "Pipeline snapshot at the end of king-context experiments. Earlier runs preceded activation-bias diagnostics; this snapshot is not a byte-exact claim about earlier trainer revisions. Training reports preserve actual arguments, data/model fingerprints and checkpoints.",
+  "source_files": [
+    {
+      "path": "scripts/neural_format.py",
+      "sha256": "d0fa82ee5325a6ce623d88b49289f4fd803d224d3cfc1bac2bcab968c69b8f03"
+    },
+    {
+      "path": "scripts/train_network.py",
+      "sha256": "393c5079f073507d3b9bc8dc3fec9951441340da64f5d08f6561d0863c0405c4"
+    },
+    {
+      "path": "scripts/generate_data.py",
+      "sha256": "8d1d4a89826fdce879fe37fa3b915816828b5b11e122d4c54d7fc54c97cad62a"
+    },
+    {
+      "path": "scripts/add_classical_scores.py",
+      "sha256": "f7d109073e7045d8bbcdf9bc26cb719a9e53e58186e7fb7ad2e10b5e1a751ca3"
+    },
+    {
+      "path": "scripts/audit_training_data.py",
+      "sha256": "f95a8635f5154c975531b4e6fab9a9b70f35208f67ba69d9c0753e75f0565310"
+    },
+    {
+      "path": "scripts/benchmark.py",
+      "sha256": "7f9efd69bfa14c22c7324ac5ffc46292ce02a8891b35453d3c956cd467c2b76c"
+    },
+    {
+      "path": "scripts/compare_search.py",
+      "sha256": "a8162c85b4ea4aae46546ca8a02d4b04c083bf56abb6a28d64f322b2331b6dd9"
+    },
+    {
+      "path": "scripts/verify_network.py",
+      "sha256": "f0f819ed9f83b05f655ac155b7ad5b011a62e4a7d89470f29d26c3bf8ac59582"
+    },
+    {
+      "path": "scripts/match.py",
+      "sha256": "9dcd579e18e8439757316e50e15f4afdfa726da4e10a1eb1178699b133d4cc2d"
+    },
+    {
+      "path": "scripts/uci_client.py",
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "scripts/audit_match.py",
+      "sha256": "24ccd5427e5245dc7a9e85c80317414099abda395f708ca688c9b6ad3602a45f"
+    },
+    {
+      "path": "scripts/analyze_match.py",
+      "sha256": "27550253eb8bdf8ff8600b85c8c0b238dd75e64a1c9c28e2919fdf5f5b2c805d"
+    },
+    {
+      "path": "scripts/generate_openings.py",
+      "sha256": "cbee0586654f1ae9db52fbbdb8bb8fd29a9b3b94eabefc5791b35d32de0e4a0c"
+    },
+    {
+      "path": "scripts/fetch_stockfish.py",
+      "sha256": "3ede0eda0251ec0adf3a7a04fa11d5870243c917aae3a20edfd8919279042032"
+    },
+    {
+      "path": "scripts/verify.py",
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    },
+    {
+      "path": "scripts/tactics.py",
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    }
+  ]
+}

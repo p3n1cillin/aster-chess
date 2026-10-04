@@ -1,0 +1,3 @@
+# Research manifests hash exact bytes. Preserve CRLF/LF as stored, including
+# source snapshots and PGNs, on Windows and Linux checkout.
+* -text

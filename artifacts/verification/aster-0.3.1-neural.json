@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\src\\Engine\\bin\\Release\\net8.0\\Aster.dll",
+  "binary_sha256": "0a7b6e0513b53d6e6c4164765937ce5c3bed2bd61a76dd0259306ee38b52b2b6",
+  "positions_checked": 1609,
+  "reference_perft_positions": 9,
+  "protocol_checks": "passed",
+  "seed": 20261003,
+  "seconds": 1.037,
+  "eval_file": "artifacts/training/hybrid-static-v1/model.ann"
+}

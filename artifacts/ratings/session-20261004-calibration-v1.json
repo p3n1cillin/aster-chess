@@ -1,0 +1,150 @@
+{
+  "status": "provisional local estimate",
+  "numeric_local_rating": 2300.0,
+  "score_bounds": [
+    0.5,
+    0.5
+  ],
+  "score": 0.5,
+  "primary_95_percent_score_interval": [
+    0.4491869918699187,
+    0.5507246376811594
+  ],
+  "primary_95_percent_local_interval": [
+    2264.569193124282,
+    2335.368761113015
+  ],
+  "unbounded_lower": false,
+  "unbounded_upper": false,
+  "failed_numeric_gates": [],
+  "schema": 1,
+  "timestamp_utc": "2026-10-04T13:48:26.515651+00:00",
+  "local_scale": "SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash",
+  "public_elo": null,
+  "public_rating_status": "unestablished",
+  "engine": "artifacts/publish/conversion-default-dotnet/Aster.dll",
+  "engine_name": "Aster 0.7.4-feature-dev",
+  "engine_sha256": "52439f58cf10a4a5dad8d4d48bf9db59db0a3f14b3c1c6216f79182b4a646d9a",
+  "source_manifest": "artifacts/research/conversion-default-source/manifest.json",
+  "source_manifest_sha256": "4cbf48f70ba636afa221af7aaef666fdc62f7c64d5ce19b58cb762af5fbbafcd",
+  "selected_reference_setting": 2300,
+  "confirmation_games": 256,
+  "confirmation_pairs": 128,
+  "opening_families": 94,
+  "wins": 100,
+  "draws": 56,
+  "losses": 100,
+  "unresolved": 0,
+  "all_games_audited": 416,
+  "secondary_95_percent_score_interval": [
+    0.447265625,
+    0.552734375
+  ],
+  "secondary_95_percent_local_interval": [
+    2263.219618726239,
+    2336.780381273761
+  ],
+  "bootstrap_samples": 20000,
+  "seed": 20261101,
+  "bootstrap_implementation": "Each analysis starts a separate RNG with declared seed. Resample families/pairs, weighting all included pairs equally. Endpoints use sorted indices floor(B*.025), floor(B*.975).",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "hardware": {
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "logical_processors": 12
+  },
+  "resources": {
+    "seconds_per_move": 0.03,
+    "Hash": 64,
+    "Threads": 1,
+    "Move Overhead": 0,
+    "max_plies": 400
+  },
+  "opponent_release": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "opponent_options": {
+    "Hash": 64,
+    "Threads": 1,
+    "Move Overhead": 0,
+    "UCI_LimitStrength": true,
+    "UCI_Elo": 2300
+  },
+  "opponent_option_defaults": {
+    "Debug Log File": "<empty>",
+    "NumaPolicy": "auto",
+    "Threads": 1,
+    "Hash": 16,
+    "Ponder": false,
+    "MultiPV": 1,
+    "Skill Level": 20,
+    "Move Overhead": 10,
+    "nodestime": 0,
+    "UCI_Chess960": false,
+    "UCI_LimitStrength": false,
+    "UCI_Elo": 1320,
+    "UCI_ShowWDL": false,
+    "SyzygyPath": "<empty>",
+    "SyzygyProbeDepth": 1,
+    "Syzygy50MoveRule": true,
+    "SyzygyProbeLimit": 7,
+    "EvalFile": "nn-1a298aa575a0.nnue"
+  },
+  "candidate_options": {
+    "Hash": 64,
+    "Threads": 1,
+    "Move Overhead": 0
+  },
+  "candidate_option_defaults": {
+    "Hash": 64,
+    "Threads": 1,
+    "Move Overhead": 20,
+    "EvalFile": "<classical>"
+  },
+  "plan_sha256": "e9e76802561c4e26ab0b87f7dd0d5bb9b492de45e5e019a9ff5d59acdeff8d12",
+  "analyzer_sha256": "f6fe53073c006e91760b885adab9803f92cd50fa3c3a7ba6ada90f0a8e5b8d13",
+  "evidence": [
+    {
+      "path": "artifacts/matches/rating-v1-screen-1320.json",
+      "sha256": "5cdef70ce4548c359e9e6476bec0a25265f6428ad6a213d8858c51359be5e39e",
+      "pgn_sha256": "96e2be9771a5ccb255f7b2307dbbbb495b75a3d2a1698930f7a7078ea51e3781",
+      "audit_sha256": "c48886e45c2ed97d6a68d1190a210f982cdb375ce59891e0af192858cf2a629a"
+    },
+    {
+      "path": "artifacts/matches/rating-v1-screen-1800.json",
+      "sha256": "dd3d0108da2e9c8dfa109e4b0846285669d6a4c15b50d147804c0be00cc31cbd",
+      "pgn_sha256": "827fee4e42fdd155d45506291329ec29b22cd0176649c0f6e8a6bf046a27ca89",
+      "audit_sha256": "be23909fd67a00707e1f369c80d1cbf53a033e7c23463636844392c12a6aa92a"
+    },
+    {
+      "path": "artifacts/matches/rating-v1-screen-2300.json",
+      "sha256": "578fb4c2eef0f9ccc29b96c43f8f015da95ca82ccf988074c1ffb91d990d253a",
+      "pgn_sha256": "e58c0de42ec0512a06cb8f2612da7b54b777e8dd7a32e64f30a6cf6bc023242b",
+      "audit_sha256": "5a4e6321347c0a283e8ec9d288b4e7449ad3c951fe0dc84d574c0199f918597c"
+    },
+    {
+      "path": "artifacts/matches/rating-v1-screen-2800.json",
+      "sha256": "7b595b0eddd180be181490b4f7c3754d42d4ff4b76ac2cca4d5e20b883df22a3",
+      "pgn_sha256": "49bc3921925467ca23523980fb7ce1b3571fd5c782844b0b80b1870a378c9850",
+      "audit_sha256": "47d166ee5094221e3a541ba17fab512dd28e4fa0eb2a2c4125fb9fe06a640b59"
+    },
+    {
+      "path": "artifacts/matches/rating-v1-screen-3190.json",
+      "sha256": "6ce078df5cb8626e58b53e4961212885a5e5f2d07e6fa684b6188b2c72414d9c",
+      "pgn_sha256": "5842bef04c2fb43956960b7abb6bcaf97c5e19b3dedb7bd9db0c8e4265865e71",
+      "audit_sha256": "17882682309947276a2935311f1fbcacdcc2c41744005401c734ac3873fa4764"
+    },
+    {
+      "path": "artifacts/matches/rating-v1-confirmation.json",
+      "sha256": "53be65473058e772f40f3ea120a4128a267da931072fddb2ce85352cc8fbc618",
+      "pgn_sha256": "86f1896bceb67f64bc7837bd53b7ad1a3b3e6fb1d81a3f36026fea1979b518da",
+      "audit_sha256": "5fd6cf5343d660fb29ff694b5a188684f0466e9de35e5504283362ecbd2351dd"
+    }
+  ],
+  "interpretation": "Provisional local benchmark index anchored to an advertised development-opponent dial. Not FIDE, online-account or CCRL Elo; not full-strength Stockfish superiority. Family bootstrap addresses opening dependence, not opponent-dial calibration error or generalization to other controls. Experimental proof/conversion scoring and production 0.6 are not rated by this result. Goal of surpassing full-strength Stockfish remains unachieved."
+}

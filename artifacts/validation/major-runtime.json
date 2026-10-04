@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "runtime_probes": 8192,
+  "progress_searches": 95,
+  "restricted_searchmoves": 95,
+  "engine_sha256": "4d18c95d78eb51294944dcd538b07f3ffcd620b78c8ce6dbc7c8f924e74647c4",
+  "control_sha256": "5cf8525d5d174e55fbfaf0ed33f2245e4059fc4281375ba75397ba48dc2e3868",
+  "tables": [
+    {
+      "piece": "queen",
+      "sha256": "8af92a330bfd80dbcd6214fb7d2ab6d83ee1177730fff7603fb9304fb71e6d31"
+    },
+    {
+      "piece": "rook",
+      "sha256": "2813081ce219bd6ebc3b90584a5afa4432687f36b19d61d76d953194dae58da3"
+    }
+  ],
+  "script_sha256": "f8312058c11bb3c4417d57c7b0ab8166f051fcff34bc08cdc5b5020a3a7a63ef",
+  "interpretation": "All D4/color transformations, unchanged FENs, late-clock evaluation fallback, actual decreasing-distance root choices, explicit searchmoves and responsive infinite-search stop checked."
+}

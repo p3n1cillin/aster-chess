@@ -1,0 +1,77 @@
+{
+  "pairs": 128,
+  "teacher": {
+    "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\validation\\turn-dependence-128-v1.json",
+    "sha256": "63afcd70820891940370c3b88f101d31940d65e2669556f1542c042ec46825cf"
+  },
+  "teacher_turn_delta_std_cp": 394.67336850876904,
+  "models": [
+    {
+      "report": {
+        "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\validation\\turn-aware-paired-hybrid-turn-diagnostic.json",
+        "sha256": "b17d57538bb920f856d3dfe5445b76c587632dbb125789c15316796aaebb32b1"
+      },
+      "model_sha256": "79e177967475fe4d2c24f04c0ff3dd3060971182152b85ddeeed7dd95c3cbdc5",
+      "mean_turn_delta_cp": 73.96875,
+      "turn_delta_std_cp": 10.239276021159894,
+      "min_turn_delta_cp": 56.0,
+      "max_turn_delta_cp": 99.0,
+      "turn_delta_mae_cp": 237.3203125,
+      "pearson_turn_delta": 0.3489696091592982
+    },
+    {
+      "report": {
+        "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\validation\\turn-aware-paired-standalone-turn-diagnostic.json",
+        "sha256": "c7b01006414a26a92735fe3763fc2a480cb7fdb3fffefd15e156f01767c78031"
+      },
+      "model_sha256": "e94a63c95b83b64b7ad7bb5fcb579dcf0c5a74a3edef31a9cd560ff22581e51f",
+      "mean_turn_delta_cp": 69.5390625,
+      "turn_delta_std_cp": 10.973620602202983,
+      "min_turn_delta_cp": 50.0,
+      "max_turn_delta_cp": 90.0,
+      "turn_delta_mae_cp": 236.96875,
+      "pearson_turn_delta": 0.3237698891757478
+    },
+    {
+      "report": {
+        "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\validation\\squared-hybrid-turn-diagnostic.json",
+        "sha256": "525670675627e1b814113cf4264901f3b15e3067edd1fd7acaccbc0c233c2fc6"
+      },
+      "model_sha256": "4a9455eebb26121f6f1ca8005000e64d205261d4e9d97a7c4735fa80ecd14b47",
+      "mean_turn_delta_cp": 69.15625,
+      "turn_delta_std_cp": 12.01719958798638,
+      "min_turn_delta_cp": 39.0,
+      "max_turn_delta_cp": 97.0,
+      "turn_delta_mae_cp": 236.0390625,
+      "pearson_turn_delta": 0.41746552151215405
+    },
+    {
+      "report": {
+        "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\validation\\squared-standalone-turn-diagnostic.json",
+        "sha256": "33b6cccd0485565bac46bde3c83fb865b221938bb75fe61943b522a5b4c46857"
+      },
+      "model_sha256": "239d57c1c936fe926d4f2ff3e2f415fbf6fa2d6284e024ac33dd0d586d560575",
+      "mean_turn_delta_cp": 78.890625,
+      "turn_delta_std_cp": 16.28181231034724,
+      "min_turn_delta_cp": 54.0,
+      "max_turn_delta_cp": 112.0,
+      "turn_delta_mae_cp": 235.4921875,
+      "pearson_turn_delta": 0.2714503353614467
+    },
+    {
+      "report": {
+        "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\validation\\squared-wide-init-hybrid-turn-diagnostic.json",
+        "sha256": "83483f36842e33cb0c864ec4abf5e23c678d937c22460ccd05f946162cbfca37"
+      },
+      "model_sha256": "ed89d3c931e26902e3958cfb74ae624065925b457e23eeec5633a2578e48593c",
+      "mean_turn_delta_cp": 71.875,
+      "turn_delta_std_cp": 13.877252069484074,
+      "min_turn_delta_cp": 25.0,
+      "max_turn_delta_cp": 104.0,
+      "turn_delta_mae_cp": 235.7265625,
+      "pearson_turn_delta": 0.35467844274219806
+    }
+  ],
+  "source_sha256": "409d29f38a278d6ea3cf50d4be85bcbe8867f6c12c092225777789aa0b7a7032",
+  "interpretation": "Descriptive counterfactual held-out sample; not a rating, strength estimate or hypothesis-test result."
+}

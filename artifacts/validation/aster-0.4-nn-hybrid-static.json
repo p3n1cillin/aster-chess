@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "model": "artifacts/training/hybrid-static-v1/model.ann",
+  "exact_inference_positions": 520,
+  "held_out_evaluation": null,
+  "interpretation": "Inference agreement and teacher fit, not measured playing strength.",
+  "engine_sha256": "d0e27aa3fdbbe5e14acf48e51f3a753599c99b6612b5727439249e85972fc69d",
+  "model_sha256": "54f87ec029807349a27d7f8eaf3ff8a967002e1fbd15f4647fd02961243acab4",
+  "engine": "artifacts/publish/win-x64/Aster.exe"
+}

@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "artifacts": [
+    {
+      "path": "artifacts/research/conversion-proof-experiment-manifest.json",
+      "sha256": "dd8de60249aef1127d4b33c98f7381241a67fbadebd1fdf9f0b5e0a34a8e4d94"
+    },
+    {
+      "path": "artifacts\\research\\conversion-stockfish19-source\\manifest.json",
+      "sha256": "d70e925f0cd0bf162083340350d3afa71ff8043110285f9a2bee480d69dd4f9e"
+    },
+    {
+      "path": "tools\\stockfish\\sf_19\\stockfish-windows-x86-64-universal.zip",
+      "sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7"
+    },
+    {
+      "path": "tools\\stockfish\\manifest.json",
+      "sha256": "e584d21a94ee3bbde60353857ae6f3ef01f9a3483299adef072c72f08a6f017f"
+    },
+    {
+      "path": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+      "sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0"
+    }
+  ],
+  "purpose": "Supplement records exact official Stockfish 19 archive, released binary and immutable distributed-source fingerprints for all six-engine comparison reports."
+}

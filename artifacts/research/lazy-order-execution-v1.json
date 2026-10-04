@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-04T14:14:54.686434+00:00",
+  "plan_sha256": "abadc32d535d36dc1f7186f6ac387202d6c32498702050558bc4105c55f29e08",
+  "amendment_sha256": "e34a7c36ad4cf81ea541a3344a387fe88b4afd1130b4837c970979feef2a0ddf",
+  "runner_sha256": "29496dd36dcea59881901c2e200c0f4a39862af3432b7ded9d9331464ec82f77",
+  "match_script_sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8",
+  "phases": [
+    {
+      "label": "vs-0.7.4-30ms",
+      "games": 128,
+      "report": "artifacts\\matches\\lazy-order-vs-0.7.4-30ms.json",
+      "report_sha256": "c817f4a6a7bfd04de4ce6ea830bc5f3fd9ac5ed4a300b10d49f6aa4d8b07529f"
+    },
+    {
+      "label": "vs-0.7.4-100ms",
+      "games": 32,
+      "report": "artifacts\\matches\\lazy-order-vs-0.7.4-100ms.json",
+      "report_sha256": "f8a28d70a566fffedd994dad8bceee35f0e6f2753a9ec3ceebf4401e4ecc0055"
+    }
+  ],
+  "eligible_for_engineering_promotion": false,
+  "failed_gates": [
+    "timing_at_least_5_percent",
+    "match-100ms"
+  ],
+  "conditional_rating": "Skipped because promotion gates failed; reserved suite retained unused",
+  "updated_utc": "2026-10-04T14:27:54.431886+00:00"
+}

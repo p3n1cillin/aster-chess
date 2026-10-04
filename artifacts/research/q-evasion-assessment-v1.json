@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "gates": {
+    "warm_timing": true,
+    "fixed_work": true,
+    "full_traces": true,
+    "tactics-depth8": true,
+    "tactics-5000nodes": true,
+    "tactics-quiet-depth8": true,
+    "tactics-quiet-5000nodes": true,
+    "endgames-5000nodes": true,
+    "quiet_fixed_node_equivalence": true,
+    "profile": true,
+    "correctness": true,
+    "match-30ms": true,
+    "match-100ms": true
+  },
+  "failed_gates": [],
+  "eligible_for_engineering_promotion": true,
+  "matches": [
+    {
+      "label": "30ms",
+      "wins": 76,
+      "draws": 119,
+      "losses": 61,
+      "unresolved": 0,
+      "forfeits": 0,
+      "games": 256,
+      "score_bounds": [
+        0.529296875,
+        0.529296875
+      ],
+      "primary_95_percent_interval": [
+        0.4888888888888889,
+        0.5696428571428571
+      ],
+      "families": 105
+    },
+    {
+      "label": "100ms",
+      "wins": 13,
+      "draws": 38,
+      "losses": 13,
+      "unresolved": 0,
+      "forfeits": 0,
+      "games": 64,
+      "score_bounds": [
+        0.5,
+        0.5
+      ],
+      "primary_95_percent_interval": [
+        0.41935483870967744,
+        0.5808823529411765
+      ],
+      "families": 30
+    }
+  ],
+  "median_timing_speed_ratio": 1.052912010207756,
+  "legal_existence_calls_before": 480859,
+  "legal_existence_calls_after": 453395,
+  "avoided_legal_existence_calls": 27464,
+  "candidate_sha256": "a3994e4f350b2cfa261db5edc1e4ae5c332d85d4b3eaf34c0730267f3603d9a0",
+  "baseline_sha256": "52439f58cf10a4a5dad8d4d48bf9db59db0a3f14b3c1c6216f79182b4a646d9a",
+  "evidence": [
+    {
+      "path": "artifacts\\matches\\q-evasion-vs-0.7.4-30ms.json",
+      "sha256": "aec4c12b2335f95a39c7cfe033a27b8c965ee168ba7b3dfb889e1c492486daac",
+      "pgn_sha256": "aa9f6bfdc6845f880d7824e42d19579e13d65e7516633c832abfeabe5e948065",
+      "audit_sha256": "cfb8826986a86fe2d0d2cc3015ce12f91782b3a0325d77d905a01f6bd910ec52"
+    },
+    {
+      "path": "artifacts\\matches\\q-evasion-vs-0.7.4-100ms.json",
+      "sha256": "3ee1ac59aa478295be5874ea2429aff2720295ac13431010d46c87e6a404985a",
+      "pgn_sha256": "7265601992877efe70c0bbd1a099bb2189a42a66c41f853c297f85258bcde98f",
+      "audit_sha256": "10c9fe0f6167f989e959d0b03da55545b780ad58498434b5d22c8db6a2944aa9"
+    }
+  ],
+  "plan_sha256": "16f47b1bc4c6d8686721800ea5341bcfac0f0c92dbea36b163455c35e5009f5f",
+  "assessor_sha256": "9d46b0e01308ba65226b501615bc2e71e4e24f71d3ecf980e52de619e5ee249f",
+  "interpretation": "Engineering optimization qualification under declared independent correctness, same-work, speed and equal-time regression gates. Not proof of Elo gain or full-strength Stockfish superiority."
+}

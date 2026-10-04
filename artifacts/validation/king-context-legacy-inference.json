@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "model": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\training\\hybrid-static-v1\\model.ann",
+  "exact_inference_positions": 525,
+  "held_out_evaluation": null,
+  "interpretation": "Inference agreement and teacher fit, not measured playing strength.",
+  "engine_sha256": "67b9c8050c04ec0087a30fee256379f435a6b14966ebde522c76704ce919530b",
+  "model_sha256": "54f87ec029807349a27d7f8eaf3ff8a967002e1fbd15f4647fd02961243acab4",
+  "engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\src\\Engine\\bin\\Release\\net8.0\\Aster.dll"
+}

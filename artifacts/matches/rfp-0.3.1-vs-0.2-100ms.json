@@ -1,0 +1,356 @@
+{
+  "timestamp_utc": "2026-10-03T22:23:54.543551+00:00",
+  "candidate": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\src\\Engine\\bin\\Release\\net8.0\\Aster.dll",
+  "opponent": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\baseline-0.2.0\\Aster.dll",
+  "candidate_binary_sha256": "0a7b6e0513b53d6e6c4164765937ce5c3bed2bd61a76dd0259306ee38b52b2b6",
+  "opponent_binary_sha256": "a0262edc3bdb8a64d25076d8aa184fee189a0801e13a381dca09cdf4fbdf6c45",
+  "candidate_source_sha256": "44cac03ea738aef825f6e303bcb963b22d8f138087bfe4fb4cc0c7de3acdb989",
+  "stockfish_release": null,
+  "platform": "Windows-11-10.0.26300-SP0",
+  "pairs_requested": 16,
+  "limit": {
+    "seconds_per_move": 0.1
+  },
+  "max_plies": 400,
+  "wins": 7,
+  "draws": 17,
+  "losses": 8,
+  "unresolved": 0,
+  "forfeits": 0,
+  "games": [
+    {
+      "pair": 1,
+      "candidate_color": "white",
+      "opening": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6",
+      "initial_fen": "r1bqkb1r/1ppp1ppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 5",
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 90,
+      "seconds": 8.314
+    },
+    {
+      "pair": 1,
+      "candidate_color": "black",
+      "opening": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6",
+      "initial_fen": "r1bqkb1r/1ppp1ppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 5",
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 95,
+      "seconds": 8.796
+    },
+    {
+      "pair": 2,
+      "candidate_color": "white",
+      "opening": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6",
+      "initial_fen": "rnbqkb1r/pp2pppp/3p1n2/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 1 5",
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 174,
+      "seconds": 16.786
+    },
+    {
+      "pair": 2,
+      "candidate_color": "black",
+      "opening": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6",
+      "initial_fen": "rnbqkb1r/pp2pppp/3p1n2/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 1 5",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 134,
+      "seconds": 11.988
+    },
+    {
+      "pair": 3,
+      "candidate_color": "white",
+      "opening": "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7",
+      "initial_fen": "rnbqk2r/ppp1bppp/4pn2/3p2B1/2PP4/2N5/PP2PPPP/R2QKBNR w KQkq - 4 5",
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 98,
+      "seconds": 9.094
+    },
+    {
+      "pair": 3,
+      "candidate_color": "black",
+      "opening": "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7",
+      "initial_fen": "rnbqk2r/ppp1bppp/4pn2/3p2B1/2PP4/2N5/PP2PPPP/R2QKBNR w KQkq - 4 5",
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 175,
+      "seconds": 16.897
+    },
+    {
+      "pair": 4,
+      "candidate_color": "white",
+      "opening": "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6",
+      "initial_fen": "rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 123,
+      "seconds": 10.607
+    },
+    {
+      "pair": 4,
+      "candidate_color": "black",
+      "opening": "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6",
+      "initial_fen": "rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 142,
+      "seconds": 12.867
+    },
+    {
+      "pair": 5,
+      "candidate_color": "white",
+      "opening": "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7",
+      "initial_fen": "rnbqk2r/ppp1bppp/4pn2/3p2B1/3PP3/2N5/PPP2PPP/R2QKBNR w KQkq - 4 5",
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "plies": 135,
+      "seconds": 12.834
+    },
+    {
+      "pair": 5,
+      "candidate_color": "black",
+      "opening": "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7",
+      "initial_fen": "rnbqk2r/ppp1bppp/4pn2/3p2B1/3PP3/2N5/PPP2PPP/R2QKBNR w KQkq - 4 5",
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 86,
+      "seconds": 7.889
+    },
+    {
+      "pair": 6,
+      "candidate_color": "white",
+      "opening": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5",
+      "initial_fen": "rn1qkbnr/pp2pppp/2p5/5b2/3PN3/8/PPP2PPP/R1BQKBNR w KQkq - 1 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 77,
+      "seconds": 6.091
+    },
+    {
+      "pair": 6,
+      "candidate_color": "black",
+      "opening": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5",
+      "initial_fen": "rn1qkbnr/pp2pppp/2p5/5b2/3PN3/8/PPP2PPP/R1BQKBNR w KQkq - 1 5",
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 111,
+      "seconds": 10.411
+    },
+    {
+      "pair": 7,
+      "candidate_color": "white",
+      "opening": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6",
+      "initial_fen": "rnbqkb1r/pp3ppp/2p1pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5",
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 128,
+      "seconds": 12.131
+    },
+    {
+      "pair": 7,
+      "candidate_color": "black",
+      "opening": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6",
+      "initial_fen": "rnbqkb1r/pp3ppp/2p1pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 137,
+      "seconds": 11.848
+    },
+    {
+      "pair": 8,
+      "candidate_color": "white",
+      "opening": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d3 f8c5",
+      "initial_fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 1 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 49,
+      "seconds": 3.457
+    },
+    {
+      "pair": 8,
+      "candidate_color": "black",
+      "opening": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d3 f8c5",
+      "initial_fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 1 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 149,
+      "seconds": 13.307
+    },
+    {
+      "pair": 9,
+      "candidate_color": "white",
+      "opening": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6",
+      "initial_fen": "r1bqkb1r/1ppp1ppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 5",
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 136,
+      "seconds": 12.945
+    },
+    {
+      "pair": 9,
+      "candidate_color": "black",
+      "opening": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6",
+      "initial_fen": "r1bqkb1r/1ppp1ppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 199,
+      "seconds": 18.462
+    },
+    {
+      "pair": 10,
+      "candidate_color": "white",
+      "opening": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6",
+      "initial_fen": "rnbqkb1r/pp2pppp/3p1n2/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 1 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 87,
+      "seconds": 7.131
+    },
+    {
+      "pair": 10,
+      "candidate_color": "black",
+      "opening": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6",
+      "initial_fen": "rnbqkb1r/pp2pppp/3p1n2/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 1 5",
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 209,
+      "seconds": 20.341
+    },
+    {
+      "pair": 11,
+      "candidate_color": "white",
+      "opening": "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7",
+      "initial_fen": "rnbqk2r/ppp1bppp/4pn2/3p2B1/2PP4/2N5/PP2PPPP/R2QKBNR w KQkq - 4 5",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 130,
+      "seconds": 11.642
+    },
+    {
+      "pair": 11,
+      "candidate_color": "black",
+      "opening": "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7",
+      "initial_fen": "rnbqk2r/ppp1bppp/4pn2/3p2B1/2PP4/2N5/PP2PPPP/R2QKBNR w KQkq - 4 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 131,
+      "seconds": 11.6
+    },
+    {
+      "pair": 12,
+      "candidate_color": "white",
+      "opening": "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6",
+      "initial_fen": "rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 98,
+      "seconds": 8.163
+    },
+    {
+      "pair": 12,
+      "candidate_color": "black",
+      "opening": "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6",
+      "initial_fen": "rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 95,
+      "seconds": 7.814
+    },
+    {
+      "pair": 13,
+      "candidate_color": "white",
+      "opening": "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7",
+      "initial_fen": "rnbqk2r/ppp1bppp/4pn2/3p2B1/3PP3/2N5/PPP2PPP/R2QKBNR w KQkq - 4 5",
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 68,
+      "seconds": 6.063
+    },
+    {
+      "pair": 13,
+      "candidate_color": "black",
+      "opening": "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7",
+      "initial_fen": "rnbqk2r/ppp1bppp/4pn2/3p2B1/3PP3/2N5/PPP2PPP/R2QKBNR w KQkq - 4 5",
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "plies": 132,
+      "seconds": 12.533
+    },
+    {
+      "pair": 14,
+      "candidate_color": "white",
+      "opening": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5",
+      "initial_fen": "rn1qkbnr/pp2pppp/2p5/5b2/3PN3/8/PPP2PPP/R1BQKBNR w KQkq - 1 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 77,
+      "seconds": 6.306
+    },
+    {
+      "pair": 14,
+      "candidate_color": "black",
+      "opening": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5",
+      "initial_fen": "rn1qkbnr/pp2pppp/2p5/5b2/3PN3/8/PPP2PPP/R1BQKBNR w KQkq - 1 5",
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 171,
+      "seconds": 16.485
+    },
+    {
+      "pair": 15,
+      "candidate_color": "white",
+      "opening": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6",
+      "initial_fen": "rnbqkb1r/pp3ppp/2p1pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 144,
+      "seconds": 13.052
+    },
+    {
+      "pair": 15,
+      "candidate_color": "black",
+      "opening": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6",
+      "initial_fen": "rnbqkb1r/pp3ppp/2p1pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5",
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 83,
+      "seconds": 7.578
+    },
+    {
+      "pair": 16,
+      "candidate_color": "white",
+      "opening": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d3 f8c5",
+      "initial_fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 1 5",
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 104,
+      "seconds": 9.702
+    },
+    {
+      "pair": 16,
+      "candidate_color": "black",
+      "opening": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d3 f8c5",
+      "initial_fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 1 5",
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 141,
+      "seconds": 13.45
+    }
+  ],
+  "interpretation": "Smoke-test sample; does not establish an Elo rating or superiority.",
+  "candidate_name": "Aster 0.3.1-dev",
+  "opponent_name": "Aster 0.2.0",
+  "candidate_options": {
+    "Hash": 64,
+    "Threads": 1,
+    "Move Overhead": 0
+  },
+  "opponent_options": {
+    "Hash": 64,
+    "Threads": 1,
+    "Move Overhead": 0
+  },
+  "seconds": 356.775
+}

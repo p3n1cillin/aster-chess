@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "model": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\training\\turn-aware-paired-hybrid-v1\\model.ann",
+  "exact_inference_positions": 525,
+  "held_out_evaluation": null,
+  "interpretation": "Inference agreement and teacher fit, not measured playing strength.",
+  "engine_sha256": "5b64ad1d13769c3db6425c475bf74ecee391f721fa4c81cd7e9af32495d8a321",
+  "model_sha256": "79e177967475fe4d2c24f04c0ff3dd3060971182152b85ddeeed7dd95c3cbdc5",
+  "engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\squared-dev\\Aster.exe"
+}

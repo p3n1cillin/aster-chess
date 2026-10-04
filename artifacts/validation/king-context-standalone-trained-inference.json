@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "model": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\training\\king-context-standalone-v1\\model.ann",
+  "exact_inference_positions": 525,
+  "held_out_evaluation": {
+    "held_out_positions": 4712,
+    "classical_mae_cp": 162.0118845500849,
+    "neural_mae_cp": 151.2937181663837
+  },
+  "interpretation": "Inference agreement and teacher fit, not measured playing strength.",
+  "engine_sha256": "c598d27d407890c31d9d8498afb22d86d8e719d7d33c4ce438d14d72909aed34",
+  "model_sha256": "45723e05e4980ba3a1f08428ba32b3e7de8c450236a578be1869cc645a71118a",
+  "engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\king-context-dev\\Aster.exe"
+}

@@ -1,0 +1,1413 @@
+{
+  "schema": 1,
+  "complete": true,
+  "parameters": {
+    "positions": 512,
+    "games": 512,
+    "max_plies": 240,
+    "per_game": 4,
+    "play_nodes": 512,
+    "sample_nodes": 8192,
+    "verify_nodes": 65536,
+    "seed": 20261023,
+    "exclude": [
+      "artifacts/data/teacher-turn-60k-static-v1-classical.jsonl",
+      "artifacts/data/teacher-20k-v1.jsonl"
+    ],
+    "exclude_suite": [
+      "tests/fixtures/openings-v1.json",
+      "tests/fixtures/openings-v2.json",
+      "tests/fixtures/openings-v3.json",
+      "tests/fixtures/openings-v4.json",
+      "tests/fixtures/openings-v5.json",
+      "tests/fixtures/tactics-v1.json",
+      "tests/fixtures/tactics-quiet-v1.json"
+    ],
+    "output": "artifacts/data/endgame-diagnostic-512-v1.jsonl"
+  },
+  "teacher": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "teacher_options": {
+    "Threads": 1,
+    "Hash": 64
+  },
+  "exclusions": [
+    {
+      "path": "artifacts\\data\\teacher-turn-60k-static-v1-classical.jsonl",
+      "sha256": "bfea2a0226b65879961c7cde551dde3d715a9e59ef9e99adf627e3744f2be162",
+      "kind": "data"
+    },
+    {
+      "path": "artifacts\\data\\teacher-20k-v1.jsonl",
+      "sha256": "191c4bbd054ad307860d8935f2cb4f6cbcf73e60b68a3a397e646e8b6d691527",
+      "kind": "data"
+    },
+    {
+      "path": "tests\\fixtures\\openings-v1.json",
+      "sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de",
+      "kind": "suite"
+    },
+    {
+      "path": "tests\\fixtures\\openings-v2.json",
+      "sha256": "cdcc99af780b795546a22e84b2557bd20168097c2694cc9b12ce2e242f74bc25",
+      "kind": "suite"
+    },
+    {
+      "path": "tests\\fixtures\\openings-v3.json",
+      "sha256": "b2c84b63c566712b33102e1a5f246d47a010a0341f8396c5e036937c74e241f3",
+      "kind": "suite"
+    },
+    {
+      "path": "tests\\fixtures\\openings-v4.json",
+      "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d",
+      "kind": "suite"
+    },
+    {
+      "path": "tests\\fixtures\\openings-v5.json",
+      "sha256": "e63c68d4024428bef2f84a4289db06c4aee70e60aa9f081cf437d2a6d237c46e",
+      "kind": "suite"
+    },
+    {
+      "path": "tests\\fixtures\\tactics-v1.json",
+      "sha256": "ceb0c13cefcf4a44d2a570e562c52f62316dbf6260d25d912f4fc846595844b3",
+      "kind": "suite"
+    },
+    {
+      "path": "tests\\fixtures\\tactics-quiet-v1.json",
+      "sha256": "3868e2bd596272873251fca177e2a253027cb7bc8dc99b42148cdcb6f86641d9",
+      "kind": "suite"
+    }
+  ],
+  "generator_sha256": "9a56c1ba91fead0f5f071426114680f3e3be8d002e69d388cde271a5ad485e6a",
+  "positions_written": 512,
+  "search_context": "Each label starts from FEN without played history; full source history and result are retained separately.",
+  "interpretation": "Fresh source games, static and bounded search labels. Played results are descriptive, not oracle labels or strength claims.",
+  "source_games": [
+    {
+      "game": 0,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 166,
+      "positions": 4
+    },
+    {
+      "game": 1,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 126,
+      "positions": 0
+    },
+    {
+      "game": 2,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 110,
+      "positions": 4
+    },
+    {
+      "game": 3,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 24,
+      "positions": 0
+    },
+    {
+      "game": 4,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 112,
+      "positions": 4
+    },
+    {
+      "game": 5,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 88,
+      "positions": 1
+    },
+    {
+      "game": 6,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 24,
+      "positions": 0
+    },
+    {
+      "game": 7,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 145,
+      "positions": 4
+    },
+    {
+      "game": 8,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 103,
+      "positions": 0
+    },
+    {
+      "game": 9,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 105,
+      "positions": 4
+    },
+    {
+      "game": 10,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 169,
+      "positions": 4
+    },
+    {
+      "game": 11,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 79,
+      "positions": 0
+    },
+    {
+      "game": 12,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 126,
+      "positions": 4
+    },
+    {
+      "game": 13,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 145,
+      "positions": 4
+    },
+    {
+      "game": 14,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 72,
+      "positions": 0
+    },
+    {
+      "game": 15,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 111,
+      "positions": 4
+    },
+    {
+      "game": 16,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 134,
+      "positions": 4
+    },
+    {
+      "game": 17,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 133,
+      "positions": 4
+    },
+    {
+      "game": 18,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 53,
+      "positions": 0
+    },
+    {
+      "game": 19,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 113,
+      "positions": 4
+    },
+    {
+      "game": 20,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 159,
+      "positions": 4
+    },
+    {
+      "game": 21,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 84,
+      "positions": 0
+    },
+    {
+      "game": 22,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 232,
+      "positions": 4
+    },
+    {
+      "game": 23,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 139,
+      "positions": 4
+    },
+    {
+      "game": 24,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 58,
+      "positions": 0
+    },
+    {
+      "game": 25,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 79,
+      "positions": 0
+    },
+    {
+      "game": 26,
+      "result": "*",
+      "termination": "maximum_plies_unresolved",
+      "plies": 240,
+      "positions": 4
+    },
+    {
+      "game": 27,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 126,
+      "positions": 4
+    },
+    {
+      "game": 28,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 81,
+      "positions": 0
+    },
+    {
+      "game": 29,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 104,
+      "positions": 2
+    },
+    {
+      "game": 30,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 226,
+      "positions": 4
+    },
+    {
+      "game": 31,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 150,
+      "positions": 4
+    },
+    {
+      "game": 32,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 239,
+      "positions": 4
+    },
+    {
+      "game": 33,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 99,
+      "positions": 2
+    },
+    {
+      "game": 34,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 82,
+      "positions": 1
+    },
+    {
+      "game": 35,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 110,
+      "positions": 2
+    },
+    {
+      "game": 36,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 65,
+      "positions": 0
+    },
+    {
+      "game": 37,
+      "result": "1/2-1/2",
+      "termination": "fifty_moves",
+      "plies": 204,
+      "positions": 4
+    },
+    {
+      "game": 38,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 101,
+      "positions": 0
+    },
+    {
+      "game": 39,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 65,
+      "positions": 0
+    },
+    {
+      "game": 40,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 118,
+      "positions": 1
+    },
+    {
+      "game": 41,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 108,
+      "positions": 4
+    },
+    {
+      "game": 42,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 82,
+      "positions": 0
+    },
+    {
+      "game": 43,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 105,
+      "positions": 0
+    },
+    {
+      "game": 44,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 141,
+      "positions": 4
+    },
+    {
+      "game": 45,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 127,
+      "positions": 2
+    },
+    {
+      "game": 46,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 16,
+      "positions": 0
+    },
+    {
+      "game": 47,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 175,
+      "positions": 4
+    },
+    {
+      "game": 48,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 173,
+      "positions": 4
+    },
+    {
+      "game": 49,
+      "result": "1/2-1/2",
+      "termination": "fifty_moves",
+      "plies": 223,
+      "positions": 4
+    },
+    {
+      "game": 50,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 154,
+      "positions": 4
+    },
+    {
+      "game": 51,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 147,
+      "positions": 4
+    },
+    {
+      "game": 52,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 177,
+      "positions": 4
+    },
+    {
+      "game": 53,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 113,
+      "positions": 4
+    },
+    {
+      "game": 54,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 159,
+      "positions": 4
+    },
+    {
+      "game": 55,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 104,
+      "positions": 4
+    },
+    {
+      "game": 56,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 123,
+      "positions": 4
+    },
+    {
+      "game": 57,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 140,
+      "positions": 4
+    },
+    {
+      "game": 58,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 145,
+      "positions": 4
+    },
+    {
+      "game": 59,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 167,
+      "positions": 4
+    },
+    {
+      "game": 60,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 82,
+      "positions": 0
+    },
+    {
+      "game": 61,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 155,
+      "positions": 3
+    },
+    {
+      "game": 62,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 189,
+      "positions": 4
+    },
+    {
+      "game": 63,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 133,
+      "positions": 4
+    },
+    {
+      "game": 64,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "plies": 190,
+      "positions": 4
+    },
+    {
+      "game": 65,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 104,
+      "positions": 4
+    },
+    {
+      "game": 66,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 115,
+      "positions": 4
+    },
+    {
+      "game": 67,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 182,
+      "positions": 4
+    },
+    {
+      "game": 68,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 62,
+      "positions": 0
+    },
+    {
+      "game": 69,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 108,
+      "positions": 4
+    },
+    {
+      "game": 70,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 91,
+      "positions": 4
+    },
+    {
+      "game": 71,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 134,
+      "positions": 4
+    },
+    {
+      "game": 72,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 95,
+      "positions": 3
+    },
+    {
+      "game": 73,
+      "result": "1/2-1/2",
+      "termination": "stalemate",
+      "plies": 115,
+      "positions": 4
+    },
+    {
+      "game": 74,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 107,
+      "positions": 4
+    },
+    {
+      "game": 75,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 145,
+      "positions": 4
+    },
+    {
+      "game": 76,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 209,
+      "positions": 4
+    },
+    {
+      "game": 77,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 85,
+      "positions": 4
+    },
+    {
+      "game": 78,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 123,
+      "positions": 4
+    },
+    {
+      "game": 79,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 99,
+      "positions": 4
+    },
+    {
+      "game": 80,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 133,
+      "positions": 4
+    },
+    {
+      "game": 81,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 34,
+      "positions": 0
+    },
+    {
+      "game": 82,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 218,
+      "positions": 4
+    },
+    {
+      "game": 83,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 82,
+      "positions": 0
+    },
+    {
+      "game": 84,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 159,
+      "positions": 4
+    },
+    {
+      "game": 85,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 86,
+      "positions": 2
+    },
+    {
+      "game": 86,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 152,
+      "positions": 4
+    },
+    {
+      "game": 87,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 210,
+      "positions": 4
+    },
+    {
+      "game": 88,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 146,
+      "positions": 4
+    },
+    {
+      "game": 89,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 81,
+      "positions": 0
+    },
+    {
+      "game": 90,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 150,
+      "positions": 4
+    },
+    {
+      "game": 91,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 79,
+      "positions": 0
+    },
+    {
+      "game": 92,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 90,
+      "positions": 3
+    },
+    {
+      "game": 93,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 77,
+      "positions": 0
+    },
+    {
+      "game": 94,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 139,
+      "positions": 4
+    },
+    {
+      "game": 95,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 162,
+      "positions": 4
+    },
+    {
+      "game": 96,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 142,
+      "positions": 4
+    },
+    {
+      "game": 97,
+      "result": "*",
+      "termination": "maximum_plies_unresolved",
+      "plies": 240,
+      "positions": 4
+    },
+    {
+      "game": 98,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "plies": 198,
+      "positions": 4
+    },
+    {
+      "game": 99,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 111,
+      "positions": 1
+    },
+    {
+      "game": 100,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 119,
+      "positions": 4
+    },
+    {
+      "game": 101,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 69,
+      "positions": 0
+    },
+    {
+      "game": 102,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 173,
+      "positions": 4
+    },
+    {
+      "game": 103,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 119,
+      "positions": 4
+    },
+    {
+      "game": 104,
+      "result": "*",
+      "termination": "maximum_plies_unresolved",
+      "plies": 240,
+      "positions": 4
+    },
+    {
+      "game": 105,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 135,
+      "positions": 4
+    },
+    {
+      "game": 106,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 87,
+      "positions": 0
+    },
+    {
+      "game": 107,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 117,
+      "positions": 4
+    },
+    {
+      "game": 108,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 86,
+      "positions": 3
+    },
+    {
+      "game": 109,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "plies": 137,
+      "positions": 4
+    },
+    {
+      "game": 110,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 158,
+      "positions": 4
+    },
+    {
+      "game": 111,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 74,
+      "positions": 0
+    },
+    {
+      "game": 112,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 157,
+      "positions": 4
+    },
+    {
+      "game": 113,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 148,
+      "positions": 4
+    },
+    {
+      "game": 114,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 117,
+      "positions": 4
+    },
+    {
+      "game": 115,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 117,
+      "positions": 4
+    },
+    {
+      "game": 116,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 115,
+      "positions": 2
+    },
+    {
+      "game": 117,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 163,
+      "positions": 4
+    },
+    {
+      "game": 118,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 65,
+      "positions": 0
+    },
+    {
+      "game": 119,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 69,
+      "positions": 0
+    },
+    {
+      "game": 120,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 225,
+      "positions": 4
+    },
+    {
+      "game": 121,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 39,
+      "positions": 0
+    },
+    {
+      "game": 122,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 71,
+      "positions": 0
+    },
+    {
+      "game": 123,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 77,
+      "positions": 1
+    },
+    {
+      "game": 124,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 97,
+      "positions": 0
+    },
+    {
+      "game": 125,
+      "result": "*",
+      "termination": "maximum_plies_unresolved",
+      "plies": 240,
+      "positions": 4
+    },
+    {
+      "game": 126,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 89,
+      "positions": 2
+    },
+    {
+      "game": 127,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 77,
+      "positions": 0
+    },
+    {
+      "game": 128,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 87,
+      "positions": 0
+    },
+    {
+      "game": 129,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 90,
+      "positions": 1
+    },
+    {
+      "game": 130,
+      "result": "1/2-1/2",
+      "termination": "fifty_moves",
+      "plies": 222,
+      "positions": 4
+    },
+    {
+      "game": 131,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 94,
+      "positions": 0
+    },
+    {
+      "game": 132,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 109,
+      "positions": 4
+    },
+    {
+      "game": 133,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 132,
+      "positions": 4
+    },
+    {
+      "game": 134,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 122,
+      "positions": 4
+    },
+    {
+      "game": 135,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 64,
+      "positions": 0
+    },
+    {
+      "game": 136,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 108,
+      "positions": 4
+    },
+    {
+      "game": 137,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 97,
+      "positions": 4
+    },
+    {
+      "game": 138,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 75,
+      "positions": 0
+    },
+    {
+      "game": 139,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 144,
+      "positions": 4
+    },
+    {
+      "game": 140,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 112,
+      "positions": 3
+    },
+    {
+      "game": 141,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 153,
+      "positions": 4
+    },
+    {
+      "game": 142,
+      "result": "*",
+      "termination": "maximum_plies_unresolved",
+      "plies": 240,
+      "positions": 4
+    },
+    {
+      "game": 143,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 147,
+      "positions": 4
+    },
+    {
+      "game": 144,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 83,
+      "positions": 2
+    },
+    {
+      "game": 145,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 146,
+      "positions": 4
+    },
+    {
+      "game": 146,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 113,
+      "positions": 0
+    },
+    {
+      "game": 147,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 77,
+      "positions": 0
+    },
+    {
+      "game": 148,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 136,
+      "positions": 4
+    },
+    {
+      "game": 149,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 186,
+      "positions": 4
+    },
+    {
+      "game": 150,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 172,
+      "positions": 4
+    },
+    {
+      "game": 151,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 109,
+      "positions": 4
+    },
+    {
+      "game": 152,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 107,
+      "positions": 3
+    },
+    {
+      "game": 153,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 92,
+      "positions": 0
+    },
+    {
+      "game": 154,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 128,
+      "positions": 2
+    },
+    {
+      "game": 155,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 161,
+      "positions": 4
+    },
+    {
+      "game": 156,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 217,
+      "positions": 4
+    },
+    {
+      "game": 157,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 99,
+      "positions": 3
+    },
+    {
+      "game": 158,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 86,
+      "positions": 4
+    },
+    {
+      "game": 159,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 84,
+      "positions": 0
+    },
+    {
+      "game": 160,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 136,
+      "positions": 4
+    },
+    {
+      "game": 161,
+      "result": "*",
+      "termination": "maximum_plies_unresolved",
+      "plies": 240,
+      "positions": 4
+    },
+    {
+      "game": 162,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 113,
+      "positions": 4
+    },
+    {
+      "game": 163,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 83,
+      "positions": 1
+    },
+    {
+      "game": 164,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 139,
+      "positions": 4
+    },
+    {
+      "game": 165,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 166,
+      "positions": 4
+    },
+    {
+      "game": 166,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 68,
+      "positions": 0
+    },
+    {
+      "game": 167,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 115,
+      "positions": 4
+    },
+    {
+      "game": 168,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 149,
+      "positions": 4
+    },
+    {
+      "game": 169,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 123,
+      "positions": 4
+    },
+    {
+      "game": 170,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 77,
+      "positions": 0
+    },
+    {
+      "game": 171,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 66,
+      "positions": 0
+    },
+    {
+      "game": 172,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 129,
+      "positions": 4
+    },
+    {
+      "game": 173,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 130,
+      "positions": 4
+    },
+    {
+      "game": 174,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 158,
+      "positions": 4
+    },
+    {
+      "game": 175,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 172,
+      "positions": 4
+    },
+    {
+      "game": 176,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 181,
+      "positions": 4
+    },
+    {
+      "game": 177,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 167,
+      "positions": 4
+    },
+    {
+      "game": 178,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 119,
+      "positions": 4
+    },
+    {
+      "game": 179,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 103,
+      "positions": 0
+    },
+    {
+      "game": 180,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 87,
+      "positions": 4
+    },
+    {
+      "game": 181,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 71,
+      "positions": 0
+    },
+    {
+      "game": 182,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 204,
+      "positions": 4
+    },
+    {
+      "game": 183,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 62,
+      "positions": 0
+    },
+    {
+      "game": 184,
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 159,
+      "positions": 4
+    },
+    {
+      "game": 185,
+      "result": "*",
+      "termination": "maximum_plies_unresolved",
+      "plies": 240,
+      "positions": 4
+    },
+    {
+      "game": 186,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 114,
+      "positions": 2
+    }
+  ],
+  "source_pgn_sha256": "03ba976844083b9b3752b85f4767bbc728d85479d6da1e2886411ac68be97ded",
+  "source_unresolved": 7,
+  "data_sha256": "f07976034c668f3ae636ef96cf584891b1bb1a7cc1648e73d975e837277b29a3",
+  "seconds": 39.776,
+  "source_outcomes": {
+    "0-1": 67,
+    "1/2-1/2": 19,
+    "1-0": 94,
+    "*": 7
+  }
+}

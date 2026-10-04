@@ -1,0 +1,508 @@
+{
+  "complete": true,
+  "reason": "complete",
+  "summary": "White can force checkmate within 11 plies. The certificate covers every legal defensive reply in 30 positions; every path ends in checkmate.",
+  "rootFen": "8/8/8/7Q/2k5/8/8/2K5 w - - 0 1",
+  "strongSide": 0,
+  "rootDistance": 11,
+  "nodeLimit": 50000,
+  "nodes": [
+    {
+      "id": 0,
+      "fen": "8/8/8/7Q/2k5/8/8/2K5 w - - 0 1",
+      "distance": 11,
+      "edges": [
+        {
+          "move": "h5e5",
+          "to": 1
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "fen": "8/8/8/4Q3/2k5/8/8/2K5 b - - 1 1",
+      "distance": 10,
+      "edges": [
+        {
+          "move": "c4b3",
+          "to": 2
+        },
+        {
+          "move": "c4d3",
+          "to": 10
+        },
+        {
+          "move": "c4b4",
+          "to": 21
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fen": "8/8/8/4Q3/8/1k6/8/2K5 w - - 2 2",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "e5d4",
+          "to": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fen": "8/8/8/8/3Q4/1k6/8/2K5 b - - 3 2",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "b3a2",
+          "to": 4
+        },
+        {
+          "move": "b3a3",
+          "to": 6
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fen": "8/8/8/8/3Q4/8/k7/2K5 w - - 4 3",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "d4b2",
+          "to": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "fen": "8/8/8/8/8/8/kQ6/2K5 b - - 5 3",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 6,
+      "fen": "8/8/8/8/3Q4/k7/8/2K5 w - - 4 3",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "c1c2",
+          "to": 7
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "fen": "8/8/8/8/3Q4/k7/2K5/8 b - - 5 3",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a3a2",
+          "to": 8
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "fen": "8/8/8/8/3Q4/8/k1K5/8 w - - 6 4",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "d4b2",
+          "to": 9
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "fen": "8/8/8/8/8/8/kQK5/8 b - - 7 4",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 10,
+      "fen": "8/8/8/4Q3/8/3k4/8/2K5 w - - 2 2",
+      "distance": 9,
+      "edges": [
+        {
+          "move": "e5f4",
+          "to": 11
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "fen": "8/8/8/8/5Q2/3k4/8/2K5 b - - 3 2",
+      "distance": 8,
+      "edges": [
+        {
+          "move": "d3e2",
+          "to": 12
+        },
+        {
+          "move": "d3c3",
+          "to": 18
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "fen": "8/8/8/8/5Q2/8/4k3/2K5 w - - 4 3",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "c1c2",
+          "to": 13
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "fen": "8/8/8/8/5Q2/8/2K1k3/8 b - - 5 3",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "e2e1",
+          "to": 14
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "fen": "8/8/8/8/5Q2/8/2K5/4k3 w - - 6 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "c2d3",
+          "to": 15
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "fen": "8/8/8/8/5Q2/3K4/8/4k3 b - - 7 4",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "e1d1",
+          "to": 16
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "fen": "8/8/8/8/5Q2/3K4/8/3k4 w - - 8 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "f4f1",
+          "to": 17
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "fen": "8/8/8/8/8/3K4/8/3k1Q2 b - - 9 5",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 18,
+      "fen": "8/8/8/8/5Q2/2k5/8/2K5 w - - 4 3",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "f4e4",
+          "to": 19
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "fen": "8/8/8/8/4Q3/2k5/8/2K5 b - - 5 3",
+      "distance": 6,
+      "edges": [
+        {
+          "move": "c3b3",
+          "to": 20
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "fen": "8/8/8/8/4Q3/1k6/8/2K5 w - - 6 4",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "e4d4",
+          "to": 3
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "fen": "8/8/8/4Q3/1k6/8/8/2K5 w - - 2 2",
+      "distance": 9,
+      "edges": [
+        {
+          "move": "e5d5",
+          "to": 22
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "fen": "8/8/8/3Q4/1k6/8/8/2K5 b - - 3 2",
+      "distance": 8,
+      "edges": [
+        {
+          "move": "b4a3",
+          "to": 23
+        },
+        {
+          "move": "b4c3",
+          "to": 26
+        },
+        {
+          "move": "b4a4",
+          "to": 27
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "fen": "8/8/8/3Q4/8/k7/8/2K5 w - - 4 3",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d5b5",
+          "to": 24
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "fen": "8/8/8/1Q6/8/k7/8/2K5 b - - 5 3",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a3a2",
+          "to": 25
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "fen": "8/8/8/1Q6/8/8/k7/2K5 w - - 6 4",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "b5b2",
+          "to": 5
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "fen": "8/8/8/3Q4/8/2k5/8/2K5 w - - 4 3",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "d5e4",
+          "to": 19
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "fen": "8/8/8/3Q4/k7/8/8/2K5 w - - 4 3",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "d5c5",
+          "to": 28
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "fen": "8/8/8/2Q5/k7/8/8/2K5 b - - 5 3",
+      "distance": 6,
+      "edges": [
+        {
+          "move": "a4b3",
+          "to": 29
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "fen": "8/8/8/2Q5/8/1k6/8/2K5 w - - 6 4",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "c5d4",
+          "to": 3
+        }
+      ]
+    }
+  ],
+  "alternatives": [
+    {
+      "move": "h5d1",
+      "preservesWin": true,
+      "remainingPlies": 12,
+      "reason": "Keeps a win but leaves 12 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "h5h1",
+      "preservesWin": true,
+      "remainingPlies": 16,
+      "reason": "Keeps a win but leaves 16 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "h5e2",
+      "preservesWin": true,
+      "remainingPlies": 14,
+      "reason": "Keeps a win but leaves 14 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "h5h2",
+      "preservesWin": true,
+      "remainingPlies": 18,
+      "reason": "Keeps a win but leaves 18 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "h5f3",
+      "preservesWin": true,
+      "remainingPlies": 16,
+      "reason": "Keeps a win but leaves 16 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "h5h3",
+      "preservesWin": true,
+      "remainingPlies": 16,
+      "reason": "Keeps a win but leaves 16 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "h5g4",
+      "preservesWin": true,
+      "remainingPlies": 16,
+      "reason": "Keeps a win but leaves 16 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "h5h4",
+      "preservesWin": true,
+      "remainingPlies": 14,
+      "reason": "Keeps a win but leaves 14 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "h5a5",
+      "preservesWin": true,
+      "remainingPlies": 14,
+      "reason": "Keeps a win but leaves 14 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "h5b5",
+      "preservesWin": false,
+      "remainingPlies": null,
+      "reason": "Allows a theoretical draw."
+    },
+    {
+      "move": "h5c5",
+      "preservesWin": false,
+      "remainingPlies": null,
+      "reason": "Allows a theoretical draw."
+    },
+    {
+      "move": "h5d5",
+      "preservesWin": false,
+      "remainingPlies": null,
+      "reason": "Allows a theoretical draw."
+    },
+    {
+      "move": "h5e5",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Reduces the mate bound from 11 to 10 plies."
+    },
+    {
+      "move": "h5f5",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Reduces the mate bound from 11 to 10 plies."
+    },
+    {
+      "move": "h5g5",
+      "preservesWin": true,
+      "remainingPlies": 12,
+      "reason": "Keeps a win but leaves 12 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "h5g6",
+      "preservesWin": true,
+      "remainingPlies": 16,
+      "reason": "Keeps a win but leaves 16 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "h5h6",
+      "preservesWin": true,
+      "remainingPlies": 16,
+      "reason": "Keeps a win but leaves 16 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "h5f7",
+      "preservesWin": true,
+      "remainingPlies": 14,
+      "reason": "Keeps a win but leaves 14 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "h5h7",
+      "preservesWin": true,
+      "remainingPlies": 14,
+      "reason": "Keeps a win but leaves 14 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "h5e8",
+      "preservesWin": true,
+      "remainingPlies": 14,
+      "reason": "Keeps a win but leaves 14 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "h5h8",
+      "preservesWin": true,
+      "remainingPlies": 16,
+      "reason": "Keeps a win but leaves 16 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "c1b1",
+      "preservesWin": true,
+      "remainingPlies": 14,
+      "reason": "Keeps a win but leaves 14 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "c1d1",
+      "preservesWin": true,
+      "remainingPlies": 14,
+      "reason": "Keeps a win but leaves 14 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "c1b2",
+      "preservesWin": true,
+      "remainingPlies": 12,
+      "reason": "Keeps a win but leaves 12 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "c1c2",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Reduces the mate bound from 11 to 10 plies."
+    },
+    {
+      "move": "c1d2",
+      "preservesWin": true,
+      "remainingPlies": 12,
+      "reason": "Keeps a win but leaves 12 plies; it does not reduce the current bound."
+    }
+  ]
+}

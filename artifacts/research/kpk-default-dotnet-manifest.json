@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "artifacts": [
+    {
+      "path": "artifacts/research/kpk-experiment-manifest.json",
+      "sha256": "933fc4ab2f8f53fd5d32c933e58029cddbeb71d966b269b73da0c533e7a9060d"
+    },
+    {
+      "path": "artifacts/research/kpk-default-dotnet-source/manifest.json",
+      "sha256": "5d4c4c30d58768e6c4aa4cdc7520476890cd805b2e8d27c157f03f7eb49eabfe"
+    },
+    {
+      "path": "artifacts/validation/kpk-default-rules.json",
+      "sha256": "bef3dc7f48d26d81a0df5a55cf8015c93974c9d3113fc5b3b4d345753e023f77"
+    },
+    {
+      "path": "artifacts/validation/kpk-control-engine-tests.txt",
+      "sha256": "9722ef638daccc8a20687d56b6f1c5d80a932778928fee9d7591e6d4bd191ec6"
+    },
+    {
+      "path": "artifacts/benchmarks/kpk-control-depth7.json",
+      "sha256": "d576b533f9326f368c50f18c7b946d0dc504d0f7d3feab192cbe4c97d5d7f360"
+    },
+    {
+      "path": "artifacts/publish/kpk-control-dotnet/Aster.dll",
+      "sha256": "36195a40e146ea3eca387e9831ff99b040b484a02ad10f6ae68072919ed0c840"
+    },
+    {
+      "path": "artifacts/publish/kpk-control-dotnet/Aster.runtimeconfig.json",
+      "sha256": "60e8700cdee9afcc3894f7e9bbb7ac56bb8d7af7561e8ad47323f3b5ebe4c3af"
+    },
+    {
+      "path": "artifacts/publish/kpk-control-dotnet/Aster.deps.json",
+      "sha256": "846e5fc4a8c7c44657545ea00b93646fff9dc53574fc62eb7bb2c3d7fe4c6a4c"
+    }
+  ],
+  "interpretation": "Supplement preserving the exact ordinary DLL used for required build verification; links immutable KPK experiment evidence."
+}

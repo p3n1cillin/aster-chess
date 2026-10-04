@@ -1,0 +1,768 @@
+{
+  "schema": 2,
+  "kind": "synthetic-kpk-setups",
+  "seed": 20261028,
+  "strata": {
+    "win-pawn-rook": {
+      "eligible": 15,
+      "sampled": 8
+    },
+    "win-pawn-other": {
+      "eligible": 4245,
+      "sampled": 8
+    },
+    "win-defender-rook": {
+      "eligible": 57,
+      "sampled": 8
+    },
+    "win-defender-other": {
+      "eligible": 4536,
+      "sampled": 8
+    },
+    "draw-pawn-rook": {
+      "eligible": 5526,
+      "sampled": 8
+    },
+    "draw-pawn-other": {
+      "eligible": 13658,
+      "sampled": 8
+    },
+    "draw-defender-rook": {
+      "eligible": 8636,
+      "sampled": 8
+    },
+    "draw-defender-other": {
+      "eligible": 26445,
+      "sampled": 8
+    }
+  },
+  "history_origin": "Legal synthetic FEN, fresh halfmove clock, no preceding repetition history; all subsequent play retained.",
+  "dump_sha256": "1e1842a3ba5d514d9c0704ff365f3647aed5807fc47bb346c5a539744cc923e3",
+  "oracle_manifest_sha256": "b6995f13703467b2eb9d5b1ab0dd0da63eaeedd23725236526e7e8a0d241dfaa",
+  "generator_sha256": "fc58715434c5ee5b0e786f7fa1799d28d5e8b9d53c1c258152f3048caa9bba49",
+  "exclusions": [
+    {
+      "path": "artifacts/validation/kpk-move-choices.json.cases.json",
+      "sha256": "1022f01665405e9f17a36c1a5890f8d9750bd2032689173c0ccb3a237b1215a8"
+    },
+    {
+      "path": "tests/fixtures/tactics-v1.json",
+      "sha256": "ceb0c13cefcf4a44d2a570e562c52f62316dbf6260d25d912f4fc846595844b3"
+    },
+    {
+      "path": "tests/fixtures/tactics-quiet-v1.json",
+      "sha256": "3868e2bd596272873251fca177e2a253027cb7bc8dc99b42148cdcb6f86641d9"
+    },
+    {
+      "path": "tests/fixtures/endgames-v1.json",
+      "sha256": "be7b57e12be2fb570ee24e75c610af5ea5f7f125da8d125d11b0fe5443ef9ee9"
+    }
+  ],
+  "openings": [
+    {
+      "id": "kpk-001",
+      "start_fen": "8/8/8/8/8/P2k4/1K6/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/8/8/8/8/P2k4/1K6/8 w - - 0 1",
+      "normalized_index": 33958,
+      "stratum": "win-pawn-rook",
+      "oracle_wdl": 2,
+      "conversion_bound": 19,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-002",
+      "start_fen": "8/8/3k4/2p5/8/8/8/5K2 b - - 0 1",
+      "moves": "",
+      "fen": "8/8/3k4/2p5/8/8/8/5K2 b - - 0 1",
+      "normalized_index": 84474,
+      "stratum": "win-pawn-other",
+      "oracle_wdl": 2,
+      "conversion_bound": 19,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-003",
+      "start_fen": "8/8/8/8/8/7P/4k1K1/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/8/8/8/8/7P/4k1K1/8 b - - 0 1",
+      "normalized_index": 33943,
+      "stratum": "win-defender-rook",
+      "oracle_wdl": -2,
+      "conversion_bound": 20,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-004",
+      "start_fen": "8/3kp3/8/6K1/8/8/8/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/3kp3/8/6K1/8/8/8/8 w - - 0 1",
+      "normalized_index": 26163,
+      "stratum": "win-defender-other",
+      "oracle_wdl": -2,
+      "conversion_bound": 28,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-005",
+      "start_fen": "8/8/5K2/2k5/P7/8/8/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/8/5K2/2k5/P7/8/8/8 w - - 0 1",
+      "normalized_index": 71364,
+      "stratum": "draw-pawn-rook",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-006",
+      "start_fen": "8/8/8/8/8/2p5/8/K5k1 b - - 0 1",
+      "moves": "",
+      "fen": "8/8/8/8/8/2p5/8/K5k1 b - - 0 1",
+      "normalized_index": 155504,
+      "stratum": "draw-pawn-other",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-007",
+      "start_fen": "8/8/8/2k5/8/7P/3K4/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/8/8/2k5/8/7P/3K4/8 b - - 0 1",
+      "normalized_index": 34379,
+      "stratum": "draw-defender-rook",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-008",
+      "start_fen": "8/8/6p1/8/8/5K2/8/1k6 w - - 0 1",
+      "moves": "",
+      "fen": "8/8/6p1/8/8/5K2/8/1k6 w - - 0 1",
+      "normalized_index": 48981,
+      "stratum": "draw-defender-other",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-009",
+      "start_fen": "8/k7/p4K2/8/8/8/8/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/k7/p4K2/8/8/8/8/8 b - - 0 1",
+      "normalized_index": 33834,
+      "stratum": "win-pawn-rook",
+      "oracle_wdl": 2,
+      "conversion_bound": 19,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-010",
+      "start_fen": "8/3k4/8/8/8/5K2/2P5/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/3k4/8/8/8/5K2/2P5/8 w - - 0 1",
+      "normalized_index": 19174,
+      "stratum": "win-pawn-other",
+      "oracle_wdl": 2,
+      "conversion_bound": 29,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-011",
+      "start_fen": "8/8/1K3k1p/8/8/8/8/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/8/1K3k1p/8/8/8/8/8 w - - 0 1",
+      "normalized_index": 35117,
+      "stratum": "win-defender-rook",
+      "oracle_wdl": -2,
+      "conversion_bound": 18,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-012",
+      "start_fen": "k7/8/8/8/8/7K/4P3/8 b - - 0 1",
+      "moves": "",
+      "fen": "k7/8/8/8/8/7K/4P3/8 b - - 0 1",
+      "normalized_index": 26751,
+      "stratum": "win-defender-other",
+      "oracle_wdl": -2,
+      "conversion_bound": 20,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-013",
+      "start_fen": "8/p5k1/8/8/8/8/4K3/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/p5k1/8/8/8/8/4K3/8 b - - 0 1",
+      "normalized_index": 1896,
+      "stratum": "draw-pawn-rook",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-014",
+      "start_fen": "3k4/8/1P6/8/6K1/8/8/8 w - - 0 1",
+      "moves": "",
+      "fen": "3k4/8/1P6/8/6K1/8/8/8 w - - 0 1",
+      "normalized_index": 143222,
+      "stratum": "draw-pawn-other",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-015",
+      "start_fen": "8/8/7p/8/5K2/1k6/8/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/8/7p/8/5K2/1k6/8/8 w - - 0 1",
+      "normalized_index": 38725,
+      "stratum": "draw-defender-rook",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-016",
+      "start_fen": "2k5/8/7K/8/8/4P3/8/8 b - - 0 1",
+      "moves": "",
+      "fen": "2k5/8/7K/8/8/4P3/8/8 b - - 0 1",
+      "normalized_index": 62587,
+      "stratum": "draw-defender-other",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-017",
+      "start_fen": "8/8/8/8/8/P4k2/1K6/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/8/8/8/8/P4k2/1K6/8 w - - 0 1",
+      "normalized_index": 33962,
+      "stratum": "win-pawn-rook",
+      "oracle_wdl": 2,
+      "conversion_bound": 19,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-018",
+      "start_fen": "8/3p4/8/7k/8/8/8/K7 b - - 0 1",
+      "moves": "",
+      "fen": "8/3p4/8/7k/8/8/8/K7 b - - 0 1",
+      "normalized_index": 28656,
+      "stratum": "win-pawn-other",
+      "oracle_wdl": 2,
+      "conversion_bound": 23,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-019",
+      "start_fen": "8/8/8/8/8/8/4k1KP/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/8/8/8/8/8/4k1KP/8 b - - 0 1",
+      "normalized_index": 1175,
+      "stratum": "win-defender-rook",
+      "oracle_wdl": -2,
+      "conversion_bound": 20,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-020",
+      "start_fen": "8/8/4p2K/4k3/8/8/8/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/8/4p2K/4k3/8/8/8/8 w - - 0 1",
+      "normalized_index": 60833,
+      "stratum": "win-defender-other",
+      "oracle_wdl": -2,
+      "conversion_bound": 18,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-021",
+      "start_fen": "k7/6K1/P7/8/8/8/8/8 w - - 0 1",
+      "moves": "",
+      "fen": "k7/6K1/P7/8/8/8/8/8 w - - 0 1",
+      "normalized_index": 138096,
+      "stratum": "draw-pawn-rook",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-022",
+      "start_fen": "4k3/8/8/1p6/8/4K3/8/8 b - - 0 1",
+      "moves": "",
+      "fen": "4k3/8/8/1p6/8/4K3/8/8 b - - 0 1",
+      "normalized_index": 74328,
+      "stratum": "draw-pawn-other",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-023",
+      "start_fen": "8/8/8/6k1/7P/8/6K1/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/8/8/6k1/7P/8/6K1/8 b - - 0 1",
+      "normalized_index": 66755,
+      "stratum": "draw-defender-rook",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-024",
+      "start_fen": "8/5p2/4K3/8/8/8/5k2/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/5p2/4K3/8/8/8/5k2/8 w - - 0 1",
+      "normalized_index": 22823,
+      "stratum": "draw-defender-other",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-025",
+      "start_fen": "8/2k5/p3K3/8/8/8/8/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/2k5/p3K3/8/8/8/8/8 b - - 0 1",
+      "normalized_index": 34088,
+      "stratum": "win-pawn-rook",
+      "oracle_wdl": 2,
+      "conversion_bound": 19,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-026",
+      "start_fen": "8/8/8/8/6k1/8/1P6/2K5 w - - 0 1",
+      "moves": "",
+      "fen": "8/8/8/8/6k1/8/1P6/2K5 w - - 0 1",
+      "normalized_index": 8508,
+      "stratum": "win-pawn-other",
+      "oracle_wdl": 2,
+      "conversion_bound": 23,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-027",
+      "start_fen": "8/7p/1K5k/8/8/8/8/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/7p/1K5k/8/8/8/8/8 w - - 0 1",
+      "normalized_index": 2093,
+      "stratum": "win-defender-rook",
+      "oracle_wdl": -2,
+      "conversion_bound": 18,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-028",
+      "start_fen": "8/8/8/8/1k6/8/5P2/7K b - - 0 1",
+      "moves": "",
+      "fen": "8/8/8/8/1k6/8/5P2/7K b - - 0 1",
+      "normalized_index": 16445,
+      "stratum": "win-defender-other",
+      "oracle_wdl": -2,
+      "conversion_bound": 30,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-029",
+      "start_fen": "8/k7/8/8/pK6/8/8/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/k7/8/8/pK6/8/8/8 b - - 0 1",
+      "normalized_index": 99394,
+      "stratum": "draw-pawn-rook",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-030",
+      "start_fen": "4k3/8/8/3P2K1/8/8/8/8 w - - 0 1",
+      "moves": "",
+      "fen": "4k3/8/8/3P2K1/8/8/8/8 w - - 0 1",
+      "normalized_index": 127864,
+      "stratum": "draw-pawn-other",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-031",
+      "start_fen": "1k6/8/8/8/7p/8/8/7K w - - 0 1",
+      "moves": "",
+      "fen": "1k6/8/8/8/7p/8/8/7K w - - 0 1",
+      "normalized_index": 99185,
+      "stratum": "draw-defender-rook",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-032",
+      "start_fen": "8/8/1K1k4/8/8/4P3/8/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/8/1K1k4/8/8/4P3/8/8 b - - 0 1",
+      "normalized_index": 63321,
+      "stratum": "draw-defender-other",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-033",
+      "start_fen": "8/8/8/8/8/P4k2/3K4/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/8/8/8/8/P4k2/3K4/8 w - - 0 1",
+      "normalized_index": 34218,
+      "stratum": "win-pawn-rook",
+      "oracle_wdl": 2,
+      "conversion_bound": 19,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-034",
+      "start_fen": "8/8/3p4/6k1/8/8/5K2/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/8/3p4/6k1/8/8/5K2/8 b - - 0 1",
+      "normalized_index": 61290,
+      "stratum": "win-pawn-other",
+      "oracle_wdl": 2,
+      "conversion_bound": 23,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-035",
+      "start_fen": "8/8/8/8/8/2k1K3/7P/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/8/8/8/8/2k1K3/7P/8 b - - 0 1",
+      "normalized_index": 2475,
+      "stratum": "win-defender-rook",
+      "oracle_wdl": -2,
+      "conversion_bound": 18,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-036",
+      "start_fen": "8/1k2p2K/8/8/8/8/8/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/1k2p2K/8/8/8/8/8/8 w - - 0 1",
+      "normalized_index": 26385,
+      "stratum": "win-defender-other",
+      "oracle_wdl": -2,
+      "conversion_bound": 22,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-037",
+      "start_fen": "8/3K4/8/8/8/Pk6/8/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/3K4/8/8/8/Pk6/8/8 w - - 0 1",
+      "normalized_index": 39330,
+      "stratum": "draw-pawn-rook",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-038",
+      "start_fen": "8/3p4/8/8/8/8/4K3/6k1 b - - 0 1",
+      "moves": "",
+      "fen": "8/3p4/8/8/8/8/4K3/6k1 b - - 0 1",
+      "normalized_index": 32616,
+      "stratum": "draw-pawn-other",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-039",
+      "start_fen": "8/8/4k3/7P/1K6/8/8/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/8/4k3/7P/1K6/8/8/8 b - - 0 1",
+      "normalized_index": 102231,
+      "stratum": "draw-defender-rook",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-040",
+      "start_fen": "8/8/5k2/4p3/8/8/5K2/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/8/5k2/4p3/8/8/5K2/8 w - - 0 1",
+      "normalized_index": 92517,
+      "stratum": "draw-defender-other",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-041",
+      "start_fen": "8/pk6/3K4/8/8/8/8/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/pk6/3K4/8/8/8/8/8 b - - 0 1",
+      "normalized_index": 1190,
+      "stratum": "win-pawn-rook",
+      "oracle_wdl": 2,
+      "conversion_bound": 19,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-042",
+      "start_fen": "8/8/2k5/8/8/2K5/3P4/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/8/2k5/8/8/2K5/3P4/8 w - - 0 1",
+      "normalized_index": 26964,
+      "stratum": "win-pawn-other",
+      "oracle_wdl": 2,
+      "conversion_bound": 23,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-043",
+      "start_fen": "8/7p/3K1k2/8/8/8/8/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/7p/3K1k2/8/8/8/8/8 w - - 0 1",
+      "normalized_index": 2345,
+      "stratum": "win-defender-rook",
+      "oracle_wdl": -2,
+      "conversion_bound": 18,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-044",
+      "start_fen": "8/8/8/8/k7/6K1/6P1/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/8/8/8/k7/6K1/6P1/8 b - - 0 1",
+      "normalized_index": 10431,
+      "stratum": "win-defender-other",
+      "oracle_wdl": -2,
+      "conversion_bound": 22,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-045",
+      "start_fen": "8/p7/8/K7/8/8/3k4/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/p7/8/K7/8/8/3k4/8 b - - 0 1",
+      "normalized_index": 6576,
+      "stratum": "draw-pawn-rook",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-046",
+      "start_fen": "1k6/1P6/8/8/8/8/2K5/8 w - - 0 1",
+      "moves": "",
+      "fen": "1k6/1P6/8/8/8/8/2K5/8 w - - 0 1",
+      "normalized_index": 173426,
+      "stratum": "draw-pawn-other",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-047",
+      "start_fen": "8/8/7k/7p/8/8/8/7K w - - 0 1",
+      "moves": "",
+      "fen": "8/8/7k/7p/8/8/8/7K w - - 0 1",
+      "normalized_index": 67697,
+      "stratum": "draw-defender-rook",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-048",
+      "start_fen": "8/6P1/4k3/8/8/8/6K1/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/6P1/4k3/8/8/8/6K1/8 b - - 0 1",
+      "normalized_index": 173271,
+      "stratum": "draw-defender-other",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-049",
+      "start_fen": "8/8/8/8/8/4k3/P1K5/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/8/8/8/8/4k3/P1K5/8 w - - 0 1",
+      "normalized_index": 1320,
+      "stratum": "win-pawn-rook",
+      "oracle_wdl": 2,
+      "conversion_bound": 19,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-050",
+      "start_fen": "8/3p1k2/8/8/6K1/8/8/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/3p1k2/8/8/6K1/8/8/8 b - - 0 1",
+      "normalized_index": 26316,
+      "stratum": "win-pawn-other",
+      "oracle_wdl": 2,
+      "conversion_bound": 23,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-051",
+      "start_fen": "8/8/8/8/8/4k1K1/7P/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/8/8/8/8/4k1K1/7P/8 b - - 0 1",
+      "normalized_index": 2215,
+      "stratum": "win-defender-rook",
+      "oracle_wdl": -2,
+      "conversion_bound": 18,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-052",
+      "start_fen": "8/6p1/8/8/8/3k4/8/4K3 w - - 0 1",
+      "moves": "",
+      "fen": "8/6p1/8/8/8/3k4/8/4K3 w - - 0 1",
+      "normalized_index": 13943,
+      "stratum": "win-defender-other",
+      "oracle_wdl": -2,
+      "conversion_bound": 30,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-053",
+      "start_fen": "8/3K4/8/8/8/3k4/P7/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/3K4/8/8/8/3k4/P7/8 w - - 0 1",
+      "normalized_index": 6566,
+      "stratum": "draw-pawn-rook",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-054",
+      "start_fen": "8/8/1p6/8/8/2K5/8/5k2 b - - 0 1",
+      "moves": "",
+      "fen": "8/8/1p6/8/8/2K5/8/5k2 b - - 0 1",
+      "normalized_index": 48852,
+      "stratum": "draw-pawn-other",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-055",
+      "start_fen": "4K2k/8/8/8/7P/8/8/8 b - - 0 1",
+      "moves": "",
+      "fen": "4K2k/8/8/8/7P/8/8/8 b - - 0 1",
+      "normalized_index": 73201,
+      "stratum": "draw-defender-rook",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-056",
+      "start_fen": "2k5/8/8/5p2/1K6/8/8/8 w - - 0 1",
+      "moves": "",
+      "fen": "2k5/8/8/5p2/1K6/8/8/8 w - - 0 1",
+      "normalized_index": 82637,
+      "stratum": "draw-defender-other",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-057",
+      "start_fen": "8/1k6/p3K3/8/8/8/8/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/1k6/p3K3/8/8/8/8/8 b - - 0 1",
+      "normalized_index": 33960,
+      "stratum": "win-pawn-rook",
+      "oracle_wdl": 2,
+      "conversion_bound": 19,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-058",
+      "start_fen": "6k1/8/8/8/8/8/1P4K1/8 w - - 0 1",
+      "moves": "",
+      "fen": "6k1/8/8/8/8/8/1P4K1/8 w - - 0 1",
+      "normalized_index": 10108,
+      "stratum": "win-pawn-other",
+      "oracle_wdl": 2,
+      "conversion_bound": 33,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-059",
+      "start_fen": "8/1K3k2/7p/8/8/8/8/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/1K3k2/7p/8/8/8/8/8 w - - 0 1",
+      "normalized_index": 34077,
+      "stratum": "win-defender-rook",
+      "oracle_wdl": -2,
+      "conversion_bound": 20,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-060",
+      "start_fen": "8/8/8/8/8/1k6/4P1K1/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/8/8/8/8/1k6/4P1K1/8 b - - 0 1",
+      "normalized_index": 25773,
+      "stratum": "win-defender-other",
+      "oracle_wdl": -2,
+      "conversion_bound": 26,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-061",
+      "start_fen": "8/p7/8/8/K7/5k2/8/8 b - - 0 1",
+      "moves": "",
+      "fen": "8/p7/8/8/K7/5k2/8/8 b - - 0 1",
+      "normalized_index": 5824,
+      "stratum": "draw-pawn-rook",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-062",
+      "start_fen": "8/8/8/4k1K1/2P5/8/8/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/8/8/4k1K1/2P5/8/8/8 w - - 0 1",
+      "normalized_index": 86856,
+      "stratum": "draw-pawn-other",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "white"
+    },
+    {
+      "id": "kpk-063",
+      "start_fen": "8/7k/7p/8/8/1K6/8/8 w - - 0 1",
+      "moves": "",
+      "fen": "8/7k/7p/8/8/1K6/8/8 w - - 0 1",
+      "normalized_index": 33885,
+      "stratum": "draw-defender-rook",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "black"
+    },
+    {
+      "id": "kpk-064",
+      "start_fen": "7k/6P1/8/8/8/8/8/K7 b - - 0 1",
+      "moves": "",
+      "fen": "7k/6P1/8/8/8/8/8/K7 b - - 0 1",
+      "normalized_index": 173041,
+      "stratum": "draw-defender-other",
+      "oracle_wdl": 0,
+      "conversion_bound": 0,
+      "pawn_color": "white"
+    }
+  ],
+  "interpretation": "Targeted endgame conversion/defense diagnostic, not balanced general-strength openings. Selected before querying either Aster build."
+}

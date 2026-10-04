@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "positions": 4096,
+  "sample_states": 512,
+  "engine_sha256": "d00a50e657ddab709df6a01f0aaf828584cf29a28362da79b3ecd7a8c92512e5",
+  "baseline_sha256": "734d538faba6f43d5533981421b59a0a3cccbec60cf1dbc9980391ef58528b14",
+  "dump_sha256": "1e1842a3ba5d514d9c0704ff365f3647aed5807fc47bb346c5a539744cc923e3",
+  "source_sha256": "4143991222c7d9f605f6b8e29f8241cb1c30e352e62cedce682d41aa029cd3f1",
+  "interpretation": "Runtime color/file normalization, unchanged board, rule50 fallbacks and responsive isready/stop; not strength."
+}

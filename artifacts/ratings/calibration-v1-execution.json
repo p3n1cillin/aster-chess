@@ -1,0 +1,54 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-04T13:28:25.728446+00:00",
+  "plan_sha256": "e9e76802561c4e26ab0b87f7dd0d5bb9b492de45e5e019a9ff5d59acdeff8d12",
+  "runner_sha256": "6e8a31adefd0aeb5d51eac2f5672396f4518f779947713f86dac138ff00f661a",
+  "match_script_sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8",
+  "screen_suite_sha256": "690bacaceff2559200ebb084424de85639cf045c14f094912e18f5b38ba9805f",
+  "confirmation_suite_sha256": "1e904d67400433abedb8e48592b4598e8e5ed10ed82b0cdd13025de6eca8615d",
+  "completed_phases": [
+    {
+      "label": "screen-1320",
+      "setting": 1320,
+      "report": "artifacts\\matches\\rating-v1-screen-1320.json",
+      "report_sha256": "5cdef70ce4548c359e9e6476bec0a25265f6428ad6a213d8858c51359be5e39e",
+      "games": 32
+    },
+    {
+      "label": "screen-1800",
+      "setting": 1800,
+      "report": "artifacts\\matches\\rating-v1-screen-1800.json",
+      "report_sha256": "dd3d0108da2e9c8dfa109e4b0846285669d6a4c15b50d147804c0be00cc31cbd",
+      "games": 32
+    },
+    {
+      "label": "screen-2300",
+      "setting": 2300,
+      "report": "artifacts\\matches\\rating-v1-screen-2300.json",
+      "report_sha256": "578fb4c2eef0f9ccc29b96c43f8f015da95ca82ccf988074c1ffb91d990d253a",
+      "games": 32
+    },
+    {
+      "label": "screen-2800",
+      "setting": 2800,
+      "report": "artifacts\\matches\\rating-v1-screen-2800.json",
+      "report_sha256": "7b595b0eddd180be181490b4f7c3754d42d4ff4b76ac2cca4d5e20b883df22a3",
+      "games": 32
+    },
+    {
+      "label": "screen-3190",
+      "setting": 3190,
+      "report": "artifacts\\matches\\rating-v1-screen-3190.json",
+      "report_sha256": "6ce078df5cb8626e58b53e4961212885a5e5f2d07e6fa684b6188b2c72414d9c",
+      "games": 32
+    },
+    {
+      "label": "confirmation",
+      "setting": 2300,
+      "report": "artifacts\\matches\\rating-v1-confirmation.json",
+      "report_sha256": "53be65473058e772f40f3ea120a4128a267da931072fddb2ce85352cc8fbc618",
+      "games": 256
+    }
+  ],
+  "updated_utc": "2026-10-04T13:47:58.261869+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "model": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\training\\turn-aware-hybrid-v1\\model.ann",
+  "exact_inference_positions": 525,
+  "held_out_evaluation": {
+    "held_out_positions": 4712,
+    "classical_mae_cp": 162.0118845500849,
+    "neural_mae_cp": 152.20946519524617
+  },
+  "interpretation": "Inference agreement and teacher fit, not measured playing strength.",
+  "engine_sha256": "f5670d88975c8edd9973ecc88ea56adbad1b2ca4905caf52cc128e4dc50f32f8",
+  "model_sha256": "39a906871800a2eb41b601628931f5cc048413fb6f77cbc0cd26247761a31206",
+  "engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\turn-aware-dev\\Aster.exe"
+}

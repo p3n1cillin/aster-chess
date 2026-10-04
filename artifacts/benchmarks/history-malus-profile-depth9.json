@@ -1,0 +1,149 @@
+{
+  "timestamp_utc": "2026-10-03T23:21:18.436116+00:00",
+  "engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\profile\\bin\\Aster.dll",
+  "binary_sha256": "51de65356ef50b61969b57bfd3420b6c771a66922c64102cd5d86942ae2a5a65",
+  "requested_depth": 9,
+  "positions": [
+    {
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "bestmove": "b1c3",
+      "Score": 34,
+      "Depth": 9,
+      "Nodes": 88199,
+      "Milliseconds": 212,
+      "profile": {
+        "evaluation": {
+          "calls": 74960,
+          "milliseconds": 76.783
+        },
+        "legalMoveExistence": {
+          "calls": 59702,
+          "milliseconds": 46.497
+        },
+        "moveOrdering": {
+          "calls": 37046,
+          "milliseconds": 20.652
+        },
+        "staticExchange": {
+          "calls": 30765,
+          "milliseconds": 5.597
+        },
+        "interpretation": "Instrumented timings include measurement overhead. Static exchange is mostly included in move ordering; categories overlap and must not be summed. Fixed-depth work, not playing strength."
+      }
+    },
+    {
+      "fen": "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1",
+      "bestmove": "d5e6",
+      "Score": -94,
+      "Depth": 9,
+      "Nodes": 289729,
+      "Milliseconds": 247,
+      "profile": {
+        "evaluation": {
+          "calls": 241901,
+          "milliseconds": 66.592
+        },
+        "legalMoveExistence": {
+          "calls": 241664,
+          "milliseconds": 60.357
+        },
+        "moveOrdering": {
+          "calls": 66974,
+          "milliseconds": 38.966
+        },
+        "staticExchange": {
+          "calls": 367199,
+          "milliseconds": 27.353
+        },
+        "interpretation": "Instrumented timings include measurement overhead. Static exchange is mostly included in move ordering; categories overlap and must not be summed. Fixed-depth work, not playing strength."
+      }
+    },
+    {
+      "fen": "8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - - 0 1",
+      "bestmove": "b4c4",
+      "Score": 29,
+      "Depth": 9,
+      "Nodes": 44075,
+      "Milliseconds": 23,
+      "profile": {
+        "evaluation": {
+          "calls": 33795,
+          "milliseconds": 7.753
+        },
+        "legalMoveExistence": {
+          "calls": 29421,
+          "milliseconds": 3.776
+        },
+        "moveOrdering": {
+          "calls": 15578,
+          "milliseconds": 1.905
+        },
+        "staticExchange": {
+          "calls": 17290,
+          "milliseconds": 0.794
+        },
+        "interpretation": "Instrumented timings include measurement overhead. Static exchange is mostly included in move ordering; categories overlap and must not be summed. Fixed-depth work, not playing strength."
+      }
+    },
+    {
+      "fen": "r1bq1rk1/pp2bppp/2n1pn2/2pp4/3P4/2PBPN2/PP1N1PPP/R1BQ1RK1 w - - 0 8",
+      "bestmove": "b2b3",
+      "Score": 3,
+      "Depth": 9,
+      "Nodes": 162206,
+      "Milliseconds": 125,
+      "profile": {
+        "evaluation": {
+          "calls": 141325,
+          "milliseconds": 40.332
+        },
+        "legalMoveExistence": {
+          "calls": 131728,
+          "milliseconds": 23.702
+        },
+        "moveOrdering": {
+          "calls": 48046,
+          "milliseconds": 14.376
+        },
+        "staticExchange": {
+          "calls": 113639,
+          "milliseconds": 8.885
+        },
+        "interpretation": "Instrumented timings include measurement overhead. Static exchange is mostly included in move ordering; categories overlap and must not be summed. Fixed-depth work, not playing strength."
+      }
+    },
+    {
+      "fen": "6k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1",
+      "bestmove": "d1d8",
+      "Score": 29999,
+      "Depth": 1,
+      "Nodes": 27,
+      "Milliseconds": 0,
+      "profile": {
+        "evaluation": {
+          "calls": 26,
+          "milliseconds": 0.006
+        },
+        "legalMoveExistence": {
+          "calls": 25,
+          "milliseconds": 0.002
+        },
+        "moveOrdering": {
+          "calls": 4,
+          "milliseconds": 0
+        },
+        "staticExchange": {
+          "calls": 0,
+          "milliseconds": 0
+        },
+        "interpretation": "Instrumented timings include measurement overhead. Static exchange is mostly included in move ordering; categories overlap and must not be summed. Fixed-depth work, not playing strength."
+      }
+    }
+  ],
+  "aggregate": {
+    "totalNodes": 584236,
+    "milliseconds": 643,
+    "nps": 908609
+  },
+  "interpretation": "Fixed-depth engineering benchmark; elapsed times include JIT and are machine-dependent. Not a strength measurement."
+}

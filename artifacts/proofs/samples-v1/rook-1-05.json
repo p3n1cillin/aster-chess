@@ -1,0 +1,529 @@
+{
+  "complete": true,
+  "reason": "complete",
+  "summary": "Black can force checkmate within 12 plies. The certificate covers every legal defensive reply in 44 positions; every path ends in checkmate.",
+  "rootFen": "8/1K6/3k4/r7/8/8/8/8 w - - 0 1",
+  "strongSide": 1,
+  "rootDistance": 12,
+  "nodeLimit": 50000,
+  "nodes": [
+    {
+      "id": 0,
+      "fen": "8/1K6/3k4/r7/8/8/8/8 w - - 0 1",
+      "distance": 12,
+      "edges": [
+        {
+          "move": "b7b6",
+          "to": 1
+        },
+        {
+          "move": "b7b8",
+          "to": 40
+        },
+        {
+          "move": "b7c8",
+          "to": 41
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "fen": "8/8/1K1k4/r7/8/8/8/8 b - - 1 1",
+      "distance": 11,
+      "edges": [
+        {
+          "move": "a5c5",
+          "to": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fen": "8/8/1K1k4/2r5/8/8/8/8 w - - 2 2",
+      "distance": 10,
+      "edges": [
+        {
+          "move": "b6a6",
+          "to": 3
+        },
+        {
+          "move": "b6a7",
+          "to": 7
+        },
+        {
+          "move": "b6b7",
+          "to": 16
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fen": "8/8/K2k4/2r5/8/8/8/8 b - - 3 2",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d6c7",
+          "to": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fen": "8/2k5/K7/2r5/8/8/8/8 w - - 4 3",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a6a7",
+          "to": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "fen": "8/K1k5/8/2r5/8/8/8/8 b - - 5 3",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "c5a5",
+          "to": 6
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "fen": "8/K1k5/8/r7/8/8/8/8 w - - 6 4",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 7,
+      "fen": "8/K7/3k4/2r5/8/8/8/8 b - - 3 2",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "d6c6",
+          "to": 8
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "fen": "8/K7/2k5/2r5/8/8/8/8 w - - 4 3",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "a7a6",
+          "to": 9
+        },
+        {
+          "move": "a7a8",
+          "to": 10
+        },
+        {
+          "move": "a7b8",
+          "to": 12
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "fen": "8/8/K1k5/2r5/8/8/8/8 b - - 5 3",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "c6c7",
+          "to": 4
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "fen": "K7/8/2k5/2r5/8/8/8/8 b - - 5 3",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "c6c7",
+          "to": 11
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "fen": "K7/2k5/8/2r5/8/8/8/8 w - - 6 4",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a8a7",
+          "to": 5
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "fen": "1K6/8/2k5/2r5/8/8/8/8 b - - 5 3",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "c5a5",
+          "to": 13
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "fen": "1K6/8/2k5/r7/8/8/8/8 w - - 6 4",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "b8c8",
+          "to": 14
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "fen": "2K5/8/2k5/r7/8/8/8/8 b - - 7 4",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "a5a8",
+          "to": 15
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "fen": "r1K5/8/2k5/8/8/8/8/8 w - - 8 5",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 16,
+      "fen": "8/1K6/3k4/2r5/8/8/8/8 b - - 3 2",
+      "distance": 9,
+      "edges": [
+        {
+          "move": "c5b5",
+          "to": 17
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "fen": "8/1K6/3k4/1r6/8/8/8/8 w - - 4 3",
+      "distance": 8,
+      "edges": [
+        {
+          "move": "b7a6",
+          "to": 18
+        },
+        {
+          "move": "b7a7",
+          "to": 28
+        },
+        {
+          "move": "b7a8",
+          "to": 33
+        },
+        {
+          "move": "b7c8",
+          "to": 36
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "fen": "8/8/K2k4/1r6/8/8/8/8 b - - 5 3",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "d6c6",
+          "to": 19
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "fen": "8/8/K1k5/1r6/8/8/8/8 w - - 6 4",
+      "distance": 6,
+      "edges": [
+        {
+          "move": "a6a7",
+          "to": 20
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "fen": "8/K7/2k5/1r6/8/8/8/8 b - - 7 4",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "b5b1",
+          "to": 21
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "fen": "8/K7/2k5/8/8/8/8/1r6 w - - 8 5",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "a7a6",
+          "to": 22
+        },
+        {
+          "move": "a7a8",
+          "to": 24
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "fen": "8/8/K1k5/8/8/8/8/1r6 b - - 9 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "b1a1",
+          "to": 23
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "fen": "8/8/K1k5/8/8/8/8/r7 w - - 10 6",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 24,
+      "fen": "K7/8/2k5/8/8/8/8/1r6 b - - 9 5",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "c6c7",
+          "to": 25
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "fen": "K7/2k5/8/8/8/8/8/1r6 w - - 10 6",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a8a7",
+          "to": 26
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "fen": "8/K1k5/8/8/8/8/8/1r6 b - - 11 6",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "b1a1",
+          "to": 27
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "fen": "8/K1k5/8/8/8/8/8/r7 w - - 12 7",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 28,
+      "fen": "8/K7/3k4/1r6/8/8/8/8 b - - 5 3",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "d6c7",
+          "to": 29
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "fen": "8/K1k5/8/1r6/8/8/8/8 w - - 6 4",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "a7a6",
+          "to": 30
+        },
+        {
+          "move": "a7a8",
+          "to": 31
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "fen": "8/2k5/K7/1r6/8/8/8/8 b - - 7 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "b5c5",
+          "to": 4
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "fen": "K7/2k5/8/1r6/8/8/8/8 b - - 7 4",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "b5a5",
+          "to": 32
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "fen": "K7/2k5/8/r7/8/8/8/8 w - - 8 5",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 33,
+      "fen": "K7/8/3k4/1r6/8/8/8/8 b - - 5 3",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d6c7",
+          "to": 34
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "fen": "K7/2k5/8/1r6/8/8/8/8 w - - 6 4",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a8a7",
+          "to": 35
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "fen": "8/K1k5/8/1r6/8/8/8/8 b - - 7 4",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "b5a5",
+          "to": 6
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "fen": "2K5/8/3k4/1r6/8/8/8/8 b - - 5 3",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "b5b1",
+          "to": 37
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "fen": "2K5/8/3k4/8/8/8/8/1r6 w - - 6 4",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "c8d8",
+          "to": 38
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "fen": "3K4/8/3k4/8/8/8/8/1r6 b - - 7 4",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "b1b8",
+          "to": 39
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "fen": "1r1K4/8/3k4/8/8/8/8/8 w - - 8 5",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 40,
+      "fen": "1K6/8/3k4/r7/8/8/8/8 b - - 1 1",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d6c6",
+          "to": 13
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "fen": "2K5/8/3k4/r7/8/8/8/8 b - - 1 1",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "a5b5",
+          "to": 42
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "fen": "2K5/8/3k4/1r6/8/8/8/8 w - - 2 2",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "c8d8",
+          "to": 43
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "fen": "3K4/8/3k4/1r6/8/8/8/8 b - - 3 2",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "b5b8",
+          "to": 39
+        }
+      ]
+    }
+  ],
+  "alternatives": [
+    {
+      "move": "b7b6",
+      "preservesWin": true,
+      "remainingPlies": 11,
+      "reason": "Reduces the mate bound from 12 to 11 plies."
+    },
+    {
+      "move": "b7b8",
+      "preservesWin": true,
+      "remainingPlies": 3,
+      "reason": "Reduces the mate bound from 12 to 3 plies."
+    },
+    {
+      "move": "b7c8",
+      "preservesWin": true,
+      "remainingPlies": 3,
+      "reason": "Reduces the mate bound from 12 to 3 plies."
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\baseline-0.6.0\\Aster.exe",
+  "binary_sha256": "734d538faba6f43d5533981421b59a0a3cccbec60cf1dbc9980391ef58528b14",
+  "suite": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\endgames-v1.json",
+  "limit": {
+    "nodes": 25000
+  },
+  "eval_file": null,
+  "solved": 14,
+  "total": 16,
+  "positions": [
+    {
+      "id": "endgame-0004",
+      "bestmove": "b6e6",
+      "solved": true,
+      "expected": [
+        "b6e6"
+      ],
+      "depth": 7,
+      "nodes": 20094,
+      "time": 0.037
+    },
+    {
+      "id": "endgame-0033",
+      "bestmove": "h4g5",
+      "solved": true,
+      "expected": [
+        "h4g5"
+      ],
+      "depth": 10,
+      "nodes": 20658,
+      "time": 0.019
+    },
+    {
+      "id": "endgame-0064",
+      "bestmove": "h7g7",
+      "solved": true,
+      "expected": [
+        "h7g7"
+      ],
+      "depth": 8,
+      "nodes": 21234,
+      "time": 0.029
+    },
+    {
+      "id": "endgame-0072",
+      "bestmove": "e7c8",
+      "solved": true,
+      "expected": [
+        "e7c8"
+      ],
+      "depth": 10,
+      "nodes": 20642,
+      "time": 0.019
+    },
+    {
+      "id": "endgame-0092",
+      "bestmove": "h7g5",
+      "solved": false,
+      "expected": [
+        "h7f6"
+      ],
+      "depth": 10,
+      "nodes": 19760,
+      "time": 0.02
+    },
+    {
+      "id": "endgame-0098",
+      "bestmove": "e5b5",
+      "solved": true,
+      "expected": [
+        "e5b5"
+      ],
+      "depth": 7,
+      "nodes": 9436,
+      "time": 0.013
+    },
+    {
+      "id": "endgame-0126",
+      "bestmove": "g3h4",
+      "solved": true,
+      "expected": [
+        "g3h4"
+      ],
+      "depth": 10,
+      "nodes": 14998,
+      "time": 0.006
+    },
+    {
+      "id": "endgame-0132",
+      "bestmove": "a4b5",
+      "solved": true,
+      "expected": [
+        "a4b5"
+      ],
+      "depth": 9,
+      "nodes": 20522,
+      "time": 0.006
+    },
+    {
+      "id": "endgame-0178",
+      "bestmove": "g5h6",
+      "solved": true,
+      "expected": [
+        "g5h6"
+      ],
+      "depth": 8,
+      "nodes": 21644,
+      "time": 0.006
+    },
+    {
+      "id": "endgame-0267",
+      "bestmove": "c3b4",
+      "solved": true,
+      "expected": [
+        "c3b4"
+      ],
+      "depth": 8,
+      "nodes": 13516,
+      "time": 0.003
+    },
+    {
+      "id": "endgame-0298",
+      "bestmove": "g4f5",
+      "solved": true,
+      "expected": [
+        "g4f5"
+      ],
+      "depth": 10,
+      "nodes": 24634,
+      "time": 0.006
+    },
+    {
+      "id": "endgame-0312",
+      "bestmove": "c3e3",
+      "solved": true,
+      "expected": [
+        "c3e3"
+      ],
+      "depth": 10,
+      "nodes": 21446,
+      "time": 0.006
+    },
+    {
+      "id": "endgame-0349",
+      "bestmove": "d2c1",
+      "solved": true,
+      "expected": [
+        "d2c1"
+      ],
+      "depth": 11,
+      "nodes": 21184,
+      "time": 0.004
+    },
+    {
+      "id": "endgame-0380",
+      "bestmove": "c4b5",
+      "solved": true,
+      "expected": [
+        "c4b5"
+      ],
+      "depth": 8,
+      "nodes": 10256,
+      "time": 0.002
+    },
+    {
+      "id": "endgame-0411",
+      "bestmove": "b6b2",
+      "solved": true,
+      "expected": [
+        "b6b2"
+      ],
+      "depth": 9,
+      "nodes": 16502,
+      "time": 0.004
+    },
+    {
+      "id": "endgame-0425",
+      "bestmove": "d7e5",
+      "solved": false,
+      "expected": [
+        "d7c5"
+      ],
+      "depth": 8,
+      "nodes": 14139,
+      "time": 0.004
+    }
+  ],
+  "interpretation": "Teacher-verified tactical regression set; neither an Elo estimate nor proof of general playing strength."
+}

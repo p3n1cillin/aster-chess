@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "model": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\training\\hybrid-v1\\model.ann",
+  "exact_inference_positions": 520,
+  "held_out_evaluation": {
+    "held_out_positions": 2088,
+    "classical_mae_cp": 251.727969348659,
+    "neural_mae_cp": 228.13553639846742
+  },
+  "interpretation": "Inference agreement and teacher fit, not measured playing strength."
+}

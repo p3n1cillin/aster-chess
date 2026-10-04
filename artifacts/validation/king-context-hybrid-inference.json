@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "model": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\validation\\king-context-fixtures\\hybrid-v3.ann",
+  "exact_inference_positions": 525,
+  "held_out_evaluation": null,
+  "interpretation": "Inference agreement and teacher fit, not measured playing strength.",
+  "engine_sha256": "67b9c8050c04ec0087a30fee256379f435a6b14966ebde522c76704ce919530b",
+  "model_sha256": "272901992c78caa57addc99fc4edac0b816e43e958cdfa744d251ce0a97da4d1",
+  "engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\src\\Engine\\bin\\Release\\net8.0\\Aster.dll"
+}

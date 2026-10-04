@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "pipeline": {
+    "path": "artifacts/research/endgame-diagnostic-pipeline-final/manifest.json",
+    "sha256": "1b4a0d7ce32a7803c56695a940b3ce06e8a009ac7d48b1e5437648903ffb4bf8"
+  },
+  "artifacts": [
+    {
+      "path": "artifacts/research/geometric-threats-experiment-manifest.json",
+      "sha256": "a932eac9a183cb12c19edc85857708f4b126fcee2259903b2370b7eec44f0f79"
+    },
+    {
+      "path": "artifacts/research/pair-loss-experiment-manifest.json",
+      "sha256": "d6a3a2f76e2684c6bdae92ea82c511170ac2f50e87bbb9388b52315c9829dde8"
+    },
+    {
+      "path": "artifacts/research/turn-static-experiment-manifest.json",
+      "sha256": "70c85664968e2f2109424e38786c9b5e28ef5c9610ba2e8cca092f57d9fffb94"
+    },
+    {
+      "path": "artifacts/data/endgame-diagnostic-512-v1.jsonl",
+      "sha256": "f07976034c668f3ae636ef96cf584891b1bb1a7cc1648e73d975e837277b29a3"
+    },
+    {
+      "path": "artifacts/data/endgame-diagnostic-512-v1.jsonl.manifest.json",
+      "sha256": "5f887d7cda579443d6cf04331aa4843c2af6a5f9fdf5006c0c29166688f5d60e"
+    },
+    {
+      "path": "artifacts/data/endgame-diagnostic-512-v1.jsonl.source.pgn",
+      "sha256": "03ba976844083b9b3752b85f4767bbc728d85479d6da1e2886411ac68be97ded"
+    },
+    {
+      "path": "artifacts/validation/endgame-diagnostic-audit.json",
+      "sha256": "808a4b50d9134a1714908832609ab6fceab61eadbfec61f34709ea9c58653185"
+    },
+    {
+      "path": "artifacts/validation/endgame-diagnostic-classical-25knodes.json",
+      "sha256": "12a7f13724941c20e0e08e2c19045905f567e59d866dc92ebfe94473486eebdc"
+    },
+    {
+      "path": "artifacts/validation/endgame-diagnostic-classical-depth8.json",
+      "sha256": "5d124951e6754c75f54ecbe9c395238f04bd011c49c860c105c7ae681953cd06"
+    },
+    {
+      "path": "artifacts/validation/endgame-diagnostic-classical-rules.json",
+      "sha256": "e9530e19aef956dad95ad208784fcf4c15cb79000f57ed47b39313372aa53904"
+    },
+    {
+      "path": "artifacts/validation/endgame-diagnostic-engine-tests.txt",
+      "sha256": "8d9a4796677a0f64d069274094f6e8cbc18e5da971a007b8b602678534e36560"
+    },
+    {
+      "path": "artifacts/validation/endgame-diagnostic-label-recheck.json",
+      "sha256": "eaad48174916bf188233911f1c4f800d0b7547053e4f0f143f9fecf68f0f5c3a"
+    },
+    {
+      "path": "artifacts/validation/endgame-diagnostic-paired-hybrid-25knodes.json",
+      "sha256": "194ee6f7fad3aad49683f90f65b13e91a184192ff99d837d8b8dadcfdd6b0cde"
+    },
+    {
+      "path": "artifacts/validation/endgame-diagnostic-paired-hybrid-depth8.json",
+      "sha256": "31eea0c067ee274134f855697554738579aba57a3789b6b6362db7f3a78c0765"
+    },
+    {
+      "path": "artifacts/validation/endgame-diagnostic-scores.json",
+      "sha256": "6058a4538e1f13dcf80138ab626ab881d3b01f4e94118c364b25c4538c7a30d8"
+    },
+    {
+      "path": "artifacts/validation/endgame-diagnostic-static-hybrid-25knodes.json",
+      "sha256": "3d9975290ad045829b5600dfe3c6c11d3dd6d1f82db22c84e95f2665447d5623"
+    },
+    {
+      "path": "artifacts/validation/endgame-diagnostic-static-hybrid-depth8.json",
+      "sha256": "afb719cccf2f1756c7c5db77a25a723041ae9f3069d2c3fd56320c34e7617bd2"
+    },
+    {
+      "path": "artifacts/validation/endgame-diagnostic-threats-25knodes.json",
+      "sha256": "1bebb6d735143a2d26236b8b9bc0bef3b12c512e8a4ae259a3aeea21dbba062d"
+    },
+    {
+      "path": "artifacts/validation/endgame-diagnostic-threats-depth8.json",
+      "sha256": "c209e1e5cc59875f41849e915d1ffd2e6ead1c03ea734c62a87b3e67dc817754"
+    },
+    {
+      "path": "docs/ENDGAME-DIAGNOSTIC.md",
+      "sha256": "f32cbf2198172346dea6675c19cc018b8122d90fff86a133b669f82431eb8c76"
+    },
+    {
+      "path": "tests/fixtures/endgames-v1.json",
+      "sha256": "be7b57e12be2fb570ee24e75c610af5ea5f7f125da8d125d11b0fe5443ef9ee9"
+    },
+    {
+      "path": "tools/stockfish/manifest.json",
+      "sha256": "e584d21a94ee3bbde60353857ae6f3ef01f9a3483299adef072c72f08a6f017f"
+    },
+    {
+      "path": "tools/stockfish/sf_19/stockfish/src/evaluate.cpp",
+      "sha256": "68a1675ef7ae943026ca0e54368b88ab90dd0082d22b5504f743afb2765dffb7"
+    },
+    {
+      "path": "tools/stockfish/sf_19/stockfish/src/score.cpp",
+      "sha256": "c5877628d70984fef345f2ace3f155ea883f316505485f2115701aac313dfb01"
+    },
+    {
+      "path": "tools/stockfish/sf_19/stockfish/src/uci.cpp",
+      "sha256": "a31fa10719b1d9ecaa23f774f14a5a995be65eeb52722798c2f2bb4255991b21"
+    }
+  ],
+  "interpretation": "Fresh native-label and source-outcome diagnostics; no new training/default or strength claim. Seven source games remain unresolved."
+}

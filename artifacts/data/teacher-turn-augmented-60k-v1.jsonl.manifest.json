@@ -1,0 +1,57 @@
+{
+  "complete": true,
+  "source_data": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\teacher-balanced-50k-v1.jsonl",
+  "source_data_sha256": "12ce8369406bb509436d47df0d676e07838c8f2b5456c59120d84551e9d22636",
+  "source_positions": 50000,
+  "extra_positions": 10000,
+  "positions_written": 60000,
+  "parameters": {
+    "data": "artifacts/data/teacher-balanced-50k-v1.jsonl",
+    "extra": 10000,
+    "nodes": 8192,
+    "max_abs_cp": 600,
+    "seed": 20261019,
+    "exclude_suite": [
+      "tests/fixtures/openings-v1.json",
+      "tests/fixtures/openings-v2.json",
+      "tests/fixtures/openings-v3.json",
+      "tests/fixtures/openings-v4.json"
+    ],
+    "output": "artifacts/data/teacher-turn-augmented-60k-v1.jsonl"
+  },
+  "teacher": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "teacher_options": {
+    "Threads": 1,
+    "Hash": 64
+  },
+  "exclusions": [
+    {
+      "path": "tests\\fixtures\\openings-v1.json",
+      "sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de"
+    },
+    {
+      "path": "tests\\fixtures\\openings-v2.json",
+      "sha256": "cdcc99af780b795546a22e84b2557bd20168097c2694cc9b12ce2e242f74bc25"
+    },
+    {
+      "path": "tests\\fixtures\\openings-v3.json",
+      "sha256": "b2c84b63c566712b33102e1a5f246d47a010a0341f8396c5e036937c74e241f3"
+    },
+    {
+      "path": "tests\\fixtures\\openings-v4.json",
+      "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d"
+    }
+  ],
+  "generator_sha256": "480a5192a697ffee564eee247620a877578b0ace71cc3398389b1f4e35e94e15",
+  "interpretation": "Opposite-turn FENs are structurally legal counterfactuals without game histories; added rows keep their parent game ID for splitting. Not game outcomes or evidence of strength.",
+  "data_sha256": "fe56daefb371f3114e72a729dc396b3d364366b49d90edc7588e0316417e12c2",
+  "seconds": 106.619
+}

@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "status": "declared before candidate match queries",
+  "hypothesis": "Deferring pure capture SEE scores until after a generated TT move fails to end the node preserves ordering/search work but makes more wall-clock time available for search.",
+  "candidate": "artifacts/publish/lazy-order-dev/Aster.dll",
+  "candidate_sha256": "5da4badd1232e51edf1622fa347a979a3df61fe6f24473874d3f474e0bddf07d",
+  "candidate_source": "artifacts/research/lazy-order-source/manifest.json",
+  "baseline": "artifacts/publish/conversion-default-dotnet/Aster.dll",
+  "baseline_sha256": "52439f58cf10a4a5dad8d4d48bf9db59db0a3f14b3c1c6216f79182b4a646d9a",
+  "baseline_source": "artifacts/research/conversion-default-source/manifest.json",
+  "generation": {"positions": 208, "seed": 20261102, "plies": 20, "nodes": 2048, "verify_nodes": 20000, "max_cp": 80,
+                 "partition": "Frozen shuffled parent first 64 for 30ms regression, next 16 for 100ms regression, last 128 reserved for conditional rating. Exclude three development datasets, five previous opening suites and the previous 144-opening rating parent."},
+  "behavior": "80 fresh positions at depth 8 plus 256 seeded history/clock/warm-TT/cancellation/searchmoves cases. Require exact move, score, depth, nodes and full PV agreement where limits are deterministic, with independent legal PV/root-state checks.",
+  "tactics": "Original and quiet suites at depth8 and 5000nodes, each 32/32; endgame suite at5000nodes at least13/16.",
+  "profile": "Five depth9 benchmark positions; require exact search output/work and reduced SEE calls. Instrumented times are diagnostic only.",
+  "timing": "Two warmup and six measured passes through first16 fresh positions at depth10, same persistent engine processes, alternating order, exact work agreement. Gate: median round-total baseline/candidate elapsed ratio >=1.05. No other heavy jobs during timing.",
+  "matches": [
+    {"label": "30ms", "pairs": 64, "seconds_per_move": 0.03},
+    {"label": "100ms", "pairs": 16, "seconds_per_move": 0.1}
+  ],
+  "resources": {"Threads": 1, "Hash": 64, "Move Overhead": 0, "max_additional_plies": 400},
+  "promotion": "Only engineering optimization, never a proven Elo gain: all correctness/behavior/tactical/profile gates pass, timing gate passes, both paired match scores >=0.5, primary opening-family-bootstrap lower bound >=0.45 at30ms and >=0.40 at100ms, and no forfeits/unresolved games. Otherwise preserve opt-in candidate and ordinary behavior. No adaptive retuning or match extension.",
+  "uncertainty": {"seed": 20261103, "bootstrap_samples": 20000, "primary": "First4 legal opening plies define families; keep both colors and all pairs per sampled family. Unresolved0/1 bounds, no silent discard."},
+  "conditional_rating": "Only if promotion gates pass: candidate gets256 games on reserved128 fresh openings against pinned SF19 UCI_Elo2300 at30ms, same resources. Model and numeric interval/range gates equal previous calibration, no screen or adaptive extension. Rating attaches to exact matched candidate; a renamed/packaged ordinary build additionally requires fixed-node equivalence, not an automatic transferred rating.",
+  "decision": "Preserve every failed gate, source, binary, report and PGN. Existing production and 0.7.4 rating record stay intact. Full-strength Stockfish-superiority goal remains unachieved."
+}

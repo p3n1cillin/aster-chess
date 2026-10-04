@@ -1,0 +1,22 @@
+{
+  "positions": 60000,
+  "differences": 0,
+  "mean_absolute_delta_cp": 0.0,
+  "max_absolute_delta_cp": 0,
+  "data": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\teacher-turn-60k-static-v1-classical.jsonl",
+  "data_sha256": "bfea2a0226b65879961c7cde551dde3d715a9e59ef9e99adf627e3744f2be162",
+  "engines": [
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\geometric-control-dev\\Aster.exe",
+      "name": "Aster 0.7.1-feature-dev",
+      "sha256": "c2437f4960a6a01f236ab0c130c8eb9f46c4f4b1191d65df8e7eeeea14901296"
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\baseline-0.6.0\\Aster.exe",
+      "name": "Aster 0.6.0",
+      "sha256": "734d538faba6f43d5533981421b59a0a3cccbec60cf1dbc9980391ef58528b14"
+    }
+  ],
+  "changed_positions": [],
+  "interpretation": "Static behavior comparison; neither a teacher-fit metric nor a playing-strength test."
+}

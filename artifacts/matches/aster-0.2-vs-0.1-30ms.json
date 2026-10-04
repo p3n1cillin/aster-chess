@@ -1,0 +1,196 @@
+{
+  "timestamp_utc": "2026-10-03T21:43:27.402960+00:00",
+  "candidate": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\src\\Engine\\bin\\Release\\net8.0\\Aster.dll",
+  "opponent": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\baseline-0.1.0\\Aster.dll",
+  "candidate_binary_sha256": "060f9df2c66bc9b3c45fa9b2ca82a04450e67bcbb9edc81193853f5a02b723bf",
+  "opponent_binary_sha256": "3b9d9b1e645c62d25d24fca0fe728d297bc90730e3fcc08bc8443df64faf34f7",
+  "candidate_source_sha256": "3374602be536b1bcd972b3a4b38283d9bbb5c9be4f479f00248f253d9a6fb883",
+  "stockfish_release": null,
+  "platform": "Windows-11-10.0.26300-SP0",
+  "pairs_requested": 8,
+  "limit": {
+    "seconds_per_move": 0.03
+  },
+  "max_plies": 400,
+  "wins": 7,
+  "draws": 3,
+  "losses": 6,
+  "unresolved": 0,
+  "forfeits": 0,
+  "games": [
+    {
+      "pair": 1,
+      "candidate_color": "white",
+      "opening": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6",
+      "initial_fen": "r1bqkb1r/1ppp1ppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 5",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 112,
+      "seconds": 3.027
+    },
+    {
+      "pair": 1,
+      "candidate_color": "black",
+      "opening": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6",
+      "initial_fen": "r1bqkb1r/1ppp1ppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 5",
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 79,
+      "seconds": 2.196
+    },
+    {
+      "pair": 2,
+      "candidate_color": "white",
+      "opening": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6",
+      "initial_fen": "rnbqkb1r/pp2pppp/3p1n2/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 1 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 101,
+      "seconds": 2.702
+    },
+    {
+      "pair": 2,
+      "candidate_color": "black",
+      "opening": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6",
+      "initial_fen": "rnbqkb1r/pp2pppp/3p1n2/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 1 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 131,
+      "seconds": 3.603
+    },
+    {
+      "pair": 3,
+      "candidate_color": "white",
+      "opening": "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7",
+      "initial_fen": "rnbqk2r/ppp1bppp/4pn2/3p2B1/2PP4/2N5/PP2PPPP/R2QKBNR w KQkq - 4 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 125,
+      "seconds": 3.456
+    },
+    {
+      "pair": 3,
+      "candidate_color": "black",
+      "opening": "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7",
+      "initial_fen": "rnbqk2r/ppp1bppp/4pn2/3p2B1/2PP4/2N5/PP2PPPP/R2QKBNR w KQkq - 4 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 275,
+      "seconds": 8.1
+    },
+    {
+      "pair": 4,
+      "candidate_color": "white",
+      "opening": "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6",
+      "initial_fen": "rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 87,
+      "seconds": 2.248
+    },
+    {
+      "pair": 4,
+      "candidate_color": "black",
+      "opening": "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6",
+      "initial_fen": "rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5",
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 80,
+      "seconds": 2.229
+    },
+    {
+      "pair": 5,
+      "candidate_color": "white",
+      "opening": "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7",
+      "initial_fen": "rnbqk2r/ppp1bppp/4pn2/3p2B1/3PP3/2N5/PPP2PPP/R2QKBNR w KQkq - 4 5",
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 79,
+      "seconds": 2.198
+    },
+    {
+      "pair": 5,
+      "candidate_color": "black",
+      "opening": "e2e4 e7e6 d2d4 d7d5 b1c3 g8f6 c1g5 f8e7",
+      "initial_fen": "rnbqk2r/ppp1bppp/4pn2/3p2B1/3PP3/2N5/PPP2PPP/R2QKBNR w KQkq - 4 5",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 154,
+      "seconds": 4.32
+    },
+    {
+      "pair": 6,
+      "candidate_color": "white",
+      "opening": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5",
+      "initial_fen": "rn1qkbnr/pp2pppp/2p5/5b2/3PN3/8/PPP2PPP/R1BQKBNR w KQkq - 1 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 107,
+      "seconds": 2.815
+    },
+    {
+      "pair": 6,
+      "candidate_color": "black",
+      "opening": "e2e4 c7c6 d2d4 d7d5 b1c3 d5e4 c3e4 c8f5",
+      "initial_fen": "rn1qkbnr/pp2pppp/2p5/5b2/3PN3/8/PPP2PPP/R1BQKBNR w KQkq - 1 5",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 156,
+      "seconds": 4.395
+    },
+    {
+      "pair": 7,
+      "candidate_color": "white",
+      "opening": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6",
+      "initial_fen": "rnbqkb1r/pp3ppp/2p1pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 152,
+      "seconds": 4.248
+    },
+    {
+      "pair": 7,
+      "candidate_color": "black",
+      "opening": "d2d4 d7d5 c2c4 c7c6 g1f3 g8f6 b1c3 e7e6",
+      "initial_fen": "rnbqkb1r/pp3ppp/2p1pn2/3p4/2PP4/2N2N2/PP2PPPP/R1BQKB1R w KQkq - 0 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 159,
+      "seconds": 4.546
+    },
+    {
+      "pair": 8,
+      "candidate_color": "white",
+      "opening": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d3 f8c5",
+      "initial_fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 1 5",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 142,
+      "seconds": 3.977
+    },
+    {
+      "pair": 8,
+      "candidate_color": "black",
+      "opening": "e2e4 e7e5 g1f3 b8c6 f1c4 g8f6 d2d3 f8c5",
+      "initial_fen": "r1bqk2r/pppp1ppp/2n2n2/2b1p3/2B1P3/3P1N2/PPP2PPP/RNBQK2R w KQkq - 1 5",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 160,
+      "seconds": 4.418
+    }
+  ],
+  "interpretation": "Smoke-test sample; does not establish an Elo rating or superiority.",
+  "candidate_name": "Aster 0.2.0",
+  "opponent_name": "Aster 0.1.0",
+  "candidate_options": {
+    "Hash": 64,
+    "Threads": 1,
+    "Move Overhead": 0
+  },
+  "opponent_options": {
+    "Hash": 64,
+    "Threads": 1,
+    "Move Overhead": 0
+  },
+  "seconds": 58.623
+}

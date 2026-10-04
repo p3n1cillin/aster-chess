@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "positions": 4,
+  "edges": 3,
+  "covered_defensive_replies": 1,
+  "checkmate_leaves": 1,
+  "mate_upper_bound_plies": 3,
+  "strong_side": "white",
+  "interpretation": "Complete legal winning strategy: one attacker move, every defender reply, strictly decreasing bound, all leaves checkmate. Independent of Aster and Syzygy. Prior history before the FEN origin is not claimed.",
+  "certificate_sha256": "9f343ff55a31773a00ac3bb305a05c95263532057756b4f50d6d0a94e72e0535",
+  "verifier_sha256": "d2829747b735c367984e72832e27edf9df2589edc41a2f28df4b74c09053b28e"
+}

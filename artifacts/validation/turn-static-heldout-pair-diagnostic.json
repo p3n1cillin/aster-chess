@@ -1,0 +1,37 @@
+{
+  "data_sha256": "bfea2a0226b65879961c7cde551dde3d715a9e59ef9e99adf627e3744f2be162",
+  "models": [
+    {
+      "model": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\training\\wide-init-turn-hybrid-v1\\model.ann",
+      "model_sha256": "ad5ab4f1231a910bfcab4c8a4e5a095cb3a19c5abc51f6f7f6550f9be6e764d3",
+      "pairs": 978,
+      "teacher_turn_mean_cp": 63.48159509202454,
+      "teacher_turn_std_cp": 61.49264814413825,
+      "predicted_turn_mean_cp": 72.24233128834356,
+      "predicted_turn_std_cp": 15.339563756573597,
+      "pair_mae_cp": 123.12883435582822
+    },
+    {
+      "model": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\training\\turn-static-hybrid-v1\\model.ann",
+      "model_sha256": "d53bb900114a8c86d5dc2de5c75bc594dd5634d0df9461a015ee4f258113ab67",
+      "pairs": 978,
+      "teacher_turn_mean_cp": 63.48159509202454,
+      "teacher_turn_std_cp": 61.49264814413825,
+      "predicted_turn_mean_cp": 31.19120654396728,
+      "predicted_turn_std_cp": 4.458080641075188,
+      "pair_mae_cp": 119.82924335378323
+    },
+    {
+      "model": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\training\\turn-static-squared-hybrid-v1\\model.ann",
+      "model_sha256": "131c38a9c15a584dd5912aa66a2cbdd60c2f7d81f8d23151d2acffa437189623",
+      "pairs": 978,
+      "teacher_turn_mean_cp": 63.48159509202454,
+      "teacher_turn_std_cp": 61.49264814413825,
+      "predicted_turn_mean_cp": 33.510224948875255,
+      "predicted_turn_std_cp": 4.231829646617047,
+      "pair_mae_cp": 119.4959100204499
+    }
+  ],
+  "source_sha256": "f581e334cc980954a66db66d15dfacb405e8918f75b6a5addfa880f5b63d72b0",
+  "interpretation": "Marked held-out pairs with retained source-game groups; descriptive teacher fit, not playing strength."
+}

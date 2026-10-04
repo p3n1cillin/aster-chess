@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "rows_preserved": 60000,
+  "independently_requeried_labels": 128,
+  "source_sha256": "fe56daefb371f3114e72a729dc396b3d364366b49d90edc7588e0316417e12c2",
+  "static_sha256": "46b8e7210c93e9e382366e90963901906407e7c4d748838b3424cef6a63adc8a",
+  "teacher_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+  "auditor_sha256": "90b4c8e4a01e13fec1d9a180237c59bd2950eae4a280f5a16ebed19df328284c",
+  "interpretation": "Row/group preservation and bounded label re-query, not playing strength."
+}

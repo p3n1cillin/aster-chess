@@ -1,0 +1,56 @@
+{
+  "source_files": [
+    {
+      "path": "scripts/verify_kpk.py",
+      "sha256": "a37f80c99b14126a5f29c747c8e288407640cb5bdb1d9807a2cbac766c892402"
+    },
+    {
+      "path": "scripts/certify_kpk.py",
+      "sha256": "6d967dd69bf703dd99d165f5715ea0a03a8701468bff613cfedfe3eb767ddef6"
+    },
+    {
+      "path": "scripts/verify_kpk_runtime.py",
+      "sha256": "4143991222c7d9f605f6b8e29f8241cb1c30e352e62cedce682d41aa029cd3f1"
+    },
+    {
+      "path": "scripts/verify_kpk_choices.py",
+      "sha256": "7b9abc0bb5f57ea080fb3434febb7458921f66532e2af65bd23867983fc1b59f"
+    },
+    {
+      "path": "scripts/preserve_kpk_experiment.py",
+      "sha256": "44cfbce0bae452a469209ecd4c38d6e21bab8cc9363cd3bdd17c5557c4626941"
+    },
+    {
+      "path": "scripts/kpk_match_coverage.py",
+      "sha256": "27c90d1ef476e974c7580575a405b68a70002d723f6b72ad8bdb88331f612f2e"
+    },
+    {
+      "path": "scripts/freeze_engine_source.py",
+      "sha256": "db919e19f9b75ade115a3d834ad48cc57e01a6165130ef03a775279f4c89acb7"
+    },
+    {
+      "path": "scripts/tactics.py",
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    },
+    {
+      "path": "scripts/match.py",
+      "sha256": "a74d4910f04ab6156897d233666aece45baefae32dea816a90dc0ae13bb6e992"
+    },
+    {
+      "path": "scripts/audit_match.py",
+      "sha256": "24ccd5427e5245dc7a9e85c80317414099abda395f708ca688c9b6ad3602a45f"
+    },
+    {
+      "path": "scripts/analyze_match.py",
+      "sha256": "27550253eb8bdf8ff8600b85c8c0b238dd75e64a1c9c28e2919fdf5f5b2c805d"
+    },
+    {
+      "path": "scripts/uci_client.py",
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "scripts/verify.py",
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    }
+  ]
+}

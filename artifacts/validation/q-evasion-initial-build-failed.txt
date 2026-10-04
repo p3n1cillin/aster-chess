@@ -1,0 +1,36 @@
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Engine -> C:\Users\lukem\source\repos\WIP\chess\src\Engine\bin\Release\net8.0\Aster.dll
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(842,9): error CS1002: ; expected [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(842,17): error CS1514: { expected [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(842,17): error CS1525: Invalid expression term '=' [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(843,38): error CS1003: Syntax error, '(' expected [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(843,38): error CS1525: Invalid expression term ')' [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(843,56): error CS1003: Syntax error, '(' expected [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(843,56): error CS1525: Invalid expression term ',' [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(843,56): error CS1026: ) expected [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(843,77): error CS1026: ) expected [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(844,29): error CS1003: Syntax error, '(' expected [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(844,29): error CS1525: Invalid expression term ',' [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(844,29): error CS1026: ) expected [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(845,2): error CS1513: } expected [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+
+Build FAILED.
+
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(842,9): error CS1002: ; expected [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(842,17): error CS1514: { expected [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(842,17): error CS1525: Invalid expression term '=' [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(843,38): error CS1003: Syntax error, '(' expected [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(843,38): error CS1525: Invalid expression term ')' [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(843,56): error CS1003: Syntax error, '(' expected [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(843,56): error CS1525: Invalid expression term ',' [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(843,56): error CS1026: ) expected [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(843,77): error CS1026: ) expected [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(844,29): error CS1003: Syntax error, '(' expected [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(844,29): error CS1525: Invalid expression term ',' [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(844,29): error CS1026: ) expected [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Program.cs(845,2): error CS1513: } expected [C:\Users\lukem\source\repos\WIP\chess\tests\Engine.Tests\Engine.Tests.csproj]
+    0 Warning(s)
+    13 Error(s)
+
+Time Elapsed 00:00:01.58

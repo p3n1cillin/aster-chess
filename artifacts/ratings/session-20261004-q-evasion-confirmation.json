@@ -1,0 +1,114 @@
+{
+  "status": "provisional local estimate",
+  "numeric_local_rating": 2319.019359271422,
+  "score_bounds": [
+    0.52734375,
+    0.52734375
+  ],
+  "score": 0.52734375,
+  "primary_95_percent_score_interval": [
+    0.46747967479674796,
+    0.586
+  ],
+  "primary_95_percent_local_interval": [
+    2277.370617879139,
+    2360.3589099588767
+  ],
+  "unbounded_lower": false,
+  "unbounded_upper": false,
+  "failed_numeric_gates": [],
+  "schema": 1,
+  "timestamp_utc": "2026-10-04T15:57:31.917007+00:00",
+  "local_scale": "SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash",
+  "public_elo": null,
+  "public_rating_status": "unestablished",
+  "engine": "artifacts/publish/q-evasion-dev/Aster.dll",
+  "engine_sha256": "a3994e4f350b2cfa261db5edc1e4ae5c332d85d4b3eaf34c0730267f3603d9a0",
+  "engine_name": "Aster 0.7.6-q-evasion-dev",
+  "source_manifest": "artifacts/research/q-evasion-source/manifest.json",
+  "source_manifest_sha256": "ce1a656ae84dfcc67de580b12eaf044c4bd3d19494a43d51d8c58751d6285a4a",
+  "all_games_audited": 576,
+  "confirmation_games": 256,
+  "confirmation_pairs": 128,
+  "opening_families": 98,
+  "wins": 107,
+  "draws": 56,
+  "losses": 93,
+  "unresolved": 0,
+  "secondary_95_percent_score_interval": [
+    0.47265625,
+    0.58203125
+  ],
+  "bootstrap_samples": 20000,
+  "seed": 20261106,
+  "platform": "Windows-11-10.0.26300-SP0",
+  "hardware": {
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "logical_processors": 12
+  },
+  "resources": {
+    "Threads": 1,
+    "Hash": 64,
+    "Move Overhead": 0,
+    "max_additional_plies": 400
+  },
+  "opponent_release": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "opponent_options": {
+    "Hash": 64,
+    "Threads": 1,
+    "Move Overhead": 0,
+    "UCI_LimitStrength": true,
+    "UCI_Elo": 2300
+  },
+  "opponent_option_defaults": {
+    "Debug Log File": "<empty>",
+    "NumaPolicy": "auto",
+    "Threads": 1,
+    "Hash": 16,
+    "Ponder": false,
+    "MultiPV": 1,
+    "Skill Level": 20,
+    "Move Overhead": 10,
+    "nodestime": 0,
+    "UCI_Chess960": false,
+    "UCI_LimitStrength": false,
+    "UCI_Elo": 1320,
+    "UCI_ShowWDL": false,
+    "SyzygyPath": "<empty>",
+    "SyzygyProbeDepth": 1,
+    "Syzygy50MoveRule": true,
+    "SyzygyProbeLimit": 7,
+    "EvalFile": "nn-1a298aa575a0.nnue"
+  },
+  "evidence": [
+    {
+      "path": "artifacts/matches/q-evasion-vs-0.7.4-30ms.json",
+      "sha256": "aec4c12b2335f95a39c7cfe033a27b8c965ee168ba7b3dfb889e1c492486daac",
+      "pgn_sha256": "aa9f6bfdc6845f880d7824e42d19579e13d65e7516633c832abfeabe5e948065",
+      "audit_sha256": "cfb8826986a86fe2d0d2cc3015ce12f91782b3a0325d77d905a01f6bd910ec52"
+    },
+    {
+      "path": "artifacts/matches/q-evasion-vs-0.7.4-100ms.json",
+      "sha256": "3ee1ac59aa478295be5874ea2429aff2720295ac13431010d46c87e6a404985a",
+      "pgn_sha256": "7265601992877efe70c0bbd1a099bb2189a42a66c41f853c297f85258bcde98f",
+      "audit_sha256": "10c9fe0f6167f989e959d0b03da55545b780ad58498434b5d22c8db6a2944aa9"
+    },
+    {
+      "path": "artifacts/matches/q-evasion-rating-vs-sf19-2300.json",
+      "sha256": "692c9bc525e2ad9e85904c62a09fa57fff8878f84b9505ee908d3e18dffe06e3",
+      "pgn_sha256": "4f610e35def9e120b5c8a1fb2012a05fe6509e27f9a4945af300787cbdeac675",
+      "audit_sha256": "564f9ce011004a44dcad77cd3b72f4de19789b35bd65193155250ec8a659807d"
+    }
+  ],
+  "plan_sha256": "16f47b1bc4c6d8686721800ea5341bcfac0f0c92dbea36b163455c35e5009f5f",
+  "analyzer_sha256": "da36df2bfa3c85db27b1032ca73e56d548d5aa9968cb6fa96d0ba3743ad4ea95",
+  "interpretation": "Predeclared conditional confirmation at independently previously selected reference2300. Local logistic benchmark model; family bootstrap does not measure opponent-dial calibration error or transfer to other controls. Rating attaches only to this matched candidate. Public Elo and full-strength Stockfish superiority remain unestablished."
+}

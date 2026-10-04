@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-04T14:55:45.663622+00:00",
+  "plan_sha256": "16f47b1bc4c6d8686721800ea5341bcfac0f0c92dbea36b163455c35e5009f5f",
+  "runner_sha256": "1de38e29567bf216749b894aef4af06e6753830a7c1de90b3f5fc046c2f763e5",
+  "match_script_sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8",
+  "phases": [
+    {
+      "label": "vs-0.7.4-30ms",
+      "games": 256,
+      "report": "artifacts\\matches\\q-evasion-vs-0.7.4-30ms.json",
+      "report_sha256": "aec4c12b2335f95a39c7cfe033a27b8c965ee168ba7b3dfb889e1c492486daac"
+    },
+    {
+      "label": "vs-0.7.4-100ms",
+      "games": 64,
+      "report": "artifacts\\matches\\q-evasion-vs-0.7.4-100ms.json",
+      "report_sha256": "3ee1ac59aa478295be5874ea2429aff2720295ac13431010d46c87e6a404985a"
+    },
+    {
+      "label": "rating-vs-sf19-2300",
+      "games": 256,
+      "report": "artifacts\\matches\\q-evasion-rating-vs-sf19-2300.json",
+      "report_sha256": "692c9bc525e2ad9e85904c62a09fa57fff8878f84b9505ee908d3e18dffe06e3"
+    }
+  ],
+  "eligible_for_engineering_promotion": true,
+  "failed_gates": [],
+  "updated_utc": "2026-10-04T15:35:12.596465+00:00"
+}

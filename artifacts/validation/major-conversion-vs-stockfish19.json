@@ -1,0 +1,979 @@
+{
+  "complete": true,
+  "games": 64,
+  "roles": {
+    "candidate": {
+      "initial_wins_as_pawn_side": 16,
+      "converted_to_checkmate": 16,
+      "safe_promotions": 16,
+      "post_promotion_draws": 0,
+      "initial_draws_as_defender": 16,
+      "draws_held_as_defender": 16
+    },
+    "opponent": {
+      "initial_wins_as_pawn_side": 16,
+      "converted_to_checkmate": 10,
+      "safe_promotions": 16,
+      "post_promotion_draws": 6,
+      "initial_draws_as_defender": 16,
+      "draws_held_as_defender": 16
+    }
+  },
+  "details": [
+    {
+      "pair": 1,
+      "candidate_color": "white",
+      "stratum": "win-pawn-rook",
+      "pawn_role": "candidate",
+      "initially_won": true,
+      "result": "1-0",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 23,
+          "role": "candidate",
+          "move": "a7a8q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 1,
+      "candidate_color": "black",
+      "stratum": "win-pawn-rook",
+      "pawn_role": "opponent",
+      "initially_won": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "promotions": [
+        {
+          "ply": 29,
+          "role": "opponent",
+          "move": "a7a8q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 2,
+      "candidate_color": "white",
+      "stratum": "win-pawn-other",
+      "pawn_role": "opponent",
+      "initially_won": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "promotions": [
+        {
+          "ply": 23,
+          "role": "opponent",
+          "move": "c2c1q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 2,
+      "candidate_color": "black",
+      "stratum": "win-pawn-other",
+      "pawn_role": "candidate",
+      "initially_won": true,
+      "result": "0-1",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 15,
+          "role": "candidate",
+          "move": "c2c1q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 3,
+      "candidate_color": "white",
+      "stratum": "win-defender-rook",
+      "pawn_role": "candidate",
+      "initially_won": true,
+      "result": "1-0",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 24,
+          "role": "candidate",
+          "move": "h7h8q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 3,
+      "candidate_color": "black",
+      "stratum": "win-defender-rook",
+      "pawn_role": "opponent",
+      "initially_won": true,
+      "result": "1-0",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 30,
+          "role": "opponent",
+          "move": "h7h8q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 4,
+      "candidate_color": "white",
+      "stratum": "win-defender-other",
+      "pawn_role": "opponent",
+      "initially_won": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "promotions": [
+        {
+          "ply": 34,
+          "role": "opponent",
+          "move": "e2e1q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 4,
+      "candidate_color": "black",
+      "stratum": "win-defender-other",
+      "pawn_role": "candidate",
+      "initially_won": true,
+      "result": "0-1",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 24,
+          "role": "candidate",
+          "move": "e2e1q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 5,
+      "candidate_color": "white",
+      "stratum": "draw-pawn-rook",
+      "pawn_role": "candidate",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 5,
+      "candidate_color": "black",
+      "stratum": "draw-pawn-rook",
+      "pawn_role": "opponent",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 6,
+      "candidate_color": "white",
+      "stratum": "draw-pawn-other",
+      "pawn_role": "opponent",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 6,
+      "candidate_color": "black",
+      "stratum": "draw-pawn-other",
+      "pawn_role": "candidate",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [
+        {
+          "ply": 3,
+          "role": "candidate",
+          "move": "c2c1q",
+          "safe_win": false
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 7,
+      "candidate_color": "white",
+      "stratum": "draw-defender-rook",
+      "pawn_role": "candidate",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 7,
+      "candidate_color": "black",
+      "stratum": "draw-defender-rook",
+      "pawn_role": "opponent",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 8,
+      "candidate_color": "white",
+      "stratum": "draw-defender-other",
+      "pawn_role": "opponent",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 8,
+      "candidate_color": "black",
+      "stratum": "draw-defender-other",
+      "pawn_role": "candidate",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 9,
+      "candidate_color": "white",
+      "stratum": "win-pawn-rook",
+      "pawn_role": "opponent",
+      "initially_won": true,
+      "result": "0-1",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 29,
+          "role": "opponent",
+          "move": "a2a1q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 9,
+      "candidate_color": "black",
+      "stratum": "win-pawn-rook",
+      "pawn_role": "candidate",
+      "initially_won": true,
+      "result": "0-1",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 25,
+          "role": "candidate",
+          "move": "a2a1q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 10,
+      "candidate_color": "white",
+      "stratum": "win-pawn-other",
+      "pawn_role": "candidate",
+      "initially_won": true,
+      "result": "1-0",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 21,
+          "role": "candidate",
+          "move": "c7c8q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 10,
+      "candidate_color": "black",
+      "stratum": "win-pawn-other",
+      "pawn_role": "opponent",
+      "initially_won": true,
+      "result": "1-0",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 29,
+          "role": "opponent",
+          "move": "c7c8q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 11,
+      "candidate_color": "white",
+      "stratum": "win-defender-rook",
+      "pawn_role": "opponent",
+      "initially_won": true,
+      "result": "0-1",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 30,
+          "role": "opponent",
+          "move": "h2h1q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 11,
+      "candidate_color": "black",
+      "stratum": "win-defender-rook",
+      "pawn_role": "candidate",
+      "initially_won": true,
+      "result": "0-1",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 22,
+          "role": "candidate",
+          "move": "h2h1q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 12,
+      "candidate_color": "white",
+      "stratum": "win-defender-other",
+      "pawn_role": "candidate",
+      "initially_won": true,
+      "result": "1-0",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 22,
+          "role": "candidate",
+          "move": "e7e8q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 12,
+      "candidate_color": "black",
+      "stratum": "win-defender-other",
+      "pawn_role": "opponent",
+      "initially_won": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "promotions": [
+        {
+          "ply": 30,
+          "role": "opponent",
+          "move": "e7e8q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 13,
+      "candidate_color": "white",
+      "stratum": "draw-pawn-rook",
+      "pawn_role": "opponent",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 13,
+      "candidate_color": "black",
+      "stratum": "draw-pawn-rook",
+      "pawn_role": "candidate",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 14,
+      "candidate_color": "white",
+      "stratum": "draw-pawn-other",
+      "pawn_role": "candidate",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [
+        {
+          "ply": 3,
+          "role": "candidate",
+          "move": "b7b8q",
+          "safe_win": false
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 14,
+      "candidate_color": "black",
+      "stratum": "draw-pawn-other",
+      "pawn_role": "opponent",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 15,
+      "candidate_color": "white",
+      "stratum": "draw-defender-rook",
+      "pawn_role": "opponent",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 15,
+      "candidate_color": "black",
+      "stratum": "draw-defender-rook",
+      "pawn_role": "candidate",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 16,
+      "candidate_color": "white",
+      "stratum": "draw-defender-other",
+      "pawn_role": "candidate",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 16,
+      "candidate_color": "black",
+      "stratum": "draw-defender-other",
+      "pawn_role": "opponent",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 17,
+      "candidate_color": "white",
+      "stratum": "win-pawn-rook",
+      "pawn_role": "candidate",
+      "initially_won": true,
+      "result": "1-0",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 23,
+          "role": "candidate",
+          "move": "a7a8q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 17,
+      "candidate_color": "black",
+      "stratum": "win-pawn-rook",
+      "pawn_role": "opponent",
+      "initially_won": true,
+      "result": "1-0",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 33,
+          "role": "opponent",
+          "move": "a7a8q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 18,
+      "candidate_color": "white",
+      "stratum": "win-pawn-other",
+      "pawn_role": "opponent",
+      "initially_won": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "promotions": [
+        {
+          "ply": 23,
+          "role": "opponent",
+          "move": "d2d1q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 18,
+      "candidate_color": "black",
+      "stratum": "win-pawn-other",
+      "pawn_role": "candidate",
+      "initially_won": true,
+      "result": "0-1",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 15,
+          "role": "candidate",
+          "move": "d2d1q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 19,
+      "candidate_color": "white",
+      "stratum": "win-defender-rook",
+      "pawn_role": "candidate",
+      "initially_won": true,
+      "result": "1-0",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 22,
+          "role": "candidate",
+          "move": "h7h8q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 19,
+      "candidate_color": "black",
+      "stratum": "win-defender-rook",
+      "pawn_role": "opponent",
+      "initially_won": true,
+      "result": "1-0",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 34,
+          "role": "opponent",
+          "move": "h7h8q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 20,
+      "candidate_color": "white",
+      "stratum": "win-defender-other",
+      "pawn_role": "opponent",
+      "initially_won": true,
+      "result": "0-1",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 22,
+          "role": "opponent",
+          "move": "e2e1q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 20,
+      "candidate_color": "black",
+      "stratum": "win-defender-other",
+      "pawn_role": "candidate",
+      "initially_won": true,
+      "result": "0-1",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 16,
+          "role": "candidate",
+          "move": "e2e1q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 21,
+      "candidate_color": "white",
+      "stratum": "draw-pawn-rook",
+      "pawn_role": "candidate",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 21,
+      "candidate_color": "black",
+      "stratum": "draw-pawn-rook",
+      "pawn_role": "opponent",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 22,
+      "candidate_color": "white",
+      "stratum": "draw-pawn-other",
+      "pawn_role": "opponent",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 22,
+      "candidate_color": "black",
+      "stratum": "draw-pawn-other",
+      "pawn_role": "candidate",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 23,
+      "candidate_color": "white",
+      "stratum": "draw-defender-rook",
+      "pawn_role": "candidate",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 23,
+      "candidate_color": "black",
+      "stratum": "draw-defender-rook",
+      "pawn_role": "opponent",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 24,
+      "candidate_color": "white",
+      "stratum": "draw-defender-other",
+      "pawn_role": "opponent",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 24,
+      "candidate_color": "black",
+      "stratum": "draw-defender-other",
+      "pawn_role": "candidate",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 25,
+      "candidate_color": "white",
+      "stratum": "win-pawn-rook",
+      "pawn_role": "opponent",
+      "initially_won": true,
+      "result": "0-1",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 31,
+          "role": "opponent",
+          "move": "a2a1q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 25,
+      "candidate_color": "black",
+      "stratum": "win-pawn-rook",
+      "pawn_role": "candidate",
+      "initially_won": true,
+      "result": "0-1",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 23,
+          "role": "candidate",
+          "move": "a2a1q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 26,
+      "candidate_color": "white",
+      "stratum": "win-pawn-other",
+      "pawn_role": "candidate",
+      "initially_won": true,
+      "result": "1-0",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 21,
+          "role": "candidate",
+          "move": "b7b8q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 26,
+      "candidate_color": "black",
+      "stratum": "win-pawn-other",
+      "pawn_role": "opponent",
+      "initially_won": true,
+      "result": "1-0",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 29,
+          "role": "opponent",
+          "move": "b7b8q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 27,
+      "candidate_color": "white",
+      "stratum": "win-defender-rook",
+      "pawn_role": "opponent",
+      "initially_won": true,
+      "result": "0-1",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 32,
+          "role": "opponent",
+          "move": "h2h1q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 27,
+      "candidate_color": "black",
+      "stratum": "win-defender-rook",
+      "pawn_role": "candidate",
+      "initially_won": true,
+      "result": "0-1",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 20,
+          "role": "candidate",
+          "move": "h2h1q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 28,
+      "candidate_color": "white",
+      "stratum": "win-defender-other",
+      "pawn_role": "candidate",
+      "initially_won": true,
+      "result": "1-0",
+      "termination": "checkmate",
+      "promotions": [
+        {
+          "ply": 28,
+          "role": "candidate",
+          "move": "f7f8q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 28,
+      "candidate_color": "black",
+      "stratum": "win-defender-other",
+      "pawn_role": "opponent",
+      "initially_won": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "promotions": [
+        {
+          "ply": 34,
+          "role": "opponent",
+          "move": "f7f8q",
+          "safe_win": true
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 29,
+      "candidate_color": "white",
+      "stratum": "draw-pawn-rook",
+      "pawn_role": "opponent",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 29,
+      "candidate_color": "black",
+      "stratum": "draw-pawn-rook",
+      "pawn_role": "candidate",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 30,
+      "candidate_color": "white",
+      "stratum": "draw-pawn-other",
+      "pawn_role": "candidate",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 30,
+      "candidate_color": "black",
+      "stratum": "draw-pawn-other",
+      "pawn_role": "opponent",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 31,
+      "candidate_color": "white",
+      "stratum": "draw-defender-rook",
+      "pawn_role": "opponent",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [
+        {
+          "ply": 14,
+          "role": "opponent",
+          "move": "h2h1r",
+          "safe_win": false
+        }
+      ],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 31,
+      "candidate_color": "black",
+      "stratum": "draw-defender-rook",
+      "pawn_role": "candidate",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 32,
+      "candidate_color": "white",
+      "stratum": "draw-defender-other",
+      "pawn_role": "candidate",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    },
+    {
+      "pair": 32,
+      "candidate_color": "black",
+      "stratum": "draw-defender-other",
+      "pawn_role": "opponent",
+      "initially_won": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "promotions": [],
+      "theoretical_wdl_degradations": []
+    }
+  ],
+  "report_sha256": "3b853db44cdb106ab92b348a1ef7f22f20ab07d37e17867564d2220860d593de",
+  "pgn_sha256": "fa9f0044186d84e0b778ed5aa3cb74accf60de6053d74816e150ce0a0c709c5d",
+  "suite_sha256": "550764811ecbb1761c70a30a82c941122450839ef442f56a8f5a5a67ed96dd13",
+  "oracle_manifest_sha256": "b6995f13703467b2eb9d5b1ab0dd0da63eaeedd23725236526e7e8a0d241dfaa",
+  "script_sha256": "fa8854799ba8f333950ede9be85f664b060bea3b81078feaf0098023d3ee1a17",
+  "interpretation": "WDL edges ignore clock/history; actual completed outcomes use retained history and claimable game rules. A safe promotion is not counted as a completed win."
+}

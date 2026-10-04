@@ -1,0 +1,93 @@
+{
+  "source_files": [
+    {
+      "path": "scripts/train_network.py",
+      "sha256": "896b78f3e9fa971a7891e24df87089e6e40f33e4146554956493fda58161df11"
+    },
+    {
+      "path": "scripts/neural_format.py",
+      "sha256": "a2d369f0f223e47f8acfbaaad6f01583171a659df7b6b06553feead416824312"
+    },
+    {
+      "path": "scripts/augment_turn_data.py",
+      "sha256": "480a5192a697ffee564eee247620a877578b0ace71cc3398389b1f4e35e94e15"
+    },
+    {
+      "path": "scripts/audit_turn_pairs.py",
+      "sha256": "fc0dee1f9442e361b58c4e2fc8cf9bf77d3a8d06b151e215c8b966cd0e15b277"
+    },
+    {
+      "path": "scripts/score_turn_diagnostic.py",
+      "sha256": "7247ee5bc3a76243298aae79f182c647f0636d0640bc7183f407f0eabff50491"
+    },
+    {
+      "path": "scripts/score_label_pairs.py",
+      "sha256": "f581e334cc980954a66db66d15dfacb405e8918f75b6a5addfa880f5b63d72b0"
+    },
+    {
+      "path": "scripts/summarize_turn_diagnostics.py",
+      "sha256": "409d29f38a278d6ea3cf50d4be85bcbe8867f6c12c092225777789aa0b7a7032"
+    },
+    {
+      "path": "scripts/diagnose_turn_dependence.py",
+      "sha256": "0b167f60367375a884fc14b865cd4bad8b1c5435dca90a8a5bea658c7a67c286"
+    },
+    {
+      "path": "scripts/audit_training_data.py",
+      "sha256": "4cebd749b2d133f92d73c20463db074e100cef158cf5453c7bde3279801c4eed"
+    },
+    {
+      "path": "scripts/add_classical_scores.py",
+      "sha256": "f7d109073e7045d8bbcdf9bc26cb719a9e53e58186e7fb7ad2e10b5e1a751ca3"
+    },
+    {
+      "path": "scripts/score_static.py",
+      "sha256": "4a88c92b14d7a717b56debc2298132e9d3acdc0227b25d4c13da70304fbe26bd"
+    },
+    {
+      "path": "scripts/audit_static_labels.py",
+      "sha256": "90b4c8e4a01e13fec1d9a180237c59bd2950eae4a280f5a16ebed19df328284c"
+    },
+    {
+      "path": "scripts/verify_network.py",
+      "sha256": "be2ffe96b1a70f2e2ac24d4df640cd1682ab49c161c985a7f3aecd51de50fada"
+    },
+    {
+      "path": "scripts/verify.py",
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    },
+    {
+      "path": "scripts/benchmark.py",
+      "sha256": "7f9efd69bfa14c22c7324ac5ffc46292ce02a8891b35453d3c956cd467c2b76c"
+    },
+    {
+      "path": "scripts/match.py",
+      "sha256": "a74d4910f04ab6156897d233666aece45baefae32dea816a90dc0ae13bb6e992"
+    },
+    {
+      "path": "scripts/audit_match.py",
+      "sha256": "24ccd5427e5245dc7a9e85c80317414099abda395f708ca688c9b6ad3602a45f"
+    },
+    {
+      "path": "scripts/analyze_match.py",
+      "sha256": "27550253eb8bdf8ff8600b85c8c0b238dd75e64a1c9c28e2919fdf5f5b2c805d"
+    },
+    {
+      "path": "scripts/tactics.py",
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    },
+    {
+      "path": "scripts/compare_search.py",
+      "sha256": "a8162c85b4ea4aae46546ca8a02d4b04c083bf56abb6a28d64f322b2331b6dd9"
+    },
+    {
+      "path": "scripts/uci_client.py",
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "scripts/preserve_turn_experiment.py",
+      "sha256": "a8a55af24dd3786ed947b4bf4020a49602dda94a1534dadf45083381ad3c8bac"
+    }
+  ],
+  "note": "Final pipeline snapshot. Exact trainers are also preserved separately per model."
+}

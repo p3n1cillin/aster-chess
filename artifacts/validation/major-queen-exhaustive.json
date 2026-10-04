@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "entries": 524288,
+  "piece": "queen",
+  "counts": {
+    "invalid": 155836,
+    "wins": 345404,
+    "draws": 23048,
+    "checkmates": 364
+  },
+  "winning_legal_edges": 4836600,
+  "max_mate_distance": 20,
+  "seconds": 43.083,
+  "dump_sha256": "8af92a330bfd80dbcd6214fb7d2ab6d83ee1177730fff7603fb9304fb71e6d31",
+  "oracle_manifest_sha256": "b6995f13703467b2eb9d5b1ab0dd0da63eaeedd23725236526e7e8a0d241dfaa",
+  "script_sha256": "779c591956551b34c6a93d8046088973ca04085b32a69ebc0515dc87633ef3c4",
+  "interpretation": "All valid theoretical WDL classifications agree independently with Syzygy. Every winning distance satisfies the independent legal min/max mate recurrence. Clock/history guards tested separately."
+}

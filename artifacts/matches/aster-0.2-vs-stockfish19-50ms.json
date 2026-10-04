@@ -1,0 +1,124 @@
+{
+  "timestamp_utc": "2026-10-03T21:46:12.867160+00:00",
+  "candidate": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\src\\Engine\\bin\\Release\\net8.0\\Aster.dll",
+  "opponent": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+  "candidate_binary_sha256": "060f9df2c66bc9b3c45fa9b2ca82a04450e67bcbb9edc81193853f5a02b723bf",
+  "opponent_binary_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+  "candidate_source_sha256": "3374602be536b1bcd972b3a4b38283d9bbb5c9be4f479f00248f253d9a6fb883",
+  "stockfish_release": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "platform": "Windows-11-10.0.26300-SP0",
+  "pairs_requested": 4,
+  "limit": {
+    "seconds_per_move": 0.05
+  },
+  "max_plies": 400,
+  "wins": 0,
+  "draws": 0,
+  "losses": 8,
+  "unresolved": 0,
+  "forfeits": 0,
+  "games": [
+    {
+      "pair": 1,
+      "candidate_color": "white",
+      "opening": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6",
+      "initial_fen": "r1bqkb1r/1ppp1ppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 5",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 82,
+      "seconds": 3.406
+    },
+    {
+      "pair": 1,
+      "candidate_color": "black",
+      "opening": "e2e4 e7e5 g1f3 b8c6 f1b5 a7a6 b5a4 g8f6",
+      "initial_fen": "r1bqkb1r/1ppp1ppp/p1n2n2/4p3/B3P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 2 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 55,
+      "seconds": 2.197
+    },
+    {
+      "pair": 2,
+      "candidate_color": "white",
+      "opening": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6",
+      "initial_fen": "rnbqkb1r/pp2pppp/3p1n2/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 1 5",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 62,
+      "seconds": 2.551
+    },
+    {
+      "pair": 2,
+      "candidate_color": "black",
+      "opening": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 f3d4 g8f6",
+      "initial_fen": "rnbqkb1r/pp2pppp/3p1n2/8/3NP3/8/PPP2PPP/RNBQKB1R w KQkq - 1 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 71,
+      "seconds": 2.906
+    },
+    {
+      "pair": 3,
+      "candidate_color": "white",
+      "opening": "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7",
+      "initial_fen": "rnbqk2r/ppp1bppp/4pn2/3p2B1/2PP4/2N5/PP2PPPP/R2QKBNR w KQkq - 4 5",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 110,
+      "seconds": 4.927
+    },
+    {
+      "pair": 3,
+      "candidate_color": "black",
+      "opening": "d2d4 d7d5 c2c4 e7e6 b1c3 g8f6 c1g5 f8e7",
+      "initial_fen": "rnbqk2r/ppp1bppp/4pn2/3p2B1/2PP4/2N5/PP2PPPP/R2QKBNR w KQkq - 4 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 71,
+      "seconds": 2.823
+    },
+    {
+      "pair": 4,
+      "candidate_color": "white",
+      "opening": "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6",
+      "initial_fen": "rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5",
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 64,
+      "seconds": 2.574
+    },
+    {
+      "pair": 4,
+      "candidate_color": "black",
+      "opening": "d2d4 g8f6 c2c4 g7g6 b1c3 f8g7 e2e4 d7d6",
+      "initial_fen": "rnbqk2r/ppp1ppbp/3p1np1/8/2PPP3/2N5/PP3PPP/R1BQKBNR w KQkq - 0 5",
+      "result": "1-0",
+      "termination": "checkmate",
+      "plies": 91,
+      "seconds": 3.946
+    }
+  ],
+  "interpretation": "Smoke-test sample; does not establish an Elo rating or superiority.",
+  "candidate_name": "Aster 0.2.0",
+  "opponent_name": "Stockfish 19",
+  "candidate_options": {
+    "Hash": 64,
+    "Threads": 1,
+    "Move Overhead": 0
+  },
+  "opponent_options": {
+    "Hash": 64,
+    "Threads": 1,
+    "Move Overhead": 0
+  },
+  "seconds": 25.607
+}

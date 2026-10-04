@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\q-evasion-dev\\Aster.dll",
+  "binary_sha256": "a3994e4f350b2cfa261db5edc1e4ae5c332d85d4b3eaf34c0730267f3603d9a0",
+  "positions_checked": 1614,
+  "reference_perft_positions": 14,
+  "protocol_checks": "passed",
+  "seed": 20261003,
+  "seconds": 1.031,
+  "legal_move_existence_positions": 1614,
+  "random_setups": {
+    "positions": 0,
+    "in_check": 0,
+    "checkmates": 0,
+    "stalemates": 0
+  },
+  "eval_file": null
+}

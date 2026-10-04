@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "purpose": "teacher-distillation prototype, not outcome-based self-play learning",
+  "timestamp_utc": "2026-10-04T02:16:11.206320+00:00",
+  "teacher": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "teacher_options": {
+    "Threads": 1,
+    "Hash": 64
+  },
+  "parameters": {
+    "positions": 50000,
+    "label_nodes": 8192,
+    "play_nodes": 512,
+    "max_games": 8000,
+    "max_plies": 200,
+    "seed": 20261012,
+    "random_probability": 0.02,
+    "max_abs_cp": 600,
+    "openings": "artifacts/data/training-openings-v1.json",
+    "exclude_suite": [
+      "tests/fixtures/openings-v1.json",
+      "tests/fixtures/openings-v2.json",
+      "tests/fixtures/openings-v3.json"
+    ],
+    "output": "artifacts/data/teacher-balanced-50k-v1.jsonl"
+  },
+  "sampling": "every third ply; skip checks, terminal/claimable draws, rule-50 proximity and abs(score)>600cp",
+  "play_policy": "teacher PV at sampled positions, low-node teacher otherwise; 2.0% random legal moves",
+  "training_openings": {
+    "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\training-openings-v1.json",
+    "sha256": "5e6aae140bf2f040ed5063dfc5dc0cb203b43b06f0f1b01a8adeb7bbb5cd5993",
+    "positions": 256
+  },
+  "regression_exclusions": [
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v1.json",
+      "sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de",
+      "positions": 64
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v2.json",
+      "sha256": "cdcc99af780b795546a22e84b2557bd20168097c2694cc9b12ce2e242f74bc25",
+      "positions": 64
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v3.json",
+      "sha256": "b2c84b63c566712b33102e1a5f246d47a010a0341f8396c5e036937c74e241f3",
+      "positions": 64
+    }
+  ],
+  "deduplication": "FEN first four fields with legally available en passant; duplicates removed globally before game-level splitting",
+  "games_generated": 3014,
+  "data_sha256": "12ce8369406bb509436d47df0d676e07838c8f2b5456c59120d84551e9d22636",
+  "positions_written": 50000,
+  "seconds": 644.443,
+  "complete": true
+}

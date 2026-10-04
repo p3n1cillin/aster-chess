@@ -1,0 +1,72 @@
+{
+  "source_files": [
+    {
+      "path": "match.py",
+      "sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8"
+    },
+    {
+      "path": "audit_match.py",
+      "sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6"
+    },
+    {
+      "path": "run_q_evasion.py",
+      "sha256": "1de38e29567bf216749b894aef4af06e6753830a7c1de90b3f5fc046c2f763e5"
+    },
+    {
+      "path": "assess_q_evasion.py",
+      "sha256": "9d46b0e01308ba65226b501615bc2e71e4e24f71d3ecf980e52de619e5ee249f"
+    },
+    {
+      "path": "time_q_evasion.py",
+      "sha256": "c3a19935c1e69f1f50caf56df350f7747a68ed384a811c3de7e2f83147fbec03"
+    },
+    {
+      "path": "verify_q_evasion.py",
+      "sha256": "ab366b0a2be974fc7b33a506e1290205d943c4f5a30a6fe20481c9a391b88438"
+    },
+    {
+      "path": "verify_q_evasion_openings.py",
+      "sha256": "56f2a23f8c97b467baa38f244ce6316baeb6d1288952e681e7499b9c08edc1f0"
+    },
+    {
+      "path": "split_q_evasion_suite.py",
+      "sha256": "e7782891cfb7d79c0e51bca93c96bf9d2dd437db8010035704e683374f6fa700"
+    },
+    {
+      "path": "generate_openings.py",
+      "sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746"
+    },
+    {
+      "path": "audit_openings.py",
+      "sha256": "0c97723cf8a0404f9e3681a90f5d9d09dcfc4978721748222ee80a679a6fca5d"
+    },
+    {
+      "path": "analyze_rating.py",
+      "sha256": "f6fe53073c006e91760b885adab9803f92cd50fa3c3a7ba6ada90f0a8e5b8d13"
+    },
+    {
+      "path": "run_rating.py",
+      "sha256": "6e8a31adefd0aeb5d51eac2f5672396f4518f779947713f86dac138ff00f661a"
+    },
+    {
+      "path": "uci_client.py",
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    },
+    {
+      "path": "tactics.py",
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    },
+    {
+      "path": "compare_search.py",
+      "sha256": "a8162c85b4ea4aae46546ca8a02d4b04c083bf56abb6a28d64f322b2331b6dd9"
+    },
+    {
+      "path": "freeze_engine_source.py",
+      "sha256": "db919e19f9b75ade115a3d834ad48cc57e01a6165130ef03a775279f4c89acb7"
+    }
+  ]
+}

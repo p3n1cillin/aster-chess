@@ -1,0 +1,32 @@
+{
+  "schema": 2,
+  "complete": true,
+  "teacher": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "teacher_options": {
+    "Threads": 1,
+    "Hash": 64
+  },
+  "input": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\teacher-turn-augmented-60k-v1.jsonl",
+  "input_sha256": "fe56daefb371f3114e72a729dc396b3d364366b49d90edc7588e0316417e12c2",
+  "positions_written": 60000,
+  "parameters": {
+    "data": "artifacts/data/teacher-turn-augmented-60k-v1.jsonl",
+    "output": "artifacts/data/teacher-turn-60k-static-v1.jsonl",
+    "positions": null,
+    "max_abs_cp": 30000
+  },
+  "generator_sha256": "4a88c92b14d7a717b56debc2298132e9d3acdc0227b25d4c13da70304fbe26bd",
+  "label_kind": "final static eval trace; no search at label time",
+  "interpretation": "Static labels on preserved legal source positions, retaining source-game groups. Teacher fit is not playing strength.",
+  "positions": 60000,
+  "data_sha256": "46b8e7210c93e9e382366e90963901906407e7c4d748838b3424cef6a63adc8a",
+  "seconds": 36.704
+}

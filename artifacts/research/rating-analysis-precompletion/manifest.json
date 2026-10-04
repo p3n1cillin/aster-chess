@@ -1,0 +1,14 @@
+{
+  "timestamp_utc": "2026-10-04T13:43:54.834837+00:00",
+  "confirmation_games_when_recorded": 178,
+  "source_files": [
+    {
+      "path": "analyze_rating.py",
+      "sha256": "f6fe53073c006e91760b885adab9803f92cd50fa3c3a7ba6ada90f0a8e5b8d13"
+    },
+    {
+      "path": "test_rating_analysis.py",
+      "sha256": "b59fa81582e6f1f5e3e3c311fd75284349fa02a402e63402bfb4ce28894f0f77"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "data": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\teacher-turn-60k-static-v1.jsonl",
+  "data_sha256": "46b8e7210c93e9e382366e90963901906407e7c4d748838b3424cef6a63adc8a",
+  "positions": 60000,
+  "games_with_positions": 2695,
+  "canonical_duplicates": 0,
+  "regression_overlap": 0,
+  "checks": 0,
+  "phase_distribution": {
+    "middlegame": 13903,
+    "opening": 19039,
+    "endgame": 27058
+  },
+  "king_region_counts": {
+    "0": 4367,
+    "1": 9071,
+    "2": 22991,
+    "3": 54116,
+    "4": 2064,
+    "5": 5080,
+    "6": 7938,
+    "7": 5663,
+    "8": 1029,
+    "9": 2000,
+    "10": 2201,
+    "11": 1689,
+    "12": 305,
+    "13": 520,
+    "14": 511,
+    "15": 455
+  },
+  "score_distribution": {
+    "negative": 28985,
+    "zero": 963,
+    "positive": 30052,
+    "median_abs_cp": 105.0,
+    "max_abs_cp": 885
+  },
+  "label_node_median": null,
+  "source_search_node_median": 8197.0,
+  "label_kind_counts": {
+    "stockfish_final_static_evaluation": 60000
+  },
+  "exclusions": [
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v1.json",
+      "sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de"
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v2.json",
+      "sha256": "cdcc99af780b795546a22e84b2557bd20168097c2694cc9b12ce2e242f74bc25"
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v3.json",
+      "sha256": "b2c84b63c566712b33102e1a5f246d47a010a0341f8396c5e036937c74e241f3"
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v4.json",
+      "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d"
+    }
+  ],
+  "manifest_checked": true,
+  "interpretation": "Legality/provenance and exact-position exclusions only; opening-family overlap can remain. Teacher-produced labels are not outcomes or playing-strength evidence; retained source search budgets do not describe static relabeling."
+}

@@ -1,0 +1,7515 @@
+{
+  "complete": true,
+  "cases_sha256": "1022f01665405e9f17a36c1a5890f8d9750bd2032689173c0ccb3a237b1215a8",
+  "dump_sha256": "1e1842a3ba5d514d9c0704ff365f3647aed5807fc47bb346c5a539744cc923e3",
+  "oracle_manifest_sha256": "b6995f13703467b2eb9d5b1ab0dd0da63eaeedd23725236526e7e8a0d241dfaa",
+  "script_sha256": "7b9abc0bb5f57ea080fb3434febb7458921f66532e2af65bd23867983fc1b59f",
+  "engines": [
+    {
+      "name": "candidate",
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\kpk-dev\\Aster.exe",
+      "sha256": "d00a50e657ddab709df6a01f0aaf828584cf29a28362da79b3ecd7a8c92512e5",
+      "id": {
+        "name": "Aster 0.7.2-kpk-dev",
+        "author": "Aster contributors"
+      },
+      "options": {
+        "Hash": 64,
+        "Threads": 1,
+        "Move Overhead": 0
+      },
+      "preserved": 256,
+      "total": 256
+    },
+    {
+      "name": "baseline",
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\baseline-0.6.0\\Aster.exe",
+      "sha256": "734d538faba6f43d5533981421b59a0a3cccbec60cf1dbc9980391ef58528b14",
+      "id": {
+        "name": "Aster 0.6.0",
+        "author": "Aster contributors"
+      },
+      "options": {
+        "Hash": 64,
+        "Threads": 1,
+        "Move Overhead": 0
+      },
+      "preserved": 246,
+      "total": 256
+    }
+  ],
+  "positions": [
+    {
+      "fen": "8/8/8/3K4/8/P7/4k3/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d5e6": 0,
+        "d5d6": 2,
+        "d5c6": 2,
+        "d5e5": 0,
+        "d5c5": 2,
+        "d5e4": 2,
+        "d5d4": 2,
+        "d5c4": 2,
+        "a3a4": 2
+      },
+      "candidate": {
+        "move": "a3a4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2687,
+        "depth": 7
+      },
+      "baseline": {
+        "move": "a3a4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2628,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "7K/1p6/8/8/5k2/8/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "f4g5": 2,
+        "f4f5": 2,
+        "f4e5": 2,
+        "f4g4": 2,
+        "f4e4": 2,
+        "f4g3": 2,
+        "f4f3": 2,
+        "f4e3": 2,
+        "b7b6": 2,
+        "b7b5": 2
+      },
+      "candidate": {
+        "move": "b7b5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4502,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "b7b5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4822,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/6P1/5k2/8/8/8/8/4K3 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "e1f2": 0,
+        "e1e2": 0,
+        "e1d2": 0,
+        "e1f1": 0,
+        "e1d1": 0,
+        "g7g8q": 2,
+        "g7g8r": 2,
+        "g7g8b": 0,
+        "g7g8n": 0
+      },
+      "candidate": {
+        "move": "g7g8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3232,
+        "depth": 5
+      },
+      "baseline": {
+        "move": "g7g8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3267,
+        "depth": 5
+      }
+    },
+    {
+      "fen": "8/4p3/8/8/8/3k4/8/5K2 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d3e4": 2,
+        "d3d4": 2,
+        "d3c4": 2,
+        "d3e3": 2,
+        "d3c3": 2,
+        "d3d2": 2,
+        "d3c2": 0,
+        "e7e6": 2,
+        "e7e5": 2
+      },
+      "candidate": {
+        "move": "d3e3",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3830,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "e7e5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4637,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/3K4/8/8/1P6/7k/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d6e7": 2,
+        "d6d7": 2,
+        "d6c7": 2,
+        "d6e6": 2,
+        "d6c6": 2,
+        "d6e5": 2,
+        "d6d5": 2,
+        "d6c5": 2,
+        "b3b4": 2
+      },
+      "candidate": {
+        "move": "b3b4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4243,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "b3b4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2246,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/8/8/8/1k6/p3K3/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b4c5": 2,
+        "b4b5": 2,
+        "b4a5": 2,
+        "b4c4": 2,
+        "b4a4": 2,
+        "b4c3": 2,
+        "b4b3": 2,
+        "a3a2": 2
+      },
+      "candidate": {
+        "move": "a3a2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2632,
+        "depth": 6
+      },
+      "baseline": {
+        "move": "a3a2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2640,
+        "depth": 6
+      }
+    },
+    {
+      "fen": "8/8/8/1K6/8/6P1/7k/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b5c6": 0,
+        "b5b6": 0,
+        "b5a6": 0,
+        "b5c5": 0,
+        "b5a5": 0,
+        "b5c4": 0,
+        "b5b4": 0,
+        "b5a4": 0,
+        "g3g4": 2
+      },
+      "candidate": {
+        "move": "g3g4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3167,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "g3g4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3954,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/7K/8/4p3/8/8/1k6/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b2c3": 2,
+        "b2b3": 2,
+        "b2a3": 2,
+        "b2c2": 2,
+        "b2a2": 2,
+        "b2c1": 2,
+        "b2b1": 2,
+        "b2a1": 2,
+        "e5e4": 2
+      },
+      "candidate": {
+        "move": "e5e4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4073,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "e5e4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3921,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/8/8/8/8/k2P4/2K5 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "c1c2": 2,
+        "c1d1": 2,
+        "d2d3": 2,
+        "d2d4": 2
+      },
+      "candidate": {
+        "move": "d2d4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4645,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "d2d4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4845,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "8/8/2p5/8/8/6K1/k7/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "a2b3": 2,
+        "a2a3": 2,
+        "a2b2": 2,
+        "a2b1": 0,
+        "a2a1": 0,
+        "c6c5": 2
+      },
+      "candidate": {
+        "move": "a2b2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3626,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "c6c5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4937,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "5K2/8/8/8/1k6/8/7P/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "f8g8": 2,
+        "f8e8": 2,
+        "f8g7": 2,
+        "f8f7": 2,
+        "f8e7": 2,
+        "h2h3": 2,
+        "h2h4": 2
+      },
+      "candidate": {
+        "move": "h2h4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4840,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "h2h4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2518,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/7p/8/8/K7/8/8/1k6 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b1c2": 2,
+        "b1b2": 2,
+        "b1a2": 2,
+        "b1c1": 2,
+        "b1a1": 2,
+        "h7h6": 2,
+        "h7h5": 2
+      },
+      "candidate": {
+        "move": "h7h5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4633,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "h7h5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3936,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "2K2k2/8/8/1P6/8/8/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "c8d8": 2,
+        "c8b8": 2,
+        "c8d7": 2,
+        "c8c7": 2,
+        "c8b7": 2,
+        "b5b6": 2
+      },
+      "candidate": {
+        "move": "b5b6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4036,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "b5b6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4162,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/3k4/8/2K5/p7/8/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d7e8": 0,
+        "d7d8": 0,
+        "d7c8": 0,
+        "d7e7": 0,
+        "d7c7": 0,
+        "d7e6": 0,
+        "a4a3": 2
+      },
+      "candidate": {
+        "move": "a4a3",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4213,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "a4a3",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2466,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/8/8/7P/8/8/6K1/4k3 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "g2h3": 2,
+        "g2g3": 2,
+        "g2f3": 2,
+        "g2h2": 2,
+        "g2h1": 2,
+        "g2g1": 2,
+        "h5h6": 2
+      },
+      "candidate": {
+        "move": "h5h6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3748,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "h5h6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3369,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/8/8/3kp3/8/K7/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d4e5": 2,
+        "d4d5": 2,
+        "d4c5": 2,
+        "d4c4": 2,
+        "d4e3": 2,
+        "d4d3": 2,
+        "d4c3": 2,
+        "e4e3": 2
+      },
+      "candidate": {
+        "move": "e4e3",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2932,
+        "depth": 7
+      },
+      "baseline": {
+        "move": "e4e3",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2898,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/1P2k3/8/8/8/6K1/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "g3h4": 2,
+        "g3g4": 2,
+        "g3f4": 2,
+        "g3h3": 2,
+        "g3f3": 2,
+        "g3h2": 2,
+        "g3g2": 2,
+        "g3f2": 2,
+        "b7b8q": 2,
+        "b7b8r": 2,
+        "b7b8b": 0,
+        "b7b8n": 0
+      },
+      "candidate": {
+        "move": "b7b8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3186,
+        "depth": 5
+      },
+      "baseline": {
+        "move": "b7b8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3084,
+        "depth": 5
+      }
+    },
+    {
+      "fen": "8/1p6/7k/8/6K1/8/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "h6h7": 0,
+        "h6g7": 0,
+        "h6g6": 2,
+        "b7b6": 0,
+        "b7b5": 0
+      },
+      "candidate": {
+        "move": "h6g6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4809,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "b7b5",
+        "wdl": 0,
+        "preserved": false,
+        "nodes": 3756,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/2K1P3/8/1k6/8/8/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "c7d8": 2,
+        "c7c8": 2,
+        "c7b8": 2,
+        "c7d7": 2,
+        "c7b7": 2,
+        "c7d6": 2,
+        "e7e8q": 2,
+        "e7e8r": 2,
+        "e7e8b": 0,
+        "e7e8n": 0
+      },
+      "candidate": {
+        "move": "e7e8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4283,
+        "depth": 4
+      },
+      "baseline": {
+        "move": "e7e8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4369,
+        "depth": 4
+      }
+    },
+    {
+      "fen": "8/5p2/8/6k1/8/8/8/7K b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "g5h6": 2,
+        "g5g6": 2,
+        "g5f6": 2,
+        "g5h5": 2,
+        "g5f5": 2,
+        "g5h4": 2,
+        "g5g4": 2,
+        "g5f4": 2,
+        "f7f6": 2,
+        "f7f5": 0
+      },
+      "candidate": {
+        "move": "g5f4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3277,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "f7f5",
+        "wdl": 0,
+        "preserved": false,
+        "nodes": 3492,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/7k/3P4/8/4K3/8/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "e4f5": 2,
+        "e4e5": 2,
+        "e4d5": 2,
+        "e4f4": 2,
+        "e4d4": 2,
+        "e4f3": 2,
+        "e4e3": 2,
+        "e4d3": 2,
+        "d6d7": 2
+      },
+      "candidate": {
+        "move": "d6d7",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3326,
+        "depth": 6
+      },
+      "baseline": {
+        "move": "d6d7",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3277,
+        "depth": 6
+      }
+    },
+    {
+      "fen": "8/8/K7/6k1/p7/8/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "g5h6": 2,
+        "g5g6": 2,
+        "g5f6": 2,
+        "g5h5": 2,
+        "g5f5": 2,
+        "g5h4": 2,
+        "g5g4": 2,
+        "g5f4": 2,
+        "a4a3": 2
+      },
+      "candidate": {
+        "move": "a4a3",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4787,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "a4a3",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4975,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "4K3/8/8/8/8/5P2/k7/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "e8f8": 2,
+        "e8d8": 2,
+        "e8f7": 2,
+        "e8e7": 2,
+        "e8d7": 2,
+        "f3f4": 2
+      },
+      "candidate": {
+        "move": "f3f4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4894,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "f3f4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3790,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/1K6/8/4k3/8/8/7p/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "e5f6": 2,
+        "e5e6": 2,
+        "e5d6": 2,
+        "e5f5": 2,
+        "e5d5": 2,
+        "e5f4": 2,
+        "e5e4": 2,
+        "e5d4": 2,
+        "h2h1q": 2,
+        "h2h1r": 2,
+        "h2h1b": 0,
+        "h2h1n": 0
+      },
+      "candidate": {
+        "move": "h2h1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3233,
+        "depth": 4
+      },
+      "baseline": {
+        "move": "h2h1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3295,
+        "depth": 4
+      }
+    },
+    {
+      "fen": "6K1/8/8/1P6/8/8/6k1/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "g8h8": 2,
+        "g8f8": 2,
+        "g8h7": 2,
+        "g8g7": 2,
+        "g8f7": 2,
+        "b5b6": 2
+      },
+      "candidate": {
+        "move": "b5b6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2796,
+        "depth": 7
+      },
+      "baseline": {
+        "move": "b5b6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2943,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/8/6K1/8/8/3p4/2k5/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "c2c3": 2,
+        "c2b3": 2,
+        "c2d2": 2,
+        "c2b2": 2,
+        "c2d1": 2,
+        "c2c1": 2,
+        "c2b1": 2,
+        "d3d2": 2
+      },
+      "candidate": {
+        "move": "d3d2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4700,
+        "depth": 7
+      },
+      "baseline": {
+        "move": "d3d2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4687,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "4K3/5P2/8/8/8/8/8/5k2 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "e8f8": 2,
+        "e8d8": 2,
+        "e8e7": 2,
+        "e8d7": 2,
+        "f7f8q": 2,
+        "f7f8r": 2,
+        "f7f8b": 0,
+        "f7f8n": 0
+      },
+      "candidate": {
+        "move": "f7f8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1641,
+        "depth": 4
+      },
+      "baseline": {
+        "move": "f7f8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1814,
+        "depth": 4
+      }
+    },
+    {
+      "fen": "8/8/8/8/1k2K3/8/5p2/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b4c5": 2,
+        "b4b5": 2,
+        "b4a5": 2,
+        "b4c4": 2,
+        "b4a4": 2,
+        "b4c3": 2,
+        "b4b3": 2,
+        "b4a3": 2,
+        "f2f1q": 2,
+        "f2f1r": 2,
+        "f2f1b": 0,
+        "f2f1n": 0
+      },
+      "candidate": {
+        "move": "f2f1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1740,
+        "depth": 4
+      },
+      "baseline": {
+        "move": "f2f1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1692,
+        "depth": 4
+      }
+    },
+    {
+      "fen": "1K6/4k3/2P5/8/8/8/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b8c8": 2,
+        "b8a8": 2,
+        "b8c7": 2,
+        "b8b7": 2,
+        "b8a7": 2,
+        "c6c7": 2
+      },
+      "candidate": {
+        "move": "c6c7",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1615,
+        "depth": 5
+      },
+      "baseline": {
+        "move": "c6c7",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 943,
+        "depth": 5
+      }
+    },
+    {
+      "fen": "8/K5k1/2p5/8/8/8/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "g7h8": 0,
+        "g7g8": 0,
+        "g7f8": 0,
+        "g7h7": 0,
+        "g7f7": 0,
+        "g7h6": 0,
+        "g7g6": 0,
+        "g7f6": 0,
+        "c6c5": 2
+      },
+      "candidate": {
+        "move": "c6c5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4827,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "c6c5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3876,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/2K5/7k/4P3/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "c5d6": 2,
+        "c5c6": 2,
+        "c5b6": 2,
+        "c5d5": 2,
+        "c5b5": 2,
+        "c5d4": 2,
+        "c5c4": 2,
+        "c5b4": 2,
+        "e3e4": 2
+      },
+      "candidate": {
+        "move": "e3e4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3444,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "e3e4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3686,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/6k1/2K1p3/8/8/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "g6h7": 0,
+        "g6g7": 0,
+        "g6f7": 0,
+        "g6h6": 0,
+        "g6f6": 2,
+        "g6h5": 0,
+        "g6g5": 2,
+        "g6f5": 2,
+        "e5e4": 0
+      },
+      "candidate": {
+        "move": "g6f5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3492,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "g6g5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4275,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/1P6/8/8/5k2/8/1K6/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b2c3": 2,
+        "b2b3": 2,
+        "b2a3": 2,
+        "b2c2": 2,
+        "b2a2": 2,
+        "b2c1": 2,
+        "b2b1": 2,
+        "b2a1": 2,
+        "b7b8q": 2,
+        "b7b8r": 2,
+        "b7b8b": 0,
+        "b7b8n": 0
+      },
+      "candidate": {
+        "move": "b7b8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3372,
+        "depth": 4
+      },
+      "baseline": {
+        "move": "b7b8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3202,
+        "depth": 4
+      }
+    },
+    {
+      "fen": "8/3k4/1p6/8/7K/8/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d7e8": 2,
+        "d7d8": 2,
+        "d7c8": 2,
+        "d7e7": 2,
+        "d7c7": 2,
+        "d7e6": 2,
+        "d7d6": 2,
+        "d7c6": 2,
+        "b6b5": 2
+      },
+      "candidate": {
+        "move": "b6b5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4196,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "b6b5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2083,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "K7/8/8/8/8/6P1/8/k7 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "a8b8": 2,
+        "a8b7": 2,
+        "a8a7": 2,
+        "g3g4": 2
+      },
+      "candidate": {
+        "move": "g3g4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3096,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "g3g4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3852,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/8/6p1/8/7k/3K4 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "h2h3": 2,
+        "h2g3": 2,
+        "h2g2": 2,
+        "h2h1": 2,
+        "h2g1": 2,
+        "g4g3": 2
+      },
+      "candidate": {
+        "move": "g4g3",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4261,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "g4g3",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4440,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/P7/8/8/7K/8/4k3/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "h4h5": 2,
+        "h4g5": 2,
+        "h4g4": 2,
+        "h4h3": 2,
+        "h4g3": 2,
+        "a7a8q": 2,
+        "a7a8r": 2,
+        "a7a8b": 0,
+        "a7a8n": 0
+      },
+      "candidate": {
+        "move": "a7a8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4431,
+        "depth": 5
+      },
+      "baseline": {
+        "move": "a7a8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1255,
+        "depth": 4
+      }
+    },
+    {
+      "fen": "8/5K2/8/1p6/7k/8/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "h4h5": 2,
+        "h4g5": 2,
+        "h4g4": 2,
+        "h4h3": 2,
+        "h4g3": 2,
+        "b5b4": 2
+      },
+      "candidate": {
+        "move": "b5b4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3344,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "b5b4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3860,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/2K5/8/8/4P3/8/3k4/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "c7d8": 2,
+        "c7c8": 2,
+        "c7b8": 2,
+        "c7d7": 2,
+        "c7b7": 2,
+        "c7d6": 2,
+        "c7c6": 2,
+        "c7b6": 2,
+        "e4e5": 2
+      },
+      "candidate": {
+        "move": "e4e5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2534,
+        "depth": 7
+      },
+      "baseline": {
+        "move": "e4e5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3080,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/4p3/8/6K1/8/2k5/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "c3d4": 2,
+        "c3c4": 2,
+        "c3b4": 0,
+        "c3d3": 0,
+        "c3b3": 0,
+        "c3d2": 0,
+        "c3c2": 0,
+        "c3b2": 0,
+        "e7e6": 0,
+        "e7e5": 2
+      },
+      "candidate": {
+        "move": "e7e5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3979,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "e7e5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4713,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/3K4/8/5k2/3P4/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d6e7": 0,
+        "d6d7": 0,
+        "d6c7": 0,
+        "d6e6": 0,
+        "d6c6": 0,
+        "d6d5": 2,
+        "d6c5": 2,
+        "d3d4": 2
+      },
+      "candidate": {
+        "move": "d3d4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4859,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "d3d4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4172,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/8/2p5/8/7K/k7/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "a2b3": 2,
+        "a2a3": 2,
+        "a2b2": 2,
+        "a2b1": 2,
+        "a2a1": 2,
+        "c5c4": 2
+      },
+      "candidate": {
+        "move": "c5c4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2953,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "c5c4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2970,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/5P2/1K6/8/8/8/8/2k5 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b6c7": 2,
+        "b6b7": 2,
+        "b6a7": 2,
+        "b6c6": 2,
+        "b6a6": 2,
+        "b6c5": 2,
+        "b6b5": 2,
+        "b6a5": 2,
+        "f7f8q": 2,
+        "f7f8r": 2,
+        "f7f8b": 0,
+        "f7f8n": 0
+      },
+      "candidate": {
+        "move": "f7f8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4555,
+        "depth": 5
+      },
+      "baseline": {
+        "move": "f7f8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4327,
+        "depth": 5
+      }
+    },
+    {
+      "fen": "8/8/8/5kp1/8/8/6K1/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "f5g6": 0,
+        "f5f6": 0,
+        "f5e6": 0,
+        "f5e5": 0,
+        "f5g4": 2,
+        "f5f4": 0,
+        "f5e4": 0,
+        "g5g4": 0
+      },
+      "candidate": {
+        "move": "f5g4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4069,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "f5f4",
+        "wdl": 0,
+        "preserved": false,
+        "nodes": 4806,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/K7/8/8/8/2P5/6k1 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "a6b7": 2,
+        "a6a7": 2,
+        "a6b6": 2,
+        "a6b5": 2,
+        "a6a5": 2,
+        "c2c3": 2,
+        "c2c4": 2
+      },
+      "candidate": {
+        "move": "c2c4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4973,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "c2c4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3888,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "3K4/p7/8/7k/8/8/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "h5h6": 2,
+        "h5g6": 2,
+        "h5g5": 2,
+        "h5h4": 2,
+        "h5g4": 2,
+        "a7a6": 2,
+        "a7a5": 2
+      },
+      "candidate": {
+        "move": "a7a5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3801,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "a7a5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4482,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/6P1/6K1/8/8/7k/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "g6h7": 2,
+        "g6f7": 2,
+        "g6h6": 2,
+        "g6f6": 2,
+        "g6h5": 2,
+        "g6g5": 2,
+        "g6f5": 2,
+        "g7g8q": 2,
+        "g7g8r": 2,
+        "g7g8b": 0,
+        "g7g8n": 0
+      },
+      "candidate": {
+        "move": "g7g8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1243,
+        "depth": 4
+      },
+      "baseline": {
+        "move": "g7g8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1268,
+        "depth": 4
+      }
+    },
+    {
+      "fen": "8/8/2K5/8/8/8/7p/1k6 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b1c2": 2,
+        "b1b2": 2,
+        "b1a2": 2,
+        "b1c1": 2,
+        "b1a1": 2,
+        "h2h1q": 2,
+        "h2h1r": 2,
+        "h2h1b": 0,
+        "h2h1n": 0
+      },
+      "candidate": {
+        "move": "h2h1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1968,
+        "depth": 4
+      },
+      "baseline": {
+        "move": "h2h1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1798,
+        "depth": 4
+      }
+    },
+    {
+      "fen": "8/3k4/8/8/3K4/8/3P4/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d4e5": 2,
+        "d4d5": 2,
+        "d4c5": 2,
+        "d4e4": 2,
+        "d4c4": 2,
+        "d4e3": 2,
+        "d4d3": 2,
+        "d4c3": 2,
+        "d2d3": 0
+      },
+      "candidate": {
+        "move": "d4c5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4756,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "d4e5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4944,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/8/6K1/8/1p6/5k2/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "f2g3": 2,
+        "f2f3": 2,
+        "f2e3": 2,
+        "f2g2": 2,
+        "f2e2": 2,
+        "f2g1": 2,
+        "f2f1": 2,
+        "f2e1": 2,
+        "b3b2": 2
+      },
+      "candidate": {
+        "move": "b3b2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2472,
+        "depth": 6
+      },
+      "baseline": {
+        "move": "b3b2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2522,
+        "depth": 6
+      }
+    },
+    {
+      "fen": "3k4/8/8/8/4K3/5P2/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "e4f5": 2,
+        "e4e5": 2,
+        "e4d5": 2,
+        "e4f4": 2,
+        "e4d4": 2,
+        "e4e3": 0,
+        "e4d3": 0,
+        "f3f4": 0
+      },
+      "candidate": {
+        "move": "e4f5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3844,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "f3f4",
+        "wdl": 0,
+        "preserved": false,
+        "nodes": 3962,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/6K1/3k4/8/8/8/4p3/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d6e7": 2,
+        "d6d7": 2,
+        "d6c7": 2,
+        "d6e6": 2,
+        "d6c6": 2,
+        "d6e5": 2,
+        "d6d5": 2,
+        "d6c5": 2,
+        "e2e1q": 2,
+        "e2e1r": 2,
+        "e2e1b": 0,
+        "e2e1n": 0
+      },
+      "candidate": {
+        "move": "e2e1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2227,
+        "depth": 4
+      },
+      "baseline": {
+        "move": "e2e1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1767,
+        "depth": 4
+      }
+    },
+    {
+      "fen": "8/3PK3/8/8/8/8/8/7k w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "e7f8": 2,
+        "e7e8": 2,
+        "e7d8": 2,
+        "e7f7": 2,
+        "e7f6": 2,
+        "e7e6": 2,
+        "e7d6": 2,
+        "d7d8q": 2,
+        "d7d8r": 2,
+        "d7d8b": 0,
+        "d7d8n": 0
+      },
+      "candidate": {
+        "move": "d7d8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3263,
+        "depth": 5
+      },
+      "baseline": {
+        "move": "d7d8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3442,
+        "depth": 5
+      }
+    },
+    {
+      "fen": "8/8/3p4/8/8/8/6k1/2K5 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "g2h3": 0,
+        "g2g3": 0,
+        "g2f3": 2,
+        "g2h2": 0,
+        "g2f2": 0,
+        "g2h1": 0,
+        "g2g1": 0,
+        "g2f1": 0,
+        "d6d5": 0
+      },
+      "candidate": {
+        "move": "g2f3",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3525,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "g2f3",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3421,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/4P3/8/8/8/5K2/8/3k4 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "f3g4": 2,
+        "f3f4": 2,
+        "f3e4": 2,
+        "f3g3": 2,
+        "f3e3": 2,
+        "f3g2": 2,
+        "f3f2": 2,
+        "e7e8q": 2,
+        "e7e8r": 2,
+        "e7e8b": 0,
+        "e7e8n": 0
+      },
+      "candidate": {
+        "move": "e7e8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4458,
+        "depth": 5
+      },
+      "baseline": {
+        "move": "e7e8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4543,
+        "depth": 5
+      }
+    },
+    {
+      "fen": "6k1/8/5K2/6p1/8/8/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "g8h8": 0,
+        "g8f8": 0,
+        "g8h7": 0,
+        "g5g4": 2
+      },
+      "candidate": {
+        "move": "g5g4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4076,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "g5g4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4391,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/2K5/8/3P4/8/8/6k1/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "c7d8": 2,
+        "c7c8": 2,
+        "c7b8": 2,
+        "c7d7": 2,
+        "c7b7": 2,
+        "c7d6": 2,
+        "c7c6": 2,
+        "c7b6": 2,
+        "d5d6": 2
+      },
+      "candidate": {
+        "move": "d5d6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4505,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "d5d6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4710,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/8/8/5k2/1p6/5K2/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "f4g5": 2,
+        "f4f5": 2,
+        "f4e5": 2,
+        "f4g4": 2,
+        "f4e4": 2,
+        "b3b2": 2
+      },
+      "candidate": {
+        "move": "b3b2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2804,
+        "depth": 6
+      },
+      "baseline": {
+        "move": "b3b2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4796,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/8/8/4P3/8/7k/1K6/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b2c3": 2,
+        "b2b3": 2,
+        "b2a3": 2,
+        "b2c2": 2,
+        "b2a2": 2,
+        "b2c1": 2,
+        "b2b1": 2,
+        "b2a1": 2,
+        "e5e6": 2
+      },
+      "candidate": {
+        "move": "e5e6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4911,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "e5e6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4994,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "4K3/7k/8/8/8/6p1/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "h7h8": 2,
+        "h7g8": 2,
+        "h7g7": 2,
+        "h7h6": 2,
+        "h7g6": 2,
+        "g3g2": 2
+      },
+      "candidate": {
+        "move": "g3g2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2458,
+        "depth": 6
+      },
+      "baseline": {
+        "move": "g3g2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2365,
+        "depth": 6
+      }
+    },
+    {
+      "fen": "k7/8/K7/8/8/1P6/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "a6b6": 2,
+        "a6b5": 2,
+        "a6a5": 2,
+        "b3b4": 2
+      },
+      "candidate": {
+        "move": "b3b4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4995,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "b3b4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4274,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "8/1K6/3p4/8/8/8/8/6k1 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "g1h2": 0,
+        "g1g2": 0,
+        "g1f2": 0,
+        "g1h1": 0,
+        "g1f1": 0,
+        "d6d5": 2
+      },
+      "candidate": {
+        "move": "d6d5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4728,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "d6d5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3986,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/3k2K1/8/8/5P2/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "g5h6": 0,
+        "g5g6": 0,
+        "g5f6": 0,
+        "g5h5": 2,
+        "g5f5": 2,
+        "g5h4": 2,
+        "g5g4": 2,
+        "g5f4": 2,
+        "f2f3": 2,
+        "f2f4": 2
+      },
+      "candidate": {
+        "move": "f2f4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4520,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "f2f4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4881,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "5K2/8/8/7p/8/8/8/1k6 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b1c2": 2,
+        "b1b2": 2,
+        "b1a2": 2,
+        "b1c1": 2,
+        "b1a1": 2,
+        "h5h4": 2
+      },
+      "candidate": {
+        "move": "h5h4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2936,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "h5h4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3050,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/8/8/4K3/P7/4k3/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "e4f5": 0,
+        "e4e5": 0,
+        "e4d5": 2,
+        "e4f4": 0,
+        "e4d4": 2,
+        "a3a4": 2
+      },
+      "candidate": {
+        "move": "a3a4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4106,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "a3a4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4328,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/2K5/8/8/2p5/8/k7/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "a2b3": 2,
+        "a2a3": 2,
+        "a2b2": 2,
+        "a2b1": 2,
+        "a2a1": 2,
+        "c4c3": 2
+      },
+      "candidate": {
+        "move": "c4c3",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4757,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "c4c3",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4861,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "4K3/8/4P3/8/1k6/8/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "e8f8": 2,
+        "e8d8": 2,
+        "e8f7": 2,
+        "e8e7": 2,
+        "e8d7": 2,
+        "e6e7": 2
+      },
+      "candidate": {
+        "move": "e6e7",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4133,
+        "depth": 7
+      },
+      "baseline": {
+        "move": "e6e7",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3554,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/8/8/3kp3/7K/8/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d5e6": 2,
+        "d5d6": 2,
+        "d5c6": 2,
+        "d5c5": 2,
+        "d5e4": 2,
+        "d5d4": 2,
+        "d5c4": 2,
+        "e5e4": 2
+      },
+      "candidate": {
+        "move": "d5d4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3568,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "e5e4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3694,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/8/1K6/1P6/1k6/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b5c6": 0,
+        "b5b6": 0,
+        "b5a6": 0,
+        "b5c5": 2,
+        "b5a5": 2
+      },
+      "candidate": {
+        "move": "b5c5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4790,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "b5c5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2021,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/3K3k/8/8/8/p7/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "h7h8": 2,
+        "h7g8": 2,
+        "h7g7": 2,
+        "h7h6": 2,
+        "h7g6": 2,
+        "a3a2": 2
+      },
+      "candidate": {
+        "move": "a3a2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4032,
+        "depth": 7
+      },
+      "baseline": {
+        "move": "a3a2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4670,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/8/3K4/8/3k1P2/8/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d6e7": 0,
+        "d6d7": 0,
+        "d6c7": 0,
+        "d6e6": 2,
+        "d6c6": 0,
+        "f4f5": 2
+      },
+      "candidate": {
+        "move": "f4f5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4982,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "f4f5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4300,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "7k/8/8/7K/8/4p3/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "h8g8": 2,
+        "h8h7": 2,
+        "h8g7": 2,
+        "e3e2": 2
+      },
+      "candidate": {
+        "move": "e3e2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3141,
+        "depth": 6
+      },
+      "baseline": {
+        "move": "e3e2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2560,
+        "depth": 6
+      }
+    },
+    {
+      "fen": "8/8/P7/6k1/8/8/7K/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "h2h3": 2,
+        "h2g3": 2,
+        "h2g2": 2,
+        "h2h1": 2,
+        "h2g1": 2,
+        "a6a7": 2
+      },
+      "candidate": {
+        "move": "a6a7",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1491,
+        "depth": 6
+      },
+      "baseline": {
+        "move": "a6a7",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4847,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/8/8/8/1k6/8/K2p4/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b4c5": 2,
+        "b4b5": 2,
+        "b4a5": 2,
+        "b4c4": 2,
+        "b4a4": 2,
+        "b4c3": 2,
+        "d2d1q": 2,
+        "d2d1r": 2,
+        "d2d1b": 0,
+        "d2d1n": 0
+      },
+      "candidate": {
+        "move": "d2d1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3917,
+        "depth": 6
+      },
+      "baseline": {
+        "move": "d2d1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2114,
+        "depth": 5
+      }
+    },
+    {
+      "fen": "8/K7/8/8/8/8/4kP2/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "a7b8": 0,
+        "a7a8": 0,
+        "a7b7": 0,
+        "a7b6": 0,
+        "a7a6": 0,
+        "f2f3": 0,
+        "f2f4": 2
+      },
+      "candidate": {
+        "move": "f2f4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3581,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "f2f4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4745,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/7k/4p3/8/8/8/1K6 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "h6h7": 0,
+        "h6g7": 0,
+        "h6g6": 2,
+        "h6h5": 2,
+        "h6g5": 2,
+        "e5e4": 0
+      },
+      "candidate": {
+        "move": "h6g5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4843,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "e5e4",
+        "wdl": 0,
+        "preserved": false,
+        "nodes": 4864,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "K7/8/8/3P4/8/8/8/2k5 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "a8b8": 2,
+        "a8b7": 2,
+        "a8a7": 2,
+        "d5d6": 2
+      },
+      "candidate": {
+        "move": "d5d6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3793,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "d5d6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4210,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/8/6k1/2K5/p7/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "g5h6": 0,
+        "g5g6": 0,
+        "g5f6": 0,
+        "g5h5": 0,
+        "g5f5": 0,
+        "g5h4": 0,
+        "g5g4": 0,
+        "g5f4": 0,
+        "a3a2": 2
+      },
+      "candidate": {
+        "move": "a3a2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1893,
+        "depth": 6
+      },
+      "baseline": {
+        "move": "a3a2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2794,
+        "depth": 6
+      }
+    },
+    {
+      "fen": "5K2/8/5P2/8/8/8/2k5/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "f8g8": 2,
+        "f8e8": 2,
+        "f8g7": 2,
+        "f8f7": 2,
+        "f8e7": 2,
+        "f6f7": 2
+      },
+      "candidate": {
+        "move": "f6f7",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4302,
+        "depth": 7
+      },
+      "baseline": {
+        "move": "f6f7",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4560,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/2k5/8/8/8/4p3/1K6/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "c7d8": 0,
+        "c7c8": 0,
+        "c7b8": 0,
+        "c7d7": 0,
+        "c7b7": 0,
+        "c7d6": 0,
+        "c7c6": 0,
+        "c7b6": 0,
+        "e3e2": 2
+      },
+      "candidate": {
+        "move": "e3e2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1540,
+        "depth": 5
+      },
+      "baseline": {
+        "move": "e3e2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4957,
+        "depth": 6
+      }
+    },
+    {
+      "fen": "8/8/1P6/3K4/8/6k1/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d5e6": 2,
+        "d5d6": 2,
+        "d5c6": 2,
+        "d5e5": 2,
+        "d5c5": 2,
+        "d5e4": 2,
+        "d5d4": 2,
+        "d5c4": 2,
+        "b6b7": 2
+      },
+      "candidate": {
+        "move": "b6b7",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2989,
+        "depth": 6
+      },
+      "baseline": {
+        "move": "b6b7",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2643,
+        "depth": 6
+      }
+    },
+    {
+      "fen": "8/8/1k6/3p4/8/8/5K2/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b6c7": 0,
+        "b6b7": 0,
+        "b6a7": 0,
+        "b6c6": 0,
+        "b6a6": 0,
+        "b6c5": 2,
+        "b6b5": 2,
+        "b6a5": 0,
+        "d5d4": 0
+      },
+      "candidate": {
+        "move": "b6b5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3221,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "b6b5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2925,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/8/6P1/8/7k/K7/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "a3b4": 2,
+        "a3a4": 2,
+        "a3b3": 2,
+        "a3b2": 2,
+        "a3a2": 2,
+        "g6g7": 2
+      },
+      "candidate": {
+        "move": "g6g7",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2585,
+        "depth": 6
+      },
+      "baseline": {
+        "move": "g6g7",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4039,
+        "depth": 6
+      }
+    },
+    {
+      "fen": "4K3/8/8/8/8/4p3/8/4k3 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "e1f2": 2,
+        "e1e2": 2,
+        "e1d2": 2,
+        "e1f1": 2,
+        "e1d1": 2,
+        "e3e2": 2
+      },
+      "candidate": {
+        "move": "e3e2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2589,
+        "depth": 7
+      },
+      "baseline": {
+        "move": "e3e2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2509,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/5k2/8/6K1/1P6/8/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "g5h6": 0,
+        "g5h5": 0,
+        "g5f5": 2,
+        "g5h4": 0,
+        "g5g4": 0,
+        "g5f4": 0,
+        "b4b5": 0
+      },
+      "candidate": {
+        "move": "g5f5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4157,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "g5f5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3941,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/8/8/8/K1k5/8/p7/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "c4d5": 2,
+        "c4c5": 2,
+        "c4d4": 2,
+        "c4d3": 2,
+        "c4c3": 2,
+        "a2a1q": 2,
+        "a2a1r": 2,
+        "a2a1b": 0,
+        "a2a1n": 0
+      },
+      "candidate": {
+        "move": "a2a1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2,
+        "depth": 1
+      },
+      "baseline": {
+        "move": "a2a1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2,
+        "depth": 1
+      }
+    },
+    {
+      "fen": "6k1/4P3/8/8/8/8/5K2/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "f2g3": 0,
+        "f2f3": 0,
+        "f2e3": 0,
+        "f2g2": 0,
+        "f2e2": 0,
+        "f2g1": 0,
+        "f2f1": 0,
+        "f2e1": 0,
+        "e7e8q": 2,
+        "e7e8r": 2,
+        "e7e8b": 0,
+        "e7e8n": 0
+      },
+      "candidate": {
+        "move": "e7e8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3420,
+        "depth": 4
+      },
+      "baseline": {
+        "move": "e7e8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2549,
+        "depth": 4
+      }
+    },
+    {
+      "fen": "8/8/2K5/5pk1/8/8/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "g5h6": 2,
+        "g5g6": 2,
+        "g5f6": 2,
+        "g5h5": 2,
+        "g5h4": 2,
+        "g5g4": 2,
+        "g5f4": 2,
+        "f5f4": 2
+      },
+      "candidate": {
+        "move": "f5f4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4466,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "f5f4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4788,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "5k2/8/8/PK6/8/8/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b5c6": 2,
+        "b5b6": 2,
+        "b5a6": 2,
+        "b5c5": 2,
+        "b5c4": 2,
+        "b5b4": 2,
+        "b5a4": 2,
+        "a5a6": 2
+      },
+      "candidate": {
+        "move": "a5a6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4063,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "a5a6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4793,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/1k1K4/8/8/8/1p6/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b7b8": 2,
+        "b7a8": 2,
+        "b7a7": 2,
+        "b7b6": 2,
+        "b7a6": 2,
+        "b3b2": 2
+      },
+      "candidate": {
+        "move": "b3b2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1662,
+        "depth": 6
+      },
+      "baseline": {
+        "move": "b3b2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4896,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/8/k7/5K2/7P/8/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "f5g6": 2,
+        "f5f6": 2,
+        "f5e6": 2,
+        "f5g5": 2,
+        "f5e5": 2,
+        "f5g4": 2,
+        "f5f4": 2,
+        "f5e4": 2,
+        "h4h5": 2
+      },
+      "candidate": {
+        "move": "h4h5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4554,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "h4h5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4696,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/2K5/8/8/5k1p/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "f3g4": 2,
+        "f3f4": 2,
+        "f3e4": 2,
+        "f3g3": 2,
+        "f3e3": 2,
+        "f3g2": 2,
+        "f3f2": 2,
+        "f3e2": 2,
+        "h3h2": 2
+      },
+      "candidate": {
+        "move": "h3h2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3667,
+        "depth": 6
+      },
+      "baseline": {
+        "move": "h3h2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4203,
+        "depth": 6
+      }
+    },
+    {
+      "fen": "8/3P4/3k4/8/8/8/K7/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "a2b3": 0,
+        "a2a3": 0,
+        "a2b2": 0,
+        "a2b1": 0,
+        "a2a1": 0,
+        "d7d8q": 2,
+        "d7d8r": 2,
+        "d7d8b": 0,
+        "d7d8n": 0
+      },
+      "candidate": {
+        "move": "d7d8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4486,
+        "depth": 4
+      },
+      "baseline": {
+        "move": "d7d8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3522,
+        "depth": 4
+      }
+    },
+    {
+      "fen": "1K6/5k2/p7/8/8/8/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "f7g8": 2,
+        "f7f8": 2,
+        "f7e8": 2,
+        "f7g7": 2,
+        "f7e7": 2,
+        "f7g6": 2,
+        "f7f6": 2,
+        "f7e6": 2,
+        "a6a5": 2
+      },
+      "candidate": {
+        "move": "a6a5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3870,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "a6a5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4318,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/5k2/8/8/8/6K1/6P1/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "g3h4": 2,
+        "g3g4": 2,
+        "g3f4": 2,
+        "g3h3": 2,
+        "g3f3": 2,
+        "g3h2": 0,
+        "g3f2": 0
+      },
+      "candidate": {
+        "move": "g3g4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3495,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "g3f4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3249,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "7K/8/3kp3/8/8/8/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d6e7": 2,
+        "d6d7": 2,
+        "d6c7": 2,
+        "d6c6": 2,
+        "d6e5": 2,
+        "d6d5": 2,
+        "d6c5": 2,
+        "e6e5": 2
+      },
+      "candidate": {
+        "move": "e6e5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3329,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "e6e5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3667,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "4K3/8/7k/8/2P5/8/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "e8f8": 2,
+        "e8d8": 2,
+        "e8f7": 2,
+        "e8e7": 2,
+        "e8d7": 2,
+        "c4c5": 2
+      },
+      "candidate": {
+        "move": "c4c5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3023,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "c4c5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3151,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/2K5/8/3k4/8/8/2p5/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d5e6": 2,
+        "d5e5": 2,
+        "d5c5": 2,
+        "d5e4": 2,
+        "d5d4": 2,
+        "d5c4": 2,
+        "c2c1q": 2,
+        "c2c1r": 2,
+        "c2c1b": 0,
+        "c2c1n": 0
+      },
+      "candidate": {
+        "move": "c2c1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4445,
+        "depth": 4
+      },
+      "baseline": {
+        "move": "c2c1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4442,
+        "depth": 4
+      }
+    },
+    {
+      "fen": "8/5P2/8/3K4/8/k7/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d5e6": 2,
+        "d5d6": 2,
+        "d5c6": 2,
+        "d5e5": 2,
+        "d5c5": 2,
+        "d5e4": 2,
+        "d5d4": 2,
+        "d5c4": 2,
+        "f7f8q": 2,
+        "f7f8r": 2,
+        "f7f8b": 0,
+        "f7f8n": 0
+      },
+      "candidate": {
+        "move": "f7f8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2587,
+        "depth": 4
+      },
+      "baseline": {
+        "move": "f7f8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2497,
+        "depth": 4
+      }
+    },
+    {
+      "fen": "8/K7/8/8/3k1p2/8/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d4e5": 2,
+        "d4d5": 2,
+        "d4c5": 2,
+        "d4e4": 2,
+        "d4c4": 2,
+        "d4e3": 2,
+        "d4d3": 2,
+        "d4c3": 2,
+        "f4f3": 2
+      },
+      "candidate": {
+        "move": "f4f3",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3027,
+        "depth": 7
+      },
+      "baseline": {
+        "move": "f4f3",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2895,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "7K/P7/8/8/8/8/8/3k4 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "h8g8": 2,
+        "h8h7": 2,
+        "h8g7": 2,
+        "a7a8q": 2,
+        "a7a8r": 2,
+        "a7a8b": 0,
+        "a7a8n": 0
+      },
+      "candidate": {
+        "move": "a7a8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1724,
+        "depth": 4
+      },
+      "baseline": {
+        "move": "a7a8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1681,
+        "depth": 4
+      }
+    },
+    {
+      "fen": "8/6K1/8/1p6/8/8/8/k7 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "a1b2": 2,
+        "a1a2": 2,
+        "a1b1": 2,
+        "b5b4": 2
+      },
+      "candidate": {
+        "move": "b5b4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4493,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "b5b4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4848,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/2K5/8/8/7P/8/k7/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "c7d8": 2,
+        "c7c8": 2,
+        "c7b8": 2,
+        "c7d7": 2,
+        "c7b7": 2,
+        "c7d6": 2,
+        "c7c6": 2,
+        "c7b6": 2,
+        "h4h5": 2
+      },
+      "candidate": {
+        "move": "h4h5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3918,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "h4h5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4490,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "K7/8/8/8/8/8/2k4p/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "c2d3": 2,
+        "c2c3": 2,
+        "c2b3": 2,
+        "c2d2": 2,
+        "c2b2": 2,
+        "c2d1": 2,
+        "c2c1": 2,
+        "c2b1": 2,
+        "h2h1q": 2,
+        "h2h1r": 2,
+        "h2h1b": 0,
+        "h2h1n": 0
+      },
+      "candidate": {
+        "move": "h2h1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1974,
+        "depth": 4
+      },
+      "baseline": {
+        "move": "h2h1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2154,
+        "depth": 4
+      }
+    },
+    {
+      "fen": "K7/8/8/8/8/1P4k1/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "a8b8": 2,
+        "a8b7": 2,
+        "a8a7": 2,
+        "b3b4": 2
+      },
+      "candidate": {
+        "move": "b3b4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4724,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "b3b4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4431,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "6K1/8/8/8/8/p7/5k2/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "f2g3": 2,
+        "f2f3": 2,
+        "f2e3": 2,
+        "f2g2": 2,
+        "f2e2": 2,
+        "f2g1": 2,
+        "f2f1": 2,
+        "f2e1": 2,
+        "a3a2": 2
+      },
+      "candidate": {
+        "move": "a3a2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4812,
+        "depth": 7
+      },
+      "baseline": {
+        "move": "a3a2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1703,
+        "depth": 6
+      }
+    },
+    {
+      "fen": "8/6P1/8/3K4/5k2/8/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d5e6": 2,
+        "d5d6": 2,
+        "d5c6": 2,
+        "d5c5": 2,
+        "d5d4": 2,
+        "d5c4": 2,
+        "g7g8q": 2,
+        "g7g8r": 2,
+        "g7g8b": 0,
+        "g7g8n": 0
+      },
+      "candidate": {
+        "move": "g7g8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2266,
+        "depth": 5
+      },
+      "baseline": {
+        "move": "g7g8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2117,
+        "depth": 5
+      }
+    },
+    {
+      "fen": "6K1/6p1/8/8/8/8/1k6/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b2c3": 0,
+        "b2b3": 0,
+        "b2a3": 0,
+        "b2c2": 0,
+        "b2a2": 0,
+        "b2c1": 0,
+        "b2b1": 0,
+        "b2a1": 0,
+        "g7g6": 2,
+        "g7g5": 2
+      },
+      "candidate": {
+        "move": "g7g5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3164,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "g7g5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3815,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/2K2k2/8/2P5/8/8/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "c7d8": 2,
+        "c7c8": 2,
+        "c7b8": 2,
+        "c7d7": 2,
+        "c7b7": 2,
+        "c7d6": 2,
+        "c7c6": 2,
+        "c7b6": 2,
+        "c5c6": 2
+      },
+      "candidate": {
+        "move": "c7d7",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3524,
+        "depth": 7
+      },
+      "baseline": {
+        "move": "c7d7",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3496,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/8/3k1K2/8/8/1p6/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d6d7": 2,
+        "d6c7": 2,
+        "d6c6": 2,
+        "d6d5": 2,
+        "d6c5": 2,
+        "b3b2": 2
+      },
+      "candidate": {
+        "move": "b3b2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1915,
+        "depth": 6
+      },
+      "baseline": {
+        "move": "b3b2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2199,
+        "depth": 6
+      }
+    },
+    {
+      "fen": "8/8/2K5/5P2/8/8/8/7k w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "c6d7": 2,
+        "c6c7": 2,
+        "c6b7": 2,
+        "c6d6": 2,
+        "c6b6": 2,
+        "c6d5": 2,
+        "c6c5": 2,
+        "c6b5": 2,
+        "f5f6": 2
+      },
+      "candidate": {
+        "move": "f5f6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2672,
+        "depth": 7
+      },
+      "baseline": {
+        "move": "f5f6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2843,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/8/8/8/6K1/7p/8/2k5 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "c1d2": 0,
+        "c1c2": 0,
+        "c1b2": 0,
+        "c1d1": 0,
+        "c1b1": 0,
+        "h3h2": 2
+      },
+      "candidate": {
+        "move": "h3h2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4064,
+        "depth": 7
+      },
+      "baseline": {
+        "move": "h3h2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4464,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "4K3/8/8/8/8/8/1P6/1k6 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "e8f8": 0,
+        "e8d8": 0,
+        "e8f7": 0,
+        "e8e7": 0,
+        "e8d7": 0,
+        "b2b3": 2,
+        "b2b4": 2
+      },
+      "candidate": {
+        "move": "b2b4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3527,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "b2b4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4039,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/2p3K1/8/5k2/8/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "f4e5": 2,
+        "f4g4": 0,
+        "f4e4": 2,
+        "f4g3": 0,
+        "f4f3": 0,
+        "f4e3": 2,
+        "c6c5": 2
+      },
+      "candidate": {
+        "move": "c6c5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4270,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "c6c5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2140,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "7K/8/8/8/8/8/3k3P/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "h8g8": 0,
+        "h8h7": 2,
+        "h8g7": 2,
+        "h2h3": 0,
+        "h2h4": 2
+      },
+      "candidate": {
+        "move": "h8g7",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4474,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "h2h4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4670,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/6K1/1k6/6p1/8/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b5c6": 2,
+        "b5b6": 2,
+        "b5a6": 2,
+        "b5c5": 2,
+        "b5a5": 2,
+        "b5c4": 2,
+        "b5b4": 2,
+        "b5a4": 2,
+        "g4g3": 2
+      },
+      "candidate": {
+        "move": "g4g3",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3161,
+        "depth": 7
+      },
+      "baseline": {
+        "move": "g4g3",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3196,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/K7/8/8/8/8/3P4/2k5 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "a7b8": 0,
+        "a7a8": 0,
+        "a7b7": 0,
+        "a7b6": 0,
+        "a7a6": 0,
+        "d2d3": 2,
+        "d2d4": 2
+      },
+      "candidate": {
+        "move": "d2d4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4949,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "d2d4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3645,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/8/8/8/p7/2K1k3 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "e1f2": 0,
+        "e1e2": 0,
+        "e1f1": 0,
+        "a2a1q": 2,
+        "a2a1r": 2,
+        "a2a1b": 0,
+        "a2a1n": 0
+      },
+      "candidate": {
+        "move": "a2a1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1675,
+        "depth": 4
+      },
+      "baseline": {
+        "move": "a2a1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1548,
+        "depth": 4
+      }
+    },
+    {
+      "fen": "8/8/8/4P3/1k6/5K2/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "f3g4": 2,
+        "f3f4": 2,
+        "f3e4": 2,
+        "f3g3": 2,
+        "f3e3": 2,
+        "f3g2": 0,
+        "f3f2": 0,
+        "f3e2": 0,
+        "e5e6": 2
+      },
+      "candidate": {
+        "move": "e5e6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3041,
+        "depth": 7
+      },
+      "baseline": {
+        "move": "e5e6",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3361,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/3k4/8/5K2/8/4p3/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "d7e8": 2,
+        "d7d8": 2,
+        "d7c8": 2,
+        "d7e7": 2,
+        "d7c7": 2,
+        "d7d6": 2,
+        "d7c6": 2,
+        "e3e2": 2
+      },
+      "candidate": {
+        "move": "e3e2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2327,
+        "depth": 5
+      },
+      "baseline": {
+        "move": "e3e2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 1448,
+        "depth": 5
+      }
+    },
+    {
+      "fen": "8/k7/2K5/8/8/8/3P4/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "c6d7": 2,
+        "c6c7": 2,
+        "c6d6": 2,
+        "c6d5": 2,
+        "c6c5": 2,
+        "c6b5": 2,
+        "d2d3": 2,
+        "d2d4": 2
+      },
+      "candidate": {
+        "move": "d2d4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3259,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "d2d4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3422,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/1k1p4/8/8/8/K7/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b6c7": 0,
+        "b6b7": 0,
+        "b6a7": 0,
+        "b6c6": 2,
+        "b6a6": 0,
+        "b6c5": 2,
+        "b6b5": 0,
+        "b6a5": 0,
+        "d6d5": 0
+      },
+      "candidate": {
+        "move": "b6c5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3413,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "d6d5",
+        "wdl": 0,
+        "preserved": false,
+        "nodes": 4881,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/1k2K3/8/8/7P/8/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "e7f8": 2,
+        "e7e8": 2,
+        "e7d8": 2,
+        "e7f7": 2,
+        "e7d7": 2,
+        "e7f6": 2,
+        "e7e6": 2,
+        "e7d6": 2,
+        "h4h5": 2
+      },
+      "candidate": {
+        "move": "h4h5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3964,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "h4h5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4303,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "k7/8/8/8/8/4K2p/8/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "a8b8": 0,
+        "a8b7": 0,
+        "a8a7": 0,
+        "h3h2": 2
+      },
+      "candidate": {
+        "move": "h3h2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2803,
+        "depth": 6
+      },
+      "baseline": {
+        "move": "h3h2",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2162,
+        "depth": 6
+      }
+    },
+    {
+      "fen": "8/8/1K6/8/8/1P6/8/2k5 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b6c7": 2,
+        "b6b7": 2,
+        "b6a7": 2,
+        "b6c6": 2,
+        "b6a6": 2,
+        "b6c5": 2,
+        "b6b5": 2,
+        "b6a5": 2,
+        "b3b4": 2
+      },
+      "candidate": {
+        "move": "b3b4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3324,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "b3b4",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3482,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/5K2/8/8/5k2/3p4/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "f3g4": 2,
+        "f3f4": 2,
+        "f3e4": 2,
+        "f3g3": 2,
+        "f3e3": 2,
+        "f3g2": 2,
+        "f3f2": 2,
+        "f3e2": 2,
+        "d2d1q": 2,
+        "d2d1r": 2,
+        "d2d1b": 0,
+        "d2d1n": 0
+      },
+      "candidate": {
+        "move": "d2d1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2743,
+        "depth": 5
+      },
+      "baseline": {
+        "move": "d2d1q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 2562,
+        "depth": 5
+      }
+    },
+    {
+      "fen": "8/K3P3/8/8/7k/8/8/8 w - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "a7b8": 2,
+        "a7a8": 2,
+        "a7b7": 2,
+        "a7b6": 2,
+        "a7a6": 2,
+        "e7e8q": 2,
+        "e7e8r": 2,
+        "e7e8b": 0,
+        "e7e8n": 0
+      },
+      "candidate": {
+        "move": "e7e8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4608,
+        "depth": 5
+      },
+      "baseline": {
+        "move": "e7e8q",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4832,
+        "depth": 5
+      }
+    },
+    {
+      "fen": "1K6/8/4p3/8/8/8/1k6/8 b - - 0 1",
+      "stratum": "pawn_win",
+      "root_wdl": 2,
+      "best_wdl": 2,
+      "legal_move_wdl": {
+        "b2c3": 2,
+        "b2b3": 2,
+        "b2a3": 2,
+        "b2c2": 2,
+        "b2a2": 2,
+        "b2c1": 2,
+        "b2b1": 2,
+        "b2a1": 2,
+        "e6e5": 2
+      },
+      "candidate": {
+        "move": "e6e5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 3428,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "e6e5",
+        "wdl": 2,
+        "preserved": true,
+        "nodes": 4336,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/8/6k1/8/3P4/5K2/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "g5h6": -2,
+        "g5g6": -2,
+        "g5f6": 0,
+        "g5h5": -2,
+        "g5f5": 0,
+        "g5h4": -2,
+        "g5g4": -2,
+        "g5f4": 0
+      },
+      "candidate": {
+        "move": "g5f5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4464,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "g5f4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3196,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "5k2/8/8/8/8/2p5/2K5/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c2d3": 0,
+        "c2c3": 0,
+        "c2b3": 0,
+        "c2d1": 0,
+        "c2c1": 0,
+        "c2b1": 0
+      },
+      "candidate": {
+        "move": "c2c3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4545,
+        "depth": 21
+      },
+      "baseline": {
+        "move": "c2c3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4490,
+        "depth": 19
+      }
+    },
+    {
+      "fen": "8/6K1/4k3/8/8/8/5P2/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e6e7": -2,
+        "e6d7": -2,
+        "e6d6": -2,
+        "e6f5": 0,
+        "e6e5": 0,
+        "e6d5": 0
+      },
+      "candidate": {
+        "move": "e6e5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4349,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "e6e5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4082,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/5p2/2K5/8/2k5/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c4d5": 0,
+        "c4c5": -2,
+        "c4b5": -2,
+        "c4d4": 0,
+        "c4b4": -2
+      },
+      "candidate": {
+        "move": "c4d4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3868,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "c4d4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4067,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "8/3P4/5k2/8/6K1/8/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "f6g7": -2,
+        "f6f7": -2,
+        "f6e7": 0,
+        "f6g6": -2,
+        "f6e6": -2,
+        "f6e5": -2
+      },
+      "candidate": {
+        "move": "f6e7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4928,
+        "depth": 44
+      },
+      "baseline": {
+        "move": "f6e7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4940,
+        "depth": 44
+      }
+    },
+    {
+      "fen": "8/8/8/3p1k2/8/8/3K4/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d2e3": 0,
+        "d2d3": 0,
+        "d2c3": -2,
+        "d2e2": -2,
+        "d2c2": -2,
+        "d2e1": 0,
+        "d2d1": 0,
+        "d2c1": -2
+      },
+      "candidate": {
+        "move": "d2d1",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4497,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "d2d3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4400,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/2k5/8/6P1/8/1K6/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c7d8": 0,
+        "c7c8": -2,
+        "c7b8": -2,
+        "c7d7": 0,
+        "c7b7": -2,
+        "c7d6": 0,
+        "c7c6": -2,
+        "c7b6": -2
+      },
+      "candidate": {
+        "move": "c7d6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3731,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "c7d6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4397,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/3k4/8/5p2/8/1K6/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "b2c3": 0,
+        "b2b3": -2,
+        "b2a3": -2,
+        "b2c2": 0,
+        "b2a2": -2,
+        "b2c1": 0,
+        "b2b1": -2,
+        "b2a1": -2
+      },
+      "candidate": {
+        "move": "b2c1",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4195,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "b2c3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4899,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/k7/2P5/8/5K2/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "a6b7": 0,
+        "a6a7": 0,
+        "a6b5": 0,
+        "a6a5": -2
+      },
+      "candidate": {
+        "move": "a6b5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4263,
+        "depth": 13
+      },
+      "baseline": {
+        "move": "a6b5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4115,
+        "depth": 13
+      }
+    },
+    {
+      "fen": "8/8/8/3p2k1/4K3/8/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e4e5": 0,
+        "e4d5": 0,
+        "e4d4": 0,
+        "e4f3": 0,
+        "e4e3": 0,
+        "e4d3": 0
+      },
+      "candidate": {
+        "move": "e4d5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4275,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "e4d5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3871,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/K7/8/7k/8/8/4P3/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "h5h6": -2,
+        "h5g6": 0,
+        "h5g5": 0,
+        "h5h4": -2,
+        "h5g4": 0
+      },
+      "candidate": {
+        "move": "h5g4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4623,
+        "depth": 11
+      },
+      "baseline": {
+        "move": "h5g4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3917,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/2k5/8/5K2/5p2/8/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "f5g6": -2,
+        "f5f6": -2,
+        "f5e6": -2,
+        "f5g5": -2,
+        "f5e5": -2,
+        "f5g4": 0,
+        "f5f4": 0,
+        "f5e4": 0
+      },
+      "candidate": {
+        "move": "f5f4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4793,
+        "depth": 16
+      },
+      "baseline": {
+        "move": "f5f4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4658,
+        "depth": 16
+      }
+    },
+    {
+      "fen": "3k4/5K2/8/8/3P4/8/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d8c8": -2,
+        "d8d7": 0,
+        "d8c7": -2
+      },
+      "candidate": {
+        "move": "d8d7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4343,
+        "depth": 12
+      },
+      "baseline": {
+        "move": "d8d7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3586,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/k7/1p6/2K5/8/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c4d5": -2,
+        "c4c5": -2,
+        "c4d4": -2,
+        "c4b4": 0,
+        "c4d3": -2,
+        "c4c3": 0,
+        "c4b3": 0
+      },
+      "candidate": {
+        "move": "c4c3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4663,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "c4d4",
+        "wdl": -2,
+        "preserved": false,
+        "nodes": 4041,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/8/4P3/2k5/8/2K5/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c5d6": 0,
+        "c5c6": 0,
+        "c5b6": -2,
+        "c5d5": -2,
+        "c5b5": -2
+      },
+      "candidate": {
+        "move": "c5c6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4070,
+        "depth": 11
+      },
+      "baseline": {
+        "move": "c5d6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4486,
+        "depth": 18
+      }
+    },
+    {
+      "fen": "8/8/8/7k/8/8/6p1/6K1 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "g1h2": 0,
+        "g1g2": 0,
+        "g1f2": 0
+      },
+      "candidate": {
+        "move": "g1g2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4796,
+        "depth": 60
+      },
+      "baseline": {
+        "move": "g1g2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4798,
+        "depth": 60
+      }
+    },
+    {
+      "fen": "8/3P4/5k2/8/8/4K3/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "f6g7": -2,
+        "f6f7": -2,
+        "f6e7": 0,
+        "f6g6": -2,
+        "f6e6": -2,
+        "f6g5": -2,
+        "f6f5": -2,
+        "f6e5": -2
+      },
+      "candidate": {
+        "move": "f6e7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4819,
+        "depth": 34
+      },
+      "baseline": {
+        "move": "f6e7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4839,
+        "depth": 34
+      }
+    },
+    {
+      "fen": "8/8/8/8/3k4/8/2p5/2K5 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c1d2": 0,
+        "c1c2": 0,
+        "c1b2": 0
+      },
+      "candidate": {
+        "move": "c1c2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4999,
+        "depth": 64
+      },
+      "baseline": {
+        "move": "c1c2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4995,
+        "depth": 64
+      }
+    },
+    {
+      "fen": "8/8/8/6k1/8/8/6KP/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "g5h6": 0,
+        "g5g6": 0,
+        "g5f6": 0,
+        "g5h5": 0,
+        "g5f5": 0,
+        "g5h4": 0,
+        "g5g4": 0,
+        "g5f4": 0
+      },
+      "candidate": {
+        "move": "g5f4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4905,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "g5g4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4821,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/5p2/1k6/8/8/K7/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "a3b4": 0,
+        "a3a4": -2,
+        "a3b3": -2,
+        "a3b2": -2,
+        "a3a2": -2
+      },
+      "candidate": {
+        "move": "a3b4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4519,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "a3b2",
+        "wdl": -2,
+        "preserved": false,
+        "nodes": 1704,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/7K/8/8/8/3k4/3P4/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d3e4": 0,
+        "d3d4": 0,
+        "d3c4": 0,
+        "d3e2": -2,
+        "d3d2": 0,
+        "d3c2": -2
+      },
+      "candidate": {
+        "move": "d3d2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4328,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "d3d2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3489,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/1k6/8/8/8/2K5/3p4/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c3d4": -2,
+        "c3c4": -2,
+        "c3b4": -2,
+        "c3d3": -2,
+        "c3b3": -2,
+        "c3d2": 0,
+        "c3c2": 0,
+        "c3b2": -2
+      },
+      "candidate": {
+        "move": "c3d2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4938,
+        "depth": 34
+      },
+      "baseline": {
+        "move": "c3d2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4944,
+        "depth": 34
+      }
+    },
+    {
+      "fen": "8/8/8/8/6k1/4P3/5K2/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "g4h5": -2,
+        "g4g5": 0,
+        "g4f5": 0,
+        "g4h4": -2,
+        "g4h3": -2
+      },
+      "candidate": {
+        "move": "g4f5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4039,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "g4f5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3902,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/8/8/5K2/6p1/k7 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "f3g4": -2,
+        "f3f4": -2,
+        "f3e4": -2,
+        "f3g3": -2,
+        "f3e3": -2,
+        "f3g2": 0,
+        "f3f2": 0,
+        "f3e2": -2
+      },
+      "candidate": {
+        "move": "f3g2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4736,
+        "depth": 32
+      },
+      "baseline": {
+        "move": "f3g2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4543,
+        "depth": 31
+      }
+    },
+    {
+      "fen": "4k3/8/2P5/8/8/8/8/1K6 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e8f8": -2,
+        "e8d8": 0,
+        "e8f7": -2,
+        "e8e7": 0
+      },
+      "candidate": {
+        "move": "e8e7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3921,
+        "depth": 12
+      },
+      "baseline": {
+        "move": "e8d8",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4986,
+        "depth": 18
+      }
+    },
+    {
+      "fen": "8/1k6/8/2K5/p7/8/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c5d6": -2,
+        "c5d5": -2,
+        "c5b5": -2,
+        "c5d4": 0,
+        "c5c4": 0,
+        "c5b4": 0
+      },
+      "candidate": {
+        "move": "c5b4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4915,
+        "depth": 16
+      },
+      "baseline": {
+        "move": "c5b4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4476,
+        "depth": 12
+      }
+    },
+    {
+      "fen": "8/3k4/5P2/8/8/3K4/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d7e8": 0,
+        "d7d8": 0,
+        "d7c8": -2,
+        "d7c7": -2,
+        "d7e6": 0,
+        "d7d6": 0,
+        "d7c6": -2
+      },
+      "candidate": {
+        "move": "d7d6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4354,
+        "depth": 11
+      },
+      "baseline": {
+        "move": "d7e6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4553,
+        "depth": 12
+      }
+    },
+    {
+      "fen": "8/7p/8/8/8/7K/8/k7 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "h3h4": 0,
+        "h3g4": 0,
+        "h3g3": 0,
+        "h3h2": 0,
+        "h3g2": 0
+      },
+      "candidate": {
+        "move": "h3h4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3945,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "h3g4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4841,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "8/8/3k4/8/8/1P1K4/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d6e7": -2,
+        "d6d7": 0,
+        "d6c7": 0,
+        "d6e6": -2,
+        "d6c6": -2,
+        "d6e5": -2,
+        "d6d5": 0,
+        "d6c5": 0
+      },
+      "candidate": {
+        "move": "d6c5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3036,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "d6c5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3516,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/3K4/1p6/8/8/3k4/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d6e7": -2,
+        "d6d7": -2,
+        "d6c7": -2,
+        "d6e6": -2,
+        "d6c6": -2,
+        "d6e5": -2,
+        "d6d5": -2,
+        "d6c5": 0
+      },
+      "candidate": {
+        "move": "d6c5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4340,
+        "depth": 12
+      },
+      "baseline": {
+        "move": "d6c5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4937,
+        "depth": 11
+      }
+    },
+    {
+      "fen": "8/K7/5k2/8/8/8/6P1/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "f6g7": 0,
+        "f6f7": 0,
+        "f6e7": 0,
+        "f6g6": 0,
+        "f6e6": 0,
+        "f6g5": 0,
+        "f6f5": 0,
+        "f6e5": 0
+      },
+      "candidate": {
+        "move": "f6e6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4689,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "f6f5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4320,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/6k1/4p3/8/6K1/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "g3h4": -2,
+        "g3g4": 0,
+        "g3h3": -2,
+        "g3f3": 0,
+        "g3h2": -2,
+        "g3g2": 0,
+        "g3f2": 0
+      },
+      "candidate": {
+        "move": "g3g4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3618,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "g3g4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3197,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/8/8/P5K1/k7/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "a2b3": 0,
+        "a2a3": 0,
+        "a2b2": -2,
+        "a2b1": -2,
+        "a2a1": -2
+      },
+      "candidate": {
+        "move": "a2a3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4380,
+        "depth": 15
+      },
+      "baseline": {
+        "move": "a2a3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4496,
+        "depth": 15
+      }
+    },
+    {
+      "fen": "5k2/8/3p4/8/8/7K/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "h3h4": -2,
+        "h3g4": 0,
+        "h3g3": 0,
+        "h3h2": -2,
+        "h3g2": 0
+      },
+      "candidate": {
+        "move": "h3g3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3615,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "h3g4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4945,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/3k4/8/4K3/5P2/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d5e6": -2,
+        "d5d6": -2,
+        "d5c6": -2,
+        "d5e5": 0,
+        "d5c5": -2,
+        "d5c4": -2
+      },
+      "candidate": {
+        "move": "d5e5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4192,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "d5e5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4762,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/8/2k5/8/7p/5K2 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "f1g2": 0,
+        "f1f2": -2,
+        "f1e2": -2,
+        "f1e1": -2
+      },
+      "candidate": {
+        "move": "f1g2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4919,
+        "depth": 47
+      },
+      "baseline": {
+        "move": "f1g2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4698,
+        "depth": 46
+      }
+    },
+    {
+      "fen": "8/2K5/8/8/8/3Pk3/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e3f4": 0,
+        "e3d4": 0,
+        "e3f3": 0,
+        "e3d3": 0,
+        "e3f2": -2,
+        "e3e2": -2,
+        "e3d2": -2
+      },
+      "candidate": {
+        "move": "e3d3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3466,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "e3d3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4809,
+        "depth": 11
+      }
+    },
+    {
+      "fen": "8/K7/3p4/8/k7/8/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "a7b8": -2,
+        "a7a8": -2,
+        "a7b7": -2,
+        "a7b6": 0,
+        "a7a6": -2
+      },
+      "candidate": {
+        "move": "a7b6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4762,
+        "depth": 12
+      },
+      "baseline": {
+        "move": "a7b6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4424,
+        "depth": 11
+      }
+    },
+    {
+      "fen": "8/7K/8/8/8/3k1P2/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d3d4": 0,
+        "d3c4": -2,
+        "d3e3": 0,
+        "d3c3": -2,
+        "d3e2": -2,
+        "d3d2": -2,
+        "d3c2": -2
+      },
+      "candidate": {
+        "move": "d3e3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4469,
+        "depth": 12
+      },
+      "baseline": {
+        "move": "d3e3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3620,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "1k6/8/8/8/8/8/2K1p3/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c2d3": -2,
+        "c2c3": -2,
+        "c2b3": -2,
+        "c2d2": 0,
+        "c2b2": -2,
+        "c2c1": -2,
+        "c2b1": -2
+      },
+      "candidate": {
+        "move": "c2d2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4990,
+        "depth": 36
+      },
+      "baseline": {
+        "move": "c2d2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4982,
+        "depth": 36
+      }
+    },
+    {
+      "fen": "8/8/1P6/4k3/8/8/K7/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e5f6": -2,
+        "e5e6": -2,
+        "e5d6": 0,
+        "e5f5": -2,
+        "e5d5": -2,
+        "e5f4": -2,
+        "e5e4": -2,
+        "e5d4": -2
+      },
+      "candidate": {
+        "move": "e5d6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4790,
+        "depth": 16
+      },
+      "baseline": {
+        "move": "e5d6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4700,
+        "depth": 12
+      }
+    },
+    {
+      "fen": "8/8/8/1p6/5k2/8/4K3/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e2d3": 0,
+        "e2f2": 0,
+        "e2d2": 0,
+        "e2f1": -2,
+        "e2e1": -2,
+        "e2d1": 0
+      },
+      "candidate": {
+        "move": "e2d1",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4504,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "e2d3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4622,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/7k/8/1K5P/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "h5h6": 0,
+        "h5g6": 0,
+        "h5g5": 0,
+        "h5h4": 0
+      },
+      "candidate": {
+        "move": "h5h4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4232,
+        "depth": 13
+      },
+      "baseline": {
+        "move": "h5h4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4309,
+        "depth": 11
+      }
+    },
+    {
+      "fen": "1k6/8/8/8/6p1/3K4/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d3e4": 0,
+        "d3d4": 0,
+        "d3c4": -2,
+        "d3e3": 0,
+        "d3c3": -2,
+        "d3e2": 0,
+        "d3d2": 0,
+        "d3c2": -2
+      },
+      "candidate": {
+        "move": "d3d4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4571,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "d3e4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4696,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "8/3k4/8/P7/8/8/4K3/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d7e8": -2,
+        "d7d8": 0,
+        "d7c8": 0,
+        "d7e7": -2,
+        "d7c7": 0,
+        "d7e6": -2,
+        "d7d6": 0,
+        "d7c6": 0
+      },
+      "candidate": {
+        "move": "d7c6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4550,
+        "depth": 11
+      },
+      "baseline": {
+        "move": "d7c6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4969,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "7k/8/2p5/8/8/8/8/4K3 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e1f2": 0,
+        "e1e2": 0,
+        "e1d2": 0,
+        "e1f1": 0,
+        "e1d1": 0
+      },
+      "candidate": {
+        "move": "e1d1",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3236,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "e1d2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4962,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "K7/7k/8/8/8/8/7P/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "h7h8": 0,
+        "h7g8": 0,
+        "h7g7": 0,
+        "h7h6": 0,
+        "h7g6": 0
+      },
+      "candidate": {
+        "move": "h7g6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3314,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "h7g6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4718,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/2k5/8/8/8/8/6p1/7K w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "h1h2": 0,
+        "h1g2": 0,
+        "h1g1": 0
+      },
+      "candidate": {
+        "move": "h1g2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4942,
+        "depth": 40
+      },
+      "baseline": {
+        "move": "h1g2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4666,
+        "depth": 39
+      }
+    },
+    {
+      "fen": "8/8/8/8/P1k5/8/8/7K b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c4d5": 0,
+        "c4c5": 0,
+        "c4d4": 0,
+        "c4b4": 0,
+        "c4d3": -2,
+        "c4c3": -2,
+        "c4b3": -2
+      },
+      "candidate": {
+        "move": "c4b4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4772,
+        "depth": 13
+      },
+      "baseline": {
+        "move": "c4b4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3827,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "8/1k6/p7/8/8/4K3/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e3f4": 0,
+        "e3e4": 0,
+        "e3d4": 0,
+        "e3f3": 0,
+        "e3d3": 0,
+        "e3f2": 0,
+        "e3e2": 0,
+        "e3d2": 0
+      },
+      "candidate": {
+        "move": "e3e2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4289,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "e3d4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4798,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/8/8/4P2k/8/7K/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "h4h5": 0,
+        "h4g5": 0,
+        "h4g4": 0
+      },
+      "candidate": {
+        "move": "h4g4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4860,
+        "depth": 11
+      },
+      "baseline": {
+        "move": "h4g4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4213,
+        "depth": 11
+      }
+    },
+    {
+      "fen": "6k1/8/8/8/8/4K3/4p3/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e3f4": -2,
+        "e3e4": -2,
+        "e3d4": -2,
+        "e3f3": -2,
+        "e3d3": -2,
+        "e3f2": 0,
+        "e3e2": 0,
+        "e3d2": 0
+      },
+      "candidate": {
+        "move": "e3e2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4684,
+        "depth": 32
+      },
+      "baseline": {
+        "move": "e3e2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4702,
+        "depth": 32
+      }
+    },
+    {
+      "fen": "8/8/1k6/3P4/8/8/8/6K1 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "b6c7": 0,
+        "b6b7": 0,
+        "b6a7": 0,
+        "b6a6": 0,
+        "b6c5": 0,
+        "b6b5": 0,
+        "b6a5": 0
+      },
+      "candidate": {
+        "move": "b6a5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3619,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "b6c5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4931,
+        "depth": 13
+      }
+    },
+    {
+      "fen": "8/1k6/1p6/8/2K5/8/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c4d5": -2,
+        "c4b5": 0,
+        "c4d4": -2,
+        "c4b4": 0,
+        "c4d3": -2,
+        "c4c3": 0,
+        "c4b3": 0
+      },
+      "candidate": {
+        "move": "c4b3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4394,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "c4b5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4415,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/6k1/8/4PK2/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "g5h6": -2,
+        "g5g6": -2,
+        "g5f6": -2,
+        "g5h5": -2,
+        "g5f5": 0,
+        "g5h4": -2
+      },
+      "candidate": {
+        "move": "g5f5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4538,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "g5f5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4267,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/8/3k4/5K2/6p1/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "f3g4": -2,
+        "f3f4": -2,
+        "f3g3": -2,
+        "f3g2": 0,
+        "f3f2": 0,
+        "f3e2": -2
+      },
+      "candidate": {
+        "move": "f3g2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4897,
+        "depth": 48
+      },
+      "baseline": {
+        "move": "f3g2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4819,
+        "depth": 47
+      }
+    },
+    {
+      "fen": "8/8/4k3/8/8/8/P6K/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e6f7": 0,
+        "e6e7": 0,
+        "e6d7": 0,
+        "e6f6": 0,
+        "e6d6": 0,
+        "e6f5": 0,
+        "e6e5": 0,
+        "e6d5": 0
+      },
+      "candidate": {
+        "move": "e6f6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4558,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "e6d5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 2951,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/8/2p2K2/8/8/8/k7/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "f6g7": -2,
+        "f6f7": -2,
+        "f6e7": -2,
+        "f6g6": -2,
+        "f6e6": 0,
+        "f6g5": -2,
+        "f6f5": -2,
+        "f6e5": 0
+      },
+      "candidate": {
+        "move": "f6e5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4198,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "f6e5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3999,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "2k5/8/8/8/4P3/8/8/6K1 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c8d8": 0,
+        "c8b8": 0,
+        "c8d7": 0,
+        "c8c7": 0,
+        "c8b7": 0
+      },
+      "candidate": {
+        "move": "c8b7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4993,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "c8d7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4704,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "8/8/8/8/7p/8/3k4/7K w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "h1h2": 0,
+        "h1g2": 0,
+        "h1g1": 0
+      },
+      "candidate": {
+        "move": "h1g1",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4669,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "h1g2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4002,
+        "depth": 11
+      }
+    },
+    {
+      "fen": "8/2K5/8/8/8/4k3/2P5/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e3f4": -2,
+        "e3e4": 0,
+        "e3d4": 0,
+        "e3f3": -2,
+        "e3f2": -2,
+        "e3e2": -2,
+        "e3d2": -2
+      },
+      "candidate": {
+        "move": "e3d4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3940,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "e3d4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4862,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "8/8/1p6/8/8/2K2k2/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c3d4": 0,
+        "c3c4": 0,
+        "c3b4": 0,
+        "c3d3": 0,
+        "c3b3": 0,
+        "c3d2": 0,
+        "c3c2": 0,
+        "c3b2": 0
+      },
+      "candidate": {
+        "move": "c3c4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4322,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "c3c4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4888,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/1K6/4k3/5P2/8/8/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e6f7": 0,
+        "e6e7": 0,
+        "e6d7": 0,
+        "e6f6": 0,
+        "e6d6": 0,
+        "e6f5": 0,
+        "e6e5": 0,
+        "e6d5": 0
+      },
+      "candidate": {
+        "move": "e6f5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3724,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "e6f5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4656,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "8/8/k7/8/6K1/5p2/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "g4h5": -2,
+        "g4g5": -2,
+        "g4f5": -2,
+        "g4h4": -2,
+        "g4f4": -2,
+        "g4h3": 0,
+        "g4g3": 0,
+        "g4f3": 0
+      },
+      "candidate": {
+        "move": "g4f3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4411,
+        "depth": 13
+      },
+      "baseline": {
+        "move": "g4f3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4656,
+        "depth": 22
+      }
+    },
+    {
+      "fen": "2k5/2P5/8/8/8/1K6/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c8d7": 0,
+        "c8c7": 0,
+        "c8b7": 0
+      },
+      "candidate": {
+        "move": "c8c7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4965,
+        "depth": 55
+      },
+      "baseline": {
+        "move": "c8c7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4984,
+        "depth": 54
+      }
+    },
+    {
+      "fen": "k7/p7/8/8/6K1/8/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "g4h5": -2,
+        "g4g5": -2,
+        "g4f5": 0,
+        "g4h4": -2,
+        "g4f4": 0,
+        "g4h3": -2,
+        "g4g3": -2,
+        "g4f3": 0
+      },
+      "candidate": {
+        "move": "g4f3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3550,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "g4g3",
+        "wdl": -2,
+        "preserved": false,
+        "nodes": 3685,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/K7/8/8/8/7P/5k2/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "f2g3": 0,
+        "f2f3": 0,
+        "f2e3": 0,
+        "f2g2": -2,
+        "f2e2": -2,
+        "f2g1": -2,
+        "f2f1": -2,
+        "f2e1": -2
+      },
+      "candidate": {
+        "move": "f2e3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3621,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "f2g3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4503,
+        "depth": 11
+      }
+    },
+    {
+      "fen": "8/4p3/5K2/8/8/3k4/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "f6g7": -2,
+        "f6f7": -2,
+        "f6e7": 0,
+        "f6g6": -2,
+        "f6e6": 0,
+        "f6g5": -2,
+        "f6f5": 0,
+        "f6e5": 0
+      },
+      "candidate": {
+        "move": "f6e7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4286,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "f6e7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3586,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/3k4/P7/8/8/8/4K3 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d6e7": -2,
+        "d6d7": 0,
+        "d6c7": 0,
+        "d6e6": -2,
+        "d6c6": 0,
+        "d6e5": -2,
+        "d6d5": 0,
+        "d6c5": 0
+      },
+      "candidate": {
+        "move": "d6c5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4275,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "d6c6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4657,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "7k/8/8/8/2p5/4K3/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e3f4": 0,
+        "e3e4": 0,
+        "e3d4": 0,
+        "e3f3": 0,
+        "e3f2": 0,
+        "e3e2": 0,
+        "e3d2": 0
+      },
+      "candidate": {
+        "move": "e3e4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3633,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "e3d4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3901,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "8/8/4k3/8/8/1K6/4P3/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e6f7": -2,
+        "e6e7": -2,
+        "e6d7": -2,
+        "e6f6": 0,
+        "e6d6": 0,
+        "e6f5": 0,
+        "e6e5": 0,
+        "e6d5": 0
+      },
+      "candidate": {
+        "move": "e6e5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4496,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "e6d5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4438,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/7p/6k1/4K3/8/8/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e5e6": -2,
+        "e5d6": -2,
+        "e5d5": -2,
+        "e5f4": 0,
+        "e5e4": 0,
+        "e5d4": 0
+      },
+      "candidate": {
+        "move": "e5e4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4937,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "e5f4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4200,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "5K2/8/8/8/2P5/k7/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "a3b4": 0,
+        "a3a4": 0,
+        "a3b3": -2,
+        "a3b2": -2,
+        "a3a2": -2
+      },
+      "candidate": {
+        "move": "a3a4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4466,
+        "depth": 14
+      },
+      "baseline": {
+        "move": "a3b4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4940,
+        "depth": 16
+      }
+    },
+    {
+      "fen": "8/8/p7/2k5/8/8/3K4/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d2e3": 0,
+        "d2d3": 0,
+        "d2c3": 0,
+        "d2e2": 0,
+        "d2c2": 0,
+        "d2e1": 0,
+        "d2d1": 0,
+        "d2c1": 0
+      },
+      "candidate": {
+        "move": "d2e1",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 2987,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "d2c2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3405,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/3k1P2/8/8/8/5K2/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d7d8": -2,
+        "d7c8": -2,
+        "d7e7": 0,
+        "d7c7": -2,
+        "d7e6": -2,
+        "d7d6": -2,
+        "d7c6": -2
+      },
+      "candidate": {
+        "move": "d7e7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4797,
+        "depth": 32
+      },
+      "baseline": {
+        "move": "d7e7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4899,
+        "depth": 32
+      }
+    },
+    {
+      "fen": "8/8/8/2K4p/8/8/3k4/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c5d6": -2,
+        "c5c6": -2,
+        "c5b6": -2,
+        "c5d5": -2,
+        "c5b5": -2,
+        "c5d4": 0,
+        "c5c4": -2,
+        "c5b4": -2
+      },
+      "candidate": {
+        "move": "c5d4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3688,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "c5d4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4463,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/8/8/8/8/1P1k1K2/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d3d4": 0,
+        "d3c3": 0,
+        "d3d2": -2,
+        "d3c2": -2
+      },
+      "candidate": {
+        "move": "d3c3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4174,
+        "depth": 12
+      },
+      "baseline": {
+        "move": "d3c3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3772,
+        "depth": 11
+      }
+    },
+    {
+      "fen": "8/8/3p4/8/2K5/8/8/7k w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c4d5": 0,
+        "c4b5": 0,
+        "c4d4": 0,
+        "c4b4": 0,
+        "c4d3": 0,
+        "c4c3": 0,
+        "c4b3": 0
+      },
+      "candidate": {
+        "move": "c4c3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3663,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "c4d5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3674,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/4k3/8/8/5P2/8/5K2 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e6f7": 0,
+        "e6e7": 0,
+        "e6d7": 0,
+        "e6f6": 0,
+        "e6d6": 0,
+        "e6f5": 0,
+        "e6e5": 0,
+        "e6d5": 0
+      },
+      "candidate": {
+        "move": "e6e5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4813,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "e6e5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3976,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/4k3/8/6p1/5K2/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "f2g3": 0,
+        "f2f3": 0,
+        "f2e3": 0,
+        "f2g2": 0,
+        "f2e2": -2,
+        "f2g1": 0,
+        "f2f1": 0,
+        "f2e1": -2
+      },
+      "candidate": {
+        "move": "f2g3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4670,
+        "depth": 12
+      },
+      "baseline": {
+        "move": "f2g3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4731,
+        "depth": 11
+      }
+    },
+    {
+      "fen": "8/4k3/8/8/3K4/1P6/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e7f8": -2,
+        "e7e8": -2,
+        "e7d8": -2,
+        "e7f7": -2,
+        "e7d7": -2,
+        "e7f6": -2,
+        "e7e6": -2,
+        "e7d6": 0
+      },
+      "candidate": {
+        "move": "e7d6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3957,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "e7d6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4071,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/1k6/p3K3/8/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e4f5": -2,
+        "e4e5": -2,
+        "e4d5": -2,
+        "e4f4": -2,
+        "e4d4": -2,
+        "e4f3": -2,
+        "e4e3": -2,
+        "e4d3": 0
+      },
+      "candidate": {
+        "move": "e4d3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4392,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "e4d3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4976,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "2K5/8/8/8/2k5/8/6P1/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c4d5": 0,
+        "c4c5": 0,
+        "c4b5": -2,
+        "c4d4": 0,
+        "c4b4": -2,
+        "c4d3": 0,
+        "c4c3": 0,
+        "c4b3": -2
+      },
+      "candidate": {
+        "move": "c4c3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3055,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "c4d4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3007,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/8/1k6/7p/8/8/8/3K4 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d1e2": 0,
+        "d1d2": 0,
+        "d1c2": -2,
+        "d1e1": 0,
+        "d1c1": -2
+      },
+      "candidate": {
+        "move": "d1d2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4759,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "d1e1",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 1854,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "8/8/5k2/8/1P6/4K3/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "f6g7": -2,
+        "f6f7": -2,
+        "f6e7": 0,
+        "f6g6": -2,
+        "f6e6": 0,
+        "f6g5": -2,
+        "f6f5": -2,
+        "f6e5": 0
+      },
+      "candidate": {
+        "move": "f6e5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4285,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "f6e5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4195,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/1p6/2K5/8/6k1/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c5d6": 0,
+        "c5c6": 0,
+        "c5b6": 0,
+        "c5d5": 0,
+        "c5b5": 0,
+        "c5d4": 0,
+        "c5c4": 0,
+        "c5b4": 0
+      },
+      "candidate": {
+        "move": "c5b6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3781,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "c5b6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4812,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "8/8/4P3/2k5/8/8/8/2K5 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c5d6": 0,
+        "c5c6": 0,
+        "c5b6": -2,
+        "c5d5": -2,
+        "c5b5": -2,
+        "c5d4": -2,
+        "c5c4": -2,
+        "c5b4": -2
+      },
+      "candidate": {
+        "move": "c5c6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4779,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "c5d6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4933,
+        "depth": 13
+      }
+    },
+    {
+      "fen": "8/8/6p1/8/8/1k6/8/2K5 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c1d2": 0,
+        "c1d1": 0,
+        "c1b1": -2
+      },
+      "candidate": {
+        "move": "c1d2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4853,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "c1d2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 1118,
+        "depth": 7
+      }
+    },
+    {
+      "fen": "6K1/8/8/8/8/P7/4k3/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e2f3": 0,
+        "e2e3": 0,
+        "e2d3": 0,
+        "e2f2": -2,
+        "e2d2": -2,
+        "e2f1": -2,
+        "e2e1": -2,
+        "e2d1": -2
+      },
+      "candidate": {
+        "move": "e2d3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3675,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "e2d3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4789,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/3k4/8/8/1p6/8/8/3K4 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d1e2": 0,
+        "d1d2": 0,
+        "d1c2": 0,
+        "d1e1": 0,
+        "d1c1": 0
+      },
+      "candidate": {
+        "move": "d1e1",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4041,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "d1d2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4451,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/5k2/8/7P/8/4K3 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "f5g6": 0,
+        "f5f6": 0,
+        "f5e6": 0,
+        "f5g5": 0,
+        "f5e5": 0,
+        "f5f4": 0,
+        "f5e4": 0
+      },
+      "candidate": {
+        "move": "f5e4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3767,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "f5g5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4670,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "2k5/8/6p1/8/7K/8/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "h4g5": 0,
+        "h4g4": 0,
+        "h4h3": 0,
+        "h4g3": 0
+      },
+      "candidate": {
+        "move": "h4g3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4327,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "h4g5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3355,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "k7/8/8/1K6/8/P7/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "a8b8": 0,
+        "a8b7": 0,
+        "a8a7": 0
+      },
+      "candidate": {
+        "move": "a8a7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3643,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "a8b7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4337,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "8/8/8/1K6/1p6/8/8/5k2 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "b5c6": -2,
+        "b5b6": -2,
+        "b5a6": -2,
+        "b5c5": -2,
+        "b5a5": -2,
+        "b5c4": 0,
+        "b5b4": 0,
+        "b5a4": 0
+      },
+      "candidate": {
+        "move": "b5b4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4944,
+        "depth": 17
+      },
+      "baseline": {
+        "move": "b5b4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4976,
+        "depth": 17
+      }
+    },
+    {
+      "fen": "8/2k5/8/8/8/6P1/K7/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c7d8": 0,
+        "c7c8": 0,
+        "c7b8": 0,
+        "c7d7": 0,
+        "c7b7": 0,
+        "c7d6": 0,
+        "c7c6": 0,
+        "c7b6": 0
+      },
+      "candidate": {
+        "move": "c7d7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3601,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "c7d6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4671,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "5k2/8/5p2/8/8/8/4K3/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e2f3": 0,
+        "e2e3": 0,
+        "e2d3": 0,
+        "e2f2": 0,
+        "e2d2": 0,
+        "e2f1": 0,
+        "e2e1": 0,
+        "e2d1": 0
+      },
+      "candidate": {
+        "move": "e2d1",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3897,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "e2f3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4667,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "k6K/8/8/8/8/8/2P5/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "a8b8": 0,
+        "a8b7": 0,
+        "a8a7": 0
+      },
+      "candidate": {
+        "move": "a8b8",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 2969,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "a8b7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4191,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/6k1/1p6/8/8/3K4 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d1e2": 0,
+        "d1d2": 0,
+        "d1c2": 0,
+        "d1e1": 0,
+        "d1c1": 0
+      },
+      "candidate": {
+        "move": "d1e1",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4177,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "d1c2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4838,
+        "depth": 11
+      }
+    },
+    {
+      "fen": "8/8/6P1/7k/8/8/8/5K2 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "h5h6": 0,
+        "h5g6": 0,
+        "h5g5": -2,
+        "h5h4": -2,
+        "h5g4": -2
+      },
+      "candidate": {
+        "move": "h5g6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4926,
+        "depth": 30
+      },
+      "baseline": {
+        "move": "h5g6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4694,
+        "depth": 14
+      }
+    },
+    {
+      "fen": "8/1k6/8/5p2/8/8/8/2K5 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c1d2": 0,
+        "c1c2": 0,
+        "c1b2": 0,
+        "c1d1": 0,
+        "c1b1": 0
+      },
+      "candidate": {
+        "move": "c1b1",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3698,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "c1d2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4859,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/6k1/8/8/3P2K1/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "g5h6": -2,
+        "g5g6": 0,
+        "g5f6": 0,
+        "g5h5": -2,
+        "g5f5": -2,
+        "g5h4": -2,
+        "g5g4": 0,
+        "g5f4": 0
+      },
+      "candidate": {
+        "move": "g5g4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3851,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "g5f4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3616,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "K7/p7/8/2k5/8/8/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "a8b8": -2,
+        "a8b7": -2,
+        "a8a7": 0
+      },
+      "candidate": {
+        "move": "a8a7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4343,
+        "depth": 16
+      },
+      "baseline": {
+        "move": "a8a7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3938,
+        "depth": 15
+      }
+    },
+    {
+      "fen": "5K2/8/1k6/8/8/8/4P3/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "b6c7": -2,
+        "b6b7": -2,
+        "b6a7": -2,
+        "b6c6": 0,
+        "b6a6": -2,
+        "b6c5": 0,
+        "b6b5": 0,
+        "b6a5": -2
+      },
+      "candidate": {
+        "move": "b6c5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3815,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "b6c5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4352,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/5p2/k7/6K1/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "g3h4": 0,
+        "g3f4": 0,
+        "g3h3": 0,
+        "g3f3": 0,
+        "g3h2": 0,
+        "g3g2": 0,
+        "g3f2": 0
+      },
+      "candidate": {
+        "move": "g3f3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3553,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "g3f4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3352,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/1K6/8/k7/8/1P6/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "a5b5": 0,
+        "a5b4": 0
+      },
+      "candidate": {
+        "move": "a5b5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4718,
+        "depth": 14
+      },
+      "baseline": {
+        "move": "a5b4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4142,
+        "depth": 12
+      }
+    },
+    {
+      "fen": "8/3p4/6k1/8/8/8/5K2/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "f2g3": -2,
+        "f2f3": -2,
+        "f2e3": 0,
+        "f2g2": -2,
+        "f2e2": -2,
+        "f2g1": -2,
+        "f2f1": -2,
+        "f2e1": -2
+      },
+      "candidate": {
+        "move": "f2e3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4675,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "f2e3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3117,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "K7/8/4k3/8/7P/8/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e6f7": 0,
+        "e6e7": 0,
+        "e6d7": 0,
+        "e6f6": 0,
+        "e6d6": 0,
+        "e6f5": 0,
+        "e6e5": 0,
+        "e6d5": 0
+      },
+      "candidate": {
+        "move": "e6d5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4920,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "e6f5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3475,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/5p2/8/7K/8/8/8/7k w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "h5h6": 0,
+        "h5g5": 0,
+        "h5h4": 0,
+        "h5g4": 0
+      },
+      "candidate": {
+        "move": "h5h6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3665,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "h5g5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4104,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "8/8/8/8/8/2k5/3P2K1/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c3d4": 0,
+        "c3c4": 0,
+        "c3b4": -2,
+        "c3d3": 0,
+        "c3b3": -2,
+        "c3d2": 0,
+        "c3c2": -2,
+        "c3b2": -2
+      },
+      "candidate": {
+        "move": "c3d2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4764,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "c3d2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4224,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/8/8/1Kp5/8/8/8/6k1 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "b5c6": -2,
+        "b5b6": -2,
+        "b5a6": -2,
+        "b5c5": 0,
+        "b5a5": 0,
+        "b5c4": 0,
+        "b5a4": 0
+      },
+      "candidate": {
+        "move": "b5c5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4395,
+        "depth": 12
+      },
+      "baseline": {
+        "move": "b5c5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4462,
+        "depth": 12
+      }
+    },
+    {
+      "fen": "8/8/8/4P3/3k4/8/6K1/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d4e5": 0,
+        "d4d5": 0,
+        "d4c5": 0,
+        "d4e4": -2,
+        "d4c4": -2,
+        "d4e3": -2,
+        "d4d3": -2,
+        "d4c3": -2
+      },
+      "candidate": {
+        "move": "d4e5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4800,
+        "depth": 12
+      },
+      "baseline": {
+        "move": "d4e5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4618,
+        "depth": 12
+      }
+    },
+    {
+      "fen": "8/6K1/5p2/8/2k5/8/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "g7h8": -2,
+        "g7g8": -2,
+        "g7f8": -2,
+        "g7h7": -2,
+        "g7f7": -2,
+        "g7h6": -2,
+        "g7g6": 0,
+        "g7f6": 0
+      },
+      "candidate": {
+        "move": "g7f6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4310,
+        "depth": 12
+      },
+      "baseline": {
+        "move": "g7f6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3871,
+        "depth": 12
+      }
+    },
+    {
+      "fen": "3K4/kP6/8/8/8/8/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "a7b8": 0,
+        "a7b7": 0,
+        "a7b6": -2,
+        "a7a6": -2
+      },
+      "candidate": {
+        "move": "a7b7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4983,
+        "depth": 54
+      },
+      "baseline": {
+        "move": "a7b7",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4540,
+        "depth": 52
+      }
+    },
+    {
+      "fen": "6k1/8/1pK5/8/8/8/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c6d7": -2,
+        "c6c7": -2,
+        "c6b7": -2,
+        "c6d6": 0,
+        "c6b6": 0,
+        "c6d5": 0,
+        "c6b5": 0
+      },
+      "candidate": {
+        "move": "c6b6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4937,
+        "depth": 11
+      },
+      "baseline": {
+        "move": "c6b6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3429,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "8/8/8/8/5k2/3K1P2/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "f4g5": -2,
+        "f4f5": 0,
+        "f4e5": 0,
+        "f4g3": -2,
+        "f4f3": 0
+      },
+      "candidate": {
+        "move": "f4f3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3985,
+        "depth": 11
+      },
+      "baseline": {
+        "move": "f4f3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4374,
+        "depth": 11
+      }
+    },
+    {
+      "fen": "8/8/3K4/5p2/8/8/2k5/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d6e7": -2,
+        "d6d7": -2,
+        "d6c7": -2,
+        "d6e6": -2,
+        "d6c6": -2,
+        "d6e5": 0,
+        "d6d5": 0,
+        "d6c5": -2
+      },
+      "candidate": {
+        "move": "d6d5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4833,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "d6e5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4143,
+        "depth": 10
+      }
+    },
+    {
+      "fen": "8/2k1K3/8/8/1P6/8/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c7c8": 0,
+        "c7b8": 0,
+        "c7b7": 0,
+        "c7c6": 0,
+        "c7b6": 0
+      },
+      "candidate": {
+        "move": "c7b6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3999,
+        "depth": 11
+      },
+      "baseline": {
+        "move": "c7c6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4541,
+        "depth": 11
+      }
+    },
+    {
+      "fen": "8/3p2k1/8/8/1K6/8/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "b4c5": 0,
+        "b4b5": -2,
+        "b4a5": -2,
+        "b4c4": 0,
+        "b4a4": -2,
+        "b4c3": 0,
+        "b4b3": -2,
+        "b4a3": -2
+      },
+      "candidate": {
+        "move": "b4c3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3208,
+        "depth": 8
+      },
+      "baseline": {
+        "move": "b4c5",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4807,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "8/3K4/7P/7k/8/8/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "h5h6": 0,
+        "h5g6": 0,
+        "h5g5": -2,
+        "h5h4": -2,
+        "h5g4": -2
+      },
+      "candidate": {
+        "move": "h5h6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4649,
+        "depth": 26
+      },
+      "baseline": {
+        "move": "h5h6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4651,
+        "depth": 26
+      }
+    },
+    {
+      "fen": "8/5k2/8/8/8/2K2p2/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "c3d4": -2,
+        "c3c4": -2,
+        "c3b4": -2,
+        "c3d3": 0,
+        "c3b3": -2,
+        "c3d2": 0,
+        "c3c2": -2,
+        "c3b2": -2
+      },
+      "candidate": {
+        "move": "c3d2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4858,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "c3d2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4898,
+        "depth": 11
+      }
+    },
+    {
+      "fen": "8/8/1P6/1k6/8/8/8/2K5 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "b5c6": 0,
+        "b5b6": 0,
+        "b5a6": 0,
+        "b5c5": -2,
+        "b5a5": -2,
+        "b5c4": -2,
+        "b5b4": -2,
+        "b5a4": -2
+      },
+      "candidate": {
+        "move": "b5b6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4870,
+        "depth": 23
+      },
+      "baseline": {
+        "move": "b5b6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4870,
+        "depth": 23
+      }
+    },
+    {
+      "fen": "2k5/8/1p6/8/4K3/8/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e4f5": -2,
+        "e4e5": -2,
+        "e4d5": 0,
+        "e4f4": -2,
+        "e4d4": 0,
+        "e4f3": -2,
+        "e4e3": -2,
+        "e4d3": 0
+      },
+      "candidate": {
+        "move": "e4d4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4791,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "e4d4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3986,
+        "depth": 8
+      }
+    },
+    {
+      "fen": "8/8/6P1/4k3/8/5K2/8/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "e5f6": 0,
+        "e5e6": 0,
+        "e5d6": -2,
+        "e5f5": -2,
+        "e5d5": -2,
+        "e5d4": -2
+      },
+      "candidate": {
+        "move": "e5e6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3541,
+        "depth": 9
+      },
+      "baseline": {
+        "move": "e5f6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4733,
+        "depth": 17
+      }
+    },
+    {
+      "fen": "8/8/8/8/1k2p3/8/5K2/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "f2g3": -2,
+        "f2e3": 0,
+        "f2g2": -2,
+        "f2e2": 0,
+        "f2g1": -2,
+        "f2f1": 0,
+        "f2e1": 0
+      },
+      "candidate": {
+        "move": "f2f1",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4584,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "f2e3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4305,
+        "depth": 12
+      }
+    },
+    {
+      "fen": "3K4/8/8/8/8/8/2P5/1k6 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "b1c2": 0,
+        "b1b2": -2,
+        "b1a2": -2,
+        "b1c1": -2,
+        "b1a1": -2
+      },
+      "candidate": {
+        "move": "b1c2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4628,
+        "depth": 15
+      },
+      "baseline": {
+        "move": "b1c2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4710,
+        "depth": 15
+      }
+    },
+    {
+      "fen": "8/3k4/8/8/8/8/1p1K4/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "d2e3": -2,
+        "d2d3": -2,
+        "d2c3": -2,
+        "d2e2": -2,
+        "d2c2": 0,
+        "d2e1": -2,
+        "d2d1": -2
+      },
+      "candidate": {
+        "move": "d2c2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4918,
+        "depth": 32
+      },
+      "baseline": {
+        "move": "d2c2",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4821,
+        "depth": 32
+      }
+    },
+    {
+      "fen": "8/5K2/8/8/7k/8/4P3/8 b - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "h4h5": -2,
+        "h4g5": 0,
+        "h4g4": 0,
+        "h4h3": -2,
+        "h4g3": 0
+      },
+      "candidate": {
+        "move": "h4g3",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4074,
+        "depth": 11
+      },
+      "baseline": {
+        "move": "h4g4",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 3884,
+        "depth": 9
+      }
+    },
+    {
+      "fen": "3k4/1K6/7p/8/8/8/8/8 w - - 0 1",
+      "stratum": "defender_draw",
+      "root_wdl": 0,
+      "best_wdl": 0,
+      "legal_move_wdl": {
+        "b7b8": -2,
+        "b7a8": -2,
+        "b7a7": -2,
+        "b7c6": 0,
+        "b7b6": -2,
+        "b7a6": -2
+      },
+      "candidate": {
+        "move": "b7c6",
+        "wdl": 0,
+        "preserved": true,
+        "nodes": 4823,
+        "depth": 10
+      },
+      "baseline": {
+        "move": "b7b6",
+        "wdl": -2,
+        "preserved": false,
+        "nodes": 2382,
+        "depth": 8
+      }
+    }
+  ],
+  "seconds": 1.803,
+  "interpretation": "Fresh-clock, history-free KPK move-choice regression. WDL preservation is not conversion speed or general playing strength."
+}

@@ -1,0 +1,54 @@
+{
+  "timestamp_utc": "2026-10-04T11:35:02.152743+00:00",
+  "engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\geometric-threats-dev\\Aster.exe",
+  "binary_sha256": "f6fbc1645a701036b0b05d4b1ca70be13b84706e4e308bfe41600cb86d9fab6a",
+  "requested_depth": 7,
+  "positions": [
+    {
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "bestmove": "b1c3",
+      "Score": 32,
+      "Depth": 7,
+      "Nodes": 20183,
+      "Milliseconds": 42
+    },
+    {
+      "fen": "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1",
+      "bestmove": "d5e6",
+      "Score": -49,
+      "Depth": 7,
+      "Nodes": 80945,
+      "Milliseconds": 157
+    },
+    {
+      "fen": "8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - - 0 1",
+      "bestmove": "b4c4",
+      "Score": 64,
+      "Depth": 7,
+      "Nodes": 12467,
+      "Milliseconds": 4
+    },
+    {
+      "fen": "r1bq1rk1/pp2bppp/2n1pn2/2pp4/3P4/2PBPN2/PP1N1PPP/R1BQ1RK1 w - - 0 8",
+      "bestmove": "b2b3",
+      "Score": 6,
+      "Depth": 7,
+      "Nodes": 46290,
+      "Milliseconds": 22
+    },
+    {
+      "fen": "6k1/5ppp/8/8/8/8/5PPP/3Q2K1 w - - 0 1",
+      "bestmove": "d1d8",
+      "Score": 29999,
+      "Depth": 1,
+      "Nodes": 27,
+      "Milliseconds": 0
+    }
+  ],
+  "aggregate": {
+    "totalNodes": 159912,
+    "milliseconds": 255,
+    "nps": 627105
+  },
+  "interpretation": "Fixed-depth engineering benchmark; elapsed times include JIT and are machine-dependent. Not a strength measurement."
+}

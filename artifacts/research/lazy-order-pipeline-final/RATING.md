@@ -1,0 +1,93 @@
+# Current rating and measurement policy
+
+The frozen ordinary **Aster 0.7.4-feature-dev** has a provisional local estimate
+of **2300**, with a **95% opening-family interval of 2265..2335**, on the
+**SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash** scale.
+This is a local reference-setting benchmark. Aster's FIDE, Chess.com, Lichess
+and CCRL ratings remain **unestablished**. The preserved production 0.6.0 and
+experimental proof/conversion scoring builds have not been rated by this run.
+
+The [session record](../artifacts/ratings/session-20261004-calibration-v1.json)
+identifies the exact binary and source, reference engine, options, hardware,
+openings, controls, uncertainty and all six reports. Binary SHA-256:
+`52439f58cf10a4a5dad8d4d48bf9db59db0a3f14b3c1c6216f79182b4a646d9a`.
+The original [plan](../artifacts/research/rating-plan-v1.json) was declared
+before match queries. No playing code changed or package was promoted in
+response to the result.
+
+## The bounded calibration
+
+Five strength settings received 16 color-swapped opening pairs each. These
+160 games selected the setting closest to a 50% score, with ties choosing the
+lower setting. Screening chooses the reference; it does not assign a rating.
+
+| SF19 setting | W | D | L | Screening score |
+| ---: | ---: | ---: | ---: | ---: |
+| 1320 | 31 | 0 | 1 | 96.88% |
+| 1800 | 21 | 7 | 4 | 76.56% |
+| 2300 | 12 | 5 | 15 | 45.31% |
+| 2800 | 0 | 6 | 26 | 9.38% |
+| 3190 | 0 | 5 | 27 | 7.81% |
+
+Independent confirmation used **128 fresh openings**, both colors, against
+the selected 2300 setting: **100 wins, 56 draws and 100 losses**, a **50%**
+score in **256 games**. All **416** screening/confirmation PGNs passed
+independent legal-history and terminal-outcome audits. There were no forfeits
+or unresolved games. The Ryzen 5 7600X host runs Windows 11 with the .NET 8
+runtime. Both engines used one thread, 64 MiB hash and Move Overhead 0;
+the cap was 400 additional plies. Full histories start from standard chess.
+
+The 144 teacher-balanced opening positions were frozen and split before
+Aster queries. Exact positions from development datasets and five previous
+opening suites were excluded. This is a local regression/calibration suite,
+not the broad final held-out pool for a Stockfish-superiority claim.
+
+## Model and uncertainty
+
+The declared local model is
+`R = reference_setting + 400 * log10(score / (1 - score))`.
+At exactly 50%, the estimate equals the reference setting. It does not validate
+the opponent dial's advertised numbers against any public rating pool.
+
+The primary interval resamples the **94 opening families**, defined by the
+first four legal UCI plies, retaining both colors and every pair in each
+sampled family. A secondary interval resamples complete opening pairs. Both
+use 20,000 draws and the declared seed 20261101. The primary score interval
+is **44.92%..55.07%**. Family resampling addresses this opening dependence;
+it does not measure uncertainty in the dial's calibration, hardware effects
+or transfer to different controls and opponents.
+
+All numeric gates pass: complete audited budget, no unresolved confirmation
+games, finite primary interval no wider than 200 local units, and point and
+interval within 1320..3190. Unfinished games would remain in pessimistic and
+optimistic bounds and suppress the point estimate. Zero/one scores would
+remain unbounded rather than being clipped into a fabricated finite rating.
+
+The [Stockfish FAQ](https://official-stockfish.github.io/docs/stockfish-wiki/Stockfish-FAQ.html#the-elo-rating-of-stockfish)
+explains that rating depends on opponents and match conditions. Its
+strength-limited mode deliberately chooses weaker moves. The 2300 setting
+is a development reference, and this result does **not** establish superiority
+over full-strength Stockfish 19. Weak selection has no exposed random seed;
+saved PGNs preserve observed games without promising bitwise replay.
+
+## Reproduce and report
+
+`scripts/run_rating.py` executes the frozen plan and refuses to overwrite an
+existing run. `scripts/analyze_rating.py` validates provenance and applies
+the declared selection, bootstrap and numeric gates; it also refuses to
+overwrite an existing rating record. `scripts/verify_rating_result.py`
+recomputes the saved result without modifying it.
+
+```powershell
+.venv/Scripts/python.exe scripts/verify_rating_result.py
+.venv/Scripts/python.exe scripts/test_rating_analysis.py
+```
+
+Exact scripts, source, binaries, fixtures, reports, PGNs, audits and checks
+are retained in the [experiment manifest](../artifacts/research/rating-experiment-v1-manifest.json).
+Earlier unestablished session records remain intact. At every session end,
+identify the rated version, named scale, control and uncertainty. A future
+engine version needs fresh confirmation; this result cannot be transferred
+automatically. Broaden controls and reference engines before making broader
+rating claims. The main project goal remains improving actual play until
+full-strength Stockfish superiority is supported by controlled evidence.

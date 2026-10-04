@@ -1,0 +1,72 @@
+{
+  "source_files": [
+    {
+      "path": "match.py",
+      "sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8"
+    },
+    {
+      "path": "audit_match.py",
+      "sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6"
+    },
+    {
+      "path": "run_lazy_order.py",
+      "sha256": "29496dd36dcea59881901c2e200c0f4a39862af3432b7ded9d9331464ec82f77"
+    },
+    {
+      "path": "assess_lazy_order.py",
+      "sha256": "865e8ef8cc84b5509b80cc4262489dda9dc72b88ef5b1b2e2d48bbbfaa514790"
+    },
+    {
+      "path": "time_lazy_order.py",
+      "sha256": "bf26037376fbd1be9d43bbb5646d688d0977df993645a82fc78b15f6881987b4"
+    },
+    {
+      "path": "verify_lazy_order.py",
+      "sha256": "6bfecf959ec97783d2dff460797fa63810122af7bc866c48d238bf732bebadff"
+    },
+    {
+      "path": "verify_lazy_order_openings.py",
+      "sha256": "2e2337462c032cebbf3baebbb086858c0557342969870e04a71b9f3f2feeb152"
+    },
+    {
+      "path": "split_lazy_order_suite.py",
+      "sha256": "206eb6777b3d10f7850269d1522438fdba76d387726c91203de530adf3cf8808"
+    },
+    {
+      "path": "generate_openings.py",
+      "sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746"
+    },
+    {
+      "path": "audit_openings.py",
+      "sha256": "0c97723cf8a0404f9e3681a90f5d9d09dcfc4978721748222ee80a679a6fca5d"
+    },
+    {
+      "path": "analyze_rating.py",
+      "sha256": "f6fe53073c006e91760b885adab9803f92cd50fa3c3a7ba6ada90f0a8e5b8d13"
+    },
+    {
+      "path": "run_rating.py",
+      "sha256": "6e8a31adefd0aeb5d51eac2f5672396f4518f779947713f86dac138ff00f661a"
+    },
+    {
+      "path": "uci_client.py",
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    },
+    {
+      "path": "tactics.py",
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    },
+    {
+      "path": "compare_search.py",
+      "sha256": "a8162c85b4ea4aae46546ca8a02d4b04c083bf56abb6a28d64f322b2331b6dd9"
+    },
+    {
+      "path": "freeze_engine_source.py",
+      "sha256": "db919e19f9b75ade115a3d834ad48cc57e01a6165130ef03a775279f4c89acb7"
+    }
+  ]
+}

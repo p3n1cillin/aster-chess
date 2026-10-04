@@ -1,0 +1,1288 @@
+{
+  "schema": 1,
+  "positions": [
+    {
+      "id": "endgame-0004",
+      "fen": "8/8/1R2r1k1/3pP1p1/8/7p/1K6/4r3 w - - 0 61",
+      "best_moves": [
+        "b6e6"
+      ],
+      "source_game": 0,
+      "score_gaps_cp": [
+        275,
+        247
+      ],
+      "sample": [
+        {
+          "white_cp": -630,
+          "white_mate": null,
+          "depth": 12,
+          "reported_nodes": 8194,
+          "pv": [
+            "b6e6",
+            "g6f5",
+            "e6e7",
+            "f5g4",
+            "e7h7",
+            "e1e5",
+            "h7a7",
+            "e5e2",
+            "b2c3",
+            "e2e3",
+            "c3d2"
+          ]
+        },
+        {
+          "white_cp": -905,
+          "white_mate": null,
+          "depth": 12,
+          "reported_nodes": 8194,
+          "pv": [
+            "b2b3",
+            "e6b6"
+          ]
+        }
+      ],
+      "verified": [
+        {
+          "white_cp": -632,
+          "white_mate": null,
+          "depth": 14,
+          "reported_nodes": 65611,
+          "pv": [
+            "b6e6",
+            "g6h5",
+            "e6e7",
+            "h5g4",
+            "e7h7",
+            "g4g3",
+            "b2c3"
+          ]
+        },
+        {
+          "white_cp": -879,
+          "white_mate": null,
+          "depth": 14,
+          "reported_nodes": 65611,
+          "pv": [
+            "b6b8",
+            "h3h2",
+            "b8h8",
+            "e1e2",
+            "b2b3",
+            "e6b6",
+            "b3c3",
+            "e2b2",
+            "h8g8",
+            "g6h7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endgame-0033",
+      "fen": "8/8/8/6qk/1p5P/6P1/7K/5R2 w - - 0 49",
+      "best_moves": [
+        "h4g5"
+      ],
+      "source_game": 13,
+      "score_gaps_cp": [
+        1208,
+        1127
+      ],
+      "sample": [
+        {
+          "white_cp": 616,
+          "white_mate": null,
+          "depth": 11,
+          "reported_nodes": 8196,
+          "pv": [
+            "h4g5",
+            "h5g6",
+            "f1b1",
+            "g6g7"
+          ]
+        },
+        {
+          "white_cp": -592,
+          "white_mate": null,
+          "depth": 11,
+          "reported_nodes": 8196,
+          "pv": [
+            "f1f2",
+            "g5a5",
+            "f2d2",
+            "a5b5",
+            "d2d6"
+          ]
+        }
+      ],
+      "verified": [
+        {
+          "white_cp": 687,
+          "white_mate": null,
+          "depth": 15,
+          "reported_nodes": 65556,
+          "pv": [
+            "h4g5",
+            "h5g6",
+            "h2h3",
+            "g6h5",
+            "f1b1",
+            "b4b3",
+            "b1b3",
+            "h5g5",
+            "b3b2",
+            "g5h6",
+            "g3g4",
+            "h6h7",
+            "b2f2",
+            "h7h8"
+          ]
+        },
+        {
+          "white_cp": -440,
+          "white_mate": null,
+          "depth": 15,
+          "reported_nodes": 65556,
+          "pv": [
+            "f1f2",
+            "g5d5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endgame-0064",
+      "fen": "6k1/7R/5Pp1/4r1P1/8/8/4bK2/8 w - - 7 63",
+      "best_moves": [
+        "h7g7"
+      ],
+      "source_game": 26,
+      "score_gaps_cp": [
+        223,
+        191
+      ],
+      "sample": [
+        {
+          "white_cp": 3,
+          "white_mate": null,
+          "depth": 8,
+          "reported_nodes": 8194,
+          "pv": [
+            "h7g7",
+            "g8f8",
+            "g7g6",
+            "e2d1",
+            "g6g7",
+            "e5f5",
+            "f2e3",
+            "d1h5",
+            "g7h7"
+          ]
+        },
+        {
+          "white_cp": -220,
+          "white_mate": null,
+          "depth": 8,
+          "reported_nodes": 8194,
+          "pv": [
+            "h7a7",
+            "e2h5"
+          ]
+        }
+      ],
+      "verified": [
+        {
+          "white_cp": -4,
+          "white_mate": null,
+          "depth": 12,
+          "reported_nodes": 65596,
+          "pv": [
+            "h7g7",
+            "g8f8",
+            "g7g6",
+            "e2h5",
+            "g6h6",
+            "e5g5",
+            "h6h7",
+            "f8e8",
+            "h7h8",
+            "e8f7",
+            "h8h7",
+            "f7g8"
+          ]
+        },
+        {
+          "white_cp": -195,
+          "white_mate": null,
+          "depth": 12,
+          "reported_nodes": 65596,
+          "pv": [
+            "h7a7",
+            "e2h5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endgame-0072",
+      "fen": "2r5/3kN3/5r1p/8/3P4/4P1P1/P4PKP/8 w - - 0 33",
+      "best_moves": [
+        "e7c8"
+      ],
+      "source_game": 30,
+      "score_gaps_cp": [
+        406,
+        403
+      ],
+      "sample": [
+        {
+          "white_cp": -90,
+          "white_mate": null,
+          "depth": 11,
+          "reported_nodes": 8195,
+          "pv": [
+            "e7c8",
+            "d7c8"
+          ]
+        },
+        {
+          "white_cp": -496,
+          "white_mate": null,
+          "depth": 11,
+          "reported_nodes": 8195,
+          "pv": [
+            "e7d5",
+            "f6c6",
+            "d5f4",
+            "c6d6"
+          ]
+        }
+      ],
+      "verified": [
+        {
+          "white_cp": -65,
+          "white_mate": null,
+          "depth": 14,
+          "reported_nodes": 65547,
+          "pv": [
+            "e7c8",
+            "d7c8",
+            "f2f4",
+            "f6a6",
+            "g2f3",
+            "a6a2",
+            "h2h4",
+            "a2h2",
+            "f3g4",
+            "h2g2",
+            "g4f3",
+            "g2g1",
+            "g3g4",
+            "c8d7",
+            "e3e4"
+          ]
+        },
+        {
+          "white_cp": -468,
+          "white_mate": null,
+          "depth": 14,
+          "reported_nodes": 65547,
+          "pv": [
+            "e7d5",
+            "f6c6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endgame-0092",
+      "fen": "8/3n2BN/1p6/3k1p1p/7P/5p2/1P2bK2/8 w - - 0 41",
+      "best_moves": [
+        "h7f6"
+      ],
+      "source_game": 37,
+      "score_gaps_cp": [
+        138,
+        191
+      ],
+      "sample": [
+        {
+          "white_cp": -14,
+          "white_mate": null,
+          "depth": 10,
+          "reported_nodes": 8200,
+          "pv": [
+            "h7f6",
+            "d7f6",
+            "g7f6",
+            "d5c6",
+            "f6d8",
+            "f5f4",
+            "d8e7",
+            "c6d7",
+            "e7f8",
+            "d7e6"
+          ]
+        },
+        {
+          "white_cp": -152,
+          "white_mate": null,
+          "depth": 10,
+          "reported_nodes": 8200,
+          "pv": [
+            "g7c3",
+            "d7c5"
+          ]
+        }
+      ],
+      "verified": [
+        {
+          "white_cp": -1,
+          "white_mate": null,
+          "depth": 12,
+          "reported_nodes": 65589,
+          "pv": [
+            "h7f6",
+            "d7f6",
+            "g7f6",
+            "d5e4"
+          ]
+        },
+        {
+          "white_cp": -192,
+          "white_mate": null,
+          "depth": 12,
+          "reported_nodes": 65589,
+          "pv": [
+            "b2b3",
+            "e2d1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endgame-0098",
+      "fen": "6k1/5p2/8/1p2RN2/6P1/4P2P/6PK/3q4 w - - 0 35",
+      "best_moves": [
+        "e5b5"
+      ],
+      "source_game": 44,
+      "score_gaps_cp": [
+        237,
+        252
+      ],
+      "sample": [
+        {
+          "white_cp": 249,
+          "white_mate": null,
+          "depth": 9,
+          "reported_nodes": 8198,
+          "pv": [
+            "e5b5",
+            "d1a4",
+            "b5b8",
+            "g8h7",
+            "b8b7",
+            "a4e8",
+            "b7b4",
+            "e8c6"
+          ]
+        },
+        {
+          "white_cp": 12,
+          "white_mate": null,
+          "depth": 9,
+          "reported_nodes": 8198,
+          "pv": [
+            "e5e8",
+            "g8h7"
+          ]
+        }
+      ],
+      "verified": [
+        {
+          "white_cp": 252,
+          "white_mate": null,
+          "depth": 14,
+          "reported_nodes": 65578,
+          "pv": [
+            "e5b5",
+            "g8h7"
+          ]
+        },
+        {
+          "white_cp": 0,
+          "white_mate": null,
+          "depth": 14,
+          "reported_nodes": 65578,
+          "pv": [
+            "e5e8",
+            "g8h7",
+            "f5d4",
+            "b5b4",
+            "e8e7",
+            "h7g7",
+            "e7b7",
+            "d1d2",
+            "d4f5",
+            "g7h8",
+            "h3h4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endgame-0126",
+      "fen": "8/5k2/8/3p3p/7p/5PP1/2pK4/2B2b2 w - - 0 49",
+      "best_moves": [
+        "g3h4"
+      ],
+      "source_game": 52,
+      "score_gaps_cp": [
+        291,
+        263
+      ],
+      "sample": [
+        {
+          "white_cp": 0,
+          "white_mate": null,
+          "depth": 10,
+          "reported_nodes": 8194,
+          "pv": [
+            "g3h4",
+            "d5d4",
+            "d2c2",
+            "d4d3",
+            "c2d2",
+            "f1e2",
+            "d2e1",
+            "f7e6"
+          ]
+        },
+        {
+          "white_cp": -291,
+          "white_mate": null,
+          "depth": 10,
+          "reported_nodes": 8194,
+          "pv": [
+            "d2e1",
+            "h4g3",
+            "e1f1",
+            "h5h4",
+            "f1g2",
+            "f7e6",
+            "f3f4",
+            "d5d4",
+            "g2f3"
+          ]
+        }
+      ],
+      "verified": [
+        {
+          "white_cp": -3,
+          "white_mate": null,
+          "depth": 16,
+          "reported_nodes": 65542,
+          "pv": [
+            "g3h4",
+            "f1g2"
+          ]
+        },
+        {
+          "white_cp": -266,
+          "white_mate": null,
+          "depth": 15,
+          "reported_nodes": 65542,
+          "pv": [
+            "d2e1",
+            "h4g3",
+            "e1f1",
+            "h5h4",
+            "f1g2",
+            "f7g6",
+            "f3f4",
+            "g6f5",
+            "g2f3",
+            "d5d4",
+            "c1d2",
+            "f5e6",
+            "d2c1",
+            "e6d6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endgame-0132",
+      "fen": "8/8/3k1p1p/1pp5/P3PKPP/4P3/8/8 w - - 0 39",
+      "best_moves": [
+        "a4b5"
+      ],
+      "source_game": 54,
+      "score_gaps_cp": [
+        310,
+        605
+      ],
+      "sample": [
+        {
+          "white_cp": 319,
+          "white_mate": null,
+          "depth": 10,
+          "reported_nodes": 8195,
+          "pv": [
+            "a4b5",
+            "c5c4",
+            "e4e5",
+            "f6e5",
+            "f4f3",
+            "d6c5",
+            "f3e2",
+            "c5b5",
+            "g4g5",
+            "h6g5",
+            "h4g5"
+          ]
+        },
+        {
+          "white_cp": 9,
+          "white_mate": null,
+          "depth": 10,
+          "reported_nodes": 8195,
+          "pv": [
+            "a4a5",
+            "b5b4"
+          ]
+        }
+      ],
+      "verified": [
+        {
+          "white_cp": 428,
+          "white_mate": null,
+          "depth": 13,
+          "reported_nodes": 65590,
+          "pv": [
+            "a4b5",
+            "c5c4",
+            "f4f3",
+            "d6c5",
+            "e4e5",
+            "f6e5",
+            "f3e2",
+            "c5b5",
+            "g4g5",
+            "h6g5",
+            "h4g5",
+            "b5a4",
+            "g5g6",
+            "c4c3"
+          ]
+        },
+        {
+          "white_cp": -177,
+          "white_mate": null,
+          "depth": 13,
+          "reported_nodes": 65590,
+          "pv": [
+            "e4e5",
+            "f6e5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endgame-0178",
+      "fen": "3k4/8/7b/1p1PppPp/7P/B3K3/8/8 w - - 2 43",
+      "best_moves": [
+        "g5h6"
+      ],
+      "source_game": 66,
+      "score_gaps_cp": [
+        253,
+        144
+      ],
+      "sample": [
+        {
+          "white_cp": 627,
+          "white_mate": null,
+          "depth": 12,
+          "reported_nodes": 8193,
+          "pv": [
+            "g5h6",
+            "d8d7",
+            "e3f2",
+            "b5b4",
+            "a3b4"
+          ]
+        },
+        {
+          "white_cp": 374,
+          "white_mate": null,
+          "depth": 12,
+          "reported_nodes": 8193,
+          "pv": [
+            "a3e7",
+            "d8e7",
+            "g5h6",
+            "f5f4",
+            "e3d2",
+            "e7f7",
+            "d5d6",
+            "b5b4"
+          ]
+        }
+      ],
+      "verified": [
+        {
+          "white_cp": 674,
+          "white_mate": null,
+          "depth": 14,
+          "reported_nodes": 65606,
+          "pv": [
+            "g5h6",
+            "d8c7",
+            "h6h7",
+            "f5f4",
+            "e3f2",
+            "c7b6",
+            "h7h8r",
+            "e5e4",
+            "h8b8",
+            "b6a7"
+          ]
+        },
+        {
+          "white_cp": 530,
+          "white_mate": null,
+          "depth": 14,
+          "reported_nodes": 65606,
+          "pv": [
+            "a3e7",
+            "d8e7",
+            "g5h6",
+            "f5f4",
+            "e3d2",
+            "e7f7",
+            "h6h7",
+            "f7g7",
+            "d5d6",
+            "g7h7",
+            "d6d7",
+            "h7h6",
+            "d7d8q"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endgame-0267",
+      "fen": "8/4k3/3p2p1/p3p2p/PpK5/2P5/7r/1R6 w - - 0 43",
+      "best_moves": [
+        "c3b4"
+      ],
+      "source_game": 96,
+      "score_gaps_cp": [
+        176,
+        149
+      ],
+      "sample": [
+        {
+          "white_cp": -483,
+          "white_mate": null,
+          "depth": 12,
+          "reported_nodes": 8196,
+          "pv": [
+            "c3b4",
+            "h2h4",
+            "c4d5",
+            "h4b4",
+            "b1b4",
+            "a5b4",
+            "a4a5",
+            "e7d7",
+            "a5a6",
+            "d7c7",
+            "a6a7",
+            "c7b7",
+            "a7a8q",
+            "b7a8"
+          ]
+        },
+        {
+          "white_cp": -659,
+          "white_mate": null,
+          "depth": 12,
+          "reported_nodes": 8196,
+          "pv": [
+            "c4b5",
+            "b4c3",
+            "b5a5",
+            "h2d2",
+            "b1c1",
+            "g6g5",
+            "c1c3",
+            "g5g4"
+          ]
+        }
+      ],
+      "verified": [
+        {
+          "white_cp": -506,
+          "white_mate": null,
+          "depth": 16,
+          "reported_nodes": 65570,
+          "pv": [
+            "c3b4",
+            "h2h4",
+            "c4b5",
+            "h4b4",
+            "b1b4",
+            "a5b4",
+            "a4a5",
+            "b4b3",
+            "b5a4",
+            "e7d7",
+            "a5a6",
+            "d7c7",
+            "a4b3",
+            "c7b8",
+            "a6a7",
+            "b8a8"
+          ]
+        },
+        {
+          "white_cp": -655,
+          "white_mate": null,
+          "depth": 16,
+          "reported_nodes": 65570,
+          "pv": [
+            "b1b3",
+            "b4c3",
+            "b3c3",
+            "g6g5",
+            "c4b5",
+            "h2b2",
+            "b5a5",
+            "h5h4",
+            "c3c7",
+            "e7f6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endgame-0298",
+      "fen": "8/8/8/5p1P/1p4P1/2b1k3/6P1/1R5K w - - 0 57",
+      "best_moves": [
+        "g4f5"
+      ],
+      "source_game": 105,
+      "score_gaps_cp": [
+        252,
+        149
+      ],
+      "sample": [
+        {
+          "white_cp": 517,
+          "white_mate": null,
+          "depth": 12,
+          "reported_nodes": 8197,
+          "pv": [
+            "g4f5",
+            "e3f2",
+            "f5f6",
+            "c3f6",
+            "b1b4",
+            "f2g3",
+            "b4b5"
+          ]
+        },
+        {
+          "white_cp": 265,
+          "white_mate": null,
+          "depth": 12,
+          "reported_nodes": 8197,
+          "pv": [
+            "g4g5",
+            "e3f4",
+            "h5h6",
+            "f4g5",
+            "h6h7",
+            "g5g6",
+            "b1b4",
+            "g6h7",
+            "b4b6",
+            "h7g7",
+            "b6c6",
+            "c3e1",
+            "h1g1"
+          ]
+        }
+      ],
+      "verified": [
+        {
+          "white_cp": 572,
+          "white_mate": null,
+          "depth": 16,
+          "reported_nodes": 65616,
+          "pv": [
+            "g4f5",
+            "e3f4",
+            "f5f6",
+            "c3f6",
+            "b1b4",
+            "f4g5",
+            "b4b5",
+            "g5h4",
+            "h5h6",
+            "h4g4",
+            "b5b4",
+            "g4g5",
+            "b4b6"
+          ]
+        },
+        {
+          "white_cp": 423,
+          "white_mate": null,
+          "depth": 16,
+          "reported_nodes": 65616,
+          "pv": [
+            "h1h2",
+            "f5g4",
+            "h2g3",
+            "e3d2",
+            "g3g4",
+            "d2c2",
+            "b1b4",
+            "c3b4",
+            "g4f5",
+            "b4d2",
+            "g2g4",
+            "d2c1",
+            "g4g5",
+            "c1e3",
+            "h5h6",
+            "e3c1",
+            "f5f6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endgame-0312",
+      "fen": "8/6p1/1K2pk1p/8/4p3/1BR1n3/3p1n2/8 w - - 0 51",
+      "best_moves": [
+        "c3e3"
+      ],
+      "source_game": 110,
+      "score_gaps_cp": [
+        174,
+        228
+      ],
+      "sample": [
+        {
+          "white_cp": -436,
+          "white_mate": null,
+          "depth": 11,
+          "reported_nodes": 8200,
+          "pv": [
+            "c3e3",
+            "f6e5",
+            "e3e2",
+            "d2d1q",
+            "b3d1",
+            "f2d1",
+            "b6c6",
+            "d1c3",
+            "e2g2",
+            "e4e3",
+            "g2g7"
+          ]
+        },
+        {
+          "white_cp": -610,
+          "white_mate": null,
+          "depth": 10,
+          "reported_nodes": 8200,
+          "pv": [
+            "c3c8",
+            "f6e5",
+            "b6b5",
+            "e3d5"
+          ]
+        }
+      ],
+      "verified": [
+        {
+          "white_cp": -452,
+          "white_mate": null,
+          "depth": 14,
+          "reported_nodes": 65604,
+          "pv": [
+            "c3e3",
+            "f6e5",
+            "e3e2",
+            "d2d1q",
+            "b3d1",
+            "f2d1",
+            "b6c6",
+            "e5f4",
+            "e2h2",
+            "e4e3"
+          ]
+        },
+        {
+          "white_cp": -680,
+          "white_mate": null,
+          "depth": 14,
+          "reported_nodes": 65604,
+          "pv": [
+            "c3c6",
+            "e3d5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endgame-0349",
+      "fen": "8/8/7p/4p3/2p1P1PP/1k6/3K4/8 w - - 3 45",
+      "best_moves": [
+        "d2c1"
+      ],
+      "source_game": 130,
+      "score_gaps_cp": [
+        520,
+        624
+      ],
+      "sample": [
+        {
+          "white_cp": 524,
+          "white_mate": null,
+          "depth": 10,
+          "reported_nodes": 8199,
+          "pv": [
+            "d2c1",
+            "b3b4",
+            "g4g5",
+            "h6g5",
+            "h4g5",
+            "b4c5",
+            "g5g6",
+            "c5d6"
+          ]
+        },
+        {
+          "white_cp": 4,
+          "white_mate": null,
+          "depth": 10,
+          "reported_nodes": 8199,
+          "pv": [
+            "g4g5",
+            "h6g5",
+            "h4g5",
+            "b3b2",
+            "d2e2",
+            "c4c3",
+            "g5g6",
+            "c3c2",
+            "g6g7",
+            "c2c1q",
+            "g7g8q"
+          ]
+        }
+      ],
+      "verified": [
+        {
+          "white_cp": 624,
+          "white_mate": null,
+          "depth": 18,
+          "reported_nodes": 65663,
+          "pv": [
+            "d2c1",
+            "b3c3",
+            "g4g5",
+            "h6g5",
+            "h4g5",
+            "c3d3",
+            "g5g6",
+            "c4c3",
+            "g6g7",
+            "d3e4",
+            "c1c2",
+            "e4f5",
+            "g7g8q",
+            "f5f6",
+            "g8g4",
+            "f6e7"
+          ]
+        },
+        {
+          "white_cp": 0,
+          "white_mate": null,
+          "depth": 18,
+          "reported_nodes": 65663,
+          "pv": [
+            "g4g5",
+            "h6g5",
+            "h4g5",
+            "b3b2",
+            "g5g6",
+            "c4c3",
+            "d2e2",
+            "c3c2",
+            "g6g7",
+            "c2c1q",
+            "g7g8q",
+            "c1c2",
+            "e2e3",
+            "c2c3",
+            "e3e2",
+            "c3c2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endgame-0380",
+      "fen": "8/8/3k1p1p/1pp5/2P1PKPP/4P3/8/8 w - - 0 39",
+      "best_moves": [
+        "c4b5"
+      ],
+      "source_game": 141,
+      "score_gaps_cp": [
+        330,
+        316
+      ],
+      "sample": [
+        {
+          "white_cp": 343,
+          "white_mate": null,
+          "depth": 9,
+          "reported_nodes": 8205,
+          "pv": [
+            "c4b5",
+            "c5c4",
+            "f4f3",
+            "d6c5",
+            "e4e5",
+            "f6e5"
+          ]
+        },
+        {
+          "white_cp": 13,
+          "white_mate": null,
+          "depth": 9,
+          "reported_nodes": 8205,
+          "pv": [
+            "f4f5",
+            "b5c4"
+          ]
+        }
+      ],
+      "verified": [
+        {
+          "white_cp": 456,
+          "white_mate": null,
+          "depth": 14,
+          "reported_nodes": 65607,
+          "pv": [
+            "c4b5",
+            "c5c4"
+          ]
+        },
+        {
+          "white_cp": 140,
+          "white_mate": null,
+          "depth": 14,
+          "reported_nodes": 65607,
+          "pv": [
+            "f4f5",
+            "b5c4",
+            "e4e5",
+            "d6d7",
+            "f5e4",
+            "c4c3",
+            "e4d3",
+            "c3c2",
+            "d3c2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endgame-0411",
+      "fen": "6k1/8/1R6/3P1p2/5P1P/3nP3/1r1NK3/8 w - - 1 39",
+      "best_moves": [
+        "b6b2"
+      ],
+      "source_game": 151,
+      "score_gaps_cp": [
+        186,
+        227
+      ],
+      "sample": [
+        {
+          "white_cp": 595,
+          "white_mate": null,
+          "depth": 13,
+          "reported_nodes": 8199,
+          "pv": [
+            "b6b2",
+            "d3b2",
+            "h4h5",
+            "b2a4",
+            "e2d3",
+            "a4b6",
+            "d3d4",
+            "b6a8",
+            "d4c4"
+          ]
+        },
+        {
+          "white_cp": 409,
+          "white_mate": null,
+          "depth": 13,
+          "reported_nodes": 8199,
+          "pv": [
+            "b6c6",
+            "d3f2",
+            "e2f2",
+            "b2d2",
+            "f2g3",
+            "d2d5",
+            "c6e6",
+            "d5d3"
+          ]
+        }
+      ],
+      "verified": [
+        {
+          "white_cp": 628,
+          "white_mate": null,
+          "depth": 15,
+          "reported_nodes": 65612,
+          "pv": [
+            "b6b2",
+            "d3b2",
+            "d2f3",
+            "b2c4",
+            "e2d3",
+            "c4d6",
+            "d3d4",
+            "d6e4",
+            "f3e5",
+            "g8g7",
+            "e5c4",
+            "g7h6",
+            "d5d6",
+            "e4f6",
+            "c4e5",
+            "h6h5",
+            "d6d7"
+          ]
+        },
+        {
+          "white_cp": 401,
+          "white_mate": null,
+          "depth": 15,
+          "reported_nodes": 65612,
+          "pv": [
+            "b6c6",
+            "d3f2"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endgame-0425",
+      "fen": "6k1/3N4/7p/p3p2P/2P3P1/1P6/1r4P1/6K1 w - - 7 39",
+      "best_moves": [
+        "d7c5"
+      ],
+      "source_game": 156,
+      "score_gaps_cp": [
+        128,
+        123
+      ],
+      "sample": [
+        {
+          "white_cp": -290,
+          "white_mate": null,
+          "depth": 9,
+          "reported_nodes": 8198,
+          "pv": [
+            "d7c5",
+            "g8f7"
+          ]
+        },
+        {
+          "white_cp": -418,
+          "white_mate": null,
+          "depth": 8,
+          "reported_nodes": 8198,
+          "pv": [
+            "c4c5",
+            "b2b3",
+            "g4g5",
+            "a5a4",
+            "c5c6",
+            "b3c3"
+          ]
+        }
+      ],
+      "verified": [
+        {
+          "white_cp": -336,
+          "white_mate": null,
+          "depth": 13,
+          "reported_nodes": 65555,
+          "pv": [
+            "d7c5",
+            "e5e4",
+            "g1f1",
+            "g8f7",
+            "g4g5",
+            "h6g5",
+            "g2g4",
+            "e4e3",
+            "f1e1",
+            "f7f6",
+            "c5d7",
+            "f6e6",
+            "d7c5",
+            "e6d6",
+            "c5e4",
+            "d6e5",
+            "e4g5",
+            "e5f4"
+          ]
+        },
+        {
+          "white_cp": -459,
+          "white_mate": null,
+          "depth": 13,
+          "reported_nodes": 65555,
+          "pv": [
+            "c4c5",
+            "b2b3"
+          ]
+        }
+      ]
+    }
+  ],
+  "data_sha256": "f07976034c668f3ae636ef96cf584891b1bb1a7cc1648e73d975e837277b29a3",
+  "source": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\endgame-diagnostic-512-v1.jsonl",
+  "teacher": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "source_sha256": "42b3ff7ba72f4f7e5f8fd25f73c4a3fec2b1b3026d1adff1ca0f48984f7cebdf",
+  "selection": "First eligible position per source game; same best move at 8192/65536 nodes, both gaps >=120 cp, finite verified score within +/-1500 cp.",
+  "interpretation": "Fresh bounded teacher-verified endgames; not an optimality proof or final strength test."
+}

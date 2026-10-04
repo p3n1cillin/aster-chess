@@ -1,0 +1,85 @@
+{
+  "note": "Frozen neural-format v3/v4 candidate with SIMD output. Production selection is separate.",
+  "binary": "artifacts/publish/king-context-vector-dev/Aster.exe",
+  "binary_sha256": "efde0c3182c488052d4d754a85afc52e2a06ddcb752948734821a52376e4593e",
+  "sdk": "8.0.425",
+  "build": "dotnet publish src/Engine/Engine.csproj -c Release -r win-x64 --self-contained false -p:PublishSingleFile=true -o artifacts/publish/king-context-vector-dev",
+  "source_files": [
+    {
+      "path": "src/Engine/Attacks.cs",
+      "sha256": "10a2eb8139f9786d5b097d92f3e385a889a24c8940a0d1fade1b1a987a37b9c6"
+    },
+    {
+      "path": "src/Engine/Board.cs",
+      "sha256": "af1db55d63700255db50bd2c5b538d15c7ae1558ba3296a21f0e54bf2bfa16d9"
+    },
+    {
+      "path": "src/Engine/Evaluation.cs",
+      "sha256": "b4a322cd228e6c3d8f3b5abc68587207bfee916366f26cab2958667bdd4b271c"
+    },
+    {
+      "path": "src/Engine/Move.cs",
+      "sha256": "9cee181118dc8dbf01687b7c5210ad81aa07826e70ce7fb9b512b321b69bdc85"
+    },
+    {
+      "path": "src/Engine/NeuralNetwork.cs",
+      "sha256": "aa9e9804138c50162641fe3127ed69e25fba9613e1a76cdabb0af30af7a4d4bb"
+    },
+    {
+      "path": "src/Engine/Perft.cs",
+      "sha256": "7e679e005a22d3cd3e003f6034495d4e62c8fd5ca79b89822c9a7e78b2fd085e"
+    },
+    {
+      "path": "src/Engine/Program.cs",
+      "sha256": "5b36260d3da6ba24c0d2e006db7ab62bae4f45493bc5c0820b966e04ad519551"
+    },
+    {
+      "path": "src/Engine/Search.cs",
+      "sha256": "b894c9bb4ed2b01f4e9e25867b8fe512c1e12d09909806de9fd751460a742739"
+    },
+    {
+      "path": "src/Engine/SearchProfile.cs",
+      "sha256": "6b2b5c1cc5afbdcbabfa69771b84d930131fdcd969403f2da8efe2c8f9659cb3"
+    },
+    {
+      "path": "src/Engine/StaticExchange.cs",
+      "sha256": "36208f3889d346dac33deba7ad7f9e20cd67deeb465c910f2355cbde8fd57af9"
+    },
+    {
+      "path": "src/Engine/TranspositionTable.cs",
+      "sha256": "6b6a3a5581678ebf8c36640f02e1ed27ee9055ed55f1eaa205ab7d38bbf45001"
+    },
+    {
+      "path": "src/Engine/Uci.cs",
+      "sha256": "6acf4b4ecd9bda1738439582f8d4e9c49d3ff23954ec67afc7381bf99c6f7f00"
+    },
+    {
+      "path": "src/Engine/Zobrist.cs",
+      "sha256": "116806963b5b3a5b9bd10c9b988fffd78ce56f7abfa3a2bf716203d42c687ac2"
+    },
+    {
+      "path": "src/Engine/Engine.csproj",
+      "sha256": "911affa57f168995782e24087294835577aca2cb6765334c061f79ef425840ee"
+    },
+    {
+      "path": "Aster.sln",
+      "sha256": "0cce33025d086c048a48c3dcd7543ae1338cf5c518b15060b7cd4b0e5c9864a1"
+    },
+    {
+      "path": "Directory.Build.props",
+      "sha256": "aae19899039dcffcd68ffa855c683877cd6c4d6813d36bd974024a26b219badb"
+    },
+    {
+      "path": "global.json",
+      "sha256": "d8fc1e71d76ffd7f785d4b7abbae953024544b52cf19fc4b8d687b058e594610"
+    },
+    {
+      "path": "tests/Engine.Tests/Program.cs",
+      "sha256": "b22a80c66b432bc5915276107f796773bcb1cabc35538b2b6563da1c025b9acd"
+    },
+    {
+      "path": "tests/Engine.Tests/Engine.Tests.csproj",
+      "sha256": "731df592e64b335e2d2bb5e1aad2c481926ff8c43284e4a81b888cadaf782639"
+    }
+  ]
+}

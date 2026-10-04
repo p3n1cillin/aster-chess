@@ -1,0 +1,41 @@
+PASS perft startpos depth 5
+PASS perft kiwipete depth 4
+PASS perft rook and pawn endgame depth 4
+PASS perft promotions and castling depth 4
+PASS perft promotion checks depth 3
+PASS perft middlegame pins depth 3
+PASS perft depth zero and invalid depth
+PASS all legal moves restore board, hash, evaluation, and bitboards
+PASS random playout incremental state and full undo
+PASS classical evaluation respects color and rank symmetry
+PASS legal-move existence agrees with complete generation and preserves state
+PASS en passant cannot expose horizontal rook check
+PASS en passant hash only when legally available
+PASS castling cannot cross attacked square
+PASS underpromotion notation and undo
+PASS threefold requires three occurrences outside search
+PASS null move preserves history and incremental state
+PASS insufficient material and opposite color bishops
+PASS mate in one and terminal mate
+PASS checkmate takes precedence over rule-50 draw
+PASS stalemate is scored as draw
+PASS wins hanging queen
+PASS search leaves root intact and PV is legal
+PASS node limit returns legal fallback and restores board
+PASS pre-cancelled search and searchmoves fallback
+PASS hard time limit and asynchronous cancellation
+PASS transposition table mate distance and rule-50 key
+PASS horizon cache preserves deeper entries and signed mate distances
+PASS warm search cache preserves terminal rules, history and legal PV
+PASS static exchange handles wins, losses, pins, and promotions
+PASS static exchange is safe on pseudo-legal king moves
+PASS neural accumulator equals independent scalar rebuild across special moves
+PASS king-context neural inference survives bucket changes, undo, and serialization
+PASS neural output accumulation preserves signed-int16 extremes
+PASS neural model serialization and malformed payload rejection
+PASS neural search preserves state and changing evaluator does not change hash
+PASS hybrid evaluation retains classical score and bounds learned correction
+PASS quiescence recognizes a stalemating queen promotion and selects rook
+PASS checkmate at the quiescence horizon beats a new rule-50 claim
+
+39 passed, 0 failed.

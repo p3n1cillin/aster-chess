@@ -1,0 +1,61 @@
+{
+  "score": 0.421875,
+  "resolved_pairs": 32,
+  "unresolved_pairs": 0,
+  "opening_clusters": 32,
+  "exploratory_95_percent_interval": [
+    0.328125,
+    0.515625
+  ],
+  "bootstrap_samples": 10000,
+  "seed": 20261003,
+  "pair_scores": [
+    0.25,
+    0.25,
+    0.5,
+    0.25,
+    0.0,
+    0.0,
+    0.75,
+    0.5,
+    1.0,
+    0.25,
+    0.75,
+    0.25,
+    0.75,
+    0.75,
+    0.75,
+    0.25,
+    0.5,
+    0.5,
+    0.25,
+    0.75,
+    0.5,
+    0.5,
+    0.25,
+    0.25,
+    0.75,
+    0.75,
+    0.25,
+    0.25,
+    0.25,
+    0.5,
+    0.0,
+    0.0
+  ],
+  "interpretation": "Exploratory opening-cluster resampling, not a predeclared final strength test; small cluster counts and repeated openings limit generalization. No Elo is inferred.",
+  "search_diagnostics": {
+    "candidate": {
+      "moves": 3612,
+      "median_completed_depth": 8.0,
+      "total_reported_nodes": 167934394,
+      "median_elapsed_seconds": 0.030775
+    },
+    "opponent": {
+      "moves": 3616,
+      "median_completed_depth": 9.0,
+      "total_reported_nodes": 174967380,
+      "median_elapsed_seconds": 0.030768
+    }
+  }
+}

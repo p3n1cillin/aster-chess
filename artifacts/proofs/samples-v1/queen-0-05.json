@@ -1,0 +1,258 @@
+{
+  "complete": true,
+  "reason": "complete",
+  "summary": "Black can force checkmate within 7 plies. The certificate covers every legal defensive reply in 8 positions; every path ends in checkmate.",
+  "rootFen": "4q3/8/8/8/8/8/3k4/5K2 b - - 0 1",
+  "strongSide": 1,
+  "rootDistance": 7,
+  "nodeLimit": 50000,
+  "nodes": [
+    {
+      "id": 0,
+      "fen": "4q3/8/8/8/8/8/3k4/5K2 b - - 0 1",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "e8e2",
+          "to": 1
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "fen": "8/8/8/8/8/8/3kq3/5K2 w - - 1 2",
+      "distance": 6,
+      "edges": [
+        {
+          "move": "f1g1",
+          "to": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fen": "8/8/8/8/8/8/3kq3/6K1 b - - 2 2",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "d2e1",
+          "to": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fen": "8/8/8/8/8/8/4q3/4k1K1 w - - 3 3",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "g1h1",
+          "to": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fen": "8/8/8/8/8/8/4q3/4k2K b - - 4 3",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "e1f2",
+          "to": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "fen": "8/8/8/8/8/8/4qk2/7K w - - 5 4",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "h1h2",
+          "to": 6
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "fen": "8/8/8/8/8/8/4qk1K/8 b - - 6 4",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "e2h5",
+          "to": 7
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "fen": "8/8/8/7q/8/8/5k1K/8 w - - 7 5",
+      "distance": 0,
+      "edges": []
+    }
+  ],
+  "alternatives": [
+    {
+      "move": "e8e1",
+      "preservesWin": true,
+      "remainingPlies": 8,
+      "reason": "Keeps a win but leaves 8 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e8e2",
+      "preservesWin": true,
+      "remainingPlies": 6,
+      "reason": "Reduces the mate bound from 7 to 6 plies."
+    },
+    {
+      "move": "e8e3",
+      "preservesWin": true,
+      "remainingPlies": 6,
+      "reason": "Reduces the mate bound from 7 to 6 plies."
+    },
+    {
+      "move": "e8a4",
+      "preservesWin": true,
+      "remainingPlies": 8,
+      "reason": "Keeps a win but leaves 8 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e8e4",
+      "preservesWin": true,
+      "remainingPlies": 8,
+      "reason": "Keeps a win but leaves 8 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e8b5",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e8e5",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e8h5",
+      "preservesWin": true,
+      "remainingPlies": 8,
+      "reason": "Keeps a win but leaves 8 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e8c6",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e8e6",
+      "preservesWin": true,
+      "remainingPlies": 8,
+      "reason": "Keeps a win but leaves 8 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e8g6",
+      "preservesWin": true,
+      "remainingPlies": 6,
+      "reason": "Reduces the mate bound from 7 to 6 plies."
+    },
+    {
+      "move": "e8d7",
+      "preservesWin": true,
+      "remainingPlies": 8,
+      "reason": "Keeps a win but leaves 8 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e8e7",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e8f7",
+      "preservesWin": true,
+      "remainingPlies": 8,
+      "reason": "Keeps a win but leaves 8 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e8a8",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e8b8",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e8c8",
+      "preservesWin": true,
+      "remainingPlies": 8,
+      "reason": "Keeps a win but leaves 8 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e8d8",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e8f8",
+      "preservesWin": true,
+      "remainingPlies": 8,
+      "reason": "Keeps a win but leaves 8 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e8g8",
+      "preservesWin": true,
+      "remainingPlies": 6,
+      "reason": "Reduces the mate bound from 7 to 6 plies."
+    },
+    {
+      "move": "e8h8",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d2c1",
+      "preservesWin": true,
+      "remainingPlies": 12,
+      "reason": "Keeps a win but leaves 12 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d2d1",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d2c2",
+      "preservesWin": true,
+      "remainingPlies": 12,
+      "reason": "Keeps a win but leaves 12 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d2c3",
+      "preservesWin": true,
+      "remainingPlies": 12,
+      "reason": "Keeps a win but leaves 12 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d2d3",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "d2e3",
+      "preservesWin": true,
+      "remainingPlies": 6,
+      "reason": "Reduces the mate bound from 7 to 6 plies."
+    }
+  ]
+}

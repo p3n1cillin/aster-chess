@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "suite": "tests\\fixtures\\tactics-quiet-v1.json",
+  "suite_sha256": "3868e2bd596272873251fca177e2a253027cb7bc8dc99b42148cdcb6f86641d9",
+  "positions": 32,
+  "quiet_noncheck_solutions": 32,
+  "canonical_duplicates": 0,
+  "training_or_prior_fixture_overlap": 0,
+  "games_used": 99,
+  "source_sha256": "a8fbbcec4244a1d15bc770051d31e79f429b4c5ee2cec3fe3023832af302a8c8",
+  "teacher": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "interpretation": "Independent structural/exclusion audit; teacher two-budget move stability is a label criterion, not proof of optimality or playing strength."
+}

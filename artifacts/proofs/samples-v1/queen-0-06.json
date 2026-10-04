@@ -1,0 +1,1045 @@
+{
+  "complete": true,
+  "reason": "complete",
+  "summary": "White can force checkmate within 9 plies. The certificate covers every legal defensive reply in 75 positions; every path ends in checkmate.",
+  "rootFen": "8/8/8/8/4K1Q1/k7/8/8 w - - 0 1",
+  "strongSide": 0,
+  "rootDistance": 9,
+  "nodeLimit": 50000,
+  "nodes": [
+    {
+      "id": 0,
+      "fen": "8/8/8/8/4K1Q1/k7/8/8 w - - 0 1",
+      "distance": 9,
+      "edges": [
+        {
+          "move": "g4f3",
+          "to": 1
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "fen": "8/8/8/8/4K3/k4Q2/8/8 b - - 1 1",
+      "distance": 8,
+      "edges": [
+        {
+          "move": "a3a2",
+          "to": 2
+        },
+        {
+          "move": "a3b2",
+          "to": 48
+        },
+        {
+          "move": "a3a4",
+          "to": 57
+        },
+        {
+          "move": "a3b4",
+          "to": 69
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fen": "8/8/8/8/4K3/5Q2/k7/8 w - - 2 2",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "e4d3",
+          "to": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fen": "8/8/8/8/8/3K1Q2/k7/8 b - - 3 2",
+      "distance": 6,
+      "edges": [
+        {
+          "move": "a2a1",
+          "to": 4
+        },
+        {
+          "move": "a2b1",
+          "to": 8
+        },
+        {
+          "move": "a2b2",
+          "to": 16
+        },
+        {
+          "move": "a2a3",
+          "to": 38
+        },
+        {
+          "move": "a2b3",
+          "to": 46
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fen": "8/8/8/8/8/3K1Q2/8/k7 w - - 4 3",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d3c2",
+          "to": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "fen": "8/8/8/8/8/5Q2/2K5/k7 b - - 5 3",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a1a2",
+          "to": 6
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "fen": "8/8/8/8/8/5Q2/k1K5/8 w - - 6 4",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "f3a8",
+          "to": 7
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "fen": "Q7/8/8/8/8/8/k1K5/8 b - - 7 4",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 8,
+      "fen": "8/8/8/8/8/3K1Q2/8/1k6 w - - 4 3",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "f3e2",
+          "to": 9
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "fen": "8/8/8/8/8/3K4/4Q3/1k6 b - - 5 3",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "b1a1",
+          "to": 10
+        },
+        {
+          "move": "b1c1",
+          "to": 14
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "fen": "8/8/8/8/8/3K4/4Q3/k7 w - - 6 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d3c2",
+          "to": 11
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "fen": "8/8/8/8/8/8/2K1Q3/k7 b - - 7 4",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a1a2",
+          "to": 12
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "fen": "8/8/8/8/8/8/k1K1Q3/8 w - - 8 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "e2a6",
+          "to": 13
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "fen": "8/8/Q7/8/8/8/k1K5/8 b - - 9 5",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 14,
+      "fen": "8/8/8/8/8/3K4/4Q3/2k5 w - - 6 4",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "e2c2",
+          "to": 15
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "fen": "8/8/8/8/8/3K4/2Q5/2k5 b - - 7 4",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 16,
+      "fen": "8/8/8/8/8/3K1Q2/1k6/8 w - - 4 3",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "f3b7",
+          "to": 17
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "fen": "8/1Q6/8/8/8/3K4/1k6/8 b - - 5 3",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "b2a1",
+          "to": 18
+        },
+        {
+          "move": "b2c1",
+          "to": 22
+        },
+        {
+          "move": "b2a2",
+          "to": 26
+        },
+        {
+          "move": "b2a3",
+          "to": 32
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "fen": "8/1Q6/8/8/8/3K4/8/k7 w - - 6 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d3c2",
+          "to": 19
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "fen": "8/1Q6/8/8/8/8/2K5/k7 b - - 7 4",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a1a2",
+          "to": 20
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "fen": "8/1Q6/8/8/8/8/k1K5/8 w - - 8 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "b7b2",
+          "to": 21
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "fen": "8/8/8/8/8/8/kQK5/8 b - - 9 5",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 22,
+      "fen": "8/1Q6/8/8/8/3K4/8/2k5 w - - 6 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "b7b4",
+          "to": 23
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "fen": "8/8/8/8/1Q6/3K4/8/2k5 b - - 7 4",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "c1d1",
+          "to": 24
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "fen": "8/8/8/8/1Q6/3K4/8/3k4 w - - 8 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "b4b1",
+          "to": 25
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "fen": "8/8/8/8/8/3K4/8/1Q1k4 b - - 9 5",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 26,
+      "fen": "8/1Q6/8/8/8/3K4/k7/8 w - - 6 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d3c2",
+          "to": 27
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "fen": "8/1Q6/8/8/8/8/k1K5/8 b - - 7 4",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a2a1",
+          "to": 28
+        },
+        {
+          "move": "a2a3",
+          "to": 30
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "fen": "8/1Q6/8/8/8/8/2K5/k7 w - - 8 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "b7b1",
+          "to": 29
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "fen": "8/8/8/8/8/8/2K5/kQ6 b - - 9 5",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 30,
+      "fen": "8/1Q6/8/8/8/k7/2K5/8 w - - 8 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "b7b3",
+          "to": 31
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "fen": "8/8/8/8/8/kQ6/2K5/8 b - - 9 5",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 32,
+      "fen": "8/1Q6/8/8/8/k2K4/8/8 w - - 6 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d3c3",
+          "to": 33
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "fen": "8/1Q6/8/8/8/k1K5/8/8 b - - 7 4",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a3a2",
+          "to": 34
+        },
+        {
+          "move": "a3a4",
+          "to": 36
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "fen": "8/1Q6/8/8/8/2K5/k7/8 w - - 8 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "b7b2",
+          "to": 35
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "fen": "8/8/8/8/8/2K5/kQ6/8 b - - 9 5",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 36,
+      "fen": "8/1Q6/8/8/k7/2K5/8/8 w - - 8 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "b7b4",
+          "to": 37
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "fen": "8/8/8/8/kQ6/2K5/8/8 b - - 9 5",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 38,
+      "fen": "8/8/8/8/8/k2K1Q2/8/8 w - - 4 3",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "f3b7",
+          "to": 39
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "fen": "8/1Q6/8/8/8/k2K4/8/8 b - - 5 3",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "a3a2",
+          "to": 26
+        },
+        {
+          "move": "a3a4",
+          "to": 40
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "fen": "8/1Q6/8/8/k7/3K4/8/8 w - - 6 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d3c4",
+          "to": 41
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "fen": "8/1Q6/8/8/k1K5/8/8/8 b - - 7 4",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a4a3",
+          "to": 42
+        },
+        {
+          "move": "a4a5",
+          "to": 44
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "fen": "8/1Q6/8/8/2K5/k7/8/8 w - - 8 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "b7b3",
+          "to": 43
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "fen": "8/8/8/8/2K5/kQ6/8/8 b - - 9 5",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 44,
+      "fen": "8/1Q6/8/k7/2K5/8/8/8 w - - 8 5",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "b7b5",
+          "to": 45
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "fen": "8/8/8/kQ6/2K5/8/8/8 b - - 9 5",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 46,
+      "fen": "8/8/8/8/8/1k1K1Q2/8/8 w - - 4 3",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "f3b7",
+          "to": 47
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "fen": "8/1Q6/8/8/8/1k1K4/8/8 b - - 5 3",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "b3a2",
+          "to": 26
+        },
+        {
+          "move": "b3a3",
+          "to": 32
+        },
+        {
+          "move": "b3a4",
+          "to": 40
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "fen": "8/8/8/8/4K3/5Q2/1k6/8 w - - 2 2",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "e4d3",
+          "to": 49
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "fen": "8/8/8/8/8/3K1Q2/1k6/8 b - - 3 2",
+      "distance": 6,
+      "edges": [
+        {
+          "move": "b2a1",
+          "to": 4
+        },
+        {
+          "move": "b2b1",
+          "to": 8
+        },
+        {
+          "move": "b2c1",
+          "to": 50
+        },
+        {
+          "move": "b2a2",
+          "to": 53
+        },
+        {
+          "move": "b2a3",
+          "to": 38
+        },
+        {
+          "move": "b2b3",
+          "to": 46
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "fen": "8/8/8/8/8/3K1Q2/8/2k5 w - - 4 3",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "f3b7",
+          "to": 51
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "fen": "8/1Q6/8/8/8/3K4/8/2k5 b - - 5 3",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "c1d1",
+          "to": 52
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "fen": "8/1Q6/8/8/8/3K4/8/3k4 w - - 6 4",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "b7b1",
+          "to": 25
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "fen": "8/8/8/8/8/3K1Q2/k7/8 w - - 4 3",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d3c2",
+          "to": 54
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "fen": "8/8/8/8/8/5Q2/k1K5/8 b - - 5 3",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a2a1",
+          "to": 55
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "fen": "8/8/8/8/8/5Q2/2K5/k7 w - - 6 4",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "f3a3",
+          "to": 56
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "fen": "8/8/8/8/8/Q7/2K5/k7 b - - 7 4",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 57,
+      "fen": "8/8/8/8/k3K3/5Q2/8/8 w - - 2 2",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "e4d4",
+          "to": 58
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "fen": "8/8/8/8/k2K4/5Q2/8/8 b - - 3 2",
+      "distance": 6,
+      "edges": [
+        {
+          "move": "a4b4",
+          "to": 59
+        },
+        {
+          "move": "a4a5",
+          "to": 65
+        },
+        {
+          "move": "a4b5",
+          "to": 67
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "fen": "8/8/8/8/1k1K4/5Q2/8/8 w - - 4 3",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "f3b7",
+          "to": 60
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "fen": "8/1Q6/8/8/1k1K4/8/8/8 b - - 5 3",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "b4a3",
+          "to": 61
+        },
+        {
+          "move": "b4a4",
+          "to": 62
+        },
+        {
+          "move": "b4a5",
+          "to": 63
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "fen": "8/1Q6/8/8/3K4/k7/8/8 w - - 6 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d4c3",
+          "to": 33
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "fen": "8/1Q6/8/8/k2K4/8/8/8 w - - 6 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d4c4",
+          "to": 41
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "fen": "8/1Q6/8/k7/3K4/8/8/8 w - - 6 4",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d4c3",
+          "to": 64
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "fen": "8/1Q6/8/k7/8/2K5/8/8 b - - 7 4",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a5a4",
+          "to": 36
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "fen": "8/8/8/k7/3K4/5Q2/8/8 w - - 4 3",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "f3b7",
+          "to": 66
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "fen": "8/1Q6/8/k7/3K4/8/8/8 b - - 5 3",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "a5a4",
+          "to": 62
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "fen": "8/8/8/1k6/3K4/5Q2/8/8 w - - 4 3",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "f3b7",
+          "to": 68
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "fen": "8/1Q6/8/1k6/3K4/8/8/8 b - - 5 3",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "b5a4",
+          "to": 62
+        },
+        {
+          "move": "b5a5",
+          "to": 63
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "fen": "8/8/8/8/1k2K3/5Q2/8/8 w - - 2 2",
+      "distance": 7,
+      "edges": [
+        {
+          "move": "e4d4",
+          "to": 70
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "fen": "8/8/8/8/1k1K4/5Q2/8/8 b - - 3 2",
+      "distance": 6,
+      "edges": [
+        {
+          "move": "b4a4",
+          "to": 71
+        },
+        {
+          "move": "b4a5",
+          "to": 65
+        },
+        {
+          "move": "b4b5",
+          "to": 67
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "fen": "8/8/8/8/k2K4/5Q2/8/8 w - - 4 3",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "d4c5",
+          "to": 72
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "fen": "8/8/8/2K5/k7/5Q2/8/8 b - - 5 3",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "a4a5",
+          "to": 73
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "fen": "8/8/8/k1K5/8/5Q2/8/8 w - - 6 4",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "f3a3",
+          "to": 74
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "fen": "8/8/8/k1K5/8/Q7/8/8 b - - 7 4",
+      "distance": 0,
+      "edges": []
+    }
+  ],
+  "alternatives": [
+    {
+      "move": "g4d1",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "g4g1",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "g4e2",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "g4g2",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "g4f3",
+      "preservesWin": true,
+      "remainingPlies": 8,
+      "reason": "Reduces the mate bound from 9 to 8 plies."
+    },
+    {
+      "move": "g4g3",
+      "preservesWin": true,
+      "remainingPlies": 8,
+      "reason": "Reduces the mate bound from 9 to 8 plies."
+    },
+    {
+      "move": "g4h3",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "g4f4",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "g4h4",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "g4f5",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "g4g5",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "g4h5",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "g4e6",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "g4g6",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "g4d7",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "g4g7",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "g4c8",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "g4g8",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e4d3",
+      "preservesWin": true,
+      "remainingPlies": 8,
+      "reason": "Reduces the mate bound from 9 to 8 plies."
+    },
+    {
+      "move": "e4e3",
+      "preservesWin": true,
+      "remainingPlies": 8,
+      "reason": "Reduces the mate bound from 9 to 8 plies."
+    },
+    {
+      "move": "e4f3",
+      "preservesWin": true,
+      "remainingPlies": 12,
+      "reason": "Keeps a win but leaves 12 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e4d4",
+      "preservesWin": true,
+      "remainingPlies": 8,
+      "reason": "Reduces the mate bound from 9 to 8 plies."
+    },
+    {
+      "move": "e4f4",
+      "preservesWin": true,
+      "remainingPlies": 14,
+      "reason": "Keeps a win but leaves 14 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e4d5",
+      "preservesWin": true,
+      "remainingPlies": 10,
+      "reason": "Keeps a win but leaves 10 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e4e5",
+      "preservesWin": true,
+      "remainingPlies": 12,
+      "reason": "Keeps a win but leaves 12 plies; it does not reduce the current bound."
+    },
+    {
+      "move": "e4f5",
+      "preservesWin": true,
+      "remainingPlies": 12,
+      "reason": "Keeps a win but leaves 12 plies; it does not reduce the current bound."
+    }
+  ]
+}

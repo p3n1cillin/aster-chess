@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "positions": 512,
+  "source_games": 187,
+  "source_games_with_positions": 140,
+  "source_unresolved": 7,
+  "native_mate_labels": 103,
+  "exact_overlaps": 0,
+  "data_sha256": "f07976034c668f3ae636ef96cf584891b1bb1a7cc1648e73d975e837277b29a3",
+  "source_pgn_sha256": "03ba976844083b9b3752b85f4767bbc728d85479d6da1e2886411ac68be97ded",
+  "auditor_sha256": "0f6b648bec2b722211d8904c534128d1f8b894170edabdb0fff0e2fd48de2ac9",
+  "interpretation": "Independent full-history/PGN, native label/PV and exclusion checks. No oracle outcomes or strength inference."
+}

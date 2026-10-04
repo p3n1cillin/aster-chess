@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\squared-dev\\Aster.exe",
+  "binary_sha256": "5b64ad1d13769c3db6425c475bf74ecee391f721fa4c81cd7e9af32495d8a321",
+  "positions_checked": 17491,
+  "reference_perft_positions": 14,
+  "protocol_checks": "passed",
+  "seed": 20261003,
+  "seconds": 4.054,
+  "legal_move_existence_positions": 17491,
+  "random_setups": {
+    "positions": 2000,
+    "in_check": 370,
+    "checkmates": 13,
+    "stalemates": 2
+  },
+  "eval_file": "artifacts/training/turn-static-hybrid-v1/model.ann"
+}

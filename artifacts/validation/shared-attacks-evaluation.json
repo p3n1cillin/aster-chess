@@ -1,0 +1,22 @@
+{
+  "positions": 20000,
+  "differences": 0,
+  "mean_absolute_delta_cp": 0.0,
+  "max_absolute_delta_cp": 0,
+  "data": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\teacher-20k-v1.jsonl",
+  "data_sha256": "191c4bbd054ad307860d8935f2cb4f6cbcf73e60b68a3a397e646e8b6d691527",
+  "engines": [
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\src\\Engine\\bin\\Release\\net8.0\\Aster.dll",
+      "name": "Aster 0.6.0-maps-dev",
+      "sha256": "8ff9fadbd625e635224937aeaecb5f39751d1922501fd2e5dd316395c727a753"
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\baseline-0.5.0\\Aster.dll",
+      "name": "Aster 0.5.0",
+      "sha256": "0252f43a6c7b1e728564793cc03ae0984ee9c58a440524bc904736f52011c4d3"
+    }
+  ],
+  "changed_positions": [],
+  "interpretation": "Static behavior comparison; neither a teacher-fit metric nor a playing-strength test."
+}

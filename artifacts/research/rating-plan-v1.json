@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "status": "declared before any rating-match queries",
+  "engine": "artifacts/publish/conversion-default-dotnet/Aster.dll",
+  "engine_sha256": "52439f58cf10a4a5dad8d4d48bf9db59db0a3f14b3c1c6216f79182b4a646d9a",
+  "source_manifest": "artifacts/research/conversion-default-source/manifest.json",
+  "opponent_release": "sf_19",
+  "opponent_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+  "local_scale": "SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash",
+  "scope": "Provisional local benchmark index anchored to an advertised development-opponent dial. Not FIDE, online-account or CCRL Elo; not full-strength Stockfish superiority.",
+  "generation": {
+    "seed": 20261031, "positions": 144, "plies": 20, "selection_nodes": 2048, "verification_nodes": 20000,
+    "max_abs_teacher_cp": 80, "split": "Seeded-shuffled parent first 16 screening openings; next 128 confirmation openings, frozen before Aster queries. Exclude 20k/60k development datasets, fresh endgame diagnostic and five prior opening suites."
+  },
+  "screen": {
+    "settings": [1320, 1800, 2300, 2800, 3190], "pairs_per_setting": 16,
+    "selection": "Choose smallest absolute difference of screening score from 0.5; tie chooses lower setting. Only for selection, unresolved games contribute 0.5 points."
+  },
+  "confirmation": {"pairs": 128, "games": 256, "opponent_setting": "Selected by the above frozen screen rule", "no_adaptive_extension": true},
+  "resources": {"seconds_per_move": 0.03, "Hash": 64, "Threads": 1, "Move Overhead": 0, "max_plies": 400},
+  "model": "R = selected_setting + 400 * log10(score / (1 - score)); fixed local reference model, not a validated mapping to public Elo.",
+  "uncertainty": {
+    "seed": 20261101, "bootstrap_samples": 20000,
+    "primary": "95% opening-family bootstrap; family is first four legal UCI opening plies; preserve both colors per opening.",
+    "secondary": "95% color-paired opening bootstrap.",
+    "unresolved": "Retain unresolved outcomes. Bootstrap lower/upper endpoints separately using 0/1 for unresolved games. Suppress numeric point estimate if any remain unresolved."
+  },
+  "numeric_estimate_gates": [
+    "All 416 requested games recorded and independently audited with zero forfeits",
+    "Confirmation complete with 128 color-swapped pairs and no unresolved games",
+    "Finite transformed primary interval with width at most 200 local rating units",
+    "Point and primary interval stay within the supported 1320..3190 reference range"
+  ],
+  "fallback": "Report unestablished numeric rating plus measured score/interval or supported reference-setting bound; never clip infinite estimates into a finite rating.",
+  "randomness": "Stockfish weak selection has no exposed seed; retain all PGNs and observed searches. Same options do not imply bitwise repeatable games.",
+  "total_game_budget": 416,
+  "decision": "No playing-code changes or engine promotion in response to these results. Preserve rating record with exact binary, source, opponent options, hardware, openings and controls."
+}

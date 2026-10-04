@@ -1,0 +1,43 @@
+{
+  "data_sha256": "bfea2a0226b65879961c7cde551dde3d715a9e59ef9e99adf627e3744f2be162",
+  "models": [
+    {
+      "model": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\training\\turn-static-hybrid-v1\\model.ann",
+      "model_sha256": "d53bb900114a8c86d5dc2de5c75bc594dd5634d0df9461a015ee4f258113ab67",
+      "pairs": 978,
+      "teacher_turn_mean_cp": 63.48159509202454,
+      "teacher_turn_std_cp": 61.49264814413825,
+      "predicted_turn_mean_cp": 31.19120654396728,
+      "predicted_turn_std_cp": 4.458080641075188,
+      "pair_mae_cp": 119.82924335378323,
+      "difference_mae_cp": 47.21676891615542,
+      "difference_rmse_cp": 68.93337229492636
+    },
+    {
+      "model": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\training\\pair-loss-moderate-v1\\model.ann",
+      "model_sha256": "98535307c0c30b529cf242d2a947ccacf66678b25710f80de980e13ec4c77975",
+      "pairs": 978,
+      "teacher_turn_mean_cp": 63.48159509202454,
+      "teacher_turn_std_cp": 61.49264814413825,
+      "predicted_turn_mean_cp": 58.58691206543967,
+      "predicted_turn_std_cp": 31.812158170078234,
+      "pair_mae_cp": 119.43098159509202,
+      "difference_mae_cp": 41.99284253578732,
+      "difference_rmse_cp": 58.081398702645096
+    },
+    {
+      "model": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\training\\pair-loss-strong-v1\\model.ann",
+      "model_sha256": "fb47b3ae39ac8b50b480f339f3aef4ccaaba01f35a2dc0803944978cbe1aba72",
+      "pairs": 978,
+      "teacher_turn_mean_cp": 63.48159509202454,
+      "teacher_turn_std_cp": 61.49264814413825,
+      "predicted_turn_mean_cp": 63.70040899795501,
+      "predicted_turn_std_cp": 45.52517023117099,
+      "pair_mae_cp": 121.02351738241309,
+      "difference_mae_cp": 47.41308793456033,
+      "difference_rmse_cp": 64.32989490371571
+    }
+  ],
+  "source_sha256": "1102543d6db6d4d2e2c9b6dd429b777f393f76eafd177bd2868c6206f660f99e",
+  "interpretation": "Marked held-out pairs with retained source-game groups; descriptive teacher fit, not playing strength."
+}

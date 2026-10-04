@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "declared_stage": "After deterministic behavior/tactic checks, before any warm timing or candidate match queries",
+  "reason": "The original 32/32 absolute quiet-at5000nodes gate assumed an unverified baseline capability. The frozen rated control and unchanged-work candidate both solve25/32 with identical moves, completed depths and nodes on all32 positions. Original failed gate and candidate report remain preserved.",
+  "original_plan": "artifacts/research/lazy-order-plan-v1.json",
+  "changed_gate": "Quiet suite at5000nodes: at least25/32 and exact per-position move, depth, node and solved-status agreement with the frozen ordinary control. Quiet-depth8 and original-suite gates remain32/32. Endgame threshold remains13/16.",
+  "evidence": ["artifacts/tactics/lazy-order-tactics-quiet-5000nodes.json", "artifacts/tactics/lazy-order-baseline-tactics-quiet-5000nodes.json"],
+  "scope": "Corrects a factual pre-match baseline assumption, not a match/timing threshold or parameter. Candidate binary, original plan, suite partitions, performance gate, match sample sizes, match score/interval gates and conditional rating budget remain unchanged. Report both original-gate failure and amended-gate decision."
+}

@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "original_absolute_quiet_gate_passed": false,
+  "original_gate_failure": "Preserved factual baseline assumption error: both builds25/32 at5000nodes; pre-match amendment requires baseline equivalence.",
+  "amended_gates": {
+    "timing_at_least_5_percent": false,
+    "fresh_fixed_work": true,
+    "full_trace_and_history_equivalence": true,
+    "tactics-depth8": true,
+    "tactics-5000nodes": true,
+    "tactics-quiet-depth8": true,
+    "endgames-5000nodes": true,
+    "amended_quiet_fixed_nodes": true,
+    "profile_same_work_less_exchange": true,
+    "correctness": true,
+    "match-30ms": true,
+    "match-100ms": false
+  },
+  "failed_gates": [
+    "timing_at_least_5_percent",
+    "match-100ms"
+  ],
+  "eligible_for_engineering_promotion": false,
+  "matches": [
+    {
+      "label": "30ms",
+      "wins": 47,
+      "draws": 53,
+      "losses": 28,
+      "unresolved": 0,
+      "forfeits": 0,
+      "games": 128,
+      "score_bounds": [
+        0.57421875,
+        0.57421875
+      ],
+      "primary_95_percent_interval": [
+        0.51171875,
+        0.6401515151515151
+      ],
+      "families": 58
+    },
+    {
+      "label": "100ms",
+      "wins": 7,
+      "draws": 16,
+      "losses": 9,
+      "unresolved": 0,
+      "forfeits": 0,
+      "games": 32,
+      "score_bounds": [
+        0.46875,
+        0.46875
+      ],
+      "primary_95_percent_interval": [
+        0.34375,
+        0.59375
+      ],
+      "families": 16
+    }
+  ],
+  "median_timing_speed_ratio": 1.0066355505600195,
+  "exchange_calls_before": 558458,
+  "exchange_calls_after": 521244,
+  "avoided_exchange_calls": 37214,
+  "candidate_sha256": "5da4badd1232e51edf1622fa347a979a3df61fe6f24473874d3f474e0bddf07d",
+  "baseline_sha256": "52439f58cf10a4a5dad8d4d48bf9db59db0a3f14b3c1c6216f79182b4a646d9a",
+  "evidence": [
+    {
+      "path": "artifacts\\matches\\lazy-order-vs-0.7.4-30ms.json",
+      "sha256": "c817f4a6a7bfd04de4ce6ea830bc5f3fd9ac5ed4a300b10d49f6aa4d8b07529f",
+      "pgn_sha256": "98dea917900df59e87435b71200cef992641d8141b5eec51e6677cf5881d1e60",
+      "audit_sha256": "15af6f239252ad971b6e534497db8c6fc502ebff549490a5db8ed4afd50e5f2b"
+    },
+    {
+      "path": "artifacts\\matches\\lazy-order-vs-0.7.4-100ms.json",
+      "sha256": "f8a28d70a566fffedd994dad8bceee35f0e6f2753a9ec3ceebf4401e4ecc0055",
+      "pgn_sha256": "b60dfc1da887eeb713fca30cd85a0eaf1a6ef133dec3d599a4d1322238d99a07",
+      "audit_sha256": "4c759754df8b5a8b7f8bbac69af452215fe51ba777c62e102ab26d665cc7966f"
+    }
+  ],
+  "plan_sha256": "abadc32d535d36dc1f7186f6ac387202d6c32498702050558bc4105c55f29e08",
+  "amendment_sha256": "e34a7c36ad4cf81ea541a3344a387fe88b4afd1130b4837c970979feef2a0ddf",
+  "assessor_sha256": "865e8ef8cc84b5509b80cc4262489dda9dc72b88ef5b1b2e2d48bbbfaa514790",
+  "interpretation": "Engineering optimization decision using explicitly amended baseline fact before matches/timing. Not proof of Elo gain or full-strength Stockfish superiority. All results and failures retained; no adaptive retuning."
+}

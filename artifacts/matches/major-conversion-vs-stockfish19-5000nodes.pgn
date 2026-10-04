@@ -1,0 +1,960 @@
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "1.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1-0"]
+[FEN "8/8/8/8/8/P2k4/1K6/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1. Kb3 Kd4 2. Kb4 Kd5 3. Kb5 Kd6 4. Kb6 Kd7 5. Kb7 Ke6 6. a4 Kf5 7. a5 Ke4 8. Kc6 Ke3 9. Kd5 Kf3 10. a6 Ke2 11. a7 Kd3 12. a8=Q Kc2 13. Kd4 Kb3 14. Qa1 Kb4 15. Qb1+ Ka4 16. Kc4 Ka5 17. Qb5# 1-0
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "1.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "8/8/8/8/8/P2k4/1K6/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "threefold_repetition"]
+
+1. Kb3 Ke4 2. Kc4 Kf5 3. Kd5 Kf6 4. a4 Ke7 5. Kc6 Kd8 6. Kb7 Kd7 7. a5 Kd6 8. a6 Kd7 9. Kb6 Kd6 10. a7 Ke5 11. Kc7 Kf5 12. Kc6 Ke6 13. Kc5 Ke5 14. Kc6 Kd4 15. a8=Q Ke4 16. Qf8 Kd4 17. Qf5 Ke3 18. Kd5 Kd2 19. Qe6 Kd3 20. Qe4+ Kc3 21. Qd4+ Kc2 22. Kc6 Kb3 23. Qf2 Kc3 24. Qg2 Kd3 25. Kd6 Ke3 26. Qg5+ Ke4 27. Qg4+ Ke3 28. Qg3+ Ke2 29. Kd5 Kd2 30. Qd6 Kd3 31. Qc7 Ke3 32. Qf7 Kd2 33. Qb7 Ke3 34. Qf7 Kd2 35. Ke6 Ke3 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "2.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "8/8/3k4/2p5/8/8/8/5K2 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "threefold_repetition"]
+
+1... Kd5 2. Ke2 Kc4 3. Kd2 Kb3 4. Kc1 c4 5. Kd2 c3+ 6. Kd1 Kb2 7. Ke2 Ka1 8. Ke3 c2 9. Ke4 Kb1 10. Kd4 Kb2 11. Ke5 Kc3 12. Kd5 c1=Q 13. Ke6 Qf1 14. Ke5 Qb1 15. Ke6 Qf1 16. Ke5 Kd3 17. Ke6 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "2.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "0-1"]
+[FEN "8/8/3k4/2p5/8/8/8/5K2 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1... Kd5 2. Ke2 Kc4 3. Ke3 Kc3 4. Kf3 Kd2 5. Kg2 c4 6. Kg3 c3 7. Kf2 c2 8. Kf3 c1=Q 9. Kf2 Qe1+ 10. Kf3 Qh4 11. Kg2 Ke3 12. Kg1 Kf3 13. Kf1 Qh1# 0-1
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "3.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1-0"]
+[FEN "8/8/8/8/8/7P/4k1K1/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1... Ke3 2. Kg3 Ke4 3. Kg4 Ke5 4. Kg5 Ke6 5. Kg6 Ke7 6. Kg7 Kd6 7. h4 Ke5 8. h5 Kf4 9. Kf6 Kf3 10. Ke5 Ke3 11. h6 Kd2 12. h7 Ke3 13. h8=Q Kd2 14. Kd4 Ke1 15. Ke3 Kd1 16. Qc8 Ke1 17. Qc1# 1-0
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "3.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1-0"]
+[FEN "8/8/8/8/8/7P/4k1K1/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1... Kd3 2. Kf3 Kc4 3. Kf4 Kd5 4. Kf5 Kd6 5. Kf6 Kd7 6. h4 Ke8 7. Kg7 Ke7 8. h5 Ke8 9. Kg8 Ke7 10. Kg7 Ke8 11. h6 Ke7 12. Kg6 Ke6 13. Kg7 Ke5 14. Kf7 Kf4 15. h7 Ke3 16. h8=Q Kd3 17. Qc8 Kd4 18. Kf6 Kd3 19. Ke5 Ke2 20. Kf6 Kd2 21. Qc4 Ke3 22. Ke6 Kf2 23. Qg4 Ke3 24. Qg3+ Kd4 25. Qc7 Ke4 26. Qc6+ Kd4 27. Qc1 Kd3 28. Ke5 Ke2 29. Qa3 Kd2 30. Qb4+ Kd3 31. Qb3+ Ke2 32. Qa2+ Kd3 33. Qb2 Kc4 34. Kd6 Kd3 35. Qe5 Kd2 36. Ke6 Kd3 37. Kd6 Kd2 38. Qe4 Kc3 39. Qf4 Kc2 40. Kc5 Kd3 41. Kd5 Kc3 42. Qb8 Kd3 43. Qb1+ Ke3 44. Qf1 Kd2 45. Ke4 Kc3 46. Qb5 Kc2 47. Qb4 Kd1 48. Kd3 Kc1 49. Qb5 Kd1 50. Qb1# 1-0
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "4.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "8/3kp3/8/6K1/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "threefold_repetition"]
+
+1. Kf4 Kd6 2. Ke4 Ke6 3. Kd3 Kd5 4. Ke3 Ke5 5. Kd3 Kf4 6. Ke2 e6 7. Kd2 e5 8. Ke2 Ke4 9. Kf1 Kf3 10. Ke1 Ke3 11. Kd1 Kd3 12. Ke1 e4 13. Kf2 e3+ 14. Kg3 Kd2 15. Kh4 e2 16. Kg5 Ke3 17. Kf5 e1=Q 18. Ke5 Qc3+ 19. Kd5 Kd3 20. Ke6 Qg7 21. Kf5 Ke3 22. Ke6 Kd3 23. Kf5 Ke3 24. Ke6 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "4.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "0-1"]
+[FEN "8/3kp3/8/6K1/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1. Kf4 Kd6 2. Ke4 Ke6 3. Kd4 Kf5 4. Ke3 Ke5 5. Kf2 Ke4 6. Kg1 Ke3 7. Kf1 e5 8. Ke1 e4 9. Kd1 Kf2 10. Kc2 e3 11. Kb3 e2 12. Kb4 e1=Q+ 13. Ka4 Qb1 14. Ka5 Kf3 15. Ka4 Ke4 16. Ka5 Kd5 17. Ka6 Kc6 18. Ka5 Qb5# 0-1
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "5.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "8/8/5K2/2k5/P7/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1. a5 Kb5 2. a6 Kxa6 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "5.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "8/8/5K2/2k5/P7/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1. a5 Kb5 2. Ke5 Kxa5 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "6.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "8/8/8/8/8/2p5/8/K5k1 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "threefold_repetition"]
+
+1... Kf2 2. Kb1 Ke3 3. Kc1 Kd4 4. Kc2 Kc4 5. Kc1 Kb3 6. Kb1 Kc4 7. Kc1 Kd3 8. Kd1 Ke3 9. Kc1 Ke4 10. Kc2 Kd4 11. Kc1 Kd3 12. Kd1 Ke4 13. Kc1 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "6.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "8/8/8/8/8/2p5/8/K5k1 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1... c2 2. Kb2 c1=Q+ 3. Kxc1 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "7.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "8/8/8/2k5/8/7P/3K4/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1... Kd4 2. h4 Ke4 3. h5 Kf5 4. h6 Kg6 5. h7 Kxh7 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "7.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "8/8/8/2k5/8/7P/3K4/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1... Kd6 2. h4 Kd5 3. Kd3 Ke5 4. h5 Kf5 5. Kc4 Kf6 6. h6 Kg6 7. h7 Kxh7 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "8.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "8/8/6p1/8/8/5K2/8/1k6 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "threefold_repetition"]
+
+1. Ke2 Kc2 2. Ke1 Kd3 3. Kf2 Ke4 4. Kg3 Kf5 5. Kf3 Kg5 6. Kg3 Kh5 7. Kh3 g5 8. Kg3 g4 9. Kg2 Kh4 10. Kh2 g3+ 11. Kg2 Kg4 12. Kg1 Kf3 13. Kf1 Kg4 14. Kg1 Kg5 15. Kg2 Kf4 16. Kg1 Kg4 17. Kg2 Kh4 18. Kg1 Kg4 19. Kg2 Kf4 20. Kg1 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "8.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "8/8/6p1/8/8/5K2/8/1k6 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1. Kf2 g5 2. Kf1 g4 3. Kf2 Ka1 4. Kg3 Kb1 5. Kxg4 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "9.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "0-1"]
+[FEN "8/k7/p4K2/8/8/8/8/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1... Kb6 2. Ke5 Kc5 3. Ke4 Kc4 4. Ke3 Kc3 5. Ke2 a5 6. Kd1 Kb2 7. Ke1 a4 8. Kf1 Kb3 9. Ke2 Kb2 10. Ke3 a3 11. Kf4 Kb3 12. Ke3 Kb2 13. Kf4 Kc3 14. Ke5 a2 15. Kd5 a1=Q 16. Kd6 Kd3 17. Ke6 Ke4 18. Kd6 Qc3 19. Ke6 Qc5 20. Kf6 Qf8+ 21. Ke6 Kd4 22. Kd7 Kd5 23. Kc7 Kc5 24. Kb7 Qf7+ 25. Kb8 Kc6 26. Ka8 Qb7# 0-1
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "9.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "0-1"]
+[FEN "8/k7/p4K2/8/8/8/8/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1... Kb6 2. Kf5 Kb5 3. Ke4 Kb4 4. Kd3 Kb3 5. Kd2 Kb2 6. Ke3 a5 7. Kd4 a4 8. Ke5 Kc3 9. Kf5 Kd4 10. Kg4 a3 11. Kh3 a2 12. Kg2 Ke4 13. Kg3 a1=Q 14. Kg2 Kf4 15. Kf2 Qa2+ 16. Ke1 Ke3 17. Kd1 Qd2# 0-1
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "10.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1-0"]
+[FEN "8/3k4/8/8/8/5K2/2P5/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1. Ke3 Ke7 2. Kd4 Kd8 3. Kc5 Kd7 4. Kb6 Kc8 5. c4 Kb8 6. c5 Kc8 7. Kc6 Kd8 8. Kb7 Kd7 9. c6+ Ke8 10. c7 Kf7 11. c8=Q Kg6 12. Qg4+ Kf6 13. Kc6 Kf7 14. Kc7 Kf8 15. Qg6 Ke7 16. Qf5 Ke8 17. Kd6 Kd8 18. Qd7# 1-0
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "10.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1-0"]
+[FEN "8/3k4/8/8/8/5K2/2P5/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1. Ke4 Ke6 2. Kd4 Kd6 3. Kc4 Kc6 4. c3 Kd6 5. Kb5 Kc7 6. Kc5 Kb7 7. Kd6 Ka6 8. c4 Kb7 9. c5 Kc8 10. Kc6 Kd8 11. Kb7 Ke7 12. c6 Ke6 13. c7 Ke5 14. Kb8 Kd4 15. c8=Q Ke4 16. Qf8 Kd4 17. Kc7 Ke3 18. Qf6 Ke2 19. Qa6+ Ke3 20. Qf6 Ke2 21. Qf4 Kd3 22. Kc6 Ke2 23. Qg3 Kd2 24. Qe5 Kd3 25. Qf6 Ke2 26. Kd6 Kd2 27. Qd4+ Ke2 28. Qb4 Kf3 29. Ke6 Ke2 30. Qb5+ Kd2 31. Qe5 Kd3 32. Kd6 Kd2 33. Qc5 Ke2 34. Qc2+ Ke3 35. Qa2 Kd3 36. Kd5 Ke3 37. Qg2 Kf4 38. Qe4+ Kg3 39. Ke5 Kf2 40. Kf4 Kg1 41. Qe2 Kh1 42. Kf3 Kg1 43. Qg2# 1-0
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "11.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "0-1"]
+[FEN "8/8/1K3k1p/8/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1. Kc5 Ke5 2. Kc4 Ke4 3. Kc3 Ke3 4. Kc2 h5 5. Kd1 Kf2 6. Kc1 Ke2 7. Kb1 h4 8. Kb2 Kd2 9. Kb3 h3 10. Kc4 Ke2 11. Kd5 Kf3 12. Ke6 Ke4 13. Kd6 Kd4 14. Ke6 h2 15. Kd6 h1=Q 16. Ke6 Qh5 17. Kf6 Ke3 18. Ke6 Qh2 19. Kd5 Qc2 20. Ke5 Qh7 21. Kd6 Qc2 22. Kd5 Qc3 23. Kd6 Qc4 24. Ke7 Qd4 25. Ke6 Qg4+ 26. Kd6 Qc8 27. Ke7 Qa6 28. Kf7 Kd3 29. Kg7 Ke3 30. Kf7 Kd3 31. Ke7 Qa3+ 32. Kd7 Qc3 33. Ke6 Qc8+ 34. Kf6 Ke3 35. Ke7 Qb7+ 36. Kd6 Qb4+ 37. Kd5 Qd4+ 38. Ke6 Qd3 39. Ke7 Kf3 40. Ke6 Qd8 41. Kf7 Ke4 42. Ke6 Kf3 43. Kf7 Qc8 44. Ke7 Qc7+ 45. Kf6 Qd6+ 46. Kf7 Kf4 47. Kg8 Qe7 48. Kh8 Kg5 49. Kg8 Kg6 50. Kh8 Qf8# 0-1
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "11.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "0-1"]
+[FEN "8/8/1K3k1p/8/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1. Kc5 Ke5 2. Kc4 Ke4 3. Kc3 h5 4. Kd2 Kf3 5. Kc2 h4 6. Kb1 h3 7. Ka1 Ke4 8. Kb2 Kd4 9. Ka1 Kc3 10. Ka2 h2 11. Ka3 h1=Q 12. Ka2 Qd1 13. Ka3 Qa1# 0-1
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "12.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1-0"]
+[FEN "k7/8/8/8/8/7K/4P3/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1... Kb7 2. e4 Kb6 3. Kg4 Kc6 4. Kf5 Kd7 5. Kf6 Ke8 6. e5 Kf8 7. e6 Ke8 8. e7 Kd7 9. Kf7 Kc7 10. Ke6 Kb6 11. Kd5 Kb5 12. e8=Q+ Kb4 13. Qe3 Ka5 14. Kc5 Ka6 15. Qe7 Ka5 16. Qa7# 1-0
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "12.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "k7/8/8/8/8/7K/4P3/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "threefold_repetition"]
+
+1... Ka7 2. Kg4 Kb6 3. Kf5 Kc5 4. Ke5 Kc6 5. Ke6 Kc5 6. e4 Kd4 7. e5 Ke4 8. Kf6 Kd5 9. e6 Kc6 10. Ke5 Kc7 11. Kf6 Kc6 12. e7 Kd7 13. Kf7 Kd6 14. Kf6 Kd7 15. Kf7 Kd6 16. e8=Q Kc5 17. Ke6 Kc4 18. Qa4+ Kc3 19. Qa3+ Kd4 20. Qa2 Kd3 21. Qa3+ Kd4 22. Qa8 Ke3 23. Qb8 Kd3 24. Qf4 Ke2 25. Kf6 Kd3 26. Qc1 Kd4 27. Qc2 Kd5 28. Qc7 Kd4 29. Ke6 Kd3 30. Qf4 Ke2 31. Kd5 Kd3 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "13.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "8/p5k1/8/8/8/8/4K3/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1... Kf6 2. Kd1 Kf5 3. Kd2 a5 4. Kd1 a4 5. Kc1 a3 6. Kb1 Ke4 7. Ka1 Kf3 8. Kb1 Ke2 9. Ka1 a2 10. Kxa2 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "13.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "8/p5k1/8/8/8/8/4K3/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1... a6 2. Ke3 a5 3. Kd4 a4 4. Kd3 a3 5. Kc2 Kf6 6. Kb3 a2 7. Kxa2 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "14.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "3k4/8/1P6/8/6K1/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1. b7 Kc7 2. b8=Q+ Kxb8 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "14.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "3k4/8/1P6/8/6K1/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1. Kf5 Kd7 2. b7 Kc7 3. Ke6 Kxb7 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "15.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "8/8/7p/8/5K2/1k6/8/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "threefold_repetition"]
+
+1. Ke3 Kc3 2. Ke2 Kd4 3. Ke1 h5 4. Kf1 h4 5. Ke1 h3 6. Kf1 Ke3 7. Kg1 Kf3 8. Kh1 Kg3 9. Kg1 Kg4 10. Kh1 Kg5 11. Kg1 Kf5 12. Kh1 Kg5 13. Kg1 Kf4 14. Kh1 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "15.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "8/8/7p/8/5K2/1k6/8/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1. Ke4 h5 2. Ke3 h4 3. Kf2 h3 4. Kg3 Ka2 5. Kxh3 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "16.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "2k5/8/7K/8/8/4P3/8/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1... Kd7 2. e4 Ke6 3. e5 Kxe5 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "16.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "2k5/8/7K/8/8/4P3/8/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "threefold_repetition"]
+
+1... Kd7 2. Kg5 Ke6 3. Kf4 Kf6 4. e4 Ke6 5. e5 Kd7 6. Kf5 Ke7 7. e6 Ke8 8. Ke5 Ke7 9. Kd5 Ke8 10. Ke5 Ke7 11. Kf5 Ke8 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "17.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1-0"]
+[FEN "8/8/8/8/8/P4k2/1K6/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1. Kb3 Ke4 2. Ka4 Ke5 3. Kb5 Kd6 4. Kb6 Ke7 5. a4 Kd7 6. Kb7 Kd6 7. a5 Kc5 8. a6 Kd4 9. Kc6 Ke4 10. a7 Kf4 11. Kd5 Kg4 12. a8=Q Kh4 13. Qg8 Kh3 14. Ke4 Kh4 15. Kf4 Kh5 16. Qg5# 1-0
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "17.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1-0"]
+[FEN "8/8/8/8/8/P4k2/1K6/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1. Kc3 Ke4 2. Kc4 Ke5 3. Kc5 Ke6 4. Kc6 Ke7 5. a4 Kd8 6. Kb7 Kd7 7. a5 Kd6 8. a6 Kd7 9. Kb6 Kd6 10. Kb7 Ke5 11. Kc7 Kf5 12. Kd7 Kf4 13. Ke6 Ke4 14. a7 Kd4 15. Kd6 Ke3 16. Kc7 Kd3 17. a8=Q Ke2 18. Qe4+ Kd2 19. Kc6 Kc3 20. Qf4 Kc2 21. Qb8 Kd3 22. Kd5 Ke3 23. Qf8 Kd2 24. Qd6 Kd3 25. Qc7 Ke3 26. Qf7 Kd2 27. Qf4+ Kc3 28. Qc4+ Kd2 29. Ke6 Ke3 30. Qf1 Kd2 31. Qf3 Ke1 32. Qd5 Ke2 33. Qg2+ Kd3 34. Qc6 Kd4 35. Qc8 Kd3 36. Kd5 Ke3 37. Ke5 Kd3 38. Qc1 Ke2 39. Ke4 Kf2 40. Qg5 Ke1 41. Qg2 Kd1 42. Kd3 Kc1 43. Qc2# 1-0
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "18.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "8/3p4/8/7k/8/8/8/K7 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "threefold_repetition"]
+
+1... Kg4 2. Kb2 Kf3 3. Kc3 Ke4 4. Kd2 Kd4 5. Kc2 Ke3 6. Kb3 d5 7. Kc2 d4 8. Kd1 Kd3 9. Ke1 Kc2 10. Ke2 d3+ 11. Ke3 d2 12. Ke4 d1=Q 13. Ke5 Qa1+ 14. Kf5 Qb1 15. Ke6 Kd2 16. Kd6 Kc3 17. Ke5 Qf1 18. Ke6 Kd3 19. Ke5 Qf8 20. Ke6 Ke4 21. Kd7 Qc5 22. Ke6 Qf5+ 23. Kd6 Kd4 24. Kc6 Qc8+ 25. Kd6 Qf5 26. Kc6 Qf3+ 27. Kb6 Kc4 28. Kc7 Qe4 29. Kd6 Kd4 30. Kc7 Kc4 31. Kd6 Qe2 32. Kc7 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "18.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "0-1"]
+[FEN "8/3p4/8/7k/8/8/8/K7 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1... Kg4 2. Ka2 Kf3 3. Kb3 d5 4. Kc3 Ke3 5. Kb2 d4 6. Kb3 d3 7. Kc4 d2 8. Kb3 d1=Q+ 9. Kc3 Qa4 10. Kb2 Kd3 11. Kb1 Kc3 12. Kc1 Qc2# 0-1
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "19.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1-0"]
+[FEN "8/8/8/8/8/8/4k1KP/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1... Ke3 2. Kg3 Ke4 3. Kg4 Ke5 4. Kg5 Kd6 5. Kf6 Kc7 6. h4 Kb8 7. h5 Kb7 8. h6 Ka7 9. h7 Ka6 10. Ke5 Ka7 11. Kd5 Kb7 12. h8=Q Kc7 13. Qa8 Kd7 14. Qb7+ Kd8 15. Kd6 Ke8 16. Qe7# 1-0
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "19.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1-0"]
+[FEN "8/8/8/8/8/8/4k1KP/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1... Kd3 2. Kf3 Kc4 3. Ke4 Kc5 4. Ke5 Kc6 5. Ke6 Kc7 6. h4 Kd8 7. Kf7 Kd7 8. h5 Kc7 9. h6 Kb6 10. Kg7 Kc5 11. Kg6 Kd6 12. Kf7 Kd5 13. Kf6 Ke4 14. Ke6 Kd4 15. Kd6 Ke4 16. h7 Ke3 17. Kd5 Kd3 18. h8=Q Ke3 19. Qf8 Kd2 20. Qh6+ Kd3 21. Qc1 Ke2 22. Qh6 Kf3 23. Qh4 Ke2 24. Ke5 Kd3 25. Qe4+ Kc3 26. Qa4 Kd2 27. Qc4 Ke3 28. Qd4+ Kf3 29. Qf4+ Ke2 30. Ke4 Kd1 31. Kd3 Ke1 32. Qf5 Kd1 33. Qf1# 1-0
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "20.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "0-1"]
+[FEN "8/8/4p2K/4k3/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1. Kg5 Ke4 2. Kf6 e5 3. Ke6 Kf4 4. Kd5 e4 5. Kc4 e3 6. Kc3 Kg3 7. Kd3 Kf3 8. Kc3 Kg3 9. Kc4 Kf2 10. Kd4 e2 11. Kc4 e1=Q 12. Kd5 Qg1 13. Ke5 Ke3 14. Kf5 Qg7 15. Ke6 Qg6+ 16. Kd5 Qg4 17. Kc5 Qa4 18. Kd6 Qc4 19. Ke7 Qd5 20. Kf6 Kf3 21. Kg7 Qd4+ 22. Kf7 Kf4 23. Ke6 Qd3 24. Kf7 Qd7+ 25. Kf6 Qe8 26. Kg7 Kg5 27. Kh7 Kf6 28. Kh6 Qg6# 0-1
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "20.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "0-1"]
+[FEN "8/8/4p2K/4k3/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1. Kg5 Ke4 2. Kh4 e5 3. Kg3 Ke3 4. Kg2 e4 5. Kg1 Kd2 6. Kg2 e3 7. Kh2 e2 8. Kg2 e1=Q 9. Kh3 Qe6+ 10. Kh4 Ke3 11. Kg5 Kf3 12. Kh5 Kf4 13. Kh4 Qg4# 0-1
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "21.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "k7/6K1/P7/8/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1. a7 Kxa7 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "21.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "k7/6K1/P7/8/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1. Kf7 Ka7 2. Ke7 Kxa6 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "22.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "4k3/8/8/1p6/8/4K3/8/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "threefold_repetition"]
+
+1... Kd7 2. Kd2 Ke6 3. Kc1 Kd5 4. Kb1 Kc4 5. Kc2 b4 6. Kb2 b3 7. Kb1 Kd4 8. Kb2 Kc4 9. Kb1 Kb4 10. Kb2 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "22.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "4k3/8/8/1p6/8/4K3/8/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1... b4 2. Kd4 b3 3. Kc3 b2 4. Kxb2 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "23.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "8/8/8/6k1/7P/8/6K1/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1... Kg4 2. h5 Kxh5 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "23.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "8/8/8/6k1/7P/8/6K1/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1... Kxh4 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "24.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "8/5p2/4K3/8/8/8/5k2/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1. Kxf7 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "24.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "8/5p2/4K3/8/8/8/5k2/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1. Kxf7 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "25.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "0-1"]
+[FEN "8/2k5/p3K3/8/8/8/8/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1... Kc6 2. Ke5 Kc5 3. Ke4 Kb4 4. Kd3 Kb3 5. Kd2 Kb2 6. Ke1 a5 7. Kd1 a4 8. Ke1 Kb3 9. Ke2 Kc2 10. Kf3 a3 11. Kg4 Kb3 12. Kh5 Kc2 13. Kg6 Kd2 14. Kg5 a2 15. Kf4 Ke2 16. Ke4 a1=Q 17. Kf5 Qd4 18. Ke6 Kf3 19. Ke7 Qc5+ 20. Kd7 Ke4 21. Ke6 Qe5+ 22. Kf7 Qg5 23. Ke6 Qc5 24. Kf6 Kf4 25. Ke6 Qb4 26. Kd7 Ke3 27. Kc6 Kd3 28. Kd7 Qe4 29. Kd6 Kd4 30. Kc7 Kc3 31. Kd6 Kd4 32. Kc7 Qe7+ 33. Kb6 Qe6+ 34. Kc7 Qd5 35. Kb6 Qf3 36. Ka7 Kd3 37. Ka6 Qc6+ 38. Ka7 Qc8 39. Kb6 Kd4 40. Ka7 Kd5 41. Kb6 Qb8+ 42. Ka6 Kc5 43. Ka5 Qb5# 0-1
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "25.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "0-1"]
+[FEN "8/2k5/p3K3/8/8/8/8/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1... Kb6 2. Kd5 Kb5 3. Kd4 Kb4 4. Kd3 Kb3 5. Kd2 Kb2 6. Kd3 a5 7. Ke4 a4 8. Kf4 a3 9. Kg4 a2 10. Kh5 Kc3 11. Kg5 Kd4 12. Kg4 a1=Q 13. Kf3 Qh1+ 14. Kf2 Ke4 15. Ke2 Qg2+ 16. Kd1 Kd3 17. Kc1 Qc2# 0-1
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "26.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1-0"]
+[FEN "8/8/8/8/6k1/8/1P6/2K5 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1. Kc2 Kf4 2. Kb3 Ke5 3. Ka4 Kf4 4. b4 Ke5 5. Kb5 Kd5 6. Ka6 Kc4 7. b5 Kc5 8. b6 Kc6 9. b7 Kc7 10. Ka7 Kd6 11. b8=Q+ Ke7 12. Qf4 Ke6 13. Qg5 Kf7 14. Kb6 Kf8 15. Kc5 Kf7 16. Kd6 Kf8 17. Ke6 Ke8 18. Qe7# 1-0
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "26.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1-0"]
+[FEN "8/8/8/8/6k1/8/1P6/2K5 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1. Kc2 Kf4 2. Kd3 Ke5 3. Kc4 Kd6 4. Kb5 Kc7 5. Ka6 Kc6 6. b4 Kc7 7. b5 Kb8 8. Kb6 Kc8 9. Ka7 Kd7 10. Kb7 Kd6 11. b6 Kd5 12. Kc8 Ke4 13. b7 Kf3 14. Kc7 Ke3 15. b8=Q Kf2 16. Qc8 Ke3 17. Qf5 Ke2 18. Qf8 Ke3 19. Qf5 Ke2 20. Kd6 Kd2 21. Ke6 Kc3 22. Qb5 Kd4 23. Qb4+ Kd3 24. Kd5 Ke3 25. Qf8 Kd2 26. Qe8 Kd3 27. Qe4+ Kc3 28. Kc5 Kb3 29. Qg2 Kc3 30. Qe2 Kb3 31. Qd2 Ka3 32. Qb4+ Ka2 33. Kc4 Ka1 34. Kc3 Ka2 35. Qb2# 1-0
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "27.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "0-1"]
+[FEN "8/7p/1K5k/8/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1. Kb5 Kh5 2. Kb4 Kg4 3. Kc3 h5 4. Kd2 Kf3 5. Ke1 Kg2 6. Kd1 Kf2 7. Kc1 Kf3 8. Kb1 h4 9. Kb2 h3 10. Kb3 Ke3 11. Kc4 Kf3 12. Kd5 h2 13. Kd4 Kf4 14. Kc5 Kf3 15. Kd5 Kg3 16. Ke6 h1=Q 17. Kd6 Qh5 18. Kc6 Kf3 19. Kd6 Qb5 20. Ke7 Qd5 21. Kf6 Qd4+ 22. Ke6 Qd3 23. Ke7 Qd4 24. Ke6 Qc4+ 25. Kd6 Ke4 26. Ke7 Ke5 27. Kd7 Qc5 28. Ke8 Ke6 29. Kd8 Qc1 30. Ke8 Qc8# 0-1
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "27.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "0-1"]
+[FEN "8/7p/1K5k/8/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1. Kc5 Kg5 2. Kc4 Kf4 3. Kd3 Kf3 4. Kd2 h5 5. Kd3 h4 6. Kc2 h3 7. Kb2 h2 8. Kc2 Ke4 9. Kb1 Kd3 10. Kb2 h1=Q 11. Ka2 Kc3 12. Ka3 Qa1# 0-1
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "28.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1-0"]
+[FEN "8/8/8/8/1k6/8/5P2/7K b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "checkmate"]
+
+1... Kc4 2. Kg2 Kd5 3. Kf3 Ke5 4. Kg4 Kf6 5. Kf4 Kg6 6. Ke5 Kf7 7. Kf5 Kg7 8. Ke6 Kh6 9. f4 Kg7 10. f5 Kf8 11. Kf6 Ke8 12. Kg7 Kd8 13. f6 Kd7 14. f7 Kd8 15. f8=Q+ Kd7 16. Qc5 Kd8 17. Kf6 Kd7 18. Kf7 Kd8 19. Ke6 Ke8 20. Qe7# 1-0
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "28.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "8/8/8/8/1k6/8/5P2/7K b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "threefold_repetition"]
+
+1... Kc3 2. Kh2 Kd4 3. Kg3 Ke5 4. Kg4 Kf6 5. Kf4 Kg6 6. Ke5 Kf7 7. f3 Ke7 8. Kf5 Kd6 9. f4 Ke7 10. Kg6 Kf8 11. f5 Ke7 12. Kg7 Kd6 13. Kf6 Kd5 14. Kf7 Ke5 15. f6 Kd5 16. Kg7 Kc4 17. f7 Kd3 18. f8=Q Kc4 19. Kf7 Kd3 20. Qc8 Kd2 21. Qf8 Ke2 22. Qe7+ Kd2 23. Qe4 Kc3 24. Qg4 Kd3 25. Qc8 Kd2 26. Ke6 Kd3 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "29.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "8/k7/8/8/pK6/8/8/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1... Kb6 2. Kxa4 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "29.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "8/k7/8/8/pK6/8/8/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1... a3 2. Kxa3 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "30.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "4k3/8/8/3P2K1/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1. d6 Kd7 2. Kf4 Kxd6 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "30.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "4k3/8/8/3P2K1/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "threefold_repetition"]
+
+1. Kf5 Kd7 2. Ke5 Ke7 3. d6+ Kd7 4. Kd5 Kd8 5. Kc6 Kc8 6. Kd5 Kd8 7. Ke4 Kc8 8. Kf5 Kd8 9. Kf6 Kd7 10. Ke5 Kd8 11. Kd5 Kd7 12. Kc5 Kd8 13. Kd5 Kd7 14. Ke5 Kd8 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "31.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "1k6/8/8/8/7p/8/8/7K w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1. Kg1 Kc7 2. Kf1 Kc6 3. Kg1 Kd5 4. Kf1 h3 5. Kg1 Kd4 6. Kf1 h2 7. Kg2 h1=R 8. Kxh1 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "31.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "1k6/8/8/8/7p/8/8/7K w - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1. Kh2 h3 2. Kxh3 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "32.1"]
+[White "Aster 0.7.3-conversion-dev"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[FEN "8/8/1K1k4/8/8/4P3/8/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1... Ke5 2. e4 Kxe4 1/2-1/2
+
+[Event "Aster paired engine benchmark"]
+[Site "?"]
+[Date "2026.10.04"]
+[Round "32.2"]
+[White "Stockfish 19"]
+[Black "Aster 0.7.3-conversion-dev"]
+[Result "1/2-1/2"]
+[FEN "8/8/1K1k4/8/8/4P3/8/8 b - - 0 1"]
+[SetUp "1"]
+[TimeControl "-"]
+[TimeLimit "5000 nodes/move"]
+[Termination "insufficient_material"]
+
+1... Kd5 2. Kb5 Ke4 3. Kc4 Kxe3 1/2-1/2
+

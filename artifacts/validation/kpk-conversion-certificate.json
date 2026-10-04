@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "winning_states": 111282,
+  "legal_successor_edges": 772036,
+  "promotion_edges": 51084,
+  "max_conversion_bound": 38,
+  "dump_sha256": "1e1842a3ba5d514d9c0704ff365f3647aed5807fc47bb346c5a539744cc923e3",
+  "source_sha256": "6d967dd69bf703dd99d165f5715ea0a03a8701468bff613cfedfe3eb767ddef6",
+  "seconds": 6.088,
+  "interpretation": "Every pawn-side win has a strictly decreasing legal conversion strategy against every defender reply. Promotion terminals independently verified with Syzygy. Bounds are conservative, not optimal distances."
+}

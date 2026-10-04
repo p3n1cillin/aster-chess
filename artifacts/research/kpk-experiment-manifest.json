@@ -1,0 +1,184 @@
+{
+  "schema": 1,
+  "pipeline": {
+    "path": "artifacts/research/kpk-pipeline-final/manifest.json",
+    "sha256": "0c7efd05fd2d501538f331aff3cff86330d487cdfc77d48113f6f5cd5a0c447c"
+  },
+  "engines": [
+    {
+      "path": "artifacts/research/kpk-source/manifest.json",
+      "sha256": "5c9b1a9909590309f24c8ed87b1929ec3b71d75e9a292392d75641c05a826293"
+    },
+    {
+      "path": "artifacts/research/king-context-release-source/manifest.json",
+      "sha256": "2f121c2ad3c1cc34e9ba759c3e686da4bd75433543cbb26d08ae9de48b8414cf"
+    },
+    {
+      "path": "artifacts/research/kpk-control-source/manifest.json",
+      "sha256": "e54adc6e529f4135d2a30858051f5b1b32e577430c92ac2c488ee76cac93492c"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/matches/kpk-vs-0.6.0-v5-30ms.analysis.json",
+      "sha256": "27585bf11e04df0d2c61e08ce6a737eacf5efb4de6115819e707a65999fa298c"
+    },
+    {
+      "path": "artifacts/matches/kpk-vs-0.6.0-v5-30ms.audit.json",
+      "sha256": "90234248491f303d805263711f23caf1c7aca1a2a4e35beec8280a14a831e491"
+    },
+    {
+      "path": "artifacts/matches/kpk-vs-0.6.0-v5-30ms.json",
+      "sha256": "c566df3b3fa42db08dbcf19e913e332f18a25a001ee4586346d99465d12fc768"
+    },
+    {
+      "path": "artifacts/matches/kpk-vs-0.6.0-v5-30ms.pgn",
+      "sha256": "b511b4fa02255515ee1ea2f93c2d282ba556f7e53640286be1cba88347cc51ae"
+    },
+    {
+      "path": "artifacts/publish/kpk-control-dev/Aster.exe",
+      "sha256": "5cf8525d5d174e55fbfaf0ed33f2245e4059fc4281375ba75397ba48dc2e3868"
+    },
+    {
+      "path": "artifacts/publish/kpk-dev/Aster.exe",
+      "sha256": "d00a50e657ddab709df6a01f0aaf828584cf29a28362da79b3ecd7a8c92512e5"
+    },
+    {
+      "path": "artifacts/publish/win-x64/Aster.exe",
+      "sha256": "734d538faba6f43d5533981421b59a0a3cccbec60cf1dbc9980391ef58528b14"
+    },
+    {
+      "path": "artifacts/research/king-context-release-source/manifest.json",
+      "sha256": "2f121c2ad3c1cc34e9ba759c3e686da4bd75433543cbb26d08ae9de48b8414cf"
+    },
+    {
+      "path": "artifacts/research/kpk-control-source/manifest.json",
+      "sha256": "e54adc6e529f4135d2a30858051f5b1b32e577430c92ac2c488ee76cac93492c"
+    },
+    {
+      "path": "artifacts/research/kpk-plan-v1.json",
+      "sha256": "f6f29e1c9e96a6b519f86a5e49aaf2f57a68ab4f81096543da7051f848c6c9eb"
+    },
+    {
+      "path": "artifacts/research/kpk-source/manifest.json",
+      "sha256": "5c9b1a9909590309f24c8ed87b1929ec3b71d75e9a292392d75641c05a826293"
+    },
+    {
+      "path": "artifacts/validation/kpk-generated-v1.bin",
+      "sha256": "1e1842a3ba5d514d9c0704ff365f3647aed5807fc47bb346c5a539744cc923e3"
+    },
+    {
+      "path": "artifacts/benchmarks/kpk-control-depth7.json",
+      "sha256": "d576b533f9326f368c50f18c7b946d0dc504d0f7d3feab192cbe4c97d5d7f360"
+    },
+    {
+      "path": "artifacts/benchmarks/kpk-depth7.json",
+      "sha256": "ea21b01ccbed0a7df748354b459e01efa07572633173dc808985adec9b4811a0"
+    },
+    {
+      "path": "artifacts/validation/kpk-control-build.txt",
+      "sha256": "62d18ddf81d20334347387b900dd6d7ff7602613f6e4db5ccd12a20093bbe2c1"
+    },
+    {
+      "path": "artifacts/validation/kpk-control-engine-tests.txt",
+      "sha256": "9722ef638daccc8a20687d56b6f1c5d80a932778928fee9d7591e6d4bd191ec6"
+    },
+    {
+      "path": "artifacts/validation/kpk-control-rules.json",
+      "sha256": "f8dd5ef3dd90ebfeda9665e3e42a10d811bb549e5494a8c8f4117ce45dff74bd"
+    },
+    {
+      "path": "artifacts/validation/kpk-conversion-certificate.json",
+      "sha256": "b16fea2aaaa28a67fa777eb743f6c33195e308a0983c825fd072284eb65d79f0"
+    },
+    {
+      "path": "artifacts/validation/kpk-default-rules.json",
+      "sha256": "bef3dc7f48d26d81a0df5a55cf8015c93974c9d3113fc5b3b4d345753e023f77"
+    },
+    {
+      "path": "artifacts/validation/kpk-endgame-tactics.json",
+      "sha256": "8cc8471432988258a5937bc8e3fe74690e9761a6af7187487b8401aa3d8f41f4"
+    },
+    {
+      "path": "artifacts/validation/kpk-engine-tests.txt",
+      "sha256": "8488f5dd84a30fb0fbedb5be3c536759185d12b0778bf10272489e25d087b5d1"
+    },
+    {
+      "path": "artifacts/validation/kpk-exhaustive-v1.json",
+      "sha256": "c7d7e1b35b5505e6748b4db772223bb08ea5e582d5eed3df14259ee29b79895d"
+    },
+    {
+      "path": "artifacts/validation/kpk-generated-v1.bin",
+      "sha256": "1e1842a3ba5d514d9c0704ff365f3647aed5807fc47bb346c5a539744cc923e3"
+    },
+    {
+      "path": "artifacts/validation/kpk-initial-engine-tests.txt",
+      "sha256": "f2addddd11b9760fc9ea5739427e2bc04e0d2108107f5111c8849942d2a6f09b"
+    },
+    {
+      "path": "artifacts/validation/kpk-match-coverage.json",
+      "sha256": "f837514dd7e398ffb3dfdd487544a4023a54dd64f31744d0236a670a8f7baefb"
+    },
+    {
+      "path": "artifacts/validation/kpk-move-choices.json",
+      "sha256": "489320582c1dcfacfc3cdbf441d40dd85be10e392b2e41698d639c0a37115b1f"
+    },
+    {
+      "path": "artifacts/validation/kpk-move-choices.json.cases.json",
+      "sha256": "1022f01665405e9f17a36c1a5890f8d9750bd2032689173c0ccb3a237b1215a8"
+    },
+    {
+      "path": "artifacts/validation/kpk-quiet-tactics.json",
+      "sha256": "ada31c45d2adf505df4b6c03376fb0b315222789857915be555e2af8acd38f8e"
+    },
+    {
+      "path": "artifacts/validation/kpk-rules.json",
+      "sha256": "554e386ca7fbb2d22ff136d3e2d5634bb3d34608cbf7b46498aa9be9d0a7124d"
+    },
+    {
+      "path": "artifacts/validation/kpk-runtime.json",
+      "sha256": "dbf9d7cf5517fe15e1579c9e31fab0af2af8bedc29d3e31dd55d6853da89ac73"
+    },
+    {
+      "path": "artifacts/validation/kpk-tactics.json",
+      "sha256": "9144026db00351701ed7acc28dab012046362e4f5d2d93430f7f370644746e97"
+    },
+    {
+      "path": "docs/KPK.md",
+      "sha256": "6e6a970bf871a425304caf51fce80fae37664cfc2567c9d1a407ffd016637515"
+    },
+    {
+      "path": "tests/fixtures/endgames-v1.json",
+      "sha256": "be7b57e12be2fb570ee24e75c610af5ea5f7f125da8d125d11b0fe5443ef9ee9"
+    },
+    {
+      "path": "tests/fixtures/openings-v5.json",
+      "sha256": "e63c68d4024428bef2f84a4289db06c4aee70e60aa9f081cf437d2a6d237c46e"
+    },
+    {
+      "path": "tools/syzygy-development-v1/manifest.json",
+      "sha256": "b6995f13703467b2eb9d5b1ab0dd0da63eaeedd23725236526e7e8a0d241dfaa"
+    },
+    {
+      "path": "tools/syzygy-development-v1/KBvK.rtbw",
+      "sha256": "bc0d8ab3560de9038460f0e8f61e3b7efd3e3d0327d19ae0387c0da7ddeb244d"
+    },
+    {
+      "path": "tools/syzygy-development-v1/KNvK.rtbw",
+      "sha256": "9d3518b12df3d2006441df758bce31e961346e70a11920aaad75c647003bb6e7"
+    },
+    {
+      "path": "tools/syzygy-development-v1/KPvK.rtbw",
+      "sha256": "63ad9e15cd0f5e91e42e6f669a9f6116ae9f9eabd85757e9fb28d2be6074aed9"
+    },
+    {
+      "path": "tools/syzygy-development-v1/KQvK.rtbw",
+      "sha256": "45c453e5113a714bd4ece1cb5ba78cf5d21dd8b06f89708675d164fbe9bd3b53"
+    },
+    {
+      "path": "tools/syzygy-development-v1/KRvK.rtbw",
+      "sha256": "37f8601644113dc83be9822913d6ecf75e5c8b7eeb11b7689c38a3ff986d2a48"
+    }
+  ],
+  "interpretation": "Original opt-in KPK evaluation with exhaustive oracle agreement, certified conservative bounds, move-choice checks and paired regressions. No production promotion, Elo or Stockfish superiority claim."
+}

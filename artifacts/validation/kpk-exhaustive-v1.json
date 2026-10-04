@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "entries": 196608,
+  "checked_entries": 196608,
+  "counts": {
+    "invalid": 30932,
+    "oracle_wdl_2": 62480,
+    "wins": 111282,
+    "oracle_wdl_-2": 48802,
+    "oracle_wdl_0": 54394,
+    "draws": 54394
+  },
+  "discrepancies": [],
+  "max_conversion_bound": 38,
+  "dump_sha256": "1e1842a3ba5d514d9c0704ff365f3647aed5807fc47bb346c5a539744cc923e3",
+  "oracle_manifest_sha256": "b6995f13703467b2eb9d5b1ab0dd0da63eaeedd23725236526e7e8a0d241dfaa",
+  "source_sha256": "a37f80c99b14126a5f29c747c8e288407640cb5bdb1d9807a2cbac766c892402",
+  "seconds": 6.966,
+  "interpretation": "Exhaustive independent Syzygy comparison on normalized KPK states. WDL assumes fresh reversible clock; runtime near-rule50 fallback is separate."
+}

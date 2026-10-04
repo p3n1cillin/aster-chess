@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\win-x64\\Aster.exe",
+  "binary_sha256": "734d538faba6f43d5533981421b59a0a3cccbec60cf1dbc9980391ef58528b14",
+  "positions_checked": 17491,
+  "reference_perft_positions": 14,
+  "protocol_checks": "passed",
+  "seed": 20261003,
+  "seconds": 4.548,
+  "legal_move_existence_positions": 17491,
+  "random_setups": {
+    "positions": 2000,
+    "in_check": 370,
+    "checkmates": 13,
+    "stalemates": 2
+  },
+  "eval_file": "artifacts/training/king-context-balanced-slow-v1/model.ann"
+}

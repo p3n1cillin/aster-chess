@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "timestamp_utc": "2026-10-04T14:35:23.790025+00:00",
+  "status": "last measured reference retained; experimental candidate unrated",
+  "public_elo": null,
+  "last_measured_local_rating": 2300.0,
+  "primary_95_percent_local_interval": [
+    2264.569193124282,
+    2335.368761113015
+  ],
+  "local_scale": "SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash",
+  "rated_engine_sha256": "52439f58cf10a4a5dad8d4d48bf9db59db0a3f14b3c1c6216f79182b4a646d9a",
+  "rated_engine": "artifacts/publish/conversion-default-dotnet/Aster.dll",
+  "rated_version": "Aster 0.7.4-feature-dev",
+  "reference_record": {
+    "path": "artifacts/ratings/session-20261004-calibration-v1.json",
+    "sha256": "a061a91ffe95b169dd69ee8ffb4c4126ad8884315bd15bb5f89c546bf69aa90d"
+  },
+  "candidate_sha256": "5da4badd1232e51edf1622fa347a979a3df61fe6f24473874d3f474e0bddf07d",
+  "candidate_general_regression": [
+    {
+      "label": "30ms",
+      "wins": 47,
+      "draws": 53,
+      "losses": 28,
+      "unresolved": 0,
+      "forfeits": 0,
+      "games": 128,
+      "score_bounds": [
+        0.57421875,
+        0.57421875
+      ],
+      "primary_95_percent_interval": [
+        0.51171875,
+        0.6401515151515151
+      ],
+      "families": 58
+    },
+    {
+      "label": "100ms",
+      "wins": 7,
+      "draws": 16,
+      "losses": 9,
+      "unresolved": 0,
+      "forfeits": 0,
+      "games": 32,
+      "score_bounds": [
+        0.46875,
+        0.46875
+      ],
+      "primary_95_percent_interval": [
+        0.34375,
+        0.59375
+      ],
+      "families": 16
+    }
+  ],
+  "failed_gates": [
+    "timing_at_least_5_percent",
+    "match-100ms"
+  ],
+  "reason": "Deferred-scoring candidate fails declared speed gate and remains opt-in. The old rating stays attached to its exact frozen engine; no Elo inferred from regression or microbenchmark."
+}

@@ -1,0 +1,226 @@
+{
+  "schema": 1,
+  "candidate_source": {
+    "path": "artifacts/research/squared-source/manifest.json",
+    "sha256": "0469261e3e74778e93eafef0832e1aab4ca25e571b2e6707f9c3d0680e1c441e"
+  },
+  "baseline_source": {
+    "path": "artifacts/research/king-context-release-source/manifest.json",
+    "sha256": "2f121c2ad3c1cc34e9ba759c3e686da4bd75433543cbb26d08ae9de48b8414cf"
+  },
+  "pipeline_source": {
+    "path": "artifacts/research/pair-loss-pipeline-final/manifest.json",
+    "sha256": "996557661c00b545fb6e42920830aca63726775ddb97036f8e7a110d008d6b0d"
+  },
+  "models": [
+    {
+      "model": {
+        "path": "artifacts/training/pair-loss-moderate-v1/model.ann",
+        "sha256": "98535307c0c30b529cf242d2a947ccacf66678b25710f80de980e13ec4c77975"
+      },
+      "training": {
+        "path": "artifacts/training/pair-loss-moderate-v1/training.json",
+        "sha256": "d6eb5a7200d077a15ae3ab2663c961fd4ad2f8e7c614ad71b687618446db4ecc"
+      },
+      "checkpoint": {
+        "path": "artifacts/training/pair-loss-moderate-v1/checkpoint.pt",
+        "sha256": "8035bb684f46ddce0b0470549e3ff96d4eda97074ce33c468bbaad2482318fa3"
+      },
+      "trainer_sources": [
+        {
+          "name": "train_network.py",
+          "sha256": "17e2c855066273743b5befa9ec72a041834f0deaa727294fd34699beb0bce228"
+        },
+        {
+          "name": "neural_format.py",
+          "sha256": "a2d369f0f223e47f8acfbaaad6f01583171a659df7b6b06553feead416824312"
+        }
+      ]
+    },
+    {
+      "model": {
+        "path": "artifacts/training/pair-loss-strong-v1/model.ann",
+        "sha256": "fb47b3ae39ac8b50b480f339f3aef4ccaaba01f35a2dc0803944978cbe1aba72"
+      },
+      "training": {
+        "path": "artifacts/training/pair-loss-strong-v1/training.json",
+        "sha256": "eb5e7b5ddee961452fcc2f6f47b9bb39f1b1e6ab3bf6cf690151ef03d2702743"
+      },
+      "checkpoint": {
+        "path": "artifacts/training/pair-loss-strong-v1/checkpoint.pt",
+        "sha256": "e981ce9880a08f86961aaf97960134245f52f2d383fdc62ac5d89137740eb16b"
+      },
+      "trainer_sources": [
+        {
+          "name": "train_network.py",
+          "sha256": "17e2c855066273743b5befa9ec72a041834f0deaa727294fd34699beb0bce228"
+        },
+        {
+          "name": "neural_format.py",
+          "sha256": "a2d369f0f223e47f8acfbaaad6f01583171a659df7b6b06553feead416824312"
+        }
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "report": {
+        "path": "artifacts/matches/pair-loss-moderate-vs-0.6.0-30ms.json",
+        "sha256": "558d9ca7c9665eb71315d6a03e73be6475211afeddecdf4146465ffc898877dc"
+      },
+      "pgn": {
+        "path": "artifacts/matches/pair-loss-moderate-vs-0.6.0-30ms.pgn",
+        "sha256": "b1556bc9f170df2d91a1903727b1d7487e59be8e7f043e3d26890c40f0808576"
+      },
+      "analysis": {
+        "path": "artifacts/matches/pair-loss-moderate-vs-0.6.0-30ms.analysis.json",
+        "sha256": "c77cd7689c1b02a10897a93d96aa37e9abe6470ee0c645913a8336b32bf78585"
+      }
+    },
+    {
+      "report": {
+        "path": "artifacts/matches/pair-loss-strong-vs-0.6.0-30ms.json",
+        "sha256": "9a5198b5ac316f9f33ddf6c3493846d9a1526572df23f2eb7952f4bf94bab302"
+      },
+      "pgn": {
+        "path": "artifacts/matches/pair-loss-strong-vs-0.6.0-30ms.pgn",
+        "sha256": "6832b2e93ad8ee368969519f5fe2a0e3dd2efa395943a6e462fd779990ea20de"
+      },
+      "analysis": {
+        "path": "artifacts/matches/pair-loss-strong-vs-0.6.0-30ms.analysis.json",
+        "sha256": "35474b1e653768b99b508d75a4dc4aa2d2fc5a3a5c214e067c753012fc28d707"
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/benchmarks/pair-loss-classical-depth7.json",
+      "sha256": "491626ba709fe390a92214e7704aa60b141d23423aaeb3ef837c706555354e89"
+    },
+    {
+      "path": "artifacts/data/teacher-balanced-50k-v1-classical.jsonl",
+      "sha256": "6e8611691e7edad66f038a655eb38d296d72c680cd5c765ff144935c438de6de"
+    },
+    {
+      "path": "artifacts/data/teacher-balanced-50k-v1.jsonl",
+      "sha256": "12ce8369406bb509436d47df0d676e07838c8f2b5456c59120d84551e9d22636"
+    },
+    {
+      "path": "artifacts/data/teacher-turn-60k-static-v1-classical.jsonl",
+      "sha256": "bfea2a0226b65879961c7cde551dde3d715a9e59ef9e99adf627e3744f2be162"
+    },
+    {
+      "path": "artifacts/data/teacher-turn-60k-static-v1-classical.jsonl.classical.json",
+      "sha256": "eb35cd3500f303f9b82a41d4be85860db5eecaf1b80c86ff6b0716e5706405f9"
+    },
+    {
+      "path": "artifacts/data/teacher-turn-60k-static-v1.jsonl",
+      "sha256": "46b8e7210c93e9e382366e90963901906407e7c4d748838b3424cef6a63adc8a"
+    },
+    {
+      "path": "artifacts/data/teacher-turn-60k-static-v1.jsonl.manifest.json",
+      "sha256": "04f1b6bce25bd6539a7fa472144498e7fee46150ea5191f4926a401597921410"
+    },
+    {
+      "path": "artifacts/data/teacher-turn-augmented-60k-v1-classical.jsonl",
+      "sha256": "01d47f36fb955547c8c4224c626c1a9690e1103ff247366b3020ce80af4801ec"
+    },
+    {
+      "path": "artifacts/data/teacher-turn-augmented-60k-v1-classical.jsonl.classical.json",
+      "sha256": "7ba658a3e5f5b1b32bdfd698046ae5fdf01e021ce012dc781994ec5b7edb15ff"
+    },
+    {
+      "path": "artifacts/data/teacher-turn-augmented-60k-v1.jsonl",
+      "sha256": "fe56daefb371f3114e72a729dc396b3d364366b49d90edc7588e0316417e12c2"
+    },
+    {
+      "path": "artifacts/data/teacher-turn-augmented-60k-v1.jsonl.manifest.json",
+      "sha256": "53ef5929bbe868844cab60ba9d7cd02f3733f1d9e55c1e893916226fbb3e26e5"
+    },
+    {
+      "path": "artifacts/research/turn-static-experiment-manifest.json",
+      "sha256": "70c85664968e2f2109424e38786c9b5e28ef5c9610ba2e8cca092f57d9fffb94"
+    },
+    {
+      "path": "artifacts/validation/pair-loss-classical-rules.json",
+      "sha256": "824259cc7c1279c90b788ce6ff6d43737af060699d2312389a0534933fbbe9c0"
+    },
+    {
+      "path": "artifacts/validation/pair-loss-engine-tests.txt",
+      "sha256": "6c660523d9f0aea12ddc1e5dd7e407f0cbabede690fc8398e7108e4890eccb1c"
+    },
+    {
+      "path": "artifacts/validation/pair-loss-heldout-pairs.json",
+      "sha256": "788fa84b922cf516bbef629efb88db6c26f3b8aaa8876f8f99640b34fc539036"
+    },
+    {
+      "path": "artifacts/validation/pair-loss-moderate-inference.json",
+      "sha256": "bebc0505e95d4639297083b97fa3044485e16fff8e28479a3da34f89e8c2b531"
+    },
+    {
+      "path": "artifacts/validation/pair-loss-moderate-quiet-tactics-5000nodes.json",
+      "sha256": "fe1c561c3db167ec20a81a152544e5af22fa0e804ca9d4d318aa3e8e647af9e9"
+    },
+    {
+      "path": "artifacts/validation/pair-loss-moderate-quiet-tactics.json",
+      "sha256": "4f6a1858f863aa9066f2a7e2b7594f0ac95c6053cf6ab6c663e4bf988d1c586c"
+    },
+    {
+      "path": "artifacts/validation/pair-loss-moderate-rules.json",
+      "sha256": "c85848b7859513ad0cde3d20673144fa1980521566a86dcf6c811c57e4f7008b"
+    },
+    {
+      "path": "artifacts/validation/pair-loss-moderate-tactics.json",
+      "sha256": "09c39725d460d2c0bdf58b860ae75ce00a461f5e56aa4fefc55ae1737802bd44"
+    },
+    {
+      "path": "artifacts/validation/pair-loss-strong-inference.json",
+      "sha256": "c1fb2d40a5016c1e09b51a9f6751e3fda3101f8d2a61945d7c9336954924edcd"
+    },
+    {
+      "path": "artifacts/validation/pair-loss-strong-quiet-tactics.json",
+      "sha256": "52fee127a800e0ef67d38d04eaf3e140863f0a2ba1540ffeee8735220db52ed2"
+    },
+    {
+      "path": "artifacts/validation/pair-loss-strong-tactics.json",
+      "sha256": "830aba30d727d76f921cb8d2b9686e6516121bce2fdf2be78d1779f3dafe3a1b"
+    },
+    {
+      "path": "artifacts/validation/pair-loss-training-checks.txt",
+      "sha256": "d3711a9245d63387ca7690e9c24d1bd99c25df8183874860f1dc35368c4100d1"
+    },
+    {
+      "path": "artifacts/validation/teacher-turn-augmented-60k-v1.json",
+      "sha256": "06633ef0269c02541845a0e708f04c34a2693a98534277e6a140ee20b8b974c1"
+    },
+    {
+      "path": "artifacts/validation/teacher-turn-pairs-10k-v1.json",
+      "sha256": "3258c1e3e202b10989a65ecfe2d12ee0fabc5788f4918baac36ae3d1f6b7f3b0"
+    },
+    {
+      "path": "artifacts/validation/turn-dependence-128-v1.json",
+      "sha256": "63afcd70820891940370c3b88f101d31940d65e2669556f1542c042ec46825cf"
+    },
+    {
+      "path": "docs/PAIR-LOSS.md",
+      "sha256": "187e51f65e99480e9d91175a281f1331ca713f939030ef33993b71d2b2b8f1b4"
+    },
+    {
+      "path": "tests/fixtures/openings-v4.json",
+      "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d"
+    },
+    {
+      "path": "tests/fixtures/tactics-quiet-v1.json",
+      "sha256": "3868e2bd596272873251fca177e2a253027cb7bc8dc99b42148cdcb6f86641d9"
+    },
+    {
+      "path": "tests/fixtures/tactics-v1.json",
+      "sha256": "ceb0c13cefcf4a44d2a570e562c52f62316dbf6260d25d912f4fc846595844b3"
+    },
+    {
+      "path": "tools/stockfish/manifest.json",
+      "sha256": "e584d21a94ee3bbde60353857ae6f3ef01f9a3483299adef072c72f08a6f017f"
+    }
+  ],
+  "interpretation": "Independent optional runtime research; no selected neural default, Elo claim or Stockfish superiority."
+}

@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "data": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\teacher-balanced-50k-v1.jsonl",
+  "data_sha256": "12ce8369406bb509436d47df0d676e07838c8f2b5456c59120d84551e9d22636",
+  "positions": 50000,
+  "games_with_positions": 2695,
+  "canonical_duplicates": 0,
+  "regression_overlap": 0,
+  "checks": 0,
+  "phase_distribution": {
+    "middlegame": 11752,
+    "opening": 16079,
+    "endgame": 22169
+  },
+  "king_region_counts": {
+    "0": 3682,
+    "1": 7524,
+    "2": 19223,
+    "3": 45525,
+    "4": 1693,
+    "5": 4149,
+    "6": 6465,
+    "7": 4652,
+    "8": 851,
+    "9": 1612,
+    "10": 1800,
+    "11": 1372,
+    "12": 255,
+    "13": 417,
+    "14": 412,
+    "15": 368
+  },
+  "score_distribution": {
+    "negative": 23345,
+    "zero": 1992,
+    "positive": 24663,
+    "median_abs_cp": 114.0,
+    "max_abs_cp": 600
+  },
+  "label_node_median": 8197.0,
+  "exclusions": [
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v1.json",
+      "sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de"
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v2.json",
+      "sha256": "cdcc99af780b795546a22e84b2557bd20168097c2694cc9b12ce2e242f74bc25"
+    },
+    {
+      "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\tests\\fixtures\\openings-v3.json",
+      "sha256": "b2c84b63c566712b33102e1a5f246d47a010a0341f8396c5e036937c74e241f3"
+    }
+  ],
+  "manifest_checked": true,
+  "interpretation": "Legality/provenance and exact-position exclusions only; opening-family overlap can remain. Teacher search labels are not outcomes or playing-strength evidence."
+}

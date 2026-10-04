@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\history-lmr-dev\\Aster.exe",
+  "binary_sha256": "39c20acc165856fb6191a90acd7ee45b414de4d16798ec10c08d53afd05a0be1",
+  "positions_checked": 2614,
+  "reference_perft_positions": 14,
+  "protocol_checks": "passed",
+  "seed": 20261003,
+  "seconds": 1.221,
+  "legal_move_existence_positions": 2614,
+  "random_setups": {
+    "positions": 1000,
+    "in_check": 172,
+    "checkmates": 6,
+    "stalemates": 1
+  },
+  "eval_file": null
+}

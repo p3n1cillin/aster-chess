@@ -1,0 +1,223 @@
+{
+  "schema": 1,
+  "seed": 20261031,
+  "plies": 20,
+  "selection_nodes": 2048,
+  "verification_nodes": 20000,
+  "max_abs_teacher_cp": 80,
+  "teacher": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "training_exclusion": null,
+  "training_exclusions": [
+    {
+      "path": "artifacts\\data\\teacher-20k-v1.jsonl",
+      "sha256": "191c4bbd054ad307860d8935f2cb4f6cbcf73e60b68a3a397e646e8b6d691527",
+      "positions": 20000
+    },
+    {
+      "path": "artifacts\\data\\teacher-turn-augmented-60k-v1.jsonl",
+      "sha256": "fe56daefb371f3114e72a729dc396b3d364366b49d90edc7588e0316417e12c2",
+      "positions": 60000
+    },
+    {
+      "path": "artifacts\\data\\endgame-diagnostic-512-v1.jsonl",
+      "sha256": "f07976034c668f3ae636ef96cf584891b1bb1a7cc1648e73d975e837277b29a3",
+      "positions": 512
+    }
+  ],
+  "prior_suites_excluded": [
+    {
+      "path": "tests\\fixtures\\openings-v1.json",
+      "sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v2.json",
+      "sha256": "cdcc99af780b795546a22e84b2557bd20168097c2694cc9b12ce2e242f74bc25",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v3.json",
+      "sha256": "b2c84b63c566712b33102e1a5f246d47a010a0341f8396c5e036937c74e241f3",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v4.json",
+      "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v5.json",
+      "sha256": "e63c68d4024428bef2f84a4289db06c4aee70e60aa9f081cf437d2a6d237c46e",
+      "positions": 64
+    }
+  ],
+  "attempts_used": 256,
+  "teacher_options": {
+    "Threads": 1,
+    "Hash": 64
+  },
+  "generator_sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746",
+  "interpretation": "Seeded near-best MultiPV continuations from the start, distinct final positions, balanced under a bounded teacher check. Teacher scores do not prove equality; this is a regression suite, not an independent final superiority test.",
+  "rating_role": "screen",
+  "parent_suite": {
+    "path": "tests/fixtures/rating-parent-v1.json",
+    "sha256": "6c4d7453e3572cadf786d81be8ad8b0b85fb9c461d5e93847612959836efb112"
+  },
+  "parent_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "splitter_sha256": "2e9435aec82297f3759aada40e3691cc3b709686d63efbb759b2c262bf8ce5f6",
+  "openings": [
+    {
+      "id": "opening-089",
+      "moves": "c2c3 d7d5 d1c2 b8d7 a2a3 g8f6 g2g3 e7e5 f1g2 f8d6 a3a4 e8g8 d2d3 f8e8 b1d2 a7a5 e2e4 h7h6 e4d5 d7c5",
+      "fen": "r1bqr1k1/1pp2pp1/3b1n1p/p1nPp3/P7/2PP2P1/1PQN1PBP/R1B1K1NR w KQ - 1 11",
+      "teacher_white_cp": -73,
+      "teacher_depth": 12,
+      "attempt": 158
+    },
+    {
+      "id": "opening-057",
+      "moves": "d2d4 b8c6 c2c4 d7d5 g1f3 e7e5 c1g5 f7f6 g5d2 c6d4 f3d4 e5d4 e2e3 g8e7 e3d4 c8e6 d1c2 d8d7 d2e3 d5c4",
+      "fen": "r3kb1r/pppqn1pp/4bp2/8/2pP4/4B3/PPQ2PPP/RN2KB1R w KQkq - 0 11",
+      "teacher_white_cp": -71,
+      "teacher_depth": 12,
+      "attempt": 111
+    },
+    {
+      "id": "opening-126",
+      "moves": "d2d4 g8f6 c1f4 c7c6 b1d2 f6h5 f4b8 a8b8 c2c3 d7d6 d1a4 b7b5 a4c2 a7a6 g2g3 d8c7 a2a4 h5f6 f1h3 g7g6",
+      "fen": "1rb1kb1r/2q1pp1p/p1pp1np1/1p6/P2P4/2P3PB/1PQNPP1P/R3K1NR w KQk - 0 11",
+      "teacher_white_cp": -2,
+      "teacher_depth": 13,
+      "attempt": 224
+    },
+    {
+      "id": "opening-142",
+      "moves": "g1f3 c7c5 e2e4 g7g6 f1e2 d7d6 e1g1 f8g7 h2h3 a7a6 f1e1 d8c7 c2c4 b8c6 b1c3 e7e6 b2b3 a8b8 a1b1 b7b6",
+      "fen": "1rb1k1nr/2q2pbp/ppnpp1p1/2p5/2P1P3/1PN2N1P/P2PBPP1/1RBQR1K1 w k - 0 11",
+      "teacher_white_cp": -20,
+      "teacher_depth": 11,
+      "attempt": 253
+    },
+    {
+      "id": "opening-080",
+      "moves": "g1f3 c7c5 c2c4 e7e6 b1c3 f8e7 e2e4 a7a6 a1b1 d7d6 b2b4 c5b4 d1a4 d8d7 a4b4 d7c7 d2d4 b8c6 b4a4 c8d7",
+      "fen": "r3k1nr/1pqbbppp/p1npp3/8/Q1PPP3/2N2N2/P4PPP/1RB1KB1R w Kkq - 3 11",
+      "teacher_white_cp": 41,
+      "teacher_depth": 10,
+      "attempt": 142
+    },
+    {
+      "id": "opening-034",
+      "moves": "c2c3 g8f6 e2e3 a7a6 g1f3 d7d5 f1e2 c7c6 d1b3 e7e6 a2a4 f8d6 c3c4 e8g8 b3c3 c6c5 e1g1 e6e5 d2d4 f6e4",
+      "fen": "rnbq1rk1/1p3ppp/p2b4/2ppp3/P1PPn3/2Q1PN2/1P2BPPP/RNB2RK1 w - - 1 11",
+      "teacher_white_cp": 23,
+      "teacher_depth": 14,
+      "attempt": 59
+    },
+    {
+      "id": "opening-082",
+      "moves": "e2e4 c7c5 h2h3 b8c6 g1f3 g8f6 f1d3 e7e6 e1g1 d7d5 e4d5 f6d5 b1c3 f8e7 f1e1 d5f6 f3e5 c6b4 d3c4 c8d7",
+      "fen": "r2qk2r/pp1bbppp/4pn2/2p1N3/1nB5/2N4P/PPPP1PP1/R1BQR1K1 w kq - 8 11",
+      "teacher_white_cp": 16,
+      "teacher_depth": 12,
+      "attempt": 146
+    },
+    {
+      "id": "opening-109",
+      "moves": "g1f3 c7c5 b1c3 g7g6 a2a4 b8c6 c3d5 f8g7 e2e4 e7e6 d5c3 a7a6 d2d3 b7b6 c1f4 d7d6 h2h4 h7h5 d1c1 d6d5",
+      "fen": "r1bqk1nr/5pb1/ppn1p1p1/2pp3p/P3PB1P/2NP1N2/1PP2PP1/R1Q1KB1R w KQkq - 0 11",
+      "teacher_white_cp": -70,
+      "teacher_depth": 12,
+      "attempt": 195
+    },
+    {
+      "id": "opening-108",
+      "moves": "d2d4 d7d5 e2e3 e7e6 b2b3 b8d7 f1d3 d8g5 e1f1 g5e7 c1a3 e7d8 a3f8 d7f8 d1e2 c7c5 h2h4 g8f6 b1c3 a7a6",
+      "fen": "r1bqkn1r/1p3ppp/p3pn2/2pp4/3P3P/1PNBP3/P1P1QPP1/R4KNR w kq - 0 11",
+      "teacher_white_cp": -20,
+      "teacher_depth": 10,
+      "attempt": 194
+    },
+    {
+      "id": "opening-124",
+      "moves": "c2c3 d7d5 f2f4 c7c5 g2g3 e7e6 f1g2 f8e7 g1f3 d8c7 e2e3 b7b6 e1g1 c8b7 b2b3 g8f6 c3c4 d5d4 d1e2 h7h5",
+      "fen": "rn2k2r/pbq1bpp1/1p2pn2/2p4p/2Pp1P2/1P2PNP1/P2PQ1BP/RNB2RK1 w kq - 0 11",
+      "teacher_white_cp": 44,
+      "teacher_depth": 12,
+      "attempt": 220
+    },
+    {
+      "id": "opening-045",
+      "moves": "c2c3 e7e6 d2d4 f7f5 g2g3 g8f6 g1f3 f8e7 c3c4 c7c6 f1g2 e8g8 c1f4 d7d5 e1g1 f6e4 d1c2 g7g5 f4c1 c8d7",
+      "fen": "rn1q1rk1/pp1bb2p/2p1p3/3p1pp1/2PPn3/5NP1/PPQ1PPBP/RNB2RK1 w - - 2 11",
+      "teacher_white_cp": 28,
+      "teacher_depth": 11,
+      "attempt": 91
+    },
+    {
+      "id": "opening-110",
+      "moves": "e2e4 b8c6 g1f3 d7d5 e4d5 d8d5 f1e2 g8f6 e1g1 c8f5 d2d4 d5d7 e2b5 f5g4 h2h3 g4f3 d1f3 a7a6 b5c4 d7d4",
+      "fen": "r3kb1r/1pp1pppp/p1n2n2/8/2Bq4/5Q1P/PPP2PP1/RNB2RK1 w kq - 0 11",
+      "teacher_white_cp": 16,
+      "teacher_depth": 11,
+      "attempt": 196
+    },
+    {
+      "id": "opening-105",
+      "moves": "c2c3 e7e6 d2d4 f7f5 g1f3 f8e7 c1f4 b7b6 h2h3 d7d6 d1c2 g8f6 g2g4 e8g8 f4h2 f6e4 g4f5 e6f5 h1g1 g8h8",
+      "fen": "rnbq1r1k/p1p1b1pp/1p1p4/5p2/3Pn3/2P2N1P/PPQ1PP1B/RN2KBR1 w Q - 2 11",
+      "teacher_white_cp": -80,
+      "teacher_depth": 13,
+      "attempt": 186
+    },
+    {
+      "id": "opening-088",
+      "moves": "e2e4 b8c6 g1f3 e7e5 f1b5 g8e7 d2d3 g7g6 h2h4 d7d6 b5a4 c8g4 d3d4 d6d5 e4d5 d8d5 b1c3 d5c4 f3e5 c4a4",
+      "fen": "r3kb1r/ppp1np1p/2n3p1/4N3/q2P2bP/2N5/PPP2PP1/R1BQK2R w KQkq - 0 11",
+      "teacher_white_cp": 75,
+      "teacher_depth": 12,
+      "attempt": 156
+    },
+    {
+      "id": "opening-033",
+      "moves": "d2d4 d7d5 c1f4 c8f5 e2e3 g8f6 f1e2 e7e6 b1d2 h7h6 g1f3 c7c6 a1c1 f8d6 f4d6 d8d6 f3e5 a7a5 g2g4 f5e4",
+      "fen": "rn2k2r/1p3pp1/2pqpn1p/p2pN3/3Pb1P1/4P3/PPPNBP1P/2RQK2R w Kkq - 1 11",
+      "teacher_white_cp": 18,
+      "teacher_depth": 14,
+      "attempt": 57
+    },
+    {
+      "id": "opening-069",
+      "moves": "c2c3 g8f6 d2d4 a7a6 d1c2 b8c6 g1f3 d7d6 e2e4 e7e5 f1d3 g7g6 h2h3 c8d7 c1e3 f8g7 e1g1 e8g8 c2d2 d8e7",
+      "fen": "r4rk1/1ppbqpbp/p1np1np1/4p3/3PP3/2PBBN1P/PP1Q1PP1/RN3RK1 w - - 7 11",
+      "teacher_white_cp": 17,
+      "teacher_depth": 9,
+      "attempt": 126
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "source_files": [
+    {
+      "path": "scripts/generate_endgame_diagnostic.py",
+      "sha256": "9a56c1ba91fead0f5f071426114680f3e3be8d002e69d388cde271a5ad485e6a"
+    },
+    {
+      "path": "scripts/audit_endgame_diagnostic.py",
+      "sha256": "0f6b648bec2b722211d8904c534128d1f8b894170edabdb0fff0e2fd48de2ac9"
+    },
+    {
+      "path": "scripts/score_endgame_diagnostic.py",
+      "sha256": "42b3ff7ba72f4f7e5f8fd25f73c4a3fec2b1b3026d1adff1ca0f48984f7cebdf"
+    },
+    {
+      "path": "scripts/recheck_endgame_labels.py",
+      "sha256": "aa7a9d9a95c33543aebdf284af8fe6c16de6e82d845b30a55cdc45cf37b3fb99"
+    },
+    {
+      "path": "scripts/preserve_endgame_diagnostic.py",
+      "sha256": "7c8b61dcf96c41c1648ab6284933fd116624b9d9f4dbf7ed7f61983448c42bbf"
+    },
+    {
+      "path": "scripts/tactics.py",
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    },
+    {
+      "path": "scripts/match.py",
+      "sha256": "a74d4910f04ab6156897d233666aece45baefae32dea816a90dc0ae13bb6e992"
+    },
+    {
+      "path": "scripts/neural_format.py",
+      "sha256": "a2d369f0f223e47f8acfbaaad6f01583171a659df7b6b06553feead416824312"
+    },
+    {
+      "path": "scripts/uci_client.py",
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "scripts/verify.py",
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    }
+  ]
+}

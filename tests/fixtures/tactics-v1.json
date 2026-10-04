@@ -1,0 +1,368 @@
+{
+  "schema": 1,
+  "seed": 20261005,
+  "teacher": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "positions": [
+    {
+      "id": "tactic-001",
+      "fen": "3q1rk1/rppbb1pp/p1n1p3/3pP3/3P2PP/P1NBnN2/1PP1Q3/1R2K2R w K - 0 16",
+      "best_moves": [
+        "e2e3"
+      ],
+      "teacher_depth": 13,
+      "teacher_nodes": 50013,
+      "score_gap_cp": 292,
+      "source_game": 0
+    },
+    {
+      "id": "tactic-002",
+      "fen": "r1b1kbr1/Q5pp/2p2p2/pp1p4/4PP2/P1N3P1/1P4BP/R1B1K1R1 b Qq - 2 18",
+      "best_moves": [
+        "a8a7"
+      ],
+      "teacher_depth": 14,
+      "teacher_nodes": 50011,
+      "score_gap_cp": 592,
+      "source_game": 1
+    },
+    {
+      "id": "tactic-003",
+      "fen": "1r6/6p1/2pkb3/R4p1p/p1pKpP1P/P3N1P1/1P6/8 w - - 7 41",
+      "best_moves": [
+        "e3f5"
+      ],
+      "teacher_depth": 13,
+      "teacher_nodes": 50018,
+      "score_gap_cp": 133,
+      "source_game": 1
+    },
+    {
+      "id": "tactic-004",
+      "fen": "r1b5/p5k1/2p1R3/2p2p1r/2Pp1P2/3N4/PPQ4P/7K b - - 0 33",
+      "best_moves": [
+        "c8e6"
+      ],
+      "teacher_depth": 13,
+      "teacher_nodes": 50016,
+      "score_gap_cp": 536,
+      "source_game": 2
+    },
+    {
+      "id": "tactic-005",
+      "fen": "r7/p5k1/2p1br2/5p2/2PpNP2/8/PPQ4P/7K w - - 3 36",
+      "best_moves": [
+        "e4f6"
+      ],
+      "teacher_depth": 14,
+      "teacher_nodes": 50033,
+      "score_gap_cp": 269,
+      "source_game": 2
+    },
+    {
+      "id": "tactic-006",
+      "fen": "8/1R6/p5R1/P4k2/1P6/3n2P1/6KP/4r3 b - - 2 33",
+      "best_moves": [
+        "f5g6"
+      ],
+      "teacher_depth": 12,
+      "teacher_nodes": 50048,
+      "score_gap_cp": 522,
+      "source_game": 3
+    },
+    {
+      "id": "tactic-007",
+      "fen": "8/5k1p/1p6/4N3/3N2P1/P2br3/1p3K1P/8 b - - 0 53",
+      "best_moves": [
+        "e3e5"
+      ],
+      "teacher_depth": 15,
+      "teacher_nodes": 50013,
+      "score_gap_cp": 616,
+      "source_game": 4
+    },
+    {
+      "id": "tactic-008",
+      "fen": "r3kb1r/1b1p1qpp/p3p3/1ppN4/3p4/1B1P4/PPP2PPP/2RQ1RK1 w kq - 4 16",
+      "best_moves": [
+        "d5c7"
+      ],
+      "teacher_depth": 12,
+      "teacher_nodes": 50006,
+      "score_gap_cp": 237,
+      "source_game": 6
+    },
+    {
+      "id": "tactic-009",
+      "fen": "b2k3r/3p2pp/p2bp3/1pp3q1/3p3Q/1B1P1P2/PPP3PP/2R2RK1 w - - 4 21",
+      "best_moves": [
+        "h4g5"
+      ],
+      "teacher_depth": 15,
+      "teacher_nodes": 50040,
+      "score_gap_cp": 1259,
+      "source_game": 6
+    },
+    {
+      "id": "tactic-010",
+      "fen": "2kr4/7P/4p3/P1Q5/3P4/2p1pb2/P5PK/2R5 b - - 0 43",
+      "best_moves": [
+        "c8d7"
+      ],
+      "teacher_depth": 15,
+      "teacher_nodes": 50014,
+      "score_gap_cp": 20572,
+      "source_game": 6
+    },
+    {
+      "id": "tactic-011",
+      "fen": "2r2rk1/p7/6p1/1P1p2np/6pP/P3P1P1/4NP2/3R2K1 w - - 0 26",
+      "best_moves": [
+        "h4g5"
+      ],
+      "teacher_depth": 13,
+      "teacher_nodes": 50014,
+      "score_gap_cp": 525,
+      "source_game": 8
+    },
+    {
+      "id": "tactic-012",
+      "fen": "5rk1/p7/6p1/1P1R2Pp/4P3/P5P1/5pr1/5K2 w - - 0 31",
+      "best_moves": [
+        "d5f5"
+      ],
+      "teacher_depth": 14,
+      "teacher_nodes": 50040,
+      "score_gap_cp": 284,
+      "source_game": 8
+    },
+    {
+      "id": "tactic-013",
+      "fen": "rnbb2k1/pp3pp1/4p2p/4N3/2B2n2/2N1P3/PP3PPP/R3K3 w - - 0 16",
+      "best_moves": [
+        "e3f4"
+      ],
+      "teacher_depth": 14,
+      "teacher_nodes": 50012,
+      "score_gap_cp": 405,
+      "source_game": 13
+    },
+    {
+      "id": "tactic-014",
+      "fen": "8/8/8/3b2p1/3k2P1/1P2R2P/2K5/8 b - - 0 58",
+      "best_moves": [
+        "d4e3"
+      ],
+      "teacher_depth": 14,
+      "teacher_nodes": 50055,
+      "score_gap_cp": 1071,
+      "source_game": 13
+    },
+    {
+      "id": "tactic-015",
+      "fen": "1Q6/8/8/1K5b/8/4k3/8/6q1 b - - 0 68",
+      "best_moves": [
+        "g1b1"
+      ],
+      "teacher_depth": 15,
+      "teacher_nodes": 50059,
+      "score_gap_cp": 808,
+      "source_game": 13
+    },
+    {
+      "id": "tactic-016",
+      "fen": "r5k1/2q1bppp/2p1n3/1p2P3/4r3/1BQ1BP1P/5P2/1R1R2K1 w - - 0 26",
+      "best_moves": [
+        "f3e4"
+      ],
+      "teacher_depth": 15,
+      "teacher_nodes": 50056,
+      "score_gap_cp": 132,
+      "source_game": 14
+    },
+    {
+      "id": "tactic-017",
+      "fen": "2k5/4Q3/rr3p2/6pp/7P/1P6/1P4P1/3R1K2 b - - 8 48",
+      "best_moves": [
+        "b6d6"
+      ],
+      "teacher_depth": 15,
+      "teacher_nodes": 50088,
+      "score_gap_cp": 764,
+      "source_game": 15
+    },
+    {
+      "id": "tactic-018",
+      "fen": "r1b1qrk1/pppp1Npp/5n2/n1b1p3/2B1PP2/2NP4/PPP3PP/R1BQK2R b KQ f3 0 8",
+      "best_moves": [
+        "a5c4"
+      ],
+      "teacher_depth": 16,
+      "teacher_nodes": 50036,
+      "score_gap_cp": 477,
+      "source_game": 18
+    },
+    {
+      "id": "tactic-019",
+      "fen": "3r1k1r/6pp/1n6/pB3pq1/P3P2P/8/1P1R1PP1/2KQ3R w - f6 0 26",
+      "best_moves": [
+        "h4g5"
+      ],
+      "teacher_depth": 15,
+      "teacher_nodes": 50055,
+      "score_gap_cp": 621,
+      "source_game": 19
+    },
+    {
+      "id": "tactic-020",
+      "fen": "7r/4k1pp/8/QB1n1PP1/P7/8/1P3PP1/2K4R w - - 1 31",
+      "best_moves": [
+        "h1e1"
+      ],
+      "teacher_depth": 17,
+      "teacher_nodes": 50039,
+      "score_gap_cp": 28260,
+      "source_game": 19
+    },
+    {
+      "id": "tactic-021",
+      "fen": "6k1/N7/1p1p2Q1/2p1p3/3nP3/7P/2P3P1/K6R b - - 1 38",
+      "best_moves": [
+        "g8h8"
+      ],
+      "teacher_depth": 15,
+      "teacher_nodes": 50031,
+      "score_gap_cp": 28775,
+      "source_game": 20
+    },
+    {
+      "id": "tactic-022",
+      "fen": "r4rk1/3b1ppp/4p3/p7/2p4P/P1bqP3/3NKPP1/5B1R w - - 1 26",
+      "best_moves": [
+        "e2f3"
+      ],
+      "teacher_depth": 19,
+      "teacher_nodes": 50004,
+      "score_gap_cp": 28047,
+      "source_game": 21
+    },
+    {
+      "id": "tactic-023",
+      "fen": "5bk1/8/2b2p1p/1r2p1pP/4PPP1/4N3/p2K4/8 w - - 0 46",
+      "best_moves": [
+        "e3c2"
+      ],
+      "teacher_depth": 14,
+      "teacher_nodes": 50009,
+      "score_gap_cp": 231,
+      "source_game": 21
+    },
+    {
+      "id": "tactic-024",
+      "fen": "r1b1nrk1/pppp2pp/8/4p3/2n1P3/2NP4/PPP2bPP/R1BQKR2 w Q - 0 11",
+      "best_moves": [
+        "f1f2"
+      ],
+      "teacher_depth": 14,
+      "teacher_nodes": 50023,
+      "score_gap_cp": 209,
+      "source_game": 23
+    },
+    {
+      "id": "tactic-025",
+      "fen": "2N4k/2Q2rp1/p7/P1n1p2p/4p3/2PP3P/3K4/R7 w - - 0 36",
+      "best_moves": [
+        "c7f7"
+      ],
+      "teacher_depth": 15,
+      "teacher_nodes": 50019,
+      "score_gap_cp": 394,
+      "source_game": 23
+    },
+    {
+      "id": "tactic-026",
+      "fen": "7k/8/p5p1/P1n1p2p/7N/2Pp3P/1r6/2K2R2 w - - 0 41",
+      "best_moves": [
+        "c1b2"
+      ],
+      "teacher_depth": 14,
+      "teacher_nodes": 50018,
+      "score_gap_cp": 352,
+      "source_game": 23
+    },
+    {
+      "id": "tactic-027",
+      "fen": "rnbk3r/pp3ppp/2nNpq2/3p4/3N3P/2P5/PP1Q1PP1/R3KB1R b KQ - 0 13",
+      "best_moves": [
+        "f6e5"
+      ],
+      "teacher_depth": 16,
+      "teacher_nodes": 50024,
+      "score_gap_cp": 453,
+      "source_game": 28
+    },
+    {
+      "id": "tactic-028",
+      "fen": "1nqk2r1/7p/2n2p2/p2P4/P6P/1R6/1P2BPP1/1KR5 b - - 0 28",
+      "best_moves": [
+        "c8f5"
+      ],
+      "teacher_depth": 15,
+      "teacher_nodes": 50022,
+      "score_gap_cp": 420,
+      "source_game": 28
+    },
+    {
+      "id": "tactic-029",
+      "fen": "rn1q1r1k/7p/p2p2p1/1ppP1P2/8/2b1B1Q1/PP1N1PPP/R4RK1 w - - 0 16",
+      "best_moves": [
+        "b2c3"
+      ],
+      "teacher_depth": 14,
+      "teacher_nodes": 50017,
+      "score_gap_cp": 260,
+      "source_game": 29
+    },
+    {
+      "id": "tactic-030",
+      "fen": "r5k1/7p/p2p2p1/1p1P4/3RrQqP/2P1B3/P4PP1/R5K1 b - - 4 23",
+      "best_moves": [
+        "e4f4"
+      ],
+      "teacher_depth": 13,
+      "teacher_nodes": 50022,
+      "score_gap_cp": 612,
+      "source_game": 29
+    },
+    {
+      "id": "tactic-031",
+      "fen": "r3k2r/pp1bq2p/4pppP/3pn3/3N4/2NQ4/PPP2PP1/2KR1B1R b - - 0 18",
+      "best_moves": [
+        "e5d3"
+      ],
+      "teacher_depth": 14,
+      "teacher_nodes": 50051,
+      "score_gap_cp": 1099,
+      "source_game": 31
+    },
+    {
+      "id": "tactic-032",
+      "fen": "r3r3/pp2qk1p/5ppP/3p4/2BN4/8/PPP2PP1/1K1R3R b - - 2 23",
+      "best_moves": [
+        "d5c4"
+      ],
+      "teacher_depth": 14,
+      "teacher_nodes": 50001,
+      "score_gap_cp": 398,
+      "source_game": 31
+    }
+  ],
+  "interpretation": "Fresh generated games, excluded from specified training data; stable unique move under two teacher budgets. Not an exhaustive proof of optimality."
+}

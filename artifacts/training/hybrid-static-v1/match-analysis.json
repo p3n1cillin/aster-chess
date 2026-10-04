@@ -1,0 +1,31 @@
+{
+  "score": 0.296875,
+  "resolved_pairs": 16,
+  "unresolved_pairs": 0,
+  "opening_clusters": 8,
+  "exploratory_95_percent_interval": [
+    0.1875,
+    0.390625
+  ],
+  "bootstrap_samples": 10000,
+  "seed": 20261003,
+  "pair_scores": [
+    0.25,
+    0.75,
+    0.5,
+    1.0,
+    0.25,
+    0.0,
+    0.5,
+    0.0,
+    0.5,
+    0.0,
+    0.25,
+    0.0,
+    0.25,
+    0.5,
+    0.0,
+    0.0
+  ],
+  "interpretation": "Exploratory opening-cluster resampling, not a predeclared final strength test; small cluster counts and repeated openings limit generalization. No Elo is inferred."
+}

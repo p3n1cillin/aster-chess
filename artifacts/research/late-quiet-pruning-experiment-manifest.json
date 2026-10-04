@@ -1,0 +1,77 @@
+{
+  "status": "rejected_as_default",
+  "matches": [
+    {
+      "report": {
+        "path": "artifacts/matches/late-quiet-pruning-vs-0.6.0-30ms.json",
+        "sha256": "648a30bce62c0f3ee046340a1e3892efb4a58011112603c6a144ab9f83ee42eb"
+      },
+      "pgn": {
+        "path": "artifacts/matches/late-quiet-pruning-vs-0.6.0-30ms.pgn",
+        "sha256": "67dc106a837b59661d50ec5827dc93a0f850e4aa3c1f61042fa2bcada867834f"
+      },
+      "analysis": {
+        "path": "artifacts/matches/late-quiet-pruning-vs-0.6.0-30ms.analysis.json",
+        "sha256": "21b8ee6ae82e8a6192e0fc17d9c0417acf98d0763c826553e395c9f1a834a65a"
+      },
+      "games": 64
+    },
+    {
+      "report": {
+        "path": "artifacts/matches/late-quiet-pruning-vs-0.6.0-100ms.json",
+        "sha256": "8fe4520ac8e3e93d8bb6f7d55751750c5d998a76dddd2097cac52949a5c92f6d"
+      },
+      "pgn": {
+        "path": "artifacts/matches/late-quiet-pruning-vs-0.6.0-100ms.pgn",
+        "sha256": "378c8db1cadf6f6021c6473a770f867dcac0c45f91639f3747ce164e710e3c9d"
+      },
+      "analysis": {
+        "path": "artifacts/matches/late-quiet-pruning-vs-0.6.0-100ms.analysis.json",
+        "sha256": "05e7eb9b591ba1a2f45a7da477851e637da9c2ece8698d8d5104059c990c2acc"
+      },
+      "games": 32
+    },
+    {
+      "report": {
+        "path": "artifacts/matches/late-quiet-pruning-vs-0.6.0-fresh-100ms.json",
+        "sha256": "d67cf5a80eb2b3bb9934cf0a4dd68aba3c19048cdd18b68ea286a1bc5281c8a2"
+      },
+      "pgn": {
+        "path": "artifacts/matches/late-quiet-pruning-vs-0.6.0-fresh-100ms.pgn",
+        "sha256": "bebb9dcb052a81bf61d555a8dda40165a0f30318f3ffa7f1c057c63703bbc96c"
+      },
+      "analysis": {
+        "path": "artifacts/matches/late-quiet-pruning-vs-0.6.0-fresh-100ms.analysis.json",
+        "sha256": "b6aaebfe2083253e2d532ab8b2c2c8fad80a0b9b820e6dd0dd8a34709f63b438"
+      },
+      "games": 64
+    }
+  ],
+  "candidate_source_manifest": {
+    "path": "artifacts/research/late-quiet-pruning-source/manifest.json",
+    "sha256": "4c2b33f587d836643e25b0719f110fb194545daca418a2360e47924686d8a8ab"
+  },
+  "restored_source_manifest": {
+    "path": "artifacts/research/post-pruning-source/manifest.json",
+    "sha256": "fd773284316dd7ca1e6d33a6e835f26fb354976dc8f9e79a0a1980f9718f111f"
+  },
+  "baseline_source_manifest": {
+    "path": "artifacts/research/king-context-release-source/manifest.json",
+    "sha256": "2f121c2ad3c1cc34e9ba759c3e686da4bd75433543cbb26d08ae9de48b8414cf"
+  },
+  "fixtures": [
+    {
+      "path": "tests/fixtures/tactics-quiet-v1.json",
+      "sha256": "3868e2bd596272873251fca177e2a253027cb7bc8dc99b42148cdcb6f86641d9"
+    },
+    {
+      "path": "tests/fixtures/openings-v4.json",
+      "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d"
+    }
+  ],
+  "production_binary": {
+    "path": "artifacts/publish/win-x64/Aster.exe",
+    "sha256": "734d538faba6f43d5533981421b59a0a3cccbec60cf1dbc9980391ef58528b14"
+  },
+  "interpretation": "Exploratory regression evidence; no established playing-strength gain, Elo estimate or Stockfish superiority claim."
+}

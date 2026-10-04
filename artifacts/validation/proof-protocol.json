@@ -1,0 +1,143 @@
+{
+  "passed": true,
+  "behavior_positions": 66,
+  "unchanged_core_files": [
+    "Attacks.cs",
+    "Board.cs",
+    "Evaluation.cs",
+    "KpkBitbase.cs",
+    "MajorMateBitbase.cs",
+    "Move.cs",
+    "NeuralNetwork.cs",
+    "Perft.cs",
+    "Search.cs",
+    "SearchProfile.cs",
+    "StaticExchange.cs",
+    "ThreatEvaluation.cs",
+    "TranspositionTable.cs",
+    "Zobrist.cs"
+  ],
+  "transcripts": [
+    {
+      "engine": "Aster",
+      "response": {
+        "complete": true,
+        "reason": "complete",
+        "summary": "White can force checkmate within 19 plies. The certificate covers every legal defensive reply in 51 positions; every path ends in checkmate.",
+        "positions": 51,
+        "alternatives": [
+          {
+            "Move": "a2b2",
+            "PreservesWin": true,
+            "RemainingPlies": 28,
+            "Reason": "Keeps a win but leaves 28 plies; it does not reduce the current bound."
+          },
+          {
+            "Move": "a2c2",
+            "PreservesWin": true,
+            "RemainingPlies": 28,
+            "Reason": "Keeps a win but leaves 28 plies; it does not reduce the current bound."
+          },
+          {
+            "Move": "a2d2",
+            "PreservesWin": true,
+            "RemainingPlies": 28,
+            "Reason": "Keeps a win but leaves 28 plies; it does not reduce the current bound."
+          },
+          {
+            "Move": "a2e2",
+            "PreservesWin": true,
+            "RemainingPlies": 28,
+            "Reason": "Keeps a win but leaves 28 plies; it does not reduce the current bound."
+          },
+          {
+            "Move": "a2f2",
+            "PreservesWin": true,
+            "RemainingPlies": 24,
+            "Reason": "Keeps a win but leaves 24 plies; it does not reduce the current bound."
+          },
+          {
+            "Move": "a2g2",
+            "PreservesWin": true,
+            "RemainingPlies": 20,
+            "Reason": "Keeps a win but leaves 20 plies; it does not reduce the current bound."
+          },
+          {
+            "Move": "a2h2",
+            "PreservesWin": true,
+            "RemainingPlies": 28,
+            "Reason": "Keeps a win but leaves 28 plies; it does not reduce the current bound."
+          },
+          {
+            "Move": "a2a3",
+            "PreservesWin": true,
+            "RemainingPlies": 26,
+            "Reason": "Keeps a win but leaves 26 plies; it does not reduce the current bound."
+          },
+          {
+            "Move": "a2a4",
+            "PreservesWin": true,
+            "RemainingPlies": 26,
+            "Reason": "Keeps a win but leaves 26 plies; it does not reduce the current bound."
+          },
+          {
+            "Move": "a2a5",
+            "PreservesWin": true,
+            "RemainingPlies": 26,
+            "Reason": "Keeps a win but leaves 26 plies; it does not reduce the current bound."
+          },
+          {
+            "Move": "a2a6",
+            "PreservesWin": true,
+            "RemainingPlies": 24,
+            "Reason": "Keeps a win but leaves 24 plies; it does not reduce the current bound."
+          },
+          {
+            "Move": "a2a7",
+            "PreservesWin": true,
+            "RemainingPlies": 18,
+            "Reason": "Reduces the mate bound from 19 to 18 plies."
+          },
+          {
+            "Move": "a2a8",
+            "PreservesWin": true,
+            "RemainingPlies": 26,
+            "Reason": "Keeps a win but leaves 26 plies; it does not reduce the current bound."
+          },
+          {
+            "Move": "a1b1",
+            "PreservesWin": true,
+            "RemainingPlies": 26,
+            "Reason": "Keeps a win but leaves 26 plies; it does not reduce the current bound."
+          },
+          {
+            "Move": "a1b2",
+            "PreservesWin": true,
+            "RemainingPlies": 24,
+            "Reason": "Keeps a win but leaves 24 plies; it does not reduce the current bound."
+          }
+        ]
+      }
+    },
+    {
+      "engine": "Stockfish 19",
+      "responses": [
+        "Unknown command: 'explain'. Type help for more information.",
+        "readyok"
+      ]
+    }
+  ],
+  "proof_binary_sha256": "427fa0f62cda382c6d6005435412972d63027dbd8eac43a523c52e59d97ce921",
+  "conversion_binary_sha256": "4d18c95d78eb51294944dcd538b07f3ffcd620b78c8ce6dbc7c8f924e74647c4",
+  "stockfish": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "script_sha256": "fc7dce7ca830c618a05ebe83d36ffc3c6dde7f0c8dea12abd6b2b1e3559f0e78",
+  "interpretation": "Native Aster explanation works during infinite search without blocking readiness/stop. Pinned Stockfish's explain command emits no such proof explanation. Core search/evaluation unchanged; 66 fixed-node outputs agree. No claim about third-party Stockfish interfaces or general chess intelligence."
+}

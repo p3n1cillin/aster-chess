@@ -1,0 +1,5765 @@
+{
+  "same_work": true,
+  "median_measured_speed_ratio": 1.0066355505600195,
+  "timing_gate_passed": false,
+  "warmup_rounds": 2,
+  "measured_rounds": 6,
+  "depth": 10,
+  "rounds": [
+    {
+      "iteration": 0,
+      "warmup": true,
+      "total_seconds": {
+        "candidate": 3.0283419999905163,
+        "baseline": 3.1529930999531643
+      },
+      "speed_ratio": 1.0411615002410686,
+      "positions": [
+        {
+          "id": "opening-004",
+          "candidate": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 137487,
+            "cp": 23,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "e7c6",
+              "a2a3",
+              "f8e7",
+              "b2b4",
+              "c6d4",
+              "d3d4",
+              "c7e5",
+              "d4e5",
+              "d7e5"
+            ],
+            "elapsed_seconds": 0.18177439999999478
+          },
+          "baseline": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 137487,
+            "cp": 23,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "e7c6",
+              "a2a3",
+              "f8e7",
+              "b2b4",
+              "c6d4",
+              "d3d4",
+              "c7e5",
+              "d4e5",
+              "d7e5"
+            ],
+            "elapsed_seconds": 0.23861570000008214
+          }
+        },
+        {
+          "id": "opening-025",
+          "baseline": {
+            "bestmove": "d4c5",
+            "depth": 10,
+            "nodes": 38247,
+            "cp": 104,
+            "mate": null,
+            "pv": [
+              "d4c5",
+              "d7d1",
+              "f1d1",
+              "b6d7",
+              "b5c4",
+              "d7c5",
+              "b1c3",
+              "f8g7",
+              "g2g4",
+              "g7c3",
+              "b2c3"
+            ],
+            "elapsed_seconds": 0.02138310000009369
+          },
+          "candidate": {
+            "bestmove": "d4c5",
+            "depth": 10,
+            "nodes": 38247,
+            "cp": 104,
+            "mate": null,
+            "pv": [
+              "d4c5",
+              "d7d1",
+              "f1d1",
+              "b6d7",
+              "b5c4",
+              "d7c5",
+              "b1c3",
+              "f8g7",
+              "g2g4",
+              "g7c3",
+              "b2c3"
+            ],
+            "elapsed_seconds": 0.015916499993181787
+          }
+        },
+        {
+          "id": "opening-096",
+          "candidate": {
+            "bestmove": "c3c4",
+            "depth": 10,
+            "nodes": 109542,
+            "cp": -129,
+            "mate": null,
+            "pv": [
+              "c3c4",
+              "e4f6",
+              "b1c3",
+              "e8g8",
+              "a2a4",
+              "b8d7",
+              "d2d4",
+              "d7b6",
+              "c4d3",
+              "b6d5"
+            ],
+            "elapsed_seconds": 0.04552029998740181
+          },
+          "baseline": {
+            "bestmove": "c3c4",
+            "depth": 10,
+            "nodes": 109542,
+            "cp": -129,
+            "mate": null,
+            "pv": [
+              "c3c4",
+              "e4f6",
+              "b1c3",
+              "e8g8",
+              "a2a4",
+              "b8d7",
+              "d2d4",
+              "d7b6",
+              "c4d3",
+              "b6d5"
+            ],
+            "elapsed_seconds": 0.05949200000031851
+          }
+        },
+        {
+          "id": "opening-008",
+          "baseline": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 298932,
+            "cp": -55,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "b4c6",
+              "f1c4",
+              "f6f5",
+              "e4f5",
+              "c8f5",
+              "e1g1",
+              "e8g8",
+              "b2b4",
+              "a7a5"
+            ],
+            "elapsed_seconds": 0.1728402000007918
+          },
+          "candidate": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 298932,
+            "cp": -55,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "b4c6",
+              "f1c4",
+              "f6f5",
+              "e4f5",
+              "c8f5",
+              "e1g1",
+              "e8g8",
+              "b2b4",
+              "a7a5"
+            ],
+            "elapsed_seconds": 0.14973370000370778
+          }
+        },
+        {
+          "id": "opening-037",
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 379886,
+            "cp": 64,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e7e6",
+              "e2e4",
+              "d7c5",
+              "f1e1",
+              "a7a5",
+              "b2b4",
+              "c5e4",
+              "c3e4",
+              "f6e4",
+              "e1e4",
+              "g7a1",
+              "d1a1",
+              "a5b4"
+            ],
+            "elapsed_seconds": 0.1653436999913538
+          },
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 379886,
+            "cp": 64,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e7e6",
+              "e2e4",
+              "d7c5",
+              "f1e1",
+              "a7a5",
+              "b2b4",
+              "c5e4",
+              "c3e4",
+              "f6e4",
+              "e1e4",
+              "g7a1",
+              "d1a1",
+              "a5b4"
+            ],
+            "elapsed_seconds": 0.17022429998905864
+          }
+        },
+        {
+          "id": "opening-126",
+          "baseline": {
+            "bestmove": "g2g4",
+            "depth": 10,
+            "nodes": 245122,
+            "cp": 16,
+            "mate": null,
+            "pv": [
+              "g2g4",
+              "f5g6",
+              "a2a4",
+              "e7d6",
+              "e1g1",
+              "a7a6",
+              "b2c3",
+              "a5b6",
+              "c3d4",
+              "d7c5",
+              "c4d5",
+              "f6d5"
+            ],
+            "elapsed_seconds": 0.11243799999647308
+          },
+          "candidate": {
+            "bestmove": "g2g4",
+            "depth": 10,
+            "nodes": 245122,
+            "cp": 16,
+            "mate": null,
+            "pv": [
+              "g2g4",
+              "f5g6",
+              "a2a4",
+              "e7d6",
+              "e1g1",
+              "a7a6",
+              "b2c3",
+              "a5b6",
+              "c3d4",
+              "d7c5",
+              "c4d5",
+              "f6d5"
+            ],
+            "elapsed_seconds": 0.11001559998840094
+          }
+        },
+        {
+          "id": "opening-201",
+          "candidate": {
+            "bestmove": "b4c5",
+            "depth": 10,
+            "nodes": 283334,
+            "cp": 27,
+            "mate": null,
+            "pv": [
+              "b4c5",
+              "d6c5",
+              "d2c4",
+              "d8c7",
+              "a1b1",
+              "b7b6",
+              "e1g1",
+              "d7e6",
+              "h2h4",
+              "e6c4",
+              "d3c4"
+            ],
+            "elapsed_seconds": 0.13538430001062807
+          },
+          "baseline": {
+            "bestmove": "b4c5",
+            "depth": 10,
+            "nodes": 283334,
+            "cp": 27,
+            "mate": null,
+            "pv": [
+              "b4c5",
+              "d6c5",
+              "d2c4",
+              "d8c7",
+              "a1b1",
+              "b7b6",
+              "e1g1",
+              "d7e6",
+              "h2h4",
+              "e6c4",
+              "d3c4"
+            ],
+            "elapsed_seconds": 0.13850329999695532
+          }
+        },
+        {
+          "id": "opening-015",
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 1027442,
+            "cp": -105,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "c8b7",
+              "d4c5",
+              "e8g8",
+              "c5c6",
+              "b7c6",
+              "f1d1",
+              "d8b6",
+              "f3d4",
+              "d7c5",
+              "d4c6",
+              "b6c6"
+            ],
+            "elapsed_seconds": 0.5100813000026392
+          },
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 1027442,
+            "cp": -105,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "c8b7",
+              "d4c5",
+              "e8g8",
+              "c5c6",
+              "b7c6",
+              "f1d1",
+              "d8b6",
+              "f3d4",
+              "d7c5",
+              "d4c6",
+              "b6c6"
+            ],
+            "elapsed_seconds": 0.5082800999953179
+          }
+        },
+        {
+          "id": "opening-124",
+          "candidate": {
+            "bestmove": "b4b5",
+            "depth": 10,
+            "nodes": 691588,
+            "cp": -10,
+            "mate": null,
+            "pv": [
+              "b4b5",
+              "a6b5",
+              "e2b5",
+              "g7g6",
+              "d2b3",
+              "b7b6",
+              "b3d4",
+              "f8g7",
+              "d4c6",
+              "e7c6"
+            ],
+            "elapsed_seconds": 0.3491257999994559
+          },
+          "baseline": {
+            "bestmove": "b4b5",
+            "depth": 10,
+            "nodes": 691588,
+            "cp": -10,
+            "mate": null,
+            "pv": [
+              "b4b5",
+              "a6b5",
+              "e2b5",
+              "g7g6",
+              "d2b3",
+              "b7b6",
+              "b3d4",
+              "f8g7",
+              "d4c6",
+              "e7c6"
+            ],
+            "elapsed_seconds": 0.34702489999472164
+          }
+        },
+        {
+          "id": "opening-081",
+          "baseline": {
+            "bestmove": "a4b3",
+            "depth": 10,
+            "nodes": 88609,
+            "cp": 9,
+            "mate": null,
+            "pv": [
+              "a4b3",
+              "g8e7",
+              "d1e3",
+              "e8g8",
+              "a2a4",
+              "b5b4",
+              "c3b4",
+              "b8b4",
+              "b3c4",
+              "g7g5"
+            ],
+            "elapsed_seconds": 0.03942129999632016
+          },
+          "candidate": {
+            "bestmove": "a4b3",
+            "depth": 10,
+            "nodes": 88609,
+            "cp": 9,
+            "mate": null,
+            "pv": [
+              "a4b3",
+              "g8e7",
+              "d1e3",
+              "e8g8",
+              "a2a4",
+              "b5b4",
+              "c3b4",
+              "b8b4",
+              "b3c4",
+              "g7g5"
+            ],
+            "elapsed_seconds": 0.039508500005467795
+          }
+        },
+        {
+          "id": "opening-167",
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 609175,
+            "cp": -54,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "g8f6",
+              "f1e1",
+              "a7a5",
+              "c1e3",
+              "f6d5",
+              "e3d4",
+              "e8g8",
+              "f3e5",
+              "f7f5"
+            ],
+            "elapsed_seconds": 0.25623250000353437
+          },
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 609175,
+            "cp": -54,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "g8f6",
+              "f1e1",
+              "a7a5",
+              "c1e3",
+              "f6d5",
+              "e3d4",
+              "e8g8",
+              "f3e5",
+              "f7f5"
+            ],
+            "elapsed_seconds": 0.2653679000068223
+          }
+        },
+        {
+          "id": "opening-053",
+          "baseline": {
+            "bestmove": "g1f3",
+            "depth": 10,
+            "nodes": 141702,
+            "cp": 25,
+            "mate": null,
+            "pv": [
+              "g1f3",
+              "e5f3",
+              "e2f3",
+              "g7g6",
+              "e1g1",
+              "d7f5",
+              "c2b3",
+              "b7b6",
+              "c1f4",
+              "a7a5",
+              "f1e1"
+            ],
+            "elapsed_seconds": 0.06244789999618661
+          },
+          "candidate": {
+            "bestmove": "g1f3",
+            "depth": 10,
+            "nodes": 141702,
+            "cp": 25,
+            "mate": null,
+            "pv": [
+              "g1f3",
+              "e5f3",
+              "e2f3",
+              "g7g6",
+              "e1g1",
+              "d7f5",
+              "c2b3",
+              "b7b6",
+              "c1f4",
+              "a7a5",
+              "f1e1"
+            ],
+            "elapsed_seconds": 0.06000940001104027
+          }
+        },
+        {
+          "id": "opening-035",
+          "candidate": {
+            "bestmove": "f1h3",
+            "depth": 10,
+            "nodes": 826606,
+            "cp": 100,
+            "mate": null,
+            "pv": [
+              "f1h3",
+              "e8g8",
+              "e1g1",
+              "e4d2",
+              "d1d2",
+              "e5e4",
+              "f3d4",
+              "d7e5",
+              "d4b5",
+              "c7c6"
+            ],
+            "elapsed_seconds": 0.41744100001233164
+          },
+          "baseline": {
+            "bestmove": "f1h3",
+            "depth": 10,
+            "nodes": 826606,
+            "cp": 100,
+            "mate": null,
+            "pv": [
+              "f1h3",
+              "e8g8",
+              "e1g1",
+              "e4d2",
+              "d1d2",
+              "e5e4",
+              "f3d4",
+              "d7e5",
+              "d4b5",
+              "c7c6"
+            ],
+            "elapsed_seconds": 0.4209456999960821
+          }
+        },
+        {
+          "id": "opening-039",
+          "baseline": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 323138,
+            "cp": -8,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "g8f6",
+              "e4e5",
+              "f6e4",
+              "c1e3",
+              "e4c3",
+              "e2c3",
+              "c8b7",
+              "d1d2",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.15365509998810012
+          },
+          "candidate": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 323138,
+            "cp": -8,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "g8f6",
+              "e4e5",
+              "f6e4",
+              "c1e3",
+              "e4c3",
+              "e2c3",
+              "c8b7",
+              "d1d2",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.1529312999919057
+          }
+        },
+        {
+          "id": "opening-180",
+          "candidate": {
+            "bestmove": "g1h3",
+            "depth": 10,
+            "nodes": 678522,
+            "cp": -22,
+            "mate": null,
+            "pv": [
+              "g1h3",
+              "g5g2",
+              "h1g1",
+              "f4g3",
+              "h2g3",
+              "g2h3",
+              "f5e6",
+              "c8e6",
+              "b1c3",
+              "h3g4",
+              "d3e4"
+            ],
+            "elapsed_seconds": 0.32571350000216626
+          },
+          "baseline": {
+            "bestmove": "g1h3",
+            "depth": 10,
+            "nodes": 678522,
+            "cp": -22,
+            "mate": null,
+            "pv": [
+              "g1h3",
+              "g5g2",
+              "h1g1",
+              "f4g3",
+              "h2g3",
+              "g2h3",
+              "f5e6",
+              "c8e6",
+              "b1c3",
+              "h3g4",
+              "d3e4"
+            ],
+            "elapsed_seconds": 0.3251361999864457
+          }
+        },
+        {
+          "id": "opening-134",
+          "baseline": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 248099,
+            "cp": 39,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "g8e7",
+              "b1c3",
+              "e7g6",
+              "g1e2",
+              "g6f4",
+              "e2f4",
+              "f8e7",
+              "h3h4",
+              "e8c8"
+            ],
+            "elapsed_seconds": 0.11541620000207331
+          },
+          "candidate": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 248099,
+            "cp": 39,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "g8e7",
+              "b1c3",
+              "e7g6",
+              "g1e2",
+              "g6f4",
+              "e2f4",
+              "f8e7",
+              "h3h4",
+              "e8c8"
+            ],
+            "elapsed_seconds": 0.11541139999462757
+          }
+        }
+      ]
+    },
+    {
+      "iteration": 1,
+      "warmup": true,
+      "total_seconds": {
+        "candidate": 2.730379999993602,
+        "baseline": 2.8066832999902545
+      },
+      "speed_ratio": 1.027946036814228,
+      "positions": [
+        {
+          "id": "opening-004",
+          "baseline": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 343596,
+            "cp": 28,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "e7c6",
+              "a2a3",
+              "f8e7",
+              "g2g3",
+              "e8g8",
+              "b2b4",
+              "b7b5",
+              "f2f4",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.17729980000876822
+          },
+          "candidate": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 343596,
+            "cp": 28,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "e7c6",
+              "a2a3",
+              "f8e7",
+              "g2g3",
+              "e8g8",
+              "b2b4",
+              "b7b5",
+              "f2f4",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.17312959999253508
+          }
+        },
+        {
+          "id": "opening-025",
+          "candidate": {
+            "bestmove": "d4c5",
+            "depth": 10,
+            "nodes": 42172,
+            "cp": 104,
+            "mate": null,
+            "pv": [
+              "d4c5",
+              "d7d1",
+              "f1d1",
+              "b6d7",
+              "b5c4",
+              "d7c5",
+              "b1c3",
+              "f8g7",
+              "g2g4",
+              "g7c3",
+              "b2c3"
+            ],
+            "elapsed_seconds": 0.017319100006716326
+          },
+          "baseline": {
+            "bestmove": "d4c5",
+            "depth": 10,
+            "nodes": 42172,
+            "cp": 104,
+            "mate": null,
+            "pv": [
+              "d4c5",
+              "d7d1",
+              "f1d1",
+              "b6d7",
+              "b5c4",
+              "d7c5",
+              "b1c3",
+              "f8g7",
+              "g2g4",
+              "g7c3",
+              "b2c3"
+            ],
+            "elapsed_seconds": 0.017671499997959472
+          }
+        },
+        {
+          "id": "opening-096",
+          "baseline": {
+            "bestmove": "c3c4",
+            "depth": 10,
+            "nodes": 114802,
+            "cp": -129,
+            "mate": null,
+            "pv": [
+              "c3c4",
+              "e4f6",
+              "b1c3",
+              "e8g8",
+              "a2a4",
+              "b8d7",
+              "d2d4",
+              "d7b6",
+              "c4d3",
+              "b6d5"
+            ],
+            "elapsed_seconds": 0.05023609999625478
+          },
+          "candidate": {
+            "bestmove": "c3c4",
+            "depth": 10,
+            "nodes": 114802,
+            "cp": -129,
+            "mate": null,
+            "pv": [
+              "c3c4",
+              "e4f6",
+              "b1c3",
+              "e8g8",
+              "a2a4",
+              "b8d7",
+              "d2d4",
+              "d7b6",
+              "c4d3",
+              "b6d5"
+            ],
+            "elapsed_seconds": 0.04883189999964088
+          }
+        },
+        {
+          "id": "opening-008",
+          "candidate": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 299018,
+            "cp": -49,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "b4c6",
+              "e1c1",
+              "a7a6",
+              "f1c4",
+              "b7b5",
+              "c4d5",
+              "c8d7",
+              "d5c6",
+              "d7c6"
+            ],
+            "elapsed_seconds": 0.153759099994204
+          },
+          "baseline": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 299018,
+            "cp": -49,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "b4c6",
+              "e1c1",
+              "a7a6",
+              "f1c4",
+              "b7b5",
+              "c4d5",
+              "c8d7",
+              "d5c6",
+              "d7c6"
+            ],
+            "elapsed_seconds": 0.15607579999777954
+          }
+        },
+        {
+          "id": "opening-037",
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 337821,
+            "cp": 64,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e7e6",
+              "e2e4",
+              "d7c5",
+              "f1e1",
+              "a7a5",
+              "b2b4",
+              "c5e4",
+              "c3e4",
+              "f6e4",
+              "e1e4",
+              "g7a1",
+              "d1a1",
+              "a5b4"
+            ],
+            "elapsed_seconds": 0.15136770000390243
+          },
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 337821,
+            "cp": 64,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e7e6",
+              "e2e4",
+              "d7c5",
+              "f1e1",
+              "a7a5",
+              "b2b4",
+              "c5e4",
+              "c3e4",
+              "f6e4",
+              "e1e4",
+              "g7a1",
+              "d1a1",
+              "a5b4"
+            ],
+            "elapsed_seconds": 0.14748560001316946
+          }
+        },
+        {
+          "id": "opening-126",
+          "candidate": {
+            "bestmove": "g2g4",
+            "depth": 10,
+            "nodes": 281691,
+            "cp": 16,
+            "mate": null,
+            "pv": [
+              "g2g4",
+              "f5g6",
+              "a2a4",
+              "e7d6",
+              "e1g1",
+              "a7a6",
+              "b2c3",
+              "a5b6",
+              "c3d4",
+              "d7c5",
+              "c4d5",
+              "f6d5"
+            ],
+            "elapsed_seconds": 0.12831339999684133
+          },
+          "baseline": {
+            "bestmove": "g2g4",
+            "depth": 10,
+            "nodes": 281691,
+            "cp": 16,
+            "mate": null,
+            "pv": [
+              "g2g4",
+              "f5g6",
+              "a2a4",
+              "e7d6",
+              "e1g1",
+              "a7a6",
+              "b2c3",
+              "a5b6",
+              "c3d4",
+              "d7c5",
+              "c4d5",
+              "f6d5"
+            ],
+            "elapsed_seconds": 0.13117499998770654
+          }
+        },
+        {
+          "id": "opening-201",
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 303378,
+            "cp": 29,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e8g8",
+              "d2c4",
+              "d8c7",
+              "b4b5",
+              "c6a5",
+              "c4a5",
+              "c7a5",
+              "c3c4",
+              "g6g5"
+            ],
+            "elapsed_seconds": 0.1386524000117788
+          },
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 303378,
+            "cp": 29,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e8g8",
+              "d2c4",
+              "d8c7",
+              "b4b5",
+              "c6a5",
+              "c4a5",
+              "c7a5",
+              "c3c4",
+              "g6g5"
+            ],
+            "elapsed_seconds": 0.13678749999962747
+          }
+        },
+        {
+          "id": "opening-015",
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 390243,
+            "cp": -68,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e8g8",
+              "f1d1",
+              "f6h5",
+              "f4e3",
+              "d8c7",
+              "e4e5",
+              "c5d4",
+              "e3d4",
+              "d7c5"
+            ],
+            "elapsed_seconds": 0.18944669999473263
+          },
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 390243,
+            "cp": -68,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e8g8",
+              "f1d1",
+              "f6h5",
+              "f4e3",
+              "d8c7",
+              "e4e5",
+              "c5d4",
+              "e3d4",
+              "d7c5"
+            ],
+            "elapsed_seconds": 0.2190896999964025
+          }
+        },
+        {
+          "id": "opening-124",
+          "baseline": {
+            "bestmove": "b4b5",
+            "depth": 10,
+            "nodes": 880961,
+            "cp": 5,
+            "mate": null,
+            "pv": [
+              "b4b5",
+              "a6b5",
+              "e2b5",
+              "h7h5",
+              "d2b3",
+              "b7b6",
+              "b3d4",
+              "g7g6",
+              "a2a4",
+              "c8b7"
+            ],
+            "elapsed_seconds": 0.4497972999961348
+          },
+          "candidate": {
+            "bestmove": "b4b5",
+            "depth": 10,
+            "nodes": 880961,
+            "cp": 5,
+            "mate": null,
+            "pv": [
+              "b4b5",
+              "a6b5",
+              "e2b5",
+              "h7h5",
+              "d2b3",
+              "b7b6",
+              "b3d4",
+              "g7g6",
+              "a2a4",
+              "c8b7"
+            ],
+            "elapsed_seconds": 0.43603249998704996
+          }
+        },
+        {
+          "id": "opening-081",
+          "candidate": {
+            "bestmove": "a4b3",
+            "depth": 10,
+            "nodes": 100677,
+            "cp": 9,
+            "mate": null,
+            "pv": [
+              "a4b3",
+              "g8e7",
+              "d1e3",
+              "e8g8",
+              "a2a4",
+              "b5b4",
+              "f3d2",
+              "g7g6",
+              "g2g4",
+              "e7c6"
+            ],
+            "elapsed_seconds": 0.04528340000251774
+          },
+          "baseline": {
+            "bestmove": "a4b3",
+            "depth": 10,
+            "nodes": 100677,
+            "cp": 9,
+            "mate": null,
+            "pv": [
+              "a4b3",
+              "g8e7",
+              "d1e3",
+              "e8g8",
+              "a2a4",
+              "b5b4",
+              "f3d2",
+              "g7g6",
+              "g2g4",
+              "e7c6"
+            ],
+            "elapsed_seconds": 0.0461494000046514
+          }
+        },
+        {
+          "id": "opening-167",
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 578963,
+            "cp": -64,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "g8f6",
+              "f1e1",
+              "a7a5",
+              "h2h4",
+              "f6e4",
+              "f3g5",
+              "f7f5",
+              "e2f3",
+              "e4g5",
+              "c1g5"
+            ],
+            "elapsed_seconds": 0.2468042999971658
+          },
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 578963,
+            "cp": -64,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "g8f6",
+              "f1e1",
+              "a7a5",
+              "h2h4",
+              "f6e4",
+              "f3g5",
+              "f7f5",
+              "e2f3",
+              "e4g5",
+              "c1g5"
+            ],
+            "elapsed_seconds": 0.2454479000007268
+          }
+        },
+        {
+          "id": "opening-053",
+          "candidate": {
+            "bestmove": "g1f3",
+            "depth": 10,
+            "nodes": 145429,
+            "cp": 25,
+            "mate": null,
+            "pv": [
+              "g1f3",
+              "e5f3",
+              "e2f3",
+              "g7g6",
+              "e1g1",
+              "d7f5",
+              "c2b3",
+              "b7b6",
+              "c1f4",
+              "a7a5",
+              "f1e1"
+            ],
+            "elapsed_seconds": 0.06196120000095107
+          },
+          "baseline": {
+            "bestmove": "g1f3",
+            "depth": 10,
+            "nodes": 145429,
+            "cp": 25,
+            "mate": null,
+            "pv": [
+              "g1f3",
+              "e5f3",
+              "e2f3",
+              "g7g6",
+              "e1g1",
+              "d7f5",
+              "c2b3",
+              "b7b6",
+              "c1f4",
+              "a7a5",
+              "f1e1"
+            ],
+            "elapsed_seconds": 0.06198519999452401
+          }
+        },
+        {
+          "id": "opening-035",
+          "baseline": {
+            "bestmove": "e2e3",
+            "depth": 10,
+            "nodes": 548064,
+            "cp": 90,
+            "mate": null,
+            "pv": [
+              "e2e3",
+              "e8g8",
+              "f1b5",
+              "d7f6",
+              "e1g1",
+              "c8g4",
+              "d1c2",
+              "g7g5",
+              "a2a4",
+              "a5b4",
+              "c3b4"
+            ],
+            "elapsed_seconds": 0.28265510000346694
+          },
+          "candidate": {
+            "bestmove": "e2e3",
+            "depth": 10,
+            "nodes": 548064,
+            "cp": 90,
+            "mate": null,
+            "pv": [
+              "e2e3",
+              "e8g8",
+              "f1b5",
+              "d7f6",
+              "e1g1",
+              "c8g4",
+              "d1c2",
+              "g7g5",
+              "a2a4",
+              "a5b4",
+              "c3b4"
+            ],
+            "elapsed_seconds": 0.27497610000136774
+          }
+        },
+        {
+          "id": "opening-039",
+          "candidate": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 462047,
+            "cp": -8,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "g8f6",
+              "e4e5",
+              "f6e4",
+              "c1e3",
+              "e4c3",
+              "e2c3",
+              "c8b7",
+              "d1d2",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.2206068000086816
+          },
+          "baseline": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 462047,
+            "cp": -8,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "g8f6",
+              "e4e5",
+              "f6e4",
+              "c1e3",
+              "e4c3",
+              "e2c3",
+              "c8b7",
+              "d1d2",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.22641709999879822
+          }
+        },
+        {
+          "id": "opening-180",
+          "baseline": {
+            "bestmove": "g1h3",
+            "depth": 10,
+            "nodes": 656500,
+            "cp": -22,
+            "mate": null,
+            "pv": [
+              "g1h3",
+              "g5g2",
+              "h1g1",
+              "f4g3",
+              "h2g3",
+              "g2h3",
+              "f5e6",
+              "c8e6",
+              "b1c3",
+              "h3g4",
+              "d3e4"
+            ],
+            "elapsed_seconds": 0.3142140999989351
+          },
+          "candidate": {
+            "bestmove": "g1h3",
+            "depth": 10,
+            "nodes": 656500,
+            "cp": -22,
+            "mate": null,
+            "pv": [
+              "g1h3",
+              "g5g2",
+              "h1g1",
+              "f4g3",
+              "h2g3",
+              "g2h3",
+              "f5e6",
+              "c8e6",
+              "b1c3",
+              "h3g4",
+              "d3e4"
+            ],
+            "elapsed_seconds": 0.3177785000007134
+          }
+        },
+        {
+          "id": "opening-134",
+          "candidate": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 287408,
+            "cp": 33,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "g8e7",
+              "b1c3",
+              "e7g6",
+              "g1e2",
+              "f8e7",
+              "h3h4",
+              "e8g8",
+              "b2b4",
+              "g6f4",
+              "e2f4"
+            ],
+            "elapsed_seconds": 0.13322069999412633
+          },
+          "baseline": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 287408,
+            "cp": 33,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "g8e7",
+              "b1c3",
+              "e7g6",
+              "g1e2",
+              "f8e7",
+              "h3h4",
+              "e8g8",
+              "b2b4",
+              "g6f4",
+              "e2f4"
+            ],
+            "elapsed_seconds": 0.13709279999602586
+          }
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "warmup": false,
+      "total_seconds": {
+        "candidate": 2.600582500002929,
+        "baseline": 2.629073799980688
+      },
+      "speed_ratio": 1.0109557377924856,
+      "positions": [
+        {
+          "id": "opening-004",
+          "candidate": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 373894,
+            "cp": 28,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "e7c6",
+              "a2a3",
+              "f8e7",
+              "g2g3",
+              "e8g8",
+              "b2b4",
+              "b7b5",
+              "f2f4",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.1913706000050297
+          },
+          "baseline": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 373894,
+            "cp": 28,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "e7c6",
+              "a2a3",
+              "f8e7",
+              "g2g3",
+              "e8g8",
+              "b2b4",
+              "b7b5",
+              "f2f4",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.19600149999314453
+          }
+        },
+        {
+          "id": "opening-025",
+          "baseline": {
+            "bestmove": "d4c5",
+            "depth": 10,
+            "nodes": 42125,
+            "cp": 104,
+            "mate": null,
+            "pv": [
+              "d4c5",
+              "d7d1",
+              "f1d1",
+              "b6d7",
+              "b5c4",
+              "d7c5",
+              "b1c3",
+              "f8g7",
+              "g2g4",
+              "g7c3",
+              "b2c3"
+            ],
+            "elapsed_seconds": 0.018616500005009584
+          },
+          "candidate": {
+            "bestmove": "d4c5",
+            "depth": 10,
+            "nodes": 42125,
+            "cp": 104,
+            "mate": null,
+            "pv": [
+              "d4c5",
+              "d7d1",
+              "f1d1",
+              "b6d7",
+              "b5c4",
+              "d7c5",
+              "b1c3",
+              "f8g7",
+              "g2g4",
+              "g7c3",
+              "b2c3"
+            ],
+            "elapsed_seconds": 0.017378099990310147
+          }
+        },
+        {
+          "id": "opening-096",
+          "candidate": {
+            "bestmove": "c3c4",
+            "depth": 10,
+            "nodes": 113258,
+            "cp": -129,
+            "mate": null,
+            "pv": [
+              "c3c4",
+              "e4f6",
+              "b1c3",
+              "e8g8",
+              "a2a4",
+              "b8d7",
+              "d2d4",
+              "d7b6",
+              "c4d3",
+              "b6d5"
+            ],
+            "elapsed_seconds": 0.04990440000256058
+          },
+          "baseline": {
+            "bestmove": "c3c4",
+            "depth": 10,
+            "nodes": 113258,
+            "cp": -129,
+            "mate": null,
+            "pv": [
+              "c3c4",
+              "e4f6",
+              "b1c3",
+              "e8g8",
+              "a2a4",
+              "b8d7",
+              "d2d4",
+              "d7b6",
+              "c4d3",
+              "b6d5"
+            ],
+            "elapsed_seconds": 0.04933579999487847
+          }
+        },
+        {
+          "id": "opening-008",
+          "baseline": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 282009,
+            "cp": -55,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "b4c6",
+              "f1c4",
+              "f6f5",
+              "e4f5",
+              "c8f5",
+              "e1g1",
+              "e8g8",
+              "b2b4",
+              "a7a5"
+            ],
+            "elapsed_seconds": 0.14495640000677668
+          },
+          "candidate": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 282009,
+            "cp": -55,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "b4c6",
+              "f1c4",
+              "f6f5",
+              "e4f5",
+              "c8f5",
+              "e1g1",
+              "e8g8",
+              "b2b4",
+              "a7a5"
+            ],
+            "elapsed_seconds": 0.14186180000251625
+          }
+        },
+        {
+          "id": "opening-037",
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 280749,
+            "cp": 66,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "b7b6",
+              "b2b4",
+              "c8b7",
+              "e2e4",
+              "f6e4",
+              "c3e4",
+              "g7a1",
+              "d1a1",
+              "b7d5"
+            ],
+            "elapsed_seconds": 0.12386740000511054
+          },
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 280749,
+            "cp": 66,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "b7b6",
+              "b2b4",
+              "c8b7",
+              "e2e4",
+              "f6e4",
+              "c3e4",
+              "g7a1",
+              "d1a1",
+              "b7d5"
+            ],
+            "elapsed_seconds": 0.12489589999313466
+          }
+        },
+        {
+          "id": "opening-126",
+          "baseline": {
+            "bestmove": "g2g4",
+            "depth": 10,
+            "nodes": 236236,
+            "cp": 16,
+            "mate": null,
+            "pv": [
+              "g2g4",
+              "f5g6",
+              "a2a4",
+              "e7d6",
+              "e1g1",
+              "a7a6",
+              "b2c3",
+              "a5b6",
+              "c3d4",
+              "d7c5",
+              "c4d5",
+              "f6d5"
+            ],
+            "elapsed_seconds": 0.1123619999998482
+          },
+          "candidate": {
+            "bestmove": "g2g4",
+            "depth": 10,
+            "nodes": 236236,
+            "cp": 16,
+            "mate": null,
+            "pv": [
+              "g2g4",
+              "f5g6",
+              "a2a4",
+              "e7d6",
+              "e1g1",
+              "a7a6",
+              "b2c3",
+              "a5b6",
+              "c3d4",
+              "d7c5",
+              "c4d5",
+              "f6d5"
+            ],
+            "elapsed_seconds": 0.11002579999330919
+          }
+        },
+        {
+          "id": "opening-201",
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 261916,
+            "cp": 30,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e8g8",
+              "d2c4",
+              "d7e6",
+              "b4c5",
+              "e6c4",
+              "d3c4",
+              "d6c5",
+              "f1d1",
+              "d8b6"
+            ],
+            "elapsed_seconds": 0.12194070000259671
+          },
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 261916,
+            "cp": 30,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e8g8",
+              "d2c4",
+              "d7e6",
+              "b4c5",
+              "e6c4",
+              "d3c4",
+              "d6c5",
+              "f1d1",
+              "d8b6"
+            ],
+            "elapsed_seconds": 0.12459150000358932
+          }
+        },
+        {
+          "id": "opening-015",
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 528950,
+            "cp": -91,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "c5d4",
+              "f3d4",
+              "c8b7",
+              "h3e6",
+              "d7c5",
+              "e6d5",
+              "f6d5",
+              "e4d5",
+              "b7d5",
+              "c3d5",
+              "d8d5"
+            ],
+            "elapsed_seconds": 0.26741270000638906
+          },
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 528950,
+            "cp": -91,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "c5d4",
+              "f3d4",
+              "c8b7",
+              "h3e6",
+              "d7c5",
+              "e6d5",
+              "f6d5",
+              "e4d5",
+              "b7d5",
+              "c3d5",
+              "d8d5"
+            ],
+            "elapsed_seconds": 0.2627917000063462
+          }
+        },
+        {
+          "id": "opening-124",
+          "candidate": {
+            "bestmove": "b4b5",
+            "depth": 10,
+            "nodes": 905999,
+            "cp": -11,
+            "mate": null,
+            "pv": [
+              "b4b5",
+              "a6b5",
+              "e2b5",
+              "h7h5",
+              "a2a4",
+              "g7g6",
+              "c1a3",
+              "f8g7",
+              "a3c5",
+              "e8g8"
+            ],
+            "elapsed_seconds": 0.4658643000002485
+          },
+          "baseline": {
+            "bestmove": "b4b5",
+            "depth": 10,
+            "nodes": 905999,
+            "cp": -11,
+            "mate": null,
+            "pv": [
+              "b4b5",
+              "a6b5",
+              "e2b5",
+              "h7h5",
+              "a2a4",
+              "g7g6",
+              "c1a3",
+              "f8g7",
+              "a3c5",
+              "e8g8"
+            ],
+            "elapsed_seconds": 0.46640399999159854
+          }
+        },
+        {
+          "id": "opening-081",
+          "baseline": {
+            "bestmove": "a4b3",
+            "depth": 10,
+            "nodes": 96639,
+            "cp": 9,
+            "mate": null,
+            "pv": [
+              "a4b3",
+              "g8e7",
+              "d1e3",
+              "e8g8",
+              "a2a4",
+              "b5b4",
+              "c3b4",
+              "b8b4",
+              "b3c4",
+              "g7g5"
+            ],
+            "elapsed_seconds": 0.04365510000206996
+          },
+          "candidate": {
+            "bestmove": "a4b3",
+            "depth": 10,
+            "nodes": 96639,
+            "cp": 9,
+            "mate": null,
+            "pv": [
+              "a4b3",
+              "g8e7",
+              "d1e3",
+              "e8g8",
+              "a2a4",
+              "b5b4",
+              "c3b4",
+              "b8b4",
+              "b3c4",
+              "g7g5"
+            ],
+            "elapsed_seconds": 0.04368659999454394
+          }
+        },
+        {
+          "id": "opening-167",
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 428654,
+            "cp": -62,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "g8f6",
+              "f1e1",
+              "c6c5",
+              "a1a2",
+              "e8g8",
+              "e2d3",
+              "f8e8",
+              "c1f4",
+              "e7d6"
+            ],
+            "elapsed_seconds": 0.18585039999743458
+          },
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 428654,
+            "cp": -62,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "g8f6",
+              "f1e1",
+              "c6c5",
+              "a1a2",
+              "e8g8",
+              "e2d3",
+              "f8e8",
+              "c1f4",
+              "e7d6"
+            ],
+            "elapsed_seconds": 0.18944820000615437
+          }
+        },
+        {
+          "id": "opening-053",
+          "baseline": {
+            "bestmove": "g1f3",
+            "depth": 10,
+            "nodes": 144779,
+            "cp": 25,
+            "mate": null,
+            "pv": [
+              "g1f3",
+              "e5f3",
+              "e2f3",
+              "g7g6",
+              "e1g1",
+              "d7f5",
+              "c2b3",
+              "b7b6",
+              "c1f4",
+              "a7a5",
+              "f1e1"
+            ],
+            "elapsed_seconds": 0.061886700001196004
+          },
+          "candidate": {
+            "bestmove": "g1f3",
+            "depth": 10,
+            "nodes": 144779,
+            "cp": 25,
+            "mate": null,
+            "pv": [
+              "g1f3",
+              "e5f3",
+              "e2f3",
+              "g7g6",
+              "e1g1",
+              "d7f5",
+              "c2b3",
+              "b7b6",
+              "c1f4",
+              "a7a5",
+              "f1e1"
+            ],
+            "elapsed_seconds": 0.061911699987831526
+          }
+        },
+        {
+          "id": "opening-035",
+          "candidate": {
+            "bestmove": "f1h3",
+            "depth": 10,
+            "nodes": 541389,
+            "cp": 96,
+            "mate": null,
+            "pv": [
+              "f1h3",
+              "e8g8",
+              "e1g1",
+              "d7f6",
+              "h3c8",
+              "f8c8",
+              "a2a4",
+              "a5b4",
+              "c3b4",
+              "d5d4",
+              "d2e4",
+              "f6e4"
+            ],
+            "elapsed_seconds": 0.2712552000011783
+          },
+          "baseline": {
+            "bestmove": "f1h3",
+            "depth": 10,
+            "nodes": 541389,
+            "cp": 96,
+            "mate": null,
+            "pv": [
+              "f1h3",
+              "e8g8",
+              "e1g1",
+              "d7f6",
+              "h3c8",
+              "f8c8",
+              "a2a4",
+              "a5b4",
+              "c3b4",
+              "d5d4",
+              "d2e4",
+              "f6e4"
+            ],
+            "elapsed_seconds": 0.2715789999929257
+          }
+        },
+        {
+          "id": "opening-039",
+          "baseline": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 337326,
+            "cp": -8,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "g8f6",
+              "e4e5",
+              "f6e4",
+              "c1e3",
+              "e4c3",
+              "e2c3",
+              "c8b7",
+              "d1d2",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.16550589998951182
+          },
+          "candidate": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 337326,
+            "cp": -8,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "g8f6",
+              "e4e5",
+              "f6e4",
+              "c1e3",
+              "e4c3",
+              "e2c3",
+              "c8b7",
+              "d1d2",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.16173940000589937
+          }
+        },
+        {
+          "id": "opening-180",
+          "candidate": {
+            "bestmove": "g1h3",
+            "depth": 10,
+            "nodes": 629589,
+            "cp": -26,
+            "mate": null,
+            "pv": [
+              "g1h3",
+              "g5g2",
+              "h1g1",
+              "g2h3",
+              "d4f4",
+              "g7g6",
+              "f5f6",
+              "c8d7",
+              "b1c3",
+              "e8c8"
+            ],
+            "elapsed_seconds": 0.30656870000530034
+          },
+          "baseline": {
+            "bestmove": "g1h3",
+            "depth": 10,
+            "nodes": 629589,
+            "cp": -26,
+            "mate": null,
+            "pv": [
+              "g1h3",
+              "g5g2",
+              "h1g1",
+              "g2h3",
+              "d4f4",
+              "g7g6",
+              "f5f6",
+              "c8d7",
+              "b1c3",
+              "e8c8"
+            ],
+            "elapsed_seconds": 0.3091324999986682
+          }
+        },
+        {
+          "id": "opening-134",
+          "baseline": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 181595,
+            "cp": 39,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "g8e7",
+              "b1c3",
+              "e7g6",
+              "g1e2",
+              "g6f4",
+              "e2f4",
+              "f8e7",
+              "h3h4",
+              "e8c8"
+            ],
+            "elapsed_seconds": 0.08329009999579284
+          },
+          "candidate": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 181595,
+            "cp": 39,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "g8e7",
+              "b1c3",
+              "e7g6",
+              "g1e2",
+              "g6f4",
+              "e2f4",
+              "f8e7",
+              "h3h4",
+              "e8c8"
+            ],
+            "elapsed_seconds": 0.08456570000271313
+          }
+        }
+      ]
+    },
+    {
+      "iteration": 3,
+      "warmup": false,
+      "total_seconds": {
+        "candidate": 2.742716400010977,
+        "baseline": 2.7646264000213705
+      },
+      "speed_ratio": 1.0079884307434432,
+      "positions": [
+        {
+          "id": "opening-004",
+          "baseline": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 165321,
+            "cp": 28,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "e7c6",
+              "a2a3",
+              "f8e7",
+              "g2g3",
+              "e8g8",
+              "b2b4",
+              "b7b5",
+              "f2f4",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.08410360000561923
+          },
+          "candidate": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 165321,
+            "cp": 28,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "e7c6",
+              "a2a3",
+              "f8e7",
+              "g2g3",
+              "e8g8",
+              "b2b4",
+              "b7b5",
+              "f2f4",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.08107909999671392
+          }
+        },
+        {
+          "id": "opening-025",
+          "candidate": {
+            "bestmove": "d4c5",
+            "depth": 10,
+            "nodes": 42842,
+            "cp": 104,
+            "mate": null,
+            "pv": [
+              "d4c5",
+              "d7d1",
+              "f1d1",
+              "b6d7",
+              "b5c4",
+              "d7c5",
+              "b1c3",
+              "f8g7",
+              "g2g4",
+              "g7c3",
+              "b2c3"
+            ],
+            "elapsed_seconds": 0.018375300001935102
+          },
+          "baseline": {
+            "bestmove": "d4c5",
+            "depth": 10,
+            "nodes": 42842,
+            "cp": 104,
+            "mate": null,
+            "pv": [
+              "d4c5",
+              "d7d1",
+              "f1d1",
+              "b6d7",
+              "b5c4",
+              "d7c5",
+              "b1c3",
+              "f8g7",
+              "g2g4",
+              "g7c3",
+              "b2c3"
+            ],
+            "elapsed_seconds": 0.01877700000477489
+          }
+        },
+        {
+          "id": "opening-096",
+          "baseline": {
+            "bestmove": "c3c4",
+            "depth": 10,
+            "nodes": 101905,
+            "cp": -129,
+            "mate": null,
+            "pv": [
+              "c3c4",
+              "e4f6",
+              "b1c3",
+              "e8g8",
+              "a2a4",
+              "b8d7",
+              "d2d4",
+              "d7b6",
+              "c4d3",
+              "b6d5"
+            ],
+            "elapsed_seconds": 0.04327049999847077
+          },
+          "candidate": {
+            "bestmove": "c3c4",
+            "depth": 10,
+            "nodes": 101905,
+            "cp": -129,
+            "mate": null,
+            "pv": [
+              "c3c4",
+              "e4f6",
+              "b1c3",
+              "e8g8",
+              "a2a4",
+              "b8d7",
+              "d2d4",
+              "d7b6",
+              "c4d3",
+              "b6d5"
+            ],
+            "elapsed_seconds": 0.042762800003401935
+          }
+        },
+        {
+          "id": "opening-008",
+          "candidate": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 367522,
+            "cp": -49,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "b4c6",
+              "e1c1",
+              "a7a6",
+              "f1c4",
+              "b7b5",
+              "c4d5",
+              "c8d7",
+              "d5c6",
+              "d7c6"
+            ],
+            "elapsed_seconds": 0.18687980000686366
+          },
+          "baseline": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 367522,
+            "cp": -49,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "b4c6",
+              "e1c1",
+              "a7a6",
+              "f1c4",
+              "b7b5",
+              "c4d5",
+              "c8d7",
+              "d5c6",
+              "d7c6"
+            ],
+            "elapsed_seconds": 0.18916720000561327
+          }
+        },
+        {
+          "id": "opening-037",
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 356557,
+            "cp": 64,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e7e6",
+              "e2e4",
+              "d7c5",
+              "f1e1",
+              "a7a5",
+              "b2b4",
+              "c5e4",
+              "c3e4",
+              "f6e4",
+              "e1e4",
+              "g7a1",
+              "d1a1",
+              "a5b4"
+            ],
+            "elapsed_seconds": 0.159367200001725
+          },
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 356557,
+            "cp": 64,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e7e6",
+              "e2e4",
+              "d7c5",
+              "f1e1",
+              "a7a5",
+              "b2b4",
+              "c5e4",
+              "c3e4",
+              "f6e4",
+              "e1e4",
+              "g7a1",
+              "d1a1",
+              "a5b4"
+            ],
+            "elapsed_seconds": 0.15673790000437293
+          }
+        },
+        {
+          "id": "opening-126",
+          "candidate": {
+            "bestmove": "g2g4",
+            "depth": 10,
+            "nodes": 261242,
+            "cp": 16,
+            "mate": null,
+            "pv": [
+              "g2g4",
+              "f5g6",
+              "a2a4",
+              "e7d6",
+              "e1g1",
+              "a7a6",
+              "b2c3",
+              "a5b6",
+              "c3d4",
+              "d7c5",
+              "c4d5",
+              "f6d5"
+            ],
+            "elapsed_seconds": 0.11846629998763092
+          },
+          "baseline": {
+            "bestmove": "g2g4",
+            "depth": 10,
+            "nodes": 261242,
+            "cp": 16,
+            "mate": null,
+            "pv": [
+              "g2g4",
+              "f5g6",
+              "a2a4",
+              "e7d6",
+              "e1g1",
+              "a7a6",
+              "b2c3",
+              "a5b6",
+              "c3d4",
+              "d7c5",
+              "c4d5",
+              "f6d5"
+            ],
+            "elapsed_seconds": 0.11870549999002833
+          }
+        },
+        {
+          "id": "opening-201",
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 213014,
+            "cp": 30,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e8g8",
+              "d2c4",
+              "d7e6",
+              "b4c5",
+              "e6c4",
+              "d3c4",
+              "d6c5",
+              "f1d1",
+              "d8b6"
+            ],
+            "elapsed_seconds": 0.09609060001093894
+          },
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 213014,
+            "cp": 30,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e8g8",
+              "d2c4",
+              "d7e6",
+              "b4c5",
+              "e6c4",
+              "d3c4",
+              "d6c5",
+              "f1d1",
+              "d8b6"
+            ],
+            "elapsed_seconds": 0.09703980000631418
+          }
+        },
+        {
+          "id": "opening-015",
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 798142,
+            "cp": -101,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "c8b7",
+              "d4c5",
+              "e7c5",
+              "f1d1",
+              "e8g8",
+              "f4d6",
+              "c5d6",
+              "d1d6",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.40205629999400117
+          },
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 798142,
+            "cp": -101,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "c8b7",
+              "d4c5",
+              "e7c5",
+              "f1d1",
+              "e8g8",
+              "f4d6",
+              "c5d6",
+              "d1d6",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.40697550000913907
+          }
+        },
+        {
+          "id": "opening-124",
+          "baseline": {
+            "bestmove": "b4b5",
+            "depth": 10,
+            "nodes": 704557,
+            "cp": -10,
+            "mate": null,
+            "pv": [
+              "b4b5",
+              "a6b5",
+              "e2b5",
+              "g7g6",
+              "d2b3",
+              "b7b6",
+              "b3d4",
+              "f8g7",
+              "d4c6",
+              "e7c6"
+            ],
+            "elapsed_seconds": 0.359611899999436
+          },
+          "candidate": {
+            "bestmove": "b4b5",
+            "depth": 10,
+            "nodes": 704557,
+            "cp": -10,
+            "mate": null,
+            "pv": [
+              "b4b5",
+              "a6b5",
+              "e2b5",
+              "g7g6",
+              "d2b3",
+              "b7b6",
+              "b3d4",
+              "f8g7",
+              "d4c6",
+              "e7c6"
+            ],
+            "elapsed_seconds": 0.35950510000111535
+          }
+        },
+        {
+          "id": "opening-081",
+          "candidate": {
+            "bestmove": "a4b3",
+            "depth": 10,
+            "nodes": 112687,
+            "cp": 9,
+            "mate": null,
+            "pv": [
+              "a4b3",
+              "g8e7",
+              "d1e3",
+              "e8g8",
+              "a2a4",
+              "b5b4",
+              "c3b4",
+              "b8b4",
+              "b3c4",
+              "g7g5"
+            ],
+            "elapsed_seconds": 0.052387100004125386
+          },
+          "baseline": {
+            "bestmove": "a4b3",
+            "depth": 10,
+            "nodes": 112687,
+            "cp": 9,
+            "mate": null,
+            "pv": [
+              "a4b3",
+              "g8e7",
+              "d1e3",
+              "e8g8",
+              "a2a4",
+              "b5b4",
+              "c3b4",
+              "b8b4",
+              "b3c4",
+              "g7g5"
+            ],
+            "elapsed_seconds": 0.05177879999973811
+          }
+        },
+        {
+          "id": "opening-167",
+          "baseline": {
+            "bestmove": "a3a4",
+            "depth": 10,
+            "nodes": 888726,
+            "cp": -66,
+            "mate": null,
+            "pv": [
+              "a3a4",
+              "g8f6",
+              "e1g1",
+              "e8g8",
+              "f1e1",
+              "e7c5",
+              "c1a3",
+              "c5a3",
+              "a1a3",
+              "d8d2"
+            ],
+            "elapsed_seconds": 0.380605900005321
+          },
+          "candidate": {
+            "bestmove": "a3a4",
+            "depth": 10,
+            "nodes": 888726,
+            "cp": -66,
+            "mate": null,
+            "pv": [
+              "a3a4",
+              "g8f6",
+              "e1g1",
+              "e8g8",
+              "f1e1",
+              "e7c5",
+              "c1a3",
+              "c5a3",
+              "a1a3",
+              "d8d2"
+            ],
+            "elapsed_seconds": 0.37632850000227336
+          }
+        },
+        {
+          "id": "opening-053",
+          "candidate": {
+            "bestmove": "g1f3",
+            "depth": 10,
+            "nodes": 136894,
+            "cp": 25,
+            "mate": null,
+            "pv": [
+              "g1f3",
+              "e5f3",
+              "e2f3",
+              "g7g6",
+              "e1g1",
+              "d7f5",
+              "c2b3",
+              "b7b6",
+              "c1f4",
+              "a7a5",
+              "f1e1"
+            ],
+            "elapsed_seconds": 0.05838899999798741
+          },
+          "baseline": {
+            "bestmove": "g1f3",
+            "depth": 10,
+            "nodes": 136894,
+            "cp": 25,
+            "mate": null,
+            "pv": [
+              "g1f3",
+              "e5f3",
+              "e2f3",
+              "g7g6",
+              "e1g1",
+              "d7f5",
+              "c2b3",
+              "b7b6",
+              "c1f4",
+              "a7a5",
+              "f1e1"
+            ],
+            "elapsed_seconds": 0.059005000002798624
+          }
+        },
+        {
+          "id": "opening-035",
+          "baseline": {
+            "bestmove": "d2e4",
+            "depth": 10,
+            "nodes": 413728,
+            "cp": 87,
+            "mate": null,
+            "pv": [
+              "d2e4",
+              "d5e4",
+              "f3d2",
+              "d7f6",
+              "f2f3",
+              "e4f3",
+              "e2f3",
+              "e8g8",
+              "f1d3",
+              "c8e6"
+            ],
+            "elapsed_seconds": 0.2135705999971833
+          },
+          "candidate": {
+            "bestmove": "d2e4",
+            "depth": 10,
+            "nodes": 413728,
+            "cp": 87,
+            "mate": null,
+            "pv": [
+              "d2e4",
+              "d5e4",
+              "f3d2",
+              "d7f6",
+              "f2f3",
+              "e4f3",
+              "e2f3",
+              "e8g8",
+              "f1d3",
+              "c8e6"
+            ],
+            "elapsed_seconds": 0.21251420000044163
+          }
+        },
+        {
+          "id": "opening-039",
+          "candidate": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 387340,
+            "cp": -8,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "g8f6",
+              "e4e5",
+              "f6e4",
+              "c1e3",
+              "e4c3",
+              "e2c3",
+              "c8b7",
+              "d1d2",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.18506930000148714
+          },
+          "baseline": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 387340,
+            "cp": -8,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "g8f6",
+              "e4e5",
+              "f6e4",
+              "c1e3",
+              "e4c3",
+              "e2c3",
+              "c8b7",
+              "d1d2",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.18609109999670181
+          }
+        },
+        {
+          "id": "opening-180",
+          "baseline": {
+            "bestmove": "g1h3",
+            "depth": 10,
+            "nodes": 633733,
+            "cp": -26,
+            "mate": null,
+            "pv": [
+              "g1h3",
+              "g5g2",
+              "h1g1",
+              "g2h3",
+              "d4f4",
+              "g7g6",
+              "f5f6",
+              "c8d7",
+              "b1c3",
+              "e8c8"
+            ],
+            "elapsed_seconds": 0.30671269999584183
+          },
+          "candidate": {
+            "bestmove": "g1h3",
+            "depth": 10,
+            "nodes": 633733,
+            "cp": -26,
+            "mate": null,
+            "pv": [
+              "g1h3",
+              "g5g2",
+              "h1g1",
+              "g2h3",
+              "d4f4",
+              "g7g6",
+              "f5f6",
+              "c8d7",
+              "b1c3",
+              "e8c8"
+            ],
+            "elapsed_seconds": 0.30454090000421274
+          }
+        },
+        {
+          "id": "opening-134",
+          "candidate": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 194779,
+            "cp": 33,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "g8e7",
+              "b1c3",
+              "e7g6",
+              "g1e2",
+              "f8e7",
+              "h3h4",
+              "e8g8",
+              "b2b4",
+              "g6f4",
+              "e2f4"
+            ],
+            "elapsed_seconds": 0.0905849999981001
+          },
+          "baseline": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 194779,
+            "cp": 33,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "g8e7",
+              "b1c3",
+              "e7g6",
+              "g1e2",
+              "f8e7",
+              "h3h4",
+              "e8g8",
+              "b2b4",
+              "g6f4",
+              "e2f4"
+            ],
+            "elapsed_seconds": 0.09079329999804031
+          }
+        }
+      ]
+    },
+    {
+      "iteration": 4,
+      "warmup": false,
+      "total_seconds": {
+        "candidate": 2.693422999989707,
+        "baseline": 2.7067495999799576
+      },
+      "speed_ratio": 1.004947830322345,
+      "positions": [
+        {
+          "id": "opening-004",
+          "candidate": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 161356,
+            "cp": 28,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "e7c6",
+              "a2a3",
+              "f8e7",
+              "f2f4",
+              "e8g8",
+              "b2b4",
+              "g7g6",
+              "g2g3",
+              "b7b5"
+            ],
+            "elapsed_seconds": 0.08191920000535902
+          },
+          "baseline": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 161356,
+            "cp": 28,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "e7c6",
+              "a2a3",
+              "f8e7",
+              "f2f4",
+              "e8g8",
+              "b2b4",
+              "g7g6",
+              "g2g3",
+              "b7b5"
+            ],
+            "elapsed_seconds": 0.08097249999991618
+          }
+        },
+        {
+          "id": "opening-025",
+          "baseline": {
+            "bestmove": "d4c5",
+            "depth": 10,
+            "nodes": 44451,
+            "cp": 104,
+            "mate": null,
+            "pv": [
+              "d4c5",
+              "d7d1",
+              "f1d1",
+              "b6d7",
+              "b5c4",
+              "d7c5",
+              "b1c3",
+              "f8g7",
+              "g2g4",
+              "g7c3",
+              "b2c3"
+            ],
+            "elapsed_seconds": 0.01932219999434892
+          },
+          "candidate": {
+            "bestmove": "d4c5",
+            "depth": 10,
+            "nodes": 44451,
+            "cp": 104,
+            "mate": null,
+            "pv": [
+              "d4c5",
+              "d7d1",
+              "f1d1",
+              "b6d7",
+              "b5c4",
+              "d7c5",
+              "b1c3",
+              "f8g7",
+              "g2g4",
+              "g7c3",
+              "b2c3"
+            ],
+            "elapsed_seconds": 0.019115499992039986
+          }
+        },
+        {
+          "id": "opening-096",
+          "candidate": {
+            "bestmove": "c3c4",
+            "depth": 10,
+            "nodes": 122625,
+            "cp": -129,
+            "mate": null,
+            "pv": [
+              "c3c4",
+              "e4f6",
+              "b1c3",
+              "e8g8",
+              "a2a4",
+              "b8d7",
+              "d2d4",
+              "d7b6",
+              "c4d3",
+              "b6d5"
+            ],
+            "elapsed_seconds": 0.0546193000045605
+          },
+          "baseline": {
+            "bestmove": "c3c4",
+            "depth": 10,
+            "nodes": 122625,
+            "cp": -129,
+            "mate": null,
+            "pv": [
+              "c3c4",
+              "e4f6",
+              "b1c3",
+              "e8g8",
+              "a2a4",
+              "b8d7",
+              "d2d4",
+              "d7b6",
+              "c4d3",
+              "b6d5"
+            ],
+            "elapsed_seconds": 0.054158800005097874
+          }
+        },
+        {
+          "id": "opening-008",
+          "baseline": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 275557,
+            "cp": -55,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "b4c6",
+              "f1c4",
+              "f6f5",
+              "e4f5",
+              "c8f5",
+              "e1g1",
+              "e8g8",
+              "b2b4",
+              "a7a5"
+            ],
+            "elapsed_seconds": 0.1412895999965258
+          },
+          "candidate": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 275557,
+            "cp": -55,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "b4c6",
+              "f1c4",
+              "f6f5",
+              "e4f5",
+              "c8f5",
+              "e1g1",
+              "e8g8",
+              "b2b4",
+              "a7a5"
+            ],
+            "elapsed_seconds": 0.1408376000035787
+          }
+        },
+        {
+          "id": "opening-037",
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 302854,
+            "cp": 57,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "a7a5",
+              "g4g5",
+              "f6h5",
+              "e2e4",
+              "c7c5",
+              "d1e2",
+              "b7b6",
+              "h3h4",
+              "d7e5"
+            ],
+            "elapsed_seconds": 0.13402209999912884
+          },
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 302854,
+            "cp": 57,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "a7a5",
+              "g4g5",
+              "f6h5",
+              "e2e4",
+              "c7c5",
+              "d1e2",
+              "b7b6",
+              "h3h4",
+              "d7e5"
+            ],
+            "elapsed_seconds": 0.13405349999084137
+          }
+        },
+        {
+          "id": "opening-126",
+          "baseline": {
+            "bestmove": "g2g4",
+            "depth": 10,
+            "nodes": 354590,
+            "cp": 16,
+            "mate": null,
+            "pv": [
+              "g2g4",
+              "f5g6",
+              "a2a4",
+              "e7d6",
+              "e1g1",
+              "a7a6",
+              "b2c3",
+              "a5b6",
+              "c3d4",
+              "d7c5",
+              "c4d5",
+              "f6d5"
+            ],
+            "elapsed_seconds": 0.16666380000242498
+          },
+          "candidate": {
+            "bestmove": "g2g4",
+            "depth": 10,
+            "nodes": 354590,
+            "cp": 16,
+            "mate": null,
+            "pv": [
+              "g2g4",
+              "f5g6",
+              "a2a4",
+              "e7d6",
+              "e1g1",
+              "a7a6",
+              "b2c3",
+              "a5b6",
+              "c3d4",
+              "d7c5",
+              "c4d5",
+              "f6d5"
+            ],
+            "elapsed_seconds": 0.1659938999946462
+          }
+        },
+        {
+          "id": "opening-201",
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 237841,
+            "cp": 30,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e8g8",
+              "d2c4",
+              "d7e6",
+              "b4c5",
+              "e6c4",
+              "d3c4",
+              "d6c5",
+              "f1d1",
+              "d8b6"
+            ],
+            "elapsed_seconds": 0.11435709999932442
+          },
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 237841,
+            "cp": 30,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e8g8",
+              "d2c4",
+              "d7e6",
+              "b4c5",
+              "e6c4",
+              "d3c4",
+              "d6c5",
+              "f1d1",
+              "d8b6"
+            ],
+            "elapsed_seconds": 0.11373709999315906
+          }
+        },
+        {
+          "id": "opening-015",
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 938451,
+            "cp": -101,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "c8b7",
+              "d4c5",
+              "e7c5",
+              "f1d1",
+              "e8g8",
+              "f4d6",
+              "c5d6",
+              "d1d6",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.4772555000090506
+          },
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 938451,
+            "cp": -101,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "c8b7",
+              "d4c5",
+              "e7c5",
+              "f1d1",
+              "e8g8",
+              "f4d6",
+              "c5d6",
+              "d1d6",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.46684939999249764
+          }
+        },
+        {
+          "id": "opening-124",
+          "candidate": {
+            "bestmove": "b4b5",
+            "depth": 10,
+            "nodes": 809538,
+            "cp": -10,
+            "mate": null,
+            "pv": [
+              "b4b5",
+              "a6b5",
+              "e2b5",
+              "g7g6",
+              "d2b3",
+              "b7b6",
+              "b3d4",
+              "f8g7",
+              "d4c6",
+              "e7c6"
+            ],
+            "elapsed_seconds": 0.4173552000138443
+          },
+          "baseline": {
+            "bestmove": "b4b5",
+            "depth": 10,
+            "nodes": 809538,
+            "cp": -10,
+            "mate": null,
+            "pv": [
+              "b4b5",
+              "a6b5",
+              "e2b5",
+              "g7g6",
+              "d2b3",
+              "b7b6",
+              "b3d4",
+              "f8g7",
+              "d4c6",
+              "e7c6"
+            ],
+            "elapsed_seconds": 0.4223702000017511
+          }
+        },
+        {
+          "id": "opening-081",
+          "baseline": {
+            "bestmove": "a4b3",
+            "depth": 10,
+            "nodes": 89169,
+            "cp": 12,
+            "mate": null,
+            "pv": [
+              "a4b3",
+              "g8e7",
+              "d1e3",
+              "d7b6",
+              "a2a4",
+              "b5a4",
+              "b3a4",
+              "b6a4",
+              "a1a4",
+              "e8g8",
+              "b2b4",
+              "c5b4",
+              "c3b4"
+            ],
+            "elapsed_seconds": 0.04019729999708943
+          },
+          "candidate": {
+            "bestmove": "a4b3",
+            "depth": 10,
+            "nodes": 89169,
+            "cp": 12,
+            "mate": null,
+            "pv": [
+              "a4b3",
+              "g8e7",
+              "d1e3",
+              "d7b6",
+              "a2a4",
+              "b5a4",
+              "b3a4",
+              "b6a4",
+              "a1a4",
+              "e8g8",
+              "b2b4",
+              "c5b4",
+              "c3b4"
+            ],
+            "elapsed_seconds": 0.04135580000001937
+          }
+        },
+        {
+          "id": "opening-167",
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 464321,
+            "cp": -54,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "g8f6",
+              "f1e1",
+              "a7a5",
+              "c1e3",
+              "f6d5",
+              "e3d4",
+              "e8g8",
+              "f3e5",
+              "f7f5"
+            ],
+            "elapsed_seconds": 0.1979910999943968
+          },
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 464321,
+            "cp": -54,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "g8f6",
+              "f1e1",
+              "a7a5",
+              "c1e3",
+              "f6d5",
+              "e3d4",
+              "e8g8",
+              "f3e5",
+              "f7f5"
+            ],
+            "elapsed_seconds": 0.20010879999608733
+          }
+        },
+        {
+          "id": "opening-053",
+          "baseline": {
+            "bestmove": "g1f3",
+            "depth": 10,
+            "nodes": 139378,
+            "cp": 25,
+            "mate": null,
+            "pv": [
+              "g1f3",
+              "e5f3",
+              "e2f3",
+              "g7g6",
+              "e1g1",
+              "d7f5",
+              "c2b3",
+              "b7b6",
+              "c1f4",
+              "a7a5",
+              "f1e1"
+            ],
+            "elapsed_seconds": 0.05874390000826679
+          },
+          "candidate": {
+            "bestmove": "g1f3",
+            "depth": 10,
+            "nodes": 139378,
+            "cp": 25,
+            "mate": null,
+            "pv": [
+              "g1f3",
+              "e5f3",
+              "e2f3",
+              "g7g6",
+              "e1g1",
+              "d7f5",
+              "c2b3",
+              "b7b6",
+              "c1f4",
+              "a7a5",
+              "f1e1"
+            ],
+            "elapsed_seconds": 0.05860689999826718
+          }
+        },
+        {
+          "id": "opening-035",
+          "candidate": {
+            "bestmove": "e2e3",
+            "depth": 10,
+            "nodes": 445554,
+            "cp": 90,
+            "mate": null,
+            "pv": [
+              "e2e3",
+              "e8g8",
+              "f1b5",
+              "d7f6",
+              "e1g1",
+              "c8g4",
+              "d1c2",
+              "g7g5",
+              "a2a4",
+              "a5b4",
+              "c3b4"
+            ],
+            "elapsed_seconds": 0.22995480000099633
+          },
+          "baseline": {
+            "bestmove": "e2e3",
+            "depth": 10,
+            "nodes": 445554,
+            "cp": 90,
+            "mate": null,
+            "pv": [
+              "e2e3",
+              "e8g8",
+              "f1b5",
+              "d7f6",
+              "e1g1",
+              "c8g4",
+              "d1c2",
+              "g7g5",
+              "a2a4",
+              "a5b4",
+              "c3b4"
+            ],
+            "elapsed_seconds": 0.23072630001115613
+          }
+        },
+        {
+          "id": "opening-039",
+          "baseline": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 343906,
+            "cp": -8,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "g8f6",
+              "e4e5",
+              "f6e4",
+              "c1e3",
+              "e4c3",
+              "e2c3",
+              "c8b7",
+              "d1d2",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.16540279999026097
+          },
+          "candidate": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 343906,
+            "cp": -8,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "g8f6",
+              "e4e5",
+              "f6e4",
+              "c1e3",
+              "e4c3",
+              "e2c3",
+              "c8b7",
+              "d1d2",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.16519980000157375
+          }
+        },
+        {
+          "id": "opening-180",
+          "candidate": {
+            "bestmove": "g1h3",
+            "depth": 10,
+            "nodes": 641798,
+            "cp": -26,
+            "mate": null,
+            "pv": [
+              "g1h3",
+              "g5g2",
+              "h1g1",
+              "g2h3",
+              "d4f4",
+              "g7g6",
+              "f5f6",
+              "c8d7",
+              "b1c3",
+              "e8c8"
+            ],
+            "elapsed_seconds": 0.3151826999965124
+          },
+          "baseline": {
+            "bestmove": "g1h3",
+            "depth": 10,
+            "nodes": 641798,
+            "cp": -26,
+            "mate": null,
+            "pv": [
+              "g1h3",
+              "g5g2",
+              "h1g1",
+              "g2h3",
+              "d4f4",
+              "g7g6",
+              "f5f6",
+              "c8d7",
+              "b1c3",
+              "e8c8"
+            ],
+            "elapsed_seconds": 0.31200609999359585
+          }
+        },
+        {
+          "id": "opening-134",
+          "baseline": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 195464,
+            "cp": 33,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "g8e7",
+              "b1c3",
+              "e7g6",
+              "g1e2",
+              "f8e7",
+              "h3h4",
+              "e8g8",
+              "b2b4",
+              "g6f4",
+              "e2f4"
+            ],
+            "elapsed_seconds": 0.08974119999038521
+          },
+          "candidate": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 195464,
+            "cp": 33,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "g8e7",
+              "b1c3",
+              "e7g6",
+              "g1e2",
+              "f8e7",
+              "h3h4",
+              "e8g8",
+              "b2b4",
+              "g6f4",
+              "e2f4"
+            ],
+            "elapsed_seconds": 0.09006259999296162
+          }
+        }
+      ]
+    },
+    {
+      "iteration": 5,
+      "warmup": false,
+      "total_seconds": {
+        "candidate": 2.4809238000016194,
+        "baseline": 2.483384799983469
+      },
+      "speed_ratio": 1.0009919691938334,
+      "positions": [
+        {
+          "id": "opening-004",
+          "baseline": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 169753,
+            "cp": 28,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "e7c6",
+              "a2a3",
+              "f8e7",
+              "f2f4",
+              "e8g8",
+              "b2b4",
+              "b7b5",
+              "g2g3",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.0857020000112243
+          },
+          "candidate": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 169753,
+            "cp": 28,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "e7c6",
+              "a2a3",
+              "f8e7",
+              "f2f4",
+              "e8g8",
+              "b2b4",
+              "b7b5",
+              "g2g3",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.08397279999917373
+          }
+        },
+        {
+          "id": "opening-025",
+          "candidate": {
+            "bestmove": "d4c5",
+            "depth": 10,
+            "nodes": 43347,
+            "cp": 104,
+            "mate": null,
+            "pv": [
+              "d4c5",
+              "d7d1",
+              "f1d1",
+              "b6d7",
+              "b5c4",
+              "d7c5",
+              "b1c3",
+              "f8g7",
+              "g2g4",
+              "g7c3",
+              "b2c3"
+            ],
+            "elapsed_seconds": 0.018662899994524196
+          },
+          "baseline": {
+            "bestmove": "d4c5",
+            "depth": 10,
+            "nodes": 43347,
+            "cp": 104,
+            "mate": null,
+            "pv": [
+              "d4c5",
+              "d7d1",
+              "f1d1",
+              "b6d7",
+              "b5c4",
+              "d7c5",
+              "b1c3",
+              "f8g7",
+              "g2g4",
+              "g7c3",
+              "b2c3"
+            ],
+            "elapsed_seconds": 0.019085599997197278
+          }
+        },
+        {
+          "id": "opening-096",
+          "baseline": {
+            "bestmove": "c3c4",
+            "depth": 10,
+            "nodes": 115145,
+            "cp": -129,
+            "mate": null,
+            "pv": [
+              "c3c4",
+              "e4f6",
+              "b1c3",
+              "e8g8",
+              "a2a4",
+              "b8d7",
+              "d2d4",
+              "d7b6",
+              "c4d3",
+              "b6d5"
+            ],
+            "elapsed_seconds": 0.050953999991179444
+          },
+          "candidate": {
+            "bestmove": "c3c4",
+            "depth": 10,
+            "nodes": 115145,
+            "cp": -129,
+            "mate": null,
+            "pv": [
+              "c3c4",
+              "e4f6",
+              "b1c3",
+              "e8g8",
+              "a2a4",
+              "b8d7",
+              "d2d4",
+              "d7b6",
+              "c4d3",
+              "b6d5"
+            ],
+            "elapsed_seconds": 0.05103590000362601
+          }
+        },
+        {
+          "id": "opening-008",
+          "candidate": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 269089,
+            "cp": -55,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "b4c6",
+              "f1c4",
+              "f6f5",
+              "e4f5",
+              "c8f5",
+              "e1g1",
+              "e8g8",
+              "b2b4",
+              "a7a5"
+            ],
+            "elapsed_seconds": 0.1373330999922473
+          },
+          "baseline": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 269089,
+            "cp": -55,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "b4c6",
+              "f1c4",
+              "f6f5",
+              "e4f5",
+              "c8f5",
+              "e1g1",
+              "e8g8",
+              "b2b4",
+              "a7a5"
+            ],
+            "elapsed_seconds": 0.139490499990643
+          }
+        },
+        {
+          "id": "opening-037",
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 299753,
+            "cp": 66,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e7e6",
+              "e2e4",
+              "d7c5",
+              "f3g5",
+              "e6d5",
+              "e4d5",
+              "h7h6",
+              "b2b4",
+              "h6g5",
+              "b4c5"
+            ],
+            "elapsed_seconds": 0.133460400000331
+          },
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 299753,
+            "cp": 66,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e7e6",
+              "e2e4",
+              "d7c5",
+              "f3g5",
+              "e6d5",
+              "e4d5",
+              "h7h6",
+              "b2b4",
+              "h6g5",
+              "b4c5"
+            ],
+            "elapsed_seconds": 0.13457100000232458
+          }
+        },
+        {
+          "id": "opening-126",
+          "candidate": {
+            "bestmove": "g2g4",
+            "depth": 10,
+            "nodes": 258377,
+            "cp": 15,
+            "mate": null,
+            "pv": [
+              "g2g4",
+              "f5g6",
+              "a2a4",
+              "e7d6",
+              "e1g1",
+              "a7a6",
+              "c4d5",
+              "e6d5",
+              "b2d4",
+              "f8e8"
+            ],
+            "elapsed_seconds": 0.12023640000552405
+          },
+          "baseline": {
+            "bestmove": "g2g4",
+            "depth": 10,
+            "nodes": 258377,
+            "cp": 15,
+            "mate": null,
+            "pv": [
+              "g2g4",
+              "f5g6",
+              "a2a4",
+              "e7d6",
+              "e1g1",
+              "a7a6",
+              "c4d5",
+              "e6d5",
+              "b2d4",
+              "f8e8"
+            ],
+            "elapsed_seconds": 0.1215414000034798
+          }
+        },
+        {
+          "id": "opening-201",
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 233723,
+            "cp": 31,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e8g8",
+              "b4b5",
+              "c6a5",
+              "c3c4",
+              "a7a6",
+              "a3a4",
+              "c8a8",
+              "c1b2",
+              "a6b5",
+              "a4b5"
+            ],
+            "elapsed_seconds": 0.10793779999949038
+          },
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 233723,
+            "cp": 31,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e8g8",
+              "b4b5",
+              "c6a5",
+              "c3c4",
+              "a7a6",
+              "a3a4",
+              "c8a8",
+              "c1b2",
+              "a6b5",
+              "a4b5"
+            ],
+            "elapsed_seconds": 0.10868019999179523
+          }
+        },
+        {
+          "id": "opening-015",
+          "candidate": {
+            "bestmove": "e1c1",
+            "depth": 10,
+            "nodes": 698262,
+            "cp": -69,
+            "mate": null,
+            "pv": [
+              "e1c1",
+              "b5b4",
+              "c3a4",
+              "b4a3",
+              "a4c5",
+              "a3b2",
+              "c2b2",
+              "e8g8",
+              "f3g5",
+              "f6h5",
+              "g5e6",
+              "f7e6",
+              "h3e6",
+              "g8h8"
+            ],
+            "elapsed_seconds": 0.3606471999955829
+          },
+          "baseline": {
+            "bestmove": "e1c1",
+            "depth": 10,
+            "nodes": 698262,
+            "cp": -69,
+            "mate": null,
+            "pv": [
+              "e1c1",
+              "b5b4",
+              "c3a4",
+              "b4a3",
+              "a4c5",
+              "a3b2",
+              "c2b2",
+              "e8g8",
+              "f3g5",
+              "f6h5",
+              "g5e6",
+              "f7e6",
+              "h3e6",
+              "g8h8"
+            ],
+            "elapsed_seconds": 0.3463466000102926
+          }
+        },
+        {
+          "id": "opening-124",
+          "baseline": {
+            "bestmove": "b4b5",
+            "depth": 10,
+            "nodes": 703543,
+            "cp": -11,
+            "mate": null,
+            "pv": [
+              "b4b5",
+              "a6b5",
+              "e2b5",
+              "g7g6",
+              "a2a4",
+              "h7h5",
+              "c1a3",
+              "f8g7",
+              "a3c5",
+              "e8g8"
+            ],
+            "elapsed_seconds": 0.3524678999965545
+          },
+          "candidate": {
+            "bestmove": "b4b5",
+            "depth": 10,
+            "nodes": 703543,
+            "cp": -11,
+            "mate": null,
+            "pv": [
+              "b4b5",
+              "a6b5",
+              "e2b5",
+              "g7g6",
+              "a2a4",
+              "h7h5",
+              "c1a3",
+              "f8g7",
+              "a3c5",
+              "e8g8"
+            ],
+            "elapsed_seconds": 0.34634959998948034
+          }
+        },
+        {
+          "id": "opening-081",
+          "candidate": {
+            "bestmove": "a4b3",
+            "depth": 10,
+            "nodes": 102393,
+            "cp": 9,
+            "mate": null,
+            "pv": [
+              "a4b3",
+              "g8e7",
+              "d1e3",
+              "e8g8",
+              "a2a4",
+              "b5b4",
+              "c3b4",
+              "b8b4",
+              "b3c4",
+              "g7g5"
+            ],
+            "elapsed_seconds": 0.04704390000551939
+          },
+          "baseline": {
+            "bestmove": "a4b3",
+            "depth": 10,
+            "nodes": 102393,
+            "cp": 9,
+            "mate": null,
+            "pv": [
+              "a4b3",
+              "g8e7",
+              "d1e3",
+              "e8g8",
+              "a2a4",
+              "b5b4",
+              "c3b4",
+              "b8b4",
+              "b3c4",
+              "g7g5"
+            ],
+            "elapsed_seconds": 0.04629369999747723
+          }
+        },
+        {
+          "id": "opening-167",
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 412903,
+            "cp": -59,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "g8f6",
+              "f1e1",
+              "a7a5",
+              "e2c4",
+              "f6d5",
+              "g2g3",
+              "h7h6",
+              "h2h4",
+              "e8g8"
+            ],
+            "elapsed_seconds": 0.17818350000015926
+          },
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 412903,
+            "cp": -59,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "g8f6",
+              "f1e1",
+              "a7a5",
+              "e2c4",
+              "f6d5",
+              "g2g3",
+              "h7h6",
+              "h2h4",
+              "e8g8"
+            ],
+            "elapsed_seconds": 0.18141090001154225
+          }
+        },
+        {
+          "id": "opening-053",
+          "candidate": {
+            "bestmove": "g1f3",
+            "depth": 10,
+            "nodes": 143375,
+            "cp": 25,
+            "mate": null,
+            "pv": [
+              "g1f3",
+              "e5f3",
+              "e2f3",
+              "g7g6",
+              "e1g1",
+              "d7f5",
+              "c2b3",
+              "b7b6",
+              "c1f4",
+              "a7a5",
+              "f1e1"
+            ],
+            "elapsed_seconds": 0.06308520000311546
+          },
+          "baseline": {
+            "bestmove": "g1f3",
+            "depth": 10,
+            "nodes": 143375,
+            "cp": 25,
+            "mate": null,
+            "pv": [
+              "g1f3",
+              "e5f3",
+              "e2f3",
+              "g7g6",
+              "e1g1",
+              "d7f5",
+              "c2b3",
+              "b7b6",
+              "c1f4",
+              "a7a5",
+              "f1e1"
+            ],
+            "elapsed_seconds": 0.06298869999591261
+          }
+        },
+        {
+          "id": "opening-035",
+          "baseline": {
+            "bestmove": "e2e3",
+            "depth": 10,
+            "nodes": 554096,
+            "cp": 90,
+            "mate": null,
+            "pv": [
+              "e2e3",
+              "e8g8",
+              "f1b5",
+              "d7f6",
+              "e1g1",
+              "c8g4",
+              "d1c2",
+              "g7g5",
+              "a2a4",
+              "a5b4",
+              "c3b4"
+            ],
+            "elapsed_seconds": 0.28032570000505075
+          },
+          "candidate": {
+            "bestmove": "e2e3",
+            "depth": 10,
+            "nodes": 554096,
+            "cp": 90,
+            "mate": null,
+            "pv": [
+              "e2e3",
+              "e8g8",
+              "f1b5",
+              "d7f6",
+              "e1g1",
+              "c8g4",
+              "d1c2",
+              "g7g5",
+              "a2a4",
+              "a5b4",
+              "c3b4"
+            ],
+            "elapsed_seconds": 0.2763069000066025
+          }
+        },
+        {
+          "id": "opening-039",
+          "candidate": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 317881,
+            "cp": -8,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "g8f6",
+              "e4e5",
+              "f6e4",
+              "c1e3",
+              "e4c3",
+              "e2c3",
+              "c8b7",
+              "d1d2",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.15175210000597872
+          },
+          "baseline": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 317881,
+            "cp": -8,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "g8f6",
+              "e4e5",
+              "f6e4",
+              "c1e3",
+              "e4c3",
+              "e2c3",
+              "c8b7",
+              "d1d2",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.15484059999289457
+          }
+        },
+        {
+          "id": "opening-180",
+          "baseline": {
+            "bestmove": "g1h3",
+            "depth": 10,
+            "nodes": 646360,
+            "cp": -26,
+            "mate": null,
+            "pv": [
+              "g1h3",
+              "g5g2",
+              "h1g1",
+              "g2h3",
+              "d4f4",
+              "g7g6",
+              "f5f6",
+              "c8d7",
+              "b1c3",
+              "e8c8"
+            ],
+            "elapsed_seconds": 0.3156128999980865
+          },
+          "candidate": {
+            "bestmove": "g1h3",
+            "depth": 10,
+            "nodes": 646360,
+            "cp": -26,
+            "mate": null,
+            "pv": [
+              "g1h3",
+              "g5g2",
+              "h1g1",
+              "g2h3",
+              "d4f4",
+              "g7g6",
+              "f5f6",
+              "c8d7",
+              "b1c3",
+              "e8c8"
+            ],
+            "elapsed_seconds": 0.3125614000018686
+          }
+        },
+        {
+          "id": "opening-134",
+          "candidate": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 187721,
+            "cp": 39,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "g8e7",
+              "b1c3",
+              "e7g6",
+              "g1e2",
+              "g6f4",
+              "e2f4",
+              "f8e7",
+              "h3h4",
+              "e8c8"
+            ],
+            "elapsed_seconds": 0.08727429999271408
+          },
+          "baseline": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 187721,
+            "cp": 39,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "g8e7",
+              "b1c3",
+              "e7g6",
+              "g1e2",
+              "g6f4",
+              "e2f4",
+              "f8e7",
+              "h3h4",
+              "e8c8"
+            ],
+            "elapsed_seconds": 0.08815349999349564
+          }
+        }
+      ]
+    },
+    {
+      "iteration": 6,
+      "warmup": false,
+      "total_seconds": {
+        "candidate": 2.5264952999714296,
+        "baseline": 2.552075599975069
+      },
+      "speed_ratio": 1.0101248159867657,
+      "positions": [
+        {
+          "id": "opening-004",
+          "candidate": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 357780,
+            "cp": 28,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "e7c6",
+              "g2g3",
+              "f8e7",
+              "a2a3",
+              "e8g8",
+              "f2f4",
+              "b7b5",
+              "b2b4",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.18309739998949226
+          },
+          "baseline": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 357780,
+            "cp": 28,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "e7c6",
+              "g2g3",
+              "f8e7",
+              "a2a3",
+              "e8g8",
+              "f2f4",
+              "b7b5",
+              "b2b4",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.18198049999773502
+          }
+        },
+        {
+          "id": "opening-025",
+          "baseline": {
+            "bestmove": "d4c5",
+            "depth": 10,
+            "nodes": 43486,
+            "cp": 104,
+            "mate": null,
+            "pv": [
+              "d4c5",
+              "d7d1",
+              "f1d1",
+              "b6d7",
+              "b5c4",
+              "d7c5",
+              "b1c3",
+              "f8g7",
+              "g2g4",
+              "g7c3",
+              "b2c3"
+            ],
+            "elapsed_seconds": 0.0185232000076212
+          },
+          "candidate": {
+            "bestmove": "d4c5",
+            "depth": 10,
+            "nodes": 43486,
+            "cp": 104,
+            "mate": null,
+            "pv": [
+              "d4c5",
+              "d7d1",
+              "f1d1",
+              "b6d7",
+              "b5c4",
+              "d7c5",
+              "b1c3",
+              "f8g7",
+              "g2g4",
+              "g7c3",
+              "b2c3"
+            ],
+            "elapsed_seconds": 0.018895699991844594
+          }
+        },
+        {
+          "id": "opening-096",
+          "candidate": {
+            "bestmove": "c3c4",
+            "depth": 10,
+            "nodes": 133662,
+            "cp": -129,
+            "mate": null,
+            "pv": [
+              "c3c4",
+              "e4f6",
+              "b1c3",
+              "e8g8",
+              "a2a4",
+              "b8d7",
+              "d2d4",
+              "d7b6",
+              "c4d3",
+              "b6d5"
+            ],
+            "elapsed_seconds": 0.0589239999972051
+          },
+          "baseline": {
+            "bestmove": "c3c4",
+            "depth": 10,
+            "nodes": 133662,
+            "cp": -129,
+            "mate": null,
+            "pv": [
+              "c3c4",
+              "e4f6",
+              "b1c3",
+              "e8g8",
+              "a2a4",
+              "b8d7",
+              "d2d4",
+              "d7b6",
+              "c4d3",
+              "b6d5"
+            ],
+            "elapsed_seconds": 0.05868919999920763
+          }
+        },
+        {
+          "id": "opening-008",
+          "baseline": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 355943,
+            "cp": -49,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "b4c6",
+              "e1c1",
+              "a7a6",
+              "f1c4",
+              "b7b5",
+              "c4d5",
+              "c8d7",
+              "d5c6",
+              "d7c6"
+            ],
+            "elapsed_seconds": 0.18324649998976383
+          },
+          "candidate": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 355943,
+            "cp": -49,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "b4c6",
+              "e1c1",
+              "a7a6",
+              "f1c4",
+              "b7b5",
+              "c4d5",
+              "c8d7",
+              "d5c6",
+              "d7c6"
+            ],
+            "elapsed_seconds": 0.18225329999404494
+          }
+        },
+        {
+          "id": "opening-037",
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 271848,
+            "cp": 64,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e7e6",
+              "e2e4",
+              "d7c5",
+              "f1e1",
+              "a7a5",
+              "b2b4",
+              "c5e4",
+              "c3e4",
+              "f6e4",
+              "e1e4",
+              "g7a1",
+              "d1a1",
+              "a5b4"
+            ],
+            "elapsed_seconds": 0.12013779999688268
+          },
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 271848,
+            "cp": 64,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e7e6",
+              "e2e4",
+              "d7c5",
+              "f1e1",
+              "a7a5",
+              "b2b4",
+              "c5e4",
+              "c3e4",
+              "f6e4",
+              "e1e4",
+              "g7a1",
+              "d1a1",
+              "a5b4"
+            ],
+            "elapsed_seconds": 0.12205350000294857
+          }
+        },
+        {
+          "id": "opening-126",
+          "baseline": {
+            "bestmove": "g2g4",
+            "depth": 10,
+            "nodes": 265131,
+            "cp": 15,
+            "mate": null,
+            "pv": [
+              "g2g4",
+              "f5g6",
+              "a2a4",
+              "a7a6",
+              "e1g1",
+              "a5c7",
+              "c4d5",
+              "f6d5",
+              "e3e4",
+              "d5f4"
+            ],
+            "elapsed_seconds": 0.12220019999949727
+          },
+          "candidate": {
+            "bestmove": "g2g4",
+            "depth": 10,
+            "nodes": 265131,
+            "cp": 15,
+            "mate": null,
+            "pv": [
+              "g2g4",
+              "f5g6",
+              "a2a4",
+              "a7a6",
+              "e1g1",
+              "a5c7",
+              "c4d5",
+              "f6d5",
+              "e3e4",
+              "d5f4"
+            ],
+            "elapsed_seconds": 0.11920370000007097
+          }
+        },
+        {
+          "id": "opening-201",
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 408254,
+            "cp": 24,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e8g8",
+              "b4c5",
+              "d6c5",
+              "d2c4",
+              "d8c7",
+              "a3a4",
+              "d7e6",
+              "f1d1",
+              "e6c4",
+              "d3c4"
+            ],
+            "elapsed_seconds": 0.19327309999789577
+          },
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 408254,
+            "cp": 24,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "e8g8",
+              "b4c5",
+              "d6c5",
+              "d2c4",
+              "d8c7",
+              "a3a4",
+              "d7e6",
+              "f1d1",
+              "e6c4",
+              "d3c4"
+            ],
+            "elapsed_seconds": 0.1961349000048358
+          }
+        },
+        {
+          "id": "opening-015",
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 413547,
+            "cp": -75,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "c5d4",
+              "f3d4",
+              "e7c5",
+              "f1d1",
+              "d8b6",
+              "c2d2",
+              "e8g8",
+              "a3a4",
+              "c8b7"
+            ],
+            "elapsed_seconds": 0.20482069998979568
+          },
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 413547,
+            "cp": -75,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "c5d4",
+              "f3d4",
+              "e7c5",
+              "f1d1",
+              "d8b6",
+              "c2d2",
+              "e8g8",
+              "a3a4",
+              "c8b7"
+            ],
+            "elapsed_seconds": 0.2023778000002494
+          }
+        },
+        {
+          "id": "opening-124",
+          "candidate": {
+            "bestmove": "b4b5",
+            "depth": 10,
+            "nodes": 648910,
+            "cp": -10,
+            "mate": null,
+            "pv": [
+              "b4b5",
+              "a6b5",
+              "e2b5",
+              "g7g6",
+              "d2b3",
+              "b7b6",
+              "b3d4",
+              "f8g7",
+              "d4c6",
+              "e7c6"
+            ],
+            "elapsed_seconds": 0.3333444000018062
+          },
+          "baseline": {
+            "bestmove": "b4b5",
+            "depth": 10,
+            "nodes": 648910,
+            "cp": -10,
+            "mate": null,
+            "pv": [
+              "b4b5",
+              "a6b5",
+              "e2b5",
+              "g7g6",
+              "d2b3",
+              "b7b6",
+              "b3d4",
+              "f8g7",
+              "d4c6",
+              "e7c6"
+            ],
+            "elapsed_seconds": 0.33786959999997634
+          }
+        },
+        {
+          "id": "opening-081",
+          "baseline": {
+            "bestmove": "a4b3",
+            "depth": 10,
+            "nodes": 86088,
+            "cp": 12,
+            "mate": null,
+            "pv": [
+              "a4b3",
+              "g8e7",
+              "d1e3",
+              "d7b6",
+              "a2a4",
+              "b5a4",
+              "b3a4",
+              "b6a4",
+              "a1a4",
+              "e8g8",
+              "b2b4",
+              "c5b4",
+              "c3b4"
+            ],
+            "elapsed_seconds": 0.0390798000007635
+          },
+          "candidate": {
+            "bestmove": "a4b3",
+            "depth": 10,
+            "nodes": 86088,
+            "cp": 12,
+            "mate": null,
+            "pv": [
+              "a4b3",
+              "g8e7",
+              "d1e3",
+              "d7b6",
+              "a2a4",
+              "b5a4",
+              "b3a4",
+              "b6a4",
+              "a1a4",
+              "e8g8",
+              "b2b4",
+              "c5b4",
+              "c3b4"
+            ],
+            "elapsed_seconds": 0.03912299999501556
+          }
+        },
+        {
+          "id": "opening-167",
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 398288,
+            "cp": -59,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "g8f6",
+              "f1e1",
+              "a7a5",
+              "e2c4",
+              "f6d5",
+              "g2g3",
+              "h7h6",
+              "h2h4",
+              "e8g8"
+            ],
+            "elapsed_seconds": 0.1721806999994442
+          },
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 398288,
+            "cp": -59,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "g8f6",
+              "f1e1",
+              "a7a5",
+              "e2c4",
+              "f6d5",
+              "g2g3",
+              "h7h6",
+              "h2h4",
+              "e8g8"
+            ],
+            "elapsed_seconds": 0.17165779999049846
+          }
+        },
+        {
+          "id": "opening-053",
+          "baseline": {
+            "bestmove": "g1f3",
+            "depth": 10,
+            "nodes": 140838,
+            "cp": 25,
+            "mate": null,
+            "pv": [
+              "g1f3",
+              "e5f3",
+              "e2f3",
+              "g7g6",
+              "e1g1",
+              "d7f5",
+              "c2b3",
+              "b7b6",
+              "c1f4",
+              "a7a5",
+              "f1e1"
+            ],
+            "elapsed_seconds": 0.06186869999510236
+          },
+          "candidate": {
+            "bestmove": "g1f3",
+            "depth": 10,
+            "nodes": 140838,
+            "cp": 25,
+            "mate": null,
+            "pv": [
+              "g1f3",
+              "e5f3",
+              "e2f3",
+              "g7g6",
+              "e1g1",
+              "d7f5",
+              "c2b3",
+              "b7b6",
+              "c1f4",
+              "a7a5",
+              "f1e1"
+            ],
+            "elapsed_seconds": 0.06279530000756495
+          }
+        },
+        {
+          "id": "opening-035",
+          "candidate": {
+            "bestmove": "d2e4",
+            "depth": 10,
+            "nodes": 560127,
+            "cp": 87,
+            "mate": null,
+            "pv": [
+              "d2e4",
+              "d5e4",
+              "f3d2",
+              "d7f6",
+              "f2f3",
+              "e4f3",
+              "e2f3",
+              "e8g8",
+              "f1d3",
+              "c8e6"
+            ],
+            "elapsed_seconds": 0.28120830000261776
+          },
+          "baseline": {
+            "bestmove": "d2e4",
+            "depth": 10,
+            "nodes": 560127,
+            "cp": 87,
+            "mate": null,
+            "pv": [
+              "d2e4",
+              "d5e4",
+              "f3d2",
+              "d7f6",
+              "f2f3",
+              "e4f3",
+              "e2f3",
+              "e8g8",
+              "f1d3",
+              "c8e6"
+            ],
+            "elapsed_seconds": 0.2867104999895673
+          }
+        },
+        {
+          "id": "opening-039",
+          "baseline": {
+            "bestmove": "d1d3",
+            "depth": 10,
+            "nodes": 374059,
+            "cp": -12,
+            "mate": null,
+            "pv": [
+              "d1d3",
+              "c4d3",
+              "c2d3",
+              "b5b4",
+              "c3a4",
+              "g8f6",
+              "c1e3",
+              "d7d5",
+              "a4b6",
+              "a8b8"
+            ],
+            "elapsed_seconds": 0.18420300001162104
+          },
+          "candidate": {
+            "bestmove": "d1d3",
+            "depth": 10,
+            "nodes": 374059,
+            "cp": -12,
+            "mate": null,
+            "pv": [
+              "d1d3",
+              "c4d3",
+              "c2d3",
+              "b5b4",
+              "c3a4",
+              "g8f6",
+              "c1e3",
+              "d7d5",
+              "a4b6",
+              "a8b8"
+            ],
+            "elapsed_seconds": 0.180300799998804
+          }
+        },
+        {
+          "id": "opening-180",
+          "candidate": {
+            "bestmove": "g1h3",
+            "depth": 10,
+            "nodes": 617033,
+            "cp": -17,
+            "mate": null,
+            "pv": [
+              "g1h3",
+              "g5g2",
+              "h1g1",
+              "g2h3",
+              "d4f4",
+              "e6f5",
+              "g1g7",
+              "g8e7",
+              "b1c3",
+              "c8e6"
+            ],
+            "elapsed_seconds": 0.2994816999998875
+          },
+          "baseline": {
+            "bestmove": "g1h3",
+            "depth": 10,
+            "nodes": 617033,
+            "cp": -17,
+            "mate": null,
+            "pv": [
+              "g1h3",
+              "g5g2",
+              "h1g1",
+              "g2h3",
+              "d4f4",
+              "e6f5",
+              "g1g7",
+              "g8e7",
+              "b1c3",
+              "c8e6"
+            ],
+            "elapsed_seconds": 0.3020554999966407
+          }
+        },
+        {
+          "id": "opening-134",
+          "baseline": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 176101,
+            "cp": 33,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "g8e7",
+              "b1c3",
+              "e7g6",
+              "g1e2",
+              "f8e7",
+              "h3h4",
+              "e8g8",
+              "b2b4",
+              "g6f4",
+              "e2f4"
+            ],
+            "elapsed_seconds": 0.08098199999949429
+          },
+          "candidate": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 176101,
+            "cp": 33,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "g8e7",
+              "b1c3",
+              "e7g6",
+              "g1e2",
+              "f8e7",
+              "h3h4",
+              "e8g8",
+              "b2b4",
+              "g6f4",
+              "e2f4"
+            ],
+            "elapsed_seconds": 0.07989829999860376
+          }
+        }
+      ]
+    },
+    {
+      "iteration": 7,
+      "warmup": false,
+      "total_seconds": {
+        "candidate": 2.7673503999685636,
+        "baseline": 2.7819693999481387
+      },
+      "speed_ratio": 1.005282670376596,
+      "positions": [
+        {
+          "id": "opening-004",
+          "baseline": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 282285,
+            "cp": 28,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "e7c6",
+              "a2a3",
+              "f8e7",
+              "f2f4",
+              "e8g8",
+              "g2g3",
+              "g7g6",
+              "b2b4",
+              "b7b5"
+            ],
+            "elapsed_seconds": 0.14616809999279212
+          },
+          "candidate": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 282285,
+            "cp": 28,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "e7c6",
+              "a2a3",
+              "f8e7",
+              "f2f4",
+              "e8g8",
+              "g2g3",
+              "g7g6",
+              "b2b4",
+              "b7b5"
+            ],
+            "elapsed_seconds": 0.14350820000981912
+          }
+        },
+        {
+          "id": "opening-025",
+          "candidate": {
+            "bestmove": "d4c5",
+            "depth": 10,
+            "nodes": 42513,
+            "cp": 104,
+            "mate": null,
+            "pv": [
+              "d4c5",
+              "d7d1",
+              "f1d1",
+              "b6d7",
+              "b5c4",
+              "d7c5",
+              "b1c3",
+              "f8g7",
+              "g2g4",
+              "g7c3",
+              "b2c3"
+            ],
+            "elapsed_seconds": 0.017845199996372685
+          },
+          "baseline": {
+            "bestmove": "d4c5",
+            "depth": 10,
+            "nodes": 42513,
+            "cp": 104,
+            "mate": null,
+            "pv": [
+              "d4c5",
+              "d7d1",
+              "f1d1",
+              "b6d7",
+              "b5c4",
+              "d7c5",
+              "b1c3",
+              "f8g7",
+              "g2g4",
+              "g7c3",
+              "b2c3"
+            ],
+            "elapsed_seconds": 0.018622599993250333
+          }
+        },
+        {
+          "id": "opening-096",
+          "baseline": {
+            "bestmove": "c3c4",
+            "depth": 10,
+            "nodes": 121631,
+            "cp": -129,
+            "mate": null,
+            "pv": [
+              "c3c4",
+              "e4f6",
+              "b1c3",
+              "e8g8",
+              "a2a4",
+              "b8d7",
+              "d2d4",
+              "d7b6",
+              "c4d3",
+              "b6d5"
+            ],
+            "elapsed_seconds": 0.053409699990879744
+          },
+          "candidate": {
+            "bestmove": "c3c4",
+            "depth": 10,
+            "nodes": 121631,
+            "cp": -129,
+            "mate": null,
+            "pv": [
+              "c3c4",
+              "e4f6",
+              "b1c3",
+              "e8g8",
+              "a2a4",
+              "b8d7",
+              "d2d4",
+              "d7b6",
+              "c4d3",
+              "b6d5"
+            ],
+            "elapsed_seconds": 0.05302999999548774
+          }
+        },
+        {
+          "id": "opening-008",
+          "candidate": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 328241,
+            "cp": -45,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "b4c6",
+              "e1c1",
+              "c8e6",
+              "d2h6",
+              "a7a6",
+              "h6g7",
+              "e8d7",
+              "c2c3",
+              "b7b5"
+            ],
+            "elapsed_seconds": 0.16918109999096487
+          },
+          "baseline": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 328241,
+            "cp": -45,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "b4c6",
+              "e1c1",
+              "c8e6",
+              "d2h6",
+              "a7a6",
+              "h6g7",
+              "e8d7",
+              "c2c3",
+              "b7b5"
+            ],
+            "elapsed_seconds": 0.16872459999285638
+          }
+        },
+        {
+          "id": "opening-037",
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 314937,
+            "cp": 67,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "a7a5",
+              "e2e4",
+              "e7e5",
+              "b2b4",
+              "c7c5",
+              "g4g5",
+              "f6h5",
+              "c3b5",
+              "a5b4",
+              "a3b4"
+            ],
+            "elapsed_seconds": 0.13954289999674074
+          },
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 314937,
+            "cp": 67,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "a7a5",
+              "e2e4",
+              "e7e5",
+              "b2b4",
+              "c7c5",
+              "g4g5",
+              "f6h5",
+              "c3b5",
+              "a5b4",
+              "a3b4"
+            ],
+            "elapsed_seconds": 0.1407651000045007
+          }
+        },
+        {
+          "id": "opening-126",
+          "candidate": {
+            "bestmove": "g2g4",
+            "depth": 10,
+            "nodes": 367044,
+            "cp": 16,
+            "mate": null,
+            "pv": [
+              "g2g4",
+              "f5g6",
+              "a2a4",
+              "e7d6",
+              "e1g1",
+              "a7a6",
+              "b2c3",
+              "a5b6",
+              "c3d4",
+              "d7c5",
+              "c4d5",
+              "f6d5"
+            ],
+            "elapsed_seconds": 0.17124039999907836
+          },
+          "baseline": {
+            "bestmove": "g2g4",
+            "depth": 10,
+            "nodes": 367044,
+            "cp": 16,
+            "mate": null,
+            "pv": [
+              "g2g4",
+              "f5g6",
+              "a2a4",
+              "e7d6",
+              "e1g1",
+              "a7a6",
+              "b2c3",
+              "a5b6",
+              "c3d4",
+              "d7c5",
+              "c4d5",
+              "f6d5"
+            ],
+            "elapsed_seconds": 0.1722248000005493
+          }
+        },
+        {
+          "id": "opening-201",
+          "baseline": {
+            "bestmove": "b4c5",
+            "depth": 10,
+            "nodes": 244196,
+            "cp": 30,
+            "mate": null,
+            "pv": [
+              "b4c5",
+              "d6c5",
+              "d2c4",
+              "d7e6",
+              "e1g1",
+              "e6c4",
+              "d3c4",
+              "e8g8",
+              "f1d1",
+              "d8b6"
+            ],
+            "elapsed_seconds": 0.11833239998668432
+          },
+          "candidate": {
+            "bestmove": "b4c5",
+            "depth": 10,
+            "nodes": 244196,
+            "cp": 30,
+            "mate": null,
+            "pv": [
+              "b4c5",
+              "d6c5",
+              "d2c4",
+              "d7e6",
+              "e1g1",
+              "e6c4",
+              "d3c4",
+              "e8g8",
+              "f1d1",
+              "d8b6"
+            ],
+            "elapsed_seconds": 0.11963879999530036
+          }
+        },
+        {
+          "id": "opening-015",
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 865468,
+            "cp": -103,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "c8b7",
+              "d4c5",
+              "e7c5",
+              "f1d1",
+              "e8g8",
+              "g3g4",
+              "h7h6",
+              "f3d4",
+              "g7g5"
+            ],
+            "elapsed_seconds": 0.4337991999927908
+          },
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 865468,
+            "cp": -103,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "c8b7",
+              "d4c5",
+              "e7c5",
+              "f1d1",
+              "e8g8",
+              "g3g4",
+              "h7h6",
+              "f3d4",
+              "g7g5"
+            ],
+            "elapsed_seconds": 0.43842900000163354
+          }
+        },
+        {
+          "id": "opening-124",
+          "baseline": {
+            "bestmove": "b4b5",
+            "depth": 10,
+            "nodes": 863322,
+            "cp": -10,
+            "mate": null,
+            "pv": [
+              "b4b5",
+              "a6b5",
+              "e2b5",
+              "g7g6",
+              "d2b3",
+              "b7b6",
+              "b3d4",
+              "f8g7",
+              "d4c6",
+              "e7c6"
+            ],
+            "elapsed_seconds": 0.443742099989322
+          },
+          "candidate": {
+            "bestmove": "b4b5",
+            "depth": 10,
+            "nodes": 863322,
+            "cp": -10,
+            "mate": null,
+            "pv": [
+              "b4b5",
+              "a6b5",
+              "e2b5",
+              "g7g6",
+              "d2b3",
+              "b7b6",
+              "b3d4",
+              "f8g7",
+              "d4c6",
+              "e7c6"
+            ],
+            "elapsed_seconds": 0.44466039999679197
+          }
+        },
+        {
+          "id": "opening-081",
+          "candidate": {
+            "bestmove": "a4b3",
+            "depth": 10,
+            "nodes": 93342,
+            "cp": 9,
+            "mate": null,
+            "pv": [
+              "a4b3",
+              "g8e7",
+              "d1e3",
+              "e8g8",
+              "a2a4",
+              "b5b4",
+              "c3b4",
+              "b8b4",
+              "b3c4",
+              "g7g5"
+            ],
+            "elapsed_seconds": 0.044076799997128546
+          },
+          "baseline": {
+            "bestmove": "a4b3",
+            "depth": 10,
+            "nodes": 93342,
+            "cp": 9,
+            "mate": null,
+            "pv": [
+              "a4b3",
+              "g8e7",
+              "d1e3",
+              "e8g8",
+              "a2a4",
+              "b5b4",
+              "c3b4",
+              "b8b4",
+              "b3c4",
+              "g7g5"
+            ],
+            "elapsed_seconds": 0.042492499997024424
+          }
+        },
+        {
+          "id": "opening-167",
+          "baseline": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 413280,
+            "cp": -54,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "g8f6",
+              "f1e1",
+              "a7a5",
+              "e2d3",
+              "f6d5",
+              "g2g3",
+              "h7h5",
+              "c1g5",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.18011269999260549
+          },
+          "candidate": {
+            "bestmove": "e1g1",
+            "depth": 10,
+            "nodes": 413280,
+            "cp": -54,
+            "mate": null,
+            "pv": [
+              "e1g1",
+              "g8f6",
+              "f1e1",
+              "a7a5",
+              "e2d3",
+              "f6d5",
+              "g2g3",
+              "h7h5",
+              "c1g5",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.17881040000065695
+          }
+        },
+        {
+          "id": "opening-053",
+          "candidate": {
+            "bestmove": "g1f3",
+            "depth": 10,
+            "nodes": 156515,
+            "cp": 18,
+            "mate": null,
+            "pv": [
+              "g1f3",
+              "e5f3",
+              "e2f3",
+              "a7a6",
+              "a2a4",
+              "g7g6",
+              "e1g1",
+              "d7f5",
+              "c2b3",
+              "f5d3",
+              "c1h6",
+              "d3f1",
+              "h6f8"
+            ],
+            "elapsed_seconds": 0.06642239999200683
+          },
+          "baseline": {
+            "bestmove": "g1f3",
+            "depth": 10,
+            "nodes": 156515,
+            "cp": 18,
+            "mate": null,
+            "pv": [
+              "g1f3",
+              "e5f3",
+              "e2f3",
+              "a7a6",
+              "a2a4",
+              "g7g6",
+              "e1g1",
+              "d7f5",
+              "c2b3",
+              "f5d3",
+              "c1h6",
+              "d3f1",
+              "h6f8"
+            ],
+            "elapsed_seconds": 0.06876960000954568
+          }
+        },
+        {
+          "id": "opening-035",
+          "baseline": {
+            "bestmove": "f1h3",
+            "depth": 10,
+            "nodes": 499768,
+            "cp": 92,
+            "mate": null,
+            "pv": [
+              "f1h3",
+              "e4d2",
+              "f3d2",
+              "e8g8",
+              "e1g1",
+              "b7b6",
+              "d2f3",
+              "d7f6",
+              "c5b6",
+              "c7b6"
+            ],
+            "elapsed_seconds": 0.26012140000239015
+          },
+          "candidate": {
+            "bestmove": "f1h3",
+            "depth": 10,
+            "nodes": 499768,
+            "cp": 92,
+            "mate": null,
+            "pv": [
+              "f1h3",
+              "e4d2",
+              "f3d2",
+              "e8g8",
+              "e1g1",
+              "b7b6",
+              "d2f3",
+              "d7f6",
+              "c5b6",
+              "c7b6"
+            ],
+            "elapsed_seconds": 0.2593057000049157
+          }
+        },
+        {
+          "id": "opening-039",
+          "candidate": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 299728,
+            "cp": -8,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "g8f6",
+              "e4e5",
+              "f6e4",
+              "c1e3",
+              "e4c3",
+              "e2c3",
+              "c8b7",
+              "d1d2",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.14009010000154376
+          },
+          "baseline": {
+            "bestmove": "a2a3",
+            "depth": 10,
+            "nodes": 299728,
+            "cp": -8,
+            "mate": null,
+            "pv": [
+              "a2a3",
+              "g8f6",
+              "e4e5",
+              "f6e4",
+              "c1e3",
+              "e4c3",
+              "e2c3",
+              "c8b7",
+              "d1d2",
+              "g7g6"
+            ],
+            "elapsed_seconds": 0.14144779999332968
+          }
+        },
+        {
+          "id": "opening-180",
+          "baseline": {
+            "bestmove": "g1h3",
+            "depth": 10,
+            "nodes": 634190,
+            "cp": -22,
+            "mate": null,
+            "pv": [
+              "g1h3",
+              "g5g2",
+              "h1g1",
+              "f4g3",
+              "h2g3",
+              "g2h3",
+              "f5e6",
+              "c8e6",
+              "b1c3",
+              "h3g4",
+              "d3e4"
+            ],
+            "elapsed_seconds": 0.3062768999952823
+          },
+          "candidate": {
+            "bestmove": "g1h3",
+            "depth": 10,
+            "nodes": 634190,
+            "cp": -22,
+            "mate": null,
+            "pv": [
+              "g1h3",
+              "g5g2",
+              "h1g1",
+              "f4g3",
+              "h2g3",
+              "g2h3",
+              "f5e6",
+              "c8e6",
+              "b1c3",
+              "h3g4",
+              "d3e4"
+            ],
+            "elapsed_seconds": 0.30179579999821726
+          }
+        },
+        {
+          "id": "opening-134",
+          "candidate": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 178268,
+            "cp": 39,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "g8e7",
+              "b1c3",
+              "e7g6",
+              "g1e2",
+              "g6f4",
+              "e2f4",
+              "f8e7",
+              "h3h4",
+              "e8c8"
+            ],
+            "elapsed_seconds": 0.08318079999298789
+          },
+          "baseline": {
+            "bestmove": "c3d4",
+            "depth": 10,
+            "nodes": 178268,
+            "cp": 39,
+            "mate": null,
+            "pv": [
+              "c3d4",
+              "g8e7",
+              "b1c3",
+              "e7g6",
+              "g1e2",
+              "g6f4",
+              "e2f4",
+              "f8e7",
+              "h3h4",
+              "e8c8"
+            ],
+            "elapsed_seconds": 0.08355230001325253
+          }
+        }
+      ]
+    }
+  ],
+  "candidate_sha256": "5da4badd1232e51edf1622fa347a979a3df61fe6f24473874d3f474e0bddf07d",
+  "baseline_sha256": "52439f58cf10a4a5dad8d4d48bf9db59db0a3f14b3c1c6216f79182b4a646d9a",
+  "suite_sha256": "e6f6a4f084d0c06ec7a1bcc8de86a9d13b3fa0faa3053208c3c86359e62ba423",
+  "plan_sha256": "abadc32d535d36dc1f7186f6ac387202d6c32498702050558bc4105c55f29e08",
+  "script_sha256": "bf26037376fbd1be9d43bbb5646d688d0977df993645a82fc78b15f6881987b4",
+  "amendment_sha256": "e34a7c36ad4cf81ea541a3344a387fe88b4afd1130b4837c970979feef2a0ddf",
+  "interpretation": "Alternating same-work warm microbenchmark under one host's runtime/OS conditions. Fixed-depth elapsed ratio is not playing strength or Elo; no profiling build used."
+}

@@ -1,0 +1,1030 @@
+{
+  "seed": 20261027,
+  "nodes": 5000,
+  "positions": [
+    {
+      "fen": "8/8/8/3K4/8/P7/4k3/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "7K/1p6/8/8/5k2/8/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/6P1/5k2/8/8/8/8/4K3 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/4p3/8/8/8/3k4/8/5K2 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/3K4/8/8/1P6/7k/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/8/1k6/p3K3/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/1K6/8/6P1/7k/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/7K/8/4p3/8/8/1k6/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/8/8/8/k2P4/2K5 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/2p5/8/8/6K1/k7/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "5K2/8/8/8/1k6/8/7P/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/7p/8/8/K7/8/8/1k6 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "2K2k2/8/8/1P6/8/8/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/3k4/8/2K5/p7/8/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/7P/8/8/6K1/4k3 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/8/3kp3/8/K7/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/1P2k3/8/8/8/6K1/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/1p6/7k/8/6K1/8/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/2K1P3/8/1k6/8/8/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/5p2/8/6k1/8/8/8/7K b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/7k/3P4/8/4K3/8/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/K7/6k1/p7/8/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "4K3/8/8/8/8/5P2/k7/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/1K6/8/4k3/8/8/7p/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "6K1/8/8/1P6/8/8/6k1/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/6K1/8/8/3p4/2k5/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "4K3/5P2/8/8/8/8/8/5k2 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/8/1k2K3/8/5p2/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "1K6/4k3/2P5/8/8/8/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/K5k1/2p5/8/8/8/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/2K5/7k/4P3/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/6k1/2K1p3/8/8/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/1P6/8/8/5k2/8/1K6/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/3k4/1p6/8/7K/8/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "K7/8/8/8/8/6P1/8/k7 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/8/6p1/8/7k/3K4 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/P7/8/8/7K/8/4k3/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/5K2/8/1p6/7k/8/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/2K5/8/8/4P3/8/3k4/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/4p3/8/6K1/8/2k5/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/3K4/8/5k2/3P4/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/2p5/8/7K/k7/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/5P2/1K6/8/8/8/8/2k5 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/5kp1/8/8/6K1/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/K7/8/8/8/2P5/6k1 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "3K4/p7/8/7k/8/8/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/6P1/6K1/8/8/7k/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/2K5/8/8/8/7p/1k6 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/3k4/8/8/3K4/8/3P4/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/6K1/8/1p6/5k2/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "3k4/8/8/8/4K3/5P2/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/6K1/3k4/8/8/8/4p3/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/3PK3/8/8/8/8/8/7k w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/3p4/8/8/8/6k1/2K5 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/4P3/8/8/8/5K2/8/3k4 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "6k1/8/5K2/6p1/8/8/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/2K5/8/3P4/8/8/6k1/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/8/5k2/1p6/5K2/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/4P3/8/7k/1K6/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "4K3/7k/8/8/8/6p1/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "k7/8/K7/8/8/1P6/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/1K6/3p4/8/8/8/8/6k1 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/3k2K1/8/8/5P2/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "5K2/8/8/7p/8/8/8/1k6 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/8/4K3/P7/4k3/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/2K5/8/8/2p5/8/k7/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "4K3/8/4P3/8/1k6/8/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/3kp3/7K/8/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/1K6/1P6/1k6/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/3K3k/8/8/8/p7/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/3K4/8/3k1P2/8/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "7k/8/8/7K/8/4p3/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/P7/6k1/8/8/7K/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/8/1k6/8/K2p4/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/K7/8/8/8/8/4kP2/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/7k/4p3/8/8/8/1K6 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "K7/8/8/3P4/8/8/8/2k5 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/6k1/2K5/p7/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "5K2/8/5P2/8/8/8/2k5/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/2k5/8/8/8/4p3/1K6/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/1P6/3K4/8/6k1/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/1k6/3p4/8/8/5K2/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/6P1/8/7k/K7/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "4K3/8/8/8/8/4p3/8/4k3 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/5k2/8/6K1/1P6/8/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/8/K1k5/8/p7/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "6k1/4P3/8/8/8/8/5K2/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/2K5/5pk1/8/8/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "5k2/8/8/PK6/8/8/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/1k1K4/8/8/8/1p6/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/k7/5K2/7P/8/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/2K5/8/8/5k1p/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/3P4/3k4/8/8/8/K7/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "1K6/5k2/p7/8/8/8/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/5k2/8/8/8/6K1/6P1/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "7K/8/3kp3/8/8/8/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "4K3/8/7k/8/2P5/8/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/2K5/8/3k4/8/8/2p5/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/5P2/8/3K4/8/k7/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/K7/8/8/3k1p2/8/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "7K/P7/8/8/8/8/8/3k4 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/6K1/8/1p6/8/8/8/k7 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/2K5/8/8/7P/8/k7/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "K7/8/8/8/8/8/2k4p/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "K7/8/8/8/8/1P4k1/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "6K1/8/8/8/8/p7/5k2/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/6P1/8/3K4/5k2/8/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "6K1/6p1/8/8/8/8/1k6/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/2K2k2/8/2P5/8/8/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/3k1K2/8/8/1p6/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/2K5/5P2/8/8/8/7k w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/8/6K1/7p/8/2k5 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "4K3/8/8/8/8/8/1P6/1k6 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/2p3K1/8/5k2/8/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "7K/8/8/8/8/8/3k3P/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/6K1/1k6/6p1/8/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/K7/8/8/8/8/3P4/2k5 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/8/8/8/p7/2K1k3 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/4P3/1k6/5K2/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/3k4/8/5K2/8/4p3/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/k7/2K5/8/8/8/3P4/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/1k1p4/8/8/8/K7/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/1k2K3/8/8/7P/8/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "k7/8/8/8/8/4K2p/8/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/1K6/8/8/1P6/8/2k5 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/5K2/8/8/5k2/3p4/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/K3P3/8/8/7k/8/8/8 w - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "1K6/8/4p3/8/8/8/1k6/8 b - - 0 1",
+      "stratum": "pawn_win"
+    },
+    {
+      "fen": "8/8/8/6k1/8/3P4/5K2/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "5k2/8/8/8/8/2p5/2K5/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/6K1/4k3/8/8/8/5P2/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/5p2/2K5/8/2k5/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/3P4/5k2/8/6K1/8/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/3p1k2/8/8/3K4/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/2k5/8/6P1/8/1K6/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/3k4/8/5p2/8/1K6/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/k7/2P5/8/5K2/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/3p2k1/4K3/8/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/K7/8/7k/8/8/4P3/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/2k5/8/5K2/5p2/8/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "3k4/5K2/8/8/3P4/8/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/k7/1p6/2K5/8/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/4P3/2k5/8/2K5/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/7k/8/8/6p1/6K1 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/3P4/5k2/8/8/4K3/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/8/3k4/8/2p5/2K5 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/6k1/8/8/6KP/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/5p2/1k6/8/8/K7/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/7K/8/8/8/3k4/3P4/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/1k6/8/8/8/2K5/3p4/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/8/6k1/4P3/5K2/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/8/8/5K2/6p1/k7 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "4k3/8/2P5/8/8/8/8/1K6 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/1k6/8/2K5/p7/8/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/3k4/5P2/8/8/3K4/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/7p/8/8/8/7K/8/k7 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/3k4/8/8/1P1K4/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/3K4/1p6/8/8/3k4/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/K7/5k2/8/8/8/6P1/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/6k1/4p3/8/6K1/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/8/8/P5K1/k7/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "5k2/8/3p4/8/8/7K/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/3k4/8/4K3/5P2/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/8/2k5/8/7p/5K2 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/2K5/8/8/8/3Pk3/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/K7/3p4/8/k7/8/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/7K/8/8/8/3k1P2/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "1k6/8/8/8/8/8/2K1p3/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/1P6/4k3/8/8/K7/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/1p6/5k2/8/4K3/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/7k/8/1K5P/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "1k6/8/8/8/6p1/3K4/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/3k4/8/P7/8/8/4K3/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "7k/8/2p5/8/8/8/8/4K3 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "K7/7k/8/8/8/8/7P/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/2k5/8/8/8/8/6p1/7K w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/8/P1k5/8/8/7K b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/1k6/p7/8/8/4K3/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/8/4P2k/8/7K/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "6k1/8/8/8/8/4K3/4p3/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/1k6/3P4/8/8/8/6K1 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/1k6/1p6/8/2K5/8/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/6k1/8/4PK2/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/8/3k4/5K2/6p1/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/4k3/8/8/8/P6K/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/2p2K2/8/8/8/k7/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "2k5/8/8/8/4P3/8/8/6K1 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/8/7p/8/3k4/7K w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/2K5/8/8/8/4k3/2P5/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/1p6/8/8/2K2k2/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/1K6/4k3/5P2/8/8/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/k7/8/6K1/5p2/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "2k5/2P5/8/8/8/1K6/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "k7/p7/8/8/6K1/8/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/K7/8/8/8/7P/5k2/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/4p3/5K2/8/8/3k4/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/3k4/P7/8/8/8/4K3 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "7k/8/8/8/2p5/4K3/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/4k3/8/8/1K6/4P3/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/7p/6k1/4K3/8/8/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "5K2/8/8/8/2P5/k7/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/p7/2k5/8/8/3K4/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/3k1P2/8/8/8/5K2/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/2K4p/8/8/3k4/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/8/8/1P1k1K2/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/3p4/8/2K5/8/8/7k w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/4k3/8/8/5P2/8/5K2 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/4k3/8/6p1/5K2/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/4k3/8/8/3K4/1P6/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/1k6/p3K3/8/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "2K5/8/8/8/2k5/8/6P1/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/1k6/7p/8/8/8/3K4 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/5k2/8/1P6/4K3/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/1p6/2K5/8/6k1/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/4P3/2k5/8/8/8/2K5 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/6p1/8/8/1k6/8/2K5 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "6K1/8/8/8/8/P7/4k3/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/3k4/8/8/1p6/8/8/3K4 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/5k2/8/7P/8/4K3 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "2k5/8/6p1/8/7K/8/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "k7/8/8/1K6/8/P7/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/1K6/1p6/8/8/5k2 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/2k5/8/8/8/6P1/K7/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "5k2/8/5p2/8/8/8/4K3/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "k6K/8/8/8/8/8/2P5/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/6k1/1p6/8/8/3K4 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/6P1/7k/8/8/8/5K2 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/1k6/8/5p2/8/8/8/2K5 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/6k1/8/8/3P2K1/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "K7/p7/8/2k5/8/8/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "5K2/8/1k6/8/8/8/4P3/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/5p2/k7/6K1/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/1K6/8/k7/8/1P6/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/3p4/6k1/8/8/8/5K2/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "K7/8/4k3/8/7P/8/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/5p2/8/7K/8/8/8/7k w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/8/8/2k5/3P2K1/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/1Kp5/8/8/8/6k1 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/4P3/3k4/8/6K1/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/6K1/5p2/8/2k5/8/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "3K4/kP6/8/8/8/8/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "6k1/8/1pK5/8/8/8/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/8/5k2/3K1P2/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/3K4/5p2/8/8/2k5/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/2k1K3/8/8/1P6/8/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/3p2k1/8/8/1K6/8/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/3K4/7P/7k/8/8/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/5k2/8/8/8/2K2p2/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/1P6/1k6/8/8/8/2K5 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "2k5/8/1p6/8/4K3/8/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/6P1/4k3/8/5K2/8/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/8/8/8/1k2p3/8/5K2/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "3K4/8/8/8/8/8/2P5/1k6 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/3k4/8/8/8/8/1p1K4/8 w - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "8/5K2/8/8/7k/8/4P3/8 b - - 0 1",
+      "stratum": "defender_draw"
+    },
+    {
+      "fen": "3k4/1K6/7p/8/8/8/8/8 w - - 0 1",
+      "stratum": "defender_draw"
+    }
+  ]
+}

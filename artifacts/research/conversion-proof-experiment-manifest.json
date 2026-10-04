@@ -1,0 +1,503 @@
+{
+  "schema": 1,
+  "pipeline": {
+    "path": "artifacts/research/conversion-proof-pipeline-final/manifest.json",
+    "sha256": "7c85573293b1a626e8a260617e894b304102072fd3df57bcde6d2f0f92b2e84b"
+  },
+  "artifacts": [
+    {
+      "path": "artifacts/benchmarks/conversion-default-depth7.json",
+      "sha256": "983a74e44e1dafbc268e057240fd3a88b41f7aa440dcfcc29181bdac815a8649"
+    },
+    {
+      "path": "artifacts/benchmarks/major-depth7.json",
+      "sha256": "bd102a2b01c4d3e8c55ccb7c710e0a3be9bb6a63c742b7616080ebce9da37cab"
+    },
+    {
+      "path": "artifacts/matches/kpk-control-vs-stockfish19-5000nodes.audit.json",
+      "sha256": "ca26396a3c1349c668440b718b083c075f5d6e4850797befa961734b42eb1adc"
+    },
+    {
+      "path": "artifacts/matches/kpk-control-vs-stockfish19-5000nodes.json",
+      "sha256": "231fca93559da6eda59a146adad24238fe776ee1425707f99a9375a81fb43bb0"
+    },
+    {
+      "path": "artifacts/matches/kpk-control-vs-stockfish19-5000nodes.pgn",
+      "sha256": "4034737b57d5298347528f317ea48b3b97af90da7ecfd148501633e3c2303a13"
+    },
+    {
+      "path": "artifacts/matches/kpk-conversion-vs-control-5000nodes.audit.json",
+      "sha256": "319920bbc4f6cf1a7978608e2ddd7a7c64f4a92807bee1280c4defce382eddf8"
+    },
+    {
+      "path": "artifacts/matches/kpk-conversion-vs-control-5000nodes.json",
+      "sha256": "b20849df44af1fe48d272deceb7bac63e5e4d1fabe5ca23c09fc93d7ac0f856e"
+    },
+    {
+      "path": "artifacts/matches/kpk-conversion-vs-control-5000nodes.pgn",
+      "sha256": "668a801c738e15210abdc902ab0e61f82316698e0840679fb4d31bad70175612"
+    },
+    {
+      "path": "artifacts/matches/kpk-conversion-vs-stockfish19-5000nodes.audit.json",
+      "sha256": "bf31e4881a151f7f419a686d29069f5dcb7b926e721fbef066319bad64c34c63"
+    },
+    {
+      "path": "artifacts/matches/kpk-conversion-vs-stockfish19-5000nodes.json",
+      "sha256": "8a03b6f7ba9bd987c9cf606d4263a8641e8ca59136eac084caf9fd5a6a0c0c1c"
+    },
+    {
+      "path": "artifacts/matches/kpk-conversion-vs-stockfish19-5000nodes.pgn",
+      "sha256": "cfb4364c541c6527613bee43671043d3555afc044dc0f215a799c0030be7135b"
+    },
+    {
+      "path": "artifacts/matches/major-conversion-vs-control-5000nodes.audit.json",
+      "sha256": "13f3b8517ad686a4b004e4d0cdc2021bfcbcf659d66e960fb1732127c18f1a08"
+    },
+    {
+      "path": "artifacts/matches/major-conversion-vs-control-5000nodes.json",
+      "sha256": "aaecce4774c82f2a8b3654115a4abf1af0a3847b73e5b08909658edfc340f0e7"
+    },
+    {
+      "path": "artifacts/matches/major-conversion-vs-control-5000nodes.pgn",
+      "sha256": "27e5b779c9722ffeabf2aec0c641a5025fb7930ca3cbdd57b3b83e40b3c2ed2f"
+    },
+    {
+      "path": "artifacts/matches/major-conversion-vs-control-5000nodes.txt",
+      "sha256": "18d028126e4b6adab6e4d81aa9d67b4e2dfaf892621e1b1e9485c50d20128fa2"
+    },
+    {
+      "path": "artifacts/matches/major-conversion-vs-control-v5-100ms.analysis.json",
+      "sha256": "e96ed92d9b6379b4886a449db8c9a67298583cedd0ab74580d233508234ac9ac"
+    },
+    {
+      "path": "artifacts/matches/major-conversion-vs-control-v5-100ms.audit.json",
+      "sha256": "ae14a6a89cf79d561d9aa2c357d0134fd38da918a1a26b5d223bba9e387c116c"
+    },
+    {
+      "path": "artifacts/matches/major-conversion-vs-control-v5-100ms.json",
+      "sha256": "285ba0f0b685eca2304dfe951a2f35ad55ff5c3c60b0facfc858752939dc64ba"
+    },
+    {
+      "path": "artifacts/matches/major-conversion-vs-control-v5-100ms.pgn",
+      "sha256": "7e75b40a331dccb1ac1b08e1e1191a51138428a1c7fd0661d333bbc7ce441ce0"
+    },
+    {
+      "path": "artifacts/matches/major-conversion-vs-control-v5-100ms.txt",
+      "sha256": "ade813f4b9ab11294879ad0a7f6c604602e256142b7555595aee5f376719c7cc"
+    },
+    {
+      "path": "artifacts/matches/major-conversion-vs-stockfish19-5000nodes.audit.json",
+      "sha256": "b8ca4b83b12651dcba55467ecc0be513d7ec76d27282d4e7169c77657266624e"
+    },
+    {
+      "path": "artifacts/matches/major-conversion-vs-stockfish19-5000nodes.json",
+      "sha256": "3b853db44cdb106ab92b348a1ef7f22f20ab07d37e17867564d2220860d593de"
+    },
+    {
+      "path": "artifacts/matches/major-conversion-vs-stockfish19-5000nodes.pgn",
+      "sha256": "fa9f0044186d84e0b778ed5aa3cb74accf60de6053d74816e150ce0a0c709c5d"
+    },
+    {
+      "path": "artifacts/matches/major-conversion-vs-stockfish19-5000nodes.txt",
+      "sha256": "76e4ab4d4cd9503fda26d825b40bbecffcd18a705183ea88e46246b4be5ae397"
+    },
+    {
+      "path": "artifacts/proofs/queen-distant-v1.json",
+      "sha256": "20aa24d5dfb9d3f994d3a11f4c4dba1487b38ebb97a722bb29e95341570fab21"
+    },
+    {
+      "path": "artifacts/proofs/queen-v1.json",
+      "sha256": "b84c520f200a2bdde2db46a93f4149c24b86910bab0171fd33a328d99db61ee0"
+    },
+    {
+      "path": "artifacts/proofs/rook-distant-v1.json",
+      "sha256": "83080e4ffe9ae1aeb8ce5fd4569c6d4401083d08b6979aa5d78899eca1cfa76c"
+    },
+    {
+      "path": "artifacts/proofs/rook-v1.json",
+      "sha256": "9f343ff55a31773a00ac3bb305a05c95263532057756b4f50d6d0a94e72e0535"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/manifest.json",
+      "sha256": "3771d0b5a8c610a8edb75bec5ceb082f783646e64a758f3dd4707c75b4742049"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-00.json",
+      "sha256": "89020d01182dfd6ff78d242b0a94738d61b2d263124b0f46c430830875992228"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-01.json",
+      "sha256": "c1ccab18aec74f4307aaa94287fa4ccbd65e8a5d0f426a016315b411040bd306"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-02.json",
+      "sha256": "21620dbc3fb4968a9b617e7b3d48cd45894d51641bdcc157ee28e686c1fa1f30"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-03.json",
+      "sha256": "da4a145f5da3f72a0bf5ba7c9d093f983719f562e965ba4b21ffedcffa4b9f6a"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-04.json",
+      "sha256": "266533dee0e3f93082b28a71afc3763dd62de9cda8388f7be57e1db64e8acb35"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-05.json",
+      "sha256": "038045f8cea1a727604a3cc8605a0824d8bae9b287e8df71f01d424e30bcbc93"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-06.json",
+      "sha256": "d0bb7846eeb9798f0fb58b43ab3f78623a65f8516c719b84918cba0d6582efbe"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-07.json",
+      "sha256": "b9836e9d8ef21b816a140e88a8139da89dbd5b8c3a0e06cfc4c0a757310011cc"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-00.json",
+      "sha256": "f2c495001ae5a842ef4a533d1406314248026dbc4d8b16ef6a4ded3b800856fe"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-01.json",
+      "sha256": "6449db34085ad797cbf753ddf35f94d9d558084516b95ba1e99e879b2e4f1c97"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-02.json",
+      "sha256": "4c31ad1490fe78f3c6859483d37b79f5fedbf36d4ea4093fea330a5205d11a73"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-03.json",
+      "sha256": "5f76406e657d366188ed50ae178e3195289b36d2919e17bcda647695b0fae334"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-04.json",
+      "sha256": "343047ed11fe7dfb1d97f1e8f938fc1af4a9c94cff36d5fdb41dba5cd11a675b"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-05.json",
+      "sha256": "c50aecd8fc01df12edabb7d410d55baa7d56ba81856b5d7e040dceb5a073ab75"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-06.json",
+      "sha256": "11a51a20c7add383b2f2403243d03cda5bfaa5026e5e958498115b1ca35b945b"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-07.json",
+      "sha256": "f8e88d31c1be697f93ca5e3eb06fb81b3893ba363b6f71bed1d392d1853d303b"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-00.json",
+      "sha256": "c22a40e311e78b0788321dae994bf3b43f6a0d863dd5f308c009b45bb2242e21"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-01.json",
+      "sha256": "60e98d699f5d0d25e5a371e1504c16a058df76960b4ccfef23327814d0cdcd7b"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-02.json",
+      "sha256": "1d87e04057abab47b14547b55a76ace50ea35cf99692dc3643ed766ed06d4c20"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-03.json",
+      "sha256": "c4a4f3ab1e643bda4d505cb6e56ebe2684787904ece301de0718d4085fbf393c"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-04.json",
+      "sha256": "e23a757ed90403107cd1a901e6bb2d82d0f57fd8e4614c2e3e93e5ca06a75f61"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-05.json",
+      "sha256": "1f18eb6ad1612f940f74340e0e06635b0a72ef6936a44aa64e42151df639ba06"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-06.json",
+      "sha256": "29dab6bc3c49b0fd5807a7df2e169dee6dc88b66849f6371ec5b1afd10931dbd"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-07.json",
+      "sha256": "7f25824e0fdd53c8c339fe816f78e6a354671b084f1f2de5ff083cfb2cbc112a"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-00.json",
+      "sha256": "dec578093a396ced82e1032d9c401e60a05e643b1c9f10b5b986f4c5e7e3e8c6"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-01.json",
+      "sha256": "99784b37c893e3e9db5be29b46fd597ddd05776a18ef777b49378cd81d02ad2c"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-02.json",
+      "sha256": "b53f064ee75e2de61b537488a11f6b866475b370653b5d3d0226cd74c4fb649c"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-03.json",
+      "sha256": "b17722ecee6cfc72429bce60912c911ad1277ad5efc7f52e13ecaa0e77d88e22"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-04.json",
+      "sha256": "e936a49633521d0db4368e6de684111f6f4a43e60fb6537964250137b12663f8"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-05.json",
+      "sha256": "7ae2fd1b1fd49aa6bbdab3de913f9421af264d038f7928d853cc22470f9369e7"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-06.json",
+      "sha256": "92f010b6f845cdbc3a738cba0c1866b329dd7aa0e1615e29c3bf3cd1edecac64"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-07.json",
+      "sha256": "12a006a5dc1fdba09d917c5301f034f48176c51d2cf451ea9c46df0f2cd07d5b"
+    },
+    {
+      "path": "artifacts/publish/conversion-default-dotnet/Aster.deps.json",
+      "sha256": "846e5fc4a8c7c44657545ea00b93646fff9dc53574fc62eb7bb2c3d7fe4c6a4c"
+    },
+    {
+      "path": "artifacts/publish/conversion-default-dotnet/Aster.dll",
+      "sha256": "52439f58cf10a4a5dad8d4d48bf9db59db0a3f14b3c1c6216f79182b4a646d9a"
+    },
+    {
+      "path": "artifacts/publish/conversion-default-dotnet/Aster.runtimeconfig.json",
+      "sha256": "60e8700cdee9afcc3894f7e9bbb7ac56bb8d7af7561e8ad47323f3b5ebe4c3af"
+    },
+    {
+      "path": "artifacts/publish/conversion-dev/Aster.exe",
+      "sha256": "4d18c95d78eb51294944dcd538b07f3ffcd620b78c8ce6dbc7c8f924e74647c4"
+    },
+    {
+      "path": "artifacts/publish/kpk-control-dev/Aster.exe",
+      "sha256": "5cf8525d5d174e55fbfaf0ed33f2245e4059fc4281375ba75397ba48dc2e3868"
+    },
+    {
+      "path": "artifacts/publish/kpk-dev/Aster.exe",
+      "sha256": "d00a50e657ddab709df6a01f0aaf828584cf29a28362da79b3ecd7a8c92512e5"
+    },
+    {
+      "path": "artifacts/publish/proof-dev/Aster.exe",
+      "sha256": "427fa0f62cda382c6d6005435412972d63027dbd8eac43a523c52e59d97ce921"
+    },
+    {
+      "path": "artifacts/ratings/session-20261004-proof.json",
+      "sha256": "bbbdfca3b4d8402fa4fb7af53dfc218e193f149d2319fa592bf7a668ac3d0607"
+    },
+    {
+      "path": "artifacts/research/conversion-default-source/manifest.json",
+      "sha256": "4cbf48f70ba636afa221af7aaef666fdc62f7c64d5ce19b58cb762af5fbbafcd"
+    },
+    {
+      "path": "artifacts/research/conversion-source/manifest.json",
+      "sha256": "dae7bfc12c9a681d9e4a8cd6f2d80bb98f049beef0e172cb11f482326342a1d0"
+    },
+    {
+      "path": "artifacts/research/kpk-control-source/manifest.json",
+      "sha256": "e54adc6e529f4135d2a30858051f5b1b32e577430c92ac2c488ee76cac93492c"
+    },
+    {
+      "path": "artifacts/research/kpk-conversion-plan-v1.json",
+      "sha256": "b2fb076bf293bcd8a2fa9c9bf3a1449a7643bc34f06c3ee229c0140cd3958e1e"
+    },
+    {
+      "path": "artifacts/research/kpk-experiment-manifest.json",
+      "sha256": "933fc4ab2f8f53fd5d32c933e58029cddbeb71d966b269b73da0c533e7a9060d"
+    },
+    {
+      "path": "artifacts/research/kpk-source/manifest.json",
+      "sha256": "5c9b1a9909590309f24c8ed87b1929ec3b71d75e9a292392d75641c05a826293"
+    },
+    {
+      "path": "artifacts/research/major-conversion-plan-v1.json",
+      "sha256": "2bfd50c70de6a102503d28835c53bee88e0559a5e4634c83b2313289260b3aee"
+    },
+    {
+      "path": "artifacts/research/proof-source/manifest.json",
+      "sha256": "7cfa2c9797e720ad1c6c4eab27ff7a2e70c096691d9277d9dcabf4bbd0b2b55b"
+    },
+    {
+      "path": "artifacts/validation/conversion-default-build.txt",
+      "sha256": "2d21e7865f793a0b4368ff6972f0a6ecb80b172b3497c893c5eece6b8f33565d"
+    },
+    {
+      "path": "artifacts/validation/conversion-default-engine-tests.txt",
+      "sha256": "1fc44c672cbd15ae94429c0f3c35677aff6dfd6d746227cce8bdab7bbc77f7ab"
+    },
+    {
+      "path": "artifacts/validation/conversion-default-rules.json",
+      "sha256": "1bcc069b1731a214109d7293ef674648390d75679100041220e41b0a1a5b407f"
+    },
+    {
+      "path": "artifacts/validation/kpk-control-conversion-vs-stockfish19.json",
+      "sha256": "0893a9295acdbd7a53561899980508c5d37b3372bbf10bea4b3f1b6b9a60840e"
+    },
+    {
+      "path": "artifacts/validation/kpk-conversion-vs-control.json",
+      "sha256": "22e8ce2cd3aecaf1b57d976de36c134108a453e3b4b2e20339936a49edb64ff3"
+    },
+    {
+      "path": "artifacts/validation/kpk-conversion-vs-stockfish19.json",
+      "sha256": "7e8554ff5ca31c80102361cab7ffd9230aa6cc126bfe70bf2bd3f06cf787751d"
+    },
+    {
+      "path": "artifacts/validation/major-conversion-vs-control.json",
+      "sha256": "0d1ec9ca9ce0839c3c99ba297d9ce9acff291b482a5b1cb1494e50823d4def1e"
+    },
+    {
+      "path": "artifacts/validation/major-conversion-vs-stockfish19.json",
+      "sha256": "725d242656632920f83965566f46b6b3de1c92f51d17a23a73e418b03b66be97"
+    },
+    {
+      "path": "artifacts/validation/major-endgame-tactics.json",
+      "sha256": "4910098467bf5f13827ae6b5a8e758b5a52a21374e45d8b43d33e812e38cbe39"
+    },
+    {
+      "path": "artifacts/validation/major-engine-tests.txt",
+      "sha256": "2560b9dcef3d647d2744d10c0b5bef3dc5415a7919958a10ed5c94b184b9f7db"
+    },
+    {
+      "path": "artifacts/validation/major-initial-engine-tests.txt",
+      "sha256": "c3550eaa2679d5e4577a6bdf9f640e114047a7ee20b27aed055e3bb9d9f4ed37"
+    },
+    {
+      "path": "artifacts/validation/major-queen-exhaustive.json",
+      "sha256": "7899042c4283f23c1d671976c82d2f21709ffe9fb1d33c16292ea0715881aa1f"
+    },
+    {
+      "path": "artifacts/validation/major-queen-v1.bin",
+      "sha256": "8af92a330bfd80dbcd6214fb7d2ab6d83ee1177730fff7603fb9304fb71e6d31"
+    },
+    {
+      "path": "artifacts/validation/major-quiet-tactics.json",
+      "sha256": "4ac0f23e7029e4d8ae380e5838f6a15e825837d2f098794efd3b8d9aa7810ce0"
+    },
+    {
+      "path": "artifacts/validation/major-rook-exhaustive.json",
+      "sha256": "8442aa5dbabdd340b415ac30729a878ff8e7ab657ba73082f625e19719d9484d"
+    },
+    {
+      "path": "artifacts/validation/major-rook-v1.bin",
+      "sha256": "2813081ce219bd6ebc3b90584a5afa4432687f36b19d61d76d953194dae58da3"
+    },
+    {
+      "path": "artifacts/validation/major-rules.json",
+      "sha256": "9b41fe3bc0def0c7831a3475943be10c91aba6dc6cdfd84bac4b3045e29ea312"
+    },
+    {
+      "path": "artifacts/validation/major-runtime.json",
+      "sha256": "2f531971435bebc96e5e5b0b8fdf5bff3af8df45972a92a41d6c61025821a545"
+    },
+    {
+      "path": "artifacts/validation/major-tactics.json",
+      "sha256": "bb3f20597c75c7553653b1f5d190ff098583dca85eb447b175f948d6449ef0b4"
+    },
+    {
+      "path": "artifacts/validation/proof-engine-tests.txt",
+      "sha256": "5a8fbbfc180e4951e66fb7c67c3f6b7a1a61fa4e184dd8280f5c8d29000839b1"
+    },
+    {
+      "path": "artifacts/validation/proof-protocol.json",
+      "sha256": "b4baf0b7d3659231d848c42753280d3955932d36d0106c33b2b3aa65f036afaa"
+    },
+    {
+      "path": "artifacts/validation/proof-queen-distant-verification-final.json",
+      "sha256": "eb0a6678328ef07111027879265c16532a1813ef4cae5c02db377de5aecdd8f2"
+    },
+    {
+      "path": "artifacts/validation/proof-queen-distant-verification.json",
+      "sha256": "e46b629a7a29c2296fc12c53f42375acf854e4b297dd30da0a6844da0709a933"
+    },
+    {
+      "path": "artifacts/validation/proof-queen-verification-final.json",
+      "sha256": "ba8276f3e4188fc46c126331a0137ce96ff912f8431c8acedb90b9ccc2343e8d"
+    },
+    {
+      "path": "artifacts/validation/proof-queen-verification.json",
+      "sha256": "f11f4b37e3ad06c67d4fc1980d3aebf64f3d0780e7945018bfaa912d8de12246"
+    },
+    {
+      "path": "artifacts/validation/proof-rook-distant-verification-final.json",
+      "sha256": "bb9b80ec376bade9c15718c349805702d305c48974bf4b00d975a7fa2ad1e987"
+    },
+    {
+      "path": "artifacts/validation/proof-rook-distant-verification.json",
+      "sha256": "ed7ac908fec45665cd10777c11bcd9e114dfbe8e99f712ca1f33b05b1e6fa83e"
+    },
+    {
+      "path": "artifacts/validation/proof-rook-verification-final.json",
+      "sha256": "104f83f64f131e80af8d355a2833878d371e734fc79edeb70b9ee9d11131aa87"
+    },
+    {
+      "path": "artifacts/validation/proof-rook-verification.json",
+      "sha256": "b9b42e5293b3c649c447cfbc644a7b754033c3443dd9b52bc509163502fd1147"
+    },
+    {
+      "path": "artifacts/validation/proof-rules.json",
+      "sha256": "24157cc6752c61e5ec07f88d9e6e9baeb176a2460f7384294de71105b77a7a7c"
+    },
+    {
+      "path": "docs/ENDGAME-CONVERSION.md",
+      "sha256": "fc4c701aa7a244a0792558651e6bc46802f7a8b88364f854e59e12a6ad7b78f3"
+    },
+    {
+      "path": "docs/RATING.md",
+      "sha256": "b7df9caae5d527ef833a172be06b1132b7fc4e203ac85628756730021f6fc1a9"
+    },
+    {
+      "path": "docs/STRATEGY-PROOFS.md",
+      "sha256": "16657c4d5da22a496c56d5e61ad41e3a9708ae3d44067b7d3a58ef0278cb193d"
+    },
+    {
+      "path": "tests/fixtures/endgames-v1.json",
+      "sha256": "be7b57e12be2fb570ee24e75c610af5ea5f7f125da8d125d11b0fe5443ef9ee9"
+    },
+    {
+      "path": "tests/fixtures/kpk-setups-v1.json",
+      "sha256": "550764811ecbb1761c70a30a82c941122450839ef442f56a8f5a5a67ed96dd13"
+    },
+    {
+      "path": "tests/fixtures/openings-v5.json",
+      "sha256": "e63c68d4024428bef2f84a4289db06c4aee70e60aa9f081cf437d2a6d237c46e"
+    },
+    {
+      "path": "tests/fixtures/tactics-quiet-v1.json",
+      "sha256": "3868e2bd596272873251fca177e2a253027cb7bc8dc99b42148cdcb6f86641d9"
+    },
+    {
+      "path": "tests/fixtures/tactics-v1.json",
+      "sha256": "ceb0c13cefcf4a44d2a570e562c52f62316dbf6260d25d912f4fc846595844b3"
+    },
+    {
+      "path": "tools/stockfish/manifest.json",
+      "sha256": "e584d21a94ee3bbde60353857ae6f3ef01f9a3483299adef072c72f08a6f017f"
+    },
+    {
+      "path": "tools/syzygy-development-v1/manifest.json",
+      "sha256": "b6995f13703467b2eb9d5b1ab0dd0da63eaeedd23725236526e7e8a0d241dfaa"
+    },
+    {
+      "path": "tools/stockfish/sf_19/stockfish/stockfish-windows-x86-64-universal.exe",
+      "sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0"
+    },
+    {
+      "path": "tools/syzygy-development-v1/KBvK.rtbw",
+      "sha256": "bc0d8ab3560de9038460f0e8f61e3b7efd3e3d0327d19ae0387c0da7ddeb244d"
+    },
+    {
+      "path": "tools/syzygy-development-v1/KNvK.rtbw",
+      "sha256": "9d3518b12df3d2006441df758bce31e961346e70a11920aaad75c647003bb6e7"
+    },
+    {
+      "path": "tools/syzygy-development-v1/KPvK.rtbw",
+      "sha256": "63ad9e15cd0f5e91e42e6f669a9f6116ae9f9eabd85757e9fb28d2be6074aed9"
+    },
+    {
+      "path": "tools/syzygy-development-v1/KQvK.rtbw",
+      "sha256": "45c453e5113a714bd4ece1cb5ba78cf5d21dd8b06f89708675d164fbe9bd3b53"
+    },
+    {
+      "path": "tools/syzygy-development-v1/KRvK.rtbw",
+      "sha256": "37f8601644113dc83be9822913d6ecf75e5c8b7eeb11b7689c38a3ff986d2a48"
+    }
+  ],
+  "complete_games": 512,
+  "interpretation": "Original exact major-piece mating knowledge fixes targeted conversion failures; native complete strategy proofs independently verified. General timed regression negative/inconclusive: scoring remains opt-in, production preserved, rating unestablished, Stockfish-superiority goal unachieved."
+}

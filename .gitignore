@@ -1,0 +1,10 @@
+**/bin/
+**/obj/
+.venv/
+__pycache__/
+tools/stockfish/*
+!tools/stockfish/manifest.json
+*.user
+.env
+.env.*
+!.env.example
