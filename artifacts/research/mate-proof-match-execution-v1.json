@@ -1,0 +1,17 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-04T18:32:06.256115+00:00",
+  "plan_sha256": "76a88c4bd07699229bbf3fb3a974319c48912b6014f892f9720dfc8b16c3328e",
+  "pipeline_manifest_sha256": "e2ee2f4c59e5b9f227575dd5a6cd76291bdcb4c25763ec59089c0b50cddedee8",
+  "runner_sha256": "2ecbb86585abc49b96eaee7a24f878731edcfed01e921d8d49618d1df27acf7a",
+  "report_sha256": "0ea495f2978a600d8185b243cd2d63a3d7e32050fb5d95938a674f8ac748ca6b",
+  "results": {
+    "wins": 10,
+    "draws": 11,
+    "losses": 11,
+    "unresolved": 0,
+    "forfeits": 0
+  },
+  "interpretation": "Paired unchanged-playing regression, no inference of Elo or strength increase from score. General certificate feature independently verified.",
+  "updated_utc": "2026-10-04T18:34:06.636510+00:00"
+}

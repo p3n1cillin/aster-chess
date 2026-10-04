@@ -1,12 +1,58 @@
 # Project progress — 4 October 2026
 
 The production engine is **Aster 0.6.0**, with experimental source identified
-as **0.7.8-phase-dev**, with optional threat, KPK, conversion, proof,
+as **0.7.9-mate-proof-dev**, with optional threat, KPK, conversion, proof,
 **0.7.5-lazy-order-dev**, **0.7.6-q-evasion-dev** and **0.7.7-iir-dev** builds. The goal of surpassing Stockfish remains
 active and has not been achieved. The current engine uses a classical evaluator;
 the classical evaluator is the default. Optional trained neural prototypes
 exist but regressed in matches. The opt-in KPK solver generates its own table;
 there is no general tablebase probing or parallel search.
+
+## Completed capability: general mating strategy certificates
+
+The ordinary **0.7.9-mate-proof-dev** interface now exports complete forced-mate
+strategies for general standard-chess material, beyond KQK/KRK. Original
+bounded AND/OR search includes one proved attacker continuation and every
+legal defense, with exact full-FEN replay and actual mate leaves. The maximum
+bound is seven plies, default work budget 50,000 visits; interrupted or
+unproved searches never export a guarantee. Fresh-origin/reset-clock guards
+and conservative fifty-move boundaries preserve the claim's scope.
+
+The current build passes **55 tests** and **2,614** independent rule/perft/
+protocol checks. **25 native certificates** independently verify **126
+positions and 42 defensive replies**, including both colors, defender roots,
+quiet five-ply mating plans, promotions, en passant and already-mated roots
+at clocks 100/150. Two independent castling alternatives also verify; all
+**36 legacy certificates** remain valid. A separate rules-only three-ply
+solver agrees on **64 seeded positions**, with zero budget-unknown cases.
+Eleven corrupted certificates are rejected. Concurrent infinite search,
+readiness/stop, eight cancellations, malformed commands and export refusal
+checks pass. The current-build CI smoke independently verifies eight
+certificates in every Windows/Linux default/IIR job; all four jobs pass.
+
+An example proves the quiet **Qa3** plan within five plies through **18
+positions**. Pinned Stockfish 19 does not return this native explanation/
+certificate command; external tools can add such facilities, and Stockfish
+can calculate mates. This is a native-interface distinction, not general
+playing superiority. Existing endgame explanations remain available.
+
+Playing search/evaluation/move-generation source files remain byte-identical
+to frozen 0.7.8. All moves/scores/node counts agree on **32** fresh depth-eight
+positions (**2,371,866 nodes** each); bench seven retains **146,772 nodes**.
+All tactical thresholds pass. The **32-game** paired unchanged-play regression
+finishes **10 W / 11 D / 11 L**, score **48.44%**, with every PGN audited and
+zero forfeits/unresolved. No strength increase or Elo is inferred.
+
+Original candidate/source/diagnostics and the corrected en passant test fixture
+are retained. A pre-match revision rejects impossible triple-check roots and
+expands terminal-clock and legacy coverage; declared gates and valid-position
+search remain unchanged. All source, certificates, binaries, reports and PGNs
+are pushed to the private repository. See [general mate proofs](../docs/GENERAL-MATE-PROOFS.md).
+The new interface binary is unrated; the last exact matched local reference
+remains **2319**, 95% interval **2277..2360**, at 30 ms/move, one thread and
+64 MiB. Public Elo and Stockfish superiority remain unestablished. Prioritize
+broader stable endgame supervision and feature interactions for stronger play,
+with native proof-backed plans supporting independently checkable explanations.
 
 ## Completed experiment: phase neural output remains experimental
 

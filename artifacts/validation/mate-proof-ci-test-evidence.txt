@@ -1,0 +1,10 @@
+
+engine (ubuntu-latest, iir)	Run dotnet run --project tests/Engine.Tests -c Release --no-build	2026-10-04T18:36:11.4429825Z 56 passed, 0 failed.
+engine (ubuntu-latest, iir)	Run python scripts/smoke_mate_proof.py	2026-10-04T18:36:19.3035106Z {"passed": true, "independent_certificates": 8, "positions": 46, "incomplete_export_refused": true}
+engine (windows-latest, default)	Run dotnet run --project tests/Engine.Tests -c Release --no-build	2026-10-04T18:36:31.6398920Z 55 passed, 0 failed.
+engine (windows-latest, default)	Run python scripts/smoke_mate_proof.py	2026-10-04T18:36:51.0331306Z {"passed": true, "independent_certificates": 8, "positions": 46, "incomplete_export_refused": true}
+engine (ubuntu-latest, default)	Run dotnet run --project tests/Engine.Tests -c Release --no-build	2026-10-04T18:36:11.4755728Z 55 passed, 0 failed.
+engine (ubuntu-latest, default)	Run python scripts/smoke_mate_proof.py	2026-10-04T18:36:16.6974332Z {"passed": true, "independent_certificates": 8, "positions": 46, "incomplete_export_refused": true}
+engine (windows-latest, iir)	Run dotnet run --project tests/Engine.Tests -c Release --no-build	2026-10-04T18:36:28.7078814Z 56 passed, 0 failed.
+engine (windows-latest, iir)	Run python scripts/smoke_mate_proof.py	2026-10-04T18:36:46.2510133Z {"passed": true, "independent_certificates": 8, "positions": 46, "incomplete_export_refused": true}
+

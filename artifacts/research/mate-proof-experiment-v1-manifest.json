@@ -1,0 +1,1288 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-04T18:42:14.812847+00:00",
+  "paired_regression_games": 32,
+  "artifacts": [
+    {
+      "path": "artifacts/benchmarks/mate-proof-default-vs-phase-depth8.json",
+      "bytes": 21941,
+      "sha256": "79b157d9b4d51b9253df1138d42c64dd8b7b366d47b0d8e9a897699b89261b85"
+    },
+    {
+      "path": "artifacts/matches/mate-proof-vs-phase-30ms.audit.json",
+      "bytes": 112,
+      "sha256": "0062f75c541f0478794651f2afff0fa18eff7af4d1ea900eeacff94fcf74a24b"
+    },
+    {
+      "path": "artifacts/matches/mate-proof-vs-phase-30ms.json",
+      "bytes": 1178738,
+      "sha256": "0ea495f2978a600d8185b243cd2d63a3d7e32050fb5d95938a674f8ac748ca6b"
+    },
+    {
+      "path": "artifacts/matches/mate-proof-vs-phase-30ms.pgn",
+      "bytes": 36624,
+      "sha256": "81eea4d7a8464eff1ca233a31c74669669bc3f6a8c52802681823de516040b3a"
+    },
+    {
+      "path": "artifacts/matches/mate-proof-vs-phase-30ms.txt",
+      "bytes": 12910,
+      "sha256": "d295138a1f4bb2482b4c24794cc48901ec112895ba80b866f1aea3af03c0004e"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/castling-alternative-False.json",
+      "bytes": 726,
+      "sha256": "0ba713680db29b941c172cfeaca6ad82af573a9b62880c85a34140d5fa896655"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/castling-alternative-True.json",
+      "bytes": 726,
+      "sha256": "9c132ac70f8a64159e2ba864a6ae8ea42e82de4afdb03ab942a6ccd07658b3e4"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/defender-1-black.json",
+      "bytes": 1298,
+      "sha256": "794448ef92876f27b276310e0d3cd03e055c0c304267d3099d36a64101266b92"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/defender-1-white.json",
+      "bytes": 1298,
+      "sha256": "e0ef704130c3d0b38a43879056694352f87241ea05970c5b2bc2a3932b1eafcc"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/defender-5-black.json",
+      "bytes": 3662,
+      "sha256": "1ee1f3ae2d9efa2fd4780762e324769f2d5cd6dce4fbf715a2638c823f5d6624"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/defender-5-white.json",
+      "bytes": 3662,
+      "sha256": "52461b9151fe654a20dd7fc617e259ef937275f573a8c0b7f68ba6c3170d2e30"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-0-black.json",
+      "bytes": 724,
+      "sha256": "04d41d28aba93ea9dfddcc43c88f2ca630e85768c86594075dd8915bcc26e80a"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-0-white.json",
+      "bytes": 724,
+      "sha256": "da6f0929268bb9e3af7c7fae4f0a02db6086924fb48bddee5ef4b3e1481910a8"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-1-black.json",
+      "bytes": 1497,
+      "sha256": "b7cdc6050096c7c5ebdb3b88d818cac02cdffaecd69811d0c617eb43d55db23d"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-1-white.json",
+      "bytes": 1497,
+      "sha256": "7b110445c2c7450040037ce8e1bb44847fe2fe7e27ab7d1ef783a28dc681d7ee"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-2-black.json",
+      "bytes": 707,
+      "sha256": "546b71998d8b1006ef31217db4ec2dd1e28a8e29cb01b6da2638b576fbfb8e84"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-2-white.json",
+      "bytes": 707,
+      "sha256": "47b68ea73a5c1c1287702bc4c9de101158d8098600511e7caca6e53ffa33337a"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-3-black.json",
+      "bytes": 719,
+      "sha256": "ff6daa2fa8020fb0f9d95a80bd745a97dfcacfa57f4ed36a1e1e7c23b87d47ae"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-3-white.json",
+      "bytes": 719,
+      "sha256": "8ad18208b640372ce29fb080b9212a938f0a31146b7d0647cfae991d0015ce30"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-4-black.json",
+      "bytes": 724,
+      "sha256": "a66de0c82f97b3a5df0057c0d4595f89667350356a6538e39454ea529965ea8b"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-4-white.json",
+      "bytes": 724,
+      "sha256": "8477f782783f7fdc2577715ca45a536b65ad5aca22160c059f89d50353beecca"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-5-black.json",
+      "bytes": 3867,
+      "sha256": "0dfbd96bc6b417bd2d0b9e344e0579030def44c9aa7231b3d7442a316f0132f2"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/example-5-white.json",
+      "bytes": 3867,
+      "sha256": "7a3fdd01fa241b11411c1f496b34ebebce937ecdddb7c05d62c37c3b41ac6aa7"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/seeded-21.json",
+      "bytes": 717,
+      "sha256": "6ba5a162fd442c359683c3f47b4ac3adad7734ddf2b430dd7a450a9fb9c09dd6"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/seeded-27.json",
+      "bytes": 1111,
+      "sha256": "fd2ff42aa3399b43d10bb3e3a8a04915d0eee78e4ed1f48d4bce7046435e165e"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/seeded-33.json",
+      "bytes": 1114,
+      "sha256": "f4118028bdf155a50e84f41770b5ed727f1ba5e67f8f46b3d455ecd5af25c0ab"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/seeded-46.json",
+      "bytes": 718,
+      "sha256": "55dd2b4e1bf4ae8289c4866cbff42a2047a6c9f1c9d82c247c461b698c482ed2"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v1/seeded-7.json",
+      "bytes": 719,
+      "sha256": "2fbbf16505710b005dc558ce07ad68d5448f69896a4f64f48cae356516557da1"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/castling-alternative-False.json",
+      "bytes": 726,
+      "sha256": "0ba713680db29b941c172cfeaca6ad82af573a9b62880c85a34140d5fa896655"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/castling-alternative-True.json",
+      "bytes": 726,
+      "sha256": "9c132ac70f8a64159e2ba864a6ae8ea42e82de4afdb03ab942a6ccd07658b3e4"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/defender-1-black.json",
+      "bytes": 1298,
+      "sha256": "794448ef92876f27b276310e0d3cd03e055c0c304267d3099d36a64101266b92"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/defender-1-white.json",
+      "bytes": 1298,
+      "sha256": "e0ef704130c3d0b38a43879056694352f87241ea05970c5b2bc2a3932b1eafcc"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/defender-5-black.json",
+      "bytes": 3662,
+      "sha256": "1ee1f3ae2d9efa2fd4780762e324769f2d5cd6dce4fbf715a2638c823f5d6624"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/defender-5-white.json",
+      "bytes": 3662,
+      "sha256": "52461b9151fe654a20dd7fc617e259ef937275f573a8c0b7f68ba6c3170d2e30"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/example-0-black.json",
+      "bytes": 724,
+      "sha256": "04d41d28aba93ea9dfddcc43c88f2ca630e85768c86594075dd8915bcc26e80a"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/example-0-white.json",
+      "bytes": 724,
+      "sha256": "da6f0929268bb9e3af7c7fae4f0a02db6086924fb48bddee5ef4b3e1481910a8"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/example-1-black.json",
+      "bytes": 1497,
+      "sha256": "b7cdc6050096c7c5ebdb3b88d818cac02cdffaecd69811d0c617eb43d55db23d"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/example-1-white.json",
+      "bytes": 1497,
+      "sha256": "7b110445c2c7450040037ce8e1bb44847fe2fe7e27ab7d1ef783a28dc681d7ee"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/example-2-black.json",
+      "bytes": 707,
+      "sha256": "546b71998d8b1006ef31217db4ec2dd1e28a8e29cb01b6da2638b576fbfb8e84"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/example-2-white.json",
+      "bytes": 707,
+      "sha256": "47b68ea73a5c1c1287702bc4c9de101158d8098600511e7caca6e53ffa33337a"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/example-3-black.json",
+      "bytes": 719,
+      "sha256": "ff6daa2fa8020fb0f9d95a80bd745a97dfcacfa57f4ed36a1e1e7c23b87d47ae"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/example-3-white.json",
+      "bytes": 719,
+      "sha256": "8ad18208b640372ce29fb080b9212a938f0a31146b7d0647cfae991d0015ce30"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/example-4-black.json",
+      "bytes": 724,
+      "sha256": "a66de0c82f97b3a5df0057c0d4595f89667350356a6538e39454ea529965ea8b"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/example-4-white.json",
+      "bytes": 724,
+      "sha256": "8477f782783f7fdc2577715ca45a536b65ad5aca22160c059f89d50353beecca"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/example-5-black.json",
+      "bytes": 3867,
+      "sha256": "0dfbd96bc6b417bd2d0b9e344e0579030def44c9aa7231b3d7442a316f0132f2"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/example-5-white.json",
+      "bytes": 3867,
+      "sha256": "7a3fdd01fa241b11411c1f496b34ebebce937ecdddb7c05d62c37c3b41ac6aa7"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/seeded-21.json",
+      "bytes": 717,
+      "sha256": "6ba5a162fd442c359683c3f47b4ac3adad7734ddf2b430dd7a450a9fb9c09dd6"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/seeded-27.json",
+      "bytes": 1111,
+      "sha256": "fd2ff42aa3399b43d10bb3e3a8a04915d0eee78e4ed1f48d4bce7046435e165e"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/seeded-33.json",
+      "bytes": 1114,
+      "sha256": "f4118028bdf155a50e84f41770b5ed727f1ba5e67f8f46b3d455ecd5af25c0ab"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/seeded-46.json",
+      "bytes": 718,
+      "sha256": "55dd2b4e1bf4ae8289c4866cbff42a2047a6c9f1c9d82c247c461b698c482ed2"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/seeded-7.json",
+      "bytes": 719,
+      "sha256": "2fbbf16505710b005dc558ce07ad68d5448f69896a4f64f48cae356516557da1"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/terminal-100-False.json",
+      "bytes": 408,
+      "sha256": "47c735622881cdcd5e9af5929187386afb5812637ce4c5cac62289325dce2f61"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/terminal-100-True.json",
+      "bytes": 408,
+      "sha256": "0ac4dc0fea30971e9f097098891b30308280881505bb818dcb802c40656a1bdc"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/terminal-150-False.json",
+      "bytes": 408,
+      "sha256": "740bd8fbec527b3f66c1fe478254284aebc59cc579ce3d33d0f0ce2cef6478d1"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-general-v2/terminal-150-True.json",
+      "bytes": 408,
+      "sha256": "69e9776e998463c3cde371dd4db83d3ee6f995333da8fe2bef8e15e66ce7d5fb"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-prototype-v1/example-0.json",
+      "bytes": 724,
+      "sha256": "da6f0929268bb9e3af7c7fae4f0a02db6086924fb48bddee5ef4b3e1481910a8"
+    },
+    {
+      "path": "artifacts/proofs/mate-proof-prototype-v1/example-1.json",
+      "bytes": 1497,
+      "sha256": "7b110445c2c7450040037ce8e1bb44847fe2fe7e27ab7d1ef783a28dc681d7ee"
+    },
+    {
+      "path": "artifacts/proofs/queen-distant-v1.json",
+      "bytes": 10631,
+      "sha256": "20aa24d5dfb9d3f994d3a11f4c4dba1487b38ebb97a722bb29e95341570fab21"
+    },
+    {
+      "path": "artifacts/proofs/queen-v1.json",
+      "bytes": 6422,
+      "sha256": "b84c520f200a2bdde2db46a93f4149c24b86910bab0171fd33a328d99db61ee0"
+    },
+    {
+      "path": "artifacts/proofs/rook-distant-v1.json",
+      "bytes": 13629,
+      "sha256": "83080e4ffe9ae1aeb8ce5fd4569c6d4401083d08b6979aa5d78899eca1cfa76c"
+    },
+    {
+      "path": "artifacts/proofs/rook-v1.json",
+      "bytes": 4887,
+      "sha256": "9f343ff55a31773a00ac3bb305a05c95263532057756b4f50d6d0a94e72e0535"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/manifest.json",
+      "bytes": 25665,
+      "sha256": "3771d0b5a8c610a8edb75bec5ceb082f783646e64a758f3dd4707c75b4742049"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-00.json",
+      "bytes": 50485,
+      "sha256": "89020d01182dfd6ff78d242b0a94738d61b2d263124b0f46c430830875992228"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-01.json",
+      "bytes": 6557,
+      "sha256": "c1ccab18aec74f4307aaa94287fa4ccbd65e8a5d0f426a016315b411040bd306"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-02.json",
+      "bytes": 11122,
+      "sha256": "21620dbc3fb4968a9b617e7b3d48cd45894d51641bdcc157ee28e686c1fa1f30"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-03.json",
+      "bytes": 8313,
+      "sha256": "da4a145f5da3f72a0bf5ba7c9d093f983719f562e965ba4b21ffedcffa4b9f6a"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-04.json",
+      "bytes": 8024,
+      "sha256": "266533dee0e3f93082b28a71afc3763dd62de9cda8388f7be57e1db64e8acb35"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-05.json",
+      "bytes": 6709,
+      "sha256": "038045f8cea1a727604a3cc8605a0824d8bae9b287e8df71f01d424e30bcbc93"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-06.json",
+      "bytes": 20919,
+      "sha256": "d0bb7846eeb9798f0fb58b43ab3f78623a65f8516c719b84918cba0d6582efbe"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-0-07.json",
+      "bytes": 36434,
+      "sha256": "b9836e9d8ef21b816a140e88a8139da89dbd5b8c3a0e06cfc4c0a757310011cc"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-00.json",
+      "bytes": 105688,
+      "sha256": "f2c495001ae5a842ef4a533d1406314248026dbc4d8b16ef6a4ded3b800856fe"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-01.json",
+      "bytes": 37208,
+      "sha256": "6449db34085ad797cbf753ddf35f94d9d558084516b95ba1e99e879b2e4f1c97"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-02.json",
+      "bytes": 3033,
+      "sha256": "4c31ad1490fe78f3c6859483d37b79f5fedbf36d4ea4093fea330a5205d11a73"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-03.json",
+      "bytes": 15102,
+      "sha256": "5f76406e657d366188ed50ae178e3195289b36d2919e17bcda647695b0fae334"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-04.json",
+      "bytes": 39426,
+      "sha256": "343047ed11fe7dfb1d97f1e8f938fc1af4a9c94cff36d5fdb41dba5cd11a675b"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-05.json",
+      "bytes": 7691,
+      "sha256": "c50aecd8fc01df12edabb7d410d55baa7d56ba81856b5d7e040dceb5a073ab75"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-06.json",
+      "bytes": 32072,
+      "sha256": "11a51a20c7add383b2f2403243d03cda5bfaa5026e5e958498115b1ca35b945b"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/queen-1-07.json",
+      "bytes": 79578,
+      "sha256": "f8e88d31c1be697f93ca5e3eb06fb81b3893ba363b6f71bed1d392d1853d303b"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-00.json",
+      "bytes": 813064,
+      "sha256": "c22a40e311e78b0788321dae994bf3b43f6a0d863dd5f308c009b45bb2242e21"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-01.json",
+      "bytes": 23211,
+      "sha256": "60e98d699f5d0d25e5a371e1504c16a058df76960b4ccfef23327814d0cdcd7b"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-02.json",
+      "bytes": 62347,
+      "sha256": "1d87e04057abab47b14547b55a76ace50ea35cf99692dc3643ed766ed06d4c20"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-03.json",
+      "bytes": 384161,
+      "sha256": "c4a4f3ab1e643bda4d505cb6e56ebe2684787904ece301de0718d4085fbf393c"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-04.json",
+      "bytes": 11642,
+      "sha256": "e23a757ed90403107cd1a901e6bb2d82d0f57fd8e4614c2e3e93e5ca06a75f61"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-05.json",
+      "bytes": 509778,
+      "sha256": "1f18eb6ad1612f940f74340e0e06635b0a72ef6936a44aa64e42151df639ba06"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-06.json",
+      "bytes": 40219,
+      "sha256": "29dab6bc3c49b0fd5807a7df2e169dee6dc88b66849f6371ec5b1afd10931dbd"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-0-07.json",
+      "bytes": 30743,
+      "sha256": "7f25824e0fdd53c8c339fe816f78e6a354671b084f1f2de5ff083cfb2cbc112a"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-00.json",
+      "bytes": 53282,
+      "sha256": "dec578093a396ced82e1032d9c401e60a05e643b1c9f10b5b986f4c5e7e3e8c6"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-01.json",
+      "bytes": 185339,
+      "sha256": "99784b37c893e3e9db5be29b46fd597ddd05776a18ef777b49378cd81d02ad2c"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-02.json",
+      "bytes": 159362,
+      "sha256": "b53f064ee75e2de61b537488a11f6b866475b370653b5d3d0226cd74c4fb649c"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-03.json",
+      "bytes": 547257,
+      "sha256": "b17722ecee6cfc72429bce60912c911ad1277ad5efc7f52e13ecaa0e77d88e22"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-04.json",
+      "bytes": 460683,
+      "sha256": "e936a49633521d0db4368e6de684111f6f4a43e60fb6537964250137b12663f8"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-05.json",
+      "bytes": 9849,
+      "sha256": "7ae2fd1b1fd49aa6bbdab3de913f9421af264d038f7928d853cc22470f9369e7"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-06.json",
+      "bytes": 201206,
+      "sha256": "92f010b6f845cdbc3a738cba0c1866b329dd7aa0e1615e29c3bf3cd1edecac64"
+    },
+    {
+      "path": "artifacts/proofs/samples-v1/rook-1-07.json",
+      "bytes": 414494,
+      "sha256": "12a006a5dc1fdba09d917c5301f034f48176c51d2cf451ea9c46df0f2cd07d5b"
+    },
+    {
+      "path": "artifacts/publish/mate-proof-dev/Aster.deps.json",
+      "bytes": 407,
+      "sha256": "846e5fc4a8c7c44657545ea00b93646fff9dc53574fc62eb7bb2c3d7fe4c6a4c"
+    },
+    {
+      "path": "artifacts/publish/mate-proof-dev/Aster.dll",
+      "bytes": 113664,
+      "sha256": "eaa0f7a92851596baed83063f45f32942c704fed701c9ae294a6da274be5033d"
+    },
+    {
+      "path": "artifacts/publish/mate-proof-dev/Aster.exe",
+      "bytes": 151552,
+      "sha256": "fce7e28f7a78bf754217b3243989992b4df1a1895ab1cf41a97ee625965e7217"
+    },
+    {
+      "path": "artifacts/publish/mate-proof-dev/Aster.pdb",
+      "bytes": 41596,
+      "sha256": "0fb9d848d63ecf1544e38187daeef803b4d2ff40da66566bed4be2eae716703e"
+    },
+    {
+      "path": "artifacts/publish/mate-proof-dev/Aster.runtimeconfig.json",
+      "bytes": 374,
+      "sha256": "60e8700cdee9afcc3894f7e9bbb7ac56bb8d7af7561e8ad47323f3b5ebe4c3af"
+    },
+    {
+      "path": "artifacts/publish/mate-proof-dev-v2/Aster.deps.json",
+      "bytes": 407,
+      "sha256": "846e5fc4a8c7c44657545ea00b93646fff9dc53574fc62eb7bb2c3d7fe4c6a4c"
+    },
+    {
+      "path": "artifacts/publish/mate-proof-dev-v2/Aster.dll",
+      "bytes": 113664,
+      "sha256": "ac907eac90bba15acab80c15d16f195044a8ac2b59a7964f5a065bc0caaa0ae8"
+    },
+    {
+      "path": "artifacts/publish/mate-proof-dev-v2/Aster.exe",
+      "bytes": 151552,
+      "sha256": "fce7e28f7a78bf754217b3243989992b4df1a1895ab1cf41a97ee625965e7217"
+    },
+    {
+      "path": "artifacts/publish/mate-proof-dev-v2/Aster.pdb",
+      "bytes": 41656,
+      "sha256": "e6c91afd09cd0c2603eda77130026df76cd78d08f96a4be3889cee4ffe62077a"
+    },
+    {
+      "path": "artifacts/publish/mate-proof-dev-v2/Aster.runtimeconfig.json",
+      "bytes": 374,
+      "sha256": "60e8700cdee9afcc3894f7e9bbb7ac56bb8d7af7561e8ad47323f3b5ebe4c3af"
+    },
+    {
+      "path": "artifacts/publish/phase-dev/Aster.deps.json",
+      "bytes": 407,
+      "sha256": "846e5fc4a8c7c44657545ea00b93646fff9dc53574fc62eb7bb2c3d7fe4c6a4c"
+    },
+    {
+      "path": "artifacts/publish/phase-dev/Aster.dll",
+      "bytes": 97792,
+      "sha256": "ea5ba189628bf12c597620438563e323aed1306a2426bc91ec82f6a72f4f85ff"
+    },
+    {
+      "path": "artifacts/publish/phase-dev/Aster.exe",
+      "bytes": 151552,
+      "sha256": "d7bfa87d19a62dcc7678bf6522a4ddad23c6b11508c9cd1d29d260024bfa0e86"
+    },
+    {
+      "path": "artifacts/publish/phase-dev/Aster.pdb",
+      "bytes": 39052,
+      "sha256": "aef5719ec7af9edb3f897df88f37970dc9616b9ab39e64a64ffd32450819fcec"
+    },
+    {
+      "path": "artifacts/publish/phase-dev/Aster.runtimeconfig.json",
+      "bytes": 374,
+      "sha256": "60e8700cdee9afcc3894f7e9bbb7ac56bb8d7af7561e8ad47323f3b5ebe4c3af"
+    },
+    {
+      "path": "artifacts/research/mate-proof-ci-smoke-source-v1/smoke_mate_proof.py",
+      "bytes": 1697,
+      "sha256": "3832658a1445d36700d9fb805ad2e6eed8bec13d6576becdd1124b5ab08b35cd"
+    },
+    {
+      "path": "artifacts/research/mate-proof-ci-smoke-source-v1/verify.yml",
+      "bytes": 1796,
+      "sha256": "ecaee3c56f3090c09746e98e12ee839472df9bc0d216aa89daee5aecf7eb0c2f"
+    },
+    {
+      "path": "artifacts/research/mate-proof-initial-diagnostics-source-v1/verify_general_proofs.py",
+      "bytes": 11854,
+      "sha256": "561f7d15c588a22c70880b74efea924a8ae251e1c51bb63ce10d39018e8c69c4"
+    },
+    {
+      "path": "artifacts/research/mate-proof-initial-diagnostics-source-v1/verify_mate_proof.py",
+      "bytes": 3863,
+      "sha256": "9bd2c170d989cb04eb9fccf9cabe26de0e89a8d148c53758cd934004beb3bbfe"
+    },
+    {
+      "path": "artifacts/research/mate-proof-match-execution-v1.json",
+      "bytes": 782,
+      "sha256": "180d8cfb3a471290a512f02e02f3bf3bfa0b5d283b4a21ef579e21ebfa455db6"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/audit_match.py",
+      "bytes": 3219,
+      "sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/audit_openings.py",
+      "bytes": 2728,
+      "sha256": "0c97723cf8a0404f9e3681a90f5d9d09dcfc4978721748222ee80a679a6fca5d"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/check_mate_proof.py",
+      "bytes": 5195,
+      "sha256": "718dbe7b344543e745b150241951d8240b52528312d0a49c8e1d86320643edc3"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/compare_search.py",
+      "bytes": 5197,
+      "sha256": "a8162c85b4ea4aae46546ca8a02d4b04c083bf56abb6a28d64f322b2331b6dd9"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/declare_mate_proof.py",
+      "bytes": 4262,
+      "sha256": "8ed1ef76f4f55d3a1dbd36879d5303eea697188131083fd0b47dc274955448b6"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/freeze_engine_source.py",
+      "bytes": 1798,
+      "sha256": "db919e19f9b75ade115a3d834ad48cc57e01a6165130ef03a775279f4c89acb7"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/freeze_mate_proof_pipeline.py",
+      "bytes": 2047,
+      "sha256": "9189c5b23308ac631ea464d9330f3db688bd572bc4e18c8f4fb2a1a21eefc43b"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/generate_openings.py",
+      "bytes": 5856,
+      "sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/manifest.json",
+      "bytes": 5598,
+      "sha256": "e2ee2f4c59e5b9f227575dd5a6cd76291bdcb4c25763ec59089c0b50cddedee8"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/match.py",
+      "bytes": 16962,
+      "sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/prepare_mate_proof.py",
+      "bytes": 1618,
+      "sha256": "a956159dace5289058edda6c5e408e884eefab0e29e6463b1c8dda35e9376c53"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/preserve_mate_proof.py",
+      "bytes": 5811,
+      "sha256": "d9310bb22822fd27026942f0447d7e952d25ff6d6e2a3552232ba6d708a7c6f8"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/run_mate_proof.py",
+      "bytes": 3866,
+      "sha256": "2ecbb86585abc49b96eaee7a24f878731edcfed01e921d8d49618d1df27acf7a"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/run_rating.py",
+      "bytes": 5839,
+      "sha256": "6e8a31adefd0aeb5d51eac2f5672396f4518f779947713f86dac138ff00f661a"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/tactics.py",
+      "bytes": 3182,
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/uci_client.py",
+      "bytes": 3569,
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/verify.py",
+      "bytes": 9421,
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/verify_general_proofs.py",
+      "bytes": 13143,
+      "sha256": "5ccde4cb0c951c4dc20217608d3e51678cc64c28c52d6b2e104fa8fe6c480c69"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/verify_mate_proof.py",
+      "bytes": 3863,
+      "sha256": "9bd2c170d989cb04eb9fccf9cabe26de0e89a8d148c53758cd934004beb3bbfe"
+    },
+    {
+      "path": "artifacts/research/mate-proof-pipeline-start/verify_strategy_proof.py",
+      "bytes": 3545,
+      "sha256": "d2829747b735c367984e72832e27edf9df2589edc41a2f28df4b74c09053b28e"
+    },
+    {
+      "path": "artifacts/research/mate-proof-plan-v1.json",
+      "bytes": 4215,
+      "sha256": "76a88c4bd07699229bbf3fb3a974319c48912b6014f892f9720dfc8b16c3328e"
+    },
+    {
+      "path": "artifacts/research/mate-proof-rating-reference-v1.json",
+      "bytes": 1494,
+      "sha256": "0420b389cb3949f4e0499d3de21c8fe0ce02f8c7c427c15f8adbd8154d268000"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/Aster.sln",
+      "bytes": 1969,
+      "sha256": "0cce33025d086c048a48c3dcd7543ae1338cf5c518b15060b7cd4b0e5c9864a1"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/Directory.Build.props",
+      "bytes": 318,
+      "sha256": "aae19899039dcffcd68ffa855c683877cd6c4d6813d36bd974024a26b219badb"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/global.json",
+      "bytes": 58,
+      "sha256": "d8fc1e71d76ffd7f785d4b7abbae953024544b52cf19fc4b8d687b058e594610"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/manifest.json",
+      "bytes": 3809,
+      "sha256": "635c2897a92ac6689e6ee6757de3529eb3a0713db1b305c62666f3e4e20b7682"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/Attacks.cs",
+      "bytes": 2643,
+      "sha256": "10a2eb8139f9786d5b097d92f3e385a889a24c8940a0d1fade1b1a987a37b9c6"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/Board.cs",
+      "bytes": 18790,
+      "sha256": "af1db55d63700255db50bd2c5b538d15c7ae1558ba3296a21f0e54bf2bfa16d9"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/EndgameProof.cs",
+      "bytes": 5395,
+      "sha256": "5f7657f027792d8137ebd640226ba882f939481ef27f171bb74f1730e289f854"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/Engine.csproj",
+      "bytes": 285,
+      "sha256": "7cf064b7199806147a2d4c716a36ff3e916002ca7df76c476d511296a72e6052"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/Evaluation.cs",
+      "bytes": 7519,
+      "sha256": "b7c1ad0014eebea5d59c13ba37861616df60db253f906f6b94b4fb88e7d3bbe5"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/KpkBitbase.cs",
+      "bytes": 7104,
+      "sha256": "a13112931282526f774ca2b5ea1e87736f0c21e4b24d1fa9da8ae18560bfcc39"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/MajorMateBitbase.cs",
+      "bytes": 7110,
+      "sha256": "2ff38a71882eb9f8a5a1305745f569bb6849bb44f8d2a2c329ecba9a74617b48"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/MateProof.cs",
+      "bytes": 7843,
+      "sha256": "56d61d371bf80d47507f275a28ff838e5b724623d50457c5ec0a5cc14ff98e04"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/Move.cs",
+      "bytes": 1304,
+      "sha256": "9cee181118dc8dbf01687b7c5210ad81aa07826e70ce7fb9b512b321b69bdc85"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/NeuralNetwork.cs",
+      "bytes": 13412,
+      "sha256": "4961c8545975f63e5ace2913c21ead67bee6a1cbb2d3b25a8fdcc2bbdc07cbf2"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/Perft.cs",
+      "bytes": 589,
+      "sha256": "7e679e005a22d3cd3e003f6034495d4e62c8fd5ca79b89822c9a7e78b2fd085e"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/Program.cs",
+      "bytes": 5792,
+      "sha256": "73d98b392af0c32a9d952d32562e733157da683c2f54fd20acaf3f5e31322656"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/Search.cs",
+      "bytes": 18501,
+      "sha256": "f0efbc3320594503c91efe78f38622e5ee3412817af9aebc146cd90d5052c919"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/SearchProfile.cs",
+      "bytes": 3232,
+      "sha256": "60ed1caee10ce09adf20d9542d0eac06fc613a29881f04bd0f15a826109d405c"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/StaticExchange.cs",
+      "bytes": 3783,
+      "sha256": "36208f3889d346dac33deba7ad7f9e20cd67deeb465c910f2355cbde8fd57af9"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/ThreatEvaluation.cs",
+      "bytes": 3531,
+      "sha256": "b956761ca5157dc70faecdd28faa1d45a52cd574cefb9866cd45a11f5df364bd"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/TranspositionTable.cs",
+      "bytes": 2433,
+      "sha256": "6b6a3a5581678ebf8c36640f02e1ed27ee9055ed55f1eaa205ab7d38bbf45001"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/Uci.cs",
+      "bytes": 16311,
+      "sha256": "3346087498bcd4a6e4dd88a274b2eca5bddfd1aa9c1a4c885652d35d94adf92e"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/src/Engine/Zobrist.cs",
+      "bytes": 880,
+      "sha256": "116806963b5b3a5b9bd10c9b988fffd78ce56f7abfa3a2bf716203d42c687ac2"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/tests/Engine.Tests/Engine.Tests.csproj",
+      "bytes": 194,
+      "sha256": "731df592e64b335e2d2bb5e1aad2c481926ff8c43284e4a81b888cadaf782639"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source/tests/Engine.Tests/Program.cs",
+      "bytes": 60648,
+      "sha256": "93c41310b2fa5aed7b22d77920317c79f8018e8d24f659ab35d27903be4b3d99"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/Aster.sln",
+      "bytes": 1969,
+      "sha256": "0cce33025d086c048a48c3dcd7543ae1338cf5c518b15060b7cd4b0e5c9864a1"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/Directory.Build.props",
+      "bytes": 318,
+      "sha256": "aae19899039dcffcd68ffa855c683877cd6c4d6813d36bd974024a26b219badb"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/global.json",
+      "bytes": 58,
+      "sha256": "d8fc1e71d76ffd7f785d4b7abbae953024544b52cf19fc4b8d687b058e594610"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/manifest.json",
+      "bytes": 3860,
+      "sha256": "b90d8b01c71906fe4718922c84410db5b9e0c5a51a01a9b5bd3baf31929f589a"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/Attacks.cs",
+      "bytes": 2643,
+      "sha256": "10a2eb8139f9786d5b097d92f3e385a889a24c8940a0d1fade1b1a987a37b9c6"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/Board.cs",
+      "bytes": 18790,
+      "sha256": "af1db55d63700255db50bd2c5b538d15c7ae1558ba3296a21f0e54bf2bfa16d9"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/EndgameProof.cs",
+      "bytes": 5395,
+      "sha256": "5f7657f027792d8137ebd640226ba882f939481ef27f171bb74f1730e289f854"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/Engine.csproj",
+      "bytes": 285,
+      "sha256": "7cf064b7199806147a2d4c716a36ff3e916002ca7df76c476d511296a72e6052"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/Evaluation.cs",
+      "bytes": 7519,
+      "sha256": "b7c1ad0014eebea5d59c13ba37861616df60db253f906f6b94b4fb88e7d3bbe5"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/KpkBitbase.cs",
+      "bytes": 7104,
+      "sha256": "a13112931282526f774ca2b5ea1e87736f0c21e4b24d1fa9da8ae18560bfcc39"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/MajorMateBitbase.cs",
+      "bytes": 7110,
+      "sha256": "2ff38a71882eb9f8a5a1305745f569bb6849bb44f8d2a2c329ecba9a74617b48"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/MateProof.cs",
+      "bytes": 8382,
+      "sha256": "b2d5810477e8ccdfb4f3c8eb933aa4cbbf67ff4fbf805302bc642f0921f1720a"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/Move.cs",
+      "bytes": 1304,
+      "sha256": "9cee181118dc8dbf01687b7c5210ad81aa07826e70ce7fb9b512b321b69bdc85"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/NeuralNetwork.cs",
+      "bytes": 13412,
+      "sha256": "4961c8545975f63e5ace2913c21ead67bee6a1cbb2d3b25a8fdcc2bbdc07cbf2"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/Perft.cs",
+      "bytes": 589,
+      "sha256": "7e679e005a22d3cd3e003f6034495d4e62c8fd5ca79b89822c9a7e78b2fd085e"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/Program.cs",
+      "bytes": 5792,
+      "sha256": "73d98b392af0c32a9d952d32562e733157da683c2f54fd20acaf3f5e31322656"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/Search.cs",
+      "bytes": 18501,
+      "sha256": "f0efbc3320594503c91efe78f38622e5ee3412817af9aebc146cd90d5052c919"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/SearchProfile.cs",
+      "bytes": 3232,
+      "sha256": "60ed1caee10ce09adf20d9542d0eac06fc613a29881f04bd0f15a826109d405c"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/StaticExchange.cs",
+      "bytes": 3783,
+      "sha256": "36208f3889d346dac33deba7ad7f9e20cd67deeb465c910f2355cbde8fd57af9"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/ThreatEvaluation.cs",
+      "bytes": 3531,
+      "sha256": "b956761ca5157dc70faecdd28faa1d45a52cd574cefb9866cd45a11f5df364bd"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/TranspositionTable.cs",
+      "bytes": 2433,
+      "sha256": "6b6a3a5581678ebf8c36640f02e1ed27ee9055ed55f1eaa205ab7d38bbf45001"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/Uci.cs",
+      "bytes": 16311,
+      "sha256": "3346087498bcd4a6e4dd88a274b2eca5bddfd1aa9c1a4c885652d35d94adf92e"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/src/Engine/Zobrist.cs",
+      "bytes": 880,
+      "sha256": "116806963b5b3a5b9bd10c9b988fffd78ce56f7abfa3a2bf716203d42c687ac2"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/tests/Engine.Tests/Engine.Tests.csproj",
+      "bytes": 194,
+      "sha256": "731df592e64b335e2d2bb5e1aad2c481926ff8c43284e4a81b888cadaf782639"
+    },
+    {
+      "path": "artifacts/research/mate-proof-source-v2/tests/Engine.Tests/Program.cs",
+      "bytes": 60755,
+      "sha256": "a70bb2e8e36e1a93737530cbc35ac84c5783ba78e47d54fcae47fdc77f90cd6a"
+    },
+    {
+      "path": "artifacts/research/mate-proof-summary-v1/AGENTS.md",
+      "bytes": 1377,
+      "sha256": "eadef7c286c1847cc2300fefcfb46890fa0d2d4f47db720d31430923299d3487"
+    },
+    {
+      "path": "artifacts/research/mate-proof-summary-v1/GENERAL-MATE-PROOFS.md",
+      "bytes": 6768,
+      "sha256": "4832cb21f727cecd3a01a2c9c8651069c93383c1eed84ba9212a49ab5275c1c1"
+    },
+    {
+      "path": "artifacts/research/mate-proof-summary-v1/PROGRESS.md",
+      "bytes": 72488,
+      "sha256": "2638f31d491586071a9ea54d81d98caeb40ddef2f497cea2d32d32cdca2a8688"
+    },
+    {
+      "path": "artifacts/research/mate-proof-summary-v1/RATING.md",
+      "bytes": 8033,
+      "sha256": "1c8c2d9a2a363b4ea8e012c21c6817067815b47009d9c12e81fec5859bb7b965"
+    },
+    {
+      "path": "artifacts/research/mate-proof-summary-v1/README.md",
+      "bytes": 11638,
+      "sha256": "0dfdf10a679a45df9c04bd373fb169c95529393e3bc9edca3b8308b012ab6290"
+    },
+    {
+      "path": "artifacts/research/mate-proof-summary-v1/ROADMAP.md",
+      "bytes": 14888,
+      "sha256": "a13b38fd947e470d43419d43497d38784800b9923b4ff2de40a51fc22212a86a"
+    },
+    {
+      "path": "artifacts/research/mate-proof-summary-v1/STRATEGY-PROOFS.md",
+      "bytes": 4191,
+      "sha256": "24061f5a25a6e8705ab8fe2fa9796806c935006669b607d5c3ebfaad0be15066"
+    },
+    {
+      "path": "artifacts/research/phase-source/Aster.sln",
+      "bytes": 1969,
+      "sha256": "0cce33025d086c048a48c3dcd7543ae1338cf5c518b15060b7cd4b0e5c9864a1"
+    },
+    {
+      "path": "artifacts/research/phase-source/Directory.Build.props",
+      "bytes": 318,
+      "sha256": "aae19899039dcffcd68ffa855c683877cd6c4d6813d36bd974024a26b219badb"
+    },
+    {
+      "path": "artifacts/research/phase-source/global.json",
+      "bytes": 58,
+      "sha256": "d8fc1e71d76ffd7f785d4b7abbae953024544b52cf19fc4b8d687b058e594610"
+    },
+    {
+      "path": "artifacts/research/phase-source/manifest.json",
+      "bytes": 3630,
+      "sha256": "3ee13720e63ae073a28ac4ea93a799f6557d39f53ca5835bdcea5a95032894bb"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Attacks.cs",
+      "bytes": 2643,
+      "sha256": "10a2eb8139f9786d5b097d92f3e385a889a24c8940a0d1fade1b1a987a37b9c6"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Board.cs",
+      "bytes": 18790,
+      "sha256": "af1db55d63700255db50bd2c5b538d15c7ae1558ba3296a21f0e54bf2bfa16d9"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/EndgameProof.cs",
+      "bytes": 5186,
+      "sha256": "a03d6e4c226d7fa07cda2a50c3852bff0610dc9339472e5aed6f1dc1dec6095e"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Engine.csproj",
+      "bytes": 285,
+      "sha256": "7cf064b7199806147a2d4c716a36ff3e916002ca7df76c476d511296a72e6052"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Evaluation.cs",
+      "bytes": 7519,
+      "sha256": "b7c1ad0014eebea5d59c13ba37861616df60db253f906f6b94b4fb88e7d3bbe5"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/KpkBitbase.cs",
+      "bytes": 7104,
+      "sha256": "a13112931282526f774ca2b5ea1e87736f0c21e4b24d1fa9da8ae18560bfcc39"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/MajorMateBitbase.cs",
+      "bytes": 7110,
+      "sha256": "2ff38a71882eb9f8a5a1305745f569bb6849bb44f8d2a2c329ecba9a74617b48"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Move.cs",
+      "bytes": 1304,
+      "sha256": "9cee181118dc8dbf01687b7c5210ad81aa07826e70ce7fb9b512b321b69bdc85"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/NeuralNetwork.cs",
+      "bytes": 13412,
+      "sha256": "4961c8545975f63e5ace2913c21ead67bee6a1cbb2d3b25a8fdcc2bbdc07cbf2"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Perft.cs",
+      "bytes": 589,
+      "sha256": "7e679e005a22d3cd3e003f6034495d4e62c8fd5ca79b89822c9a7e78b2fd085e"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Program.cs",
+      "bytes": 4664,
+      "sha256": "47206d408b8c36c10cbb78247aa04fb13444b28154fda535afd012f4e60ea132"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Search.cs",
+      "bytes": 18501,
+      "sha256": "f0efbc3320594503c91efe78f38622e5ee3412817af9aebc146cd90d5052c919"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/SearchProfile.cs",
+      "bytes": 3232,
+      "sha256": "60ed1caee10ce09adf20d9542d0eac06fc613a29881f04bd0f15a826109d405c"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/StaticExchange.cs",
+      "bytes": 3783,
+      "sha256": "36208f3889d346dac33deba7ad7f9e20cd67deeb465c910f2355cbde8fd57af9"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/ThreatEvaluation.cs",
+      "bytes": 3531,
+      "sha256": "b956761ca5157dc70faecdd28faa1d45a52cd574cefb9866cd45a11f5df364bd"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/TranspositionTable.cs",
+      "bytes": 2433,
+      "sha256": "6b6a3a5581678ebf8c36640f02e1ed27ee9055ed55f1eaa205ab7d38bbf45001"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Uci.cs",
+      "bytes": 13958,
+      "sha256": "0aea357b653e52995aa5c1cdc30c56beffeac2db814c0f87cb406e1d7295f473"
+    },
+    {
+      "path": "artifacts/research/phase-source/src/Engine/Zobrist.cs",
+      "bytes": 880,
+      "sha256": "116806963b5b3a5b9bd10c9b988fffd78ce56f7abfa3a2bf716203d42c687ac2"
+    },
+    {
+      "path": "artifacts/research/phase-source/tests/Engine.Tests/Engine.Tests.csproj",
+      "bytes": 194,
+      "sha256": "731df592e64b335e2d2bb5e1aad2c481926ff8c43284e4a81b888cadaf782639"
+    },
+    {
+      "path": "artifacts/research/phase-source/tests/Engine.Tests/Program.cs",
+      "bytes": 55848,
+      "sha256": "327a588fb0c60c6dbd1e338e885efa94769f9c8f079cf534eaebc19d6e7461e9"
+    },
+    {
+      "path": "artifacts/tactics/mate-proof-endgames-nodes.json",
+      "bytes": 3794,
+      "sha256": "bb29306c227e919fed76b1f8e339a85f9c648ea5b4c911b02382faaa8c481d20"
+    },
+    {
+      "path": "artifacts/tactics/mate-proof-original-depth8.json",
+      "bytes": 7002,
+      "sha256": "c06f14a04a8df4d95d8930340108505f646de04828fc465822d2b082a60d70b8"
+    },
+    {
+      "path": "artifacts/tactics/mate-proof-original-nodes.json",
+      "bytes": 6974,
+      "sha256": "4f46f48d4a46c0582d26f6c46708587f1156dbe2af68acba72ebb8aa66c9315f"
+    },
+    {
+      "path": "artifacts/tactics/mate-proof-quiet-depth8.json",
+      "bytes": 7004,
+      "sha256": "5a573da108dada75abfdbef0cc4338d3319a699c927fa990d35acc0a6c66ff92"
+    },
+    {
+      "path": "artifacts/tactics/mate-proof-quiet-nodes.json",
+      "bytes": 6987,
+      "sha256": "0e23e365e584820c7d76b85e4781165c391f14ee9974c08fffe5e6df1fa53bc3"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-bench7-v2.txt",
+      "bytes": 739,
+      "sha256": "aa9533c1babbd4b6dfefdffdf04df2c61e555a0771b6fd4351f0955332b58c8e"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-bench7.txt",
+      "bytes": 739,
+      "sha256": "d4cdb86cf40cf41cb74b3092f33b67728512d00b2de6e605a6fa575623575548"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-build-final.txt",
+      "bytes": 367,
+      "sha256": "63a351d2e844643d171ee5a6b701b50f5d0638370d586e4bfdd37313045fb70d"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-build-v2.txt",
+      "bytes": 367,
+      "sha256": "d1bc71654fc8a755c6d05a333ad3eb02a2cbc7cc99c38cf95fac623e84274509"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-build.txt",
+      "bytes": 367,
+      "sha256": "4b51b51822429f79d396a35100a8b9e659089afe87e82b7baab151f9014d2658"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-ci-smoke.txt",
+      "bytes": 101,
+      "sha256": "414b61d9dc4eaf22d144c8a87cf0035a1871c32dfc30303e9f812ad891367c5c"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-ci-test-evidence.txt",
+      "bytes": 1392,
+      "sha256": "42005e462c266f48075e3d38a0a5ddfc203490cf186e5357b59425025518c888"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-ci.json",
+      "bytes": 17367,
+      "sha256": "0f79be6c91a3675b48cbcede408b856428bdebb653086bcd0b17d7135626a35c"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-default-comparison.txt",
+      "bytes": 180,
+      "sha256": "7f06a8dcc7059348998582f5b740c60e27cc60564682ccc65082349fd61eb22f"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-endgames-nodes.txt",
+      "bytes": 29,
+      "sha256": "ef4e645f8ea67b03b31bbb891a18f192680d3ff359c2bd10e014b1541b2db39b"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-final-source-check.json",
+      "bytes": 2171,
+      "sha256": "23374477db754e4237c35d8b6c01ab9c8ec29b3bb2d95de8a942b237975f6564"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-general-v2.json",
+      "bytes": 54752,
+      "sha256": "bb0931d61db1c65400575b0f9aaa56dd0fc90c77722772f27d1eb49d0217a978"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-general-v2.txt",
+      "bytes": 128,
+      "sha256": "531defd5a524b22abb0163d780892703a374bf2c477e487c34f2745665c9a3ce"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-general.json",
+      "bytes": 34631,
+      "sha256": "fcdce8a8f7a33392a98e0d498b126b4f8f50584d54513d7404146444fa2d26ac"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-general.txt",
+      "bytes": 127,
+      "sha256": "7930e2c48973875f84afdd46211c1c0be282a31b726f399a7eb976b3a96e9aeb"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-match-audit.json",
+      "bytes": 3453,
+      "sha256": "0f12bad7f612bcd99c29648406c262bd00b72ae23f7aaf03d929d92f959461d1"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-opening-preparation.txt",
+      "bytes": 233,
+      "sha256": "c2953ce7056070eac1dc2d95957a9e7d7ee557814c31253bce5d1f921d375ca7"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-original-depth8.txt",
+      "bytes": 29,
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-original-nodes.txt",
+      "bytes": 29,
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-parent-audit.json",
+      "bytes": 3453,
+      "sha256": "55f118780f98ab16ffe3a91d1b8572b4a4d2bc95ebee69cb5d4625796809755b"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-preflight.json",
+      "bytes": 4265,
+      "sha256": "d15c128e301e3d3bf468b2d4337131b6b0dd001191895909fdaf6116eb0af23c"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-publish-v2.txt",
+      "bytes": 88,
+      "sha256": "93e6f2cdebcd968c3fa4b1ba822e986bbfe47bfbf999d74bd5a00d7c1e56a0fd"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-publish.txt",
+      "bytes": 85,
+      "sha256": "ed9ef620dc45452d84717fedb4a1b766f95023eea700589398fb36a51a7bbdc5"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-quiet-depth8.txt",
+      "bytes": 29,
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-quiet-nodes.txt",
+      "bytes": 29,
+      "sha256": "a5e19ca3bc3d0ffd1a104d318637cb28d84877c2d18051cb06445c310f5bcebd"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-rules-v2.json",
+      "bytes": 548,
+      "sha256": "cf88cd312f549fa6101f8bca9c1be941c73430751a9c496aabafaaee715fc723"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-rules-v2.txt",
+      "bytes": 487,
+      "sha256": "ed65acdfc40b7b65a921d150f3b2c791a8b3e4a67f19aeb1da33b780fb3f1e5d"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-rules.json",
+      "bytes": 544,
+      "sha256": "23bc7f6f251c07470acb341cab1488ad20698425a307ce414ecb1f8b5f2eea89"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-rules.txt",
+      "bytes": 483,
+      "sha256": "4699be961fd5e4a3e5f28404b302b2e4718dadb1955bb7d5f52ef654d1ae0bc0"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-tests-first-attempt.txt",
+      "bytes": 3517,
+      "sha256": "33017cfacd1861d0a64c860ab10815004bb0ec98bdc0954128f47457d3fc5d52"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-tests-v2.txt",
+      "bytes": 3412,
+      "sha256": "7ab0bab8842289b65dd56eebe446b6cecfa06b1d2265a8cbbd8f71e36aae173d"
+    },
+    {
+      "path": "artifacts/validation/mate-proof-tests.txt",
+      "bytes": 3412,
+      "sha256": "7ab0bab8842289b65dd56eebe446b6cecfa06b1d2265a8cbbd8f71e36aae173d"
+    },
+    {
+      "path": "tests/fixtures/mate-proof-match-v1.json",
+      "bytes": 9964,
+      "sha256": "14286109ef669ec3abab5d4bfeb8f5de1ca6468969b72b8fd0cd658ba94edc0a"
+    },
+    {
+      "path": "tests/fixtures/mate-proof-parent-v1.json",
+      "bytes": 14717,
+      "sha256": "85553f4ff2dcc2ce9896e002ce5730d4ca54061c82f1032bdb47f0c83ae750c4"
+    }
+  ],
+  "interpretation": "Complete native general-mate certificate experiment, independent positive/negative/oracle/protocol checks and audited paired unchanged-play regression. Original iterations retained. No Elo or full-strength Stockfish superiority inferred."
+}

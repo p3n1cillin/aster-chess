@@ -36,6 +36,15 @@ The [phase session record](../artifacts/ratings/session-20261004-phase.json)
 retains the same exact measured 0.7.6-q-evasion reference; neither the new DLL
 nor its model receives an Elo estimate from these regression games.
 
+The subsequent **0.7.9-mate-proof-dev** build expands native independently
+checkable mating strategies to general material. Its playing files remain
+identical to the frozen 0.7.8 build, all 32 fresh fixed-depth outputs agree,
+and 32 paired regression games are audited with no forfeits or unresolved
+outcomes. This is a diagnostic interface capability, not a strength change.
+The [session record](../artifacts/ratings/session-20261004-mate-proof.json)
+retains the exact earlier local reference above; the new DLL is not separately
+calibrated and the paired score does not establish an Elo rating.
+
 The frozen ordinary **Aster 0.7.4-feature-dev** has a provisional local estimate
 of **2300**, with a **95% opening-family interval of 2265..2335**, on the
 **SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash** scale.

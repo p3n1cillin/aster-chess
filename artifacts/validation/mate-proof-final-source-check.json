@@ -1,0 +1,103 @@
+{
+  "passed": true,
+  "source_files": [
+    {
+      "path": "Aster.sln",
+      "same": true
+    },
+    {
+      "path": "Directory.Build.props",
+      "same": true
+    },
+    {
+      "path": "global.json",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Attacks.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Board.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/EndgameProof.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Evaluation.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/KpkBitbase.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/MajorMateBitbase.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/MateProof.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Move.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/NeuralNetwork.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Perft.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Program.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Search.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/SearchProfile.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/StaticExchange.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/ThreatEvaluation.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/TranspositionTable.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Uci.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Zobrist.cs",
+      "same": true
+    },
+    {
+      "path": "src/Engine/Engine.csproj",
+      "same": true
+    },
+    {
+      "path": "tests/Engine.Tests/Program.cs",
+      "same": true
+    },
+    {
+      "path": "tests/Engine.Tests/Engine.Tests.csproj",
+      "same": true
+    }
+  ],
+  "binary_sha256": "ac907eac90bba15acab80c15d16f195044a8ac2b59a7964f5a065bc0caaa0ae8",
+  "required_checks_reused": "55 tests,2614 rules, tactics, exact32-position behavior andbench7: source remains exact; no rebuild or playing code change after matched snapshot"
+}

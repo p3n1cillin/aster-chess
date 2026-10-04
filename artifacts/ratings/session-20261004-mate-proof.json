@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "timestamp_utc": "2026-10-04T18:42:07.901892+00:00",
+  "status": "last measured reference retained; general mate-proof interface build unrated",
+  "public_elo": null,
+  "last_measured_local_rating": 2319.019359271422,
+  "primary_95_percent_local_interval": [
+    2277.370617879139,
+    2360.3589099588767
+  ],
+  "local_scale": "SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash",
+  "rated_engine": "artifacts/publish/q-evasion-dev/Aster.dll",
+  "rated_engine_sha256": "a3994e4f350b2cfa261db5edc1e4ae5c332d85d4b3eaf34c0730267f3603d9a0",
+  "rated_version": "Aster 0.7.6-q-evasion-dev",
+  "reference_record": {
+    "path": "artifacts/ratings/session-20261004-q-evasion-confirmation.json",
+    "sha256": "78eeab42081af15787be31f35b9307143355c0b55a93119b741e7f95e81ca736"
+  },
+  "candidate_sha256": "ac907eac90bba15acab80c15d16f195044a8ac2b59a7964f5a065bc0caaa0ae8",
+  "failed_gates": [],
+  "candidate_general_regression": {
+    "games": 32,
+    "wins": 10,
+    "draws": 11,
+    "losses": 11,
+    "unresolved": 0,
+    "forfeits": 0,
+    "score": 0.484375,
+    "interpretation": "Unchanged-playing paired regression; no inferred Elo"
+  },
+  "reason": "New native general-mate certificates are independently verified. Playing code unchanged,32 fixed-depth outputs retained and32 paired games audited; no claim of a playing gain or separate calibration. Public Elo and full-strength Stockfish superiority remain unestablished."
+}

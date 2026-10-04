@@ -17,8 +17,9 @@ as separate reference points.
 
 The user also requests a distinctive ability beyond Stockfish's native
 interface and a current rating at each session end. Aster now exports complete
-queen/rook mating strategies with native explanations and independent
-rule-only verification; extend this toward useful general explanations and
+queen/rook mating strategies and bounded general-material mating strategies
+with native explanations and independent rule-only verification; extend this
+toward useful non-mating general explanations and
 proof-backed plans. This does not replace the original playing-strength goal.
 The matched 0.7.6-q-evasion build now has a provisional local reference-setting
 estimate of 2319 (95% family interval 2277..2360) at 30 ms per move, one thread
@@ -30,6 +31,16 @@ Public Elo remains unestablished; report the named scale, rated binary and
 uncertainty at each session end. Extend measurement across controls and
 reference engines using fresh confirmation for changed playing code.
 See `docs/STRATEGY-PROOFS.md` and `docs/RATING.md`.
+
+General-material mate certificates now pass independent replay on 25 examples,
+all 36 legacy strategies and 64 seeded three-ply oracle comparisons. Native
+explanations remain responsive during concurrent infinite search and can be
+cancelled. Playing files remain identical to frozen 0.7.8, all 32 fresh depth-eight
+outputs agree, and 32 complete paired regression games are independently audited.
+All four Windows/Linux default/IIR CI jobs also verify current-build certificates.
+This expands the distinctive native ability without establishing a playing
+gain. See `docs/GENERAL-MATE-PROOFS.md`; next prioritize stable endgame
+supervision and feature interactions for measurable playing-strength progress.
 
 ## 1. Correct, measurable foundation
 

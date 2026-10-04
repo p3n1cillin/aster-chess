@@ -39,7 +39,7 @@ and deps files with the executable. The .NET 8 runtime must be installed.
 For a single executable that uses the installed runtime:
 
 ```powershell
-dotnet publish src/Engine/Engine.csproj -c Release -r win-x64 --self-contained false -p:PublishSingleFile=true -o artifacts/publish/win-x64
+dotnet publish src/Engine/Engine.csproj -c Release -r win-x64 --self-contained false -p:PublishSingleFile=true -o artifacts/publish/current-win-x64
 ```
 
 ## Engine capabilities

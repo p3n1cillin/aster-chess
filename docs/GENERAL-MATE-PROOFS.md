@@ -94,9 +94,18 @@ with the independent rules verifier on Windows/Linux and both build variants.
 Ordinary playing files match the frozen 0.7.8 source byte for byte. On **32
 fresh depth-eight openings**, every move, score and node count agrees,
 **2,371,866 nodes** each. Bench seven retains **146,772 nodes**. A fixed
-32-game paired unchanged-play regression is running at 30 ms/move, one thread,
-64 MiB hash and zero move overhead; its PGNs will be independently audited.
-Its point score is descriptive, never evidence of a strength increase.
+32-game paired unchanged-play regression completes at 30 ms/move, one thread,
+64 MiB hash and zero move overhead: **10 wins, 11 draws and 11 losses**,
+score **48.44%**, no forfeits or unresolved games. Every PGN is independently
+audited. Its point score is descriptive, never evidence of a strength increase.
+Windows/Linux CI passes all four jobs, with 55 default/56 IIR tests and eight
+independently verified current-build certificates in each job.
+
+The complete immutable experiment can be rechecked with:
+
+```powershell
+.venv/Scripts/python.exe scripts/preserve_mate_proof.py --verify
+```
 
 The latest exact measured rating remains **2319** (95% interval **2277..2360**)
 on the SF19 setting-equivalent scale at 30 ms, one thread and 64 MiB hash,
