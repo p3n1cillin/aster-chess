@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "model_sha256": "98535307c0c30b529cf242d2a947ccacf66678b25710f80de980e13ec4c77975",
+  "selected_epoch": 11,
+  "prior_model": "artifacts\\training\\phase-control-v1\\model.ann",
+  "prior_training_sha256": "9b9b107bfa7491ab822f626c3921cdcf6e80c2b2197f80dcf6c75b98f0a6dae4",
+  "new_training_sha256": "1f12d3229d63ee7714fd5b86c1ffbea4e18c2f15b6389e5164586dd3e089cd32",
+  "scope": "Exact earlier 50-epoch control reproduction after fresh-pair trainer changes; no fresh markers or objective."
+}

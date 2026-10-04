@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "status": "complete",
+  "started_utc": "2026-10-04T20:37:32.544918+00:00",
+  "plan_sha256": "70e19c063e26fe4c5bd289f0807ec3ef01ff0c44f3e6309de9cc4abbcb183c8b",
+  "bundle_sha256": "8d6ad0c50c62a631e1f02f206d9287a5580037001392f440dd947c9a22714e78",
+  "scripts": {
+    "train_network.py": "5c2ed6488e69600765cce59272ecd2f58134dd93c90fc776e2a8a22d4f9a08aa",
+    "neural_format.py": "304897abff22a599e5523ad08492f76d91dde8def54e54497716969602970efa",
+    "train_deep_turn.py": "e6a125776fc0ad0da5c1706474be69a2c6426af5a0036caf65401064531b209f"
+  },
+  "completed": [
+    {
+      "role": "control",
+      "model_sha256": "460736dd293709d72817ba1bee67e3186edabd097c456fc61ad0425d2a6b7725",
+      "training_sha256": "74058b47a22146ecb4e5ed1a28cc6578121df4219b140301106520630f31ebb5",
+      "selected_epoch": 9,
+      "quantized_mae_cp": 131.5398347107438,
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 179.57125854492188,
+        "predicted_std_cp": 26.201921463012695,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "role": "candidate",
+      "model_sha256": "a580568f773a61d53e86661a5ac572bc6313aa626a29487c17754afc62ed36c3",
+      "training_sha256": "915fb5d4072a6cedc66a0ec371ae97624d6408c260034c7430f3dcfc2a8ed840",
+      "selected_epoch": 16,
+      "quantized_mae_cp": 135.56892561983472,
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 196.08877563476562,
+        "predicted_std_cp": 95.95124053955078,
+        "teacher_std_cp": 283.5871276855469
+      }
+    }
+  ],
+  "updated_utc": "2026-10-04T20:40:04.148581+00:00"
+}

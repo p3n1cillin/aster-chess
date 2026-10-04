@@ -1,0 +1,6884 @@
+{
+  "schema": 1,
+  "complete": true,
+  "checks_passed": true,
+  "plan_sha256": "70e19c063e26fe4c5bd289f0807ec3ef01ff0c44f3e6309de9cc4abbcb183c8b",
+  "auditor_sha256": "0f6d2b20b4a3a8145cf6dce72f80ec605a1fb658c254edfe4cb742a2807fecf4",
+  "inputs": [
+    {
+      "path": "artifacts/data/deep-turn-generation-v1.json",
+      "sha256": "a2f6fb5679071f702aed287e0c77773ec50e866975cb3facfd04eeaa238f936c"
+    },
+    {
+      "path": "artifacts/data/stable-endgame-4096-v1.jsonl",
+      "sha256": "3c1ca1842da3059433028b3bd5cd9d6ebf9074226f63783238199563f34e5065"
+    },
+    {
+      "path": "artifacts/data/deep-turn-candidates-v1.jsonl",
+      "sha256": "7a30a55bcfed7ef60fe8be8a4bc0d8036aee9316bf832171a31d0cd1a4ea917b"
+    },
+    {
+      "path": "artifacts/data/deep-turn-pairs-v1.jsonl",
+      "sha256": "b0abf7601a753d05e49fc8aacad7942e334f4adc912a3c16d3c1ab77e6b3dc45"
+    }
+  ],
+  "parents": 4096,
+  "queried": 4034,
+  "pairs": 1913,
+  "fresh_positions": 3826,
+  "training_pairs": 1733,
+  "heldout_pairs": 180,
+  "history_plies": 461828,
+  "native_pv_plies": 70109,
+  "classical_score_checks": 3826,
+  "rejections": {
+    "unstable_value": 571,
+    "unstable_first_move": 1331,
+    "invalid_counter_fen": 60,
+    "outside_score_range": 26,
+    "native_mate_label": 193,
+    "excluded_counter": 2
+  },
+  "parent_buckets": {
+    "0": 585,
+    "2": 446,
+    "3": 341,
+    "1": 541
+  },
+  "teacher_pair_difference_mean_cp": 154.32671197072662,
+  "teacher_pair_difference_std_cp": 235.2894368275005,
+  "teacher_negative_pair_differences": 253,
+  "exact_requeries": [
+    {
+      "index": 31,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 512,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16392,
+            "pv": [
+              "h7g6",
+              "a4a3",
+              "d6c5",
+              "b4c5",
+              "e5e6",
+              "a3a2",
+              "e6e7",
+              "a2a1q",
+              "e7e8q",
+              "a1a6",
+              "g6g7",
+              "a6a1",
+              "g7g8",
+              "a1a2",
+              "e8f7"
+            ]
+          },
+          "verified": {
+            "white_cp": 556,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65619,
+            "pv": [
+              "h7g6",
+              "a4a3",
+              "d6c5",
+              "b4c5",
+              "e5e6",
+              "a3a2",
+              "e6e7",
+              "a2a1q",
+              "e7e8q",
+              "a1a6",
+              "g6h7",
+              "c5d4",
+              "h7g7",
+              "a6a5",
+              "e8e7",
+              "a5g5",
+              "e7g5",
+              "h6g5",
+              "g7f7"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 57,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16391,
+            "pv": [
+              "a4a3",
+              "d6d2",
+              "b4c4",
+              "d2d7",
+              "c5e5",
+              "d7a4",
+              "c4d5",
+              "a4a3",
+              "e5e4",
+              "h7h6",
+              "e4g4",
+              "a3a8",
+              "d5e5",
+              "a8e8",
+              "e5d5",
+              "e8b5",
+              "d5d6",
+              "b5b6",
+              "d6d7"
+            ]
+          },
+          "verified": {
+            "white_cp": 27,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65566,
+            "pv": [
+              "a4a3",
+              "d6d2"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 90,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -5,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 16392,
+            "pv": [
+              "c4d4",
+              "f6g6",
+              "d4e4",
+              "g6f6",
+              "e4d3",
+              "f6f5",
+              "d3e2",
+              "f5e5",
+              "e2d1",
+              "e5f6",
+              "d1e1"
+            ]
+          },
+          "verified": {
+            "white_cp": -1,
+            "white_mate": null,
+            "depth": 24,
+            "reported_nodes": 65645,
+            "pv": [
+              "c4d4",
+              "f6g6",
+              "d4e4",
+              "g6f6",
+              "e4e3",
+              "f6f5",
+              "e3d3",
+              "f5f4",
+              "d3e2",
+              "f4e4",
+              "e2f2",
+              "e4d5",
+              "f2e3",
+              "d5c6",
+              "e3d3",
+              "c6b6",
+              "d3d2",
+              "b6c5"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -34,
+            "white_mate": null,
+            "depth": 12,
+            "reported_nodes": 16385,
+            "pv": [
+              "f6g6",
+              "c4d4"
+            ]
+          },
+          "verified": {
+            "white_cp": -5,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 65614,
+            "pv": [
+              "f6g6",
+              "c4d4"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 109,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -724,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16392,
+            "pv": [
+              "c2d3",
+              "h5h4",
+              "d3e4",
+              "h4h3",
+              "e4f5",
+              "h8b2",
+              "f5e6",
+              "h3h2",
+              "e6f7",
+              "g3g2",
+              "f7e6"
+            ]
+          },
+          "verified": {
+            "white_cp": -767,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 65576,
+            "pv": [
+              "c2d3",
+              "h5h4",
+              "d3c4",
+              "h4h3",
+              "c4b5",
+              "g3g4",
+              "b5a6",
+              "g4f4",
+              "a6b6",
+              "h3h2",
+              "b6c7",
+              "h2h1q",
+              "c7b6"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -790,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16395,
+            "pv": [
+              "h5h4",
+              "c2d2",
+              "h4h3",
+              "d2e2",
+              "h3h2",
+              "e2e3",
+              "h2h1q",
+              "e3e2",
+              "h1h2",
+              "e2e1"
+            ]
+          },
+          "verified": {
+            "white_cp": -752,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 65594,
+            "pv": [
+              "h5h4",
+              "c2b3",
+              "h4h3",
+              "b3c4",
+              "h8a1",
+              "c4d5",
+              "h3h2",
+              "d5e6",
+              "a1h8",
+              "e6d5",
+              "h2h1q",
+              "d5e6",
+              "g3f4",
+              "e6d7",
+              "f4f5",
+              "d7c8",
+              "h8e5",
+              "c8d8",
+              "e5h2",
+              "d8c8",
+              "h2g1",
+              "c8c7",
+              "f5f4"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 111,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 29,
+            "white_mate": null,
+            "depth": 11,
+            "reported_nodes": 16387,
+            "pv": [
+              "e2d2",
+              "e4e5"
+            ]
+          },
+          "verified": {
+            "white_cp": 4,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 65603,
+            "pv": [
+              "e2d2",
+              "e4e5",
+              "d2d3",
+              "e5d6",
+              "g2g3",
+              "h4g3",
+              "h2g3",
+              "d6e5",
+              "e3e4",
+              "f5e4",
+              "d3e3",
+              "e5f5",
+              "g3g4",
+              "f5e5",
+              "g4g5",
+              "e5f5",
+              "g5g6",
+              "f5g6",
+              "e3e4",
+              "g6f7"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 107,
+            "white_mate": null,
+            "depth": 12,
+            "reported_nodes": 16385,
+            "pv": [
+              "f5f4",
+              "e3f4"
+            ]
+          },
+          "verified": {
+            "white_cp": 78,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65593,
+            "pv": [
+              "f5f4",
+              "e3f4"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 180,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -840,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16396,
+            "pv": [
+              "h2h3",
+              "h8a8",
+              "g4e2",
+              "d4b4",
+              "g2g3",
+              "e7e6"
+            ]
+          },
+          "verified": {
+            "white_cp": -839,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65575,
+            "pv": [
+              "h2h3",
+              "d4b4",
+              "g2g3",
+              "e7e6",
+              "g4e2",
+              "h8d8",
+              "e2f1",
+              "e6e5"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -926,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16397,
+            "pv": [
+              "d4g4",
+              "h4h5",
+              "g4b4",
+              "b2b3",
+              "e7e5",
+              "h5h6",
+              "h8h6",
+              "h2g1"
+            ]
+          },
+          "verified": {
+            "white_cp": -926,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 65624,
+            "pv": [
+              "d4g4",
+              "h4h5",
+              "g4b4",
+              "b2b3",
+              "e7e5",
+              "h5h6",
+              "h8h6",
+              "h2g1"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 217,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -541,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16399,
+            "pv": [
+              "e5d3",
+              "c3c2",
+              "d3c1",
+              "g3g1",
+              "d4d3",
+              "g1c1",
+              "h5h6",
+              "c1h1",
+              "d3c2",
+              "h1h5",
+              "h6h7",
+              "h5h2",
+              "c2c1",
+              "h2h7"
+            ]
+          },
+          "verified": {
+            "white_cp": -558,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65643,
+            "pv": [
+              "e5d3",
+              "c3c2",
+              "d3c1",
+              "g3g1",
+              "d4d3",
+              "g1c1",
+              "h5h6",
+              "c1g1",
+              "d3c2",
+              "g1h1",
+              "h6h7",
+              "h1h7"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -768,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16424,
+            "pv": [
+              "c3c2",
+              "e5d3",
+              "g3d3",
+              "d4d3",
+              "c2c1q",
+              "h5h6",
+              "c1a3",
+              "d3d2",
+              "a3a2",
+              "d2c1",
+              "a2a1",
+              "c1c2",
+              "a1a4",
+              "c2b2"
+            ]
+          },
+          "verified": {
+            "white_cp": -768,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65591,
+            "pv": [
+              "c3c2",
+              "e5d3",
+              "g3d3",
+              "d4d3",
+              "c2c1q",
+              "h5h6",
+              "c1a3",
+              "d3d2",
+              "a3a2",
+              "d2c1",
+              "a2a1",
+              "c1c2",
+              "a1a4",
+              "c2b2"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 238,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -588,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16398,
+            "pv": [
+              "e4e5",
+              "f8g7",
+              "e5e6",
+              "g8f8",
+              "d5d6",
+              "g7e5",
+              "d6d7",
+              "e5c7",
+              "d2d3",
+              "f8e7",
+              "d3d4",
+              "e7e6",
+              "d7d8r",
+              "c7d8"
+            ]
+          },
+          "verified": {
+            "white_cp": -588,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 65573,
+            "pv": [
+              "e4e5",
+              "f8c5",
+              "d2d3",
+              "b7b5",
+              "d3e4",
+              "g8f7",
+              "e4d3",
+              "f7e8",
+              "d3c2",
+              "b5b4",
+              "c2c1",
+              "e8f8",
+              "c1c2",
+              "f8f7"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -637,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16395,
+            "pv": [
+              "f8g7",
+              "d2d3",
+              "g8f7",
+              "d5d6",
+              "f7e8",
+              "d3c4",
+              "e8d8",
+              "c4d3",
+              "b7b5",
+              "d6d7",
+              "d8e7",
+              "d7d8q",
+              "e7d8"
+            ]
+          },
+          "verified": {
+            "white_cp": -636,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 65599,
+            "pv": [
+              "f8g7",
+              "d2c1",
+              "g8f7",
+              "c1c2",
+              "f7e7",
+              "c2b2",
+              "e7d6",
+              "b2b1",
+              "b7b6",
+              "b1c2",
+              "b6b5",
+              "c2d2",
+              "b5b4",
+              "d2c2"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 258,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -587,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16408,
+            "pv": [
+              "g3f4",
+              "a7c7",
+              "c2d1",
+              "g5g4",
+              "f3g4",
+              "f6g4",
+              "f4f5",
+              "c7d7",
+              "d1e2"
+            ]
+          },
+          "verified": {
+            "white_cp": -614,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65624,
+            "pv": [
+              "g3f4",
+              "g5f4",
+              "c1f4",
+              "a7g7",
+              "f4e3",
+              "g7d7",
+              "e3c5",
+              "f6h5",
+              "c5e3"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -742,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16405,
+            "pv": [
+              "a7c7",
+              "c2b2",
+              "c7c1",
+              "b2c1",
+              "f4g3",
+              "f3f4",
+              "g3g2",
+              "c1c2",
+              "g2g1r",
+              "f4g5",
+              "h6g5"
+            ]
+          },
+          "verified": {
+            "white_cp": -751,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 65591,
+            "pv": [
+              "a7c7",
+              "c2b3",
+              "c7c1",
+              "g3f4",
+              "g5f4",
+              "b3a2",
+              "c1c5",
+              "a2a3",
+              "c5a5",
+              "a3b4",
+              "a5g5",
+              "b4a3"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 274,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -538,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16395,
+            "pv": [
+              "g5f6",
+              "e4e3",
+              "f6e6",
+              "e3d3",
+              "e6d5",
+              "a6a5",
+              "d5e5",
+              "d3c4",
+              "e5e4",
+              "c4b4",
+              "e4d3",
+              "b4b3",
+              "d3e2"
+            ]
+          },
+          "verified": {
+            "white_cp": -571,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65570,
+            "pv": [
+              "g5f6",
+              "e4e3",
+              "f6e6",
+              "e3d4",
+              "e6f5",
+              "d4c4",
+              "f5e4",
+              "c4c3",
+              "e4e3",
+              "c5c4",
+              "a4a5",
+              "b6a5",
+              "e3f4"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -552,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16385,
+            "pv": [
+              "e4e3",
+              "g5f5",
+              "e3d3",
+              "f5f4",
+              "d3c4",
+              "f4e3",
+              "b6b5",
+              "a4a5",
+              "c4b3",
+              "e3d2"
+            ]
+          },
+          "verified": {
+            "white_cp": -554,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65544,
+            "pv": [
+              "e4e3",
+              "g5f6",
+              "e3d3",
+              "f6e7",
+              "d3c4",
+              "e7d7",
+              "b6b5",
+              "d7c7",
+              "b5a4",
+              "c7b6",
+              "a4a3",
+              "b6a6"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 284,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 683,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16400,
+            "pv": [
+              "f2e3",
+              "g7f6",
+              "g1f1",
+              "b8a7",
+              "d1a1",
+              "a7b8",
+              "f1e2"
+            ]
+          },
+          "verified": {
+            "white_cp": 683,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65619,
+            "pv": [
+              "f2e3",
+              "g7f6",
+              "g1f1",
+              "b8a7",
+              "d1a1",
+              "a7b8",
+              "f1e2"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 671,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16397,
+            "pv": [
+              "e3f2",
+              "g1f2",
+              "b6b5",
+              "h3h4",
+              "b5b4",
+              "f2f1",
+              "b4b3"
+            ]
+          },
+          "verified": {
+            "white_cp": 709,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65537,
+            "pv": [
+              "e3f2",
+              "g1f2",
+              "h5h4",
+              "f2e2",
+              "g7f8",
+              "f3h4",
+              "b8a7",
+              "e2f1",
+              "a7b8",
+              "h4f5"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 320,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 538,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16396,
+            "pv": [
+              "e2f3",
+              "e4d6",
+              "h4h5",
+              "b7b6",
+              "e1d2",
+              "d6b7"
+            ]
+          },
+          "verified": {
+            "white_cp": 551,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65598,
+            "pv": [
+              "e2f3",
+              "e4c5",
+              "e1d2",
+              "c5d7",
+              "h4h5",
+              "d7c5",
+              "d2e3",
+              "c5d7",
+              "a2a3",
+              "b7b6",
+              "b3b4"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 538,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16399,
+            "pv": [
+              "e4f6",
+              "e2f3",
+              "f6d7",
+              "e1f2",
+              "h7h6",
+              "b3b4",
+              "b7b6",
+              "a2a4",
+              "e5e4",
+              "f3g3",
+              "d7e5",
+              "f2b6"
+            ]
+          },
+          "verified": {
+            "white_cp": 538,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65540,
+            "pv": [
+              "e4f6",
+              "e2f3",
+              "f6d7",
+              "e1f2",
+              "h7h6",
+              "b3b4",
+              "b7b6",
+              "a2a4",
+              "e5e4",
+              "f3g3",
+              "d7e5",
+              "f2b6"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 436,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -481,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16395,
+            "pv": [
+              "g1f2",
+              "h6g5",
+              "c3c2",
+              "g5f5",
+              "f2e3",
+              "g6g5",
+              "e3d4",
+              "c6a4",
+              "c2a2",
+              "a5c6",
+              "d4c3"
+            ]
+          },
+          "verified": {
+            "white_cp": -527,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65569,
+            "pv": [
+              "g1f2",
+              "h6g5",
+              "c3c2",
+              "c6e8",
+              "f2e3",
+              "e8a4"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -516,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16390,
+            "pv": [
+              "h6g7",
+              "g1f2",
+              "g7f6",
+              "f2e2",
+              "f6e5"
+            ]
+          },
+          "verified": {
+            "white_cp": -549,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65538,
+            "pv": [
+              "h6g7",
+              "g1f2",
+              "g7f6",
+              "c3c1",
+              "a5b3",
+              "c1c4",
+              "b3d2",
+              "c4f4",
+              "f6e5",
+              "f2e3",
+              "d2e4",
+              "f4f3",
+              "e5e6"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 445,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -346,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16386,
+            "pv": [
+              "a2a3",
+              "d2c3",
+              "g4f3",
+              "e6e5",
+              "b3b1",
+              "e5d4",
+              "b1d1",
+              "d4c4",
+              "d1h1",
+              "c3b2",
+              "h1h4",
+              "c4c3",
+              "f3e4"
+            ]
+          },
+          "verified": {
+            "white_cp": -312,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65579,
+            "pv": [
+              "a2a3",
+              "e6e5",
+              "b3d3",
+              "d2c1",
+              "g4f3",
+              "c1b2",
+              "f3f2",
+              "e5e4",
+              "d3g3",
+              "e4d4",
+              "f2e2",
+              "d5c3",
+              "e2d2",
+              "c3e4",
+              "d2c2",
+              "e4g3"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -461,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16397,
+            "pv": [
+              "d2b4",
+              "a2a3",
+              "b4c5",
+              "b3b7",
+              "e6e5",
+              "b7g7",
+              "a7a5",
+              "g7g6",
+              "d5f6",
+              "g4g5",
+              "c5e3",
+              "g5h4"
+            ]
+          },
+          "verified": {
+            "white_cp": -495,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65564,
+            "pv": [
+              "d2b4",
+              "g4f3",
+              "b7b5",
+              "c5b6",
+              "a7b6",
+              "f3e4",
+              "b4e7",
+              "b3d3",
+              "b6b5",
+              "d3d2",
+              "e6d6",
+              "a2a3"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 471,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 720,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16385,
+            "pv": [
+              "b1c2",
+              "f8d6",
+              "d5c3",
+              "g5g4",
+              "d4d5"
+            ]
+          },
+          "verified": {
+            "white_cp": 718,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 65548,
+            "pv": [
+              "b1c2",
+              "f8d6",
+              "c2b3",
+              "d6c7",
+              "d5c3",
+              "c7a5",
+              "b3c4",
+              "a5c3"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 712,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16394,
+            "pv": [
+              "g5g4",
+              "d5e3",
+              "g4g5",
+              "b1a2"
+            ]
+          },
+          "verified": {
+            "white_cp": 690,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65586,
+            "pv": [
+              "g5g4",
+              "b1c2",
+              "f8d6",
+              "c2d3",
+              "g4f3",
+              "d5c3",
+              "d6b4",
+              "b5c6",
+              "f3g4",
+              "d3c4",
+              "b4c3"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 493,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -505,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16391,
+            "pv": [
+              "g1g2",
+              "d8d2",
+              "g2g3",
+              "d2d3",
+              "g3f2",
+              "b5d7",
+              "f2e2",
+              "d3d6",
+              "e2f3",
+              "d7c6",
+              "c7c6",
+              "d6c6"
+            ]
+          },
+          "verified": {
+            "white_cp": -525,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65539,
+            "pv": [
+              "g1g2",
+              "d8d2",
+              "g2g3",
+              "d2b2",
+              "c7c5",
+              "b2b1",
+              "c5f5",
+              "f6g6",
+              "f5d5",
+              "b1g1",
+              "g3f3",
+              "g1f1",
+              "f3g3",
+              "f1f6"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -552,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16389,
+            "pv": [
+              "d8d2",
+              "b2b3",
+              "d2d1",
+              "g1f2",
+              "d1b1",
+              "c7c5",
+              "b1b2",
+              "f2g3",
+              "b2b3",
+              "g3f3",
+              "b3b2",
+              "c5c8"
+            ]
+          },
+          "verified": {
+            "white_cp": -535,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65639,
+            "pv": [
+              "d8d2",
+              "b2b3",
+              "d2b2",
+              "c7c5",
+              "b2e2",
+              "c5f5",
+              "f6g6",
+              "f5e5",
+              "e2d2",
+              "e5e6",
+              "g6f7",
+              "e6e5"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 601,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -726,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16397,
+            "pv": [
+              "g2f3",
+              "a1a3",
+              "f3e4",
+              "a3c3",
+              "e4d4",
+              "c3c8",
+              "d4e4",
+              "c8c7",
+              "e4e3",
+              "e6f5",
+              "e3d2"
+            ]
+          },
+          "verified": {
+            "white_cp": -719,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 65546,
+            "pv": [
+              "g2f3",
+              "e6d5",
+              "f3e3",
+              "d5e5",
+              "e1c1",
+              "a1c1",
+              "e3e2",
+              "e5f5",
+              "e2f3",
+              "c1a1"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -773,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16404,
+            "pv": [
+              "e6d5",
+              "h2h4",
+              "d5d4",
+              "h4h5",
+              "d4e3",
+              "h5g6",
+              "h7g6",
+              "g2h3",
+              "e3f2",
+              "e1h1",
+              "e2e1r",
+              "h1h2",
+              "f2f3"
+            ]
+          },
+          "verified": {
+            "white_cp": -773,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65562,
+            "pv": [
+              "e6d5",
+              "h2h4",
+              "d5d4",
+              "h4h5",
+              "d4e3",
+              "h5g6",
+              "h7g6",
+              "g2h3",
+              "e3f2",
+              "e1h1",
+              "e2e1r",
+              "h1h2",
+              "f2f3"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 612,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -634,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16392,
+            "pv": [
+              "b1g1",
+              "g5h6",
+              "g1g8",
+              "f8g7",
+              "e8d7",
+              "f4d4",
+              "d7e7",
+              "h5h4",
+              "g8g7",
+              "h6g7",
+              "e7e6",
+              "d4g4"
+            ]
+          },
+          "verified": {
+            "white_cp": -634,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65539,
+            "pv": [
+              "b1g1",
+              "g5h6",
+              "g1g8",
+              "f8g7",
+              "e8d7",
+              "f4d4",
+              "d7e7",
+              "h5h4",
+              "g8g7",
+              "h6g7",
+              "e7e6",
+              "d4g4"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -667,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16391,
+            "pv": [
+              "g5h6",
+              "b1b6",
+              "h6g5",
+              "b6b1",
+              "f8g7",
+              "b1g1",
+              "g5h6",
+              "e8d7"
+            ]
+          },
+          "verified": {
+            "white_cp": -678,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65613,
+            "pv": [
+              "g5h6",
+              "b1b5",
+              "f8g7",
+              "b5b6",
+              "h6g5",
+              "b6b7",
+              "g7f6",
+              "b7f7",
+              "h5h4",
+              "f7f6",
+              "g5f6",
+              "e8d7",
+              "h4h3",
+              "d7d6"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 632,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 14,
+            "white_mate": null,
+            "depth": 8,
+            "reported_nodes": 16399,
+            "pv": [
+              "f3f4",
+              "g6h4"
+            ]
+          },
+          "verified": {
+            "white_cp": 26,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65539,
+            "pv": [
+              "f3f4",
+              "g6h4"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 6,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16396,
+            "pv": [
+              "g6h4",
+              "f5e4",
+              "f6f5",
+              "e4e3",
+              "g7h7",
+              "f3f4",
+              "h4g2",
+              "e3d4",
+              "g2f4",
+              "h1a1",
+              "h7g6",
+              "a1a2",
+              "f4h3"
+            ]
+          },
+          "verified": {
+            "white_cp": 15,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65614,
+            "pv": [
+              "g6h4",
+              "f5e4"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 644,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -604,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16396,
+            "pv": [
+              "c5a6",
+              "b5h5",
+              "a6b8",
+              "h5a5",
+              "b8c6",
+              "a5a2",
+              "c6a7",
+              "a2a7"
+            ]
+          },
+          "verified": {
+            "white_cp": -606,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65556,
+            "pv": [
+              "c5a6",
+              "b5h5",
+              "a6b4",
+              "h5h4",
+              "b4c6",
+              "a7a6",
+              "c6e5",
+              "h4a4",
+              "f3f2",
+              "a4a2",
+              "f2g1",
+              "f8g7"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -681,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16403,
+            "pv": [
+              "b5c5",
+              "f3e2",
+              "c5h5",
+              "e2d3",
+              "f8e7",
+              "d3d2",
+              "h5d5",
+              "d2c2",
+              "e7d6"
+            ]
+          },
+          "verified": {
+            "white_cp": -716,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 65555,
+            "pv": [
+              "b5c5",
+              "f3e2",
+              "f8e7",
+              "e2d2",
+              "c5h5",
+              "d2c2",
+              "h5e5",
+              "c2c3",
+              "e7d6",
+              "c3d4"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 646,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 603,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16394,
+            "pv": [
+              "f5g6",
+              "d4d5",
+              "g6g7",
+              "d5e5",
+              "g7h7",
+              "e5f5"
+            ]
+          },
+          "verified": {
+            "white_cp": 636,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65546,
+            "pv": [
+              "f5g6",
+              "d4d5",
+              "g6g7",
+              "d5c4",
+              "g7g6"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 579,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16413,
+            "pv": [
+              "d4e3",
+              "f5g6",
+              "e3f2",
+              "g2g4",
+              "f2g3",
+              "g4g5",
+              "g3h4",
+              "h5h6"
+            ]
+          },
+          "verified": {
+            "white_cp": 585,
+            "white_mate": null,
+            "depth": 19,
+            "reported_nodes": 65632,
+            "pv": [
+              "d4e3",
+              "f5g6",
+              "e3f2",
+              "g2g4",
+              "f2f3",
+              "g4g5",
+              "f3f4",
+              "g6g7",
+              "f4g5",
+              "h5h6",
+              "g5f4",
+              "h6h7",
+              "f4e3",
+              "h7h8q",
+              "e3d4",
+              "h8g8",
+              "d4c3",
+              "g7f7",
+              "c3b4"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 677,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 7,
+            "white_mate": null,
+            "depth": 12,
+            "reported_nodes": 16401,
+            "pv": [
+              "e1f2",
+              "h4f5"
+            ]
+          },
+          "verified": {
+            "white_cp": 7,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 65563,
+            "pv": [
+              "e1f2",
+              "h4f5"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -161,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16396,
+            "pv": [
+              "h4g2",
+              "e1d2"
+            ]
+          },
+          "verified": {
+            "white_cp": -113,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 65607,
+            "pv": [
+              "h4g2",
+              "e1d2"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 708,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 394,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16388,
+            "pv": [
+              "g4g5",
+              "d1c2",
+              "f5e5",
+              "e7f7",
+              "e5d4",
+              "f7g6",
+              "b2c1",
+              "c2a4",
+              "d4c5",
+              "g6h7",
+              "c5b6",
+              "a4b5",
+              "b6a5"
+            ]
+          },
+          "verified": {
+            "white_cp": 412,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65552,
+            "pv": [
+              "g4g5",
+              "d1c2",
+              "f5e5",
+              "c2b3",
+              "b2d4",
+              "b3g8",
+              "g5g6",
+              "g8a2",
+              "d4c5",
+              "e7d7",
+              "e5f6",
+              "d7e8",
+              "f6g7"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 412,
+            "white_mate": null,
+            "depth": 12,
+            "reported_nodes": 16388,
+            "pv": [
+              "d1a4",
+              "f5e5",
+              "e7f7",
+              "b2d4",
+              "a4e8",
+              "g4g5",
+              "f7g7",
+              "d4e3",
+              "g7g6",
+              "e3c1"
+            ]
+          },
+          "verified": {
+            "white_cp": 421,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 65578,
+            "pv": [
+              "d1a4",
+              "f5e5",
+              "a6a5",
+              "g4g5",
+              "a5b4",
+              "a3b4",
+              "a4e8",
+              "b2d4",
+              "e7d7",
+              "b4b5",
+              "e8f7",
+              "b5b6",
+              "d7c6"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 723,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 809,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16413,
+            "pv": [
+              "c2b3",
+              "d7e6",
+              "b3a4",
+              "e6f6",
+              "b8f4",
+              "f6e7",
+              "f4g5",
+              "e7e8",
+              "a4b5",
+              "e8f7",
+              "g5f4",
+              "f7g6"
+            ]
+          },
+          "verified": {
+            "white_cp": 858,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65552,
+            "pv": [
+              "c2b3",
+              "d7e6",
+              "b3a4",
+              "e6f6",
+              "a4b5",
+              "f6f7",
+              "b8f4",
+              "f7g6"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 843,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16400,
+            "pv": [
+              "d7e7",
+              "c2c3",
+              "e7d7",
+              "b8b7",
+              "d7e8",
+              "b7b5",
+              "e8e7"
+            ]
+          },
+          "verified": {
+            "white_cp": 858,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65551,
+            "pv": [
+              "d7e7",
+              "b8f4",
+              "e7d7",
+              "c2b3",
+              "d7c6",
+              "b3c4",
+              "c6b7",
+              "c4d5",
+              "b7a8",
+              "f4f8",
+              "a8a7",
+              "f8g7",
+              "a7b8"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 751,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 664,
+            "white_mate": null,
+            "depth": 12,
+            "reported_nodes": 16407,
+            "pv": [
+              "g7h5",
+              "f4f3",
+              "g2h2",
+              "e3d4",
+              "g1f2",
+              "d4e4",
+              "h5g3",
+              "e4f4",
+              "g3f1"
+            ]
+          },
+          "verified": {
+            "white_cp": 661,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 65592,
+            "pv": [
+              "g7h5",
+              "e3d3",
+              "h5f4",
+              "d3c3",
+              "g2g3",
+              "c3b2",
+              "g1f2",
+              "b2b1",
+              "g3a3"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 659,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16384,
+            "pv": [
+              "f4f3",
+              "g2h2",
+              "e3d3",
+              "g1f2",
+              "d3c2",
+              "g7h5",
+              "c2b2",
+              "f2f3",
+              "b2b1"
+            ]
+          },
+          "verified": {
+            "white_cp": 668,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65584,
+            "pv": [
+              "f4f3",
+              "g2b2",
+              "e3d3",
+              "g1f2",
+              "d3c3",
+              "b2b8",
+              "c3c2",
+              "g7h5",
+              "c2c1",
+              "h5f4",
+              "c1d1",
+              "f2f3",
+              "d1e1",
+              "f3g3"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 752,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 654,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16404,
+            "pv": [
+              "e3g5",
+              "c4e6",
+              "g1f2",
+              "b3d4",
+              "h6h4",
+              "d4f5",
+              "h4g4",
+              "f5e7",
+              "g4e4"
+            ]
+          },
+          "verified": {
+            "white_cp": 654,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65548,
+            "pv": [
+              "e3g5",
+              "c4e6",
+              "g1f2",
+              "b3d4",
+              "h6h4",
+              "d4f5",
+              "h4g4",
+              "f5e7",
+              "g4e4"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 576,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16389,
+            "pv": [
+              "d3d2",
+              "h6d6",
+              "f7e7",
+              "d6d2",
+              "b3d2",
+              "e3g5",
+              "e7e8",
+              "g5d2",
+              "c4e2",
+              "d2c3"
+            ]
+          },
+          "verified": {
+            "white_cp": 591,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65587,
+            "pv": [
+              "d3d2",
+              "h6d6",
+              "f7e7",
+              "d6d2",
+              "b3d2",
+              "e3g5",
+              "e7e8",
+              "g5d2",
+              "c4b5",
+              "d2c3",
+              "b5a4",
+              "g1f2",
+              "e8f8"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 754,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 47,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16387,
+            "pv": [
+              "g6c6",
+              "d3b3"
+            ]
+          },
+          "verified": {
+            "white_cp": 47,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65586,
+            "pv": [
+              "g6c6",
+              "d3c3"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 4,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16394,
+            "pv": [
+              "d3b3",
+              "g6h6"
+            ]
+          },
+          "verified": {
+            "white_cp": -1,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65555,
+            "pv": [
+              "d3b3",
+              "g6h6"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 775,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 494,
+            "white_mate": null,
+            "depth": 12,
+            "reported_nodes": 16389,
+            "pv": [
+              "h1g2",
+              "d4a1",
+              "f3f1",
+              "a1d4",
+              "d3f5"
+            ]
+          },
+          "verified": {
+            "white_cp": 500,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 65577,
+            "pv": [
+              "h1g2",
+              "d4a7",
+              "f3f1",
+              "a7b6",
+              "g2f3",
+              "b6a5",
+              "f3e2"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 490,
+            "white_mate": null,
+            "depth": 12,
+            "reported_nodes": 16386,
+            "pv": [
+              "g8h7",
+              "h1g2",
+              "d4a1",
+              "f3f1",
+              "a1d4",
+              "f1d1"
+            ]
+          },
+          "verified": {
+            "white_cp": 493,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 65557,
+            "pv": [
+              "g8h7",
+              "f3f1",
+              "d4b2",
+              "d3f5",
+              "h7g7"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 791,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -712,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16400,
+            "pv": [
+              "g4f5",
+              "a6a5",
+              "f5e6",
+              "d6b4",
+              "e6f6",
+              "b4e1",
+              "f6e6",
+              "d3c5",
+              "e6f6"
+            ]
+          },
+          "verified": {
+            "white_cp": -744,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65571,
+            "pv": [
+              "g4f5",
+              "b6b5",
+              "f5e4",
+              "d3b2",
+              "e4d5",
+              "d6g3",
+              "d5e4",
+              "g3c7",
+              "e4f5"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -745,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16403,
+            "pv": [
+              "b3b2",
+              "g4h3",
+              "d6c7",
+              "h3g2",
+              "b6b5",
+              "g2h1",
+              "d3c1",
+              "h1g2",
+              "b5b4",
+              "g2h1"
+            ]
+          },
+          "verified": {
+            "white_cp": -725,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65593,
+            "pv": [
+              "b3b2",
+              "g4f3",
+              "d3e1",
+              "f3e2",
+              "e1c2",
+              "e2f3",
+              "d6c7",
+              "f3g2",
+              "b6b5",
+              "g2h1",
+              "c7f4"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 822,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 931,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16396,
+            "pv": [
+              "g3g4",
+              "g8f8",
+              "h5g3",
+              "a5a4",
+              "h6h3",
+              "f8e7",
+              "h3h5",
+              "e7d7",
+              "h5a5",
+              "d7c8",
+              "a5a4"
+            ]
+          },
+          "verified": {
+            "white_cp": 971,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 65578,
+            "pv": [
+              "g3g4",
+              "a5a4",
+              "h5g3",
+              "g8f8",
+              "h6h4",
+              "f8e7",
+              "h4h3",
+              "e7d7",
+              "h3h5",
+              "d7d8",
+              "g3e4",
+              "d8c8",
+              "h2h4",
+              "c8b7",
+              "e4c5",
+              "b7a8",
+              "c5a4",
+              "f7f6",
+              "h5h8",
+              "a8b7"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 900,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16396,
+            "pv": [
+              "g8f8",
+              "h6h8",
+              "f8e7",
+              "h8c8",
+              "e7d6",
+              "g3g4",
+              "d6d7"
+            ]
+          },
+          "verified": {
+            "white_cp": 920,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65595,
+            "pv": [
+              "g8f8",
+              "h6h8",
+              "f8e7",
+              "h8a8",
+              "f7f6",
+              "a8a5",
+              "e7f8"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 855,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 13,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16399,
+            "pv": [
+              "g4g5",
+              "f6g5",
+              "d6c6",
+              "g6e7",
+              "c6d7",
+              "e7g6",
+              "d5d6"
+            ]
+          },
+          "verified": {
+            "white_cp": 27,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65539,
+            "pv": [
+              "g4g5",
+              "f6g5"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 6,
+            "white_mate": null,
+            "depth": 12,
+            "reported_nodes": 16391,
+            "pv": [
+              "g6f4",
+              "d6c7"
+            ]
+          },
+          "verified": {
+            "white_cp": -2,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 65552,
+            "pv": [
+              "g6f4",
+              "d6c7"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 863,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -749,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16450,
+            "pv": [
+              "h2g1",
+              "b7b5",
+              "g2g3",
+              "f7b3",
+              "g1f2",
+              "b3a2",
+              "f2g1"
+            ]
+          },
+          "verified": {
+            "white_cp": -774,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65545,
+            "pv": [
+              "h2g1",
+              "g7g6",
+              "e3e4",
+              "b7b5",
+              "g2g4",
+              "f7a7",
+              "g1g2",
+              "a7d4",
+              "g2f3",
+              "d4d1",
+              "f3g2"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -780,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16387,
+            "pv": [
+              "f7f2",
+              "e3e4",
+              "b7b6",
+              "e4e5",
+              "b6b5",
+              "h2h1",
+              "f2f1",
+              "h1h2",
+              "f1f4",
+              "h2g1"
+            ]
+          },
+          "verified": {
+            "white_cp": -815,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65631,
+            "pv": [
+              "f7f2",
+              "h3h4",
+              "f2h4",
+              "h2g1",
+              "h4e1",
+              "g1h2",
+              "g7f6",
+              "g2g3",
+              "e1e2",
+              "h2h3"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 869,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 552,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16392,
+            "pv": [
+              "d4e4",
+              "c7d7",
+              "e4f5",
+              "d7e8",
+              "f2f3",
+              "e8f8",
+              "f5f6",
+              "f8e8"
+            ]
+          },
+          "verified": {
+            "white_cp": 579,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65641,
+            "pv": [
+              "d4e4",
+              "c7c6",
+              "h2h4",
+              "c6c7"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 532,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16394,
+            "pv": [
+              "c7d6",
+              "d4e4",
+              "d6e6",
+              "h2h4",
+              "e6f6",
+              "e4d5"
+            ]
+          },
+          "verified": {
+            "white_cp": 550,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 65602,
+            "pv": [
+              "c7d6",
+              "d4e4",
+              "d6e6",
+              "h2h4",
+              "e6f6",
+              "e4d5",
+              "h6h5",
+              "g4h5",
+              "f6g7",
+              "d5e5",
+              "g7h6",
+              "e5f6",
+              "h6h5",
+              "f6f7",
+              "h5g4"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 886,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -47,
+            "white_mate": null,
+            "depth": 12,
+            "reported_nodes": 16404,
+            "pv": [
+              "c6c4",
+              "d5f5"
+            ]
+          },
+          "verified": {
+            "white_cp": -72,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 65557,
+            "pv": [
+              "c6c4",
+              "d5f5"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -126,
+            "white_mate": null,
+            "depth": 12,
+            "reported_nodes": 16387,
+            "pv": [
+              "d5d4",
+              "f3f4"
+            ]
+          },
+          "verified": {
+            "white_cp": -121,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65614,
+            "pv": [
+              "d5d4",
+              "f3f4"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 908,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 929,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16385,
+            "pv": [
+              "d1c1",
+              "b6b7",
+              "e2d3",
+              "d5d4",
+              "d3d4",
+              "b7a7",
+              "d4d5",
+              "a7b7",
+              "c1a1",
+              "b7c7",
+              "d5c5"
+            ]
+          },
+          "verified": {
+            "white_cp": 960,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 65596,
+            "pv": [
+              "d1c1",
+              "b6b7",
+              "e2d3",
+              "d5d4",
+              "f6e5",
+              "b7a6",
+              "d3d4",
+              "a6b6",
+              "d4d5",
+              "b6b5"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 885,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16408,
+            "pv": [
+              "b6c6",
+              "e2d2",
+              "h7h5",
+              "d2c3"
+            ]
+          },
+          "verified": {
+            "white_cp": 891,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65593,
+            "pv": [
+              "b6c6",
+              "e2d3",
+              "c6d7",
+              "d1e1",
+              "d7c7",
+              "d3d4",
+              "c7c6",
+              "f6e7",
+              "c6d7",
+              "d4d5",
+              "d7e8",
+              "e7b4",
+              "e8f7"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 940,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -28,
+            "white_mate": null,
+            "depth": 12,
+            "reported_nodes": 16398,
+            "pv": [
+              "g4d4",
+              "e6f7"
+            ]
+          },
+          "verified": {
+            "white_cp": -17,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 65603,
+            "pv": [
+              "g4d4",
+              "e6f7"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -300,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16395,
+            "pv": [
+              "c4d6",
+              "c3c8"
+            ]
+          },
+          "verified": {
+            "white_cp": -276,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65547,
+            "pv": [
+              "c4d6",
+              "c3c8"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 956,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 956,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16399,
+            "pv": [
+              "c3e5",
+              "d7c6",
+              "h2h3",
+              "a5a4",
+              "e5e6",
+              "c6c7",
+              "e6c4",
+              "c7b8"
+            ]
+          },
+          "verified": {
+            "white_cp": 956,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 65598,
+            "pv": [
+              "c3e5",
+              "d7c6",
+              "h2h3",
+              "a5a4",
+              "e5e6",
+              "c6c7",
+              "e6c4",
+              "c7b8"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 927,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16406,
+            "pv": [
+              "d7e6",
+              "a3a4",
+              "e6f5",
+              "c3a5",
+              "f5e4",
+              "a5b4",
+              "e4d3"
+            ]
+          },
+          "verified": {
+            "white_cp": 967,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65643,
+            "pv": [
+              "d7e6",
+              "c3a5",
+              "e6f6",
+              "a3a4",
+              "h7h6",
+              "b3b4",
+              "f6f5"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 980,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -1001,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16404,
+            "pv": [
+              "a6d3",
+              "g3h4",
+              "c3c4",
+              "b8d8",
+              "d3b1",
+              "f2d2",
+              "c4c5",
+              "d8c8",
+              "c5b5"
+            ]
+          },
+          "verified": {
+            "white_cp": -988,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65561,
+            "pv": [
+              "a6d3",
+              "b8b6",
+              "c3d4",
+              "f2f8",
+              "d4c5"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -1052,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16403,
+            "pv": [
+              "f2f3",
+              "c3d4",
+              "f3a3",
+              "a6c4",
+              "a3a5",
+              "c4e2",
+              "a5a4",
+              "d4c5",
+              "g3h4"
+            ]
+          },
+          "verified": {
+            "white_cp": -1065,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65548,
+            "pv": [
+              "f2f3",
+              "c3d4",
+              "f3a3",
+              "a6c4",
+              "a3a4",
+              "d4d3",
+              "g3h4",
+              "c4b3",
+              "a4g4",
+              "b3a2",
+              "b8d8",
+              "d3c2"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 982,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 910,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16399,
+            "pv": [
+              "c1c3",
+              "g8h7",
+              "c3c4",
+              "h7g7",
+              "c4d3",
+              "d8g5",
+              "d3c3",
+              "g7g6"
+            ]
+          },
+          "verified": {
+            "white_cp": 938,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65607,
+            "pv": [
+              "c1c3",
+              "d3d2",
+              "c3d3",
+              "d8g5"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 900,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16404,
+            "pv": [
+              "d3d2",
+              "c1c2",
+              "d2d1r",
+              "c2d1",
+              "c3c2",
+              "d1d5",
+              "g8h8"
+            ]
+          },
+          "verified": {
+            "white_cp": 872,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65650,
+            "pv": [
+              "d3d2",
+              "c1c2",
+              "d8c7",
+              "g5g6",
+              "g8g7",
+              "c2c3",
+              "g7g6",
+              "c3d3",
+              "g6f7",
+              "d3f5",
+              "f7g7",
+              "f5g5",
+              "g7f7",
+              "f4d2"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1014,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 964,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16401,
+            "pv": [
+              "f6f7",
+              "g8f8",
+              "f2f4",
+              "f8e7",
+              "g6g7",
+              "e7e6",
+              "f4f5",
+              "e6e5",
+              "f7f8q"
+            ]
+          },
+          "verified": {
+            "white_cp": 981,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65574,
+            "pv": [
+              "f6f7",
+              "g8f8",
+              "f2f3",
+              "f8e7",
+              "g6g7",
+              "e7d6",
+              "f7f8q",
+              "d6c6",
+              "f3f4",
+              "c6b5",
+              "f4f5",
+              "b5a5",
+              "f8c5",
+              "a5a4"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 964,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16400,
+            "pv": [
+              "g8f8",
+              "f6f7",
+              "f8e7",
+              "g6g7",
+              "e7e6",
+              "f7f8q",
+              "e6d5",
+              "f2f3",
+              "d5d4",
+              "f8d8",
+              "d4e3"
+            ]
+          },
+          "verified": {
+            "white_cp": 964,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65583,
+            "pv": [
+              "g8f8",
+              "f6f7",
+              "f8e7",
+              "g6g7",
+              "e7e6",
+              "f7f8q",
+              "e6d5",
+              "f2f3",
+              "d5d4",
+              "f8d8",
+              "d4e3"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1063,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -9,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16384,
+            "pv": [
+              "f1h3",
+              "f3f2"
+            ]
+          },
+          "verified": {
+            "white_cp": -8,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 65604,
+            "pv": [
+              "f1h3",
+              "f3f2",
+              "e5e4",
+              "g5f6",
+              "e4f3",
+              "f2f1q",
+              "h3f1",
+              "h4h3",
+              "f3f4",
+              "f6e6",
+              "f1d3",
+              "h3h2",
+              "d3e4",
+              "h2h1q",
+              "e4h1",
+              "e6d6",
+              "f4f5"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -17,
+            "white_mate": null,
+            "depth": 9,
+            "reported_nodes": 16391,
+            "pv": [
+              "g5g4",
+              "e5e4"
+            ]
+          },
+          "verified": {
+            "white_cp": 0,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65593,
+            "pv": [
+              "g5g4",
+              "e5e4",
+              "h4h3",
+              "f1h3",
+              "g4h3",
+              "e4f3",
+              "h3h2",
+              "f3e4",
+              "h2g3",
+              "e4d5",
+              "g3f4",
+              "d5e6",
+              "f4e4",
+              "e6f6",
+              "e4e3",
+              "f6e6",
+              "e3f4"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1064,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 801,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16400,
+            "pv": [
+              "a6a7",
+              "g4g3",
+              "f2g3",
+              "h7h6",
+              "g3f4",
+              "e5f4",
+              "a7a8q",
+              "f4f3",
+              "a8c6",
+              "h6g7",
+              "c6d7",
+              "g7f8"
+            ]
+          },
+          "verified": {
+            "white_cp": 842,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 65552,
+            "pv": [
+              "a6a7",
+              "g4g3",
+              "f2g3",
+              "h7h6",
+              "a7a8q",
+              "h6g7",
+              "g3f4",
+              "e5f4",
+              "c3c4",
+              "g7f6",
+              "a8f8",
+              "f6e6",
+              "f8f4"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 0,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16399,
+            "pv": [
+              "g4g3",
+              "f2g3",
+              "f4g3",
+              "a6a7",
+              "g3g2",
+              "a7a8q",
+              "g2g1q",
+              "a8c6",
+              "g1d4",
+              "c3c2",
+              "d4b4"
+            ]
+          },
+          "verified": {
+            "white_cp": 0,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 65598,
+            "pv": [
+              "g4g3",
+              "f2g3",
+              "f4g3",
+              "a6a7",
+              "g3g2",
+              "a7a8q",
+              "g2g1q",
+              "a8c6",
+              "g1d4",
+              "c3c2",
+              "c5c4",
+              "c6f6",
+              "d4d3",
+              "c2b2",
+              "d3d2",
+              "b2a3",
+              "d2d7"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1073,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -1,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16391,
+            "pv": [
+              "c6b4",
+              "d3b4",
+              "a5b4",
+              "d5f3",
+              "b4d2",
+              "h6h5",
+              "g4h5",
+              "f3e4",
+              "g1f2"
+            ]
+          },
+          "verified": {
+            "white_cp": -3,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 65567,
+            "pv": [
+              "c6b4",
+              "d3b4",
+              "a5b4",
+              "d5f3",
+              "g1f2",
+              "f3h1",
+              "b4a5",
+              "h1d5",
+              "a5b4",
+              "d5c6",
+              "b4d2",
+              "c6d7",
+              "d2a5",
+              "f7e7",
+              "f2g2",
+              "e7e8"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -585,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16397,
+            "pv": [
+              "d5c6",
+              "g1g2",
+              "d3e5",
+              "a5c3",
+              "e5f3",
+              "c3b4",
+              "f7g6",
+              "g2f2",
+              "h6h5",
+              "g4h5",
+              "g6h5"
+            ]
+          },
+          "verified": {
+            "white_cp": -590,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 65606,
+            "pv": [
+              "d5c6",
+              "g1g2",
+              "d3e5",
+              "g2f2",
+              "f7g6",
+              "a5e1",
+              "e5f3",
+              "e1c3",
+              "h6h5",
+              "g4h5",
+              "g6h6",
+              "c3b4",
+              "h6h5",
+              "b4d6",
+              "f3d2",
+              "d6f8"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1120,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 327,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16399,
+            "pv": [
+              "e2e7",
+              "d4a4",
+              "h2h3",
+              "h7g6",
+              "e7f7",
+              "a4c6",
+              "h3h4"
+            ]
+          },
+          "verified": {
+            "white_cp": 309,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65581,
+            "pv": [
+              "e2e7",
+              "h7g8",
+              "e7f7",
+              "d4a4",
+              "f7f8",
+              "g8g7",
+              "f2f7",
+              "g7g6",
+              "h2h4",
+              "a4e4",
+              "g1h2",
+              "e4e1",
+              "f7f2",
+              "g6g7",
+              "h2h3"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -640,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16384,
+            "pv": [
+              "d4d1",
+              "f2f1",
+              "d1e2",
+              "g2g3",
+              "e2e3",
+              "g1g2",
+              "e3e4",
+              "g2h3"
+            ]
+          },
+          "verified": {
+            "white_cp": -686,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65587,
+            "pv": [
+              "d4d1",
+              "f2f1",
+              "d1e2",
+              "f1f7",
+              "h7g8",
+              "f7f5",
+              "e2e1",
+              "f5f1",
+              "e1e3",
+              "g1h1",
+              "e3e4",
+              "a4a5",
+              "g8g7",
+              "h2h4",
+              "e4e3",
+              "g2g3"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1121,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 316,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16400,
+            "pv": [
+              "e2f4",
+              "h4h3",
+              "d2e2",
+              "h3h2",
+              "e4g3",
+              "f8e7",
+              "b2b3"
+            ]
+          },
+          "verified": {
+            "white_cp": 323,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65568,
+            "pv": [
+              "e2f4",
+              "e5c4",
+              "d2c3",
+              "c4e5",
+              "c3d4",
+              "e5f3",
+              "d4d3",
+              "f8e7",
+              "d3e2",
+              "f3g1",
+              "e2f2",
+              "g1f3",
+              "f4d3",
+              "e7e6"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 124,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16398,
+            "pv": [
+              "e5c4",
+              "d2c2",
+              "c4e3",
+              "c2d3",
+              "e3f5",
+              "e4f2",
+              "g4g3",
+              "f2h3",
+              "f8e7",
+              "d3e4",
+              "e7f6",
+              "h3g1",
+              "g3g2"
+            ]
+          },
+          "verified": {
+            "white_cp": 131,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65601,
+            "pv": [
+              "e5c4",
+              "d2c3",
+              "c4e3",
+              "c3d3",
+              "e3f5",
+              "e4f2",
+              "g4g3",
+              "f2h3",
+              "f8e7",
+              "d3c4",
+              "e7d7",
+              "c4c5",
+              "f5d6",
+              "e2f4",
+              "d7c7",
+              "c5d5",
+              "c7d7"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1180,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 8,
+            "white_mate": null,
+            "depth": 12,
+            "reported_nodes": 16401,
+            "pv": [
+              "b4b5",
+              "c2d4"
+            ]
+          },
+          "verified": {
+            "white_cp": 3,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 65560,
+            "pv": [
+              "b4b5",
+              "c2a3"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -1,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16396,
+            "pv": [
+              "f5g4",
+              "b4b5",
+              "c2a3",
+              "b5b6",
+              "c4a6",
+              "c3d5",
+              "a3c4",
+              "d5e3",
+              "c4e3",
+              "f2e3",
+              "a6b7",
+              "e3f2",
+              "b7d5"
+            ]
+          },
+          "verified": {
+            "white_cp": 0,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 65617,
+            "pv": [
+              "f5g4",
+              "b4b5",
+              "c2a3",
+              "b5b6",
+              "c4a6",
+              "c3d1",
+              "a3c4",
+              "d1e3",
+              "c4e3",
+              "f4e3",
+              "a6b7",
+              "e3d2",
+              "b7a6",
+              "d2e1",
+              "a6c8",
+              "f2e3",
+              "c8a6",
+              "e3d2",
+              "g4g5",
+              "d2e3"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1193,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 356,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16390,
+            "pv": [
+              "f2e2",
+              "e5g6",
+              "d1f2",
+              "e4f5",
+              "b6c7",
+              "g6f4",
+              "e2d2",
+              "f4h3",
+              "f2h3",
+              "f5g4",
+              "h3g1",
+              "g4g5"
+            ]
+          },
+          "verified": {
+            "white_cp": 367,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65557,
+            "pv": [
+              "f2e2",
+              "e4f5",
+              "b6c7",
+              "e5c4",
+              "d1f2",
+              "f5g6",
+              "c7h2",
+              "g6g5",
+              "h2b8",
+              "g5g6",
+              "b8f4",
+              "g6f5",
+              "f4h6"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 3,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16407,
+            "pv": [
+              "e5d3",
+              "f2e2",
+              "d3f4",
+              "e2d2",
+              "e4f3",
+              "d1f2",
+              "f3g2",
+              "f2g4",
+              "f4d5",
+              "b6d8"
+            ]
+          },
+          "verified": {
+            "white_cp": 4,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65579,
+            "pv": [
+              "e5d3",
+              "f2e2"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1197,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -365,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16388,
+            "pv": [
+              "g2f1",
+              "d6a3"
+            ]
+          },
+          "verified": {
+            "white_cp": -391,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65539,
+            "pv": [
+              "g2f1",
+              "d6a3"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -375,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16396,
+            "pv": [
+              "d6e7",
+              "g2f1",
+              "e7a3",
+              "f1g2",
+              "a3c1",
+              "g2f1",
+              "e5e4",
+              "f1g2",
+              "g4g3",
+              "f2g1",
+              "h4g4",
+              "g2e4",
+              "c1e3",
+              "g1h1",
+              "g4f4",
+              "e4g2",
+              "e3c5",
+              "g2f1",
+              "f4e3",
+              "h1g2",
+              "c5d6",
+              "g2g1",
+              "e3d2"
+            ]
+          },
+          "verified": {
+            "white_cp": -380,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65566,
+            "pv": [
+              "d6e7",
+              "g2e4",
+              "h4h3",
+              "e4f5",
+              "e7h4",
+              "f2e2",
+              "h3g3",
+              "f5c8",
+              "h4e7",
+              "c8f5",
+              "e7d6",
+              "f5c8"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1206,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -371,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16406,
+            "pv": [
+              "d6e7",
+              "g2g3",
+              "e7f6",
+              "g3a3",
+              "f6e6",
+              "h4g5",
+              "e6d5",
+              "a3g3",
+              "d5e6",
+              "g5h6"
+            ]
+          },
+          "verified": {
+            "white_cp": -348,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65553,
+            "pv": [
+              "d6e7",
+              "h4g5",
+              "e7e6",
+              "g5g6",
+              "e6d5",
+              "g6h7",
+              "d5e6",
+              "g2h2",
+              "e6e7",
+              "h2h5"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -380,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16396,
+            "pv": [
+              "g2g6",
+              "d6e7",
+              "g6h6",
+              "e7f7",
+              "h6a6",
+              "f7e7"
+            ]
+          },
+          "verified": {
+            "white_cp": -335,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 65645,
+            "pv": [
+              "g2g6",
+              "d6d7",
+              "g6h6",
+              "d7e7",
+              "h4g5",
+              "e7d7",
+              "h6h7",
+              "d7e6",
+              "g5h6",
+              "e6d6",
+              "h6g7"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1255,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 0,
+            "white_mate": null,
+            "depth": 20,
+            "reported_nodes": 16387,
+            "pv": [
+              "h5h4",
+              "f3e4",
+              "h4h5",
+              "e4f4",
+              "h5h4"
+            ]
+          },
+          "verified": {
+            "white_cp": -2,
+            "white_mate": null,
+            "depth": 27,
+            "reported_nodes": 65590,
+            "pv": [
+              "h5h4",
+              "f3e4"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 0,
+            "white_mate": null,
+            "depth": 20,
+            "reported_nodes": 16401,
+            "pv": [
+              "h7h6",
+              "h5h4",
+              "f3e3",
+              "h4h5",
+              "e3f4",
+              "h5h4"
+            ]
+          },
+          "verified": {
+            "white_cp": 0,
+            "white_mate": null,
+            "depth": 29,
+            "reported_nodes": 65562,
+            "pv": [
+              "h7h6",
+              "h5h4",
+              "f3e3",
+              "h4h5",
+              "e3f4",
+              "h5h4",
+              "f4e4",
+              "h4h5",
+              "e4f4"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1346,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -870,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16409,
+            "pv": [
+              "h4g3",
+              "b6d7",
+              "f3f4",
+              "g8f7",
+              "h3h4",
+              "g6g5",
+              "f4g5",
+              "h6g5",
+              "h2h3",
+              "f5f4",
+              "g3f4",
+              "g5f4"
+            ]
+          },
+          "verified": {
+            "white_cp": -870,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65541,
+            "pv": [
+              "h4g3",
+              "b6d7",
+              "f3f4",
+              "g8f7",
+              "h3h4",
+              "g6g5",
+              "f4g5",
+              "h6g5",
+              "h2h3",
+              "f5f4",
+              "g3f4",
+              "g5f4"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -892,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16397,
+            "pv": [
+              "g6g5",
+              "h4g3",
+              "f5f4",
+              "g3f4",
+              "g5f4",
+              "b3b4",
+              "b6d7",
+              "b4b5",
+              "e2e5",
+              "h3h4"
+            ]
+          },
+          "verified": {
+            "white_cp": -848,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65547,
+            "pv": [
+              "g6g5",
+              "h4g3",
+              "g8f7",
+              "f3f4",
+              "g5f4",
+              "g3f4",
+              "b6d7",
+              "f4g3",
+              "d7f8",
+              "b3b4",
+              "f8d7",
+              "g3f4",
+              "h6h5"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1412,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -3,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16385,
+            "pv": [
+              "d4a7",
+              "g4e4",
+              "a3b2",
+              "g8h7",
+              "a2a4",
+              "h7g6",
+              "a7b8",
+              "g5g4",
+              "b8c7",
+              "e4e7"
+            ]
+          },
+          "verified": {
+            "white_cp": -4,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65620,
+            "pv": [
+              "d4a7",
+              "g8h7",
+              "a7d4",
+              "g4e4",
+              "a3b2",
+              "g5g4",
+              "a2a4",
+              "h7g6",
+              "a4a5",
+              "g6g5",
+              "d4f6",
+              "g5h5",
+              "f2g2"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -29,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16398,
+            "pv": [
+              "a7a6",
+              "a3b4"
+            ]
+          },
+          "verified": {
+            "white_cp": -45,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65600,
+            "pv": [
+              "a7a6",
+              "a3b4"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1456,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 11,
+            "white_mate": null,
+            "depth": 10,
+            "reported_nodes": 16394,
+            "pv": [
+              "f3g3",
+              "h5g6"
+            ]
+          },
+          "verified": {
+            "white_cp": 0,
+            "white_mate": null,
+            "depth": 21,
+            "reported_nodes": 65572,
+            "pv": [
+              "f3g3",
+              "h5g6",
+              "g3g4",
+              "g6h6",
+              "c2a1",
+              "h6g6",
+              "a1b3",
+              "c3c2",
+              "b3c1",
+              "g6h6",
+              "c1e2",
+              "h6g6"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -11,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16395,
+            "pv": [
+              "h5h4",
+              "f3g2",
+              "g5g4",
+              "h3g4",
+              "h4g4",
+              "g2h2",
+              "g4h4",
+              "h2g2",
+              "h4g5",
+              "g2h3",
+              "g5g6",
+              "h3g3"
+            ]
+          },
+          "verified": {
+            "white_cp": -8,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65574,
+            "pv": [
+              "h5h4",
+              "f3g2",
+              "g5g4",
+              "h3g4",
+              "h4g4",
+              "g2f2",
+              "g4f4",
+              "f2e2",
+              "f4g5",
+              "e2f3",
+              "g5f5",
+              "f3e3",
+              "f5e6",
+              "e3f4"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1464,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 0,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 16398,
+            "pv": [
+              "f4f3",
+              "c1h1",
+              "h3g3",
+              "h1e1",
+              "g3h3",
+              "e1e4",
+              "h3g3",
+              "e4e1",
+              "g3h3",
+              "e1h1",
+              "h3g3"
+            ]
+          },
+          "verified": {
+            "white_cp": 0,
+            "white_mate": null,
+            "depth": 22,
+            "reported_nodes": 65626,
+            "pv": [
+              "f4f3",
+              "c1h1",
+              "h3g3",
+              "h1e1",
+              "g3g2",
+              "e1e2",
+              "g2g3"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -668,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16418,
+            "pv": [
+              "c1f4",
+              "g4g5",
+              "f4b8",
+              "h3g2",
+              "h7g6",
+              "g2f1"
+            ]
+          },
+          "verified": {
+            "white_cp": -703,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 65591,
+            "pv": [
+              "c1f4",
+              "h3g2",
+              "h7g6",
+              "e4e5",
+              "f4g4",
+              "g2f2",
+              "g4f4",
+              "f2g2",
+              "f4c1",
+              "g2f3"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1472,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 2,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16394,
+            "pv": [
+              "f2f3",
+              "h3h2",
+              "c5f2",
+              "h2h3",
+              "f2g1",
+              "h3h4",
+              "g1c5",
+              "h4g5",
+              "c5a3",
+              "h5h4",
+              "a3e7",
+              "g5f5"
+            ]
+          },
+          "verified": {
+            "white_cp": 0,
+            "white_mate": null,
+            "depth": 24,
+            "reported_nodes": 65557,
+            "pv": [
+              "f2f3",
+              "h3h2",
+              "c5f2",
+              "h2h1",
+              "f2h4",
+              "h1g1",
+              "h4g5",
+              "h5h4",
+              "g5h4",
+              "g1f1",
+              "h4f2"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -4,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16400,
+            "pv": [
+              "h3g4",
+              "c5a7",
+              "f4f3",
+              "a7b8",
+              "h5h4",
+              "b8c7",
+              "h4h3",
+              "c7h2",
+              "g4h5"
+            ]
+          },
+          "verified": {
+            "white_cp": -12,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 65622,
+            "pv": [
+              "h3g4",
+              "c5a7"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1493,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 7,
+            "white_mate": null,
+            "depth": 11,
+            "reported_nodes": 16399,
+            "pv": [
+              "c5e4",
+              "e8e7"
+            ]
+          },
+          "verified": {
+            "white_cp": 3,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65588,
+            "pv": [
+              "c5e4",
+              "e8f8",
+              "g3g4",
+              "f7d8",
+              "f4f5",
+              "d8b7",
+              "g4h5",
+              "h7e7",
+              "e4c5",
+              "b7d6",
+              "c5d3",
+              "d6f5",
+              "d4c5",
+              "f8g7",
+              "c5e7",
+              "f5e7",
+              "d3e5"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -129,
+            "white_mate": null,
+            "depth": 11,
+            "reported_nodes": 16402,
+            "pv": [
+              "f7d6",
+              "d4e5"
+            ]
+          },
+          "verified": {
+            "white_cp": -108,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65614,
+            "pv": [
+              "f7d6",
+              "d4e5"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1589,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 279,
+            "white_mate": null,
+            "depth": 12,
+            "reported_nodes": 16388,
+            "pv": [
+              "e4d4",
+              "b5b4",
+              "d5c4",
+              "b4a4"
+            ]
+          },
+          "verified": {
+            "white_cp": 277,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65582,
+            "pv": [
+              "e4d4",
+              "b5a4",
+              "e3f4",
+              "a4b4",
+              "d5c4",
+              "b4a3",
+              "f4d6",
+              "a3b2"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 275,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16411,
+            "pv": [
+              "b5b4",
+              "e3g1",
+              "b4a3",
+              "d5a8",
+              "a3b3",
+              "e4e5",
+              "b3c3"
+            ]
+          },
+          "verified": {
+            "white_cp": 254,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65630,
+            "pv": [
+              "b5b4",
+              "e3g1",
+              "b4c3",
+              "g1c5",
+              "c3d2",
+              "d5a2",
+              "d2c3",
+              "c5a3",
+              "c3c2",
+              "e4d4",
+              "c2d1"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1602,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -224,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16405,
+            "pv": [
+              "g4g5",
+              "d1c3",
+              "f3g4",
+              "c3e4",
+              "g4f4",
+              "e4d6",
+              "b5b6",
+              "d4g1",
+              "b6b7",
+              "g1h2",
+              "f4e3",
+              "d6b7"
+            ]
+          },
+          "verified": {
+            "white_cp": -200,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65596,
+            "pv": [
+              "g4g5",
+              "d1e3"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -319,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16398,
+            "pv": [
+              "d1c3",
+              "g4g5"
+            ]
+          },
+          "verified": {
+            "white_cp": -321,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65615,
+            "pv": [
+              "d1c3",
+              "b5b6",
+              "d4b6",
+              "g4g5",
+              "b6d4",
+              "f3g4",
+              "c3d5",
+              "h6f7",
+              "e6f7",
+              "g4f5",
+              "d4g7",
+              "g5g6",
+              "f7g8"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1697,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 225,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16384,
+            "pv": [
+              "g3e5",
+              "g5g4"
+            ]
+          },
+          "verified": {
+            "white_cp": 193,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65560,
+            "pv": [
+              "g3e5",
+              "g5g4"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -124,
+            "white_mate": null,
+            "depth": 11,
+            "reported_nodes": 16393,
+            "pv": [
+              "e2g3",
+              "h1g2"
+            ]
+          },
+          "verified": {
+            "white_cp": -125,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65582,
+            "pv": [
+              "e2g3",
+              "h1g2",
+              "g3e2",
+              "f6b6",
+              "a4d7",
+              "b6b4",
+              "e2f4",
+              "g2g3",
+              "d7c6",
+              "b4b2",
+              "f4e6",
+              "b2b4",
+              "h5g6",
+              "g3f2",
+              "g6f7",
+              "f2e3",
+              "e6g7",
+              "b4b2",
+              "g7f5",
+              "e3d3"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1745,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 246,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16385,
+            "pv": [
+              "b3a4",
+              "c5b4"
+            ]
+          },
+          "verified": {
+            "white_cp": 222,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65558,
+            "pv": [
+              "b3a4",
+              "c5b4"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 170,
+            "white_mate": null,
+            "depth": 12,
+            "reported_nodes": 16395,
+            "pv": [
+              "a4b3",
+              "a2b3"
+            ]
+          },
+          "verified": {
+            "white_cp": 188,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65564,
+            "pv": [
+              "a4b3",
+              "a2b3",
+              "b2h8",
+              "f5d4",
+              "c5b4",
+              "d3c2",
+              "h8f6",
+              "d4e6",
+              "b4b5",
+              "e6f4",
+              "f6g5",
+              "c2c3",
+              "g5f6",
+              "c3d2",
+              "b5c5",
+              "d2d3",
+              "f6h8",
+              "d3c2",
+              "h8f6",
+              "c2d2",
+              "f6h8",
+              "f4d3",
+              "c5d5",
+              "d3b4",
+              "d5e4"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1761,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -365,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16384,
+            "pv": [
+              "c7d7",
+              "d3e4",
+              "h2g3",
+              "f5b5",
+              "d7d4",
+              "e4b7",
+              "e3e4",
+              "b5b6",
+              "g3f4"
+            ]
+          },
+          "verified": {
+            "white_cp": -394,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65570,
+            "pv": [
+              "c7d7",
+              "d3c2",
+              "h2g3",
+              "f5b5",
+              "d7d4",
+              "h7g6",
+              "d4c4",
+              "c2b3",
+              "c4c5",
+              "b5c5",
+              "b4c5"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -493,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16388,
+            "pv": [
+              "f5f2",
+              "c7d7",
+              "d3b5",
+              "d7d6",
+              "f2b2",
+              "h2g3",
+              "b5c4",
+              "d6d4"
+            ]
+          },
+          "verified": {
+            "white_cp": -471,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65541,
+            "pv": [
+              "f5f2",
+              "h2g3",
+              "f2b2",
+              "c7f7",
+              "b2b4",
+              "f7d7",
+              "d3e4",
+              "d7d4",
+              "b4d4",
+              "e3d4",
+              "e4b7",
+              "g3f2",
+              "b7d5"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1777,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 361,
+            "white_mate": null,
+            "depth": 12,
+            "reported_nodes": 16394,
+            "pv": [
+              "c6b5",
+              "e2d2",
+              "b5b4",
+              "d2d3",
+              "c8c6",
+              "d3d2",
+              "b4a5",
+              "d2d3",
+              "a5b6",
+              "d3d2",
+              "b6a6",
+              "d2e3"
+            ]
+          },
+          "verified": {
+            "white_cp": 354,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65589,
+            "pv": [
+              "c6b5",
+              "e2e3",
+              "b5c4",
+              "e3e2",
+              "c4b3",
+              "e2d2",
+              "b3a2",
+              "d2d3",
+              "c8h8"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 349,
+            "white_mate": null,
+            "depth": 12,
+            "reported_nodes": 16389,
+            "pv": [
+              "e2d3",
+              "c8d8",
+              "d3c2",
+              "c6b6",
+              "c2b2",
+              "b6c5",
+              "b2c3",
+              "d8d6",
+              "c3c2"
+            ]
+          },
+          "verified": {
+            "white_cp": 362,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 65615,
+            "pv": [
+              "e2d3",
+              "c8d8",
+              "d3c2",
+              "c6c7",
+              "c2b3",
+              "c7b8",
+              "b3c3",
+              "b8a8",
+              "c3c2",
+              "d8d7",
+              "c2c3",
+              "d7d6",
+              "c3c2",
+              "d6a6"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1832,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": 232,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16400,
+            "pv": [
+              "g6g8",
+              "c5c4"
+            ]
+          },
+          "verified": {
+            "white_cp": 252,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 65547,
+            "pv": [
+              "g6g8",
+              "b3b4",
+              "g8c8",
+              "d7b6",
+              "c8c6",
+              "b6d7",
+              "c6c7",
+              "d7f8",
+              "c7c8",
+              "f8d7",
+              "f1g2",
+              "d7b6",
+              "c8c6",
+              "b6d5",
+              "g2f3"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": 3,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16393,
+            "pv": [
+              "c5c4",
+              "d6b5"
+            ]
+          },
+          "verified": {
+            "white_cp": -1,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 65558,
+            "pv": [
+              "c5c4",
+              "d6f5",
+              "c4c3",
+              "f5d4",
+              "b3b2",
+              "g6g8",
+              "c3c2",
+              "d4c2",
+              "b2c2",
+              "g8a8",
+              "d7e5",
+              "a8a6",
+              "h7h6",
+              "a6a4",
+              "c2c3",
+              "a4a3",
+              "c3b4"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1858,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -360,
+            "white_mate": null,
+            "depth": 12,
+            "reported_nodes": 16391,
+            "pv": [
+              "d5d6",
+              "a2d2",
+              "d6c6",
+              "h7g6",
+              "c6c7"
+            ]
+          },
+          "verified": {
+            "white_cp": -335,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 65583,
+            "pv": [
+              "d5d6",
+              "h7g6",
+              "d6e6",
+              "g6g5",
+              "e6e7"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -356,
+            "white_mate": null,
+            "depth": 13,
+            "reported_nodes": 16407,
+            "pv": [
+              "a2a6",
+              "d5e5",
+              "a6g6",
+              "e5f5",
+              "g6b6"
+            ]
+          },
+          "verified": {
+            "white_cp": -351,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 65537,
+            "pv": [
+              "a2a6",
+              "d5e4",
+              "a6a5",
+              "e4f4",
+              "a5c5",
+              "f4g4",
+              "c5c8"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "index": 1891,
+      "labels": {
+        "parent": {
+          "sample": {
+            "white_cp": -267,
+            "white_mate": null,
+            "depth": 14,
+            "reported_nodes": 16387,
+            "pv": [
+              "c8f8",
+              "f6g6",
+              "f8f4",
+              "c5e6",
+              "f4g4",
+              "g6f5",
+              "h1g2",
+              "a5b3",
+              "g4b4",
+              "b3d2",
+              "b4b2"
+            ]
+          },
+          "verified": {
+            "white_cp": -250,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 65536,
+            "pv": [
+              "c8f8",
+              "f6g5",
+              "f8f7",
+              "g5g6",
+              "f7f4",
+              "c5e6",
+              "f4f1",
+              "a5b3",
+              "f1d1",
+              "b3c5",
+              "d1d6",
+              "b6a5",
+              "b5b6"
+            ]
+          }
+        },
+        "counter": {
+          "sample": {
+            "white_cp": -325,
+            "white_mate": null,
+            "depth": 15,
+            "reported_nodes": 16391,
+            "pv": [
+              "c5a4",
+              "h3h4",
+              "a4c5",
+              "h4h5",
+              "f6g5",
+              "c8h8",
+              "c5e6",
+              "h5h6",
+              "g7h6",
+              "h8g8",
+              "g5f5",
+              "g8b8"
+            ]
+          },
+          "verified": {
+            "white_cp": -341,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 65543,
+            "pv": [
+              "c5a4",
+              "h3h4",
+              "a4c5",
+              "h4h5",
+              "f6g5",
+              "c8h8",
+              "a5c4",
+              "h5h6",
+              "g7h6",
+              "h8g8",
+              "g5h5",
+              "g8c8",
+              "c4e5",
+              "c8e8",
+              "c5d7",
+              "h1g2",
+              "h5g5",
+              "g2g3",
+              "e5g6",
+              "e8e6",
+              "h6h5",
+              "e6d6"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "deeper_diagnostic": [
+    {
+      "index": 7,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": -7,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 262399,
+            "pv": [
+              "e5b2",
+              "e6f7"
+            ]
+          },
+          "first_move_stable": false,
+          "cp_difference": -1
+        },
+        "counter": {
+          "label": {
+            "white_cp": -28,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 262248,
+            "pv": [
+              "e6e5",
+              "h8b8"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -23
+        }
+      }
+    },
+    {
+      "index": 48,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": 587,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 262244,
+            "pv": [
+              "e2c4",
+              "f6f5",
+              "e4f5",
+              "a1c1",
+              "c4a2",
+              "c1f1",
+              "f4e3",
+              "f1f5",
+              "a2b1",
+              "f5d5",
+              "b1e4",
+              "d5d6",
+              "e3f4",
+              "d6d7"
+            ]
+          },
+          "first_move_stable": false,
+          "cp_difference": 20
+        },
+        "counter": {
+          "label": {
+            "white_cp": 468,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 262448,
+            "pv": [
+              "a1g1",
+              "a8a2",
+              "g1g2",
+              "h2h4",
+              "g2h2",
+              "f4g3",
+              "h2h1",
+              "e2f3",
+              "h1b1",
+              "a2a6",
+              "h6g7",
+              "g3f4",
+              "b1g1",
+              "h4h5",
+              "g6h5",
+              "f3h5",
+              "g1f1",
+              "f4e3",
+              "f1g1",
+              "h5e2"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -22
+        }
+      }
+    },
+    {
+      "index": 79,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": -659,
+            "white_mate": null,
+            "depth": 22,
+            "reported_nodes": 262360,
+            "pv": [
+              "h4h1",
+              "d2d1q",
+              "h1d1",
+              "d8d1",
+              "f4e5",
+              "b5c6",
+              "f5f6",
+              "g7f8",
+              "a2a4",
+              "d1d5",
+              "e5f4",
+              "d5c5",
+              "b3b4",
+              "c5c4",
+              "f4e5",
+              "c6a4",
+              "e6e7",
+              "f8f7",
+              "e7e8q",
+              "f7e8"
+            ]
+          },
+          "first_move_stable": false,
+          "cp_difference": 33
+        },
+        "counter": {
+          "label": {
+            "white_cp": -1022,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 262155,
+            "pv": [
+              "d2d1q",
+              "h4g4",
+              "g7f6",
+              "g4g6",
+              "f6e7",
+              "g6g7",
+              "e7d6",
+              "f4g5",
+              "d1c1",
+              "g5g6",
+              "c1g1",
+              "g6f6",
+              "g1d4",
+              "f6g6",
+              "b5e8",
+              "g6h7",
+              "d4f6",
+              "g7b7",
+              "f6f5",
+              "h7g7"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -180
+        }
+      }
+    },
+    {
+      "index": 94,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": 334,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 262288,
+            "pv": [
+              "a3b2",
+              "e5e4",
+              "g7h5",
+              "c8c4",
+              "h5g3",
+              "e4f4",
+              "g3e2",
+              "f4e3",
+              "e2c3",
+              "e3f4",
+              "d1d7",
+              "f4f5",
+              "c3e2",
+              "f5e6",
+              "d7b7",
+              "c4b4",
+              "e2d4",
+              "e6d6",
+              "d4f5",
+              "d6e6",
+              "f5g7",
+              "e6d5",
+              "b7d7",
+              "d5c4"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 36
+        },
+        "counter": {
+          "label": {
+            "white_cp": -111,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 262241,
+            "pv": [
+              "c2a3",
+              "d1d7",
+              "c8b8",
+              "g1f2",
+              "b7b5",
+              "g7h5",
+              "b5b4",
+              "d7d5",
+              "e5e6",
+              "h5f4",
+              "e6f7",
+              "f4d3",
+              "b4b3",
+              "d3b2",
+              "f7f6",
+              "d5d7",
+              "a7a5",
+              "d7d6",
+              "f6g5"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -2
+        }
+      }
+    },
+    {
+      "index": 128,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": 1008,
+            "white_mate": null,
+            "depth": 20,
+            "reported_nodes": 262221,
+            "pv": [
+              "d8e8",
+              "e7d6",
+              "a1g7",
+              "c6d5",
+              "g7h6",
+              "d5c4",
+              "h6g7",
+              "c4b3",
+              "h5h6",
+              "b3a4",
+              "h6h7",
+              "d6g3",
+              "e8e4",
+              "a4b5",
+              "f7f8q"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 165
+        },
+        "counter": {
+          "label": {
+            "white_cp": 940,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 262324,
+            "pv": [
+              "e7d8",
+              "f7f8q",
+              "d8b6",
+              "f1e2",
+              "c6d5",
+              "e2f3",
+              "b6d8",
+              "f8f5",
+              "d5d6",
+              "a1e5",
+              "d6e7"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 121
+        }
+      }
+    },
+    {
+      "index": 217,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": -660,
+            "white_mate": null,
+            "depth": 24,
+            "reported_nodes": 262419,
+            "pv": [
+              "e5d3",
+              "c3c2",
+              "d3c1",
+              "g3g1",
+              "d4d3",
+              "g1c1",
+              "h5h6",
+              "e6d5",
+              "h6h7",
+              "c1h1",
+              "d3c2",
+              "h1h4",
+              "c2b3",
+              "h4h3",
+              "b3a2",
+              "h3h7",
+              "a2b3"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -102
+        },
+        "counter": {
+          "label": {
+            "white_cp": -887,
+            "white_mate": null,
+            "depth": 24,
+            "reported_nodes": 262378,
+            "pv": [
+              "c3c2",
+              "e5d3",
+              "g3d3",
+              "d4d3",
+              "c2c1q",
+              "d3e4",
+              "c1d1",
+              "h5h6",
+              "d1h1",
+              "e4d4",
+              "h1h6",
+              "d4e4",
+              "h6h3",
+              "e4d4",
+              "h3h4",
+              "d4e3",
+              "e6e5",
+              "e3f3",
+              "h4h6",
+              "f3f2",
+              "e5d4"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -119
+        }
+      }
+    },
+    {
+      "index": 266,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": 455,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 262405,
+            "pv": [
+              "f5f6",
+              "a2a6",
+              "f7e6",
+              "a6e6",
+              "f6e6",
+              "h6h5",
+              "c7b7",
+              "h5h4",
+              "b7b5",
+              "f8g7",
+              "e6e5",
+              "h4h3",
+              "e5f4",
+              "c4c3",
+              "b5b1",
+              "g7f6"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 103
+        },
+        "counter": {
+          "label": {
+            "white_cp": 0,
+            "white_mate": null,
+            "depth": 25,
+            "reported_nodes": 262188,
+            "pv": [
+              "f4f3",
+              "f5f6",
+              "a2a8",
+              "f7d5",
+              "f3f2",
+              "c7f7",
+              "f8e8",
+              "d5c6",
+              "e8d8",
+              "f6e6",
+              "a8a2",
+              "e6d6",
+              "a2d2",
+              "c6d5",
+              "d8e8",
+              "f7e7",
+              "e8f8",
+              "e7f7"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 0
+        }
+      }
+    },
+    {
+      "index": 316,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": -530,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 262247,
+            "pv": [
+              "b4d4",
+              "g6b1",
+              "d4f4",
+              "f7f5",
+              "f4f2",
+              "h2h1",
+              "e1e2",
+              "b1e4",
+              "f2f4",
+              "h1h2",
+              "e2e1",
+              "h2c2",
+              "f4f2",
+              "c2c1",
+              "e1e2",
+              "h5h4"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -29
+        },
+        "counter": {
+          "label": {
+            "white_cp": -519,
+            "white_mate": null,
+            "depth": 19,
+            "reported_nodes": 262372,
+            "pv": [
+              "h2h4",
+              "b4b6",
+              "h5g5",
+              "e1f2",
+              "g6e4",
+              "b6b4",
+              "h4g4",
+              "b4d4",
+              "f7f6",
+              "f2f1",
+              "g4h4",
+              "f1f2",
+              "f6f5",
+              "d4d8",
+              "h4h2",
+              "f2g3",
+              "h2g2",
+              "g3h3"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 1
+        }
+      }
+    },
+    {
+      "index": 349,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": -557,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 262307,
+            "pv": [
+              "a3a4",
+              "d6f6",
+              "c3b3",
+              "f6b6",
+              "a4b4",
+              "b6a6",
+              "b4a4",
+              "a6a4",
+              "b3a4",
+              "h5h4",
+              "a4b3",
+              "h4h3",
+              "b3c2"
+            ]
+          },
+          "first_move_stable": false,
+          "cp_difference": 106
+        },
+        "counter": {
+          "label": {
+            "white_cp": -2366,
+            "white_mate": null,
+            "depth": 20,
+            "reported_nodes": 262419,
+            "pv": [
+              "d6a3",
+              "c3c4"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -1142
+        }
+      }
+    },
+    {
+      "index": 416,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": 905,
+            "white_mate": null,
+            "depth": 21,
+            "reported_nodes": 262367,
+            "pv": [
+              "f5e4",
+              "b3b2",
+              "c6b6",
+              "b2a3",
+              "b6c5",
+              "a3a4",
+              "e4d4",
+              "a6a5",
+              "c5c4",
+              "a4a3",
+              "c4c2",
+              "a5a4",
+              "d4d5",
+              "a3b4",
+              "c2b2",
+              "b4a5"
+            ]
+          },
+          "first_move_stable": false,
+          "cp_difference": 158
+        },
+        "counter": {
+          "label": {
+            "white_cp": 556,
+            "white_mate": null,
+            "depth": 19,
+            "reported_nodes": 262319,
+            "pv": [
+              "a6a5",
+              "f5g6",
+              "b3b2",
+              "c6f6",
+              "b2b1",
+              "f6b6",
+              "b1a2",
+              "b6c5",
+              "a2b2",
+              "g6h5",
+              "c2c1q",
+              "c5c1",
+              "b2c1",
+              "h5g6",
+              "c1b2",
+              "h4h5",
+              "b2a2"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 41
+        }
+      }
+    },
+    {
+      "index": 558,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": 0,
+            "white_mate": null,
+            "depth": 19,
+            "reported_nodes": 262333,
+            "pv": [
+              "c7h2",
+              "g2h3",
+              "h2f4",
+              "h3g4",
+              "b6a7",
+              "e6d5",
+              "f4g5",
+              "d5c4",
+              "a7b8",
+              "g4f5",
+              "b8c7",
+              "c4e6",
+              "c7c6"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -1
+        },
+        "counter": {
+          "label": {
+            "white_cp": -668,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 262226,
+            "pv": [
+              "h2h1q",
+              "b6c5",
+              "g2f1",
+              "c5d6",
+              "h1d5",
+              "d6e7",
+              "d5d7",
+              "e7f6",
+              "d7f7",
+              "f6e5",
+              "f7g6",
+              "c7b8",
+              "g6f5",
+              "e5d4",
+              "f5a5"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -28
+        }
+      }
+    },
+    {
+      "index": 579,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": 621,
+            "white_mate": null,
+            "depth": 23,
+            "reported_nodes": 262437,
+            "pv": [
+              "d2c3",
+              "b6c6",
+              "c3d2",
+              "c6b6",
+              "d2c2",
+              "b6b4",
+              "e3f3",
+              "b4b8",
+              "f3c3",
+              "b8e8",
+              "c3c6",
+              "g6h7",
+              "c2d2",
+              "e8e4",
+              "c6c4",
+              "e4e8"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 21
+        },
+        "counter": {
+          "label": {
+            "white_cp": 627,
+            "white_mate": null,
+            "depth": 22,
+            "reported_nodes": 262564,
+            "pv": [
+              "g6f7",
+              "d2c2",
+              "b6b4",
+              "e3f3",
+              "b4b6",
+              "f3c3",
+              "b6b4",
+              "c3c7",
+              "f7e8",
+              "c7c4",
+              "b4c4",
+              "b3c4",
+              "g7g6",
+              "b2b4",
+              "e8d8",
+              "c2c3",
+              "d8c7"
+            ]
+          },
+          "first_move_stable": false,
+          "cp_difference": 23
+        }
+      }
+    },
+    {
+      "index": 629,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": 0,
+            "white_mate": null,
+            "depth": 19,
+            "reported_nodes": 262229,
+            "pv": [
+              "e3f4",
+              "d7g4",
+              "g3f2",
+              "d5e6",
+              "f4g5",
+              "e6f7",
+              "f2c5",
+              "g4e2",
+              "c5a3",
+              "e2d1",
+              "a3d6",
+              "f7e8"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -1
+        },
+        "counter": {
+          "label": {
+            "white_cp": 0,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 262409,
+            "pv": [
+              "d7b5",
+              "e3f3"
+            ]
+          },
+          "first_move_stable": false,
+          "cp_difference": -2
+        }
+      }
+    },
+    {
+      "index": 673,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": 1185,
+            "white_mate": null,
+            "depth": 26,
+            "reported_nodes": 262389,
+            "pv": [
+              "h3g4",
+              "h7g8",
+              "g4g5",
+              "g8f7",
+              "c1f1",
+              "f7e7",
+              "g5g6",
+              "e7d6",
+              "h4h5",
+              "b5b4",
+              "h5h6",
+              "b4b3",
+              "a2a3",
+              "d6c5",
+              "h6h7",
+              "c5c6",
+              "f1b1",
+              "c6c7"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 308
+        },
+        "counter": {
+          "label": {
+            "white_cp": 1062,
+            "white_mate": null,
+            "depth": 21,
+            "reported_nodes": 262315,
+            "pv": [
+              "h7g7",
+              "h3g4",
+              "g7f7",
+              "g4g5",
+              "b5b4",
+              "c1f1",
+              "f7e8",
+              "g5g6",
+              "b4b3",
+              "a2a3",
+              "b3b2",
+              "f1b1",
+              "e8d7",
+              "h4h5",
+              "d7c6",
+              "h5h6"
+            ]
+          },
+          "first_move_stable": false,
+          "cp_difference": 212
+        }
+      }
+    },
+    {
+      "index": 689,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": -2,
+            "white_mate": null,
+            "depth": 19,
+            "reported_nodes": 262385,
+            "pv": [
+              "b8b1",
+              "f3f2"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 11
+        },
+        "counter": {
+          "label": {
+            "white_cp": -517,
+            "white_mate": null,
+            "depth": 19,
+            "reported_nodes": 262293,
+            "pv": [
+              "f3f2",
+              "b8b1",
+              "f2f1r",
+              "b1f1",
+              "f5f1",
+              "d3e2",
+              "f1f4",
+              "c3a5",
+              "f4e4",
+              "e2f2",
+              "g4h3",
+              "a5d8",
+              "g5g4",
+              "d8c7",
+              "e4e7",
+              "c7d6",
+              "e7c7"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -38
+        }
+      }
+    },
+    {
+      "index": 758,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": -489,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 262171,
+            "pv": [
+              "d3c2",
+              "f3g2"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -64
+        },
+        "counter": {
+          "label": {
+            "white_cp": -590,
+            "white_mate": null,
+            "depth": 22,
+            "reported_nodes": 262267,
+            "pv": [
+              "f3e4",
+              "d3e2",
+              "f7g6",
+              "e2f2",
+              "g6f5",
+              "c1e3",
+              "d5d4",
+              "e3c1",
+              "h6h5",
+              "f2g1",
+              "h5h4",
+              "c1d2",
+              "g5g4",
+              "h3g4",
+              "f5g4",
+              "g1h2",
+              "h4h3",
+              "d2c1",
+              "e4f5"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -54
+        }
+      }
+    },
+    {
+      "index": 784,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": 0,
+            "white_mate": null,
+            "depth": 20,
+            "reported_nodes": 262456,
+            "pv": [
+              "c5c6",
+              "e6d7"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 14
+        },
+        "counter": {
+          "label": {
+            "white_cp": -243,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 262360,
+            "pv": [
+              "e6d6",
+              "c5d5",
+              "d6c7",
+              "d5d3",
+              "c8e8",
+              "e4f5",
+              "e8e2",
+              "d3b3",
+              "e2f2",
+              "f5e6",
+              "g5g4",
+              "b3c3",
+              "c7b6",
+              "c3b3",
+              "b6c5",
+              "b3b5",
+              "c5d4",
+              "b5a5"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -56
+        }
+      }
+    },
+    {
+      "index": 824,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": 536,
+            "white_mate": null,
+            "depth": 19,
+            "reported_nodes": 262224,
+            "pv": [
+              "f7f5",
+              "e6d7",
+              "g2g4",
+              "e8e1",
+              "g4g5",
+              "b6c5",
+              "f5c5",
+              "d7e6",
+              "c5a5",
+              "e1f1",
+              "f4g4",
+              "f1f7",
+              "g5g6"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 29
+        },
+        "counter": {
+          "label": {
+            "white_cp": -579,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 262335,
+            "pv": [
+              "e6f7",
+              "c5b6",
+              "a7b6",
+              "f4f5",
+              "b6b5",
+              "f5f4",
+              "f7g6",
+              "g2g4",
+              "g6f6",
+              "g4g5",
+              "f6g6",
+              "f4g4",
+              "e8e3",
+              "g4f4",
+              "e3a3",
+              "f4e4",
+              "a3a4",
+              "e4d4",
+              "a4b4",
+              "d4d5",
+              "b4b3",
+              "d5c5",
+              "b5b4",
+              "c5c4"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -55
+        }
+      }
+    },
+    {
+      "index": 876,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": -465,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 262243,
+            "pv": [
+              "b5b6",
+              "c3c4",
+              "e4e5",
+              "c4c2",
+              "g5e3",
+              "c2b2",
+              "b6c5",
+              "b2e2",
+              "e3f4",
+              "e2e4",
+              "f4h6",
+              "e4h4",
+              "e5e6",
+              "h4h1",
+              "c6c7",
+              "d8c7",
+              "h6g5",
+              "h5h4",
+              "g5e7",
+              "h1c1",
+              "c5d5"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -78
+        },
+        "counter": {
+          "label": {
+            "white_cp": -448,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 262186,
+            "pv": [
+              "c3c2",
+              "b5b6",
+              "c2e2",
+              "b6c5",
+              "e2e4",
+              "c5d5",
+              "e4e2",
+              "g5c1",
+              "e2f2",
+              "d5e6",
+              "f2f6",
+              "e6d5",
+              "d8c7",
+              "c1a3",
+              "f6d6",
+              "d5e5"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -22
+        }
+      }
+    },
+    {
+      "index": 940,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": -26,
+            "white_mate": null,
+            "depth": 19,
+            "reported_nodes": 262279,
+            "pv": [
+              "g4d4",
+              "e6g8"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -9
+        },
+        "counter": {
+          "label": {
+            "white_cp": -306,
+            "white_mate": null,
+            "depth": 19,
+            "reported_nodes": 262345,
+            "pv": [
+              "c4d6",
+              "c3c8",
+              "e6c8",
+              "g4b4",
+              "d6f5",
+              "g3f2",
+              "f5h4",
+              "b4c4",
+              "c8f5",
+              "c4c5",
+              "g6g5",
+              "c5c6",
+              "h4g6",
+              "c6f6",
+              "f5c8",
+              "f6c6",
+              "c8b7",
+              "c6b6",
+              "b7d5",
+              "b6d6",
+              "g6f4",
+              "d6f6",
+              "d5g8",
+              "f2g3",
+              "f4g6",
+              "g3f2",
+              "g6h4",
+              "f6d6",
+              "g8c4",
+              "d6d4",
+              "c4b3",
+              "d4d6",
+              "h4f5"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -30
+        }
+      }
+    },
+    {
+      "index": 1057,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": 0,
+            "white_mate": null,
+            "depth": 19,
+            "reported_nodes": 262346,
+            "pv": [
+              "f4g5",
+              "e7e6",
+              "d2f3",
+              "e6f5",
+              "e2e3",
+              "b2c4",
+              "e3d3",
+              "c4b6",
+              "d3d4",
+              "b6d7",
+              "d4d5",
+              "d7f8",
+              "f3h4",
+              "f5g5",
+              "d5e4",
+              "g5f6"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -4
+        },
+        "counter": {
+          "label": {
+            "white_cp": 0,
+            "white_mate": null,
+            "depth": 21,
+            "reported_nodes": 262387,
+            "pv": [
+              "g5f4",
+              "d2b3",
+              "b2d3",
+              "e2f3",
+              "e7f6",
+              "b3d4",
+              "f6e5",
+              "d4c2",
+              "e5f5",
+              "c2d4"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 0
+        }
+      }
+    },
+    {
+      "index": 1179,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": -430,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 262411,
+            "pv": [
+              "f4g3",
+              "d7c6",
+              "d6d1",
+              "e7e6",
+              "d1h5",
+              "e5g6",
+              "h5g4",
+              "g6e7",
+              "g3h2",
+              "e7d5",
+              "g4h5",
+              "f7g8",
+              "h5f5",
+              "e6h6",
+              "h2g3",
+              "h6f6",
+              "f5c8",
+              "g8f7",
+              "g3h2",
+              "f6h6",
+              "h2g1",
+              "h6g6",
+              "g1f2"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -31
+        },
+        "counter": {
+          "label": {
+            "white_cp": -469,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 262233,
+            "pv": [
+              "e7e6",
+              "d6c7"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -59
+        }
+      }
+    },
+    {
+      "index": 1186,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": null,
+            "white_mate": 10,
+            "depth": 23,
+            "reported_nodes": 262310,
+            "pv": [
+              "e7b7",
+              "b4c5",
+              "b7b8",
+              "f8b8",
+              "a7b8q",
+              "c5c6",
+              "e3d4",
+              "c6d7",
+              "d4e5",
+              "d7c6",
+              "b8d6",
+              "c6b7",
+              "d6g6",
+              "b7c8",
+              "g6c6",
+              "c8b8",
+              "c6b6",
+              "b8a8",
+              "d3e4"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": null
+        },
+        "counter": {
+          "label": {
+            "white_cp": 615,
+            "white_mate": null,
+            "depth": 19,
+            "reported_nodes": 262441,
+            "pv": [
+              "b4a3",
+              "d3e4",
+              "g6g5",
+              "a7a8q",
+              "f8a8",
+              "e4a8",
+              "a3b3",
+              "a8d5",
+              "b3c2",
+              "e7c7",
+              "c2b2",
+              "e3d3",
+              "g5g4",
+              "d5e4"
+            ]
+          },
+          "first_move_stable": false,
+          "cp_difference": -7
+        }
+      }
+    },
+    {
+      "index": 1308,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": 208,
+            "white_mate": null,
+            "depth": 19,
+            "reported_nodes": 262198,
+            "pv": [
+              "g4g5",
+              "e5g5",
+              "h4g5",
+              "h6g5",
+              "f4d5",
+              "b4d2",
+              "a7a2",
+              "d2f4",
+              "a2a6",
+              "f4e5",
+              "d5e3",
+              "e5f4",
+              "e3c2",
+              "g5f6",
+              "g2h3",
+              "f6f5",
+              "a6a5",
+              "f4e5"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -16
+        },
+        "counter": {
+          "label": {
+            "white_cp": 190,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 262424,
+            "pv": [
+              "d6c8",
+              "g4g5",
+              "e5g5",
+              "h4g5",
+              "h6g5",
+              "a7f7",
+              "c8d6",
+              "f4e6",
+              "g5g6",
+              "f7c7",
+              "g6f6",
+              "e6d4",
+              "b4a5",
+              "c7d7",
+              "a5b4",
+              "d7h7"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 0
+        }
+      }
+    },
+    {
+      "index": 1358,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": -447,
+            "white_mate": null,
+            "depth": 19,
+            "reported_nodes": 262433,
+            "pv": [
+              "h7g7",
+              "g4f3",
+              "d5e5",
+              "f4a4",
+              "g7h7",
+              "f3g3",
+              "h7g7",
+              "a4g4",
+              "g7c7",
+              "h4h3",
+              "c7c3",
+              "g3h4",
+              "c3c2",
+              "g4g1",
+              "c2c4",
+              "h4g5",
+              "c4c2",
+              "g1f1",
+              "e5d5"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -89
+        },
+        "counter": {
+          "label": {
+            "white_cp": -430,
+            "white_mate": null,
+            "depth": 20,
+            "reported_nodes": 262318,
+            "pv": [
+              "h4h3",
+              "d5e5",
+              "f4b4",
+              "e5d6",
+              "b4c4",
+              "h7h6",
+              "g4g3",
+              "h6h3",
+              "g3h3",
+              "d6d7",
+              "c4e4",
+              "d7d6",
+              "e4f4",
+              "d6e6",
+              "f4g4",
+              "e6e5",
+              "h3h4",
+              "e5e6",
+              "g4g6",
+              "e6d7"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 8
+        }
+      }
+    },
+    {
+      "index": 1474,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": 1389,
+            "white_mate": null,
+            "depth": 21,
+            "reported_nodes": 262246,
+            "pv": [
+              "h3g4",
+              "g6f7",
+              "g4f5",
+              "f7e7",
+              "a4g4",
+              "e7d6",
+              "g5g6",
+              "d6c6",
+              "g4g3",
+              "c6c5",
+              "g6g7",
+              "c5c4",
+              "g7g8q",
+              "c4b4",
+              "g3b3",
+              "b4c5",
+              "g8c8",
+              "c5d6",
+              "b3d3",
+              "d6e7",
+              "c8b7",
+              "e7f8",
+              "b7a8",
+              "f8f7"
+            ]
+          },
+          "first_move_stable": false,
+          "cp_difference": 244
+        },
+        "counter": {
+          "label": {
+            "white_cp": 407,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 262524,
+            "pv": [
+              "g6g5",
+              "h3g3",
+              "g5f5",
+              "g3f3",
+              "f5e5",
+              "f3g4",
+              "e5e6",
+              "a4a5",
+              "e6f6",
+              "g4f3",
+              "f6e7",
+              "a5a6",
+              "e7f7",
+              "f3e3",
+              "f7e7",
+              "a6h6",
+              "e7f7"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -36
+        }
+      }
+    },
+    {
+      "index": 1495,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": -35,
+            "white_mate": null,
+            "depth": 19,
+            "reported_nodes": 262289,
+            "pv": [
+              "c5e4",
+              "d6e7",
+              "f4f5",
+              "h7h8",
+              "b2b4",
+              "e7f7",
+              "c3c4",
+              "h8d8",
+              "h4h5",
+              "d8d4",
+              "e4g5",
+              "f7f6",
+              "b4b5",
+              "d4f4",
+              "g5h7",
+              "f6f5",
+              "b5c6",
+              "f4c4",
+              "h7g5",
+              "c4c3",
+              "h5h4",
+              "f5g6"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 11
+        },
+        "counter": {
+          "label": {
+            "white_cp": -721,
+            "white_mate": null,
+            "depth": 22,
+            "reported_nodes": 262447,
+            "pv": [
+              "d6c5",
+              "b2b4",
+              "c5d5",
+              "f4f5",
+              "d5e5",
+              "c3c4",
+              "e5f6",
+              "c4c5",
+              "f6f5",
+              "h4g3",
+              "h5h4",
+              "g3h2",
+              "f5e5",
+              "h2h1",
+              "e5d5",
+              "h1g1"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -60
+        }
+      }
+    },
+    {
+      "index": 1511,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": 173,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 262184,
+            "pv": [
+              "f1b1",
+              "d7d3"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 33
+        },
+        "counter": {
+          "label": {
+            "white_cp": -706,
+            "white_mate": null,
+            "depth": 16,
+            "reported_nodes": 262273,
+            "pv": [
+              "d7b5",
+              "f1d1",
+              "g8f7",
+              "d1e1",
+              "h5h4",
+              "f2f3",
+              "b5b6",
+              "g1f1",
+              "e4e3"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -48
+        }
+      }
+    },
+    {
+      "index": 1539,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": -398,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 262230,
+            "pv": [
+              "c2c3",
+              "h6h5",
+              "h3g3",
+              "g8f7",
+              "a3a4",
+              "f7e6",
+              "c3c2",
+              "e6f6",
+              "c2c1",
+              "c6c5",
+              "c1f1",
+              "f6e6",
+              "f1b5",
+              "c5c4",
+              "g3f2",
+              "c4c3",
+              "f2e1",
+              "d5d2",
+              "e1f1",
+              "d2d1",
+              "f1f2",
+              "d1d4",
+              "f2f3"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -45
+        },
+        "counter": {
+          "label": {
+            "white_cp": -495,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 262197,
+            "pv": [
+              "c6c5",
+              "c2a4",
+              "c5c4",
+              "a4e8",
+              "g8h7",
+              "h4h5",
+              "d5d3",
+              "h3h4",
+              "d3f5",
+              "a3a4",
+              "c4c3",
+              "e8c6"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": -50
+        }
+      }
+    },
+    {
+      "index": 1615,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": 195,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 262155,
+            "pv": [
+              "g2g3",
+              "d6d5"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 23
+        },
+        "counter": {
+          "label": {
+            "white_cp": 2,
+            "white_mate": null,
+            "depth": 22,
+            "reported_nodes": 262266,
+            "pv": [
+              "f1g2",
+              "b4b5"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 2
+        }
+      }
+    },
+    {
+      "index": 1685,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": 289,
+            "white_mate": null,
+            "depth": 21,
+            "reported_nodes": 262437,
+            "pv": [
+              "h6h5",
+              "g8f8",
+              "f5d4",
+              "g6e7",
+              "h5h8",
+              "f8g7",
+              "h8e8",
+              "g7g6",
+              "d4b3",
+              "f6f5",
+              "e4f3",
+              "e7c6",
+              "b3c5",
+              "b6c5",
+              "e8g8",
+              "g6f6",
+              "g8c8",
+              "c6e5",
+              "f3e2"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 12
+        },
+        "counter": {
+          "label": {
+            "white_cp": 284,
+            "white_mate": null,
+            "depth": 19,
+            "reported_nodes": 262331,
+            "pv": [
+              "c5a3",
+              "h6h5",
+              "a3c5",
+              "e4d3",
+              "g6e5",
+              "d3e2",
+              "b6b5",
+              "f5d4",
+              "b5b4",
+              "h5f5",
+              "g8g7",
+              "f5f1",
+              "g7g6",
+              "f1c1",
+              "c5a7",
+              "d4c6",
+              "e5c6",
+              "c1c6",
+              "b4b3",
+              "c6c4",
+              "f6f5",
+              "c4b4",
+              "a7c5",
+              "b4b3",
+              "g6g5",
+              "b3b7",
+              "g5g6",
+              "b7c7",
+              "c5f8",
+              "c7c8"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 24
+        }
+      }
+    },
+    {
+      "index": 1782,
+      "labels": {
+        "parent": {
+          "label": {
+            "white_cp": -313,
+            "white_mate": null,
+            "depth": 18,
+            "reported_nodes": 262295,
+            "pv": [
+              "g2g3",
+              "f4g3",
+              "c7g3",
+              "h7g6",
+              "d2e3",
+              "b1c2",
+              "g3d6"
+            ]
+          },
+          "first_move_stable": true,
+          "cp_difference": 48
+        },
+        "counter": {
+          "label": {
+            "white_cp": -346,
+            "white_mate": null,
+            "depth": 17,
+            "reported_nodes": 262393,
+            "pv": [
+              "c6b4",
+              "d2e1",
+              "b4d5",
+              "c7d8",
+              "h7g6",
+              "e1f2",
+              "b1a2",
+              "d8a5",
+              "d5f6",
+              "a5c7",
+              "a2d5",
+              "c7a5",
+              "f6h7",
+              "f2e1",
+              "g6f5",
+              "e1f2",
+              "g5g4",
+              "f3g4",
+              "f5g4"
+            ]
+          },
+          "first_move_stable": false,
+          "cp_difference": 16
+        }
+      }
+    }
+  ],
+  "seconds": 21.63,
+  "interpretation": "Hypothetical Black roots are independently derived from actual White histories; no counterfactual game outcome exists. Native finite/mate labels kept distinct. No deeper diagnostic filtering or model selection."
+}

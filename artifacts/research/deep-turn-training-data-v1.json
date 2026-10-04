@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "complete": true,
+  "plan_sha256": "70e19c063e26fe4c5bd289f0807ec3ef01ff0c44f3e6309de9cc4abbcb183c8b",
+  "preparer_sha256": "82625f2c3e55da23f91cb601f9faaa08b8706993aa5151cabb02729c1a73080b",
+  "data_audit_sha256": "ba63cfe8cb8cdda93dddfc573c18ecd442240c5c05a3b2f532b93f6b5e60eb56",
+  "data": "artifacts/data/deep-turn-training-v1-classical.jsonl",
+  "data_sha256": "a493a35960ba61d25af4fecf491e1f2a4f0de228fe6b0cba5c38a1f170b3894b",
+  "classical_provenance_sha256": "42f271ec918787654e5c121d41540d356b2a1e034332d3d50f28c613ef3089a7",
+  "split_path": "artifacts/research/deep-turn-split-v1.json",
+  "split_sha256": "8297c020afa90f89cc2e87b15dd1a911c17501df58cf20c75873cb28e22ddd0e",
+  "positions": 63826,
+  "old_rows_byte_identical": true,
+  "fresh_side_counts": {
+    "w": 1913,
+    "b": 1913
+  },
+  "old_validation_games": 269,
+  "fresh_validation_games": 89,
+  "training_pairs": {
+    "old_training": 9022,
+    "old_validation": 978,
+    "fresh_training": 1733,
+    "fresh_validation": 180
+  },
+  "outputs": {
+    "control": "artifacts/training/deep-turn-control-v1",
+    "candidate": "artifacts/training/deep-turn-candidate-v1"
+  }
+}

@@ -1,0 +1,406 @@
+{
+  "created_utc": "2026-10-04T21:09:33.540235+00:00",
+  "plan_sha256": "70e19c063e26fe4c5bd289f0807ec3ef01ff0c44f3e6309de9cc4abbcb183c8b",
+  "source_files": [
+    {
+      "path": "declare_deep_turn.py",
+      "sha256": "23d36fadb57f30d9a2bf994b017e38fc182c07d3126bac53fa461c7a839de16c"
+    },
+    {
+      "path": "generate_deep_turn.py",
+      "sha256": "e6b77237eac87b529f75a65a544db7ad74bfe0ec3a1b22051ee147fcdaf7ae0f"
+    },
+    {
+      "path": "audit_deep_turn.py",
+      "sha256": "0f6d2b20b4a3a8145cf6dce72f80ec605a1fb658c254edfe4cb742a2807fecf4"
+    },
+    {
+      "path": "prepare_deep_turn.py",
+      "sha256": "82625f2c3e55da23f91cb601f9faaa08b8706993aa5151cabb02729c1a73080b"
+    },
+    {
+      "path": "test_fresh_pair_training.py",
+      "sha256": "ca05f6ad506d532d1ca5a8d6c391bcd55e20fef7e74d74991486305ddec14741"
+    },
+    {
+      "path": "test_pair_training.py",
+      "sha256": "39747594398f2942b5610bc667b751c5faa0f8db5683cef1f19879460277c898"
+    },
+    {
+      "path": "test_fixed_split.py",
+      "sha256": "69ed1ff0a9e9c4f5fda6f6fb066a914aa65828a5f4b607c65f3cf7f5c76dc032"
+    },
+    {
+      "path": "train_deep_turn.py",
+      "sha256": "e6a125776fc0ad0da5c1706474be69a2c6426af5a0036caf65401064531b209f"
+    },
+    {
+      "path": "train_network.py",
+      "sha256": "5c2ed6488e69600765cce59272ecd2f58134dd93c90fc776e2a8a22d4f9a08aa"
+    },
+    {
+      "path": "neural_format.py",
+      "sha256": "304897abff22a599e5523ad08492f76d91dde8def54e54497716969602970efa"
+    },
+    {
+      "path": "prepare_deep_turn_openings.py",
+      "sha256": "9ffafaafece07ca7de00cae5e1f7e12dc90a989de8e76f96237ebef13168fcdd"
+    },
+    {
+      "path": "check_deep_turn.py",
+      "sha256": "0f3c4b7e49fc1a335758573ac3b65951f0cdf5060c323456cd88ae5acb81e3ca"
+    },
+    {
+      "path": "freeze_deep_turn_pipeline.py",
+      "sha256": "6b176b2f6bf447de475e5b987160541a65367b1ae9236c7d94082d770323c7f2"
+    },
+    {
+      "path": "run_deep_turn.py",
+      "sha256": "6e39b2f219b31244d08582fff72dd4415e30da98df3b1f7463d00f476e2510ec"
+    },
+    {
+      "path": "assess_deep_turn.py",
+      "sha256": "40bd8a0f2f261bfcd9d7742cbb6c05020d3c845822d541b081c09c9cff0349c3"
+    },
+    {
+      "path": "preserve_deep_turn.py",
+      "sha256": "f2c4268a0a8aebb2450c3dbf9f085e0610d0f550cc2b89d79428a9496bfd5103"
+    },
+    {
+      "path": "record_deep_turn_session.py",
+      "sha256": "36cce07165aa7713d13bb506972cd756dbb4df678b8014521689b49ff5e936e2"
+    },
+    {
+      "path": "generate_endgame_diagnostic.py",
+      "sha256": "9a56c1ba91fead0f5f071426114680f3e3be8d002e69d388cde271a5ad485e6a"
+    },
+    {
+      "path": "generate_openings.py",
+      "sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746"
+    },
+    {
+      "path": "audit_openings.py",
+      "sha256": "0c97723cf8a0404f9e3681a90f5d9d09dcfc4978721748222ee80a679a6fca5d"
+    },
+    {
+      "path": "verify_network.py",
+      "sha256": "be2ffe96b1a70f2e2ac24d4df640cd1682ab49c161c985a7f3aecd51de50fada"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    },
+    {
+      "path": "tactics.py",
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    },
+    {
+      "path": "compare_search.py",
+      "sha256": "a8162c85b4ea4aae46546ca8a02d4b04c083bf56abb6a28d64f322b2331b6dd9"
+    },
+    {
+      "path": "match.py",
+      "sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8"
+    },
+    {
+      "path": "audit_match.py",
+      "sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6"
+    },
+    {
+      "path": "analyze_rating.py",
+      "sha256": "f6fe53073c006e91760b885adab9803f92cd50fa3c3a7ba6ada90f0a8e5b8d13"
+    },
+    {
+      "path": "run_rating.py",
+      "sha256": "6e8a31adefd0aeb5d51eac2f5672396f4518f779947713f86dac138ff00f661a"
+    },
+    {
+      "path": "uci_client.py",
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "freeze_engine_source.py",
+      "sha256": "db919e19f9b75ade115a3d834ad48cc57e01a6165130ef03a775279f4c89acb7"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "artifacts/validation/deep-turn-bench7.txt",
+      "sha256": "7ca0540d3c02002fabb1ad065f87504e659ff8318ac383ed7dc3c940c2d86196"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-build.txt",
+      "sha256": "6b6d0b3c468700c401d95f13358b1f444ab0181b93928eb8ba9468ff0d32370e"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-candidate-endgames-5000nodes.txt",
+      "sha256": "a3e228a6ae0bd43aa0d5d15a9e1bf5eed777226b24cc39970d48415305987f2d"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-candidate-network.json",
+      "sha256": "e223e36c517065d4afdfb226945acc72e874e8a5c525f3be49d04b7b5a17e40d"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-candidate-network.txt",
+      "sha256": "f5b2f39dae2878ea3b0972cdc650572a833c22b7b55e293c9ec15dff87c79c7e"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-candidate-rules.json",
+      "sha256": "ba65848ee0ce634c613ba137b01eaee64ff20d768230e80c1b9023ca7b3d467b"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-candidate-rules.txt",
+      "sha256": "e5adec3b082a5328b274653efcd6c3bf7a114b7038886a47325c98de0be5e1a2"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-candidate-tactics-5000nodes.txt",
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-candidate-tactics-depth8.txt",
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-candidate-tactics-quiet-5000nodes.txt",
+      "sha256": "a5e19ca3bc3d0ffd1a104d318637cb28d84877c2d18051cb06445c310f5bcebd"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-candidate-tactics-quiet-depth8.txt",
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-classical-100ms-audit.json",
+      "sha256": "2b2ca4b573739876c6f5cd1d36ddef8ba004d9998b24f616531b4154c429098f"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-classical-30ms-audit.json",
+      "sha256": "ec5c1c21e72ce906696e18d2444fecd26f04f15fa0a0261096cd4cf525bae5d6"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-control-30ms-audit.json",
+      "sha256": "981b27a0471b0d500e934bae4a89f8ab820007da1e07c92938b576d1b31c6a21"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-control-endgames-5000nodes.txt",
+      "sha256": "ef4e645f8ea67b03b31bbb891a18f192680d3ff359c2bd10e014b1541b2db39b"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-control-network.json",
+      "sha256": "3499d0cd2b53e6319f3f51b4e905ca8fd8f675632bdadb930686a91b71848cb3"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-control-network.txt",
+      "sha256": "7255fbab6c8a4bb52bd9316e9792f4798e6ad5292e7755cc73efc66edc8330f2"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-control-rules.json",
+      "sha256": "ef9750c1e222d83035f2cf2e0479a927c4b1b386a3a4e793805e821d44028e34"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-control-rules.txt",
+      "sha256": "7bb5506ae8eb736126a90b3f1a79980a98e2e6e5f94aaf68fbdea4206a61761d"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-control-tactics-5000nodes.txt",
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-control-tactics-depth8.txt",
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-control-tactics-quiet-5000nodes.txt",
+      "sha256": "42def545db2a70966cb6bc37906897a006ce19db515c280022a24195ce77c43f"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-control-tactics-quiet-depth8.txt",
+      "sha256": "6337b334be0c058fb1bf16f4a73c3d5db90443d425f7a0e635d6eb5fd21b2611"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-data-audit-v1.json",
+      "sha256": "ba63cfe8cb8cdda93dddfc573c18ecd442240c5c05a3b2f532b93f6b5e60eb56"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-data-audit.txt",
+      "sha256": "5037eb6f5314205f1ec07e40ad0fd5c8cf544b05f53c2adb72e9e94d1a1ad975"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-default-rules.json",
+      "sha256": "b9a809c1718ad3a680eeebb9a572f89975268a1cbb25a737c80f0ca9952d4685"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-default-rules.txt",
+      "sha256": "8a4da74c62d562a6ee32d53b0fe4be15341576a1b9b0b2a0807d185c6d23e918"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-default-tests.txt",
+      "sha256": "7ab0bab8842289b65dd56eebe446b6cecfa06b1d2265a8cbbd8f71e36aae173d"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-frozen-default-rules.json",
+      "sha256": "872643edcb5523cacaa4434ba992b81b9bad84068626e421b5a9fcf204f98e09"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-frozen-default-rules.txt",
+      "sha256": "66ce1a88dac6ebd0f45dd4d26e1946b838cc1e3ec550779c64e77bddddd11648"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-generation.txt",
+      "sha256": "931df3ede01f03b7b4b8875523ed800bb327c54d26dded47a607a68366582600"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-legacy-control-check.json",
+      "sha256": "c414a2ffac16b3611c84f289b925f50833aa5dc72fd0443f9cc8b99f458c8bd4"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-legacy-control.txt",
+      "sha256": "4fbe99ebe2182875ac9c33cecc331ba07cc1d14bc541592691c20951b24d9c99"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-opening-generation.txt",
+      "sha256": "d151a6bae97ea26d8540ddce1034c18714d5a3fc1635afb7323b0382b2b85b49"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-pair-tests-v1.json",
+      "sha256": "0b792a668606af908dfc0c6c8b0eed40a88abb07786253fcc8f3573a35b56a2a"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-parent-audit.json",
+      "sha256": "a8c15fe0aabfc221117117f841155968668511854fa58c990759704063d71cf3"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-preflight-driver.txt",
+      "sha256": "f536ec67cce2c761f8dd72e1bc99955cd60a55f3021b93c34788268733bc16bc"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-preflight.json",
+      "sha256": "8e10e5df77e667f9bbcfa0ab6b30792ca9e13e4640c74ca5815c852974d20cfb"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-rebuild-comparison.txt",
+      "sha256": "c4473246fde179b4122c39693eef1e5ac1f24b55be0ee7e77b25b462d54c08c4"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-training-candidate.txt",
+      "sha256": "bccba0eb38604763dba914203cf49921b4d3fc683c8485a819cf4ce1438d57e5"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-training-control.txt",
+      "sha256": "d046b74a11ca2ffe8a2f44d4c154b299feae6e3372e9ba5fc78b7d22b5138c46"
+    },
+    {
+      "path": "artifacts/validation/deep-turn-training-driver.txt",
+      "sha256": "56f6e0004ac2a79881bb91d0b41bd14865d773fa67592ef7822a578d295d63d5"
+    },
+    {
+      "path": "artifacts/tactics/deep-turn-candidate-endgames-5000nodes.json",
+      "sha256": "5353fd99e0514e3a189807c377e12c6c7ee5b406617c16d2c19b3e6763aac66a"
+    },
+    {
+      "path": "artifacts/tactics/deep-turn-candidate-tactics-5000nodes.json",
+      "sha256": "0a78364f953440994b11d540cee4864a4687a52b2a7c5fa20e2635c209a10c49"
+    },
+    {
+      "path": "artifacts/tactics/deep-turn-candidate-tactics-depth8.json",
+      "sha256": "086a21285330407606d12875b2aeaca35729a2aec185b117976b61da2a458c29"
+    },
+    {
+      "path": "artifacts/tactics/deep-turn-candidate-tactics-quiet-5000nodes.json",
+      "sha256": "e8ec37198af98673d966a40693402e01e4be408b3cab5add478a84be3991296f"
+    },
+    {
+      "path": "artifacts/tactics/deep-turn-candidate-tactics-quiet-depth8.json",
+      "sha256": "d787867353d3c1f005fd2273c1f8a22fe6633d1ba72f22eb6ab1ca4dc93aadbb"
+    },
+    {
+      "path": "artifacts/tactics/deep-turn-control-endgames-5000nodes.json",
+      "sha256": "984d053b425b06c7f554459ac393f9ebbd586d176098ce4c1663514d57eff098"
+    },
+    {
+      "path": "artifacts/tactics/deep-turn-control-tactics-5000nodes.json",
+      "sha256": "9026b4f963bf7ad88947e23ea46d489a15c0f9f42748d80c677d958a2925bb55"
+    },
+    {
+      "path": "artifacts/tactics/deep-turn-control-tactics-depth8.json",
+      "sha256": "d6e0a16eab75206528efea4dcd09115ec251d88c086f95e8883b222ce44ae0b7"
+    },
+    {
+      "path": "artifacts/tactics/deep-turn-control-tactics-quiet-5000nodes.json",
+      "sha256": "544c2d610905d171d139d11cbc7f7690d04ed16082144ddbf308a5b9633e6b6c"
+    },
+    {
+      "path": "artifacts/tactics/deep-turn-control-tactics-quiet-depth8.json",
+      "sha256": "31a052a5cc8083cf152f8257e5436377596b99f1d74dfa032f7dd01786ba5c37"
+    },
+    {
+      "path": "artifacts/benchmarks/deep-turn-rebuild-depth8.json",
+      "sha256": "a65e29a0c9191c981e031fbe8a1d7e53a189bfcbbc1f2f27a3366320c4ef0c09"
+    },
+    {
+      "path": "tests/fixtures/deep-turn-classical-100ms-v1.json",
+      "sha256": "b8c5da7d9648fd72ccf674ca694848f3bc526776b738087b31e3e82a6453165c"
+    },
+    {
+      "path": "tests/fixtures/deep-turn-classical-30ms-v1.json",
+      "sha256": "1ffa275e525d665757213fa34a93aa4bed17982fd844d444299b01d556fd0255"
+    },
+    {
+      "path": "tests/fixtures/deep-turn-control-30ms-v1.json",
+      "sha256": "99889d267db0879be7131c4039dd80d258ad2221fe54222133dd32709b595e03"
+    },
+    {
+      "path": "tests/fixtures/deep-turn-parent-v1.json",
+      "sha256": "5addfa8b6a03c8fd844ff43ec8c8dc71f6c2d3184460d919fc7dee2676865237"
+    },
+    {
+      "path": "artifacts/data/deep-turn-candidates-v1.jsonl",
+      "sha256": "7a30a55bcfed7ef60fe8be8a4bc0d8036aee9316bf832171a31d0cd1a4ea917b"
+    },
+    {
+      "path": "artifacts/data/deep-turn-generation-v1.json",
+      "sha256": "a2f6fb5679071f702aed287e0c77773ec50e866975cb3facfd04eeaa238f936c"
+    },
+    {
+      "path": "artifacts/data/deep-turn-pairs-v1.jsonl",
+      "sha256": "b0abf7601a753d05e49fc8aacad7942e334f4adc912a3c16d3c1ab77e6b3dc45"
+    },
+    {
+      "path": "artifacts/data/deep-turn-training-v1-classical.jsonl",
+      "sha256": "a493a35960ba61d25af4fecf491e1f2a4f0de228fe6b0cba5c38a1f170b3894b"
+    },
+    {
+      "path": "artifacts/data/deep-turn-training-v1-classical.jsonl.classical.json",
+      "sha256": "42f271ec918787654e5c121d41540d356b2a1e034332d3d50f28c613ef3089a7"
+    },
+    {
+      "path": "artifacts/research/deep-turn-plan-v1.json",
+      "sha256": "70e19c063e26fe4c5bd289f0807ec3ef01ff0c44f3e6309de9cc4abbcb183c8b"
+    },
+    {
+      "path": "artifacts/research/deep-turn-split-v1.json",
+      "sha256": "8297c020afa90f89cc2e87b15dd1a911c17501df58cf20c75873cb28e22ddd0e"
+    },
+    {
+      "path": "artifacts/research/deep-turn-training-data-v1.json",
+      "sha256": "8d6ad0c50c62a631e1f02f206d9287a5580037001392f440dd947c9a22714e78"
+    },
+    {
+      "path": "artifacts/research/deep-turn-training-execution-v1.json",
+      "sha256": "6cd00e9fbaba02a962be4282ad95179143eb7f35455a4873e43e5dec04daade2"
+    }
+  ],
+  "engine_sha256": "ac907eac90bba15acab80c15d16f195044a8ac2b59a7964f5a065bc0caaa0ae8",
+  "models": {
+    "control": {
+      "path": "artifacts/training/deep-turn-control-v1/model.ann",
+      "sha256": "460736dd293709d72817ba1bee67e3186edabd097c456fc61ad0425d2a6b7725",
+      "training_sha256": "74058b47a22146ecb4e5ed1a28cc6578121df4219b140301106520630f31ebb5"
+    },
+    "candidate": {
+      "path": "artifacts/training/deep-turn-candidate-v1/model.ann",
+      "sha256": "a580568f773a61d53e86661a5ac572bc6313aa626a29487c17754afc62ed36c3",
+      "training_sha256": "915fb5d4072a6cedc66a0ec371ae97624d6408c260034c7430f3dcfc2a8ed840"
+    }
+  },
+  "interpretation": "Frozen after both trainings/correctness/tactics, before matches. All256 short games run regardless of tactical failures. No retuning/adaptive extension."
+}

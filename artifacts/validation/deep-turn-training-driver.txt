@@ -1,0 +1,4 @@
+{"training": "control", "epochs": 50, "fresh_pair_weight": 0.0}
+{"role": "control", "model_sha256": "460736dd293709d72817ba1bee67e3186edabd097c456fc61ad0425d2a6b7725", "training_sha256": "74058b47a22146ecb4e5ed1a28cc6578121df4219b140301106520630f31ebb5", "selected_epoch": 9, "quantized_mae_cp": 131.5398347107438, "fresh_pair_validation": {"pairs": 180, "difference_mae_cp": 179.57125854492188, "predicted_std_cp": 26.201921463012695, "teacher_std_cp": 283.5871276855469}}
+{"training": "candidate", "epochs": 50, "fresh_pair_weight": 1.0}
+{"role": "candidate", "model_sha256": "a580568f773a61d53e86661a5ac572bc6313aa626a29487c17754afc62ed36c3", "training_sha256": "915fb5d4072a6cedc66a0ec371ae97624d6408c260034c7430f3dcfc2a8ed840", "selected_epoch": 16, "quantized_mae_cp": 135.56892561983472, "fresh_pair_validation": {"pairs": 180, "difference_mae_cp": 196.08877563476562, "predicted_std_cp": 95.95124053955078, "teacher_std_cp": 283.5871276855469}}

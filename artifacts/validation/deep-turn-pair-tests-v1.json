@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "partition_malformed_cases": 6,
+  "zero_weight_gradients_exact": true,
+  "fresh_weight_changes_gradients": true,
+  "independent_finite_difference_checks": 2,
+  "scope": "Old/fresh train/heldout pair isolation and weighted endgame-head/transformer gradients, without engine or model-selection queries."
+}

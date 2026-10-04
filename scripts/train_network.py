@@ -125,6 +125,21 @@ def turn_pairs(rows: list[dict], validation_games: set) -> tuple[list, list]:
     return training, validation
 
 
+def pair_partitions(rows: list[dict], validation_games: set) -> dict[str,list]:
+    """Keep old static and explicitly marked fresh deep pairs in separate streams."""
+    for row in rows:
+        flag = row.get("fresh_deep_pair",False)
+        if type(flag) is not bool or (flag and not row.get("counterfactual_turn")):
+            raise ValueError("Fresh pair marker must be boolean and belong to a counterfactual row")
+    training,validation = turn_pairs(rows,validation_games)
+    result = {"old_training":[],"old_validation":[],"fresh_training":[],"fresh_validation":[]}
+    for partition,pairs in (("training",training),("validation",validation)):
+        for pair in pairs:
+            fresh = any(rows[index].get("fresh_deep_pair",False) for index in pair)
+            result[("fresh_" if fresh else "old_")+partition].append(pair)
+    return result
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("data")
@@ -144,6 +159,7 @@ def main() -> None:
     parser.add_argument("--activation-bias", type=float, default=.5, help="Initial clipped-ReLU bias; zero starts at its nonlinear boundary")
     parser.add_argument("--transformer-std", type=float, default=.02, help="Initial ordinary feature weight standard deviation")
     parser.add_argument("--pair-loss-weight", type=float, default=0, help="Additional supervision on marked white-turn minus black-turn label differences")
+    parser.add_argument("--fresh-pair-loss-weight", type=float, default=0, help="Separate objective for fresh_deep_pair markers; both roles consume the same fresh batch stream even at zero weight")
     args = parser.parse_args()
     if not 8 <= args.hidden <= 256 or args.hidden % 8 or min(args.epochs, args.batch_size, args.threads) <= 0 or args.learning_rate <= 0:
         parser.error("Invalid training budget or hidden size")
@@ -161,6 +177,10 @@ def main() -> None:
         parser.error("Invalid pair loss weight")
     if args.pair_loss_weight and not args.turn_output:
         parser.error("Pair supervision requires --turn-output")
+    if not np.isfinite(args.fresh_pair_loss_weight) or not 0 <= args.fresh_pair_loss_weight <= 16:
+        parser.error("Invalid fresh pair loss weight")
+    if args.fresh_pair_loss_weight and not args.turn_output:
+        parser.error("Fresh pair supervision requires --turn-output")
     output = pathlib.Path(args.output).resolve()
     output.mkdir(parents=True, exist_ok=True)
     if (output / "model.ann").exists():
@@ -218,12 +238,18 @@ def main() -> None:
     if not training_indices or not validation_indices:
         raise ValueError("Dataset needs multiple games for a held-out game split")
     training = torch.tensor(training_indices); validation = torch.tensor(validation_indices)
-    train_pairs, heldout_pairs = turn_pairs(rows, validation_games) if args.pair_loss_weight else ([], [])
+    grouped = pair_partitions(rows,validation_games) if args.pair_loss_weight or args.fresh_pair_loss_weight or any(row.get("fresh_deep_pair",False) for row in rows) else {name:[] for name in ("old_training","old_validation","fresh_training","fresh_validation")}
+    train_pairs,heldout_pairs = grouped["old_training"],grouped["old_validation"]
+    if not args.pair_loss_weight: train_pairs,heldout_pairs = [],[]
     if args.pair_loss_weight and (not train_pairs or not heldout_pairs):
         raise ValueError("Pair supervision requires marked pairs in both whole-game partitions")
     pair_training = torch.tensor(train_pairs, dtype=torch.long).reshape(-1, 2)
     pair_validation = torch.tensor(heldout_pairs, dtype=torch.long).reshape(-1, 2)
-    for pairs in (pair_training, pair_validation):
+    fresh_training = torch.tensor(grouped["fresh_training"],dtype=torch.long).reshape(-1,2)
+    fresh_validation = torch.tensor(grouped["fresh_validation"],dtype=torch.long).reshape(-1,2)
+    if (len(fresh_training) or len(fresh_validation) or args.fresh_pair_loss_weight) and (not len(fresh_training) or not len(fresh_validation)):
+        raise ValueError("Fresh paired data requires marked pairs in both whole-game partitions")
+    for pairs in (pair_training, pair_validation, fresh_training, fresh_validation):
         if len(pairs) and (not torch.equal(white[pairs[:, 0]], white[pairs[:, 1]]) or not torch.equal(black[pairs[:, 0]], black[pairs[:, 1]])):
             raise ValueError("Turn-pair features differ")
     model = PositionNetwork(args.hidden, args.classical_base, args.king_context, args.activation_bias, args.turn_output, args.squared_activation, args.transformer_std, args.phase_output)
@@ -242,17 +268,18 @@ def main() -> None:
             return {"loss": float(objective(predictions, actual)), "mae_cp": float((predictions - actual).abs().mean() * 100),
                     "rmse_cp": float((predictions - actual).square().mean().sqrt() * 100)}
 
-    def evaluate_pairs() -> dict | None:
-        if not len(pair_validation): return None
+    def evaluate_pairs(selected: torch.Tensor | None = None) -> dict | None:
+        selected = pair_validation if selected is None else selected
+        if not len(selected): return None
         with torch.no_grad():
             deltas = []
-            for pairs in pair_validation.split(args.batch_size):
+            for pairs in selected.split(args.batch_size):
                 flat = pairs.flatten()
                 predictions = model(white[flat], black[flat], tempo[flat], turn[flat], phase[flat]).reshape(-1, 2)
                 deltas.append(predictions[:, 0] - predictions[:, 1])
             predicted = torch.cat(deltas)
-            actual = target[pair_validation[:, 0]] - target[pair_validation[:, 1]]
-            return {"pairs": len(pair_validation), "difference_mae_cp": float((predicted - actual).abs().mean() * 100),
+            actual = target[selected[:, 0]] - target[selected[:, 1]]
+            return {"pairs": len(selected), "difference_mae_cp": float((predicted - actual).abs().mean() * 100),
                     "predicted_std_cp": float(predicted.std(unbiased=False) * 100),
                     "teacher_std_cp": float(actual.std(unbiased=False) * 100)}
 
@@ -278,8 +305,14 @@ def main() -> None:
         pair_batches = []
         if len(pair_training):
             pair_batches = list(pair_training[torch.randperm(len(pair_training))].split(max(1, args.batch_size // 4)))
+        # Always consume the same fresh permutation and forward graph in matched
+        # fresh-data runs, including the zero-weight control.
+        fresh_batches = []
+        if len(fresh_training):
+            fresh_batches = list(fresh_training[torch.randperm(len(fresh_training))].split(max(1,args.batch_size//4)))
         batch_digest = hashlib.sha256(shuffled.numpy().tobytes())
         for pairs in pair_batches: batch_digest.update(pairs.numpy().tobytes())
+        for pairs in fresh_batches: batch_digest.update(pairs.numpy().tobytes())
         batch_fingerprints.append(batch_digest.hexdigest())
         for batch_number, batch in enumerate(shuffled.split(args.batch_size)):
             optimizer.zero_grad(set_to_none=True)
@@ -291,6 +324,12 @@ def main() -> None:
                 pair_predictions = model(white[flat], black[flat], tempo[flat], turn[flat], phase[flat]).reshape(-1, 2)
                 loss = loss + args.pair_loss_weight * objective(pair_predictions[:, 0] - pair_predictions[:, 1],
                                                                 target[pairs[:, 0]] - target[pairs[:, 1]])
+            if fresh_batches:
+                pairs = fresh_batches[batch_number % len(fresh_batches)]
+                flat = pairs.flatten()
+                fresh_predictions = model(white[flat],black[flat],tempo[flat],turn[flat],phase[flat]).reshape(-1,2)
+                loss = loss + args.fresh_pair_loss_weight * objective(fresh_predictions[:,0]-fresh_predictions[:,1],
+                    target[pairs[:,0]]-target[pairs[:,1]])
             loss.backward()
             nn.utils.clip_grad_norm_(model.parameters(), 1)
             optimizer.step()
@@ -302,6 +341,7 @@ def main() -> None:
                 model.linear.weight[features].zero_(); model.transformer.weight[features].zero_()
         metrics = evaluate(validation)
         history.append({"epoch": epoch, **metrics, "pair_validation": evaluate_pairs()})
+        if len(fresh_validation): history[-1]["fresh_pair_validation"] = evaluate_pairs(fresh_validation)
         if metrics["loss"] < best_loss:
             best_loss = metrics["loss"]; best_weights = copy.deepcopy(model.state_dict()); best_epoch = epoch
         if epoch % 5 == 0 or epoch == args.epochs:
@@ -358,6 +398,11 @@ def main() -> None:
         "heldout_pairs": len(pair_validation), "pair_batch_size": max(1, args.batch_size // 4),
         "selected_validation": evaluate_pairs(), "selection": "Ordinary held-out position loss only; pair diagnostics do not select epochs."}
     report["residual_cap_cp"] = 250 if args.classical_base else None
+    if len(fresh_training):
+        report["fresh_paired_supervision"] = {"weight":args.fresh_pair_loss_weight,"training_pairs":len(fresh_training),
+            "heldout_pairs":len(fresh_validation),"pair_batch_size":max(1,args.batch_size//4),"selected_validation":evaluate_pairs(fresh_validation),
+            "selection":"Same ordinary held-out targets select epochs; fresh pair metrics never select weights.",
+            "batching":"Fresh training stream shuffled/evaluated at zero and nonzero weights; held-out pairs excluded from optimization."}
     if split_provenance is not None:
         if hashlib.sha256(pathlib.Path(args.validation_games).read_bytes()).hexdigest() != split_provenance["sha256"]:
             raise ValueError("Fixed validation split changed during training")

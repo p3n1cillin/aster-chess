@@ -1,0 +1,167 @@
+{
+  "schema": 1,
+  "status": "complete",
+  "complete": true,
+  "started_utc": "2026-10-04T20:22:04.104302+00:00",
+  "plan_sha256": "70e19c063e26fe4c5bd289f0807ec3ef01ff0c44f3e6309de9cc4abbcb183c8b",
+  "generator_sha256": "e6b77237eac87b529f75a65a544db7ad74bfe0ec3a1b22051ee147fcdaf7ae0f",
+  "parents_sha256": "3c1ca1842da3059433028b3bd5cd9d6ebf9074226f63783238199563f34e5065",
+  "teacher": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "teacher_options": {
+    "Threads": 1,
+    "Hash": 64
+  },
+  "classical_binary_sha256": "ac907eac90bba15acab80c15d16f195044a8ac2b59a7964f5a065bc0caaa0ae8",
+  "exclusions": [
+    {
+      "path": "artifacts/data/teacher-turn-60k-static-v1-classical.jsonl",
+      "kind": "data",
+      "sha256": "bfea2a0226b65879961c7cde551dde3d715a9e59ef9e99adf627e3744f2be162",
+      "positions": 60000
+    },
+    {
+      "path": "artifacts/data/teacher-20k-v1.jsonl",
+      "kind": "data",
+      "sha256": "191c4bbd054ad307860d8935f2cb4f6cbcf73e60b68a3a397e646e8b6d691527",
+      "positions": 20000
+    },
+    {
+      "path": "artifacts/data/endgame-diagnostic-512-v1.jsonl",
+      "kind": "data",
+      "sha256": "f07976034c668f3ae636ef96cf584891b1bb1a7cc1648e73d975e837277b29a3",
+      "positions": 512
+    },
+    {
+      "path": "artifacts/data/stable-endgame-4096-v1.jsonl",
+      "kind": "data",
+      "sha256": "3c1ca1842da3059433028b3bd5cd9d6ebf9074226f63783238199563f34e5065",
+      "positions": 4096
+    },
+    {
+      "path": "tests/fixtures/openings-v1.json",
+      "kind": "suite",
+      "sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de",
+      "positions": 64
+    },
+    {
+      "path": "tests/fixtures/openings-v2.json",
+      "kind": "suite",
+      "sha256": "cdcc99af780b795546a22e84b2557bd20168097c2694cc9b12ce2e242f74bc25",
+      "positions": 64
+    },
+    {
+      "path": "tests/fixtures/openings-v3.json",
+      "kind": "suite",
+      "sha256": "b2c84b63c566712b33102e1a5f246d47a010a0341f8396c5e036937c74e241f3",
+      "positions": 64
+    },
+    {
+      "path": "tests/fixtures/openings-v4.json",
+      "kind": "suite",
+      "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d",
+      "positions": 64
+    },
+    {
+      "path": "tests/fixtures/openings-v5.json",
+      "kind": "suite",
+      "sha256": "e63c68d4024428bef2f84a4289db06c4aee70e60aa9f081cf437d2a6d237c46e",
+      "positions": 64
+    },
+    {
+      "path": "tests/fixtures/rating-parent-v1.json",
+      "kind": "suite",
+      "sha256": "6c4d7453e3572cadf786d81be8ad8b0b85fb9c461d5e93847612959836efb112",
+      "positions": 144
+    },
+    {
+      "path": "tests/fixtures/lazy-order-parent-v1.json",
+      "kind": "suite",
+      "sha256": "d8ac1c505d3c46c819b87da63fe8308cebd18a234a1889a9215fbc2e75101f3a",
+      "positions": 208
+    },
+    {
+      "path": "tests/fixtures/q-evasion-parent-v1.json",
+      "kind": "suite",
+      "sha256": "13c3a7a689f83064490766a76d112589ef2098f93a9d92ebbfcee805f1c385f4",
+      "positions": 288
+    },
+    {
+      "path": "tests/fixtures/iir-parent-v1.json",
+      "kind": "suite",
+      "sha256": "46868852f9af1c2b95bc9bfaec9b68bb0b45fd916d0bfc27f792fe9596855baa",
+      "positions": 448
+    },
+    {
+      "path": "tests/fixtures/phase-parent-v1.json",
+      "kind": "suite",
+      "sha256": "35fd8dc040ab40538966d73d0f9c54d38ce490175e90fba10c9cf4c82363063f",
+      "positions": 80
+    },
+    {
+      "path": "tests/fixtures/mate-proof-parent-v1.json",
+      "kind": "suite",
+      "sha256": "85553f4ff2dcc2ce9896e002ce5730d4ca54061c82f1032bdb47f0c83ae750c4",
+      "positions": 32
+    },
+    {
+      "path": "tests/fixtures/stable-endgame-parent-v1.json",
+      "kind": "suite",
+      "sha256": "ee8a6137df3a3a0da43dcf783565e974483101bb41aeb956d52772f39fc06a19",
+      "positions": 160
+    },
+    {
+      "path": "tests/fixtures/tactics-v1.json",
+      "kind": "suite",
+      "sha256": "ceb0c13cefcf4a44d2a570e562c52f62316dbf6260d25d912f4fc846595844b3",
+      "positions": 32
+    },
+    {
+      "path": "tests/fixtures/tactics-quiet-v1.json",
+      "kind": "suite",
+      "sha256": "3868e2bd596272873251fca177e2a253027cb7bc8dc99b42148cdcb6f86641d9",
+      "positions": 32
+    },
+    {
+      "path": "tests/fixtures/endgames-v1.json",
+      "kind": "suite",
+      "sha256": "be7b57e12be2fb570ee24e75c610af5ea5f7f125da8d125d11b0fe5443ef9ee9",
+      "positions": 16
+    }
+  ],
+  "source_pgn": {
+    "path": "artifacts/data/stable-endgame-4096-v1.jsonl.source.pgn",
+    "sha256": "db2d451715fb8ffcd47b16d5d15e1c72fe691532ab68b5f6a1aad6456b87174a"
+  },
+  "outcome_scope": "Only actual White parents have played histories/source game outcomes. Black counterparts are cold-FEN hypotheses with no observed result.",
+  "parents_visited": 4096,
+  "counter_roots_queried": 4034,
+  "paired_parents": 1913,
+  "training_pairs": 1733,
+  "heldout_pairs": 180,
+  "source_groups": 889,
+  "rejections": {
+    "unstable_value": 571,
+    "unstable_first_move": 1331,
+    "invalid_counter_fen": 60,
+    "outside_score_range": 26,
+    "native_mate_label": 193,
+    "excluded_counter": 2
+  },
+  "seconds": 170.694,
+  "training_eligible": true,
+  "candidates_sha256": "7a30a55bcfed7ef60fe8be8a4bc0d8036aee9316bf832171a31d0cd1a4ea917b",
+  "pairs_sha256": "b0abf7601a753d05e49fc8aacad7942e334f4adc912a3c16d3c1ab77e6b3dc45",
+  "fresh_side_counts": {
+    "w": 1913,
+    "b": 1913
+  },
+  "source_parent_policy": "Only eligible White/Black pairs are appended; unpaired White parents are retained in source evidence, not training."
+}
