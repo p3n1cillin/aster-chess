@@ -5,6 +5,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
+        variant: [default, iir]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -14,8 +15,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: dotnet build Aster.sln -c Release
+      - if: matrix.variant == 'default'
+        run: dotnet build Aster.sln -c Release
+      - if: matrix.variant == 'iir'
+        run: dotnet build Aster.sln -c Release -p:DefineConstants=ASTER_IIR
       - run: dotnet run --project tests/Engine.Tests -c Release --no-build
       - run: python -m pip install -r requirements-dev.txt
       - run: python scripts/verify.py --setups 1000
       - run: python scripts/tactics.py tests/fixtures/tactics-v1.json --depth 8 --require-solved 32 --output artifacts/tactics/ci.json
+      - run: python scripts/tactics.py tests/fixtures/tactics-v1.json --nodes 5000 --require-solved 32 --output artifacts/tactics/ci-nodes.json
+      - run: python scripts/tactics.py tests/fixtures/tactics-quiet-v1.json --depth 8 --require-solved 32 --output artifacts/tactics/ci-quiet-depth.json
+      - run: python scripts/tactics.py tests/fixtures/tactics-quiet-v1.json --nodes 5000 --require-solved 25 --output artifacts/tactics/ci-quiet-nodes.json
+      - run: python scripts/tactics.py tests/fixtures/endgames-v1.json --nodes 5000 --require-solved 13 --output artifacts/tactics/ci-endgames.json
+      - run: dotnet src/Engine/bin/Release/net8.0/Aster.dll bench 7
