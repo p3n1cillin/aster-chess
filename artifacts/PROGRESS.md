@@ -8,6 +8,53 @@ the classical evaluator is the default. Optional trained neural prototypes
 exist but regressed in matches. The opt-in KPK solver generates its own table;
 there is no general tablebase probing or parallel search.
 
+## Completed experiment: nested hidden capacity
+
+A predeclared H64/H128 ablation uses the same **63826** rows, inherited whole-game
+split, objectives and 50-epoch budget. H128 embeds all shared H64 parameters and
+adds independent columns with zero initial outputs. Initial predictions agree
+exactly on every row; explicit checkpoint and numerical gradient checks pass.
+H64 reproduces the prior stronger control byte for byte, including selected
+epoch 9. H128 selects epoch 8, with identical initialization RNG and all 50
+batch fingerprints. Overall held-out MAE is **131.540/131.555cp**, and fresh
+MAE **201.589/201.644cp**: no material fit gain.
+
+Both models pass exact inference and **2614** rules/protocol checks. The required
+build, **55** native tests, default verifier and depth-seven benchmark pass.
+All 24 runtime source files match; 32 depth-eight rebuild comparisons agree
+on moves, scores and nodes. Candidate original tactics pass, but **24/32**
+quiet node-budget positions and **12/16** endgames miss the required 25 and 13.
+A separate warmed cost harness executes identical frozen legal operations,
+verifies roots/checksums and balances order across nine rounds. H128 costs
+**1.588 times H64** on that local workload; this is not broad search speed or
+strength. Four Windows/Linux default/IIR setup CI jobs pass.
+
+Both declared 128-game short screens finish; all **256** PGNs pass audit with
+zero forfeits or unresolved games. Against classical: **18 W / 37 D / 73 L**,
+**28.52%**, 95% family interval **22.27%..35.00%** over 57 families. Against
+H64: **35 W / 51 D / 42 L**, **47.27%**, interval **40.57%..53.57%** over 55
+families; that interval includes 50% and establishes no relative gain. All
+three promotion gates fail. Longer confirmation is skipped with **32** reserved
+pairs unused by Aster; no retuning or adaptive extension occurs. Classical
+remains the default and neither model is calibrated.
+
+An additional independent audit replays the cost trace's 64 roots and 128 child
+positions, validates raw-FEN restoration and matches every score checksum with
+Python quantized inference and cold classical scores. Match metadata verifies
+exact models/source, resources, controls, caps and opening partitions. Saved
+first searches at identical opening histories show median depths 6/7 against
+classical and 6/6 against control, with paired node ratios 0.453 and 0.905.
+Different evaluations alter search trees; these are descriptive observations,
+not proof that timing alone causes the score. All 206 prior deep-turn archived
+artifacts remain byte-identical. Complete source, nested/final checkpoints,
+cost evidence, reports and PGNs are preserved in version control.
+
+Doubling width alone shows no fit or playing benefit at this budget. Isolate
+richer feature interactions and compatibility of static/deep supervision next,
+with inference cost and fresh paired play measured separately. The last exact
+local reference remains **2319**, 95% interval **2277..2360**, at 30ms/move on
+the SF19 setting-equivalent scale. See [capacity](../docs/CAPACITY.md).
+
 ## Completed experiment: fresh deep paired-turn supervision
 
 Both matched 50-epoch trainings are complete on **63826** identical rows,

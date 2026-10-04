@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "passed": true,
+  "post_freeze_read_only_audit": true,
+  "script_sha256": "171c3a2f6c74f807904383ca5bcf9c7f084c48c2552289cd54ebe6920a952efa",
+  "raw_sha256": "015b2ceb0aa5ff30c544dd8bf359f74ed7fa07c80670b66e1d09f6406a5f2913",
+  "trace_sha256": "a7b0bd8e4a448fa3aa70c46505cae5e14c62bc3591d0a2c94cba184038c3a75e",
+  "positions": 64,
+  "root_child_scores": 192,
+  "checksum_per_role": {
+    "classical": 450900,
+    "control": 1671600,
+    "candidate": 1714200
+  },
+  "scope": "Independent python-chess legal replay and full raw-FEN restoration, classical cold-FEN reference scores and Python quantized H64/H128 inference. Verifies every measured make/eval/undo/eval score checksum; no new timing, filtering or gate changes."
+}

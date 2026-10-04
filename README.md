@@ -92,6 +92,9 @@ are documented in [stable endgame labels](docs/STABLE-ENDGAME-LABELS.md).
 Identical-data training with a separate fresh paired-turn objective is documented
 in [deep turn pairs](docs/DEEP-TURN-PAIRS.md), including counterfactual provenance,
 matched batch streams and tactical/playing gates.
+The [nested capacity experiment](docs/CAPACITY.md) compares H64 and H128 with
+identical initial predictions and batch orders, including a frozen evaluator-cost
+trace and matched playing tests.
 An original, opt-in king-and-pawn solver is documented in
 [KPK endgame research](docs/KPK.md), with exhaustive oracle validation and
 independent move-choice checks. It is disabled in ordinary builds.

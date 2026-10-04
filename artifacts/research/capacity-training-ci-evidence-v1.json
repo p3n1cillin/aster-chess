@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "passed": true,
+  "run_id": 37237329964,
+  "head_sha": "8c234a37184f0d8f8604d8440181cff380d6239d",
+  "report_sha256": "925dc2f644c3b8f468f084f6ca1a130106b22f50a8549b5eb3cdabf10aef132b",
+  "url": "https://github.com/p3n1cillin/aster-chess/actions/runs/37237329964",
+  "jobs": [
+    {
+      "name": "engine (windows-latest, default)",
+      "conclusion": "success"
+    },
+    {
+      "name": "engine (windows-latest, iir)",
+      "conclusion": "success"
+    },
+    {
+      "name": "engine (ubuntu-latest, default)",
+      "conclusion": "success"
+    },
+    {
+      "name": "engine (ubuntu-latest, iir)",
+      "conclusion": "success"
+    }
+  ]
+}

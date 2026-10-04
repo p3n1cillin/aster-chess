@@ -65,6 +65,16 @@ The [session record](../artifacts/ratings/session-20261004-deep-turn.json)
 retains the exact **2319 / 2277..2360** local reference. These models and the
 metadata-only rebuilt assembly do not inherit the calibrated binary's rating.
 
+The subsequent [nested capacity comparison](CAPACITY.md) preserves the initial
+function and every batch order between H64 and H128 on identical data/objectives.
+Its **256 audited games** score **28.52%** against classical and **47.27%** against
+H64 (family interval **40.57%..53.57%**). Candidate tactical and playing gates
+fail; no relative gain over H64 is established and neither model is promoted.
+Longer confirmation is skipped with 32 reserved pairs unused. The
+[session record](../artifacts/ratings/session-20261004-capacity.json) retains
+the same exact **2319 / 2277..2360** local reference; there is no new calibration
+or inferred Elo from fit, evaluator timing or these regression scores.
+
 The frozen ordinary **Aster 0.7.4-feature-dev** has a provisional local estimate
 of **2300**, with a **95% opening-family interval of 2265..2335**, on the
 **SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash** scale.

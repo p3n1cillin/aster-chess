@@ -228,6 +228,19 @@ See `docs/DEEP-TURN-PAIRS.md`. Isolate representation/capacity and compatibility
 of static/deep supervision next, including quantized inference and actual
 search cost; do not select an objective by tactical fit alone.
 
+The nested capacity experiment doubles H64 to H128 while preserving the initial
+function on every training row, common batch RNG, data and objectives. H64
+reproduces the prior stronger control byte for byte. Overall held-out fit is
+almost unchanged (131.540 versus 131.555cp); the wider evaluator costs 1.588
+times the control on a frozen warmed legal-operation trace and fails quiet-node
+and endgame tactical thresholds. All **256** declared short games pass audit:
+**28.52%** against classical (family interval **22.27%..35.00%**) and **47.27%**
+against H64 (**40.57%..53.57%**). No relative gain over H64 is established;
+all promotion gates fail and 32 reserved long-control pairs remain unused.
+Neither model is promoted or calibrated. See `docs/CAPACITY.md`. Isolate richer
+feature interactions and compatibility of static/deep targets next, preserving
+initial functions, budgets, fresh playing tests and measured inference cost.
+
 Next, extend feature interactions and the reproducible data pipeline using
 diverse legal self-play positions and scored outcomes or explicitly documented
 teacher labels. Partition by game to avoid train/test leakage; remove duplicate
