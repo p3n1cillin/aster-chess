@@ -1,0 +1,4 @@
+{"training": "control", "hidden": 64, "epochs": 50}
+{"role": "control", "model_sha256": "460736dd293709d72817ba1bee67e3186edabd097c456fc61ad0425d2a6b7725", "training_sha256": "23b3bd9c414971e46ea6b50226ac2d6577e2924dda64533e643893dfae1dcf76", "selected_epoch": 9, "quantized_mae_cp": 131.5398347107438}
+{"training": "candidate", "hidden": 64, "epochs": 50}
+{"role": "candidate", "model_sha256": "41f8728853c368335badf8e29ea03415ab24c492306caecefbf33c8c9c6676a8", "training_sha256": "c739339be9dcd5375deb41a9571e87a8efc7c7c17de5b1254f82eaabd564960c", "selected_epoch": 9, "quantized_mae_cp": 127.71884297520661}

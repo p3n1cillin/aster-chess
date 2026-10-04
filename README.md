@@ -74,11 +74,14 @@ covering every legal defense with independent rule-only verification.
 
 An optional, independent neural evaluator and training pipeline are available.
 Current source also supports experimental turn-aware formats 5/6, squared
-activation formats 7/8 and phase-conditioned formats 9/10;
+activation formats 7/8, phase-conditioned formats 9/10 and geometric relation
+formats 11/12;
 the preserved 0.6.0 package supports formats 1..4. See [phase output](docs/PHASE-OUTPUT.md) for the matched architecture ablation. See
 [turn-aware research](docs/TURN-AWARE.md) for validation and rejected models.
 Squared activation research is documented in
 [squared evaluation experiments](docs/SQUARED-ACTIVATION.md).
+The optional attack/defense feature experiment is documented in
+[relation features](docs/RELATIONS.md).
 Static-label and initialization checks are recorded in
 [label experiments](docs/LABEL-INITIALIZATION.md); direct supervision of
 opposite-turn score differences is documented in [paired training](docs/PAIR-LOSS.md).

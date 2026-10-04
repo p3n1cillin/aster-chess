@@ -1,0 +1,654 @@
+{
+  "created_utc": "2026-10-04T22:30:51.069116+00:00",
+  "plan_sha256": "59dd0ea5f62f96754b2682692affb84789b2a425f07049104759995ceb94fee2",
+  "source_files": [
+    {
+      "path": "relations_plan.py",
+      "sha256": "29049847772008eda5cc8378c01f790c312c9c06e9cec9249841e7d53d003a2d"
+    },
+    {
+      "path": "verify_relations.py",
+      "sha256": "aef6a43acee21148d111e762c842087edac806ef41624b87e6ab1ea8c9e6a72c"
+    },
+    {
+      "path": "scaffold_relations.py",
+      "sha256": "a111340221c8843ee59eef63f08d09d73238bfce1c0b19b12c89051b0b35987d"
+    },
+    {
+      "path": "declare_relations.py",
+      "sha256": "8a2097149be0db8505bc87ac9e1d10e30b6d9dae8fdf891183021de44af36ea2"
+    },
+    {
+      "path": "prepare_relations.py",
+      "sha256": "9fe176a0206609347ce5889e1f5e4e430b3d9e0e1f741dfa644bec5b4a5511a5"
+    },
+    {
+      "path": "prepare_relations_cost.py",
+      "sha256": "1a47e5dd7932ad684d29d5af64b0eab723b1d3c5a6bd63f7fc1b8ed442f761cb"
+    },
+    {
+      "path": "test_relations_initial.py",
+      "sha256": "5500a0381f6822a5d4e644afee8590943687da740c3827a872dd897290238a0a"
+    },
+    {
+      "path": "train_relations.py",
+      "sha256": "0f1036a26360db455c29105e7a3f9c1c46de7d49704a7782d0a004a1fcf0d0bb"
+    },
+    {
+      "path": "train_network.py",
+      "sha256": "28ff6a551d6bf0326b73048cd424dd16d886207a5a96efc5aae006d370c9ac64"
+    },
+    {
+      "path": "neural_format.py",
+      "sha256": "60b8b840bbd218ac5c9a34c0663a2f3e191ff8e9898295890b503e0270ca5179"
+    },
+    {
+      "path": "prepare_relations_openings.py",
+      "sha256": "654421f17492b423d2bf409a05c4334de9ea2ecaaa8a2478a9c5658c797de865"
+    },
+    {
+      "path": "validate_relations_baseline.py",
+      "sha256": "2554eae4298e03441f6d18e6d00fac14c15efd148fa15b9bf1621605930b0ef1"
+    },
+    {
+      "path": "run_relations_cost.py",
+      "sha256": "83b1d734819cf015403dc453e648ce6fa314dd7334db8d3770ce610f3af54fdd"
+    },
+    {
+      "path": "report_relations_fit.py",
+      "sha256": "54d7ceb1867f5b086d4f3290b13c8dc191a3c3e5be56c511c77c31cd2b96b446"
+    },
+    {
+      "path": "check_relations.py",
+      "sha256": "8293c8540912e5701e8b99dde92eabfa393ee832f3b0e090bdd7b5f71aa7d22b"
+    },
+    {
+      "path": "freeze_relations_pipeline.py",
+      "sha256": "5ee325b499dcc44faa9a442ec26ea4302d9a72f7b4de213d5e4e99f747f461c8"
+    },
+    {
+      "path": "run_relations.py",
+      "sha256": "e2c13735bc5824769708a7dfec1c6b094319bd69a1eb6f49ad11e72f6dddb6c3"
+    },
+    {
+      "path": "assess_relations.py",
+      "sha256": "6ca512671a71fec2b3a0bc05b05df8eb7144552baa7d738406e235685318d41b"
+    },
+    {
+      "path": "preserve_relations.py",
+      "sha256": "d4ce04600e180b97d0ccc33a1c89af48d88e2e8ebb4ca73ddfcaec85d989539b"
+    },
+    {
+      "path": "record_relations_session.py",
+      "sha256": "e74e616b9b0920528df63dcc2754b7ebde37ee9ea00083a545e1dd94a08d7d83"
+    },
+    {
+      "path": "audit_relations_match_metadata.py",
+      "sha256": "b61a5ce02d86a3060f614331ca319e6d9d0e0523951d1837ec87f2c66f8196cf"
+    },
+    {
+      "path": "audit_relations_cost.py",
+      "sha256": "371dccfb5b2d739c5fb0762812bc32eb3120c339cc3359fc2f6236a9caa5ad21"
+    },
+    {
+      "path": "report_relations_initial_search.py",
+      "sha256": "95be5a48ca8869a084285100bf624cf2f6f3a177d14cb03d19dbb7ba3467109a"
+    },
+    {
+      "path": "generate_openings.py",
+      "sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746"
+    },
+    {
+      "path": "audit_openings.py",
+      "sha256": "0c97723cf8a0404f9e3681a90f5d9d09dcfc4978721748222ee80a679a6fca5d"
+    },
+    {
+      "path": "verify_network.py",
+      "sha256": "be2ffe96b1a70f2e2ac24d4df640cd1682ab49c161c985a7f3aecd51de50fada"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    },
+    {
+      "path": "tactics.py",
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    },
+    {
+      "path": "compare_search.py",
+      "sha256": "a8162c85b4ea4aae46546ca8a02d4b04c083bf56abb6a28d64f322b2331b6dd9"
+    },
+    {
+      "path": "match.py",
+      "sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8"
+    },
+    {
+      "path": "audit_match.py",
+      "sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6"
+    },
+    {
+      "path": "analyze_rating.py",
+      "sha256": "f6fe53073c006e91760b885adab9803f92cd50fa3c3a7ba6ada90f0a8e5b8d13"
+    },
+    {
+      "path": "run_rating.py",
+      "sha256": "6e8a31adefd0aeb5d51eac2f5672396f4518f779947713f86dac138ff00f661a"
+    },
+    {
+      "path": "uci_client.py",
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "freeze_engine_source.py",
+      "sha256": "db919e19f9b75ade115a3d834ad48cc57e01a6165130ef03a775279f4c89acb7"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "artifacts/benchmarks/relations-rebuild-depth8.json",
+      "sha256": "303ebfcd6bb829c0fcaeb06ffb868732372d68ea5565f46ca14bceef4aa846be"
+    },
+    {
+      "path": "artifacts/data/deep-turn-training-v1-classical.jsonl",
+      "sha256": "a493a35960ba61d25af4fecf491e1f2a4f0de228fe6b0cba5c38a1f170b3894b"
+    },
+    {
+      "path": "artifacts/data/deep-turn-training-v1-classical.jsonl.classical.json",
+      "sha256": "42f271ec918787654e5c121d41540d356b2a1e034332d3d50f28c613ef3089a7"
+    },
+    {
+      "path": "artifacts/publish/relations-cost/Aster.dll",
+      "sha256": "87f10cb38f1bb926e00ef34ebbfb65bff4fdfbb4f886a0e8c6498ca45030110d"
+    },
+    {
+      "path": "artifacts/publish/relations-cost/Aster.pdb",
+      "sha256": "671abe05c254443a96af76d6054d1c8a7cb5063311fe583f4365dcd86370c333"
+    },
+    {
+      "path": "artifacts/publish/relations-cost/Aster.RelationCost.deps.json",
+      "sha256": "a3b1d532a19a3db4105b0c34a0fa7b4861f7ff14df47023d1171e6a379e7a5a6"
+    },
+    {
+      "path": "artifacts/publish/relations-cost/Aster.RelationCost.dll",
+      "sha256": "814570a9dc04963dc6164f5541b3714516a2ad07166ab2214946d03cc18c4064"
+    },
+    {
+      "path": "artifacts/publish/relations-cost/Aster.RelationCost.exe",
+      "sha256": "7971e80c96e2ff48e2a447bb66c0865d7d86b5f926040d93aacf5f7aec2db7e7"
+    },
+    {
+      "path": "artifacts/publish/relations-cost/Aster.RelationCost.pdb",
+      "sha256": "35b13d632016220f0922cbaf454d914b38468bc0ed36b7863c43ec36d134e021"
+    },
+    {
+      "path": "artifacts/publish/relations-cost/Aster.RelationCost.runtimeconfig.json",
+      "sha256": "28329cf08f6505e73806b17558b187c02f0c1c516fe47ebfb7a013d082aaa306"
+    },
+    {
+      "path": "artifacts/publish/relations-dev/Aster.deps.json",
+      "sha256": "846e5fc4a8c7c44657545ea00b93646fff9dc53574fc62eb7bb2c3d7fe4c6a4c"
+    },
+    {
+      "path": "artifacts/publish/relations-dev/Aster.dll",
+      "sha256": "87f10cb38f1bb926e00ef34ebbfb65bff4fdfbb4f886a0e8c6498ca45030110d"
+    },
+    {
+      "path": "artifacts/publish/relations-dev/Aster.pdb",
+      "sha256": "671abe05c254443a96af76d6054d1c8a7cb5063311fe583f4365dcd86370c333"
+    },
+    {
+      "path": "artifacts/publish/relations-dev/Aster.runtimeconfig.json",
+      "sha256": "60e8700cdee9afcc3894f7e9bbb7ac56bb8d7af7561e8ad47323f3b5ebe4c3af"
+    },
+    {
+      "path": "artifacts/research/capacity-experiment-v1-manifest.json",
+      "sha256": "99d6b684c868d6123d823e28b180c8bb3534039e35eb5b4297d91952c187e4db"
+    },
+    {
+      "path": "artifacts/research/deep-turn-split-v1.json",
+      "sha256": "8297c020afa90f89cc2e87b15dd1a911c17501df58cf20c75873cb28e22ddd0e"
+    },
+    {
+      "path": "artifacts/research/deep-turn-training-data-v1.json",
+      "sha256": "8d6ad0c50c62a631e1f02f206d9287a5580037001392f440dd947c9a22714e78"
+    },
+    {
+      "path": "artifacts/research/relations-cost-source-v1/Program.cs",
+      "sha256": "cc6368894b88f7bc319ffc0f3d7a5a408a9b2811821c71cb833b1fccf06b740e"
+    },
+    {
+      "path": "artifacts/research/relations-cost-source-v1/RelationCost.csproj",
+      "sha256": "7a94c633ba1dafc0f9cd716a7492d8e8a532c72af6fd5417a44f64024d4014ef"
+    },
+    {
+      "path": "artifacts/research/relations-cost-trace-v1.json",
+      "sha256": "877cdcf80062c0f2bce27f1c45c87be07f5da5bef4bafb238c30938331317ad1"
+    },
+    {
+      "path": "artifacts/research/relations-initial-v1/candidate.pt",
+      "sha256": "ec8c904a9f86cdef88615e4d4bc874591fbd29869f5c898f58918402cd7b1383"
+    },
+    {
+      "path": "artifacts/research/relations-initial-v1/control.pt",
+      "sha256": "82b9216af89063b4347753482c611baf43162c3e46b0271a7c6e9f83b43e1079"
+    },
+    {
+      "path": "artifacts/research/relations-plan-v1.json",
+      "sha256": "59dd0ea5f62f96754b2682692affb84789b2a425f07049104759995ceb94fee2"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/Aster.sln",
+      "sha256": "0cce33025d086c048a48c3dcd7543ae1338cf5c518b15060b7cd4b0e5c9864a1"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/Directory.Build.props",
+      "sha256": "aae19899039dcffcd68ffa855c683877cd6c4d6813d36bd974024a26b219badb"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/global.json",
+      "sha256": "d8fc1e71d76ffd7f785d4b7abbae953024544b52cf19fc4b8d687b058e594610"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/manifest.json",
+      "sha256": "2184af16733ceb29bf4ffcd11067eaee0609c3c55add858601f1b3fca42b5f9e"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/Attacks.cs",
+      "sha256": "10a2eb8139f9786d5b097d92f3e385a889a24c8940a0d1fade1b1a987a37b9c6"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/Board.cs",
+      "sha256": "af1db55d63700255db50bd2c5b538d15c7ae1558ba3296a21f0e54bf2bfa16d9"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/EndgameProof.cs",
+      "sha256": "5f7657f027792d8137ebd640226ba882f939481ef27f171bb74f1730e289f854"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/Engine.csproj",
+      "sha256": "7cf064b7199806147a2d4c716a36ff3e916002ca7df76c476d511296a72e6052"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/Evaluation.cs",
+      "sha256": "b7c1ad0014eebea5d59c13ba37861616df60db253f906f6b94b4fb88e7d3bbe5"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/KpkBitbase.cs",
+      "sha256": "a13112931282526f774ca2b5ea1e87736f0c21e4b24d1fa9da8ae18560bfcc39"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/MajorMateBitbase.cs",
+      "sha256": "2ff38a71882eb9f8a5a1305745f569bb6849bb44f8d2a2c329ecba9a74617b48"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/MateProof.cs",
+      "sha256": "b2d5810477e8ccdfb4f3c8eb933aa4cbbf67ff4fbf805302bc642f0921f1720a"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/Move.cs",
+      "sha256": "9cee181118dc8dbf01687b7c5210ad81aa07826e70ce7fb9b512b321b69bdc85"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/NeuralNetwork.cs",
+      "sha256": "bf0c622bd16ef289352225f59394fcef44efaaea6f28a22c9b7063b7fc6f6c76"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/Perft.cs",
+      "sha256": "7e679e005a22d3cd3e003f6034495d4e62c8fd5ca79b89822c9a7e78b2fd085e"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/Program.cs",
+      "sha256": "73d98b392af0c32a9d952d32562e733157da683c2f54fd20acaf3f5e31322656"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/Search.cs",
+      "sha256": "f0efbc3320594503c91efe78f38622e5ee3412817af9aebc146cd90d5052c919"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/SearchProfile.cs",
+      "sha256": "60ed1caee10ce09adf20d9542d0eac06fc613a29881f04bd0f15a826109d405c"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/StaticExchange.cs",
+      "sha256": "36208f3889d346dac33deba7ad7f9e20cd67deeb465c910f2355cbde8fd57af9"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/ThreatEvaluation.cs",
+      "sha256": "b956761ca5157dc70faecdd28faa1d45a52cd574cefb9866cd45a11f5df364bd"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/TranspositionTable.cs",
+      "sha256": "6b6a3a5581678ebf8c36640f02e1ed27ee9055ed55f1eaa205ab7d38bbf45001"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/Uci.cs",
+      "sha256": "e7ad48a29a51d81bd8c895e72e1a41d1df058839bf35c9e3638de25e109e485d"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/src/Engine/Zobrist.cs",
+      "sha256": "116806963b5b3a5b9bd10c9b988fffd78ce56f7abfa3a2bf716203d42c687ac2"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/tests/Engine.Tests/Engine.Tests.csproj",
+      "sha256": "731df592e64b335e2d2bb5e1aad2c481926ff8c43284e4a81b888cadaf782639"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-source-v1/tests/Engine.Tests/Program.cs",
+      "sha256": "ca3569c25e4f020741e70c760800bd1e9c7ccefc655cceeb651257bc321ad03f"
+    },
+    {
+      "path": "artifacts/research/relations-runtime-v1.json",
+      "sha256": "e6cba2dd01c95597a4592b7c3419d7e0467ee9ca86f03889b5f8b6d66f78dd1a"
+    },
+    {
+      "path": "artifacts/research/relations-synthetic-v1/synthetic-h16.ann",
+      "sha256": "5b126c956befdab8ba5ff389e21096045b675abfd8308c46a6bdb2b0d5aabc89"
+    },
+    {
+      "path": "artifacts/research/relations-synthetic-v1/synthetic-h256.ann",
+      "sha256": "75b5c530e1ff4e4c88aef6575999bf4c46523ca03ff0e101d2251730e5808bfd"
+    },
+    {
+      "path": "artifacts/research/relations-training-data-v1.json",
+      "sha256": "0e918d38f581524373d3345cb7c12dda7a8ea6e6fa47b1a261a2db6f82e79499"
+    },
+    {
+      "path": "artifacts/research/relations-training-execution-v1.json",
+      "sha256": "a12aecaf25bcd74ee445966bd8fc5046f76e3df10dcfc8fac61dffb26b5ec7df"
+    },
+    {
+      "path": "artifacts/tactics/relations-candidate-endgames-5000nodes.json",
+      "sha256": "9f0c69a9c961277262c2a7502803a506d0ff8360526975b24ffbf467a44f3e39"
+    },
+    {
+      "path": "artifacts/tactics/relations-candidate-tactics-5000nodes.json",
+      "sha256": "c67adc95c2ca645248e5171ed05395e71780342a050b57a95a68895e8db7161d"
+    },
+    {
+      "path": "artifacts/tactics/relations-candidate-tactics-depth8.json",
+      "sha256": "60c2b1493696b74960fa082f0ee29cf4f3a615dce62b3387e7e35dad3cbf8a32"
+    },
+    {
+      "path": "artifacts/tactics/relations-candidate-tactics-quiet-5000nodes.json",
+      "sha256": "773ceb95b316aa4fb0124839b748c84d63188fcecfe6a89b19401c87d536af55"
+    },
+    {
+      "path": "artifacts/tactics/relations-candidate-tactics-quiet-depth8.json",
+      "sha256": "0a5d4b23fdf03a139f7fea575177f587ea03cd0499c123e6631ceb9479c1a43c"
+    },
+    {
+      "path": "artifacts/tactics/relations-control-endgames-5000nodes.json",
+      "sha256": "7aaeed4cb0f521d1702d885667bbadd220b2a00466b0107607f53db88a8f8307"
+    },
+    {
+      "path": "artifacts/tactics/relations-control-tactics-5000nodes.json",
+      "sha256": "74df96a90889132ea6e29d9ac89debda3b9fd75595bcfe2c8ed64ff15862b1a3"
+    },
+    {
+      "path": "artifacts/tactics/relations-control-tactics-depth8.json",
+      "sha256": "b8e24e72a4281fba8e17fb0d1d844debc8f99124c5481dda0f7afbe3a830aed4"
+    },
+    {
+      "path": "artifacts/tactics/relations-control-tactics-quiet-5000nodes.json",
+      "sha256": "77c1b1dde7d74385c0580e80575aa4301ce74aedbe5efa4bfa0c8f527efa0dc0"
+    },
+    {
+      "path": "artifacts/tactics/relations-control-tactics-quiet-depth8.json",
+      "sha256": "699612db9f643002d2e882dbb8b5c78c9f26ce80a94c24dc2074e25827181120"
+    },
+    {
+      "path": "artifacts/validation/relations-baseline-driver-v2.txt",
+      "sha256": "d5153eab94f25a73cd1cf31cb2a1562817648e46b695c0896369480578b9b0db"
+    },
+    {
+      "path": "artifacts/validation/relations-baseline-driver.txt",
+      "sha256": "0049bf41b2b05f9986778a582bb153eaddb825946b59e07be4d8b38213932ace"
+    },
+    {
+      "path": "artifacts/validation/relations-bench7.txt",
+      "sha256": "4df34798a7c7b113cd82b86285147e8ef46ebe4dd43579d55b4fa0f04a1c5c64"
+    },
+    {
+      "path": "artifacts/validation/relations-build.txt",
+      "sha256": "ece90409f89770ee8c1d3d1141e554bedc4ae37bc563db075a3f0c347a8256d2"
+    },
+    {
+      "path": "artifacts/validation/relations-candidate-endgames-5000nodes.txt",
+      "sha256": "ef4e645f8ea67b03b31bbb891a18f192680d3ff359c2bd10e014b1541b2db39b"
+    },
+    {
+      "path": "artifacts/validation/relations-candidate-network.json",
+      "sha256": "ecdca25e83254d47127ebebe716c43ed111204e23e93d1b306b183156e22d99e"
+    },
+    {
+      "path": "artifacts/validation/relations-candidate-network.txt",
+      "sha256": "b2b215042056085eba70cd87333b2156ee1341142c3fe921bd5b7457896aec2d"
+    },
+    {
+      "path": "artifacts/validation/relations-candidate-rules.json",
+      "sha256": "cea9222250d8abc29a31250f5b26e29090205959a448b19e4fd5b4a42d2bf299"
+    },
+    {
+      "path": "artifacts/validation/relations-candidate-rules.txt",
+      "sha256": "39199e9554d4a1efd4b82ccaa36e1a5fdfc4af88053389af0113ef922e0b13d6"
+    },
+    {
+      "path": "artifacts/validation/relations-candidate-tactics-5000nodes.txt",
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/relations-candidate-tactics-depth8.txt",
+      "sha256": "ea91da7afa4f6c815c58e7ec58e599406c1ff35a88e12fdbb14eb4323803620d"
+    },
+    {
+      "path": "artifacts/validation/relations-candidate-tactics-quiet-5000nodes.txt",
+      "sha256": "a5e19ca3bc3d0ffd1a104d318637cb28d84877c2d18051cb06445c310f5bcebd"
+    },
+    {
+      "path": "artifacts/validation/relations-candidate-tactics-quiet-depth8.txt",
+      "sha256": "6337b334be0c058fb1bf16f4a73c3d5db90443d425f7a0e635d6eb5fd21b2611"
+    },
+    {
+      "path": "artifacts/validation/relations-classical-100ms-audit.json",
+      "sha256": "3f8682e384e5d97d5b87fe401b56eb24dbb6b4cfec5216709cf34a7146271057"
+    },
+    {
+      "path": "artifacts/validation/relations-classical-30ms-audit.json",
+      "sha256": "be74a44e5788a975e175d0fbae4e89963f8d79c16e9459b483174f252e421da4"
+    },
+    {
+      "path": "artifacts/validation/relations-control-30ms-audit.json",
+      "sha256": "d1733c66b7809b40fb52da6d7ea85a1d4012538459a1d2423aef8232865506e4"
+    },
+    {
+      "path": "artifacts/validation/relations-control-endgames-5000nodes.txt",
+      "sha256": "ef4e645f8ea67b03b31bbb891a18f192680d3ff359c2bd10e014b1541b2db39b"
+    },
+    {
+      "path": "artifacts/validation/relations-control-network.json",
+      "sha256": "1d0a011e62f5cffa22be4e5b5a17bc421bc00dadf849afef97ce955d4e58d02a"
+    },
+    {
+      "path": "artifacts/validation/relations-control-network.txt",
+      "sha256": "7a906104d82eaa7aee8ff313b9d61fced97d613de4d1ce1046ade9008fb16fbc"
+    },
+    {
+      "path": "artifacts/validation/relations-control-rules.json",
+      "sha256": "a91c3cfa61219a9986c0106e6133994b13a864a4f228d9a0594d13b9a936ab7b"
+    },
+    {
+      "path": "artifacts/validation/relations-control-rules.txt",
+      "sha256": "2076a3498efb3041dbec8b33e43bc287fe3146e57bc847b8ddd53af79c5d3966"
+    },
+    {
+      "path": "artifacts/validation/relations-control-tactics-5000nodes.txt",
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/relations-control-tactics-depth8.txt",
+      "sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "path": "artifacts/validation/relations-control-tactics-quiet-5000nodes.txt",
+      "sha256": "42def545db2a70966cb6bc37906897a006ce19db515c280022a24195ce77c43f"
+    },
+    {
+      "path": "artifacts/validation/relations-control-tactics-quiet-depth8.txt",
+      "sha256": "6337b334be0c058fb1bf16f4a73c3d5db90443d425f7a0e635d6eb5fd21b2611"
+    },
+    {
+      "path": "artifacts/validation/relations-cost-build.txt",
+      "sha256": "8177d63fd60b2bcd2f16658acee88a4cc5cca0e8a5181f00a796df00aae329a0"
+    },
+    {
+      "path": "artifacts/validation/relations-cost-checksum-audit-v1.json",
+      "sha256": "9f9909c604bafe88955c093d710fe1c48cb3260726624caf5db2fba000a683c8"
+    },
+    {
+      "path": "artifacts/validation/relations-cost-driver-summary.txt",
+      "sha256": "e18fc5147b5aefd333e03edfa9e11cf1432e04b8f5f9e8df3d1e42e04f327472"
+    },
+    {
+      "path": "artifacts/validation/relations-cost-driver.txt",
+      "sha256": "30ba1cc08497932348fd85e4c37377d84eafeb67cefa8ee9c51deafd36c15628"
+    },
+    {
+      "path": "artifacts/validation/relations-cost-raw-v1.json",
+      "sha256": "f09885850498005f6f8ac3ed3fea451561a898636f2b5d731ad7ac15e6185307"
+    },
+    {
+      "path": "artifacts/validation/relations-cost-v1.json",
+      "sha256": "7aa2d0a9ab0bb0cac006ea99266dc03fcb8419ec3b6e12070ef230bfa1e41517"
+    },
+    {
+      "path": "artifacts/validation/relations-default-rules.json",
+      "sha256": "b99778e25fa56cf4da83169dcb6c5c2ea8ea45f6c277236df1f41d61b3acc63c"
+    },
+    {
+      "path": "artifacts/validation/relations-default-rules.txt",
+      "sha256": "b859eeb52225e908e6fd188e6d4fa6b51ba047b0016d437f1d93160d8652789d"
+    },
+    {
+      "path": "artifacts/validation/relations-default-tests.txt",
+      "sha256": "b345ad1da298512206696f7e417bd8b2e87b34b24a660f18b96fa2e6a5333854"
+    },
+    {
+      "path": "artifacts/validation/relations-fit-driver.txt",
+      "sha256": "945c3b96bb9367117b10a97c75af928cc73bb4d0c4d0867dfa991b96195185df"
+    },
+    {
+      "path": "artifacts/validation/relations-freeze-runtime.txt",
+      "sha256": "968e7812a1c930920ea56b8efbc1e4c1e4866f2c56777a136eb4037ac096d9d6"
+    },
+    {
+      "path": "artifacts/validation/relations-frozen-default-rules.json",
+      "sha256": "29e85c2d196e496e905be0d8f0ffb995066bafd7816c3a4cb6575969dd9c135a"
+    },
+    {
+      "path": "artifacts/validation/relations-frozen-default-rules.txt",
+      "sha256": "00f749edcabf890f7dd335651b072bef93bb8f12aa683a9068b875ac79dbf4a5"
+    },
+    {
+      "path": "artifacts/validation/relations-geometry-driver.txt",
+      "sha256": "d328ef9d780ad590a43e853b466d002ddc668856e8ab49bf6132b9a039bb7762"
+    },
+    {
+      "path": "artifacts/validation/relations-geometry-v1.json",
+      "sha256": "4d6c4d02d520cb8a37a819083c7088302e668790a7fbcd368572f1cb2905c67d"
+    },
+    {
+      "path": "artifacts/validation/relations-initial-tests-driver.txt",
+      "sha256": "004e230c889735a3e389c68acf49c97ffbccbc67ee75d8e0282d5092426fd127"
+    },
+    {
+      "path": "artifacts/validation/relations-initial-tests-v1.json",
+      "sha256": "9599725a2b0b1a8870e00b5fbb16cb8d05b5533ef93307eb5e623535e423715b"
+    },
+    {
+      "path": "artifacts/validation/relations-openings-driver.txt",
+      "sha256": "25784cb22b92818b429e851137163d6cf271c2f75a4a3ccc7803e63c412357fc"
+    },
+    {
+      "path": "artifacts/validation/relations-parent-audit.json",
+      "sha256": "fd9c25eb18f343969b9aa7535f2e4299c0ba591e7326d3ff2d1874647b09395e"
+    },
+    {
+      "path": "artifacts/validation/relations-preflight-driver.txt",
+      "sha256": "ddf3574393ec601ad514dc422cda5977d355f62699c5d92d1376b0d5704c10bd"
+    },
+    {
+      "path": "artifacts/validation/relations-preflight.json",
+      "sha256": "31f2c4b4c96fd08e8e3ad5867a4e310e4ee1baa48bfc24f1ff5c755eaf301ec5"
+    },
+    {
+      "path": "artifacts/validation/relations-prepare-driver.txt",
+      "sha256": "384d7946143d6de3721cae259e806d6c2c78e29080c071d4d1cb4598a37becf2"
+    },
+    {
+      "path": "artifacts/validation/relations-quantized-heldout-fit-v1.json",
+      "sha256": "cb7409651fb5b1db7941e5a855c1009166fa9e820cd01991dbe9d6a852797842"
+    },
+    {
+      "path": "artifacts/validation/relations-rebuild-comparison.txt",
+      "sha256": "32ef881d246c90db4e0e41d8ec4419bee1ad9468295b03f5004b5b702c73b681"
+    },
+    {
+      "path": "artifacts/validation/relations-synthetic-h16-network.json",
+      "sha256": "deb498bc84a7e6a6507a9393aa94fb63e97f33e0bdcaae160820c4d4d9db20e5"
+    },
+    {
+      "path": "artifacts/validation/relations-synthetic-h16-network.txt",
+      "sha256": "c6eff13fc42cfa1706e0625c800c379078d0b57711fed331d42d72b7c1fab802"
+    },
+    {
+      "path": "artifacts/validation/relations-synthetic-h256-network.json",
+      "sha256": "c72951696fa2f85242ea13c63018afa07047b5d4494787568893967a75200e58"
+    },
+    {
+      "path": "artifacts/validation/relations-synthetic-h256-network.txt",
+      "sha256": "8d02c8d47c3c41ecc6effe9466e023d553afa43e3404fc9a261876d9d73ea0ec"
+    },
+    {
+      "path": "artifacts/validation/relations-training-candidate.txt",
+      "sha256": "527d9d5a16fe62cdb113f536577a6f35eb20ef5dad08975963fb195d9dde0346"
+    },
+    {
+      "path": "artifacts/validation/relations-training-control.txt",
+      "sha256": "ff164d2b31683afe264e09f0c3798b02844f267ec374712a87ed72378b7fb8a5"
+    },
+    {
+      "path": "artifacts/validation/relations-training-driver.txt",
+      "sha256": "a1d3a6cb428dd3856510830649af737def91497d7494c7fe0a0237274f94bd4c"
+    },
+    {
+      "path": "tests/fixtures/relations-classical-100ms-v1.json",
+      "sha256": "2ded031474bc1542069632721b7ad8ef7807f32c1ad0378cc97438e465f64928"
+    },
+    {
+      "path": "tests/fixtures/relations-classical-30ms-v1.json",
+      "sha256": "63b831b035cfbf5ed44ee4a89e7a374e29cef97918eb8d6e8b2a54893db56478"
+    },
+    {
+      "path": "tests/fixtures/relations-control-30ms-v1.json",
+      "sha256": "9bd295a72aeeecafcf1234f923b27fe958065393a51c1b7331a3c7ea408d3f85"
+    },
+    {
+      "path": "tests/fixtures/relations-parent-v1.json",
+      "sha256": "08d8909b4520243fa3b0f850595957b79087c532607d4c375eeb54eefc3a8a46"
+    }
+  ],
+  "engine_sha256": "87f10cb38f1bb926e00ef34ebbfb65bff4fdfbb4f886a0e8c6498ca45030110d",
+  "models": {
+    "control": {
+      "path": "artifacts/training/relations-control-v1/model.ann",
+      "sha256": "460736dd293709d72817ba1bee67e3186edabd097c456fc61ad0425d2a6b7725",
+      "training_sha256": "23b3bd9c414971e46ea6b50226ac2d6577e2924dda64533e643893dfae1dcf76"
+    },
+    "candidate": {
+      "path": "artifacts/training/relations-candidate-v1/model.ann",
+      "sha256": "41f8728853c368335badf8e29ea03415ab24c492306caecefbf33c8c9c6676a8",
+      "training_sha256": "c739339be9dcd5375deb41a9571e87a8efc7c7c17de5b1254f82eaabd564960c"
+    }
+  },
+  "interpretation": "Frozen after both trainings/correctness/tactics/cost checks, before matches. Both128-game short screens finish regardless of tactical failures. No retuning or adaptive extension."
+}

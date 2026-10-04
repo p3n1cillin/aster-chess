@@ -1,0 +1,1489 @@
+{
+  "schema": 1,
+  "arguments": {
+    "data": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\deep-turn-training-v1-classical.jsonl",
+    "output": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\training\\relations-candidate-v1",
+    "hidden": 64,
+    "epochs": 50,
+    "batch_size": 512,
+    "learning_rate": 0.0002,
+    "threads": 4,
+    "seed": 20261014,
+    "validation_games": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\research\\deep-turn-split-v1.json",
+    "initial_checkpoint": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\research\\relations-initial-v1\\candidate.pt",
+    "classical_base": true,
+    "king_context": true,
+    "turn_output": true,
+    "squared_activation": false,
+    "phase_output": true,
+    "attack_features": true,
+    "activation_bias": 0.5,
+    "transformer_std": 0.1,
+    "pair_loss_weight": 1.0,
+    "fresh_pair_loss_weight": 0.0
+  },
+  "torch_version": "2.14.1+cpu",
+  "numpy_version": "2.5.3",
+  "dataset_sha256": "a493a35960ba61d25af4fecf491e1f2a4f0de228fe6b0cba5c38a1f170b3894b",
+  "model_sha256": "41f8728853c368335badf8e29ea03415ab24c492306caecefbf33c8c9c6676a8",
+  "source_files": [
+    {
+      "name": "train_network.py",
+      "sha256": "28ff6a551d6bf0326b73048cd424dd16d886207a5a96efc5aae006d370c9ac64"
+    },
+    {
+      "name": "neural_format.py",
+      "sha256": "60b8b840bbd218ac5c9a34c0663a2f3e191ff8e9898295890b503e0270ca5179"
+    }
+  ],
+  "architecture": "shared 13136->H clipped ReLU with linear term; king_context=True; turn_output=True; squared_activation=False; phase_output=True",
+  "initial_shared_sha256": "87f625648d2210785bf1999e3d32a02552271e847ec318d78a32fce81fc9784e",
+  "initial_rng_sha256": "0c26277be56d3e384d3502d1d143ff6b98dba6224b6889686e2c6d4a2a186d2d",
+  "initial_state_sha256": "9733cf505a59f435125b0a05f9cec2e83705b4df8c4c5fa5db0f7204cc0df60a",
+  "epoch_batch_sha256": [
+    "8a1962ea4eaed3831b0154fea4c70e96176b00501f022f9f23abc80b7faa5280",
+    "b124beb196d9a4def7319d258b7280fe39a00a60d2d86d159ed1607232802061",
+    "51dc1478db9312404ffad6e575365d49d7df5a5e2138875d507ad509e37a1b24",
+    "aff3e2f349638a767f690751b4a47a172122d0635ebfba85ef31c0131488d4f5",
+    "f78094a16a7d83426845bf3a6158a1623323c57228e8f6e96edab5f433eef7f8",
+    "759c37cb62f1bbb8bdee3fcb2131cf3156ab661e6498346f45a16bd8ce60f6f6",
+    "d4304ee3855d969a38d01a3f459687d9b5da14394f3589829c6d5e7d508c80bd",
+    "f3e7bd21c3000294443bf064219462cdcc118696945e88d25aa86682b5885c30",
+    "b7720b842a4522ee04ba5b9df33962764ce78dea0ba1af9a6c6a08287f62d594",
+    "e405411d2a4b326b6d12be3f81ec8e84b8b0467c14f14fe3c908470bbc1a5c90",
+    "7b8e186f514f089100b34f703016b4d9f4e05bdd73fb84e5862031d4c0b1dea0",
+    "2220882220ab89a121322783664a8c5f6607bc4d577c0b4892f81fab4a3e6c89",
+    "4132a915aabdd41ccfa0a6c425b22304781bb6b28fcc06f46e85e15b2af7fcb7",
+    "9af776f0dfc5de4525d693d89b575d68ebb49df1747e1756e75210852f59cb8f",
+    "f44884cff63c137a02e868854bcd990f805fb2b5a96188d93ed71c22368ff4a1",
+    "30e0b998f8b2170e59ebeb8dfd38df4703b3c6630020251c32d761f9827bd30e",
+    "203416475973bf87528fce5fbcef14b60738ba9c8ee3d86aa446222096ead6db",
+    "715d215f744d1ac01fc002b74b19aea6eebe22332f3bc254fc512af5e7e000d3",
+    "30b605766f3fe58394c30a241533390415c5213cdcdc3082301954823218d725",
+    "5c9a9330bf4a8833a8704430cbf75600282ebf3886d09a3cff02cf89cb9726ba",
+    "daf1c473fb3ea98f1519956f307f1ab6d113943223f238c0c3f666a5cb46b090",
+    "d22e98cfce337cb46c6da10a5268808665713c91e83d1b059b34642e09238c2e",
+    "a4cdad29578cf02d3bff12df22ab972afb52ce35a1c3252fe9c890841e95998e",
+    "19c4314812cb97ffaeaa311301d6ce5e5f0cffbae8da036b5eec24740df5d9a8",
+    "320dcf96d9a09f1c40fdf6dd13676b98d33fe8caa2c8194cdb69741bf7fcce90",
+    "a709ebbfc4eb4df62d799f9fecc8933a88c2972dc50a8a8575a0167b04e26246",
+    "68d120a8adc11f62d8ef4837de021d5db29d55d903ce61785aa5af86588dbf95",
+    "ca2d0cbd2fa8d8dc36a4f5300c86c4795cb07331c6ce0cbe2e763c54f5615b58",
+    "ba93920c514ce3d5fee78ec203498401d669a196752caa4ec2971109ce45394a",
+    "5006f5ac0f6c6669705ded67f8f07c3cbbb2fa3d559ad16155e30871ec197c96",
+    "c7e152631b11461a693336df8fbd117d3e4e0475094610fcd7418733fa40f2c3",
+    "80e650dbdb6a0dc1c7040e35fded0a063cf079658061e8c06228ccbea8f7918a",
+    "cb8563d5ef48299f1d75d1e218457ab90a24ac1b541f69f83049909d876ad81d",
+    "04ced5f39a6890eb0d3865cae1c8047783ab2e94c79e8027d8453da6e16fb6e8",
+    "850ea95320568689ed962a16ae801540f163e197ec874ec97a99ba3b54e62028",
+    "f378eca8cbfda2c20b46c1d473655fe3c16f2589a6a92babf61574ba434f006a",
+    "d08efa4b51464e14733d1efa2b44e5b38335042e45fbf713b5cb1886cb144cb4",
+    "bfd983d419012f58def60b5d29c04afec10570ff9ed6c4d68f685681540eb711",
+    "f86166cbaf610280a72aa42718678cf3374166bb9fad0ca9da77e3cee97f4716",
+    "555ae99c2a2691033a304f438f2f4730bac65d0e5564dd521b406a2decc8393c",
+    "d87e5d41f5a692e6efabb5b4d7500b2e343fa99bd68de531d9cb929a812b1f2a",
+    "4839cdc0acd2815d2a3f11b4895facb2f49354562baadd7d95dd838aba99798e",
+    "7eada7616a48a38948feeab5b6f582989983701dc064dc73bc0b1575feaeb150",
+    "0372c3191442c3ff26e52f6bdc7e81b938ef178f18da6df69db5327235408da3",
+    "c9b266859e3e10dbb946cd54b77dd490f38b3e040382a0b04326c38c90851009",
+    "504b9d22dc20c35a5071c08623eb7da3f09b34ce413cbd2ff8ee603af0239a6a",
+    "ab5bf68192d5b9c6698907b91f7e3db8733d74f466f76db97fe02d1467289577",
+    "9e7a17480924435df711c70e0afa2e0f373c6d78b64e49b636529131ea1b63ff",
+    "4f839dd93b4fa0b6ec544920c364b38882002b8abb3fc50ada1bf6041ad4aa5a",
+    "a8b5f12d7b4ecee9893b62e8e903dcffd0155206f1bb3f533e3b011e9802b748"
+  ],
+  "phase_validation": [
+    {
+      "phase_range": [
+        0,
+        8
+      ],
+      "positions": 2900,
+      "quantized_mae_cp": 141.97862068965517
+    },
+    {
+      "phase_range": [
+        9,
+        16
+      ],
+      "positions": 1257,
+      "quantized_mae_cp": 127.96579156722355
+    },
+    {
+      "phase_range": [
+        17,
+        24
+      ],
+      "positions": 1893,
+      "quantized_mae_cp": 105.7094558901215
+    }
+  ],
+  "training_positions": 57776,
+  "validation_positions": 6050,
+  "training_games": 3226,
+  "validation_games": [
+    0,
+    1,
+    2,
+    7,
+    15,
+    20,
+    26,
+    32,
+    36,
+    40,
+    50,
+    72,
+    92,
+    95,
+    114,
+    119,
+    168,
+    171,
+    172,
+    200,
+    204,
+    208,
+    215,
+    218,
+    223,
+    238,
+    239,
+    243,
+    250,
+    263,
+    306,
+    307,
+    311,
+    320,
+    348,
+    352,
+    368,
+    378,
+    394,
+    398,
+    401,
+    403,
+    410,
+    421,
+    428,
+    436,
+    447,
+    469,
+    477,
+    489,
+    501,
+    511,
+    518,
+    531,
+    562,
+    569,
+    600,
+    605,
+    609,
+    622,
+    633,
+    639,
+    641,
+    651,
+    658,
+    673,
+    680,
+    711,
+    712,
+    716,
+    736,
+    739,
+    743,
+    750,
+    772,
+    784,
+    803,
+    851,
+    864,
+    868,
+    872,
+    877,
+    896,
+    903,
+    917,
+    921,
+    924,
+    930,
+    940,
+    953,
+    955,
+    965,
+    976,
+    989,
+    990,
+    1006,
+    1009,
+    1016,
+    1017,
+    1019,
+    1037,
+    1047,
+    1051,
+    1077,
+    1085,
+    1105,
+    1126,
+    1139,
+    1144,
+    1149,
+    1170,
+    1176,
+    1183,
+    1184,
+    1204,
+    1233,
+    1243,
+    1250,
+    1270,
+    1283,
+    1292,
+    1301,
+    1309,
+    1312,
+    1329,
+    1343,
+    1350,
+    1368,
+    1370,
+    1375,
+    1391,
+    1392,
+    1401,
+    1403,
+    1443,
+    1446,
+    1448,
+    1461,
+    1466,
+    1473,
+    1506,
+    1513,
+    1514,
+    1529,
+    1542,
+    1552,
+    1566,
+    1569,
+    1589,
+    1597,
+    1608,
+    1617,
+    1625,
+    1628,
+    1629,
+    1637,
+    1639,
+    1643,
+    1649,
+    1651,
+    1655,
+    1670,
+    1678,
+    1680,
+    1681,
+    1703,
+    1706,
+    1725,
+    1728,
+    1750,
+    1751,
+    1775,
+    1779,
+    1780,
+    1784,
+    1829,
+    1830,
+    1845,
+    1849,
+    1866,
+    1874,
+    1888,
+    1904,
+    1908,
+    1921,
+    1929,
+    1930,
+    1938,
+    1941,
+    1961,
+    1971,
+    1983,
+    1989,
+    1990,
+    1993,
+    2025,
+    2026,
+    2030,
+    2053,
+    2060,
+    2063,
+    2071,
+    2089,
+    2098,
+    2104,
+    2109,
+    2115,
+    2141,
+    2150,
+    2185,
+    2187,
+    2195,
+    2197,
+    2201,
+    2208,
+    2231,
+    2252,
+    2267,
+    2272,
+    2274,
+    2275,
+    2305,
+    2306,
+    2315,
+    2323,
+    2325,
+    2331,
+    2344,
+    2359,
+    2363,
+    2364,
+    2383,
+    2424,
+    2434,
+    2452,
+    2453,
+    2483,
+    2491,
+    2497,
+    2498,
+    2521,
+    2539,
+    2566,
+    2602,
+    2612,
+    2625,
+    2629,
+    2634,
+    2636,
+    2649,
+    2656,
+    2657,
+    2661,
+    2670,
+    2677,
+    2686,
+    2733,
+    2777,
+    2780,
+    2802,
+    2823,
+    2834,
+    2845,
+    2850,
+    2856,
+    2879,
+    2890,
+    2899,
+    2995,
+    100049,
+    100222,
+    100239,
+    100280,
+    100323,
+    100332,
+    100340,
+    100380,
+    100437,
+    100520,
+    100524,
+    100556,
+    100580,
+    100589,
+    100603,
+    100610,
+    100635,
+    100642,
+    100655,
+    100757,
+    100772,
+    100794,
+    100795,
+    100807,
+    100828,
+    100881,
+    100882,
+    100918,
+    100941,
+    100951,
+    100998,
+    101086,
+    101090,
+    101102,
+    101106,
+    101170,
+    101339,
+    101440,
+    101472,
+    101514,
+    101516,
+    101532,
+    101557,
+    101622,
+    101640,
+    101678,
+    101714,
+    101790,
+    101794,
+    101817,
+    101845,
+    101860,
+    101870,
+    102011,
+    102072,
+    102131,
+    102279,
+    102292,
+    102436,
+    102478,
+    102590,
+    102632,
+    102638,
+    102723,
+    102749,
+    102762,
+    102767,
+    102813,
+    102906,
+    102918,
+    102940,
+    102950,
+    103790,
+    103860,
+    103863,
+    104505,
+    104538,
+    104559,
+    104683,
+    104725,
+    105301,
+    105346,
+    105359,
+    105847,
+    106163,
+    106308,
+    106459,
+    106985,
+    107006
+  ],
+  "initial_validation": {
+    "loss": 0.021719595417380333,
+    "mae_cp": 145.27804565429688,
+    "rmse_cp": 200.54385375976562
+  },
+  "selected_validation": {
+    "loss": 0.017436325550079346,
+    "mae_cp": 127.73855590820312,
+    "rmse_cp": 176.0271453857422
+  },
+  "selected_epoch": 9,
+  "epochs": [
+    {
+      "epoch": 1,
+      "loss": 0.020626205950975418,
+      "mae_cp": 141.16554260253906,
+      "rmse_cp": 194.3425750732422,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 44.727420806884766,
+        "predicted_std_cp": 11.832408905029297,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 183.98699951171875,
+        "predicted_std_cp": 4.7674970626831055,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 2,
+      "loss": 0.01966421864926815,
+      "mae_cp": 136.9398193359375,
+      "rmse_cp": 189.48641967773438,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 42.57683563232422,
+        "predicted_std_cp": 14.000393867492676,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 182.57435607910156,
+        "predicted_std_cp": 7.911472797393799,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 3,
+      "loss": 0.018840767443180084,
+      "mae_cp": 133.27960205078125,
+      "rmse_cp": 185.07666015625,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 41.24849319458008,
+        "predicted_std_cp": 19.751205444335938,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 180.25575256347656,
+        "predicted_std_cp": 12.962203979492188,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 4,
+      "loss": 0.018206212669610977,
+      "mae_cp": 130.56240844726562,
+      "rmse_cp": 181.6158447265625,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 39.6862907409668,
+        "predicted_std_cp": 24.097412109375,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 178.2607879638672,
+        "predicted_std_cp": 18.25798225402832,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 5,
+      "loss": 0.01782141625881195,
+      "mae_cp": 129.0439910888672,
+      "rmse_cp": 179.29763793945312,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 39.026039123535156,
+        "predicted_std_cp": 27.749935150146484,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 176.5547332763672,
+        "predicted_std_cp": 22.836992263793945,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 6,
+      "loss": 0.017617616802453995,
+      "mae_cp": 128.32601928710938,
+      "rmse_cp": 177.9005889892578,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 39.06204605102539,
+        "predicted_std_cp": 29.851686477661133,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 174.91664123535156,
+        "predicted_std_cp": 26.596017837524414,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 7,
+      "loss": 0.017494913190603256,
+      "mae_cp": 127.92398071289062,
+      "rmse_cp": 176.87905883789062,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 39.565086364746094,
+        "predicted_std_cp": 31.96746063232422,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 173.74424743652344,
+        "predicted_std_cp": 29.864961624145508,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 8,
+      "loss": 0.017443004995584488,
+      "mae_cp": 127.73171997070312,
+      "rmse_cp": 176.3007049560547,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 39.400474548339844,
+        "predicted_std_cp": 34.73456954956055,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 173.28724670410156,
+        "predicted_std_cp": 33.54704284667969,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 9,
+      "loss": 0.017436325550079346,
+      "mae_cp": 127.73855590820312,
+      "rmse_cp": 176.0271453857422,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 39.5538330078125,
+        "predicted_std_cp": 35.772640228271484,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 173.12847900390625,
+        "predicted_std_cp": 36.012245178222656,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 10,
+      "loss": 0.017473431304097176,
+      "mae_cp": 128.0325469970703,
+      "rmse_cp": 175.84068298339844,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 41.59367752075195,
+        "predicted_std_cp": 37.75110626220703,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 172.19046020507812,
+        "predicted_std_cp": 38.977317810058594,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 11,
+      "loss": 0.017480526119470596,
+      "mae_cp": 127.95896911621094,
+      "rmse_cp": 175.78746032714844,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 41.34257507324219,
+        "predicted_std_cp": 38.5650520324707,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 172.16310119628906,
+        "predicted_std_cp": 41.358299255371094,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 12,
+      "loss": 0.017550846561789513,
+      "mae_cp": 128.3462677001953,
+      "rmse_cp": 175.9468536376953,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 41.84471130371094,
+        "predicted_std_cp": 40.491302490234375,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 172.4738006591797,
+        "predicted_std_cp": 43.668701171875,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 13,
+      "loss": 0.017557859420776367,
+      "mae_cp": 128.36029052734375,
+      "rmse_cp": 175.88018798828125,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 41.98411178588867,
+        "predicted_std_cp": 41.31196594238281,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 172.79884338378906,
+        "predicted_std_cp": 45.35985565185547,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 14,
+      "loss": 0.017622806131839752,
+      "mae_cp": 128.64926147460938,
+      "rmse_cp": 176.05812072753906,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 42.67435073852539,
+        "predicted_std_cp": 43.282691955566406,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 173.0955810546875,
+        "predicted_std_cp": 46.90537643432617,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 15,
+      "loss": 0.01766381971538067,
+      "mae_cp": 128.81272888183594,
+      "rmse_cp": 176.1625518798828,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 43.023746490478516,
+        "predicted_std_cp": 43.40568923950195,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 173.25607299804688,
+        "predicted_std_cp": 48.16810607910156,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 16,
+      "loss": 0.017689960077404976,
+      "mae_cp": 128.8593292236328,
+      "rmse_cp": 176.28294372558594,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 42.65678405761719,
+        "predicted_std_cp": 43.64194107055664,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 174.2684783935547,
+        "predicted_std_cp": 49.27020263671875,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 17,
+      "loss": 0.017788313329219818,
+      "mae_cp": 129.39283752441406,
+      "rmse_cp": 176.53273010253906,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 44.3711051940918,
+        "predicted_std_cp": 44.97083282470703,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 174.298583984375,
+        "predicted_std_cp": 50.16375732421875,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 18,
+      "loss": 0.017817605286836624,
+      "mae_cp": 129.4844207763672,
+      "rmse_cp": 176.67825317382812,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 44.363372802734375,
+        "predicted_std_cp": 44.892879486083984,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 174.8171844482422,
+        "predicted_std_cp": 50.83031463623047,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 19,
+      "loss": 0.01787935569882393,
+      "mae_cp": 129.71987915039062,
+      "rmse_cp": 176.9334716796875,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 44.30547332763672,
+        "predicted_std_cp": 45.469913482666016,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 175.53846740722656,
+        "predicted_std_cp": 51.93114471435547,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 20,
+      "loss": 0.01789681427180767,
+      "mae_cp": 129.7911834716797,
+      "rmse_cp": 176.94027709960938,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 44.736412048339844,
+        "predicted_std_cp": 45.92496871948242,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 176.19070434570312,
+        "predicted_std_cp": 52.76631164550781,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 21,
+      "loss": 0.01795414462685585,
+      "mae_cp": 129.9827880859375,
+      "rmse_cp": 177.2487335205078,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 44.69892501831055,
+        "predicted_std_cp": 46.750396728515625,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 176.81129455566406,
+        "predicted_std_cp": 53.545326232910156,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 22,
+      "loss": 0.017999792471528053,
+      "mae_cp": 130.1917266845703,
+      "rmse_cp": 177.41685485839844,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 45.17789840698242,
+        "predicted_std_cp": 47.11210250854492,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 177.40493774414062,
+        "predicted_std_cp": 54.47658157348633,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 23,
+      "loss": 0.01804102584719658,
+      "mae_cp": 130.34268188476562,
+      "rmse_cp": 177.60545349121094,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 45.537498474121094,
+        "predicted_std_cp": 47.66945266723633,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 177.7445068359375,
+        "predicted_std_cp": 55.16259002685547,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 24,
+      "loss": 0.018102571368217468,
+      "mae_cp": 130.60316467285156,
+      "rmse_cp": 177.879638671875,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 45.8760871887207,
+        "predicted_std_cp": 48.43913269042969,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 178.4421844482422,
+        "predicted_std_cp": 56.25870895385742,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 25,
+      "loss": 0.018135081976652145,
+      "mae_cp": 130.75079345703125,
+      "rmse_cp": 177.9888458251953,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 46.13035202026367,
+        "predicted_std_cp": 48.568206787109375,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 178.47471618652344,
+        "predicted_std_cp": 57.0904541015625,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 26,
+      "loss": 0.018191739916801453,
+      "mae_cp": 130.96060180664062,
+      "rmse_cp": 178.2304229736328,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 46.99644470214844,
+        "predicted_std_cp": 48.7282600402832,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 178.6883544921875,
+        "predicted_std_cp": 57.7713737487793,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 27,
+      "loss": 0.01821894943714142,
+      "mae_cp": 131.06747436523438,
+      "rmse_cp": 178.37550354003906,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 46.959312438964844,
+        "predicted_std_cp": 49.17131423950195,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 179.0969696044922,
+        "predicted_std_cp": 58.82957077026367,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 28,
+      "loss": 0.01829002983868122,
+      "mae_cp": 131.3578643798828,
+      "rmse_cp": 178.7002410888672,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 47.37400817871094,
+        "predicted_std_cp": 50.030975341796875,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 179.19448852539062,
+        "predicted_std_cp": 59.63872146606445,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 29,
+      "loss": 0.018305744975805283,
+      "mae_cp": 131.38729858398438,
+      "rmse_cp": 178.78912353515625,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 47.53045654296875,
+        "predicted_std_cp": 50.77165222167969,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 180.17530822753906,
+        "predicted_std_cp": 60.89507293701172,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 30,
+      "loss": 0.018364261835813522,
+      "mae_cp": 131.7229461669922,
+      "rmse_cp": 179.03672790527344,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 47.90918731689453,
+        "predicted_std_cp": 51.227848052978516,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 180.53244018554688,
+        "predicted_std_cp": 61.340118408203125,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 31,
+      "loss": 0.018409449607133865,
+      "mae_cp": 131.89111328125,
+      "rmse_cp": 179.2509765625,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 48.450897216796875,
+        "predicted_std_cp": 51.08976364135742,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 180.87997436523438,
+        "predicted_std_cp": 61.91717529296875,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 32,
+      "loss": 0.018443861976265907,
+      "mae_cp": 132.05734252929688,
+      "rmse_cp": 179.3687286376953,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 48.78302001953125,
+        "predicted_std_cp": 51.773983001708984,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 180.80873107910156,
+        "predicted_std_cp": 62.68944549560547,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 33,
+      "loss": 0.018486864864826202,
+      "mae_cp": 132.22267150878906,
+      "rmse_cp": 179.6510467529297,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 48.94537353515625,
+        "predicted_std_cp": 52.00187683105469,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 181.40065002441406,
+        "predicted_std_cp": 63.55109405517578,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 34,
+      "loss": 0.018478699028491974,
+      "mae_cp": 132.2411651611328,
+      "rmse_cp": 179.5655975341797,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 49.00276184082031,
+        "predicted_std_cp": 53.0874137878418,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 181.64083862304688,
+        "predicted_std_cp": 64.75927734375,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 35,
+      "loss": 0.018512442708015442,
+      "mae_cp": 132.36447143554688,
+      "rmse_cp": 179.72027587890625,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 49.554779052734375,
+        "predicted_std_cp": 53.28772735595703,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 181.7142333984375,
+        "predicted_std_cp": 65.7723388671875,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 36,
+      "loss": 0.01854241080582142,
+      "mae_cp": 132.38882446289062,
+      "rmse_cp": 179.96302795410156,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 49.943138122558594,
+        "predicted_std_cp": 53.48857498168945,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 182.56947326660156,
+        "predicted_std_cp": 66.3629150390625,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 37,
+      "loss": 0.0186080913990736,
+      "mae_cp": 132.8070831298828,
+      "rmse_cp": 180.20077514648438,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 50.22322463989258,
+        "predicted_std_cp": 54.28562927246094,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 182.66629028320312,
+        "predicted_std_cp": 66.80143737792969,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 38,
+      "loss": 0.01861599273979664,
+      "mae_cp": 132.79425048828125,
+      "rmse_cp": 180.26907348632812,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 50.475650787353516,
+        "predicted_std_cp": 54.52299880981445,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 182.4031219482422,
+        "predicted_std_cp": 67.52217864990234,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 39,
+      "loss": 0.018672585487365723,
+      "mae_cp": 133.11094665527344,
+      "rmse_cp": 180.48260498046875,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 50.779296875,
+        "predicted_std_cp": 55.3102912902832,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 182.7821502685547,
+        "predicted_std_cp": 68.02651977539062,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 40,
+      "loss": 0.018720589578151703,
+      "mae_cp": 133.33009338378906,
+      "rmse_cp": 180.7243194580078,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 51.32372283935547,
+        "predicted_std_cp": 55.75086975097656,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 182.61904907226562,
+        "predicted_std_cp": 68.87178039550781,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 41,
+      "loss": 0.018740950152277946,
+      "mae_cp": 133.41531372070312,
+      "rmse_cp": 180.82177734375,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 51.436424255371094,
+        "predicted_std_cp": 55.622215270996094,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 182.80625915527344,
+        "predicted_std_cp": 69.08328247070312,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 42,
+      "loss": 0.018746254965662956,
+      "mae_cp": 133.48228454589844,
+      "rmse_cp": 180.793701171875,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 51.69526290893555,
+        "predicted_std_cp": 57.055259704589844,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 183.3032684326172,
+        "predicted_std_cp": 70.01441192626953,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 43,
+      "loss": 0.018801532685756683,
+      "mae_cp": 133.75840759277344,
+      "rmse_cp": 181.08123779296875,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 51.959896087646484,
+        "predicted_std_cp": 56.72312545776367,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 182.80587768554688,
+        "predicted_std_cp": 69.9964599609375,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 44,
+      "loss": 0.0188019797205925,
+      "mae_cp": 133.6887969970703,
+      "rmse_cp": 181.13296508789062,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 52.198402404785156,
+        "predicted_std_cp": 56.83279800415039,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 183.49911499023438,
+        "predicted_std_cp": 71.00077056884766,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 45,
+      "loss": 0.01883913390338421,
+      "mae_cp": 133.8742218017578,
+      "rmse_cp": 181.28268432617188,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 52.53498458862305,
+        "predicted_std_cp": 57.584571838378906,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 183.35873413085938,
+        "predicted_std_cp": 71.44549560546875,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 46,
+      "loss": 0.01886732503771782,
+      "mae_cp": 134.04638671875,
+      "rmse_cp": 181.4033966064453,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 52.86973190307617,
+        "predicted_std_cp": 58.33201599121094,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 183.40609741210938,
+        "predicted_std_cp": 72.09286499023438,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 47,
+      "loss": 0.018904630094766617,
+      "mae_cp": 134.30259704589844,
+      "rmse_cp": 181.5774383544922,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 53.25892639160156,
+        "predicted_std_cp": 58.815330505371094,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 183.40359497070312,
+        "predicted_std_cp": 72.62895965576172,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 48,
+      "loss": 0.01890905201435089,
+      "mae_cp": 134.29586791992188,
+      "rmse_cp": 181.614990234375,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 53.433406829833984,
+        "predicted_std_cp": 59.0158576965332,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 183.8467254638672,
+        "predicted_std_cp": 72.92213439941406,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 49,
+      "loss": 0.018940772861242294,
+      "mae_cp": 134.44850158691406,
+      "rmse_cp": 181.75901794433594,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 53.86115264892578,
+        "predicted_std_cp": 59.52007293701172,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 184.26669311523438,
+        "predicted_std_cp": 73.40027618408203,
+        "teacher_std_cp": 283.5871276855469
+      }
+    },
+    {
+      "epoch": 50,
+      "loss": 0.0189913772046566,
+      "mae_cp": 134.69273376464844,
+      "rmse_cp": 182.01075744628906,
+      "pair_validation": {
+        "pairs": 978,
+        "difference_mae_cp": 54.038421630859375,
+        "predicted_std_cp": 60.24708557128906,
+        "teacher_std_cp": 61.492645263671875
+      },
+      "fresh_pair_validation": {
+        "pairs": 180,
+        "difference_mae_cp": 184.44554138183594,
+        "predicted_std_cp": 73.85728454589844,
+        "teacher_std_cp": 283.5871276855469
+      }
+    }
+  ],
+  "quantized_validation_mae_cp": 127.71884297520661,
+  "quantization_mae_cp": 1.250326757251231,
+  "quantization_max_error_cp": 6.20269775390625,
+  "seconds": 102.663,
+  "interpretation": "Teacher fit on held-out games, not playing strength or evidence of surpassing Stockfish.",
+  "initial_activation": {
+    "positions": 1024,
+    "outside_linear_fraction": 0.22735595703125
+  },
+  "initial_checkpoint": {
+    "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\research\\relations-initial-v1\\candidate.pt",
+    "sha256": "ec8c904a9f86cdef88615e4d4bc874591fbd29869f5c898f58918402cd7b1383",
+    "architecture": {
+      "hidden": 64,
+      "classical_base": true,
+      "king_context": true,
+      "turn_output": true,
+      "phase_output": true,
+      "squared_activation": false,
+      "attack_features": true
+    },
+    "scope": "Explicit model initialization and post-initialization batch RNG; no optimizer or trained checkpoint resume."
+  },
+  "selected_activation": {
+    "positions": 1024,
+    "outside_linear_fraction": 0.25086212158203125
+  },
+  "classical_base": true,
+  "classical_score_provenance": {
+    "schema": 1,
+    "output_sha256": "a493a35960ba61d25af4fecf491e1f2a4f0de228fe6b0cba5c38a1f170b3894b",
+    "old_rows": 60000,
+    "fresh_rows": 3826,
+    "old_data": {
+      "path": "artifacts/data/teacher-turn-60k-static-v1-classical.jsonl",
+      "sha256": "bfea2a0226b65879961c7cde551dde3d715a9e59ef9e99adf627e3744f2be162",
+      "classical_provenance": {
+        "input": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\data\\teacher-turn-60k-static-v1.jsonl",
+        "classical_engine": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\publish\\baseline-0.6.0\\Aster.exe",
+        "classical_binary_sha256": "734d538faba6f43d5533981421b59a0a3cccbec60cf1dbc9980391ef58528b14",
+        "positions": 60000,
+        "input_sha256": "46b8e7210c93e9e382366e90963901906407e7c4d748838b3424cef6a63adc8a",
+        "output_sha256": "bfea2a0226b65879961c7cde551dde3d715a9e59ef9e99adf627e3744f2be162"
+      }
+    },
+    "fresh_classical_engine": {
+      "path": "artifacts/publish/mate-proof-dev-v2/Aster.dll",
+      "sha256": "ac907eac90bba15acab80c15d16f195044a8ac2b59a7964f5a065bc0caaa0ae8",
+      "source_manifest": "artifacts/research/mate-proof-source-v2/manifest.json"
+    },
+    "pairs_sha256": "b0abf7601a753d05e49fc8aacad7942e334f4adc912a3c16d3c1ab77e6b3dc45",
+    "data_audit_sha256": "ba63cfe8cb8cdda93dddfc573c18ecd442240c5c05a3b2f532b93f6b5e60eb56",
+    "plan_sha256": "70e19c063e26fe4c5bd289f0807ec3ef01ff0c44f3e6309de9cc4abbcb183c8b"
+  },
+  "king_context": true,
+  "turn_output": true,
+  "squared_activation": false,
+  "phase_output": true,
+  "attack_features": true,
+  "features": 13136,
+  "paired_supervision": {
+    "weight": 1.0,
+    "training_pairs": 9022,
+    "heldout_pairs": 978,
+    "pair_batch_size": 128,
+    "selected_validation": {
+      "pairs": 978,
+      "difference_mae_cp": 39.5538330078125,
+      "predicted_std_cp": 35.772640228271484,
+      "teacher_std_cp": 61.492645263671875
+    },
+    "selection": "Ordinary held-out position loss only; pair diagnostics do not select epochs."
+  },
+  "residual_cap_cp": 250,
+  "fresh_paired_supervision": {
+    "weight": 0.0,
+    "training_pairs": 1733,
+    "heldout_pairs": 180,
+    "pair_batch_size": 128,
+    "selected_validation": {
+      "pairs": 180,
+      "difference_mae_cp": 173.12847900390625,
+      "predicted_std_cp": 36.012245178222656,
+      "teacher_std_cp": 283.5871276855469
+    },
+    "selection": "Same ordinary held-out targets select epochs; fresh pair metrics never select weights.",
+    "batching": "Fresh training stream shuffled/evaluated at zero and nonzero weights; held-out pairs excluded from optimization."
+  },
+  "fixed_split": {
+    "path": "C:\\Users\\lukem\\source\\repos\\WIP\\chess\\artifacts\\research\\deep-turn-split-v1.json",
+    "sha256": "8297c020afa90f89cc2e87b15dd1a911c17501df58cf20c75873cb28e22ddd0e"
+  }
+}

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>Aster.RelationCost</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aster">
+      <HintPath>../../artifacts/publish/relations-dev/Aster.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

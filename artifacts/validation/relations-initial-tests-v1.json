@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "script_sha256": "5500a0381f6822a5d4e644afee8590943687da740c3827a872dd897290238a0a",
+  "checkpoint_validation_cases": 8,
+  "shared_rows_bias_and_four_heads_exact": true,
+  "extra_rows_initially_zero": true,
+  "new_feature_gradient_numeric_checks": [
+    {
+      "feature": 13056,
+      "column": 0,
+      "analytic": 0.008977639854007308,
+      "numeric": 0.008977639846807772
+    },
+    {
+      "feature": 13056,
+      "column": 29,
+      "analytic": -0.0009460688264245389,
+      "numeric": -0.0009460688239759651
+    }
+  ],
+  "all_rows_initial_function_error_cp": 0.0
+}

@@ -8,6 +8,8 @@ public sealed class NeuralNetwork
 {
     public const int FeatureCount = 768, ActivationScale = 256, OutputScale = 256;
     public const int KingBuckets = 16, ContextFeatureCount = FeatureCount * (KingBuckets + 1);
+    public const int AttackCategories = 20, AttackFeatureCount = AttackCategories * 4;
+    public const int RelationFeatureCount = ContextFeatureCount + AttackFeatureCount;
     public int Hidden { get; }
     public string Name { get; }
     public bool ClassicalBase { get; }
@@ -15,19 +17,22 @@ public sealed class NeuralNetwork
     public bool HasTurnOutput { get; }
     public bool HasSquaredActivation { get; }
     public bool HasPhaseOutput { get; }
-    public int Features => HasKingContext ? ContextFeatureCount : FeatureCount;
+    public bool HasAttackFeatures { get; }
+    public int Features => HasAttackFeatures ? RelationFeatureCount : HasKingContext ? ContextFeatureCount : FeatureCount;
     internal readonly int[] Linear, Bias, Weights, Output;
-    public NeuralNetwork(int hidden, short[] linear, short[] bias, short[] weights, short[] output, string name = "unnamed", bool classicalBase = false, bool kingContext = false, bool turnOutput = false, bool squaredActivation = false, bool phaseOutput = false)
+    public NeuralNetwork(int hidden, short[] linear, short[] bias, short[] weights, short[] output, string name = "unnamed", bool classicalBase = false, bool kingContext = false, bool turnOutput = false, bool squaredActivation = false, bool phaseOutput = false, bool attackFeatures = false)
     {
-        int features = kingContext ? ContextFeatureCount : FeatureCount;
+        int features = attackFeatures ? RelationFeatureCount : kingContext ? ContextFeatureCount : FeatureCount;
         if (hidden is < 8 or > 256 || hidden % 8 != 0 || linear.Length != features
             || bias.Length != hidden || weights.Length != features * hidden || output.Length != hidden * (phaseOutput ? 4 : turnOutput ? 2 : 1)
-            || (turnOutput && !kingContext) || (squaredActivation && !turnOutput) || (phaseOutput && (!turnOutput || squaredActivation)))
+            || (turnOutput && !kingContext) || (squaredActivation && !turnOutput) || (phaseOutput && (!turnOutput || squaredActivation))
+            || (attackFeatures && (!kingContext || !turnOutput || !phaseOutput || squaredActivation)))
             throw new ArgumentException("Invalid neural network dimensions.");
         Hidden = hidden; Name = name; ClassicalBase = classicalBase; HasKingContext = kingContext;
         HasTurnOutput = turnOutput;
         HasSquaredActivation = squaredActivation;
         HasPhaseOutput = phaseOutput;
+        HasAttackFeatures = attackFeatures;
         Linear = Array.ConvertAll(linear, x => (int)x); Bias = Array.ConvertAll(bias, x => (int)x);
         Weights = Array.ConvertAll(weights, x => (int)x); Output = Array.ConvertAll(output, x => (int)x);
     }
@@ -38,8 +43,8 @@ public sealed class NeuralNetwork
         if (!reader.ReadBytes(8).SequenceEqual("ASTNN001"u8.ToArray())) throw new FormatException("Invalid Aster neural network magic.");
         int version = reader.ReadInt32(), features = reader.ReadInt32(), hidden = reader.ReadInt32();
         int activationScale = reader.ReadInt32(), outputScale = reader.ReadInt32();
-        bool context = version >= 3, turnOutput = version >= 5, phaseOutput = version is 9 or 10;
-        if (version is < 1 or > 10 || features != (context ? ContextFeatureCount : FeatureCount) || hidden is < 8 or > 256 || hidden % 8 != 0
+        bool context = version >= 3, turnOutput = version >= 5, phaseOutput = version is >= 9 and <= 12, attackFeatures = version is 11 or 12;
+        if (version is < 1 or > 12 || features != (attackFeatures ? RelationFeatureCount : context ? ContextFeatureCount : FeatureCount) || hidden is < 8 or > 256 || hidden % 8 != 0
             || activationScale != ActivationScale || outputScale != OutputScale)
             throw new FormatException("Unsupported Aster neural network format.");
         int outputs = hidden * (phaseOutput ? 4 : turnOutput ? 2 : 1);
@@ -51,12 +56,12 @@ public sealed class NeuralNetwork
             for (int i = 0; i < n; i++) values[i] = reader.ReadInt16();
             return values;
         }
-        return new NeuralNetwork(hidden, Read(features), Read(hidden), Read(features * hidden), Read(outputs), Path.GetFileName(path), version is 2 or 3 or 5 or 7 or 9, context, turnOutput, version is 7 or 8, phaseOutput);
+        return new NeuralNetwork(hidden, Read(features), Read(hidden), Read(features * hidden), Read(outputs), Path.GetFileName(path), version is 2 or 3 or 5 or 7 or 9 or 11, context, turnOutput, version is 7 or 8, phaseOutput, attackFeatures);
     }
     public void Save(string path)
     {
         using var writer = new BinaryWriter(File.Create(path));
-        writer.Write("ASTNN001"u8.ToArray()); writer.Write(HasPhaseOutput ? (ClassicalBase ? 9 : 10) : HasSquaredActivation ? (ClassicalBase ? 7 : 8) : HasTurnOutput ? (ClassicalBase ? 5 : 6) : HasKingContext ? (ClassicalBase ? 3 : 4) : (ClassicalBase ? 2 : 1)); writer.Write(Features); writer.Write(Hidden);
+        writer.Write("ASTNN001"u8.ToArray()); writer.Write(HasAttackFeatures ? (ClassicalBase ? 11 : 12) : HasPhaseOutput ? (ClassicalBase ? 9 : 10) : HasSquaredActivation ? (ClassicalBase ? 7 : 8) : HasTurnOutput ? (ClassicalBase ? 5 : 6) : HasKingContext ? (ClassicalBase ? 3 : 4) : (ClassicalBase ? 2 : 1)); writer.Write(Features); writer.Write(Hidden);
         writer.Write(ActivationScale); writer.Write(OutputScale);
         foreach (int[] values in new[] { Linear, Bias, Weights, Output })
             foreach (int value in values) writer.Write((short)value);
@@ -67,6 +72,50 @@ public sealed class NeuralNetwork
     {
         int oriented = perspective == 0 ? square : square ^ 56;
         return (oriented >> 4) * 4 + (oriented & 7) / 2;
+    }
+
+    // Category order: absolute color, non-king piece kind, undefended/defended.
+    // Geometric control includes pinned pieces and friendly slider blockers.
+    public static void AttackFeatureBins(ReadOnlySpan<ulong> pieces, Span<int> bins)
+    {
+        if (pieces.Length != 12 || bins.Length != AttackCategories) throw new ArgumentException("Invalid relation dimensions.");
+        ulong occupied = 0;
+        foreach (ulong bitboard in pieces) occupied |= bitboard;
+        Span<ulong> control = stackalloc ulong[2];
+        control.Clear();
+        for (int piece = 0; piece < 12; piece++)
+        {
+            int color = piece / 6;
+            ulong remaining = pieces[piece];
+            while (remaining != 0)
+            {
+                int square = Attacks.Pop(ref remaining);
+                control[color] |= (piece % 6) switch
+                {
+                    0 => Attacks.Pawn[color, square],
+                    1 => Attacks.Knight[square],
+                    2 => Attacks.Bishop(square, occupied),
+                    3 => Attacks.Rook(square, occupied),
+                    4 => Attacks.Bishop(square, occupied) | Attacks.Rook(square, occupied),
+                    _ => Attacks.King[square]
+                };
+            }
+        }
+        for (int color = 0; color < 2; color++)
+            for (int kind = 0; kind < 5; kind++)
+            {
+                ulong attacked = pieces[color * 6 + kind] & control[color ^ 1];
+                int category = (color * 5 + kind) * 2;
+                bins[category] = Math.Min(3, BitOperations.PopCount(attacked & ~control[color]));
+                bins[category + 1] = Math.Min(3, BitOperations.PopCount(attacked & control[color]));
+            }
+    }
+    public static int AttackFeature(int category, int bin, int perspective)
+    {
+        if ((uint)category >= AttackCategories || (uint)bin > 3 || (uint)perspective > 1)
+            throw new ArgumentOutOfRangeException(nameof(category));
+        int relativeCategory = ((category / 10) ^ perspective) * 10 + category % 10;
+        return ContextFeatureCount + relativeCategory * 4 + bin;
     }
 
     public int EvaluateFromScratch(Board board)
@@ -87,6 +136,7 @@ public sealed class NeuralAccumulator
     private readonly bool[] listed = new bool[NeuralNetwork.FeatureCount];
     private readonly ulong[]? present;
     private readonly int[] kingBuckets = [-1, -1];
+    private readonly int[] attackBins = new int[NeuralNetwork.AttackCategories];
     private int dirtyCount;
     private readonly int[] cachedScores = new int[2];
     private readonly bool[] cacheValid = new bool[2];
@@ -103,6 +153,7 @@ public sealed class NeuralAccumulator
         Array.Clear(deltas); Array.Clear(listed); dirtyCount = 0; Array.Clear(cacheValid);
         if (present != null) Array.Clear(present);
         Array.Fill(kingBuckets, -1);
+        Array.Fill(attackBins, -1);
         Model.Bias.CopyTo(accumulated, 0); Model.Bias.CopyTo(accumulated, Model.Hidden);
     }
     public void Update(int piece, int square, int sign)
@@ -120,7 +171,11 @@ public sealed class NeuralAccumulator
     {
         if (present != null)
         {
+            bool geometryChanged = Model.HasAttackFeatures && attackBins[0] < 0;
+            if (Model.HasAttackFeatures)
+                for (int i = 0; i < dirtyCount && !geometryChanged; i++) geometryChanged = deltas[dirty[i]] != 0;
             FlushContext();
+            if (geometryChanged) FlushAttacks();
             return;
         }
         for (int i = 0; i < dirtyCount; i++)
@@ -149,8 +204,13 @@ public sealed class NeuralAccumulator
                 for (int piece = 0; piece < 12; piece++)
                 {
                     ulong remaining = present[piece];
-                    while (remaining != 0) ApplyContext(piece, Attacks.Pop(ref remaining), perspective, bucket, 1);
+                while (remaining != 0) ApplyContext(piece, Attacks.Pop(ref remaining), perspective, bucket, 1);
                 }
+                // Resetting a king bucket also resets the shared accumulator.
+                // Restore cached relation embeddings before applying new bins.
+                if (Model.HasAttackFeatures && attackBins[0] >= 0)
+                    for (int category = 0; category < attackBins.Length; category++)
+                        ApplyFeature(NeuralNetwork.AttackFeature(category, attackBins[category], perspective), perspective, 1);
                 kingBuckets[perspective] = bucket; cacheValid[0] = cacheValid[1] = false;
             }
             else
@@ -163,6 +223,23 @@ public sealed class NeuralAccumulator
         }
         for (int i = 0; i < dirtyCount; i++) { deltas[dirty[i]] = 0; listed[dirty[i]] = false; }
         dirtyCount = 0;
+    }
+    private void FlushAttacks()
+    {
+        Span<int> next = stackalloc int[NeuralNetwork.AttackCategories];
+        NeuralNetwork.AttackFeatureBins(present!, next);
+        for (int category = 0; category < next.Length; category++)
+        {
+            if (attackBins[category] == next[category]) continue;
+            for (int perspective = 0; perspective < 2; perspective++)
+            {
+                if (attackBins[category] >= 0)
+                    ApplyFeature(NeuralNetwork.AttackFeature(category, attackBins[category], perspective), perspective, -1);
+                ApplyFeature(NeuralNetwork.AttackFeature(category, next[category], perspective), perspective, 1);
+            }
+            attackBins[category] = next[category];
+            cacheValid[0] = cacheValid[1] = false;
+        }
     }
     private void ApplyContext(int piece, int square, int perspective, int bucket, int sign)
     {

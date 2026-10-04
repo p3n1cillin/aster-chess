@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\lukem\source\repos\WIP\chess\scripts\validate_relations_baseline.py", line 46, in <module>
+    if __name__ == "__main__": main()
+                               ~~~~^^
+  File "C:\Users\lukem\source\repos\WIP\chess\scripts\validate_relations_baseline.py", line 31, in main
+    assert sorted(changed) == ["src/Engine/NeuralNetwork.cs","src/Engine/Uci.cs"],changed
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ['src/Engine/NeuralNetwork.cs', 'src/Engine/Uci.cs', 'tests/Engine.Tests/Program.cs']

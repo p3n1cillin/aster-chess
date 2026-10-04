@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "correctness_passed": true,
+  "candidate_tactics_passed": false,
+  "models": {
+    "control": {
+      "path": "artifacts/training/relations-control-v1/model.ann",
+      "sha256": "460736dd293709d72817ba1bee67e3186edabd097c456fc61ad0425d2a6b7725",
+      "training_sha256": "23b3bd9c414971e46ea6b50226ac2d6577e2924dda64533e643893dfae1dcf76"
+    },
+    "candidate": {
+      "path": "artifacts/training/relations-candidate-v1/model.ann",
+      "sha256": "41f8728853c368335badf8e29ea03415ab24c492306caecefbf33c8c9c6676a8",
+      "training_sha256": "c739339be9dcd5375deb41a9571e87a8efc7c7c17de5b1254f82eaabd564960c"
+    }
+  },
+  "tactics": {
+    "control": {
+      "tactics-depth8": {
+        "solved": 32,
+        "minimum": 32,
+        "passed": true
+      },
+      "tactics-5000nodes": {
+        "solved": 32,
+        "minimum": 32,
+        "passed": true
+      },
+      "tactics-quiet-depth8": {
+        "solved": 30,
+        "minimum": 32,
+        "passed": false
+      },
+      "tactics-quiet-5000nodes": {
+        "solved": 24,
+        "minimum": 25,
+        "passed": false
+      },
+      "endgames-5000nodes": {
+        "solved": 13,
+        "minimum": 13,
+        "passed": true
+      }
+    },
+    "candidate": {
+      "tactics-depth8": {
+        "solved": 31,
+        "minimum": 32,
+        "passed": false
+      },
+      "tactics-5000nodes": {
+        "solved": 32,
+        "minimum": 32,
+        "passed": true
+      },
+      "tactics-quiet-depth8": {
+        "solved": 30,
+        "minimum": 32,
+        "passed": false
+      },
+      "tactics-quiet-5000nodes": {
+        "solved": 25,
+        "minimum": 25,
+        "passed": true
+      },
+      "endgames-5000nodes": {
+        "solved": 13,
+        "minimum": 13,
+        "passed": true
+      }
+    }
+  },
+  "engine": "artifacts/publish/relations-dev/Aster.dll",
+  "engine_sha256": "87f10cb38f1bb926e00ef34ebbfb65bff4fdfbb4f886a0e8c6498ca45030110d",
+  "source_manifest": "artifacts/research/relations-runtime-source-v1/manifest.json",
+  "source_manifest_sha256": "2184af16733ceb29bf4ffcd11067eaee0609c3c55add858601f1b3fca42b5f9e",
+  "rebuilt_default_equivalent_positions": 32,
+  "plan_sha256": "59dd0ea5f62f96754b2682692affb84789b2a425f07049104759995ceb94fee2",
+  "bundle_sha256": "0e918d38f581524373d3345cb7c12dda7a8ea6e6fa47b1a261a2db6f82e79499",
+  "script_sha256": "8293c8540912e5701e8b99dde92eabfa393ee832f3b0e090bdd7b5f71aa7d22b",
+  "interpretation": "Geometric relation feature ablation on a shared runtime; same targets/split/initial function/batches. Failures block longer confirmation, never either declared short screen."
+}

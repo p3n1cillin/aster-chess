@@ -1,0 +1,386 @@
+{
+  "schema": 1,
+  "complete": true,
+  "post_training_diagnostic": true,
+  "bundle_sha256": "0e918d38f581524373d3345cb7c12dda7a8ea6e6fa47b1a261a2db6f82e79499",
+  "reporter_sha256": "54d7ceb1867f5b086d4f3290b13c8dc191a3c3e5be56c511c77c31cd2b96b446",
+  "models": {
+    "control": {
+      "model_sha256": "460736dd293709d72817ba1bee67e3186edabd097c456fc61ad0425d2a6b7725",
+      "training_sha256": "23b3bd9c414971e46ea6b50226ac2d6577e2924dda64533e643893dfae1dcf76"
+    },
+    "candidate": {
+      "model_sha256": "41f8728853c368335badf8e29ea03415ab24c492306caecefbf33c8c9c6676a8",
+      "training_sha256": "c739339be9dcd5375deb41a9571e87a8efc7c7c17de5b1254f82eaabd564960c"
+    }
+  },
+  "ordinary": {
+    "all": {
+      "classical": {
+        "positions": 6050,
+        "mae_cp": 145.13735537190084,
+        "rmse_cp": 200.4640933615612,
+        "mean_error_cp": 8.380330578512396,
+        "prediction_mean_cp": 4.093388429752066,
+        "prediction_std_cp": 273.05022098403003,
+        "target_mean_cp": -4.286942148760331,
+        "target_std_cp": 282.6724997714019,
+        "pearson_correlation": 0.7407290099349746
+      },
+      "control": {
+        "positions": 6050,
+        "mae_cp": 131.5398347107438,
+        "rmse_cp": 181.7476881524503,
+        "mean_error_cp": 3.609586776859504,
+        "prediction_mean_cp": -0.6773553719008264,
+        "prediction_std_cp": 244.52303655192938,
+        "target_mean_cp": -4.286942148760331,
+        "target_std_cp": 282.6724997714019,
+        "pearson_correlation": 0.7716736125331493
+      },
+      "candidate": {
+        "positions": 6050,
+        "mae_cp": 127.71884297520661,
+        "rmse_cp": 176.03446647866932,
+        "mean_error_cp": 2.6153719008264464,
+        "prediction_mean_cp": -1.6715702479338843,
+        "prediction_std_cp": 241.27821614982864,
+        "target_mean_cp": -4.286942148760331,
+        "target_std_cp": 282.6724997714019,
+        "pearson_correlation": 0.785435184961144
+      }
+    },
+    "old": {
+      "classical": {
+        "positions": 5690,
+        "mae_cp": 140.21300527240774,
+        "rmse_cp": 193.15172924327155,
+        "mean_error_cp": 4.103690685413005,
+        "prediction_mean_cp": 0.8065026362038664,
+        "prediction_std_cp": 249.7925226793993,
+        "target_mean_cp": -3.2971880492091388,
+        "target_std_cp": 256.4680607031019,
+        "pearson_correlation": 0.7093039659316691
+      },
+      "control": {
+        "positions": 5690,
+        "mae_cp": 127.1079086115993,
+        "rmse_cp": 174.26286731380503,
+        "mean_error_cp": -0.47557117750439365,
+        "prediction_mean_cp": -3.7727592267135326,
+        "prediction_std_cp": 221.26442648653395,
+        "target_mean_cp": -3.2971880492091388,
+        "target_std_cp": 256.4680607031019,
+        "pearson_correlation": 0.743353020618161
+      },
+      "candidate": {
+        "positions": 5690,
+        "mae_cp": 123.80158172231985,
+        "rmse_cp": 169.339121177995,
+        "mean_error_cp": -0.7186291739894551,
+        "prediction_mean_cp": -4.015817223198594,
+        "prediction_std_cp": 216.05606355044893,
+        "target_mean_cp": -3.2971880492091388,
+        "target_std_cp": 256.4680607031019,
+        "pearson_correlation": 0.7559883601368619
+      }
+    },
+    "fresh": {
+      "classical": {
+        "positions": 360,
+        "mae_cp": 222.96944444444443,
+        "rmse_cp": 292.7087052192181,
+        "mean_error_cp": 75.975,
+        "prediction_mean_cp": 56.044444444444444,
+        "prediction_std_cp": 513.6965903269947,
+        "target_mean_cp": -19.930555555555557,
+        "target_std_cp": 550.4020935842392,
+        "pearson_correlation": 0.8610755804511275
+      },
+      "control": {
+        "positions": 360,
+        "mae_cp": 201.5888888888889,
+        "rmse_cp": 274.13298678642167,
+        "mean_error_cp": 68.17777777777778,
+        "prediction_mean_cp": 48.24722222222222,
+        "prediction_std_cp": 477.99271553381965,
+        "target_mean_cp": -19.930555555555557,
+        "target_std_cp": 550.4020935842392,
+        "pearson_correlation": 0.8759777725146872
+      },
+      "candidate": {
+        "positions": 360,
+        "mae_cp": 189.63333333333333,
+        "rmse_cp": 259.87848656204267,
+        "mean_error_cp": 55.31111111111111,
+        "prediction_mean_cp": 35.38055555555555,
+        "prediction_std_cp": 488.94972152305104,
+        "target_mean_cp": -19.930555555555557,
+        "target_std_cp": 550.4020935842392,
+        "pearson_correlation": 0.8872225188026779
+      }
+    },
+    "fresh_white": {
+      "classical": {
+        "positions": 180,
+        "mae_cp": 192.15,
+        "rmse_cp": 240.29684188982222,
+        "mean_error_cp": -8.63888888888889,
+        "prediction_mean_cp": 68.04444444444445,
+        "prediction_std_cp": 513.5564106440307,
+        "target_mean_cp": 76.68333333333334,
+        "target_std_cp": 529.4110928926384,
+        "pearson_correlation": 0.8944092039982579
+      },
+      "control": {
+        "positions": 180,
+        "mae_cp": 171.65555555555557,
+        "rmse_cp": 225.33417159607393,
+        "mean_error_cp": -2.1444444444444444,
+        "prediction_mean_cp": 74.53888888888889,
+        "prediction_std_cp": 477.3674378399479,
+        "target_mean_cp": 76.68333333333334,
+        "target_std_cp": 529.4110928926384,
+        "pearson_correlation": 0.9049112449593202
+      },
+      "candidate": {
+        "positions": 180,
+        "mae_cp": 164.58333333333334,
+        "rmse_cp": 215.80805514777865,
+        "mean_error_cp": -11.994444444444444,
+        "prediction_mean_cp": 64.68888888888888,
+        "prediction_std_cp": 488.5371393693727,
+        "target_mean_cp": 76.68333333333334,
+        "target_std_cp": 529.4110928926384,
+        "pearson_correlation": 0.9134722154937434
+      }
+    },
+    "fresh_black": {
+      "classical": {
+        "positions": 180,
+        "mae_cp": 253.7888888888889,
+        "rmse_cp": 337.06705564323545,
+        "mean_error_cp": 160.5888888888889,
+        "prediction_mean_cp": 44.044444444444444,
+        "prediction_std_cp": 513.5564106440307,
+        "target_mean_cp": -116.54444444444445,
+        "target_std_cp": 554.0219642880419,
+        "pearson_correlation": 0.848538795446667
+      },
+      "control": {
+        "positions": 180,
+        "mae_cp": 231.5222222222222,
+        "rmse_cp": 315.47155180776605,
+        "mean_error_cp": 138.5,
+        "prediction_mean_cp": 21.955555555555556,
+        "prediction_std_cp": 477.17072209502896,
+        "target_mean_cp": -116.54444444444445,
+        "target_std_cp": 554.0219642880419,
+        "pearson_correlation": 0.8592202398463322
+      },
+      "candidate": {
+        "positions": 180,
+        "mae_cp": 214.68333333333334,
+        "rmse_cp": 297.49040133908335,
+        "mean_error_cp": 122.61666666666666,
+        "prediction_mean_cp": 6.072222222222222,
+        "prediction_std_cp": 487.6034936361437,
+        "target_mean_cp": -116.54444444444445,
+        "target_std_cp": 554.0219642880419,
+        "pearson_correlation": 0.8721894198418
+      }
+    },
+    "phase_0_8": {
+      "classical": {
+        "positions": 2900,
+        "mae_cp": 164.6455172413793,
+        "rmse_cp": 218.79506708175654,
+        "mean_error_cp": 21.392413793103447,
+        "prediction_mean_cp": 12.885172413793104,
+        "prediction_std_cp": 327.1024614137003,
+        "target_mean_cp": -8.507241379310345,
+        "target_std_cp": 331.0893601889391,
+        "pearson_correlation": 0.7811741120204285
+      },
+      "control": {
+        "positions": 2900,
+        "mae_cp": 145.10689655172413,
+        "rmse_cp": 193.42598691435725,
+        "mean_error_cp": 8.821379310344827,
+        "prediction_mean_cp": 0.31413793103448273,
+        "prediction_std_cp": 293.1942881907919,
+        "target_mean_cp": -8.507241379310345,
+        "target_std_cp": 331.0893601889391,
+        "pearson_correlation": 0.8150898249050058
+      },
+      "candidate": {
+        "positions": 2900,
+        "mae_cp": 141.97862068965517,
+        "rmse_cp": 188.69129504984116,
+        "mean_error_cp": 6.7331034482758625,
+        "prediction_mean_cp": -1.7741379310344827,
+        "prediction_std_cp": 291.6315761842416,
+        "target_mean_cp": -8.507241379310345,
+        "target_std_cp": 331.0893601889391,
+        "pearson_correlation": 0.8239254215329305
+      }
+    },
+    "phase_9_16": {
+      "classical": {
+        "positions": 1257,
+        "mae_cp": 141.1145584725537,
+        "rmse_cp": 204.04401345593953,
+        "mean_error_cp": -4.866348448687351,
+        "prediction_mean_cp": 7.310262529832936,
+        "prediction_std_cp": 248.557603499569,
+        "target_mean_cp": 12.176610978520287,
+        "target_std_cp": 265.0728375791183,
+        "pearson_correlation": 0.68629445443593
+      },
+      "control": {
+        "positions": 1257,
+        "mae_cp": 133.39061256961017,
+        "rmse_cp": 188.6441215998015,
+        "mean_error_cp": -5.159904534606206,
+        "prediction_mean_cp": 7.016706443914081,
+        "prediction_std_cp": 221.97755992781634,
+        "target_mean_cp": 12.176610978520287,
+        "target_std_cp": 265.0728375791183,
+        "pearson_correlation": 0.7136076643144427
+      },
+      "candidate": {
+        "positions": 1257,
+        "mae_cp": 127.96579156722355,
+        "rmse_cp": 180.02535620928964,
+        "mean_error_cp": -6.0230708035003975,
+        "prediction_mean_cp": 6.153540175019889,
+        "prediction_std_cp": 213.82304330415144,
+        "target_mean_cp": 12.176610978520287,
+        "target_std_cp": 265.0728375791183,
+        "pearson_correlation": 0.7375881932291873
+      }
+    },
+    "phase_17_24": {
+      "classical": {
+        "positions": 1893,
+        "mae_cp": 117.92287374537771,
+        "rmse_cp": 165.6819393249885,
+        "mean_error_cp": -2.7575277337559427,
+        "prediction_mean_cp": -11.51135763338616,
+        "prediction_std_cp": 181.58951725373703,
+        "target_mean_cp": -8.753829899630217,
+        "target_std_cp": 201.3788644820527,
+        "pearson_correlation": 0.6301265083242118
+      },
+      "control": {
+        "positions": 1893,
+        "mae_cp": 109.52667723190703,
+        "rmse_cp": 156.9201498819885,
+        "mean_error_cp": 1.4484944532488113,
+        "prediction_mean_cp": -7.305335446381405,
+        "prediction_std_cp": 163.0863147936065,
+        "target_mean_cp": -8.753829899630217,
+        "target_std_cp": 201.3788644820527,
+        "pearson_correlation": 0.6474724525119825
+      },
+      "candidate": {
+        "positions": 1893,
+        "mae_cp": 105.7094558901215,
+        "rmse_cp": 151.5671924938404,
+        "mean_error_cp": 2.0433174854727945,
+        "prediction_mean_cp": -6.710512414157422,
+        "prediction_std_cp": 159.17829040311761,
+        "target_mean_cp": -8.753829899630217,
+        "target_std_cp": 201.3788644820527,
+        "pearson_correlation": 0.6695140309321568
+      }
+    }
+  },
+  "paired_differences": {
+    "old": {
+      "pairs": 978,
+      "negative_teacher_differences": 63,
+      "optimistic_independent_cap_floor_mae_cp": 0.0,
+      "models": {
+        "classical": {
+          "positions": 978,
+          "mae_cp": 50.24642126789366,
+          "rmse_cp": 73.07627608731417,
+          "mean_error_cp": -39.48159509202454,
+          "prediction_mean_cp": 24.0,
+          "prediction_std_cp": 0.0,
+          "target_mean_cp": 63.48159509202454,
+          "target_std_cp": 61.49264814413825,
+          "pearson_correlation": null
+        },
+        "control": {
+          "positions": 978,
+          "mae_cp": 40.96830265848671,
+          "rmse_cp": 56.55054564439619,
+          "mean_error_cp": -2.3997955010224947,
+          "prediction_mean_cp": 61.081799591002046,
+          "prediction_std_cp": 29.691760991731396,
+          "target_mean_cp": 63.48159509202454,
+          "target_std_cp": 61.49264814413825,
+          "pearson_correlation": 0.40276073641175425
+        },
+        "candidate": {
+          "positions": 978,
+          "mae_cp": 39.40081799591002,
+          "rmse_cp": 54.708149256687754,
+          "mean_error_cp": -1.965235173824131,
+          "prediction_mean_cp": 61.51635991820041,
+          "prediction_std_cp": 35.641481058253994,
+          "target_mean_cp": 63.48159509202454,
+          "target_std_cp": 61.49264814413825,
+          "pearson_correlation": 0.47053698109880526
+        }
+      }
+    },
+    "fresh": {
+      "pairs": 180,
+      "negative_teacher_differences": 26,
+      "optimistic_independent_cap_floor_mae_cp": 34.93888888888889,
+      "models": {
+        "classical": {
+          "positions": 180,
+          "mae_cp": 189.59444444444443,
+          "rmse_cp": 330.2418726395011,
+          "mean_error_cp": -169.2277777777778,
+          "prediction_mean_cp": 24.0,
+          "prediction_std_cp": 0.0,
+          "target_mean_cp": 193.2277777777778,
+          "target_std_cp": 283.58711831259103,
+          "pearson_correlation": null
+        },
+        "control": {
+          "positions": 180,
+          "mae_cp": 179.62222222222223,
+          "rmse_cp": 312.74449990722815,
+          "mean_error_cp": -140.64444444444445,
+          "prediction_mean_cp": 52.583333333333336,
+          "prediction_std_cp": 26.042459987916317,
+          "target_mean_cp": 193.2277777777778,
+          "target_std_cp": 283.58711831259103,
+          "pearson_correlation": 0.20795352625451508
+        },
+        "candidate": {
+          "positions": 180,
+          "mae_cp": 173.22222222222223,
+          "rmse_cp": 299.8595411929466,
+          "mean_error_cp": -134.61111111111111,
+          "prediction_mean_cp": 58.61666666666667,
+          "prediction_std_cp": 35.921252607459124,
+          "target_mean_cp": 193.2277777777778,
+          "target_std_cp": 283.58711831259103,
+          "pearson_correlation": 0.48672755225018594
+        }
+      }
+    }
+  },
+  "clipped_fraction": {
+    "control": 0.005454545454545455,
+    "candidate": 0.011900826446280991
+  },
+  "interpretation": "Shared held-out quantized CP fit. Pair difference is White-turn minus Black-turn White-relative score, not an observed game outcome or proof of zugzwang. Optimistic cap bound assumes independent perfect per-position corrections; not a realizable model. No selection, retuning, gate changes or strength inference."
+}

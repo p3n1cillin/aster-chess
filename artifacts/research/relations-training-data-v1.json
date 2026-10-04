@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "complete": true,
+  "plan_sha256": "59dd0ea5f62f96754b2682692affb84789b2a425f07049104759995ceb94fee2",
+  "preparer_sha256": "9fe176a0206609347ce5889e1f5e4e430b3d9e0e1f741dfa644bec5b4a5511a5",
+  "data": "artifacts/data/deep-turn-training-v1-classical.jsonl",
+  "data_sha256": "a493a35960ba61d25af4fecf491e1f2a4f0de228fe6b0cba5c38a1f170b3894b",
+  "split_path": "artifacts/research/deep-turn-split-v1.json",
+  "split_sha256": "8297c020afa90f89cc2e87b15dd1a911c17501df58cf20c75873cb28e22ddd0e",
+  "classical_provenance_sha256": "42f271ec918787654e5c121d41540d356b2a1e034332d3d50f28c613ef3089a7",
+  "positions": 63826,
+  "initial_function_max_error_cp": 0.0,
+  "common_training_rng_sha256": "0c26277be56d3e384d3502d1d143ff6b98dba6224b6889686e2c6d4a2a186d2d",
+  "outputs": {
+    "control": {
+      "initial_checkpoint": "artifacts/research/relations-initial-v1/control.pt",
+      "sha256": "82b9216af89063b4347753482c611baf43162c3e46b0271a7c6e9f83b43e1079",
+      "initial_state_sha256": "3929d12930a807e34c621872f229067227422a45213b107f9fc44b051382de5e",
+      "output": "artifacts/training/relations-control-v1"
+    },
+    "candidate": {
+      "initial_checkpoint": "artifacts/research/relations-initial-v1/candidate.pt",
+      "sha256": "ec8c904a9f86cdef88615e4d4bc874591fbd29869f5c898f58918402cd7b1383",
+      "initial_state_sha256": "9733cf505a59f435125b0a05f9cec2e83705b4df8c4c5fa5db0f7204cc0df60a",
+      "output": "artifacts/training/relations-candidate-v1"
+    }
+  }
+}

@@ -15,7 +15,7 @@ import numpy as np
 import torch
 from torch import nn
 
-from neural_format import FEATURES, CONTEXT_FEATURES, QuantizedModel, feature_indices, material_phase, save_model
+from neural_format import FEATURES, CONTEXT_FEATURES, RELATION_FEATURES, QuantizedModel, feature_indices, material_phase, save_model
 
 
 def initial_linear() -> torch.Tensor:
@@ -34,11 +34,15 @@ def initial_linear() -> torch.Tensor:
 
 
 class PositionNetwork(nn.Module):
-    def __init__(self, hidden: int, classical_base: bool = False, king_context: bool = False, activation_bias: float = .5, turn_output: bool = False, squared_activation: bool = False, transformer_std: float = .02, phase_output: bool = False):
+    def __init__(self, hidden: int, classical_base: bool = False, king_context: bool = False, activation_bias: float = .5, turn_output: bool = False, squared_activation: bool = False, transformer_std: float = .02, phase_output: bool = False, attack_features: bool = False):
         super().__init__()
         if phase_output and (not turn_output or not king_context or squared_activation):
             raise ValueError("Phase output requires clipped turn-aware king-context features")
-        self.features = CONTEXT_FEATURES if king_context else FEATURES
+        if attack_features and (not phase_output or not turn_output or not king_context or squared_activation):
+            raise ValueError("Relation features require clipped phase/turn/king-context output")
+        self.features = RELATION_FEATURES if attack_features else CONTEXT_FEATURES if king_context else FEATURES
+        self.king_context = king_context
+        self.attack_features = attack_features
         self.linear = nn.Embedding(self.features + 1, 1, padding_idx=self.features)
         self.transformer = nn.Embedding(self.features + 1, hidden, padding_idx=self.features)
         self.bias = nn.Parameter(torch.full((hidden,), activation_bias))
@@ -146,8 +150,9 @@ def load_initial_checkpoint(model: PositionNetwork, path: str) -> dict:
     checksum = hashlib.sha256(source.read_bytes()).hexdigest()
     checkpoint = torch.load(source,map_location="cpu",weights_only=True)
     architecture = {"hidden":model.bias.numel(),"classical_base":model.classical_base,
-        "king_context":model.features == CONTEXT_FEATURES,"turn_output":model.turn_output,
+        "king_context":model.king_context,"turn_output":model.turn_output,
         "phase_output":model.phase_output,"squared_activation":model.squared_activation}
+    if model.attack_features: architecture["attack_features"] = True
     if checkpoint.get("schema") != 1 or checkpoint.get("kind") != "aster_initial_state" or checkpoint.get("architecture") != architecture:
         raise ValueError("Initial checkpoint architecture mismatch")
     state = checkpoint.get("state_dict",{})
@@ -187,6 +192,7 @@ def main() -> None:
     parser.add_argument("--turn-output", action="store_true", help="Learn separate moving/opponent perspective output weights; requires king context")
     parser.add_argument("--squared-activation", action="store_true", help="Square clipped hidden values; requires turn output")
     parser.add_argument("--phase-output", action="store_true", help="Interpolate separate middlegame/endgame outputs; requires clipped turn-aware king context")
+    parser.add_argument("--attack-features", action="store_true", help="Add geometric attacked-piece count bins; requires clipped phase/turn/king context")
     parser.add_argument("--activation-bias", type=float, default=.5, help="Initial clipped-ReLU bias; zero starts at its nonlinear boundary")
     parser.add_argument("--transformer-std", type=float, default=.02, help="Initial ordinary feature weight standard deviation")
     parser.add_argument("--pair-loss-weight", type=float, default=0, help="Additional supervision on marked white-turn minus black-turn label differences")
@@ -204,6 +210,8 @@ def main() -> None:
         parser.error("Squared activation requires --turn-output")
     if args.phase_output and (not args.turn_output or args.squared_activation):
         parser.error("Phase output requires --turn-output and clipped activation")
+    if args.attack_features and (not args.phase_output or not args.turn_output or not args.king_context or args.squared_activation):
+        parser.error("Relation features require clipped --phase-output --turn-output --king-context")
     if not np.isfinite(args.pair_loss_weight) or not 0 <= args.pair_loss_weight <= 16:
         parser.error("Invalid pair loss weight")
     if args.pair_loss_weight and not args.turn_output:
@@ -231,8 +239,8 @@ def main() -> None:
     rows = [json.loads(line) for line in pathlib.Path(args.data).read_text(encoding="utf-8").splitlines() if line.strip()]
     if not rows:
         raise ValueError("Empty training dataset")
-    features = CONTEXT_FEATURES if args.king_context else FEATURES
-    max_active = 64 if args.king_context else 32
+    features = RELATION_FEATURES if args.attack_features else CONTEXT_FEATURES if args.king_context else FEATURES
+    max_active = 84 if args.attack_features else 64 if args.king_context else 32
     white = torch.full((len(rows), max_active), features, dtype=torch.long)
     black = torch.full_like(white, features)
     target = torch.tensor([row["score_white_cp"] / 100 for row in rows], dtype=torch.float32)
@@ -261,7 +269,7 @@ def main() -> None:
             raise ValueError("Duplicate position in dataset; deduplicate before splitting")
         canonical.add(key)
         phase[i] = material_phase(board)
-        fw, fb = feature_indices(board, chess.WHITE, args.king_context), feature_indices(board, chess.BLACK, args.king_context)
+        fw, fb = feature_indices(board, chess.WHITE, args.king_context, args.attack_features), feature_indices(board, chess.BLACK, args.king_context, args.attack_features)
         if len(fw) > max_active:
             raise ValueError("Training position has more than 32 pieces")
         white[i, :len(fw)] = torch.tensor(fw); black[i, :len(fb)] = torch.tensor(fb)
@@ -283,7 +291,7 @@ def main() -> None:
     for pairs in (pair_training, pair_validation, fresh_training, fresh_validation):
         if len(pairs) and (not torch.equal(white[pairs[:, 0]], white[pairs[:, 1]]) or not torch.equal(black[pairs[:, 0]], black[pairs[:, 1]])):
             raise ValueError("Turn-pair features differ")
-    model = PositionNetwork(args.hidden, args.classical_base, args.king_context, args.activation_bias, args.turn_output, args.squared_activation, args.transformer_std, args.phase_output)
+    model = PositionNetwork(args.hidden, args.classical_base, args.king_context, args.activation_bias, args.turn_output, args.squared_activation, args.transformer_std, args.phase_output, args.attack_features)
     initial_checkpoint = load_initial_checkpoint(model,args.initial_checkpoint) if args.initial_checkpoint else None
     initial_shared = hashlib.sha256()
     for tensor in (model.linear.weight, model.transformer.weight, model.bias, model.output[:args.hidden * (2 if args.turn_output else 1)]):
@@ -383,7 +391,7 @@ def main() -> None:
     torch.save({"schema": 1, "hidden": args.hidden, "state_dict": model.state_dict(), "arguments": vars(args)}, output / "checkpoint.pt")
     with torch.no_grad():
         save_model(output / "model.ann", model.linear.weight[:features, 0].numpy(), model.bias.numpy(),
-                   model.transformer.weight[:features].numpy(), model.output.numpy(), args.classical_base, args.king_context, args.turn_output, args.squared_activation, args.phase_output)
+                   model.transformer.weight[:features].numpy(), model.output.numpy(), args.classical_base, args.king_context, args.turn_output, args.squared_activation, args.phase_output, args.attack_features)
         float_predictions = model(white[validation], black[validation], tempo[validation], turn[validation], phase[validation]).numpy() * 100
     quantized = QuantizedModel(output / "model.ann")
     quantized_predictions = []
@@ -429,6 +437,7 @@ def main() -> None:
     report["turn_output"] = args.turn_output
     report["squared_activation"] = args.squared_activation
     report["phase_output"] = args.phase_output
+    report["attack_features"] = args.attack_features
     report["features"] = features
     report["paired_supervision"] = {"weight": args.pair_loss_weight, "training_pairs": len(pair_training),
         "heldout_pairs": len(pair_validation), "pair_batch_size": max(1, args.batch_size // 4),

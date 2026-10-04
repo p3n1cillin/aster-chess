@@ -46,15 +46,15 @@ All integers are little-endian. The payload is exactly:
 | Field | Representation |
 | --- | --- |
 | Magic | 8 bytes, `ASTNN001` |
-| Version | int32, 1..8 |
-| Features | int32, 768 for v1/v2; 13,056 for v3..v8 |
+| Version | int32, 1..12 |
+| Features | int32, 768 for v1/v2; 13,056 for v3..v10; 13,136 for v11/v12 |
 | Hidden width | int32, multiple of 8 in 8..256 |
 | Activation scale | int32, 256 |
 | Output scale | int32, 256 |
 | Linear weights | Features int16, centipawns |
 | Hidden bias | H int16, scale 256 |
 | Feature weights | Features × H int16, feature-major, scale 256 |
-| Output weights | H int16 for v1..v4; 2H int16 for v5..v8, centipawns × 256 |
+| Output weights | H int16 for v1..v4; 2H for v5..v8; 4H for v9..v12, centipawns × 256 |
 
 For version 1, white score is `(linearWhite - linearBlack) / 2` plus
 `sum((clip(accWhite) - clip(accBlack)) * output) / 65536`. Signed divisions

@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "status": "complete",
+  "started_utc": "2026-10-04T22:26:07.597568+00:00",
+  "plan_sha256": "59dd0ea5f62f96754b2682692affb84789b2a425f07049104759995ceb94fee2",
+  "bundle_sha256": "0e918d38f581524373d3345cb7c12dda7a8ea6e6fa47b1a261a2db6f82e79499",
+  "scripts": {
+    "train_network.py": "28ff6a551d6bf0326b73048cd424dd16d886207a5a96efc5aae006d370c9ac64",
+    "neural_format.py": "60b8b840bbd218ac5c9a34c0663a2f3e191ff8e9898295890b503e0270ca5179",
+    "train_relations.py": "0f1036a26360db455c29105e7a3f9c1c46de7d49704a7782d0a004a1fcf0d0bb"
+  },
+  "completed": [
+    {
+      "role": "control",
+      "model_sha256": "460736dd293709d72817ba1bee67e3186edabd097c456fc61ad0425d2a6b7725",
+      "training_sha256": "23b3bd9c414971e46ea6b50226ac2d6577e2924dda64533e643893dfae1dcf76",
+      "selected_epoch": 9,
+      "quantized_mae_cp": 131.5398347107438
+    },
+    {
+      "role": "candidate",
+      "model_sha256": "41f8728853c368335badf8e29ea03415ab24c492306caecefbf33c8c9c6676a8",
+      "training_sha256": "c739339be9dcd5375deb41a9571e87a8efc7c7c17de5b1254f82eaabd564960c",
+      "selected_epoch": 9,
+      "quantized_mae_cp": 127.71884297520661
+    }
+  ],
+  "updated_utc": "2026-10-04T22:29:21.337429+00:00"
+}

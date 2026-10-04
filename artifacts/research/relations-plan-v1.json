@@ -1,0 +1,99 @@
+{
+  "schema": 1,
+  "status": "Declared before relation implementation, initialization, training or new opening/candidate queries",
+  "hypothesis": "Add 80 compact geometric attack/defense features to H64, testing useful piece relationships rather than increased hidden width. The control uses the same new runtime with unchanged format9; the candidate uses format11.",
+  "prior_experiment": "artifacts/research/capacity-experiment-v1-manifest.json",
+  "prior_experiment_sha256": "99d6b684c868d6123d823e28b180c8bb3534039e35eb5b4297d91952c187e4db",
+  "data": "artifacts/data/deep-turn-training-v1-classical.jsonl",
+  "data_sha256": "a493a35960ba61d25af4fecf491e1f2a4f0de228fe6b0cba5c38a1f170b3894b",
+  "split_path": "artifacts/research/deep-turn-split-v1.json",
+  "split_sha256": "8297c020afa90f89cc2e87b15dd1a911c17501df58cf20c75873cb28e22ddd0e",
+  "data_bundle": "artifacts/research/deep-turn-training-data-v1.json",
+  "data_bundle_sha256": "8d6ad0c50c62a631e1f02f206d9287a5580037001392f440dd947c9a22714e78",
+  "training": {
+    "epochs": 50,
+    "batch_size": 512,
+    "learning_rate": 0.0002,
+    "threads": 4,
+    "seed": 20261014,
+    "classical_base": true,
+    "king_context": true,
+    "turn_output": true,
+    "phase_output": true,
+    "squared_activation": false,
+    "activation_bias": 0.5,
+    "transformer_std": 0.1,
+    "pair_loss_weight": 1.0,
+    "control_hidden": 64,
+    "candidate_hidden": 64,
+    "fresh_pair_loss_weight": 0.0,
+    "initialization": "Load the frozen capacity H64 initial checkpoint and embed its first13056 rows unchanged in candidate H64; new80 linear/transformer rows and padding row zero. Bias and all4 output blocks unchanged. Restore same post-H64 Torch RNG before batch shuffles. Check all63826 initial predictions within0.001cp; differing feature-array lengths can change float summation order. Record maximum actual error, never select using labels.",
+    "control_reproduction": "Reproduce capacity/deep-turn H64 model byte for byte, epoch9, initial full state/RNG and all50 batch hashes; stop before candidate if it fails.",
+    "selection": "Same63826 rows, whole-game6050 validation, H64 width, 50epochs, objective old-pair1/fresh-pair0 and batch orders; ordinary held-out loss alone selects epochs. Candidate adds only80 relation features; no retuning or post-filtering.",
+    "initial_control": "artifacts/research/capacity-initial-v1/control.pt",
+    "initial_control_sha256": "82b9216af89063b4347753482c611baf43162c3e46b0271a7c6e9f83b43e1079"
+  },
+  "validation": {
+    "tactics": {
+      "tactics-depth8": 32,
+      "tactics-5000nodes": 32,
+      "tactics-quiet-depth8": 32,
+      "tactics-quiet-5000nodes": 25,
+      "endgames-5000nodes": 13
+    },
+    "policy": "Required build/native rules/protocol/bench, exact Python/C# inference, explicit initialization and batch checks, common held-out diagnostics and frozen tactical thresholds. No fit-only promotion."
+  },
+  "matches": {
+    "short_pairs_each": 64,
+    "seconds_per_move": 0.03,
+    "conditional_long_pairs": 32,
+    "long_seconds_per_move": 0.1,
+    "resources": {
+      "Threads": 1,
+      "Hash": 64,
+      "Move Overhead": 0,
+      "max_additional_plies": 400
+    },
+    "bootstrap_samples": 20000,
+    "bootstrap_seed": 20261128,
+    "gate": "Always finish both128-game short screens. Long64-game classical confirmation only with correctness/tactics,zero forfeits/unresolved,classical short95% family lower>50%,control point>=50% and family lower>=45%. Promotion additionally long point>=50%,family lower>=45%,zero issues. No extension/retuning.",
+    "openings": {
+      "positions": 160,
+      "attempts": 2048,
+      "seed": 20261127,
+      "plies": 20,
+      "nodes": 2048,
+      "verify_nodes": 20000,
+      "max_cp": 80,
+      "partition": "160 fresh parent pairs: first64 classical30ms,next64 matched H64control30ms,last32 conditional classical100ms. Exclude all old/current training, diagnostics, tactical fixtures and prior opening parents including capacity; freeze before candidate queries."
+    }
+  },
+  "cost_diagnostic": {
+    "positions": 64,
+    "rounds": 9,
+    "warmup_rounds": 3,
+    "repetitions_per_round": 300,
+    "policy": "New BCL-only RelationCost harness, frozen new runtime, same64 held-out roots and legal children, 9 counterbalanced rounds,3warmups,300repeats. Independently verify every role's checksum and root restoration. No contention with training/matches; timing is descriptive only.",
+    "order_seed": 20261126
+  },
+  "maximum_match_games": 320,
+  "rating": "No new calibration; last exact0.7.6-q-evasion estimate2319,local95%2277..2360 retained. Models do not inherit it.",
+  "limits": "Relations are geometric and aggregate: no legal-capture or tactical oracle. More expensive inference may outweigh fit gains. Equal epochs are not equal compute. No promotion on fit/speed/tactics alone; all prior playing gates retained. Full Stockfish superiority and public Elo remain unestablished.",
+  "frozen_classical_reference": {
+    "baseline": "artifacts/publish/mate-proof-dev-v2/Aster.dll",
+    "baseline_sha256": "ac907eac90bba15acab80c15d16f195044a8ac2b59a7964f5a065bc0caaa0ae8",
+    "baseline_source": "artifacts/research/mate-proof-source-v2/manifest.json"
+  },
+  "runtime_policy": "Freeze new runtime/source after required checks, before training matches. All candidate/control/classical match roles use that exact runtime. Compare classical depth8 moves/scores/nodes and bench against the prior runtime; playing search/evaluation/rules stay unchanged except optional neural feature inference.",
+  "features": {
+    "ordinary_context_features": 13056,
+    "extra_features": 80,
+    "maximum_active_features": 84,
+    "categories": "absolute color White then Black, piece kind pawn/knight/bishop/rook/queen, status undefended then defended; 20 categories",
+    "semantics": "Geometric opponent attack intersected with each piece bitboard; undefended excludes own geometric control, defended intersects own control. Both colors' maps include pawn, knight, bishop, rook, queen and king attacks; sliders include the first occupied square. Pins count geometrically; this is not legal capture, SEE, a hanging-piece proof or zugzwang. No side-to-move or en-passant pseudo-target dependence.",
+    "encoding": "Count each category and clip to0..3, where3 means3+. One-hot4bins per category. Perspective-relative color: own first, opponent second. Index13056+(((relativeColor*5+kind)*2+status)*4+bin). Twenty active features per perspective, including count0 bins.",
+    "formats": "11 hybrid and12 standalone, clipped phase/turn/king-context mandatory; formats1..10 preserved",
+    "incremental": "Rebuild maps only when geometry changed; update categorical embeddings by removing prior bins and adding new bins. King-bucket rebuilds must restore relation embeddings even when counts stay unchanged. Null move preserves geometry; speculative make/undo without evaluation cancels deltas.",
+    "verification": "Independent python-chess geometric maps vs native bitboards on broad legal positions, malformed model checks, exact nonzero quantized inference, make/eval/undo, null moves, king buckets, phase changes, castling, promotion, en-passant and pinned pieces."
+  }
+}

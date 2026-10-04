@@ -701,6 +701,130 @@ Test("phase output matches scalar rebuild through phase changes, null moves and 
         finally { File.Delete(path); }
     }
 });
+Test("relation features retain geometric pins, blockers, count bins and perspective", () =>
+{
+    int[] Bins(string fen)
+    {
+        var bins = new int[20]; NeuralNetwork.AttackFeatureBins(new Board(fen).Pieces, bins); return bins;
+    }
+    // The e7 knight is pinned to its king but still geometrically attacks d5.
+    int[] pinned = Bins("4k3/4n3/8/3P4/8/8/8/K3R3 w - - 0 1");
+    Equal(1, pinned[0]); Equal(0, pinned[1]);
+    int[] defended = Bins("4k3/4n3/8/3P4/8/8/3R4/K3R3 w - - 0 1");
+    Equal(0, defended[0]); Equal(1, defended[1]);
+    // A friendly pawn is a rook's first blocker and is therefore defended.
+    int[] blocked = Bins("7k/8/8/2b5/8/4P3/4R3/K7 w - - 0 1");
+    Equal(0, blocked[0]); Equal(1, blocked[1]);
+    int[] capped = Bins("7k/8/8/rPPPPP2/8/8/8/7K w - - 0 1");
+    Equal(1, capped[0]); // Rook control ends at b5; pieces beyond it are not attacked.
+    int[] many = Bins("7k/8/8/PPPP4/rrrr4/8/8/7K w - - 0 1");
+    Equal(3, many[0]); Equal(0, many[1]);
+    for (int category = 0; category < 20; category++)
+        for (int bin = 0; bin < 4; bin++)
+        {
+            Equal(13056 + category * 4 + bin, NeuralNetwork.AttackFeature(category, bin, 0));
+            Equal(13056 + ((category + 10) % 20) * 4 + bin, NeuralNetwork.AttackFeature(category, bin, 1));
+        }
+});
+Test("relation neural inference survives king bucket rebuilds, special moves, null moves and undo", () =>
+{
+    const int hidden = 16, features = NeuralNetwork.RelationFeatureCount;
+    var rng = new Random(20261126);
+    short[] linear = Enumerable.Range(0, features).Select(_ => (short)rng.Next(-35, 36)).ToArray();
+    short[] weights = Enumerable.Range(0, features * hidden).Select(_ => (short)rng.Next(-24, 25)).ToArray();
+    short[] bias = Enumerable.Repeat((short)128, hidden).ToArray();
+    short[] output = Enumerable.Range(0, hidden * 4).Select(_ => (short)rng.Next(-16000, 16001)).ToArray();
+    Span<Move> moves = stackalloc Move[256];
+    foreach (bool hybrid in new[] { false, true })
+    {
+        var model = new NeuralNetwork(hidden, linear, bias, weights, output, classicalBase: hybrid,
+            kingContext: true, turnOutput: true, phaseOutput: true, attackFeatures: true);
+        int Reference(Board b, int side, int phase)
+        {
+            int[] bins = new int[20]; NeuralNetwork.AttackFeatureBins(b.Pieces, bins);
+            var sums = new long[2][]; long[] terms = new long[2];
+            for (int perspective = 0; perspective < 2; perspective++)
+            {
+                sums[perspective] = bias.Select(x => (long)x).ToArray();
+                var active = new List<int>();
+                int kingSquare = System.Numerics.BitOperations.TrailingZeroCount(b.Pieces[perspective * 6 + 5]);
+                int bucket = NeuralNetwork.KingBucket(kingSquare, perspective);
+                for (int square = 0; square < 64; square++)
+                    if (b.Squares[square] >= 0)
+                    {
+                        int feature = NeuralNetwork.Feature(b.Squares[square], square, perspective);
+                        active.Add(feature); active.Add(768 * (bucket + 1) + feature);
+                    }
+                for (int category = 0; category < 20; category++) active.Add(NeuralNetwork.AttackFeature(category, bins[category], perspective));
+                foreach (int feature in active)
+                {
+                    terms[perspective] += linear[feature];
+                    for (int i = 0; i < hidden; i++) sums[perspective][i] += weights[feature * hidden + i];
+                }
+            }
+            long mg = 0, eg = 0;
+            for (int i = 0; i < hidden; i++)
+            {
+                long own = Math.Clamp(sums[side][i], 0, 256), other = Math.Clamp(sums[side ^ 1][i], 0, 256);
+                mg += own * output[i] + other * output[hidden + i];
+                eg += own * output[2 * hidden + i] + other * output[3 * hidden + i];
+            }
+            phase = Math.Clamp(phase, 0, 24);
+            return (int)((terms[0] - terms[1]) / 2 + (side == 0 ? 1 : -1) * (mg * phase + eg * (24 - phase)) / (24 * 65536));
+        }
+        void Check(Board b)
+        {
+            foreach (int phase in new[] { 0, 8, 24, b.Phase })
+                for (int side = 0; side < 2; side++) Equal(Reference(b, side, phase), b.Neural!.WhiteScoreForSide(side, phase));
+            Equal(Reference(b, b.Side, b.Phase), model.EvaluateFromScratch(b));
+        }
+        foreach (string fen in positions.Select(p => p.Fen)
+            .Append("4k3/8/8/3pP3/8/8/8/4K3 w - d6 0 1")
+            .Append("7k/P7/8/8/8/8/8/7K w - - 0 1")
+            .Append("7k/8/8/8/8/8/8/K7 w - - 0 1"))
+        {
+            var b = new Board(fen, model); ulong key = b.Key; Check(b);
+            int count = b.GenerateLegal(moves); Check(b); // Speculative generate/undo leaves cancelled deltas.
+            for (int i = 0; i < count; i++)
+            {
+                Require(b.TryMakeMove(moves[i]), "Generated illegal move");
+                try { Check(b); Check(b.Clone()); }
+                finally { b.UnmakeMove(); }
+                Check(b);
+            }
+            for (int ply = 0; ply < 40; ply++)
+            {
+                b.MakeNullMove(); try { Check(b); } finally { b.UnmakeMove(); } Check(b);
+                int legal = b.GenerateLegal(moves); if (legal == 0) break;
+                Require(b.TryMakeMove(moves[rng.Next(legal)]), "Generated illegal move"); Check(b);
+            }
+            while (b.Ply > 0) { b.UnmakeMove(); Check(b); }
+            Equal(fen, b.ToFen()); Equal(key, b.Key);
+            _ = Find(b, limits: new SearchLimits(Nodes: 1000)); Check(b); Equal(fen, b.ToFen());
+            using var canceled = new CancellationTokenSource(); canceled.Cancel();
+            _ = Find(b, cancellation: canceled.Token); Check(b); Equal(fen, b.ToFen());
+            b.LoadFen(Board.StartFen); Check(b);
+        }
+        string path = Path.GetTempFileName();
+        try
+        {
+            model.Save(path); var loaded = NeuralNetwork.Load(path);
+            Require(loaded.HasAttackFeatures && loaded.HasPhaseOutput && loaded.HasKingContext && loaded.HasTurnOutput, "Relation flags lost");
+            Equal(hybrid ? 11 : 12, BitConverter.ToInt32(File.ReadAllBytes(path), 8));
+            foreach (var p in positions) Equal(model.EvaluateFromScratch(new Board(p.Fen)), loaded.EvaluateFromScratch(new Board(p.Fen)));
+            byte[] bytes = File.ReadAllBytes(path);
+            foreach (byte[] invalid in new[] { bytes[..^2], bytes.Concat(new byte[2]).ToArray() })
+            {
+                File.WriteAllBytes(path, invalid);
+                try { NeuralNetwork.Load(path); throw new Exception("Malformed relation payload accepted"); } catch (FormatException) { }
+            }
+            File.WriteAllBytes(path, bytes);
+            using (var stream = File.OpenWrite(path)) { stream.Position = 12; using var writer = new BinaryWriter(stream); writer.Write(13056); }
+            try { NeuralNetwork.Load(path); throw new Exception("Wrong relation feature count accepted"); } catch (FormatException) { }
+        }
+        finally { File.Delete(path); }
+    }
+});
 Test("phase output blends signed-int16 extremes in int64 and rejects incompatible flags", () =>
 {
     foreach (int hidden in new[] { 8, 256 })
