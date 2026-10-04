@@ -15,7 +15,7 @@ import numpy as np
 import torch
 from torch import nn
 
-from neural_format import FEATURES, CONTEXT_FEATURES, QuantizedModel, feature_indices, save_model
+from neural_format import FEATURES, CONTEXT_FEATURES, QuantizedModel, feature_indices, material_phase, save_model
 
 
 def initial_linear() -> torch.Tensor:
@@ -34,8 +34,10 @@ def initial_linear() -> torch.Tensor:
 
 
 class PositionNetwork(nn.Module):
-    def __init__(self, hidden: int, classical_base: bool = False, king_context: bool = False, activation_bias: float = .5, turn_output: bool = False, squared_activation: bool = False, transformer_std: float = .02):
+    def __init__(self, hidden: int, classical_base: bool = False, king_context: bool = False, activation_bias: float = .5, turn_output: bool = False, squared_activation: bool = False, transformer_std: float = .02, phase_output: bool = False):
         super().__init__()
+        if phase_output and (not turn_output or not king_context or squared_activation):
+            raise ValueError("Phase output requires clipped turn-aware king-context features")
         self.features = CONTEXT_FEATURES if king_context else FEATURES
         self.linear = nn.Embedding(self.features + 1, 1, padding_idx=self.features)
         self.transformer = nn.Embedding(self.features + 1, hidden, padding_idx=self.features)
@@ -44,6 +46,7 @@ class PositionNetwork(nn.Module):
         self.classical_base = classical_base
         self.turn_output = turn_output
         self.squared_activation = squared_activation
+        self.phase_output = phase_output
         with torch.no_grad():
             self.linear.weight.zero_()
             if not classical_base: self.linear.weight[:FEATURES].copy_(initial_linear()[:FEATURES])
@@ -52,8 +55,11 @@ class PositionNetwork(nn.Module):
             self.transformer.weight[self.features].zero_()
             self.output.normal_(0, .02)
             if turn_output: self.output[hidden:].copy_(-self.output[:hidden])
+            # Consume exactly the control's random stream. Identical cloned heads
+            # initially predict the same value at every phase.
+            if phase_output: self.output = nn.Parameter(torch.cat([self.output, self.output]))
 
-    def forward(self, white: torch.Tensor, black: torch.Tensor, tempo: torch.Tensor, turn: torch.Tensor | None = None) -> torch.Tensor:
+    def forward(self, white: torch.Tensor, black: torch.Tensor, tempo: torch.Tensor, turn: torch.Tensor | None = None, phase: torch.Tensor | None = None) -> torch.Tensor:
         aw = torch.clamp(self.transformer(white).sum(dim=1) + self.bias, 0, 1)
         ab = torch.clamp(self.transformer(black).sum(dim=1) + self.bias, 0, 1)
         if self.squared_activation:
@@ -63,7 +69,14 @@ class PositionNetwork(nn.Module):
             if turn is None: raise ValueError("Turn-aware output requires explicit side-to-move inputs")
             own = torch.where(turn[:, None] > 0, aw, ab)
             other = torch.where(turn[:, None] > 0, ab, aw)
-            value = linear + (own @ self.output[:aw.shape[1]] + other @ self.output[aw.shape[1]:]) * turn
+            hidden = aw.shape[1]
+            residual = own @ self.output[:hidden] + other @ self.output[hidden:2*hidden]
+            if self.phase_output:
+                if phase is None: raise ValueError("Phase output requires explicit material phase")
+                endgame = own @ self.output[2*hidden:3*hidden] + other @ self.output[3*hidden:]
+                weight = torch.clamp(phase, 0, 24) / 24
+                residual = residual * weight + endgame * (1 - weight)
+            value = linear + residual * turn
         else:
             value = linear + (aw - ab) @ self.output
         if self.classical_base:
@@ -113,6 +126,7 @@ def main() -> None:
     parser.add_argument("--king-context", action="store_true", help="Add own-king-region conditioned piece features")
     parser.add_argument("--turn-output", action="store_true", help="Learn separate moving/opponent perspective output weights; requires king context")
     parser.add_argument("--squared-activation", action="store_true", help="Square clipped hidden values; requires turn output")
+    parser.add_argument("--phase-output", action="store_true", help="Interpolate separate middlegame/endgame outputs; requires clipped turn-aware king context")
     parser.add_argument("--activation-bias", type=float, default=.5, help="Initial clipped-ReLU bias; zero starts at its nonlinear boundary")
     parser.add_argument("--transformer-std", type=float, default=.02, help="Initial ordinary feature weight standard deviation")
     parser.add_argument("--pair-loss-weight", type=float, default=0, help="Additional supervision on marked white-turn minus black-turn label differences")
@@ -127,6 +141,8 @@ def main() -> None:
         parser.error("Turn-aware formats require --king-context")
     if args.squared_activation and not args.turn_output:
         parser.error("Squared activation requires --turn-output")
+    if args.phase_output and (not args.turn_output or args.squared_activation):
+        parser.error("Phase output requires --turn-output and clipped activation")
     if not np.isfinite(args.pair_loss_weight) or not 0 <= args.pair_loss_weight <= 16:
         parser.error("Invalid pair loss weight")
     if args.pair_loss_weight and not args.turn_output:
@@ -156,6 +172,7 @@ def main() -> None:
     black = torch.full_like(white, features)
     target = torch.tensor([row["score_white_cp"] / 100 for row in rows], dtype=torch.float32)
     turn = torch.tensor([1.0 if row["fen"].split()[1] == "w" else -1.0 for row in rows])
+    phase = torch.empty(len(rows), dtype=torch.float32)
     if args.classical_base and any("classical_white_cp" not in row for row in rows):
         raise ValueError("Hybrid training requires classical_white_cp; run add_classical_scores.py first")
     classical_provenance = None
@@ -179,6 +196,7 @@ def main() -> None:
         if key in canonical:
             raise ValueError("Duplicate position in dataset; deduplicate before splitting")
         canonical.add(key)
+        phase[i] = material_phase(board)
         fw, fb = feature_indices(board, chess.WHITE, args.king_context), feature_indices(board, chess.BLACK, args.king_context)
         if len(fw) > max_active:
             raise ValueError("Training position has more than 32 pieces")
@@ -195,12 +213,16 @@ def main() -> None:
     for pairs in (pair_training, pair_validation):
         if len(pairs) and (not torch.equal(white[pairs[:, 0]], white[pairs[:, 1]]) or not torch.equal(black[pairs[:, 0]], black[pairs[:, 1]])):
             raise ValueError("Turn-pair features differ")
-    model = PositionNetwork(args.hidden, args.classical_base, args.king_context, args.activation_bias, args.turn_output, args.squared_activation, args.transformer_std)
+    model = PositionNetwork(args.hidden, args.classical_base, args.king_context, args.activation_bias, args.turn_output, args.squared_activation, args.transformer_std, args.phase_output)
+    initial_shared = hashlib.sha256()
+    for tensor in (model.linear.weight, model.transformer.weight, model.bias, model.output[:args.hidden * (2 if args.turn_output else 1)]):
+        initial_shared.update(tensor.detach().numpy().tobytes())
+    initial_rng_sha256 = hashlib.sha256(torch.get_rng_state().numpy().tobytes()).hexdigest()
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate, weight_decay=1e-5)
 
     def evaluate(indices: torch.Tensor) -> dict:
         with torch.no_grad():
-            predictions = torch.cat([model(white[batch], black[batch], tempo[batch], turn[batch]) for batch in indices.split(args.batch_size)])
+            predictions = torch.cat([model(white[batch], black[batch], tempo[batch], turn[batch], phase[batch]) for batch in indices.split(args.batch_size)])
             actual = target[indices]
             return {"loss": float(objective(predictions, actual)), "mae_cp": float((predictions - actual).abs().mean() * 100),
                     "rmse_cp": float((predictions - actual).square().mean().sqrt() * 100)}
@@ -211,7 +233,7 @@ def main() -> None:
             deltas = []
             for pairs in pair_validation.split(args.batch_size):
                 flat = pairs.flatten()
-                predictions = model(white[flat], black[flat], tempo[flat], turn[flat]).reshape(-1, 2)
+                predictions = model(white[flat], black[flat], tempo[flat], turn[flat], phase[flat]).reshape(-1, 2)
                 deltas.append(predictions[:, 0] - predictions[:, 1])
             predicted = torch.cat(deltas)
             actual = target[pair_validation[:, 0]] - target[pair_validation[:, 1]]
@@ -242,12 +264,12 @@ def main() -> None:
             pair_batches = list(pair_training[torch.randperm(len(pair_training))].split(max(1, args.batch_size // 4)))
         for batch_number, batch in enumerate(shuffled.split(args.batch_size)):
             optimizer.zero_grad(set_to_none=True)
-            prediction = model(white[batch], black[batch], tempo[batch], turn[batch])
+            prediction = model(white[batch], black[batch], tempo[batch], turn[batch], phase[batch])
             loss = objective(prediction, target[batch])
             if pair_batches:
                 pairs = pair_batches[batch_number % len(pair_batches)]
                 flat = pairs.flatten()
-                pair_predictions = model(white[flat], black[flat], tempo[flat], turn[flat]).reshape(-1, 2)
+                pair_predictions = model(white[flat], black[flat], tempo[flat], turn[flat], phase[flat]).reshape(-1, 2)
                 loss = loss + args.pair_loss_weight * objective(pair_predictions[:, 0] - pair_predictions[:, 1],
                                                                 target[pairs[:, 0]] - target[pairs[:, 1]])
             loss.backward()
@@ -270,8 +292,8 @@ def main() -> None:
     torch.save({"schema": 1, "hidden": args.hidden, "state_dict": model.state_dict(), "arguments": vars(args)}, output / "checkpoint.pt")
     with torch.no_grad():
         save_model(output / "model.ann", model.linear.weight[:features, 0].numpy(), model.bias.numpy(),
-                   model.transformer.weight[:features].numpy(), model.output.numpy(), args.classical_base, args.king_context, args.turn_output, args.squared_activation)
-        float_predictions = model(white[validation], black[validation], tempo[validation], turn[validation]).numpy() * 100
+                   model.transformer.weight[:features].numpy(), model.output.numpy(), args.classical_base, args.king_context, args.turn_output, args.squared_activation, args.phase_output)
+        float_predictions = model(white[validation], black[validation], tempo[validation], turn[validation], phase[validation]).numpy() * 100
     quantized = QuantizedModel(output / "model.ann")
     quantized_predictions = []
     for index in validation_indices:
@@ -289,7 +311,12 @@ def main() -> None:
         model_digest = hashlib.file_digest(source, "sha256").hexdigest()
     report = {"schema": 1, "arguments": vars(args), "torch_version": torch.__version__, "numpy_version": np.__version__,
               "dataset_sha256": data_digest, "model_sha256": model_digest, "source_files": source_manifest,
-              "architecture": f"shared {features}->H clipped ReLU with linear term; king_context={args.king_context}; turn_output={args.turn_output}; squared_activation={args.squared_activation}",
+              "architecture": f"shared {features}->H clipped ReLU with linear term; king_context={args.king_context}; turn_output={args.turn_output}; squared_activation={args.squared_activation}; phase_output={args.phase_output}",
+              "initial_shared_sha256": initial_shared.hexdigest(), "initial_rng_sha256": initial_rng_sha256,
+              "phase_validation": [{"phase_range": [low, high], "positions": int(((phase[validation].numpy() >= low) & (phase[validation].numpy() <= high)).sum()),
+                  "quantized_mae_cp": float(np.abs(qp - yt)[(phase[validation].numpy() >= low) & (phase[validation].numpy() <= high)].mean())
+                  if ((phase[validation].numpy() >= low) & (phase[validation].numpy() <= high)).any() else None}
+                  for low, high in ((0, 8), (9, 16), (17, 24))],
               "training_positions": len(training), "validation_positions": len(validation), "training_games": len(games) - len(validation_games),
               "validation_games": sorted(validation_games), "initial_validation": initial, "selected_validation": evaluate(validation),
               "selected_epoch": best_epoch, "epochs": history, "quantized_validation_mae_cp": float(np.abs(qp - yt).mean()),
@@ -305,6 +332,7 @@ def main() -> None:
     report["king_context"] = args.king_context
     report["turn_output"] = args.turn_output
     report["squared_activation"] = args.squared_activation
+    report["phase_output"] = args.phase_output
     report["features"] = features
     report["paired_supervision"] = {"weight": args.pair_loss_weight, "training_pairs": len(pair_training),
         "heldout_pairs": len(pair_validation), "pair_batch_size": max(1, args.batch_size // 4),

@@ -70,9 +70,9 @@ dotnet publish src/Engine/Engine.csproj -c Release -r win-x64 --self-contained f
   `Move Overhead`, `Clear Hash`, `EvalFile`.
 
 An optional, independent neural evaluator and training pipeline are available.
-Current source also supports experimental turn-aware formats 5/6 and squared
-activation formats 7/8;
-the preserved 0.6.0 package supports formats 1..4. See
+Current source also supports experimental turn-aware formats 5/6, squared
+activation formats 7/8 and phase-conditioned formats 9/10;
+the preserved 0.6.0 package supports formats 1..4. See [phase output](docs/PHASE-OUTPUT.md) for the matched architecture ablation. See
 [turn-aware research](docs/TURN-AWARE.md) for validation and rejected models.
 Squared activation research is documented in
 [squared evaluation experiments](docs/SQUARED-ACTIVATION.md).

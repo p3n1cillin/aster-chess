@@ -1,0 +1,218 @@
+{
+  "created_utc": "2026-10-04T17:46:05.508971+00:00",
+  "plan_sha256": "dd492b81550765016389854558f02d755559d9b3c9961eb6e800a57014c39101",
+  "source_files": [
+    {
+      "path": "declare_phase.py",
+      "sha256": "c2ca9d714961632e4bbd368fc75d7e03a584f816f32684fde6af0ac655291cc6"
+    },
+    {
+      "path": "prepare_phase.py",
+      "sha256": "a60837633ef7893bcd1101947dd240531ba03873035a0de98cc060b959d6f114"
+    },
+    {
+      "path": "train_phase.py",
+      "sha256": "9ca0b38cfc7e97e415bc9032ac894373b1a39470502ca23781add6e7e24a7dcf"
+    },
+    {
+      "path": "train_network.py",
+      "sha256": "08f8647a375444193303d057f9704f965582760c3d8dcf157178e2704fa65af9"
+    },
+    {
+      "path": "neural_format.py",
+      "sha256": "304897abff22a599e5523ad08492f76d91dde8def54e54497716969602970efa"
+    },
+    {
+      "path": "verify_phase.py",
+      "sha256": "6c04498a6410ad3a9bf218e1e8f597d494668c57d01d4e7fb8df90c23feb3347"
+    },
+    {
+      "path": "verify_network.py",
+      "sha256": "be2ffe96b1a70f2e2ac24d4df640cd1682ab49c161c985a7f3aecd51de50fada"
+    },
+    {
+      "path": "check_phase.py",
+      "sha256": "d9701299a7400af63e14bc3ec496364c8b1d3948f4cc1538190f657b28d197b9"
+    },
+    {
+      "path": "run_phase.py",
+      "sha256": "d7ca9628b70a6a4e967db0d1bb627af7c01626793703ef719f16c0f32f217dd5"
+    },
+    {
+      "path": "assess_phase.py",
+      "sha256": "96f507af973b4e3a49ec5f94ad884c16f349db6c9dc25406ff73209ea041bd12"
+    },
+    {
+      "path": "preserve_phase.py",
+      "sha256": "1abbcbaa66482fdac736fa1caddb89636cc48f156216da7b3ed6d95614947b63"
+    },
+    {
+      "path": "freeze_phase_pipeline.py",
+      "sha256": "177c37354c88ef3d6c57a11190b5df9ba3b8ac52ed52c9b66173e677d4f3073f"
+    },
+    {
+      "path": "match.py",
+      "sha256": "3ea0b29f022afe9b95270350d75d5cbcb94a5c045374fddab1a35d129ff84cf8"
+    },
+    {
+      "path": "audit_match.py",
+      "sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6"
+    },
+    {
+      "path": "analyze_rating.py",
+      "sha256": "f6fe53073c006e91760b885adab9803f92cd50fa3c3a7ba6ada90f0a8e5b8d13"
+    },
+    {
+      "path": "run_rating.py",
+      "sha256": "6e8a31adefd0aeb5d51eac2f5672396f4518f779947713f86dac138ff00f661a"
+    },
+    {
+      "path": "uci_client.py",
+      "sha256": "6ccfcad4108c002dc4ca90d736f60170c63880ef4153cfe071649f33ca6920ab"
+    },
+    {
+      "path": "verify.py",
+      "sha256": "c8c67a825d15e9098cc10a24df4f8d897a062f8026cb41aa5cf49d133f57eda0"
+    },
+    {
+      "path": "tactics.py",
+      "sha256": "9d5d8f43a924f0b730a52b5594ec1a7c6abc15f9db973bd9bedda4a98d320909"
+    },
+    {
+      "path": "compare_search.py",
+      "sha256": "a8162c85b4ea4aae46546ca8a02d4b04c083bf56abb6a28d64f322b2331b6dd9"
+    },
+    {
+      "path": "generate_openings.py",
+      "sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746"
+    },
+    {
+      "path": "audit_openings.py",
+      "sha256": "0c97723cf8a0404f9e3681a90f5d9d09dcfc4978721748222ee80a679a6fca5d"
+    },
+    {
+      "path": "freeze_engine_source.py",
+      "sha256": "db919e19f9b75ade115a3d834ad48cc57e01a6165130ef03a775279f4c89acb7"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "artifacts/validation/phase-candidate-network.json",
+      "sha256": "538af78753746febd01070de4c47fdee21ce20dc4c64b5fe707059925132907e"
+    },
+    {
+      "path": "artifacts/validation/phase-candidate-rules.json",
+      "sha256": "82a87408da924a7959970f8a6fcc122bf22b48797158d9077610718e4c02711e"
+    },
+    {
+      "path": "artifacts/validation/phase-classical-100ms-audit.json",
+      "sha256": "54e851c0624208e30d588c50e7ab34b7effa285f9f023af8462448a4bbefa7b6"
+    },
+    {
+      "path": "artifacts/validation/phase-classical-30ms-audit.json",
+      "sha256": "b9875a154734524e303da57b1466562c2423c27dde7dab50dac0eea0da31689a"
+    },
+    {
+      "path": "artifacts/validation/phase-control-30ms-audit.json",
+      "sha256": "a8267ce2e24965c1a0222be66a7667ab441f90b679556b264b8097607974e4c4"
+    },
+    {
+      "path": "artifacts/validation/phase-control-network.json",
+      "sha256": "63afad8fbc1d61ac35e998d88b5b5d66226d4341bfa8847dd17bf2e01c532af8"
+    },
+    {
+      "path": "artifacts/validation/phase-control-rules.json",
+      "sha256": "783e8ac9af4555c9059f9f63821166c99d8ded0aa3afe6557613ace7f74b734e"
+    },
+    {
+      "path": "artifacts/validation/phase-default-rules.json",
+      "sha256": "fd4bc44146a50e3f3fd0c6ad622a4f10e62674077a89206eefc0447bb09126d5"
+    },
+    {
+      "path": "artifacts/validation/phase-formats.json",
+      "sha256": "07ee3bb22c87a94c014f52da7a07a4f0f6af6615668f5d9314595fb0ca06ca85"
+    },
+    {
+      "path": "artifacts/validation/phase-parent-audit.json",
+      "sha256": "a08411c9426553850e18891f40cc9833be51d840040ee5cb470e297e98b4791b"
+    },
+    {
+      "path": "artifacts/validation/phase-preflight.json",
+      "sha256": "dda05404a4517429f46a74886a17472663c9f2112326185d54dbc1ea76370f6d"
+    },
+    {
+      "path": "artifacts/tactics/phase-candidate-endgames-5000nodes.json",
+      "sha256": "7ef549d10c9f4e280aa178f437429b6c90771ca427e712671edc61be355c1184"
+    },
+    {
+      "path": "artifacts/tactics/phase-candidate-tactics-5000nodes.json",
+      "sha256": "99ab18add133ed9013a2af05d8566d721373ac2f7d9adf0f59b909a3d9b8f9b1"
+    },
+    {
+      "path": "artifacts/tactics/phase-candidate-tactics-depth8.json",
+      "sha256": "6204d928e6b6bda3db1b05e719a8bdde3b3c92e399187cfcd871962298dd5afe"
+    },
+    {
+      "path": "artifacts/tactics/phase-candidate-tactics-quiet-5000nodes.json",
+      "sha256": "efecff5999133bc80f58109e843bc97febb6651874118b733ea178c110a465ca"
+    },
+    {
+      "path": "artifacts/tactics/phase-candidate-tactics-quiet-depth8.json",
+      "sha256": "918049591d5af45eed56b119ad8a478dbe0ea42671436c4e0b25ea4cec418c97"
+    },
+    {
+      "path": "artifacts/tactics/phase-control-endgames-5000nodes.json",
+      "sha256": "6c7786e932bbe7a999871b10d690981a2bfc89474a7626ff12d3a3b18cf45f04"
+    },
+    {
+      "path": "artifacts/tactics/phase-control-tactics-5000nodes.json",
+      "sha256": "5f1405cdfec2d3883929926983399f2d42d322fa637e3e6b07d522e499d8fdf8"
+    },
+    {
+      "path": "artifacts/tactics/phase-control-tactics-depth8.json",
+      "sha256": "e7314383e9c23d4a9bc9a4c00907fa0eba9bf81f74a10adcb7798c9997306f7c"
+    },
+    {
+      "path": "artifacts/tactics/phase-control-tactics-quiet-5000nodes.json",
+      "sha256": "5f1f56ab6c747fe70b481a7735af075106a1ce9f8dfc6679ed7b0da77db41d1b"
+    },
+    {
+      "path": "artifacts/tactics/phase-control-tactics-quiet-depth8.json",
+      "sha256": "0482df4454c34ba6956cb637860e0bcb0e8c6160eb4da771bf2224bd4eb17e2f"
+    },
+    {
+      "path": "artifacts/benchmarks/phase-default-vs-baseline-depth8.json",
+      "sha256": "95d1e4f43c26404923e40744cb3a666e89154d2afb0688ecb76a1beb0a69cc39"
+    },
+    {
+      "path": "tests/fixtures/phase-classical-100ms-v1.json",
+      "sha256": "3b01d69ec7c31e2e5991b81ebb5860024b4393cb42d91c8a84db69ff20dacffc"
+    },
+    {
+      "path": "tests/fixtures/phase-classical-30ms-v1.json",
+      "sha256": "3efc264b68683bd961a269679ecb493ccd53888651e5a767b34b66a7c0f5e3e1"
+    },
+    {
+      "path": "tests/fixtures/phase-control-30ms-v1.json",
+      "sha256": "f29fbb72d1d3696bff82ff4630bc51b37d6148af3350e0b265509e96aab30758"
+    },
+    {
+      "path": "tests/fixtures/phase-parent-v1.json",
+      "sha256": "35fd8dc040ab40538966d73d0f9c54d38ce490175e90fba10c9cf4c82363063f"
+    }
+  ],
+  "engine_sha256": "ea5ba189628bf12c597620438563e323aed1306a2426bc91ec82f6a72f4f85ff",
+  "models": {
+    "control": {
+      "path": "artifacts/training/phase-control-v1/model.ann",
+      "sha256": "98535307c0c30b529cf242d2a947ccacf66678b25710f80de980e13ec4c77975",
+      "training_sha256": "9b9b107bfa7491ab822f626c3921cdcf6e80c2b2197f80dcf6c75b98f0a6dae4"
+    },
+    "candidate": {
+      "path": "artifacts/training/phase-output-v1/model.ann",
+      "sha256": "037f06f436437a50ada9c2ced14d6c1a960fb127dd7d1122dd01defb2029416e",
+      "training_sha256": "f165af10608afb2cc90a100d705602b8fb116dc9cc25632742f41170524999e3"
+    }
+  },
+  "interpretation": "Frozen after correctness/tactics, before matches. All short games run regardless of tactical failures. No retuning or adaptive extension."
+}

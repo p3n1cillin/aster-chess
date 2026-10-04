@@ -597,6 +597,134 @@ Test("turn-aware neural output keeps 64-bit sums and separate turn caches", () =
         Equal(Math.Max(-28000, -hidden * 256 + 12), Evaluation.Evaluate(b));
     }
 });
+Test("phase output matches scalar rebuild through phase changes, null moves and undo", () =>
+{
+    const int hidden = 16, features = 768 * 17;
+    var rng = new Random(20261112);
+    short[] linear = new short[features], bias = new short[hidden], weights = new short[features * hidden], output = new short[hidden * 4];
+    for (int i = 0; i < features; i++) linear[i] = (short)rng.Next(-200, 201);
+    for (int i = 0; i < hidden; i++) bias[i] = (short)rng.Next(40, 200);
+    for (int i = 0; i < weights.Length; i++) weights[i] = (short)rng.Next(-40, 41);
+    for (int i = 0; i < output.Length; i++) output[i] = (short)rng.Next(-30000, 30001);
+    int Reference(Board b, int side, int phase)
+    {
+        int[] acc = new int[hidden * 2], lin = new int[2];
+        for (int perspective = 0; perspective < 2; perspective++)
+        {
+            int king = Array.IndexOf(b.Squares, perspective * 6 + 5);
+            int bucket = (perspective == 0 ? king / 8 : 7 - king / 8) / 2 * 4 + king % 8 / 2;
+            for (int i = 0; i < hidden; i++) acc[perspective * hidden + i] = bias[i];
+            for (int square = 0; square < 64; square++)
+            {
+                int piece = b.Squares[square]; if (piece < 0) continue;
+                int relative = perspective == 0 ? piece : (piece + 6) % 12;
+                int raw = relative * 64 + (perspective == 0 ? square : (7 - square / 8) * 8 + square % 8);
+                int context = 768 * (bucket + 1) + raw;
+                lin[perspective] += linear[raw] + linear[context];
+                for (int i = 0; i < hidden; i++) acc[perspective * hidden + i] += weights[raw * hidden + i] + weights[context * hidden + i];
+            }
+        }
+        long mg = 0, eg = 0;
+        for (int i = 0; i < hidden; i++)
+        {
+            int own = Math.Clamp(acc[side * hidden + i], 0, 256), other = Math.Clamp(acc[(1 - side) * hidden + i], 0, 256);
+            mg += (long)own * output[i] + (long)other * output[i + hidden];
+            eg += (long)own * output[i + 2 * hidden] + (long)other * output[i + 3 * hidden];
+        }
+        phase = Math.Clamp(phase, 0, 24);
+        return (lin[0] - lin[1]) / 2 + (int)((mg * phase + eg * (24 - phase)) * (side == 0 ? 1 : -1) / (24 * 65536));
+    }
+    Span<Move> moves = stackalloc Move[256];
+    foreach (bool hybrid in new[] { false, true })
+    {
+        var model = new NeuralNetwork(hidden, linear, bias, weights, output, classicalBase: hybrid, kingContext: true, turnOutput: true, phaseOutput: true);
+        void Check(Board b)
+        {
+            int phase = b.Squares.Where(p => p >= 0).Sum(p => new[] { 0, 1, 1, 2, 4, 0 }[p % 6]);
+            Equal(phase, b.Phase);
+            // Reuse unchanged accumulators at different phases/turns to catch
+            // cache keys that only include side-to-move or dirty features.
+            foreach (int testPhase in new[] { 24, 0, 12, 7, 99, -1, phase })
+                for (int side = 0; side < 2; side++) Equal(Reference(b, side, testPhase), b.Neural!.WhiteScoreForSide(side, testPhase));
+            int white = Reference(b, b.Side, phase);
+            Equal(white, model.EvaluateFromScratch(b));
+            int expected = hybrid ? Evaluation.EvaluateClassical(b) + (b.Side == 0 ? 1 : -1) * Math.Clamp(white, -250, 250)
+                : (b.Side == 0 ? white : -white) + 12;
+#if ASTER_KPK || ASTER_CONVERSION
+            if (KpkBitbase.TryEvaluate(b, out int exact)) expected = exact;
+#endif
+#if ASTER_CONVERSION
+            if (MajorMateBitbase.TryEvaluate(b, out int major)) expected = major;
+#endif
+            Equal(Math.Clamp(expected, -28000, 28000), Evaluation.Evaluate(b));
+        }
+        foreach (string fen in positions.Select(p => p.Fen).Append("4k3/8/8/3pP3/8/8/8/4K3 w - d6 0 1")
+            .Append("7k/P7/8/8/8/8/8/7K w - - 0 1"))
+        {
+            var b = new Board(fen, model); Check(b); ulong key = b.Key;
+            int count = b.GenerateLegal(moves);
+            for (int i = 0; i < count; i++)
+            {
+                Require(b.TryMakeMove(moves[i]), "Generated illegal move"); Check(b); Check(b.Clone());
+                b.UnmakeMove(); Check(b);
+            }
+            for (int ply = 0; ply < 60; ply++)
+            {
+                b.MakeNullMove(); Check(b); b.UnmakeMove(); Check(b);
+                int countNow = b.GenerateLegal(moves); if (countNow == 0) break;
+                Require(b.TryMakeMove(moves[rng.Next(countNow)]), "Generated illegal move"); Check(b);
+            }
+            while (b.Ply > 0) { b.UnmakeMove(); Check(b); }
+            Equal(fen, b.ToFen()); Equal(key, b.Key);
+            _ = Find(b, limits: new SearchLimits(Nodes: 5000)); Check(b); Equal(fen, b.ToFen()); Equal(key, b.Key);
+            using var canceled = new CancellationTokenSource(); canceled.Cancel();
+            _ = Find(b, cancellation: canceled.Token); Check(b); Equal(fen, b.ToFen()); Equal(key, b.Key);
+            b.LoadFen(Board.StartFen); Check(b);
+        }
+        string path = Path.GetTempFileName();
+        try
+        {
+            model.Save(path); var loaded = NeuralNetwork.Load(path);
+            Require(loaded.HasPhaseOutput && loaded.HasTurnOutput && loaded.HasKingContext && !loaded.HasSquaredActivation, "Phase flags lost");
+            Equal(hybrid, loaded.ClassicalBase);
+            foreach (string fen in positions.Select(p => p.Fen)) Equal(model.EvaluateFromScratch(new Board(fen)), loaded.EvaluateFromScratch(new Board(fen)));
+            byte[] original = File.ReadAllBytes(path);
+            foreach (byte[] invalid in new[] { original[..^2], original.Concat(new byte[2]).ToArray() })
+            {
+                File.WriteAllBytes(path, invalid);
+                try { NeuralNetwork.Load(path); throw new Exception("Incorrect phase payload accepted"); } catch (FormatException) { }
+            }
+            File.WriteAllBytes(path, original);
+            using (var file = File.OpenWrite(path)) { file.Position = 8; using var writer = new BinaryWriter(file); writer.Write(11); }
+            try { NeuralNetwork.Load(path); throw new Exception("Unknown phase format accepted"); } catch (FormatException) { }
+        }
+        finally { File.Delete(path); }
+    }
+});
+Test("phase output blends signed-int16 extremes in int64 and rejects incompatible flags", () =>
+{
+    foreach (int hidden in new[] { 8, 256 })
+    {
+        short[] bias = Enumerable.Repeat((short)256, hidden).ToArray(), weights = new short[768 * 17 * hidden];
+        short[] output = Enumerable.Repeat(short.MinValue, hidden * 2).Concat(Enumerable.Repeat(short.MaxValue, hidden * 2)).ToArray();
+        var model = new NeuralNetwork(hidden, new short[768 * 17], bias, weights, output, kingContext: true, turnOutput: true, phaseOutput: true);
+        var b = new Board(network: model);
+        for (int phase = 0; phase <= 24; phase++)
+        {
+            long mg = (long)hidden * 512 * short.MinValue, eg = (long)hidden * 512 * short.MaxValue;
+            int score = (int)((mg * phase + eg * (24 - phase)) / (24 * 65536));
+            Equal(score, b.Neural!.WhiteScoreForSide(0, phase)); Equal(-score, b.Neural.WhiteScoreForSide(1, phase));
+        }
+        Equal(-hidden * 256, model.EvaluateFromScratch(b));
+        foreach (bool squared in new[] { false, true })
+            try
+            {
+                _ = new NeuralNetwork(hidden, new short[768 * 17], bias, weights, output, kingContext: true, turnOutput: squared, squaredActivation: squared, phaseOutput: true);
+                throw new Exception("Incompatible phase flags accepted");
+            }
+            catch (ArgumentException) { }
+    }
+});
 Test("squared activation represents interactions inside the unclipped range", () =>
 {
     const int hidden = 8;

@@ -14,18 +14,20 @@ public sealed class NeuralNetwork
     public bool HasKingContext { get; }
     public bool HasTurnOutput { get; }
     public bool HasSquaredActivation { get; }
+    public bool HasPhaseOutput { get; }
     public int Features => HasKingContext ? ContextFeatureCount : FeatureCount;
     internal readonly int[] Linear, Bias, Weights, Output;
-    public NeuralNetwork(int hidden, short[] linear, short[] bias, short[] weights, short[] output, string name = "unnamed", bool classicalBase = false, bool kingContext = false, bool turnOutput = false, bool squaredActivation = false)
+    public NeuralNetwork(int hidden, short[] linear, short[] bias, short[] weights, short[] output, string name = "unnamed", bool classicalBase = false, bool kingContext = false, bool turnOutput = false, bool squaredActivation = false, bool phaseOutput = false)
     {
         int features = kingContext ? ContextFeatureCount : FeatureCount;
         if (hidden is < 8 or > 256 || hidden % 8 != 0 || linear.Length != features
-            || bias.Length != hidden || weights.Length != features * hidden || output.Length != hidden * (turnOutput ? 2 : 1)
-            || (turnOutput && !kingContext) || (squaredActivation && !turnOutput))
+            || bias.Length != hidden || weights.Length != features * hidden || output.Length != hidden * (phaseOutput ? 4 : turnOutput ? 2 : 1)
+            || (turnOutput && !kingContext) || (squaredActivation && !turnOutput) || (phaseOutput && (!turnOutput || squaredActivation)))
             throw new ArgumentException("Invalid neural network dimensions.");
         Hidden = hidden; Name = name; ClassicalBase = classicalBase; HasKingContext = kingContext;
         HasTurnOutput = turnOutput;
         HasSquaredActivation = squaredActivation;
+        HasPhaseOutput = phaseOutput;
         Linear = Array.ConvertAll(linear, x => (int)x); Bias = Array.ConvertAll(bias, x => (int)x);
         Weights = Array.ConvertAll(weights, x => (int)x); Output = Array.ConvertAll(output, x => (int)x);
     }
@@ -36,11 +38,11 @@ public sealed class NeuralNetwork
         if (!reader.ReadBytes(8).SequenceEqual("ASTNN001"u8.ToArray())) throw new FormatException("Invalid Aster neural network magic.");
         int version = reader.ReadInt32(), features = reader.ReadInt32(), hidden = reader.ReadInt32();
         int activationScale = reader.ReadInt32(), outputScale = reader.ReadInt32();
-        bool context = version >= 3, turnOutput = version is >= 5 and <= 8;
-        if (version is < 1 or > 8 || features != (context ? ContextFeatureCount : FeatureCount) || hidden is < 8 or > 256 || hidden % 8 != 0
+        bool context = version >= 3, turnOutput = version >= 5, phaseOutput = version is 9 or 10;
+        if (version is < 1 or > 10 || features != (context ? ContextFeatureCount : FeatureCount) || hidden is < 8 or > 256 || hidden % 8 != 0
             || activationScale != ActivationScale || outputScale != OutputScale)
             throw new FormatException("Unsupported Aster neural network format.");
-        int outputs = hidden * (turnOutput ? 2 : 1);
+        int outputs = hidden * (phaseOutput ? 4 : turnOutput ? 2 : 1);
         long expected = 28 + 2L * (features + hidden + outputs + features * hidden);
         if (stream.Length != expected) throw new FormatException("Incorrect neural network payload length.");
         short[] Read(int n)
@@ -49,12 +51,12 @@ public sealed class NeuralNetwork
             for (int i = 0; i < n; i++) values[i] = reader.ReadInt16();
             return values;
         }
-        return new NeuralNetwork(hidden, Read(features), Read(hidden), Read(features * hidden), Read(outputs), Path.GetFileName(path), version is 2 or 3 or 5 or 7, context, turnOutput, version is 7 or 8);
+        return new NeuralNetwork(hidden, Read(features), Read(hidden), Read(features * hidden), Read(outputs), Path.GetFileName(path), version is 2 or 3 or 5 or 7 or 9, context, turnOutput, version is 7 or 8, phaseOutput);
     }
     public void Save(string path)
     {
         using var writer = new BinaryWriter(File.Create(path));
-        writer.Write("ASTNN001"u8.ToArray()); writer.Write(HasSquaredActivation ? (ClassicalBase ? 7 : 8) : HasTurnOutput ? (ClassicalBase ? 5 : 6) : HasKingContext ? (ClassicalBase ? 3 : 4) : (ClassicalBase ? 2 : 1)); writer.Write(Features); writer.Write(Hidden);
+        writer.Write("ASTNN001"u8.ToArray()); writer.Write(HasPhaseOutput ? (ClassicalBase ? 9 : 10) : HasSquaredActivation ? (ClassicalBase ? 7 : 8) : HasTurnOutput ? (ClassicalBase ? 5 : 6) : HasKingContext ? (ClassicalBase ? 3 : 4) : (ClassicalBase ? 2 : 1)); writer.Write(Features); writer.Write(Hidden);
         writer.Write(ActivationScale); writer.Write(OutputScale);
         foreach (int[] values in new[] { Linear, Bias, Weights, Output })
             foreach (int value in values) writer.Write((short)value);
@@ -72,7 +74,7 @@ public sealed class NeuralNetwork
         var state = new NeuralAccumulator(this);
         for (int square = 0; square < 64; square++)
             if (board.Squares[square] >= 0) state.Update(board.Squares[square], square, 1);
-        return state.WhiteScoreForSide(board.Side);
+        return state.WhiteScoreForSide(board.Side, board.Phase);
     }
 }
 
@@ -88,6 +90,7 @@ public sealed class NeuralAccumulator
     private int dirtyCount;
     private readonly int[] cachedScores = new int[2];
     private readonly bool[] cacheValid = new bool[2];
+    private readonly int[] cachedPhases = new int[2];
     public NeuralAccumulator(NeuralNetwork model)
     {
         Model = model; accumulated = new int[model.Hidden * 2];
@@ -185,13 +188,14 @@ public sealed class NeuralAccumulator
         }
     }
     public int WhiteScore => WhiteScoreForSide(0);
-    public int WhiteScoreForSide(int side)
+    public int WhiteScoreForSide(int side, int phase = 24)
     {
             if ((uint)side > 1) throw new ArgumentOutOfRangeException(nameof(side));
             if (!Model.HasTurnOutput) side = 0;
+            phase = Model.HasPhaseOutput ? Math.Clamp(phase, 0, 24) : 24;
             Flush();
-            if (cacheValid[side]) return cachedScores[side];
-            long residual = 0;
+            if (cacheValid[side] && cachedPhases[side] == phase) return cachedScores[side];
+            long residual = 0, endgame = 0;
             int i = 0;
             int ownOffset = side * Model.Hidden, otherOffset = (1 - side) * Model.Hidden;
             if (Vector.IsHardwareAccelerated)
@@ -212,6 +216,11 @@ public sealed class NeuralAccumulator
                     {
                         residual += Vector.Dot(white, new Vector<int>(Model.Output.AsSpan(i)));
                         residual += Vector.Dot(black, new Vector<int>(Model.Output.AsSpan(i + Model.Hidden)));
+                        if (Model.HasPhaseOutput)
+                        {
+                            endgame += Vector.Dot(white, new Vector<int>(Model.Output.AsSpan(i + 2 * Model.Hidden)));
+                            endgame += Vector.Dot(black, new Vector<int>(Model.Output.AsSpan(i + 3 * Model.Hidden)));
+                        }
                     }
                     else residual += Vector.Dot(white - black, new Vector<int>(Model.Output.AsSpan(i)));
                 }
@@ -223,9 +232,15 @@ public sealed class NeuralAccumulator
                 if (Model.HasSquaredActivation) { own = own * own / 256; other = other * other / 256; }
                 residual += Model.HasTurnOutput ? (long)own * Model.Output[i] + (long)other * Model.Output[i + Model.Hidden]
                     : (long)(own - other) * Model.Output[i];
+                if (Model.HasPhaseOutput) endgame += (long)own * Model.Output[i + 2 * Model.Hidden] + (long)other * Model.Output[i + 3 * Model.Hidden];
             }
+            // Blend before division: rounding each head separately loses signed
+            // fractional contributions. Both dot sums and their blend need int64.
+            int divisor = NeuralNetwork.ActivationScale * NeuralNetwork.OutputScale;
+            if (Model.HasPhaseOutput) { residual = residual * phase + endgame * (24 - phase); divisor *= 24; }
             if (side == 1) residual = -residual;
-            cachedScores[side] = (linear[0] - linear[1]) / 2 + (int)(residual / (NeuralNetwork.ActivationScale * NeuralNetwork.OutputScale));
+            cachedScores[side] = (linear[0] - linear[1]) / 2 + (int)(residual / divisor);
+            cachedPhases[side] = phase;
             cacheValid[side] = true;
             return cachedScores[side];
     }

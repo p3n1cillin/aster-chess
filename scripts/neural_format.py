@@ -12,6 +12,12 @@ CONTEXT_FEATURES = FEATURES * 17
 ACTIVATION_SCALE = OUTPUT_SCALE = 256
 
 
+def material_phase(board: chess.Board) -> int:
+    return min(24, sum(len(board.pieces(piece, color)) * weight
+                      for piece, weight in ((chess.KNIGHT, 1), (chess.BISHOP, 1), (chess.ROOK, 2), (chess.QUEEN, 4))
+                      for color in (chess.WHITE, chess.BLACK)))
+
+
 def feature_indices(board: chess.Board, perspective: bool, king_context: bool = False) -> list[int]:
     result = []
     for square, piece in board.piece_map().items():
@@ -33,13 +39,13 @@ def quantize(values: np.ndarray, scale: float = 1) -> np.ndarray:
     return rounded.astype("<i2")
 
 
-def save_model(path: pathlib.Path, linear: np.ndarray, bias: np.ndarray, weights: np.ndarray, output: np.ndarray, classical_base: bool = False, king_context: bool = False, turn_output: bool = False, squared_activation: bool = False) -> None:
+def save_model(path: pathlib.Path, linear: np.ndarray, bias: np.ndarray, weights: np.ndarray, output: np.ndarray, classical_base: bool = False, king_context: bool = False, turn_output: bool = False, squared_activation: bool = False, phase_output: bool = False) -> None:
     hidden = bias.size
     features = CONTEXT_FEATURES if king_context else FEATURES
-    if linear.shape != (features,) or weights.shape != (features, hidden) or output.shape != (hidden * (2 if turn_output else 1),) or not 8 <= hidden <= 256 or hidden % 8 or (turn_output and not king_context) or (squared_activation and not turn_output):
+    if linear.shape != (features,) or weights.shape != (features, hidden) or output.shape != (hidden * (4 if phase_output else 2 if turn_output else 1),) or not 8 <= hidden <= 256 or hidden % 8 or (turn_output and not king_context) or (squared_activation and not turn_output) or (phase_output and (not turn_output or squared_activation)):
         raise ValueError("Invalid model dimensions")
     with path.open("wb") as file:
-        version = (7 if classical_base else 8) if squared_activation else (5 if classical_base else 6) if turn_output else (3 if classical_base else 4) if king_context else (2 if classical_base else 1)
+        version = (9 if classical_base else 10) if phase_output else (7 if classical_base else 8) if squared_activation else (5 if classical_base else 6) if turn_output else (3 if classical_base else 4) if king_context else (2 if classical_base else 1)
         file.write(struct.pack("<8s5i", b"ASTNN001", version, features, hidden, ACTIVATION_SCALE, OUTPUT_SCALE))
         file.write(quantize(linear, 100).tobytes())  # training uses pawn units
         file.write(quantize(bias, ACTIVATION_SCALE).tobytes())
@@ -51,18 +57,20 @@ class QuantizedModel:
     def __init__(self, path: str | pathlib.Path):
         data = pathlib.Path(path).read_bytes()
         magic, version, features, hidden, qa, qb = struct.unpack_from("<8s5i", data)
-        context, turn_output = version in (3, 4, 5, 6, 7, 8), version in (5, 6, 7, 8)
-        if magic != b"ASTNN001" or version not in (1, 2, 3, 4, 5, 6, 7, 8) or features != (CONTEXT_FEATURES if context else FEATURES) or not 8 <= hidden <= 256 or hidden % 8 or qa != 256 or qb != 256:
+        context, turn_output = version in range(3, 11), version in range(5, 11)
+        phase_output = version in (9, 10)
+        if magic != b"ASTNN001" or version not in range(1, 11) or features != (CONTEXT_FEATURES if context else FEATURES) or not 8 <= hidden <= 256 or hidden % 8 or qa != 256 or qb != 256:
             raise ValueError("Unsupported Aster neural network format")
         values = np.frombuffer(data, dtype="<i2", offset=28).astype(np.int64)
-        outputs = hidden * (2 if turn_output else 1)
+        outputs = hidden * (4 if phase_output else 2 if turn_output else 1)
         if len(values) != features + hidden + outputs + features * hidden:
             raise ValueError("Invalid payload length")
         self.hidden = hidden
-        self.classical_base = version in (2, 3, 5, 7)
+        self.classical_base = version in (2, 3, 5, 7, 9)
         self.king_context = context
         self.turn_output = turn_output
         self.squared_activation = version in (7, 8)
+        self.phase_output = phase_output
         self.linear = values[:features]
         self.bias = values[features:features + hidden]
         self.weights = values[features + hidden:features + hidden + features * hidden].reshape(features, hidden)
@@ -78,11 +86,17 @@ class QuantizedModel:
             aw, ab = aw * aw // 256, ab * ab // 256
         if self.turn_output:
             own, other = (aw, ab) if board.turn else (ab, aw)
-            residual = int(own @ self.output[:self.hidden] + other @ self.output[self.hidden:]) * (1 if board.turn else -1)
+            residual = int(own @ self.output[:self.hidden] + other @ self.output[self.hidden:2*self.hidden])
+            if self.phase_output:
+                endgame = int(own @ self.output[2*self.hidden:3*self.hidden] + other @ self.output[3*self.hidden:])
+                phase = material_phase(board)
+                residual = residual * phase + endgame * (24 - phase)
+            residual *= 1 if board.turn else -1
         else:
             residual = int((aw - ab) @ self.output)
         # C# signed integer division truncates toward zero, not toward -infinity.
-        return int(linear / 2) + int(residual / (256 * 256))
+        divisor = 256 * 256 * (24 if self.phase_output else 1)
+        return int(linear / 2) + (abs(residual) // divisor) * (1 if residual >= 0 else -1)
 
     def side_score(self, board: chess.Board, classical_score: int | None = None) -> int:
         white = self.white_score(board)

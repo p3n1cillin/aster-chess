@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "started_utc": "2026-10-04T17:40:04.941283+00:00",
+  "plan_sha256": "dd492b81550765016389854558f02d755559d9b3c9961eb6e800a57014c39101",
+  "scripts": {
+    "train_network.py": "08f8647a375444193303d057f9704f965582760c3d8dcf157178e2704fa65af9",
+    "neural_format.py": "304897abff22a599e5523ad08492f76d91dde8def54e54497716969602970efa",
+    "train_phase.py": "9ca0b38cfc7e97e415bc9032ac894373b1a39470502ca23781add6e7e24a7dcf"
+  },
+  "completed": [
+    {
+      "role": "control",
+      "training_sha256": "9b9b107bfa7491ab822f626c3921cdcf6e80c2b2197f80dcf6c75b98f0a6dae4",
+      "model_sha256": "98535307c0c30b529cf242d2a947ccacf66678b25710f80de980e13ec4c77975",
+      "quantized_mae_cp": 127.62284710017575
+    },
+    {
+      "role": "candidate",
+      "training_sha256": "f165af10608afb2cc90a100d705602b8fb116dc9cc25632742f41170524999e3",
+      "model_sha256": "037f06f436437a50ada9c2ced14d6c1a960fb127dd7d1122dd01defb2029416e",
+      "quantized_mae_cp": 127.42636203866432
+    }
+  ],
+  "updated_utc": "2026-10-04T17:42:11.942483+00:00"
+}

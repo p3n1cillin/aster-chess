@@ -53,7 +53,7 @@ public static class Evaluation
 #endif
         if (board.Neural != null)
         {
-            int white = board.Neural.WhiteScoreForSide(board.Side);
+            int white = board.Neural.WhiteScoreForSide(board.Side, board.Phase);
             if (board.Neural.Model.ClassicalBase) white = Math.Clamp(white, -250, 250);
             int baseline = board.Neural.Model.ClassicalBase ? EvaluateClassical(board) : 12;
             return Math.Clamp((board.Side == 0 ? white : -white) + baseline, -28000, 28000);

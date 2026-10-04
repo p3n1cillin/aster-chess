@@ -51,7 +51,7 @@ public sealed class Uci
 #elif ASTER_THREATS
                         Write("id name Aster 0.7.1-threat-dev");
 #else
-                        Write("id name Aster 0.7.6-feature-dev");
+                        Write("id name Aster 0.7.8-phase-dev");
 #endif
                         Write("id author Aster contributors");
                         Write("option name Hash type spin default 64 min 1 max 1024");
@@ -124,7 +124,7 @@ public sealed class Uci
                         break;
                     case "nncheck":
                         if (network == null) Write("info string nncheck classical");
-                        else Write($"info string nncheck {position.Neural!.WhiteScoreForSide(position.Side)} {network.EvaluateFromScratch(position)}");
+                        else Write($"info string nncheck {position.Neural!.WhiteScoreForSide(position.Side, position.Phase)} {network.EvaluateFromScratch(position)}");
                         break;
                     case "perft":
                         await StopAsync();

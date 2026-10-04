@@ -1,0 +1,80 @@
+{
+  "correctness_passed": true,
+  "candidate_tactics_passed": false,
+  "models": {
+    "control": {
+      "path": "artifacts/training/phase-control-v1/model.ann",
+      "sha256": "98535307c0c30b529cf242d2a947ccacf66678b25710f80de980e13ec4c77975",
+      "training_sha256": "9b9b107bfa7491ab822f626c3921cdcf6e80c2b2197f80dcf6c75b98f0a6dae4"
+    },
+    "candidate": {
+      "path": "artifacts/training/phase-output-v1/model.ann",
+      "sha256": "037f06f436437a50ada9c2ced14d6c1a960fb127dd7d1122dd01defb2029416e",
+      "training_sha256": "f165af10608afb2cc90a100d705602b8fb116dc9cc25632742f41170524999e3"
+    }
+  },
+  "tactics": {
+    "control": {
+      "tactics-depth8": {
+        "solved": 32,
+        "minimum": 32,
+        "passed": true
+      },
+      "tactics-5000nodes": {
+        "solved": 32,
+        "minimum": 32,
+        "passed": true
+      },
+      "tactics-quiet-depth8": {
+        "solved": 32,
+        "minimum": 32,
+        "passed": true
+      },
+      "tactics-quiet-5000nodes": {
+        "solved": 23,
+        "minimum": 25,
+        "passed": false
+      },
+      "endgames-5000nodes": {
+        "solved": 13,
+        "minimum": 13,
+        "passed": true
+      }
+    },
+    "candidate": {
+      "tactics-depth8": {
+        "solved": 32,
+        "minimum": 32,
+        "passed": true
+      },
+      "tactics-5000nodes": {
+        "solved": 32,
+        "minimum": 32,
+        "passed": true
+      },
+      "tactics-quiet-depth8": {
+        "solved": 30,
+        "minimum": 32,
+        "passed": false
+      },
+      "tactics-quiet-5000nodes": {
+        "solved": 24,
+        "minimum": 25,
+        "passed": false
+      },
+      "endgames-5000nodes": {
+        "solved": 13,
+        "minimum": 13,
+        "passed": true
+      }
+    }
+  },
+  "engine": "artifacts/publish/phase-dev/Aster.dll",
+  "engine_sha256": "ea5ba189628bf12c597620438563e323aed1306a2426bc91ec82f6a72f4f85ff",
+  "source_manifest": "artifacts/research/phase-source/manifest.json",
+  "source_manifest_sha256": "3ee13720e63ae073a28ac4ea93a799f6557d39f53ca5835bdcea5a95032894bb",
+  "default_unchanged_positions": 80,
+  "plan_sha256": "dd492b81550765016389854558f02d755559d9b3c9961eb6e800a57014c39101",
+  "script_sha256": "d9701299a7400af63e14bc3ec496364c8b1d3948f4cc1538190f657b28d197b9",
+  "interpretation": "Pre-match correctness and tactical checks. Failures block conditional longer confirmation but both short screens still run. Exact default search traces preserve classical behavior; rating remains attached to the earlier matched binary."
+}

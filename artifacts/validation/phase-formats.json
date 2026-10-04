@@ -1,0 +1,123 @@
+{
+  "passed": true,
+  "engine_sha256": "ea5ba189628bf12c597620438563e323aed1306a2426bc91ec82f6a72f4f85ff",
+  "script_sha256": "6c04498a6410ad3a9bf218e1e8f597d494668c57d01d4e7fb8df90c23feb3347",
+  "identical_initial_shared_parameters_and_rng": true,
+  "identical_initial_predictions_tolerance": 1e-06,
+  "checks": [
+    {
+      "version": 1,
+      "hidden": 16,
+      "scalar": false,
+      "positions": 525,
+      "path": "artifacts/validation/phase-format-v1/format-1-vector.json",
+      "sha256": "568461303172130f01657b4f0f1863ba4958756b935ba865a0365b421ceb9400"
+    },
+    {
+      "version": 2,
+      "hidden": 16,
+      "scalar": false,
+      "positions": 525,
+      "path": "artifacts/validation/phase-format-v1/format-2-vector.json",
+      "sha256": "449d886d6c9f72d4f058ec7028fc00e4af15837a0668ea8083112f609dab1097"
+    },
+    {
+      "version": 3,
+      "hidden": 16,
+      "scalar": false,
+      "positions": 525,
+      "path": "artifacts/validation/phase-format-v1/format-3-vector.json",
+      "sha256": "bdf5435e8d2f01c259b8b8476a998e8219cb0c172caba16e26cf2ec172baa166"
+    },
+    {
+      "version": 4,
+      "hidden": 16,
+      "scalar": false,
+      "positions": 525,
+      "path": "artifacts/validation/phase-format-v1/format-4-vector.json",
+      "sha256": "22476a4200a7ad51b57040eef4cfc069b54e12b2330cd8945c51b308878f96e9"
+    },
+    {
+      "version": 5,
+      "hidden": 16,
+      "scalar": false,
+      "positions": 525,
+      "path": "artifacts/validation/phase-format-v1/format-5-vector.json",
+      "sha256": "bed268eb2630dcfc8a7713cd3d771e1536de49a2d0b0feffd02b46a50816bb02"
+    },
+    {
+      "version": 6,
+      "hidden": 16,
+      "scalar": false,
+      "positions": 525,
+      "path": "artifacts/validation/phase-format-v1/format-6-vector.json",
+      "sha256": "15a90d8b1fef985d6130a26274423a14920dbc322663662e7deb059a8771a71b"
+    },
+    {
+      "version": 7,
+      "hidden": 16,
+      "scalar": false,
+      "positions": 525,
+      "path": "artifacts/validation/phase-format-v1/format-7-vector.json",
+      "sha256": "79d4f63739efc45b813f6604adc0c0c8ec7d6806e1d301cdc018a91531e3610e"
+    },
+    {
+      "version": 8,
+      "hidden": 16,
+      "scalar": false,
+      "positions": 525,
+      "path": "artifacts/validation/phase-format-v1/format-8-vector.json",
+      "sha256": "881c7317ea7dd625ff776c9c85da08750625756a54e30fd307a5d238d087066f"
+    },
+    {
+      "version": 9,
+      "hidden": 16,
+      "scalar": false,
+      "positions": 525,
+      "path": "artifacts/validation/phase-format-v1/format-9-vector.json",
+      "sha256": "0f65bb1a619b9f7bd4f9d6b20807a59e4a5fef4c7215298d78f17bf680118798"
+    },
+    {
+      "version": 9,
+      "hidden": 16,
+      "scalar": true,
+      "positions": 525,
+      "path": "artifacts/validation/phase-format-v1/format-9-scalar.json",
+      "sha256": "0f65bb1a619b9f7bd4f9d6b20807a59e4a5fef4c7215298d78f17bf680118798"
+    },
+    {
+      "version": 10,
+      "hidden": 16,
+      "scalar": false,
+      "positions": 525,
+      "path": "artifacts/validation/phase-format-v1/format-10-vector.json",
+      "sha256": "95b24359d884df6c44f732b617d7b7ee78330e05fe283640509024b2e04c8e43"
+    },
+    {
+      "version": 10,
+      "hidden": 16,
+      "scalar": true,
+      "positions": 525,
+      "path": "artifacts/validation/phase-format-v1/format-10-scalar.json",
+      "sha256": "95b24359d884df6c44f732b617d7b7ee78330e05fe283640509024b2e04c8e43"
+    },
+    {
+      "version": 10,
+      "hidden": 256,
+      "scalar": false,
+      "positions": 525,
+      "path": "artifacts/validation/phase-format-v1/format-11-vector.json",
+      "sha256": "2ca46fd7777cfc8f4915a2f74ffc87a2e73baebc6a9f3c338ae241e8966d3775"
+    },
+    {
+      "version": 10,
+      "hidden": 256,
+      "scalar": true,
+      "positions": 525,
+      "path": "artifacts/validation/phase-format-v1/format-11-scalar.json",
+      "sha256": "2ca46fd7777cfc8f4915a2f74ffc87a2e73baebc6a9f3c338ae241e8966d3775"
+    }
+  ],
+  "exact_inference_positions": 7350,
+  "interpretation": "Independent Python integer rebuild vs incremental C# inference. All existing formats preserved; phase formats additionally force scalar execution and test extreme int16 outputs. Not playing-strength evidence."
+}
