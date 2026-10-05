@@ -9,3 +9,4 @@ tools/stockfish/*
 .env.*
 !.env.example
 .aster-local/
+artifacts/build/

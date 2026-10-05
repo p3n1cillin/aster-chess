@@ -1,0 +1,11 @@
+{
+  "status": "prototype; not strength-qualified or enabled by default",
+  "plan": "artifacts/research/continuation-plan-v1.json",
+  "build": "dotnet build tests/Engine.Tests -c Release -p:DefineConstants=ASTER_CONTINUATION -o artifacts/build/continuation-tests",
+  "verification": "dotnet artifacts/build/continuation-tests/Engine.Tests.dll: 60 passed, 0 failed",
+  "default_solution_build": "passed, 0 warnings, 0 errors",
+  "opening_generation": "256 positions, 464 attempts; independent exclusion/history audit passed",
+  "matches": "not run; user redirected priority to adopting a stronger engine foundation",
+  "promotion": false,
+  "rating": "unrated"
+}

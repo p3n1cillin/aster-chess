@@ -22,6 +22,11 @@ public sealed class Search(TranspositionTable table)
     private readonly int[] scoreBuffer = new int[MaxPly * 256];
     private readonly Move[,] killers = new Move[MaxPly, 2];
     private readonly int[,,] history = new int[2, 64, 64];
+#if ASTER_CONTINUATION
+    private const int MoveContexts = 12 * 64;
+    private readonly int[] continuation = new int[MoveContexts * MoveContexts];
+    private readonly int[] previousContext = new int[MaxPly];
+#endif
     private readonly Move[,] pv = new Move[MaxPly, MaxPly];
     private readonly int[] pvLength = new int[MaxPly];
     private readonly Stopwatch clock = new();
@@ -43,6 +48,9 @@ public sealed class Search(TranspositionTable table)
 #endif
         clock.Restart(); table.NewSearch();
         Array.Clear(killers); Array.Clear(pvLength);
+#if ASTER_CONTINUATION
+        Array.Clear(continuation); Array.Fill(previousContext, -1);
+#endif
         for (int side = 0; side < 2; side++) for (int from = 0; from < 64; from++) for (int to = 0; to < 64; to++)
             history[side, from, to] /= 2;
         Span<Move> legal = stackalloc Move[256];
@@ -176,7 +184,13 @@ public sealed class Search(TranspositionTable table)
             int score;
             visualization?.NullProbe();
             board.MakeNullMove();
-            try { visualization?.Enter(ply, Move.None); score = -Negamax(depth - 1 - (2 + depth / 4), ply + 1, -beta, -beta + 1, false); }
+            try
+            {
+#if ASTER_CONTINUATION
+                previousContext[ply + 1] = -1;
+#endif
+                visualization?.Enter(ply, Move.None); score = -Negamax(depth - 1 - (2 + depth / 4), ply + 1, -beta, -beta + 1, false);
+            }
             finally { board.UnmakeMove(); visualization?.Leave(ply); }
             if (score >= beta && score < MateThreshold) return score;
         }
@@ -201,12 +215,18 @@ public sealed class Search(TranspositionTable table)
             SelectNext(moves, scores, i, count);
             Move move = moves[i];
             if (ply == 0 && limits.SearchMoves != null && Array.IndexOf(limits.SearchMoves, move) < 0) continue;
+#if ASTER_CONTINUATION
+            int moveContext = board.Squares[move.From] * 64 + move.To;
+#endif
             if (!board.TryMakeMove(move)) continue;
             legalCount++;
             int score;
             int moveAlpha = alpha;
             try
             {
+#if ASTER_CONTINUATION
+                previousContext[ply + 1] = moveContext;
+#endif
                 visualization?.Enter(ply, move);
                 if (ply == 0) visualization?.RootStart(move, nodes);
                 bool givesCheck = board.InCheck;
@@ -224,7 +244,13 @@ public sealed class Search(TranspositionTable table)
                     if (score > alpha && score < beta) score = -Negamax(depth - 1, ply + 1, -beta, -alpha, true);
                 }
             }
-            finally { board.UnmakeMove(); visualization?.Leave(ply); }
+            finally
+            {
+                board.UnmakeMove(); visualization?.Leave(ply);
+#if ASTER_CONTINUATION
+                previousContext[ply + 1] = -1;
+#endif
+            }
             if (ply == 0) visualization?.RootEnd(move, score, moveAlpha, beta, nodes);
             if (score > bestScore) { bestScore = score; best = move; }
             if (score > alpha)
@@ -239,6 +265,16 @@ public sealed class Search(TranspositionTable table)
                         int bonus = Math.Min(1600, depth * depth * 24);
                         ref int h = ref history[us, move.From, move.To];
                         h += bonus - h * bonus / 16384;
+#if ASTER_CONTINUATION
+                        if (previousContext[ply] >= 0)
+                        {
+                            ref int contextual = ref continuation[previousContext[ply] * MoveContexts + moveContext];
+                            contextual += bonus - contextual * bonus / 16384;
+#if ASTER_PROFILE
+                            SearchProfile.RecordContinuationUpdate();
+#endif
+                        }
+#endif
                     }
                     break;
                 }
@@ -311,12 +347,27 @@ public sealed class Search(TranspositionTable table)
             // Keep promotions, checks, and all evasions regardless of SEE.
             bool losingCapture = !inCheck && move.IsCapture && move.Promotion == 0
                 && (move == ttMove ? See.Evaluate(board, move) < 0 : scores[i] < 500_000);
+#if ASTER_CONTINUATION
+            int moveContext = board.Squares[move.From] * 64 + move.To;
+#endif
             if (!board.TryMakeMove(move)) continue;
             if (inCheck) legalEvasions++;
             if (losingCapture && !board.InCheck) { board.UnmakeMove(); continue; }
             int score;
-            try { visualization?.Enter(ply, move); score = -Quiescence(ply + 1, -beta, -alpha); }
-            finally { board.UnmakeMove(); visualization?.Leave(ply); }
+            try
+            {
+#if ASTER_CONTINUATION
+                previousContext[ply + 1] = moveContext;
+#endif
+                visualization?.Enter(ply, move); score = -Quiescence(ply + 1, -beta, -alpha);
+            }
+            finally
+            {
+                board.UnmakeMove(); visualization?.Leave(ply);
+#if ASTER_CONTINUATION
+                previousContext[ply + 1] = -1;
+#endif
+            }
             if (score > best) { best = score; bestMove = move; }
             if (score > alpha)
             {
@@ -373,7 +424,20 @@ public sealed class Search(TranspositionTable table)
             }
             else if (move == killers[ply, 0]) scores[i] = 900_000;
             else if (move == killers[ply, 1]) scores[i] = 800_000;
-            else scores[i] = history[board.Side, move.From, move.To];
+            else
+            {
+                scores[i] = history[board.Side, move.From, move.To];
+#if ASTER_CONTINUATION
+                if (previousContext[ply] >= 0)
+                {
+                    int value = continuation[previousContext[ply] * MoveContexts + board.Squares[move.From] * 64 + move.To];
+                    scores[i] += value;
+#if ASTER_PROFILE
+                    SearchProfile.RecordContinuationUse(value);
+#endif
+                }
+#endif
+            }
         }
 #if ASTER_PROFILE
         }
