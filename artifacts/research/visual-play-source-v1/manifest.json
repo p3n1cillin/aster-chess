@@ -1,0 +1,157 @@
+{
+  "binary": "artifacts/publish/visual-play-dev/Aster.dll",
+  "binary_sha256": "04cf97e1f9b70b1c092efa1f6512af39e86ed98223f266d30f8c7d676f0b33a2",
+  "build": "dotnet build Aster.sln -c Release; dotnet publish src/Engine/Engine.csproj -c Release -o artifacts/publish/visual-play-dev",
+  "sdk": "8.0.425",
+  "note": "Optional native search observations, no search decision or evaluation changes; local ASP.NET play host and native game/SAN tests.",
+  "source_files": [
+    {
+      "path": "Aster.sln",
+      "sha256": "bfee8ed941bbd6e592fc775444141b5daeaf5ef33e2d12219c6d736dc932f553"
+    },
+    {
+      "path": "Directory.Build.props",
+      "sha256": "aae19899039dcffcd68ffa855c683877cd6c4d6813d36bd974024a26b219badb"
+    },
+    {
+      "path": "global.json",
+      "sha256": "d8fc1e71d76ffd7f785d4b7abbae953024544b52cf19fc4b8d687b058e594610"
+    },
+    {
+      "path": "src/Engine/Attacks.cs",
+      "sha256": "10a2eb8139f9786d5b097d92f3e385a889a24c8940a0d1fade1b1a987a37b9c6"
+    },
+    {
+      "path": "src/Engine/Board.cs",
+      "sha256": "af1db55d63700255db50bd2c5b538d15c7ae1558ba3296a21f0e54bf2bfa16d9"
+    },
+    {
+      "path": "src/Engine/EndgameProof.cs",
+      "sha256": "5f7657f027792d8137ebd640226ba882f939481ef27f171bb74f1730e289f854"
+    },
+    {
+      "path": "src/Engine/Evaluation.cs",
+      "sha256": "b7c1ad0014eebea5d59c13ba37861616df60db253f906f6b94b4fb88e7d3bbe5"
+    },
+    {
+      "path": "src/Engine/KpkBitbase.cs",
+      "sha256": "a13112931282526f774ca2b5ea1e87736f0c21e4b24d1fa9da8ae18560bfcc39"
+    },
+    {
+      "path": "src/Engine/MajorMateBitbase.cs",
+      "sha256": "2ff38a71882eb9f8a5a1305745f569bb6849bb44f8d2a2c329ecba9a74617b48"
+    },
+    {
+      "path": "src/Engine/MateProof.cs",
+      "sha256": "b2d5810477e8ccdfb4f3c8eb933aa4cbbf67ff4fbf805302bc642f0921f1720a"
+    },
+    {
+      "path": "src/Engine/Move.cs",
+      "sha256": "9cee181118dc8dbf01687b7c5210ad81aa07826e70ce7fb9b512b321b69bdc85"
+    },
+    {
+      "path": "src/Engine/NeuralNetwork.cs",
+      "sha256": "bf0c622bd16ef289352225f59394fcef44efaaea6f28a22c9b7063b7fc6f6c76"
+    },
+    {
+      "path": "src/Engine/Perft.cs",
+      "sha256": "7e679e005a22d3cd3e003f6034495d4e62c8fd5ca79b89822c9a7e78b2fd085e"
+    },
+    {
+      "path": "src/Engine/Program.cs",
+      "sha256": "73d98b392af0c32a9d952d32562e733157da683c2f54fd20acaf3f5e31322656"
+    },
+    {
+      "path": "src/Engine/Search.cs",
+      "sha256": "ccd955cad6e76ec87b7f4230cdd001e84e6b1e7ce0542f397605a7941b45d8ca"
+    },
+    {
+      "path": "src/Engine/SearchProfile.cs",
+      "sha256": "60ed1caee10ce09adf20d9542d0eac06fc613a29881f04bd0f15a826109d405c"
+    },
+    {
+      "path": "src/Engine/SearchVisualization.cs",
+      "sha256": "db5338d1d63490239b2a21703737e589191259100b903eb03cec80788cca0dcc"
+    },
+    {
+      "path": "src/Engine/StaticExchange.cs",
+      "sha256": "36208f3889d346dac33deba7ad7f9e20cd67deeb465c910f2355cbde8fd57af9"
+    },
+    {
+      "path": "src/Engine/ThreatEvaluation.cs",
+      "sha256": "b956761ca5157dc70faecdd28faa1d45a52cd574cefb9866cd45a11f5df364bd"
+    },
+    {
+      "path": "src/Engine/TranspositionTable.cs",
+      "sha256": "6b6a3a5581678ebf8c36640f02e1ed27ee9055ed55f1eaa205ab7d38bbf45001"
+    },
+    {
+      "path": "src/Engine/Uci.cs",
+      "sha256": "e7ad48a29a51d81bd8c895e72e1a41d1df058839bf35c9e3638de25e109e485d"
+    },
+    {
+      "path": "src/Engine/Zobrist.cs",
+      "sha256": "116806963b5b3a5b9bd10c9b988fffd78ce56f7abfa3a2bf716203d42c687ac2"
+    },
+    {
+      "path": "src/Engine/Engine.csproj",
+      "sha256": "7cf064b7199806147a2d4c716a36ff3e916002ca7df76c476d511296a72e6052"
+    },
+    {
+      "path": "tests/Engine.Tests/Program.cs",
+      "sha256": "05704093405b860a979d85e70ac2e4a29b41ba95a1188f519646a6b91d9d06dd"
+    },
+    {
+      "path": "tests/Engine.Tests/Engine.Tests.csproj",
+      "sha256": "731df592e64b335e2d2bb5e1aad2c481926ff8c43284e4a81b888cadaf782639"
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "sha256": "9e94d35a0e7adb4835b3c3faaadc17fd3d0d6e6829862600674835f4212b045e"
+    },
+    {
+      "path": "scripts/play.ps1",
+      "sha256": "221ca7252c27c1ff812188e1b2f6133e4f0c83fd588dbbc022321f9e1188400e"
+    },
+    {
+      "path": "scripts/smoke_play.py",
+      "sha256": "757e1509293895d166a04b21dc34bea732846b5f3f23c54f9a51748e0aa17b57"
+    },
+    {
+      "path": "src/Play/ChessNotation.cs",
+      "sha256": "de46fa726ec2cc45dbab6d76cf413ee0bb0c1db11a0930394af3cd74830f3ccf"
+    },
+    {
+      "path": "src/Play/Game.cs",
+      "sha256": "9982ce3e27f3e5ddabc75702dcb7cd2501f196b82e30932c3cf24b7475670bf6"
+    },
+    {
+      "path": "src/Play/Play.csproj",
+      "sha256": "efb827c460f72b91fbe44cab598bd7ed51431eeeb45e24d9f0cfc882e5ebca41"
+    },
+    {
+      "path": "src/Play/Program.cs",
+      "sha256": "5b187ee760a10f8b7a9b9c7f6aa3193c3750f12331b9baf9ad01cb9c41172f37"
+    },
+    {
+      "path": "src/Play/wwwroot/app.css",
+      "sha256": "afe8aa11b5c2f76345154dba14b304dedd964d6c606fbc3b8efbbc68a26f01cf"
+    },
+    {
+      "path": "src/Play/wwwroot/app.js",
+      "sha256": "5714391070be5fa6d5af3aa695177fda42a58ac438ccfe12709a25fc9de452e8"
+    },
+    {
+      "path": "src/Play/wwwroot/index.html",
+      "sha256": "c7a136a5df048d696538f3c8900af59bedc6e11fbbb4c1d90da5b630d7e4a82d"
+    },
+    {
+      "path": "tests/Play.Tests/Play.Tests.csproj",
+      "sha256": "45e7941f0164cc5aee3ac8a94da5f4300c4d8bcf163705a206377f73b8d21d28"
+    },
+    {
+      "path": "tests/Play.Tests/Program.cs",
+      "sha256": "6cb58431cb882bc347eef06c3a2379fe32724deb2f71cd61b125c66888e2331e"
+    }
+  ]
+}

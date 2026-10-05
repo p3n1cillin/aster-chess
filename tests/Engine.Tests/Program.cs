@@ -1215,5 +1215,63 @@ Test("unseeded secondary search stores only its actual depth and preserves guard
 });
 #endif
 
+Test("visualization reports real paths and preserves fixed-budget search decisions", () =>
+{
+    foreach (var position in positions)
+    {
+        var original = new Board(position.Fen);
+        var observed = original.Clone();
+        var limits = new SearchLimits(Depth: 6, Nodes: 12000);
+        var baseline = new Search(new TranspositionTable(8)).Run(original, limits);
+        var frames = new List<SearchView>();
+        var result = new Search(new TranspositionTable(8)).Run(observed, limits, visualize: new SearchVisualization(frames.Add, 30));
+        Equal(baseline.BestMove, result.BestMove); Equal(baseline.Score, result.Score);
+        Equal(baseline.Depth, result.Depth); Equal(baseline.Nodes, result.Nodes);
+        Require(baseline.Pv.SequenceEqual(result.Pv), "Observation changed principal variation");
+        Equal(position.Fen, observed.ToFen()); Equal(original.Key, observed.Key);
+        Require(frames.Count >= 2 && frames[^1].Finished, "Missing final visualization frame");
+        Equal(result.Nodes, frames[^1].Nodes);
+        foreach (var frame in frames)
+        {
+            Equal(frame.Nodes, frame.MainNodes + frame.QuiescenceNodes);
+            Equal(64, frame.DestinationVisits.Length);
+            Require(frame.DestinationVisits.All(n => n >= 0) && frame.DestinationVisits.Sum() <= frame.Nodes, "Invalid destination visits");
+            var replay = new Board(position.Fen);
+            foreach (string uci in frame.Line)
+            {
+                if (uci == "null") replay.MakeNullMove();
+                else Require(replay.TryMakeMove(replay.ParseMove(uci)), "Invalid sampled branch");
+            }
+            Equal(frame.Fen, replay.ToFen());
+            foreach (var root in frame.RootMoves)
+            {
+                _ = original.ParseMove(root.Move);
+                Require(root.Nodes >= 0, "Negative root visit count");
+                Require(root.Searching ? root.Score == null && root.Bound == "pending" : root.Bound == "unfinished" ? frame.Finished && root.Score == null : root.Score != null && root.Bound is "exact" or "upper" or "lower", "Incorrect pending/bound state");
+            }
+        }
+    }
+});
+Test("failing visualization sinks cannot corrupt or interrupt play", () =>
+{
+    var original = new Board(); var observed = new Board(); int calls = 0;
+    var limits = new SearchLimits(Depth: 5, Nodes: 10000);
+    var baseline = new Search(new TranspositionTable(8)).Run(original, limits);
+    var result = new Search(new TranspositionTable(8)).Run(observed, limits,
+        visualize: new SearchVisualization(_ => { calls++; throw new IOException("Disconnected viewer"); }));
+    Equal(1, calls); Equal(baseline.BestMove, result.BestMove); Equal(baseline.Score, result.Score);
+    Equal(baseline.Nodes, result.Nodes); Equal(Board.StartFen, observed.ToFen());
+});
+Test("visualization cancellation and terminal roots restore the board", () =>
+{
+    using var cancel = new CancellationTokenSource(); var board = new Board(); var frames = new List<SearchView>();
+    _ = new Search(new TranspositionTable(8)).Run(board, new SearchLimits(), cancel.Token,
+        visualize: new SearchVisualization(frame => { frames.Add(frame); if (!frame.Finished) cancel.Cancel(); }));
+    Equal(Board.StartFen, board.ToFen()); Equal(0, board.Ply); Require(frames[^1].Finished, "Cancellation didn't finish the trace");
+    var terminal = new Board("7k/6Q1/5K2/8/8/8/8/8 b - - 0 1"); frames.Clear();
+    var mate = new Search(new TranspositionTable(8)).Run(terminal, new SearchLimits(), visualize: new SearchVisualization(frames.Add));
+    Equal(Move.None, mate.BestMove); Equal(-Search.Mate, mate.Score); Equal(1, frames.Count);
+    Require(frames[0].Finished && frames[0].Nodes == 0, "Terminal root should not invent visited nodes");
+});
 Console.WriteLine($"\n{passed} passed, {failed} failed.");
 return failed == 0 ? 0 : 1;

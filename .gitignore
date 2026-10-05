@@ -8,3 +8,4 @@ tools/stockfish/*
 .env
 .env.*
 !.env.example
+.aster-local/

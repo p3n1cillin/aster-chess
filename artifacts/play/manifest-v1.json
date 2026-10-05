@@ -1,0 +1,373 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-05T00:05:13.362190+00:00",
+  "scope": "Native playable browser interface, optional real search observation, frozen source/binaries and regression evidence",
+  "artifacts": [
+    {
+      "path": "artifacts/benchmarks/visual-play-bench7-v1.json",
+      "bytes": 1547,
+      "sha256": "3edcda3c0079584f0d2f5f3031ca74612030d0ec660f31a48773a2ae13c078e8"
+    },
+    {
+      "path": "artifacts/benchmarks/visual-play-depth8-v1.json",
+      "bytes": 21945,
+      "sha256": "618c8eefaa9a16a4941a021aafce19a104452c2758af83ca9bd6aa3f65e54aa5"
+    },
+    {
+      "path": "artifacts/matches/visual-play-regression-v1.json",
+      "bytes": 2121380,
+      "sha256": "5d0a8e0baf59d2d9a058b9fc28cf78bbf10e2a5ec2dad95f7f6872826ae7e504"
+    },
+    {
+      "path": "artifacts/matches/visual-play-regression-v1.pgn",
+      "bytes": 68664,
+      "sha256": "02b23d8c72159c6cac3a9c497adfa88796f0ff65a7932b096cef84144718c0e7"
+    },
+    {
+      "path": "artifacts/play/aster-play-v1.jpg",
+      "bytes": 169297,
+      "sha256": "9267eca25696fd78ddd608730b78c9194dfeab70c3372389f94664d9e6894d2a"
+    },
+    {
+      "path": "artifacts/play/engine-tests-v1.txt",
+      "bytes": 3813,
+      "sha256": "6a559a52d975f47fd08ad63fe11660f2c3dadab796b921cc2eb982f6d7f2e943"
+    },
+    {
+      "path": "artifacts/play/http-smoke-v1.json",
+      "bytes": 421,
+      "sha256": "055b61dd626b2f7a491026066e3564e487e41d914d4bfceef0d2389af7baf48e"
+    },
+    {
+      "path": "artifacts/play/match-audit-v1.json",
+      "bytes": 91,
+      "sha256": "43b4ef9d99dc8fcd3fb6b45785b2f2197edac933549a122c41c4cb13f15d004f"
+    },
+    {
+      "path": "artifacts/play/regression-plan-v1.json",
+      "bytes": 1230,
+      "sha256": "22e83fa05868ce2abd3879c0d4e44f57648a9804617be9ebde369950e916d8c0"
+    },
+    {
+      "path": "artifacts/play/verification-v1.json",
+      "bytes": 1279,
+      "sha256": "6fd395c23e369b14df13aec2974a19fc5831a224b6890480c18398de2453cff4"
+    },
+    {
+      "path": "artifacts/publish/visual-play-dev/Aster.deps.json",
+      "bytes": 407,
+      "sha256": "846e5fc4a8c7c44657545ea00b93646fff9dc53574fc62eb7bb2c3d7fe4c6a4c"
+    },
+    {
+      "path": "artifacts/publish/visual-play-dev/Aster.dll",
+      "bytes": 125440,
+      "sha256": "04cf97e1f9b70b1c092efa1f6512af39e86ed98223f266d30f8c7d676f0b33a2"
+    },
+    {
+      "path": "artifacts/publish/visual-play-dev/Aster.exe",
+      "bytes": 151552,
+      "sha256": "eec20e977eda9b6121d1274772689e4373f057cfd54aaa8675a1f4123cc2433e"
+    },
+    {
+      "path": "artifacts/publish/visual-play-dev/Aster.pdb",
+      "bytes": 44712,
+      "sha256": "120707ac94c43928e25d86e52ad4eba3c6470ecb7d14c9d8f45a8278a42989ce"
+    },
+    {
+      "path": "artifacts/publish/visual-play-dev/Aster.runtimeconfig.json",
+      "bytes": 374,
+      "sha256": "60e8700cdee9afcc3894f7e9bbb7ac56bb8d7af7561e8ad47323f3b5ebe4c3af"
+    },
+    {
+      "path": "artifacts/publish/visual-play-host-v1/Aster.deps.json",
+      "bytes": 407,
+      "sha256": "846e5fc4a8c7c44657545ea00b93646fff9dc53574fc62eb7bb2c3d7fe4c6a4c"
+    },
+    {
+      "path": "artifacts/publish/visual-play-host-v1/Aster.dll",
+      "bytes": 125440,
+      "sha256": "04cf97e1f9b70b1c092efa1f6512af39e86ed98223f266d30f8c7d676f0b33a2"
+    },
+    {
+      "path": "artifacts/publish/visual-play-host-v1/Aster.exe",
+      "bytes": 151552,
+      "sha256": "eec20e977eda9b6121d1274772689e4373f057cfd54aaa8675a1f4123cc2433e"
+    },
+    {
+      "path": "artifacts/publish/visual-play-host-v1/Aster.pdb",
+      "bytes": 44712,
+      "sha256": "120707ac94c43928e25d86e52ad4eba3c6470ecb7d14c9d8f45a8278a42989ce"
+    },
+    {
+      "path": "artifacts/publish/visual-play-host-v1/Aster.Play.deps.json",
+      "bytes": 1131,
+      "sha256": "d03317c6331055f54a27082196ea34b84307a979e1535c4b0ce39a8055586507"
+    },
+    {
+      "path": "artifacts/publish/visual-play-host-v1/Aster.Play.dll",
+      "bytes": 58368,
+      "sha256": "f0db3014d5b34c209540d06b16ae6711aca24359a2e68fcead88bf220e4b849d"
+    },
+    {
+      "path": "artifacts/publish/visual-play-host-v1/Aster.Play.exe",
+      "bytes": 151552,
+      "sha256": "c6fd66758c58fe3c5b81c4479ccc8e1566e487357cdf67b9b7a46a5fac471fd5"
+    },
+    {
+      "path": "artifacts/publish/visual-play-host-v1/Aster.Play.pdb",
+      "bytes": 30540,
+      "sha256": "5d8affa9af44a9c642ea95c56923cf5f403d352185c973f31a74406671aaf6fe"
+    },
+    {
+      "path": "artifacts/publish/visual-play-host-v1/Aster.Play.runtimeconfig.json",
+      "bytes": 488,
+      "sha256": "2927e7d9a65748a82c4f265a0c9c1876a5ee233d9f5283881e0966e81ca94e14"
+    },
+    {
+      "path": "artifacts/publish/visual-play-host-v1/Aster.runtimeconfig.json",
+      "bytes": 374,
+      "sha256": "60e8700cdee9afcc3894f7e9bbb7ac56bb8d7af7561e8ad47323f3b5ebe4c3af"
+    },
+    {
+      "path": "artifacts/publish/visual-play-host-v1/web.config",
+      "bytes": 554,
+      "sha256": "eb3c454915aed466a3b5f79e991989f83eb90cc03b209ffdee0951c2c81fd342"
+    },
+    {
+      "path": "artifacts/publish/visual-play-host-v1/wwwroot/app.css",
+      "bytes": 13527,
+      "sha256": "afe8aa11b5c2f76345154dba14b304dedd964d6c606fbc3b8efbbc68a26f01cf"
+    },
+    {
+      "path": "artifacts/publish/visual-play-host-v1/wwwroot/app.js",
+      "bytes": 19698,
+      "sha256": "5714391070be5fa6d5af3aa695177fda42a58ac438ccfe12709a25fc9de452e8"
+    },
+    {
+      "path": "artifacts/publish/visual-play-host-v1/wwwroot/index.html",
+      "bytes": 9517,
+      "sha256": "c7a136a5df048d696538f3c8900af59bedc6e11fbbb4c1d90da5b630d7e4a82d"
+    },
+    {
+      "path": "artifacts/ratings/session-20261005-visual-play.json",
+      "bytes": 1263,
+      "sha256": "ca6a0562a627cd8192eaedf378aa72700b778890fb50e2d784860ce0482b42ce"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/.github/workflows/verify.yml",
+      "bytes": 1911,
+      "sha256": "9e94d35a0e7adb4835b3c3faaadc17fd3d0d6e6829862600674835f4212b045e"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/Aster.sln",
+      "bytes": 3095,
+      "sha256": "bfee8ed941bbd6e592fc775444141b5daeaf5ef33e2d12219c6d736dc932f553"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/Directory.Build.props",
+      "bytes": 318,
+      "sha256": "aae19899039dcffcd68ffa855c683877cd6c4d6813d36bd974024a26b219badb"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/global.json",
+      "bytes": 58,
+      "sha256": "d8fc1e71d76ffd7f785d4b7abbae953024544b52cf19fc4b8d687b058e594610"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/manifest.json",
+      "bytes": 5720,
+      "sha256": "19f0460d514c3f916c5552384b51f8f0d67c6ea4da67c65976fd3f0a357c0223"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/scripts/play.ps1",
+      "bytes": 2246,
+      "sha256": "221ca7252c27c1ff812188e1b2f6133e4f0c83fd588dbbc022321f9e1188400e"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/scripts/smoke_play.py",
+      "bytes": 6760,
+      "sha256": "757e1509293895d166a04b21dc34bea732846b5f3f23c54f9a51748e0aa17b57"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/Attacks.cs",
+      "bytes": 2643,
+      "sha256": "10a2eb8139f9786d5b097d92f3e385a889a24c8940a0d1fade1b1a987a37b9c6"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/Board.cs",
+      "bytes": 18790,
+      "sha256": "af1db55d63700255db50bd2c5b538d15c7ae1558ba3296a21f0e54bf2bfa16d9"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/EndgameProof.cs",
+      "bytes": 5395,
+      "sha256": "5f7657f027792d8137ebd640226ba882f939481ef27f171bb74f1730e289f854"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/Engine.csproj",
+      "bytes": 285,
+      "sha256": "7cf064b7199806147a2d4c716a36ff3e916002ca7df76c476d511296a72e6052"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/Evaluation.cs",
+      "bytes": 7519,
+      "sha256": "b7c1ad0014eebea5d59c13ba37861616df60db253f906f6b94b4fb88e7d3bbe5"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/KpkBitbase.cs",
+      "bytes": 7104,
+      "sha256": "a13112931282526f774ca2b5ea1e87736f0c21e4b24d1fa9da8ae18560bfcc39"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/MajorMateBitbase.cs",
+      "bytes": 7110,
+      "sha256": "2ff38a71882eb9f8a5a1305745f569bb6849bb44f8d2a2c329ecba9a74617b48"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/MateProof.cs",
+      "bytes": 8382,
+      "sha256": "b2d5810477e8ccdfb4f3c8eb933aa4cbbf67ff4fbf805302bc642f0921f1720a"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/Move.cs",
+      "bytes": 1304,
+      "sha256": "9cee181118dc8dbf01687b7c5210ad81aa07826e70ce7fb9b512b321b69bdc85"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/NeuralNetwork.cs",
+      "bytes": 17818,
+      "sha256": "bf0c622bd16ef289352225f59394fcef44efaaea6f28a22c9b7063b7fc6f6c76"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/Perft.cs",
+      "bytes": 589,
+      "sha256": "7e679e005a22d3cd3e003f6034495d4e62c8fd5ca79b89822c9a7e78b2fd085e"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/Program.cs",
+      "bytes": 5792,
+      "sha256": "73d98b392af0c32a9d952d32562e733157da683c2f54fd20acaf3f5e31322656"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/Search.cs",
+      "bytes": 19670,
+      "sha256": "ccd955cad6e76ec87b7f4230cdd001e84e6b1e7ce0542f397605a7941b45d8ca"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/SearchProfile.cs",
+      "bytes": 3232,
+      "sha256": "60ed1caee10ce09adf20d9542d0eac06fc613a29881f04bd0f15a826109d405c"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/SearchVisualization.cs",
+      "bytes": 3680,
+      "sha256": "db5338d1d63490239b2a21703737e589191259100b903eb03cec80788cca0dcc"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/StaticExchange.cs",
+      "bytes": 3783,
+      "sha256": "36208f3889d346dac33deba7ad7f9e20cd67deeb465c910f2355cbde8fd57af9"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/ThreatEvaluation.cs",
+      "bytes": 3531,
+      "sha256": "b956761ca5157dc70faecdd28faa1d45a52cd574cefb9866cd45a11f5df364bd"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/TranspositionTable.cs",
+      "bytes": 2433,
+      "sha256": "6b6a3a5581678ebf8c36640f02e1ed27ee9055ed55f1eaa205ab7d38bbf45001"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/Uci.cs",
+      "bytes": 16875,
+      "sha256": "e7ad48a29a51d81bd8c895e72e1a41d1df058839bf35c9e3638de25e109e485d"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Engine/Zobrist.cs",
+      "bytes": 880,
+      "sha256": "116806963b5b3a5b9bd10c9b988fffd78ce56f7abfa3a2bf716203d42c687ac2"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Play/ChessNotation.cs",
+      "bytes": 2266,
+      "sha256": "de46fa726ec2cc45dbab6d76cf413ee0bb0c1db11a0930394af3cd74830f3ccf"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Play/Game.cs",
+      "bytes": 12940,
+      "sha256": "9982ce3e27f3e5ddabc75702dcb7cd2501f196b82e30932c3cf24b7475670bf6"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Play/Play.csproj",
+      "bytes": 341,
+      "sha256": "efb827c460f72b91fbe44cab598bd7ed51431eeeb45e24d9f0cfc882e5ebca41"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Play/Program.cs",
+      "bytes": 3468,
+      "sha256": "5b187ee760a10f8b7a9b9c7f6aa3193c3750f12331b9baf9ad01cb9c41172f37"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Play/wwwroot/app.css",
+      "bytes": 13527,
+      "sha256": "afe8aa11b5c2f76345154dba14b304dedd964d6c606fbc3b8efbbc68a26f01cf"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Play/wwwroot/app.js",
+      "bytes": 19698,
+      "sha256": "5714391070be5fa6d5af3aa695177fda42a58ac438ccfe12709a25fc9de452e8"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/src/Play/wwwroot/index.html",
+      "bytes": 9517,
+      "sha256": "c7a136a5df048d696538f3c8900af59bedc6e11fbbb4c1d90da5b630d7e4a82d"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/tests/Engine.Tests/Engine.Tests.csproj",
+      "bytes": 194,
+      "sha256": "731df592e64b335e2d2bb5e1aad2c481926ff8c43284e4a81b888cadaf782639"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/tests/Engine.Tests/Program.cs",
+      "bytes": 71710,
+      "sha256": "05704093405b860a979d85e70ac2e4a29b41ba95a1188f519646a6b91d9d06dd"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/tests/Play.Tests/Play.Tests.csproj",
+      "bytes": 190,
+      "sha256": "45e7941f0164cc5aee3ac8a94da5f4300c4d8bcf163705a206377f73b8d21d28"
+    },
+    {
+      "path": "artifacts/research/visual-play-source-v1/tests/Play.Tests/Program.cs",
+      "bytes": 7696,
+      "sha256": "6cb58431cb882bc347eef06c3a2379fe32724deb2f71cd61b125c66888e2331e"
+    },
+    {
+      "path": "artifacts/tactics/visual-play-depth-v1.json",
+      "bytes": 7001,
+      "sha256": "1203ad5b03bbf719d6c661a6fa5e0281dbdc08fe13875b9128a4d3d351e40c00"
+    },
+    {
+      "path": "artifacts/tactics/visual-play-endgames-v1.json",
+      "bytes": 3790,
+      "sha256": "1ddef3d89b965ed75e27c58362b91048177eec2da45a3ff6f19b047b1216c85b"
+    },
+    {
+      "path": "artifacts/tactics/visual-play-nodes-v1.json",
+      "bytes": 6969,
+      "sha256": "d6019a2083c6ee1873da8b119ccf6f0fa2a9d077401c391c1ba933806be4ffad"
+    },
+    {
+      "path": "artifacts/tactics/visual-play-quiet-depth-v1.json",
+      "bytes": 7000,
+      "sha256": "5b9f445965a86380c117a20383f406bf671a74e50485e380ebeac2c35ae8254d"
+    },
+    {
+      "path": "artifacts/tactics/visual-play-quiet-nodes-v1.json",
+      "bytes": 6982,
+      "sha256": "ea9ddcc6c3230fb3facd68780f8defef8ad8171167c31203875d4d3fec4db316"
+    }
+  ],
+  "interpretation": "No new rating or claim of Stockfish superiority; prior exact calibrated rating reference retained."
+}

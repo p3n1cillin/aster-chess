@@ -15,6 +15,12 @@ hardware, training data or time will achieve it. Stockfish is a moving reference
 keep an older pinned opponent for historical comparisons and add newer releases
 as separate reference points.
 
+The user can now play Aster through a local browser with actual search-position
+samples, completed-depth evaluations, principal-variation inspection, root move
+bounds and board heatmaps. See `docs/PLAY.md`. The observer preserves fixed-node
+search behavior; the visual host's timed play still needs separate calibration.
+This supplies an interactive base for future proof and planning explanations.
+
 The user also requests a distinctive ability beyond Stockfish's native
 interface and a current rating at each session end. Aster now exports complete
 queen/rook mating strategies and bounded general-material mating strategies

@@ -1,5 +1,12 @@
 # Current rating and measurement policy
 
+The October 5 [visual play build](PLAY.md) has **no newly measured rating**.
+Its 64 paired regression games against the previous runtime are an engineering
+check, and the browser's 1..15 second reply budgets are uncalibrated. The
+[session reference](../artifacts/ratings/session-20261005-visual-play.json) retains
+the exact rated binary and interval below; no rating is transferred to the
+instrumented binary from fixed-node equivalence or a small regression match.
+
 The latest measured **Aster 0.7.6-q-evasion-dev** has a provisional local estimate
 of **2319**, with a **95% opening-family interval of 2277..2360**, on the
 **SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash** scale.

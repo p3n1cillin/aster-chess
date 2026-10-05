@@ -1,0 +1,30 @@
+{
+  "public_elo": null,
+  "last_measured_local_rating": 2319.019359271422,
+  "primary_95_percent_local_interval": [
+    2277.370617879139,
+    2360.3589099588767
+  ],
+  "local_scale": "SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash",
+  "rated_engine": "artifacts/publish/q-evasion-dev/Aster.dll",
+  "rated_engine_sha256": "a3994e4f350b2cfa261db5edc1e4ae5c332d85d4b3eaf34c0730267f3603d9a0",
+  "rated_version": "Aster 0.7.6-q-evasion-dev",
+  "reference_record": {
+    "path": "artifacts/ratings/session-20261004-q-evasion-confirmation.json",
+    "sha256": "78eeab42081af15787be31f35b9307143355c0b55a93119b741e7f95e81ca736"
+  },
+  "schema": 1,
+  "timestamp_utc": "2026-10-04T23:29:39.133754+00:00",
+  "status": "Prior exact calibrated reference retained; visual search instrumentation and its browser reply budgets have no new rating",
+  "runtime_binary_sha256": "04cf97e1f9b70b1c092efa1f6512af39e86ed98223f266d30f8c7d676f0b33a2",
+  "play_binary_sha256": "f0db3014d5b34c209540d06b16ae6711aca24359a2e68fcead88bf220e4b849d",
+  "regression_only": {
+    "status": "passed",
+    "games": 64,
+    "wins": 16,
+    "draws": 27,
+    "losses": 21,
+    "unresolved": 0
+  },
+  "full_strength_stockfish_superiority": false
+}

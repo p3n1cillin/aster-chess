@@ -1,0 +1,22 @@
+{
+  "timestamp_utc": "2026-10-04T23:24:41.364411+00:00",
+  "scope": "Interface/search-observation regression only; no strength claim or evaluator promotion",
+  "candidate_binary_sha256": "04cf97e1f9b70b1c092efa1f6512af39e86ed98223f266d30f8c7d676f0b33a2",
+  "candidate_source_manifest_sha256": "19f0460d514c3f916c5552384b51f8f0d67c6ea4da67c65976fd3f0a357c0223",
+  "opponent_binary_sha256": "87f10cb38f1bb926e00ef34ebbfb65bff4fdfbb4f886a0e8c6498ca45030110d",
+  "opening_suite": "tests/fixtures/mate-proof-parent-v1.json",
+  "opening_suite_sha256": "85553f4ff2dcc2ce9896e002ce5730d4ca54061c82f1032bdb47f0c83ae750c4",
+  "pairs": 32,
+  "games": 64,
+  "movetime_seconds": 0.03,
+  "threads": 1,
+  "hash_mib": 64,
+  "max_plies": 400,
+  "options": "Default classical evaluator, no EvalFile, Move Overhead 0",
+  "checks": [
+    "all required native and independent checks",
+    "fixed-depth 32 positions agree with frozen parent",
+    "paired timed games and independent PGN audit; report unresolved games and forfeits"
+  ],
+  "interpretation": "Timed variance is diagnostic only; fixed-node observer equivalence is separately tested. UI tracing incurs overhead and the visual host/time budgets are not calibrated."
+}

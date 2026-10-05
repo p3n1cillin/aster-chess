@@ -30,12 +30,14 @@ public sealed class Search(TranspositionTable table)
     private CancellationToken cancellation;
     private long nodes;
     private int selectiveDepth, rootPly;
+    private SearchVisualization? visualization;
     private sealed class SearchStoppedException : Exception;
 
-    public SearchResult Run(Board position, SearchLimits searchLimits, CancellationToken token = default, Action<SearchInfo>? report = null)
+    public SearchResult Run(Board position, SearchLimits searchLimits, CancellationToken token = default, Action<SearchInfo>? report = null, SearchVisualization? visualize = null)
     {
         board = position; limits = searchLimits; cancellation = token;
         nodes = 0; selectiveDepth = 0; rootPly = board.Ply;
+        visualization = visualize; visualization?.Start();
 #if ASTER_PROFILE
         SearchProfile.Reset();
 #endif
@@ -53,7 +55,10 @@ public sealed class Search(TranspositionTable table)
         for (int i = 0; i < count; i++)
             if (limits.SearchMoves == null || Array.IndexOf(limits.SearchMoves, legal[i]) >= 0) { fallback = legal[i]; break; }
         if (fallback == Move.None)
+        {
+            visualization?.Finish(board, nodes);
             return new SearchResult(Move.None, count == 0 && board.InCheck ? -Mate : 0, 0, 0, clock.ElapsedMilliseconds, []);
+        }
         Move bestMove = fallback;
         int bestScore = 0, completedDepth = 0;
         Move[] bestPv = [fallback];
@@ -62,6 +67,7 @@ public sealed class Search(TranspositionTable table)
             try
             {
                 CheckStopped(forceTime: true);
+                visualization?.Iteration(depth);
                 int window = 35, alpha = depth >= 4 ? Math.Max(-Infinity, bestScore - window) : -Infinity;
                 int beta = depth >= 4 ? Math.Min(Infinity, bestScore + window) : Infinity;
                 int score;
@@ -86,14 +92,16 @@ public sealed class Search(TranspositionTable table)
             }
             catch (SearchStoppedException) { break; }
         }
+        visualization?.Finish(board, nodes);
         return new SearchResult(bestMove, bestScore, completedDepth, nodes, clock.ElapsedMilliseconds, bestPv);
     }
 
-    private void Visit(int ply)
+    private void Visit(int ply, bool quiescence = false)
     {
         CheckStopped(); nodes++;
         selectiveDepth = Math.Max(selectiveDepth, ply);
         pvLength[ply] = ply;
+        visualization?.Visit(board, ply, nodes, quiescence);
     }
     private void CheckStopped(bool forceTime = false)
     {
@@ -135,7 +143,10 @@ public sealed class Search(TranspositionTable table)
         if (table.Probe(key, ply, out ttMove, out int ttScore, out int ttDepth, out Bound ttBound)
             && ply > 0 && !isPv && !repeated && ttDepth >= depth
             && (ttBound == Bound.Exact || (ttBound == Bound.Lower && ttScore >= beta) || (ttBound == Bound.Upper && ttScore <= alpha)))
+        {
+            visualization?.TableCutoff();
             return ttScore;
+        }
         int staticEval = inCheck ? -Infinity : Eval.Evaluate(board);
         bool hasNonPawnMaterial = (board.Colors[board.Side] & ~(board.Pieces[board.Side * 6] | board.Pieces[board.Side * 6 + 5])) != 0;
 #if ASTER_IIR
@@ -163,9 +174,10 @@ public sealed class Search(TranspositionTable table)
         {
             if (!HasAnyLegalMove()) return 0;
             int score;
+            visualization?.NullProbe();
             board.MakeNullMove();
-            try { score = -Negamax(depth - 1 - (2 + depth / 4), ply + 1, -beta, -beta + 1, false); }
-            finally { board.UnmakeMove(); }
+            try { visualization?.Enter(ply, Move.None); score = -Negamax(depth - 1 - (2 + depth / 4), ply + 1, -beta, -beta + 1, false); }
+            finally { board.UnmakeMove(); visualization?.Leave(ply); }
             if (score >= beta && score < MateThreshold) return score;
         }
 
@@ -192,14 +204,18 @@ public sealed class Search(TranspositionTable table)
             if (!board.TryMakeMove(move)) continue;
             legalCount++;
             int score;
+            int moveAlpha = alpha;
             try
             {
+                visualization?.Enter(ply, move);
+                if (ply == 0) visualization?.RootStart(move, nodes);
                 bool givesCheck = board.InCheck;
                 if (legalCount == 1) score = -Negamax(depth - 1, ply + 1, -beta, -alpha, true);
                 else
                 {
                     int reduction = depth >= 3 && legalCount >= 4 && move.IsQuiet && !inCheck && !givesCheck
                         ? Math.Min(depth - 2, 1 + (int)(Math.Log(depth) * Math.Log(legalCount) / 2.5) - (isPv ? 1 : 0)) : 0;
+                    visualization?.Reduction(reduction);
 #if ASTER_PROFILE
                     SearchProfile.RecordReduction(reduction);
 #endif
@@ -208,13 +224,15 @@ public sealed class Search(TranspositionTable table)
                     if (score > alpha && score < beta) score = -Negamax(depth - 1, ply + 1, -beta, -alpha, true);
                 }
             }
-            finally { board.UnmakeMove(); }
+            finally { board.UnmakeMove(); visualization?.Leave(ply); }
+            if (ply == 0) visualization?.RootEnd(move, score, moveAlpha, beta, nodes);
             if (score > bestScore) { bestScore = score; best = move; }
             if (score > alpha)
             {
                 alpha = score; UpdatePv(ply, move);
                 if (alpha >= beta)
                 {
+                    visualization?.BetaCutoff();
                     if (move.IsQuiet)
                     {
                         if (killers[ply, 0] != move) { killers[ply, 1] = killers[ply, 0]; killers[ply, 0] = move; }
@@ -234,7 +252,7 @@ public sealed class Search(TranspositionTable table)
 
     private int Quiescence(int ply, int alpha, int beta)
     {
-        Visit(ply);
+        Visit(ply, quiescence: true);
         if (IsDraw()) return DrawOrMate(ply);
         bool inCheck = board.InCheck;
         int originalAlpha = alpha;
@@ -257,13 +275,17 @@ public sealed class Search(TranspositionTable table)
         if (ply >= MaxPly - 1) return Eval.Evaluate(board);
         if (knownLegal && beta - alpha == 1
             && (ttBound == Bound.Exact || (ttBound == Bound.Lower && ttScore >= beta) || (ttBound == Bound.Upper && ttScore <= alpha)))
+        {
+            visualization?.TableCutoff();
             return ttScore;
+        }
         int best = inCheck ? -Infinity : Eval.Evaluate(board);
         Move bestMove = Move.None;
         if (!inCheck)
         {
             if (best >= beta)
             {
+                visualization?.BetaCutoff();
                 if (cacheable) table.Store(key, Move.None, best, 0, Bound.Lower, ply);
                 return best;
             }
@@ -293,14 +315,15 @@ public sealed class Search(TranspositionTable table)
             if (inCheck) legalEvasions++;
             if (losingCapture && !board.InCheck) { board.UnmakeMove(); continue; }
             int score;
-            try { score = -Quiescence(ply + 1, -beta, -alpha); }
-            finally { board.UnmakeMove(); }
+            try { visualization?.Enter(ply, move); score = -Quiescence(ply + 1, -beta, -alpha); }
+            finally { board.UnmakeMove(); visualization?.Leave(ply); }
             if (score > best) { best = score; bestMove = move; }
             if (score > alpha)
             {
                 alpha = score; UpdatePv(ply, move);
                 if (alpha >= beta)
                 {
+                    visualization?.BetaCutoff();
                     if (cacheable) table.Store(key, move, score, 0, Bound.Lower, ply);
                     return score;
                 }

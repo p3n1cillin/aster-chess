@@ -1,4 +1,4 @@
-# Project progress — 4 October 2026
+# Project progress — 5 October 2026
 
 The production engine is **Aster 0.6.0**, with experimental source identified
 as **0.8.0-relations-dev**, with optional threat, KPK, conversion, proof,
@@ -7,6 +7,35 @@ active and has not been achieved. The current engine uses a classical evaluator;
 the classical evaluator is the default. Optional trained neural prototypes
 exist but regressed in matches. The opt-in KPK solver generates its own table;
 there is no general tablebase probing or parallel search.
+
+## Playable native search visualization
+
+A local browser interface now lets the user play either color, choose a 1..15
+second reply budget, take back moves, stop a reply, analyze without moving, load
+FEN and export PGN. The display follows real sampled search positions, completed
+depth scores, legal principal variations, root move bounds and node visits.
+Heatmaps show search destinations and native geometric control. It records all
+node counters and samples the tree about 12 times a second; it does not claim to
+show every searched branch. See [play controls](../docs/PLAY.md).
+
+The Release build, **60** engine tests, **10** game tests and **1614** independent
+rules/protocol positions pass. The actual HTTP/SSE host passes independent
+SAN, PV, branch and PGN replay. Observer-on/off fixed-node results agree, including
+move, score, depth, nodes and PV. All **32** frozen depth-eight outputs and
+**2371866** nodes agree with the prior runtime; bench seven remains **146772**
+nodes. All five tactical/endgame gates pass. Browser checks cover playing Black,
+promotion, orientation, live search and touch layout.
+
+The preserved 32-pair timed regression against the frozen relation runtime is
+**16 wins, 27 draws, 21 losses**, with no forfeits or unresolved games. This is an
+engineering screen, not a rating or strength increase. Observation adds overhead;
+the visual host and its reply budgets have not been calibrated. The engine SHA
+is `04cf97e1f9b70b1c092efa1f6512af39e86ed98223f266d30f8c7d676f0b33a2`.
+The [verification record](play/verification-v1.json), [match PGN](matches/visual-play-regression-v1.pgn),
+source snapshot and predeclared plan are preserved. All **230** artifacts in the
+prior relation archive remain unchanged. The prior exact local **2319** rating
+and **2277..2360** interval remain attached to the calibrated q-evasion binary,
+as recorded in [this session's rating reference](ratings/session-20261005-visual-play.json).
 
 ## Completed experiment: geometric relation features
 

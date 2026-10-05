@@ -12,6 +12,19 @@ See [version control](docs/VERSION-CONTROL.md) for tracked evidence and exact-by
 
 ## Build and run
 
+To play in a browser with live visualization of Aster's native search:
+
+```powershell
+./scripts/play.ps1
+```
+
+Open **http://127.0.0.1:5188**. Click a piece and its destination; choose your
+color and reply time with **New game**. The interface shows actual sampled search
+positions, root moves and bounds, the expected continuation, evaluation by depth,
+node counts and board heatmaps. It includes takebacks, analysis, promotions,
+FEN loading and PGN export. See [play and visualization](docs/PLAY.md) for controls,
+cross-platform startup and the meaning of each display.
+
 Install the .NET 8 SDK, then run from this directory:
 
 ```powershell

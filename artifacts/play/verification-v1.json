@@ -1,0 +1,39 @@
+{
+  "timestamp_utc": "2026-10-04T23:29:39.133754+00:00",
+  "status": "passed",
+  "engine_binary_sha256": "04cf97e1f9b70b1c092efa1f6512af39e86ed98223f266d30f8c7d676f0b33a2",
+  "play_binary_sha256": "f0db3014d5b34c209540d06b16ae6711aca24359a2e68fcead88bf220e4b849d",
+  "build": {
+    "command": "dotnet build Aster.sln -c Release",
+    "warnings": 0,
+    "errors": 0
+  },
+  "native_engine_tests": 60,
+  "native_game_tests": 10,
+  "rules_and_protocol": {
+    "positions_checked": 1614,
+    "reference_perft_positions": 14,
+    "passed": true
+  },
+  "fixed_depth": {
+    "positions": 32,
+    "same_move": 32,
+    "same_score": 32,
+    "candidate_nodes": 2371866,
+    "candidate_elapsed_seconds": 1.661,
+    "opponent_nodes": 2371866,
+    "opponent_elapsed_seconds": 1.544
+  },
+  "bench7_nodes": 146772,
+  "paired_regression": {
+    "status": "passed",
+    "games": 64,
+    "wins": 16,
+    "draws": 27,
+    "losses": 21,
+    "unresolved": 0
+  },
+  "observer": "Fixed-node move/score/depth/nodes/PV equivalence; original roots restored on cancellation and failing callbacks; live sampled paths independently replayed by HTTP smoke test. Tracing is optional and adds overhead.",
+  "prior_artifacts_unchanged": 230,
+  "source_files_verified": 37
+}
