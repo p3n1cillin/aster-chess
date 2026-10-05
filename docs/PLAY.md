@@ -64,7 +64,8 @@ certificate.
 **Live searched position** follows actual positions inside the search, sampled
 about 12 times per second. These frames contain the actual current FEN and path
 from the search root. A `null` path entry is a hypothetical pass used by null-move
-pruning. Counters count all node visits, including repeated positions; they show
+pruning: it changes turn and clears en passant without advancing either game
+clock. Counters count all node visits, including repeated positions; they show
 main search, quiescence, beta and transposition-table cutoffs, null probes and
 reductions. The last 48 branch samples are retained in the browser and the most
 recent 12 are available to inspect. Sampling does not expose the entire search

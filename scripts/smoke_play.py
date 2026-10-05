@@ -18,10 +18,28 @@ import io
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 
+def replay_branch(fen, line):
+    replay = chess.Board(fen)
+    for move in line:
+        if move == "null":
+            # Aster's hypothetical pass changes turn/EP, not either game clock.
+            # python-chess treats a pushed null as a move and advances its clocks.
+            halfmove, fullmove = replay.halfmove_clock, replay.fullmove_number
+            replay.push(chess.Move.null())
+            replay.halfmove_clock, replay.fullmove_number = halfmove, fullmove
+        else:
+            parsed = chess.Move.from_uci(move)
+            assert parsed in replay.legal_moves, (fen, line, move)
+            replay.push(parsed)
+    return replay
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output")
     args = parser.parse_args()
+    assert replay_branch(chess.STARTING_FEN, ["e2e4", "null", "g1f3"]).fen(en_passant="fen") == "rnbqkbnr/pppppppp/8/8/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 1"
+    assert replay_branch(chess.STARTING_FEN, ["null", "e7e5", "null", "g8f6"]).fen(en_passant="fen") == "rnbqkb1r/pppp1ppp/5n2/4p3/8/8/PPPPPPPP/RNBQKBNR w KQkq - 1 3"
     binary = ROOT / "src/Play/bin/Release/net8.0/Aster.Play.dll"
     with socket.socket() as listener:
         listener.bind(("127.0.0.1", 0)); port = listener.getsockname()[1]
@@ -96,12 +114,9 @@ def main():
             sequence, kind, value = events.get(timeout=5)
             assert sequence > previous; previous = sequence
             if kind == "trace":
-                frames.append(value); replay = chess.Board(value["rootFen"])
-                for move in value["view"]["line"]:
-                    if move == "null": replay.push(chess.Move.null())
-                    else:
-                        parsed = chess.Move.from_uci(move); assert parsed in replay.legal_moves; replay.push(parsed)
-                assert replay.fen(en_passant="fen") == value["view"]["fen"]
+                frames.append(value)
+                replay = replay_branch(value["rootFen"], value["view"]["line"])
+                assert replay.fen(en_passant="fen") == value["view"]["fen"], (value, replay.fen(en_passant="fen"))
                 view = value["view"]
                 assert view["mainNodes"] + view["quiescenceNodes"] == view["nodes"]
             elif kind == "analysis":
@@ -122,6 +137,7 @@ def main():
         result = {"status": "passed", "play_binary_sha256": hashlib.sha256(binary.read_bytes()).hexdigest(),
                   "engine_binary_sha256": hashlib.sha256((binary.parent / "Aster.dll").read_bytes()).hexdigest(),
                   "real_sse_samples_checked": len(frames), "completed_depths_checked": len(analyses),
+                  "null_pass_clock_fixtures": 2,
                   "checks": "HTTP errors, assets UTF-8, SSE ordering, legal moves, independent SAN/PV/branch replay, PGN, undo, stop, Black opening"}
         if args.output:
             output = pathlib.Path(args.output); output.parent.mkdir(parents=True, exist_ok=True)

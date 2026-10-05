@@ -1,0 +1,12 @@
+{
+  "timestamp_utc": "2026-10-05T00:08:44.931861+00:00",
+  "cause": "Independent python-chess replay advanced fullmove and reversible clocks on a hypothetical null pass; native Aster null probes intentionally leave both clocks unchanged. Linux sampled a null branch and caught the mismatch.",
+  "correction": "Replay changes turn and clears EP through python-chess, then restores both clocks for null only. All real moves still use independent standard rules. Two explicit fixture paths exercise White and Black null passes, EP clearing and later legal move clocks.",
+  "runtime_changed": false,
+  "runtime_binary_sha256": "04cf97e1f9b70b1c092efa1f6512af39e86ed98223f266d30f8c7d676f0b33a2",
+  "fixed_checker_sha256": "dfe09cea37d0428edf4a6606e2ffbca843486f36611fcbce78f4cb6563001d4c",
+  "fixed_checker_archive": "artifacts/play/smoke-play-v2.py",
+  "local_result": "artifacts/play/http-smoke-v2.json",
+  "prior_source_snapshot_retained": "artifacts/research/visual-play-source-v1/manifest.json",
+  "failed_ci_run": 37246089473
+}
