@@ -34,6 +34,8 @@ def configure(engine: chess.engine.SimpleEngine, hash_mb: int, eval_file: str | 
               uci_elo: int | None = None) -> dict[str, int | str | bool]:
     settings = {name: value for name, value in {"Hash": hash_mb, "Threads": 1, "Move Overhead": 0}.items()
                 if name in engine.options}
+    if "MoveOverhead" in engine.options:
+        settings["MoveOverhead"] = 0
     if eval_file:
         if "EvalFile" not in engine.options:
             raise ValueError("Selected engine does not support EvalFile")

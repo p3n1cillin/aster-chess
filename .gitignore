@@ -9,3 +9,6 @@ tools/stockfish/*
 .env.*
 !.env.example
 .aster-local/
+tools/berserk/14/
+tools/native-toolchain/
+artifacts/build/
