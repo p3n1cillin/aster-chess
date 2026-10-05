@@ -37,6 +37,14 @@ prior relation archive remain unchanged. The prior exact local **2319** rating
 and **2277..2360** interval remain attached to the calibrated q-evasion binary,
 as recorded in [this session's rating reference](ratings/session-20261005-visual-play.json).
 
+All four Windows/Linux default/IIR CI jobs pass at `2a315e8`, including the
+native game tests and real HTTP/SSE check. The first Linux check exposed an
+oracle mismatch on hypothetical null passes: python-chess increments clocks,
+while Aster's search pass intentionally preserves them. The corrected checker
+restores those clocks and tests both sides explicitly; no playing binary or
+runtime change was needed. Both the failed run and
+[passing CI record](play/ci-v2-passed.json) are retained with the correction.
+
 ## Completed experiment: geometric relation features
 
 The optional H64 evaluator adds 80 geometric attack/defense count features,

@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-05T00:11:46.882401+00:00",
+  "scope": "Corrected independent null-pass replay and completed cross-platform CI; native runtime and initial archive unchanged",
+  "prior_manifest_sha256": "c301bc3ad33946bcb9607a8b175e7116370dc7d9a2b0c96cfa26fe76ef251790",
+  "artifacts": [
+    {
+      "path": "scripts/smoke_play.py",
+      "bytes": 7603,
+      "sha256": "dfe09cea37d0428edf4a6606e2ffbca843486f36611fcbce78f4cb6563001d4c"
+    },
+    {
+      "path": "docs/PLAY.md",
+      "bytes": 5642,
+      "sha256": "49b3e1e46ab25305a246bda9d67da547562945895c45902a3822303c90a00a87"
+    },
+    {
+      "path": "artifacts/PROGRESS.md",
+      "bytes": 86501,
+      "sha256": "872d77f9f8efabd180a4bbc1a94b5ea30e1dd1aaf7b2ec351f43d4bba988d5e8"
+    },
+    {
+      "path": "artifacts/play/ci-v1-failed.json",
+      "bytes": 18954,
+      "sha256": "e7cd07640db0f6c19bf5f9f77032f4265d5fa91f546b48a845909e2ed26c11b4"
+    },
+    {
+      "path": "artifacts/play/ci-v2-passed.json",
+      "bytes": 18942,
+      "sha256": "3e1200dfc5264e411a863fc85e7f2781368f4b49014d8ce8cce9e8f3c7b19ea2"
+    },
+    {
+      "path": "artifacts/play/checker-correction-v2.json",
+      "bytes": 1041,
+      "sha256": "825fe1ad0b61f7a3cc068d16b128041545b19c6d3f7496de691f5086f98fc0c0"
+    },
+    {
+      "path": "artifacts/play/http-smoke-v2.json",
+      "bytes": 455,
+      "sha256": "e5ec24fbca2c87c85acd53acc40827944ca0f8da8bb6c240cacb2c19e29f574d"
+    },
+    {
+      "path": "artifacts/play/smoke-play-v2.py",
+      "bytes": 7603,
+      "sha256": "dfe09cea37d0428edf4a6606e2ffbca843486f36611fcbce78f4cb6563001d4c"
+    }
+  ]
+}
