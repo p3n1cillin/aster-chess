@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "engine": "native Rust Aster",
+  "browser": "Microsoft Edge headless via Playwright 1.64.1",
+  "white": {
+    "depth": "21 / 38",
+    "main": "497.2K",
+    "roots": 1,
+    "history": "1.\ne4\ne6"
+  },
+  "blackTopLeft": "h1",
+  "consoleErrors": [],
+  "screenshots": [
+    "artifacts/play/rust-desktop-v1.png",
+    "artifacts/play/rust-mobile-v1.png"
+  ]
+}

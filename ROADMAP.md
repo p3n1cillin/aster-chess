@@ -1,5 +1,12 @@
 # Research roadmap
 
+Active development moved to Rust on 2026-10-18 at the user’s request. The
+Viridithas 20 source foundation, Aster proof port and Rust visual host are
+documented in `docs/RUST-MIGRATION.md`. C# results below remain historical;
+all future product builds and CI use Cargo. Current Rust strength must be
+measured separately; no historical Elo is transferred.
+
+
 ## Success criterion
 
 "Smarter than Stockfish" is operationalized as stronger standard-chess play

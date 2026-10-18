@@ -1,0 +1,10 @@
+{
+  "reason": "Additional interface/debug review before paired v2 regression; no playing parameter or network changes",
+  "repairs": [
+    "A second debug-only clock assertion conflicted with terminal FEN clocks; align it with supported u8 clocks",
+    "Convert UCI mate-in-moves to the UI mate-distance encoding without halving the displayed distance",
+    "Report terminal game scores consistently and start trace elapsed time when go is sent"
+  ],
+  "behavior_check": "Re-run the same predeclared fixed-depth comparison against v1; ordinary search must remain identical",
+  "no_extension": "The completed 128-game v1 screens remain immutable and are not extended or reinterpreted as v2 Elo tests"
+}

@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import collections
+import os
 import pathlib
 import queue
 import subprocess
@@ -9,7 +10,7 @@ import threading
 import time
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-DEFAULT_ENGINE = ROOT / "src/Engine/bin/Release/net8.0/Aster.dll"
+DEFAULT_ENGINE = ROOT / "target/release" / ("aster.exe" if os.name == "nt" else "aster")
 
 
 def engine_command(path: str | pathlib.Path) -> list[str]:

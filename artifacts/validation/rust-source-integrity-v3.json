@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "snapshots": [
+    {
+      "snapshot": "artifacts/research/rust-source-v1",
+      "files_verified": 113,
+      "binary": "artifacts/publish/rust-foundation-v1/aster.exe",
+      "binary_sha256": "2bdacdad9ad9c4df7e33e0ef033c17011308636b6b93c3704483e2d4164c2cc9"
+    },
+    {
+      "snapshot": "artifacts/research/rust-source-v2",
+      "files_verified": 116,
+      "binary": "artifacts/publish/rust-safety-v2/aster.exe",
+      "binary_sha256": "f1f746dd116b7e2dae585ba98aac06daf7204a11bf66ae165ed8317cd516d0d9"
+    },
+    {
+      "snapshot": "artifacts/research/rust-source-v3",
+      "files_verified": 116,
+      "binary": "artifacts/publish/rust-play-v3/aster.exe",
+      "binary_sha256": "246b2c6c1dbb6b98a0d90013fedb47b54b95317992593d98cc486ef66ef91fdb"
+    }
+  ],
+  "active_source_matches_v3": true,
+  "note": "Documentation/evidence may be added after freezing; all manifest-listed active files and all archived bytes match."
+}

@@ -1,5 +1,9 @@
 # General mating strategy certificates
 
+This document preserves the historical C# implementation and its evidence.
+For the active Rust build and proof export, see [Rust migration](RUST-MIGRATION.md)
+and [current play controls](PLAY.md).
+
 Aster 0.7.9-mate-proof-dev can export independently checkable forced-mate
 strategies for positions with any standard-chess material. This extends the
 existing native queen/rook-versus-king interface. A pinned Stockfish 19 test

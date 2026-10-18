@@ -1,4 +1,38 @@
-# Project progress — 5 October 2026
+# Project progress — 18 October 2026
+
+Active development, engine builds, the local play host and CI now use **Rust
+only**, following the user's instruction. The engine is an attributed source
+fork of MIT-licensed **Viridithas 20.0.0**, with pinned CC0 neural weights and
+Aster's native proof solver and visualization. It calls no external engine at
+runtime. Historical C# source and evidence remain preserved and are not built.
+See [the migration record](../docs/RUST-MIGRATION.md) for provenance and limits.
+
+The final **0.9.1 play-v3** executable is frozen with SHA-256
+`246b2c6c1dbb6b98a0d90013fedb47b54b95317992593d98cc486ef66ef91fdb` and
+[source manifest](research/rust-source-v3/manifest.json). Native suites pass
+**130 release and 130 debug tests**. Independent checks pass **2630 positions**,
+14 perft cases, live search/null replay, readiness during search, observer
+equivalence and correct terminal rules. Deeper perft references also agree.
+All 27 migrated general-material/castling certificates independently verify
+across 122 positions. Actual HTTP/SSE and desktop/mobile browser checks cover
+moves, undo, immediate stop, Black play, SAN/PGN, PVs, live traces and proof export.
+
+Three predeclared, independently audited paired screens preserve **160 games**
+and PGNs, all with no forfeits or unresolved games. At 30 ms/move, one thread and
+64 MiB hash, foundation-v1 scores **63W/0D/1L** against original visual-play-dev
+and **1W/39D/24L** against full-strength Stockfish 19. The safety-v2 engineering
+regression against foundation-v1 scores **3W/25D/4L**, with an inconclusive
+40.0%..56.67% family score interval. Host-only play-v3 matches all 32 fixed-depth
+safety-v2 outputs exactly. These are local diagnostic screens, not public Elo
+measurements or evidence of surpassing Stockfish.
+
+**Rust Aster is uncalibrated.** The last calibrated C# reference remains 2319
+(95% interval 2277..2360) on the local SF19 UCI_Elo-setting scale at 30 ms/move,
+one thread and 64 MiB hash. It does not transfer to the Rust engine. The
+[session rating record](ratings/session-20261018-rust.json) identifies both.
+Surpassing full-strength Stockfish remains unachieved.
+
+## Historical progress — 5 October 2026
 
 The production engine is **Aster 0.6.0**, with experimental source identified
 as **0.8.0-relations-dev**, with optional threat, KPK, conversion, proof,

@@ -1,0 +1,11 @@
+{
+  "scope": "Rust HTTP host only; no search, evaluation, move-generation, network or UCI engine changes",
+  "issue": "Move now before the engine writer exists must queue a stop, not leave an engine-side turn idle",
+  "checks": [
+    "Immediate stop after a human move still returns a legal engine reply",
+    "Immediate analysis stop does not make a game move",
+    "Same 32 fixed-depth traces versus the matched safety engine",
+    "Native tests and independent HTTP/SSE/geometry/PGN/proof checks"
+  ],
+  "strength": "No new playing-strength or Elo claim. Preserve all v1/v2 match evidence and binary hashes."
+}

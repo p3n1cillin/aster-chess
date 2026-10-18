@@ -53,8 +53,8 @@ def configure(engine: chess.engine.SimpleEngine, hash_mb: int, eval_file: str | 
 
 def source_fingerprint() -> str:
     hasher = hashlib.sha256()
-    for source in sorted((ROOT / "src/Engine").glob("*.cs")):
-        hasher.update(source.name.encode()); hasher.update(b"\0"); hasher.update(source.read_bytes())
+    for source in sorted((ROOT / "crates/engine").rglob("*.rs")):
+        hasher.update(source.relative_to(ROOT).as_posix().encode()); hasher.update(b"\0"); hasher.update(source.read_bytes())
     return hasher.hexdigest()
 
 

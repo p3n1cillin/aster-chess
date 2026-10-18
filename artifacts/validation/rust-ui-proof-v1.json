@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "positions": 2,
+  "edges": 1,
+  "covered_defensive_replies": 0,
+  "checkmate_leaves": 1,
+  "mate_upper_bound_plies": 1,
+  "interpretation": "Complete winning strategy with exact rule replay from the FEN origin: every defense, strictly decreasing bounds, all leaves actual mate before draw rules. No engine, eval, tablebase or teacher dependency. Bound is not a claim of globally shortest mate or earlier history.",
+  "certificate_sha256": "43178a5a678940eab487b60553e98e8e8363d3dd7526d3a67565678c76ab4a3f",
+  "verifier_sha256": "9bd2c170d989cb04eb9fccf9cabe26de0e89a8d148c53758cd934004beb3bbfe"
+}

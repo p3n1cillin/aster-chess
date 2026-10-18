@@ -1,0 +1,227 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.27
+   Compiling quote v1.0.47
+   Compiling version_check v0.9.5
+   Compiling typenum v1.20.1
+   Compiling windows-link v0.2.1
+   Compiling anstyle v1.0.14
+   Compiling utf8parse v0.2.2
+   Compiling serde_core v1.0.229
+   Compiling once_cell_polyfill v1.70.2
+   Compiling is_terminal_polyfill v1.70.2
+   Compiling winapi v0.3.9
+   Compiling windows-sys v0.61.2
+   Compiling anstyle-parse v1.0.0
+   Compiling zmij v1.0.23
+   Compiling colorchoice v1.0.5
+   Compiling cpufeatures v0.2.17
+   Compiling cfg-if v1.0.5
+   Compiling generic-array v0.14.7
+   Compiling thiserror v2.0.21
+   Compiling anyhow v1.0.104
+   Compiling serde v1.0.229
+   Compiling heck v0.5.0
+   Compiling serde_json v1.0.154
+   Compiling strsim v0.11.1
+   Compiling clap_lex v1.1.1
+   Compiling anstyle-query v1.1.5
+   Compiling anstyle-wincon v3.0.11
+   Compiling memchr v2.8.3
+   Compiling twox-hash v2.1.5
+   Compiling byteorder v1.5.0
+   Compiling log v0.4.34
+   Compiling anstream v1.0.0
+   Compiling itoa v1.0.18
+   Compiling httpdate v1.0.3
+   Compiling chunked_transfer v1.5.0
+   Compiling ascii v1.1.0
+   Compiling syn v3.0.9
+   Compiling clap_builder v4.6.7
+   Compiling fxhash v0.2.1
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling tiny_http v0.12.0
+   Compiling ruzstd v0.8.3
+   Compiling digest v0.10.7
+   Compiling arrayvec v0.7.8
+   Compiling vec1 v1.12.1
+   Compiling sha2 v0.10.9
+   Compiling memmap2 v0.9.11
+   Compiling term_size v0.3.2
+   Compiling aster-engine v0.9.1 (C:\Users\lukem\.codex\worktrees\continuation-search\chess\crates\engine)
+   Compiling clap_derive v4.6.7
+   Compiling serde_derive v1.0.229
+   Compiling thiserror-impl v2.0.21
+   Compiling clap v4.6.7
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 14.63s
+     Running unittests src\main.rs (target\debug\deps\aster-a0ff64c504f63629.exe)
+
+running 130 tests
+test chess::board::movegen::tests::python_chess_validation ... ok
+test chess::board::movegen::tests::ray_diag_test ... ok
+test chess::board::movegen::tests::bishop_attacks_basic ... ok
+test chess::board::movegen::tests::rook_attacks_basic ... ok
+test chess::board::movegen::tests::ray_test ... ok
+test chess::board::san::tests::castling_kingside ... ok
+test chess::board::movegen::tests::no_king_into_check ... ok
+test chess::board::san::tests::castling_zeros ... ok
+test chess::board::san::tests::castling_queenside ... ok
+test chess::board::san::tests::capture_without_x ... ok
+test chess::board::san::tests::capture_with_x ... ok
+test aster_proof::tests::mate_precedes_clock ... FAILED
+test aster_proof::tests::stalemate_is_not_proof ... ok
+test aster_rules::tests::invalid_certificate_roots_rejected ... FAILED
+test aster_proof::tests::bounded_and_cancelled_restore_root ... ok
+test chess::board::san::tests::disambiguation_knight ... ok
+test chess::board::san::tests::disambiguation_rank ... ok
+test chess::board::san::tests::disambiguation_pin ... ok
+test chess::board::san::tests::en_passant ... ok
+test chess::board::san::tests::fully_specified_move ... ok
+test chess::board::san::tests::illegal_move ... ok
+test chess::board::san::tests::invalid ... ok
+test chess::board::san::tests::knight_move ... ok
+test chess::board::san::tests::missing_promotion ... ok
+test chess::board::san::tests::pawn_capture ... ok
+test chess::board::san::tests::pawn_single_push ... ok
+test chess::board::san::tests::promotion ... ok
+test chess::board::san::tests::promotion_knight ... ok
+test chess::board::san::tests::promotion_without_equals ... ok
+test chess::board::san::tests::simple_pawn_move ... ok
+test chess::board::san::tests::terse_promotion ... ok
+test chess::board::san::tests::with_check_marker ... ok
+test chess::board::tests::castling_pseudolegality ... ok
+test chess::board::tests::can_make_swap_castle ... ok
+test chess::board::tests::ep_square_edge_case ... ok
+test chess::board::tests::illegal_ep_construction ... ok
+test chess::board::tests::key_after_works_for_captures ... ok
+test chess::board::tests::key_after_works_for_nullmove ... ok
+test chess::board::tests::key_after_works_for_simple_moves ... ok
+test chess::board::tests::other_ep_edge_case ... ok
+test chess::board::tests::quick_sanity_check ... ok
+test chess::board::tests::scharnagl_full_works ... ok
+test chess::board::tests::threat_generation_black ... ok
+test chess::board::tests::game_end_states ... ok
+test chess::board::tests::scharnagl_backrank_works ... ok
+test chess::board::tests::threat_generation_white ... ok
+test chess::board::tests::reset_properly ... ok
+test chess::chessmove::tests::test_simple_move ... ok
+test chess::chessmove::tests::test_promotion ... ok
+test chess::fen::tests::accept_valid_ep_square ... ok
+test chess::fen::tests::allow_extra_tokens_relaxed ... ok
+test chess::chessmove::tests::test_all_square_combinations ... ok
+test chess::fen::tests::parse_bad_segments ... ok
+test chess::fen::tests::parse_chess960_shredder_fen ... ok
+test chess::fen::tests::parse_relaxed_board_only ... ok
+test chess::fen::tests::epd_perftsuite ... ok
+test chess::fen::tests::parse_startpos ... ok
+test chess::fen::tests::reject_adjacent_digits ... ok
+test chess::fen::tests::reject_extra_tokens_strict ... ok
+test chess::fen::tests::reject_fullmove_zero ... ok
+test chess::fen::tests::reject_invalid_ep_rank ... ok
+test chess::fen::tests::reject_uppercase_side ... ok
+test chess::fen::tests::relaxed_defaults_invalid_tokens ... ok
+test chess::fen::tests::relaxed_partial_valid_tokens ... ok
+test chess::piece::tests::piece_all_iterator ... ok
+test chess::fen::tests::terminal_halfmove_clocks_are_retained ... ok
+test chess::board::tests::fen_round_trip ... ok
+test chess::piece::tests::piece_char_case_convention ... ok
+test chess::piece::tests::piece_construction_and_decomposition ... ok
+test chess::piece::tests::piece_array_indexing ... ok
+test chess::fen::tests::epd_arasan21 ... ok
+test chess::piece::tests::piece_from_index ... ok
+test chess::piece::tests::piece_index_round_trip ... ok
+test chess::piece::tests::piece_round_trip_construction ... ok
+test chess::squareset::tests::counters ... ok
+test chess::piece::tests::specific_piece_constructions ... ok
+test chess::types::tests::square_flipping ... ok
+test chess::types::tests::square_relative_to ... ok
+test chess::types::tests::test_clear_rights ... ok
+test chess::types::tests::test_kingside_getters_and_setters ... ok
+test chess::types::tests::test_queenside_getters_and_setters ... ok
+test chess::types::tests::test_remove_specific_rights ... ok
+test lookups::tests::all_castle_keys_different ... ok
+test chess::fen::tests::epd_wac ... ok
+test lookups::tests::all_piece_keys_different ... ok
+test nnue::network::threat_updates::tests::kiwipete_c3b1_king_victim ... ok
+test nnue::network::threat_updates::tests::kiwipete_e1d1_king_victim ... ok
+test nnue::network::threat_updates::tests::kiwipete_threat_indexes ... ok
+test chess::fen::tests::epd_tbtest ... ok
+test nnue::network::threat_updates::tests::kiwipete_incremental_quiet ... ok
+test nnue::network::threat_updates::tests::startpos_threats_after_moves ... ok
+test nnue::network::threat_updates::tests::kiwipete_threats_after_moves ... ok
+test nnue::network::threat_updates::tests::startpos_threat_indexes ... ok
+test nnue::network::threat_updates::tests::startpos_incremental_quiet ... ok
+test perft::tests::perft_krk ... ok
+test nnue::network::threat_updates::tests::startpos_all_moves ... ok
+test chess::fen::tests::epd_frcperftsuite ... ok
+test perft::tests::perft_hard_position ... ok
+test nnue::network::threat_updates::tests::kiwipete_all_moves ... ok
+test perft::tests::simple_capture_undoability ... ok
+test perft::tests::simple_move_undoability ... ok
+test play::tests::aspiration_bounds_are_not_completed_scores ... ok
+test play::tests::initial_geometry ... ok
+test play::tests::native_game_roundtrip ... ok
+test play::tests::terminal_mate_precedes_draw ... FAILED
+test chess::board::san::tests::roundtrip ... ok
+test chess::fen::tests::epd_all_files ... ok
+test search::parameters::tests::macro_hackery_same_length ... ok
+test search::parameters::tests::parser_actually_works ... ok
+test perft::tests::perft_start_position ... ok
+test nnue::network::threat_updates::tests::kiwipete_threat_accumulator ... ok
+test nnue::network::threat_updates::tests::startpos_threat_accumulator ... ok
+test search::aster_terminal_tests::terminal_positions_precede_quiescence_and_pruning ... FAILED
+test tablebases::probe::tests::solve_5man ... ok
+test tablebases::probe::tests::solve_7man ... ok
+test tablebases::probe::tests::test_syzygy_wdl ... ok
+test search::aster_depth_limit_tests::maximum_pv_depth_does_not_access_a_missing_child_slot ... ok
+test threadpool::tests::test_work_sender_receiver - should panic ... ok
+test threadpool::tests::test_work_sender_receiver_success ... ok
+test perft::tests::perft_nnue_start_position ... ok
+test searchinfo::tests::go_mate_in_2_black ... ok
+test perft::tests::perft_movepicker_forward_promo_evasion ... ok
+test perft::tests::perft_movepicker_hard_position ... ok
+test searchinfo::tests::go_mate_in_2_white ... ok
+test transpositiontable::tests::memset_correct ... ok
+test perft::tests::perft_movepicker_forward_promo_evasion_and_capture ... ok
+test searchinfo::tests::go_mated_in_2_black ... ok
+test searchinfo::tests::go_mated_in_2_white ... ok
+test perft::tests::perft_movepicker_start_position ... ok
+test chess::board::movegen::tests::staged_matches_full ... ok
+
+failures:
+
+---- aster_proof::tests::mate_precedes_clock stdout ----
+
+thread 'aster_proof::tests::mate_precedes_clock' (52084) panicked at crates\engine\src\chess\types.rs:516:9:
+assertion failed: self.fifty_move_counter <= 100
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- aster_rules::tests::invalid_certificate_roots_rejected stdout ----
+
+thread 'aster_rules::tests::invalid_certificate_roots_rejected' (53264) panicked at crates\engine\src\chess\types.rs:516:9:
+assertion failed: self.fifty_move_counter <= 100
+
+---- play::tests::terminal_mate_precedes_draw stdout ----
+
+thread 'play::tests::terminal_mate_precedes_draw' (49732) panicked at crates\engine\src\chess\types.rs:516:9:
+assertion failed: self.fifty_move_counter <= 100
+
+---- search::aster_terminal_tests::terminal_positions_precede_quiescence_and_pruning stdout ----
+info string hash initialisation of 1mb complete in 0ms
+info string warning search called on a position with no legal moves
+info depth 0 score cp 0
+bestmove (none)
+
+thread 'search::aster_terminal_tests::terminal_positions_precede_quiescence_and_pruning' (60340) panicked at crates\engine\src\chess\types.rs:516:9:
+assertion failed: self.fifty_move_counter <= 100
+
+
+failures:
+    aster_proof::tests::mate_precedes_clock
+    aster_rules::tests::invalid_certificate_roots_rejected
+    play::tests::terminal_mate_precedes_draw
+    search::aster_terminal_tests::terminal_positions_precede_quiescence_and_pruning
+
+test result: FAILED. 126 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.89s
+
+error: test failed, to rerun pass `--bin aster`

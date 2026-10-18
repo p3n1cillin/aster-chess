@@ -1,0 +1,531 @@
+{
+  "schema": 1,
+  "seed": 20261020,
+  "plies": 20,
+  "selection_nodes": 2048,
+  "verification_nodes": 20000,
+  "max_abs_teacher_cp": 80,
+  "teacher": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "training_exclusion": null,
+  "training_exclusions": [],
+  "prior_suites_excluded": [
+    {
+      "path": "tests\\fixtures\\capacity-classical-100ms-v1.json",
+      "sha256": "dcbebc58b5c33ec6b9e502031dc4cdc7190d76dbc222ded241970136d958b3f5",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\capacity-classical-30ms-v1.json",
+      "sha256": "01e773465168914fc65c45ac13df8db197f8e0cb4e37d4a25557e4f19701bdf8",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\capacity-control-30ms-v1.json",
+      "sha256": "76c1fefa9817b587f355cccd4dfe763ed5f435b6fc11b57fcee5eb991e2cdd30",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\capacity-parent-v1.json",
+      "sha256": "81e388417a56d17ce865237647a02506e9cc05677232c6bcbe73b1f8d2f7d39b",
+      "positions": 160
+    },
+    {
+      "path": "tests\\fixtures\\deep-turn-classical-100ms-v1.json",
+      "sha256": "b8c5da7d9648fd72ccf674ca694848f3bc526776b738087b31e3e82a6453165c",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\deep-turn-classical-30ms-v1.json",
+      "sha256": "1ffa275e525d665757213fa34a93aa4bed17982fd844d444299b01d556fd0255",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\deep-turn-control-30ms-v1.json",
+      "sha256": "99889d267db0879be7131c4039dd80d258ad2221fe54222133dd32709b595e03",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\deep-turn-parent-v1.json",
+      "sha256": "5addfa8b6a03c8fd844ff43ec8c8dc71f6c2d3184460d919fc7dee2676865237",
+      "positions": 160
+    },
+    {
+      "path": "tests\\fixtures\\iir-100ms-v1.json",
+      "sha256": "0b2e40c88ada4064628909ddba0293ce3594774520eaffae50daafcca41ecace",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\iir-30ms-v1.json",
+      "sha256": "de119d1f9630b753d18a634031c90cefac64853d43e11e386aee535b53bf4307",
+      "positions": 256
+    },
+    {
+      "path": "tests\\fixtures\\iir-behavior-v1.json",
+      "sha256": "b3680be4939c0e82ddb125c5a70a90b8c75312440333e9bc0b8d443f51fc0d15",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\iir-parent-v1.json",
+      "sha256": "46868852f9af1c2b95bc9bfaec9b68bb0b45fd916d0bfc27f792fe9596855baa",
+      "positions": 448
+    },
+    {
+      "path": "tests\\fixtures\\iir-rating-v1.json",
+      "sha256": "ce491f6df3345245f016f9b1b8f7658769da750a0826a422f4732b16eaf2653f",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\kpk-setups-v1.json",
+      "sha256": "550764811ecbb1761c70a30a82c941122450839ef442f56a8f5a5a67ed96dd13",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-100ms-v1.json",
+      "sha256": "12ed5a4dd3688e730ba6224b8c88e00bc5b016975aa8dd08e1e918bbb9f7be1e",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-30ms-v1.json",
+      "sha256": "e6f6a4f084d0c06ec7a1bcc8de86a9d13b3fa0faa3053208c3c86359e62ba423",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-behavior-v1.json",
+      "sha256": "00a8de1225c4a1e6b6f0b943c6d1d12565900eea579aa6f644d5a2b347e9f919",
+      "positions": 80
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-parent-v1.json",
+      "sha256": "d8ac1c505d3c46c819b87da63fe8308cebd18a234a1889a9215fbc2e75101f3a",
+      "positions": 208
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-rating-v1.json",
+      "sha256": "9c7886ac0b66b35fd6cc74c2937bb86ba5506c0363568e87cf769be6bca46652",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\mate-proof-match-v1.json",
+      "sha256": "14286109ef669ec3abab5d4bfeb8f5de1ca6468969b72b8fd0cd658ba94edc0a",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\mate-proof-parent-v1.json",
+      "sha256": "85553f4ff2dcc2ce9896e002ce5730d4ca54061c82f1032bdb47f0c83ae750c4",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\openings-v1.json",
+      "sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v2.json",
+      "sha256": "cdcc99af780b795546a22e84b2557bd20168097c2694cc9b12ce2e242f74bc25",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v3.json",
+      "sha256": "b2c84b63c566712b33102e1a5f246d47a010a0341f8396c5e036937c74e241f3",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v4.json",
+      "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v5.json",
+      "sha256": "e63c68d4024428bef2f84a4289db06c4aee70e60aa9f081cf437d2a6d237c46e",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\phase-classical-100ms-v1.json",
+      "sha256": "3b01d69ec7c31e2e5991b81ebb5860024b4393cb42d91c8a84db69ff20dacffc",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\phase-classical-30ms-v1.json",
+      "sha256": "3efc264b68683bd961a269679ecb493ccd53888651e5a767b34b66a7c0f5e3e1",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\phase-control-30ms-v1.json",
+      "sha256": "f29fbb72d1d3696bff82ff4630bc51b37d6148af3350e0b265509e96aab30758",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\phase-parent-v1.json",
+      "sha256": "35fd8dc040ab40538966d73d0f9c54d38ce490175e90fba10c9cf4c82363063f",
+      "positions": 80
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-100ms-v1.json",
+      "sha256": "9c760e96dc990a5ab465a5bf8eff9971ed8eae9856c76d57b6ca32f2563ba63f",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-30ms-v1.json",
+      "sha256": "940d8217dd7a6a583ddcabfe6edeffcd4769ac7f9118d00f67f081b52f238072",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-behavior-v1.json",
+      "sha256": "02d7afdbe0eb10296d53208cf96f551058d0b3323fe18570dd3cae1706b90e00",
+      "positions": 160
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-parent-v1.json",
+      "sha256": "13c3a7a689f83064490766a76d112589ef2098f93a9d92ebbfcee805f1c385f4",
+      "positions": 288
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-rating-v1.json",
+      "sha256": "b9d8a21feba1ae6c0390e1fa0dd26e3cf65848f0b2e87fd002ebbe0ef1f626fa",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\rating-confirm-v1.json",
+      "sha256": "1e904d67400433abedb8e48592b4598e8e5ed10ed82b0cdd13025de6eca8615d",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\rating-parent-v1.json",
+      "sha256": "6c4d7453e3572cadf786d81be8ad8b0b85fb9c461d5e93847612959836efb112",
+      "positions": 144
+    },
+    {
+      "path": "tests\\fixtures\\rating-screen-v1.json",
+      "sha256": "690bacaceff2559200ebb084424de85639cf045c14f094912e18f5b38ba9805f",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\relations-classical-100ms-v1.json",
+      "sha256": "2ded031474bc1542069632721b7ad8ef7807f32c1ad0378cc97438e465f64928",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\relations-classical-30ms-v1.json",
+      "sha256": "63b831b035cfbf5ed44ee4a89e7a374e29cef97918eb8d6e8b2a54893db56478",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\relations-control-30ms-v1.json",
+      "sha256": "9bd295a72aeeecafcf1234f923b27fe958065393a51c1b7331a3c7ea408d3f85",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\relations-parent-v1.json",
+      "sha256": "08d8909b4520243fa3b0f850595957b79087c532607d4c375eeb54eefc3a8a46",
+      "positions": 160
+    },
+    {
+      "path": "tests\\fixtures\\rust-foundation-original-v1.json",
+      "sha256": "f0ed641ffac5091b4dc75b076f36c2bfbc2e2f670deb8a4e613a1a24823b840f",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\rust-foundation-parent-v1.json",
+      "sha256": "ec2a76dbd775a3fcc94156c36ec0f4762f0dae6146640fe189b1d795632b40c9",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\rust-foundation-stockfish-v1.json",
+      "sha256": "7a4d448a988b4a77856d60102dedf6b5b5681bf6c6acf551239b29e23904bc36",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\stable-endgame-classical-100ms-v1.json",
+      "sha256": "4682375ee99e6043c9a2face29f6ae3bd9bc46fa66c3978005ac09f09d32afe6",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\stable-endgame-classical-30ms-v1.json",
+      "sha256": "03139c4b9c389d6a607425a1fa64a3ddae9d92824fbdab765fd1138a2440f848",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\stable-endgame-control-30ms-v1.json",
+      "sha256": "19e001548702c754b8f97e37b7274b065880bc279c968954219bf356111be8fc",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\stable-endgame-parent-v1.json",
+      "sha256": "ee8a6137df3a3a0da43dcf783565e974483101bb41aeb956d52772f39fc06a19",
+      "positions": 160
+    }
+  ],
+  "attempts_used": 63,
+  "teacher_options": {
+    "Threads": 1,
+    "Hash": 64
+  },
+  "generator_sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746",
+  "interpretation": "Seeded near-best MultiPV continuations from the start, distinct final positions, balanced under a bounded teacher check. Teacher scores do not prove equality; this is a regression suite, not an independent final superiority test.",
+  "openings": [
+    {
+      "id": "opening-002",
+      "moves": "e2e4 e7e5 d2d3 d7d6 g1f3 f8e7 h2h3 f7f5 b1c3 c7c5 g2g3 b8c6 c3d5 g8f6 f1g2 c8d7 e1g1 e8g8 c2c3 a8c8",
+      "fen": "2rq1rk1/pp1bb1pp/2np1n2/2pNpp2/4P3/2PP1NPP/PP3PB1/R1BQ1RK1 w - - 1 11",
+      "teacher_white_cp": 11,
+      "teacher_depth": 11,
+      "attempt": 3
+    },
+    {
+      "id": "opening-027",
+      "moves": "d2d4 g8f6 b1c3 b8c6 d4d5 c6e5 f2f4 e5g6 e2e4 e7e6 g1f3 f8b4 d5e6 d7e6 f1d3 c8d7 g2g3 d8e7 e4e5 b4c3",
+      "fen": "r3k2r/pppbqppp/4pnn1/4P3/5P2/2bB1NP1/PPP4P/R1BQK2R w KQkq - 0 11",
+      "teacher_white_cp": 23,
+      "teacher_depth": 12,
+      "attempt": 53
+    },
+    {
+      "id": "opening-019",
+      "moves": "e2e4 g8f6 b1c3 e7e5 d2d4 e5d4 d1d4 d7d6 a2a4 b8c6 d4e3 f8e7 f1d3 c6e5 a4a5 e8g8 g1f3 f6g4 e3e2 e5f3",
+      "fen": "r1bq1rk1/ppp1bppp/3p4/P7/4P1n1/2NB1n2/1PP1QPPP/R1B1K2R w KQ - 0 11",
+      "teacher_white_cp": -19,
+      "teacher_depth": 12,
+      "attempt": 39
+    },
+    {
+      "id": "opening-009",
+      "moves": "e2e4 e7e5 g1f3 b8c6 b1c3 g8f6 d2d4 d7d6 c1g5 a7a6 h2h3 h7h6 g5c1 e5d4 c3d5 g7g6 f3d4 c8d7 c1e3 c6a7",
+      "fen": "r2qkb1r/nppb1p2/p2p1npp/3N4/3NP3/4B2P/PPP2PP1/R2QKB1R w KQkq - 3 11",
+      "teacher_white_cp": 60,
+      "teacher_depth": 12,
+      "attempt": 19
+    },
+    {
+      "id": "opening-013",
+      "moves": "d2d4 g8f6 c1f4 d7d5 g1f3 c7c5 d4c5 b8a6 b1c3 e7e6 e2e4 a6c5 c3b5 c5a6 a2a3 f6e4 f1d3 c8d7 e1g1 f8c5",
+      "fen": "r2qk2r/pp1b1ppp/n3p3/1Nbp4/4nB2/P2B1N2/1PP2PPP/R2Q1RK1 w kq - 4 11",
+      "teacher_white_cp": 47,
+      "teacher_depth": 11,
+      "attempt": 27
+    },
+    {
+      "id": "opening-017",
+      "moves": "c2c3 e7e5 d2d4 e5e4 d1a4 f8e7 h2h4 c7c6 c1f4 d7d6 a4c2 d6d5 e2e3 e7d6 g1e2 c8e6 f2f3 e4f3 g2f3 g8e7",
+      "fen": "rn1qk2r/pp2nppp/2pbb3/3p4/3P1B1P/2P1PP2/PPQ1N3/RN2KB1R w KQkq - 1 11",
+      "teacher_white_cp": 44,
+      "teacher_depth": 12,
+      "attempt": 36
+    },
+    {
+      "id": "opening-025",
+      "moves": "c2c3 e7e6 d2d4 c7c5 g2g3 d7d5 a2a3 g8f6 g1f3 f8d6 f1g2 h7h6 b1d2 a7a5 d4c5 d6c5 e1g1 e8g8 b2b3 b8c6",
+      "fen": "r1bq1rk1/1p3pp1/2n1pn1p/p1bp4/8/PPP2NP1/3NPPBP/R1BQ1RK1 w - - 1 11",
+      "teacher_white_cp": -30,
+      "teacher_depth": 11,
+      "attempt": 47
+    },
+    {
+      "id": "opening-015",
+      "moves": "c2c3 e7e5 c3c4 g8f6 b1c3 f8b4 e2e3 d7d6 g1e2 e8g8 g2g3 c8e6 a2a3 b4c5 b2b4 c5b6 d2d3 c7c5 c1b2 c5b4",
+      "fen": "rn1q1rk1/pp3ppp/1b1pbn2/4p3/1pP5/P1NPP1P1/1B2NP1P/R2QKB1R w KQ - 0 11",
+      "teacher_white_cp": -12,
+      "teacher_depth": 12,
+      "attempt": 31
+    },
+    {
+      "id": "opening-010",
+      "moves": "d2d4 d7d5 g1f3 e7e6 a2a3 g8f6 e2e3 c7c5 f1e2 b8d7 c2c4 b7b6 e1g1 f8e7 c4d5 e6d5 h2h3 e8g8 b2b3 c8b7",
+      "fen": "r2q1rk1/pb1nbppp/1p3n2/2pp4/3P4/PP2PN1P/4BPP1/RNBQ1RK1 w - - 1 11",
+      "teacher_white_cp": 4,
+      "teacher_depth": 13,
+      "attempt": 21
+    },
+    {
+      "id": "opening-024",
+      "moves": "d2d4 g8f6 c2c3 d7d5 g1f3 c8f5 f3h4 f5e4 d1b3 b7b6 c1f4 e7e6 h4f3 f8d6 f3e5 f6h5 f4e3 h5f6 b1d2 e8g8",
+      "fen": "rn1q1rk1/p1p2ppp/1p1bpn2/3pN3/3Pb3/1QP1B3/PP1NPPPP/R3KB1R w KQ - 8 11",
+      "teacher_white_cp": 22,
+      "teacher_depth": 13,
+      "attempt": 46
+    },
+    {
+      "id": "opening-029",
+      "moves": "e2e4 g8f6 b1c3 e7e5 g1f3 d7d6 g2g3 f8e7 f1g2 a7a5 d2d4 e5d4 d1d4 e8g8 h2h3 f8e8 d4d1 e7f8 f3d4 a5a4",
+      "fen": "rnbqrbk1/1pp2ppp/3p1n2/8/p2NP3/2N3PP/PPP2PB1/R1BQK2R w KQ - 0 11",
+      "teacher_white_cp": -1,
+      "teacher_depth": 12,
+      "attempt": 57
+    },
+    {
+      "id": "opening-022",
+      "moves": "c2c3 g8f6 d2d4 e7e6 g2g3 h7h6 c1e3 b7b6 e3f4 g7g5 f1g2 c7c6 f4d2 d7d6 a2a4 a7a5 g1f3 c8a6 h2h4 g5g4",
+      "fen": "rn1qkb1r/5p2/bppppn1p/p7/P2P2pP/2P2NP1/1P1BPPB1/RN1QK2R w KQkq - 0 11",
+      "teacher_white_cp": 37,
+      "teacher_depth": 14,
+      "attempt": 43
+    },
+    {
+      "id": "opening-026",
+      "moves": "e2e4 g8f6 e4e5 f6g8 f2f4 g8h6 c2c3 e7e6 g1f3 c7c5 b1a3 b8c6 f1e2 d7d6 e1g1 f8e7 e2b5 e8g8 f1e1 c8d7",
+      "fen": "r2q1rk1/pp1bbppp/2npp2n/1Bp1P3/5P2/N1P2N2/PP1P2PP/R1BQR1K1 w - - 6 11",
+      "teacher_white_cp": -46,
+      "teacher_depth": 13,
+      "attempt": 49
+    },
+    {
+      "id": "opening-023",
+      "moves": "d2d4 g8f6 b1c3 c7c5 d4c5 b8c6 g1f3 e7e5 g2g4 h7h6 h1g1 e5e4 g4g5 h6g5 f3g5 h8h4 f1g2 d7d5 c5d6 c8f5",
+      "fen": "r2qkb2/pp3pp1/2nP1n2/5bN1/4p2r/2N5/PPP1PPBP/R1BQK1R1 w Qq - 1 11",
+      "teacher_white_cp": 76,
+      "teacher_depth": 15,
+      "attempt": 44
+    },
+    {
+      "id": "opening-018",
+      "moves": "e2e4 g8f6 d2d3 d7d5 b1c3 d5e4 c1e3 f6d5 d3e4 d5e3 d1d8 e8d8 f2e3 c7c6 g1f3 a7a5 e4e5 d8e8 c3a4 c8f5",
+      "fen": "rn2kb1r/1p2pppp/2p5/p3Pb2/N7/4PN2/PPP3PP/R3KB1R w KQ - 3 11",
+      "teacher_white_cp": 46,
+      "teacher_depth": 10,
+      "attempt": 38
+    },
+    {
+      "id": "opening-011",
+      "moves": "c2c3 e7e6 g2g3 g8f6 g1f3 h7h6 f1h3 f8e7 e1g1 e8g8 f1e1 f6e4 h3f1 a7a5 d2d3 e4g5 c1g5 e7g5 e2e4 g5f6",
+      "fen": "rnbq1rk1/1ppp1pp1/4pb1p/p7/4P3/2PP1NP1/PP3P1P/RN1QRBK1 w - - 1 11",
+      "teacher_white_cp": 34,
+      "teacher_depth": 12,
+      "attempt": 25
+    },
+    {
+      "id": "opening-012",
+      "moves": "d2d4 d7d5 c2c4 g8f6 c4d5 g7g6 b1c3 f6d5 h2h4 d5c3 b2c3 f8g7 e2e4 e7e5 g1f3 e5d4 h4h5 d4c3 d1b3 d8e7",
+      "fen": "rnb1k2r/ppp1qpbp/6p1/7P/4P3/1Qp2N2/P4PP1/R1B1KB1R w KQkq - 2 11",
+      "teacher_white_cp": -42,
+      "teacher_depth": 12,
+      "attempt": 26
+    },
+    {
+      "id": "opening-005",
+      "moves": "d2d4 g8f6 c2c4 d7d6 b1c3 c7c5 d4c5 c8f5 d1b3 b8a6 c5d6 a6c5 b3b5 f6d7 e2e4 a7a6 b5b4 f5g6 f2f3 e7e5",
+      "fen": "r2qkb1r/1p1n1ppp/p2P2b1/2n1p3/1QP1P3/2N2P2/PP4PP/R1B1KBNR w KQkq - 0 11",
+      "teacher_white_cp": 60,
+      "teacher_depth": 11,
+      "attempt": 9
+    },
+    {
+      "id": "opening-016",
+      "moves": "g1f3 d7d5 d2d4 g8f6 e2e3 c7c5 c2c4 d5c4 f3e5 b8d7 f1c4 e7e6 e1g1 f8d6 d1e2 d7e5 d4e5 d6e5 f2f4 e5d6",
+      "fen": "r1bqk2r/pp3ppp/3bpn2/2p5/2B2P2/4P3/PP2Q1PP/RNB2RK1 w kq - 1 11",
+      "teacher_white_cp": 66,
+      "teacher_depth": 12,
+      "attempt": 33
+    },
+    {
+      "id": "opening-006",
+      "moves": "c2c3 e7e5 c3c4 g8f6 a2a3 d7d5 c4d5 a7a5 e2e4 f8c5 b1c3 e8g8 f1e2 f8e8 d1c2 h7h6 c3a4 c5d4 g1f3 c7c6",
+      "fen": "rnbqr1k1/1p3pp1/2p2n1p/p2Pp3/N2bP3/P4N2/1PQPBPPP/R1B1K2R w KQ - 0 11",
+      "teacher_white_cp": -15,
+      "teacher_depth": 13,
+      "attempt": 11
+    },
+    {
+      "id": "opening-030",
+      "moves": "g1f3 c7c5 e2e3 d7d5 b1c3 a7a6 g2g3 g8f6 f1g2 b7b5 f3e5 c5c4 e3e4 d5d4 c3e2 c8b7 d2d3 b8c6 f2f4 a8c8",
+      "fen": "2rqkb1r/1b2pppp/p1n2n2/1p2N3/2ppPP2/3P2P1/PPP1N1BP/R1BQK2R w KQk - 1 11",
+      "teacher_white_cp": 8,
+      "teacher_depth": 14,
+      "attempt": 58
+    },
+    {
+      "id": "opening-003",
+      "moves": "c2c3 e7e6 g2g3 d7d5 f1g2 f8d6 d2d4 c7c5 d4c5 d6e7 e2e4 e7c5 e4d5 d8b6 d1d2 c5e7 a2a4 g8f6 a4a5 b6a6",
+      "fen": "rnb1k2r/pp2bppp/q3pn2/P2P4/8/2P3P1/1P1Q1PBP/RNB1K1NR w KQkq - 1 11",
+      "teacher_white_cp": 76,
+      "teacher_depth": 11,
+      "attempt": 6
+    },
+    {
+      "id": "opening-007",
+      "moves": "c2c3 e7e6 d2d4 d7d5 d1a4 d8d7 a4c2 g8f6 c1f4 f6h5 f4c1 a7a6 c1e3 b7b6 a2a3 f8e7 g2g3 c8b7 b1d2 d7d8",
+      "fen": "rn1qk2r/1bp1bppp/pp2p3/3p3n/3P4/P1P1B1P1/1PQNPP1P/R3KBNR w KQkq - 3 11",
+      "teacher_white_cp": -15,
+      "teacher_depth": 13,
+      "attempt": 12
+    },
+    {
+      "id": "opening-008",
+      "moves": "c2c3 d7d5 d2d4 h7h6 g1f3 c8f5 d1b3 f5c8 b1d2 b8c6 e2e3 e7e6 b3c2 g8f6 b2b4 f8d6 f1d3 a7a6 a2a4 c8d7",
+      "fen": "r2qk2r/1ppb1pp1/p1nbpn1p/3p4/PP1P4/2PBPN2/2QN1PPP/R1B1K2R w KQkq - 1 11",
+      "teacher_white_cp": 51,
+      "teacher_depth": 12,
+      "attempt": 13
+    },
+    {
+      "id": "opening-021",
+      "moves": "e2e4 e7e5 f1e2 g8f6 g1f3 d7d5 e4d5 f8d6 d2d4 e5d4 e1g1 d6e7 f3d4 d8d5 c1f4 e8g8 d4b5 d5e4 g2g3 c8h3",
+      "fen": "rn3rk1/ppp1bppp/5n2/1N6/4qB2/6Pb/PPP1BP1P/RN1Q1RK1 w - - 1 11",
+      "teacher_white_cp": 56,
+      "teacher_depth": 12,
+      "attempt": 41
+    },
+    {
+      "id": "opening-031",
+      "moves": "e2e4 c7c5 f1c4 d7d6 g1f3 a7a6 d2d4 e7e6 d4c5 d8a5 c1d2 a5c5 c4d3 c5c7 d1e2 b8d7 c2c4 f8e7 d3c2 b7b5",
+      "fen": "r1b1k1nr/2qnbppp/p2pp3/1p6/2P1P3/5N2/PPBBQPPP/RN2K2R w KQkq - 0 11",
+      "teacher_white_cp": 56,
+      "teacher_depth": 11,
+      "attempt": 61
+    },
+    {
+      "id": "opening-001",
+      "moves": "g1f3 c7c5 b1c3 g7g6 e2e4 f8g7 f1b5 a7a6 b5e2 d7d6 e1g1 b8c6 h2h3 h7h6 f1e1 b7b5 e2f1 e7e5 c3d5 g8e7",
+      "fen": "r1bqk2r/4npb1/p1np2pp/1ppNp3/4P3/5N1P/PPPP1PP1/R1BQRBK1 w kq - 2 11",
+      "teacher_white_cp": -13,
+      "teacher_depth": 13,
+      "attempt": 0
+    },
+    {
+      "id": "opening-014",
+      "moves": "d2d4 g8f6 c2c3 c7c5 g1f3 c5d4 f3d4 e7e6 g2g3 e6e5 d4b3 h7h6 e2e4 b8c6 d1f3 f8d6 f3e2 b7b6 c1e3 e8g8",
+      "fen": "r1bq1rk1/p2p1pp1/1pnb1n1p/4p3/4P3/1NP1B1P1/PP2QP1P/RN2KB1R w KQ - 2 11",
+      "teacher_white_cp": -57,
+      "teacher_depth": 12,
+      "attempt": 28
+    },
+    {
+      "id": "opening-020",
+      "moves": "g1f3 c7c5 e2e3 e7e6 f1e2 b7b6 c2c4 c8b7 b1c3 f8e7 a2a3 b8c6 b2b3 a8c8 d2d4 c5d4 e3d4 c6a5 c3b5 b7f3",
+      "fen": "2rqk1nr/p2pbppp/1p2p3/nN6/2PP4/PP3b2/4BPPP/R1BQK2R w KQk - 0 11",
+      "teacher_white_cp": -51,
+      "teacher_depth": 11,
+      "attempt": 40
+    },
+    {
+      "id": "opening-032",
+      "moves": "c2c3 g8f6 d2d4 c7c6 b1d2 a7a5 d1c2 a5a4 e2e4 a4a3 b2b3 d7d6 f2f4 e7e5 g1f3 f6d7 f4e5 d6e5 f1e2 e5d4",
+      "fen": "rnbqkb1r/1p1n1ppp/2p5/8/3pP3/pPP2N2/P1QNB1PP/R1B1K2R w KQkq - 0 11",
+      "teacher_white_cp": 64,
+      "teacher_depth": 13,
+      "attempt": 62
+    },
+    {
+      "id": "opening-004",
+      "moves": "c2c3 d7d5 f2f4 g7g6 g1f3 c7c5 e2e3 b8c6 f1e2 g8f6 d2d4 f8g7 e1g1 a7a5 g1h1 a5a4 f3e5 d8a5 c3c4 c8e6",
+      "fen": "r3k2r/1p2ppbp/2n1bnp1/q1ppN3/p1PP1P2/4P3/PP2B1PP/RNBQ1R1K w kq - 1 11",
+      "teacher_white_cp": -32,
+      "teacher_depth": 12,
+      "attempt": 8
+    },
+    {
+      "id": "opening-028",
+      "moves": "c2c3 d7d5 f2f4 g7g6 d2d4 g8f6 e2e3 c7c5 g1f3 f8g7 f1d3 d8c7 e1g1 c8f5 d3f5 g6f5 d1d3 c7c8 d4c5 e8g8",
+      "fen": "rnq2rk1/pp2ppbp/5n2/2Pp1p2/5P2/2PQPN2/PP4PP/RNB2RK1 w - - 1 11",
+      "teacher_white_cp": 31,
+      "teacher_depth": 12,
+      "attempt": 56
+    }
+  ]
+}

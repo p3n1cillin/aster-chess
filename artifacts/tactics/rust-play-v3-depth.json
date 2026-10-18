@@ -1,0 +1,366 @@
+{
+  "engine": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\target\\release\\aster.exe",
+  "binary_sha256": "246b2c6c1dbb6b98a0d90013fedb47b54b95317992593d98cc486ef66ef91fdb",
+  "suite": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\tests\\fixtures\\tactics-v1.json",
+  "limit": {
+    "depth": 8
+  },
+  "eval_file": null,
+  "solved": 32,
+  "total": 32,
+  "positions": [
+    {
+      "id": "tactic-001",
+      "bestmove": "e2e3",
+      "solved": true,
+      "expected": [
+        "e2e3"
+      ],
+      "depth": 8,
+      "nodes": 4127,
+      "time": 0.006
+    },
+    {
+      "id": "tactic-002",
+      "bestmove": "a8a7",
+      "solved": true,
+      "expected": [
+        "a8a7"
+      ],
+      "depth": 8,
+      "nodes": 3378,
+      "time": 0.004
+    },
+    {
+      "id": "tactic-003",
+      "bestmove": "e3f5",
+      "solved": true,
+      "expected": [
+        "e3f5"
+      ],
+      "depth": 8,
+      "nodes": 1943,
+      "time": 0.002
+    },
+    {
+      "id": "tactic-004",
+      "bestmove": "c8e6",
+      "solved": true,
+      "expected": [
+        "c8e6"
+      ],
+      "depth": 8,
+      "nodes": 1677,
+      "time": 0.001
+    },
+    {
+      "id": "tactic-005",
+      "bestmove": "e4f6",
+      "solved": true,
+      "expected": [
+        "e4f6"
+      ],
+      "depth": 8,
+      "nodes": 1356,
+      "time": 0.001
+    },
+    {
+      "id": "tactic-006",
+      "bestmove": "f5g6",
+      "solved": true,
+      "expected": [
+        "f5g6"
+      ],
+      "depth": 8,
+      "nodes": 4528,
+      "time": 0.005
+    },
+    {
+      "id": "tactic-007",
+      "bestmove": "e3e5",
+      "solved": true,
+      "expected": [
+        "e3e5"
+      ],
+      "depth": 8,
+      "nodes": 2168,
+      "time": 0.002
+    },
+    {
+      "id": "tactic-008",
+      "bestmove": "d5c7",
+      "solved": true,
+      "expected": [
+        "d5c7"
+      ],
+      "depth": 8,
+      "nodes": 2678,
+      "time": 0.002
+    },
+    {
+      "id": "tactic-009",
+      "bestmove": "h4g5",
+      "solved": true,
+      "expected": [
+        "h4g5"
+      ],
+      "depth": 8,
+      "nodes": 1451,
+      "time": 0.001
+    },
+    {
+      "id": "tactic-010",
+      "bestmove": "c8d7",
+      "solved": true,
+      "expected": [
+        "c8d7"
+      ],
+      "depth": 8,
+      "nodes": 2843,
+      "time": 0.003
+    },
+    {
+      "id": "tactic-011",
+      "bestmove": "h4g5",
+      "solved": true,
+      "expected": [
+        "h4g5"
+      ],
+      "depth": 8,
+      "nodes": 2452,
+      "time": 0.001
+    },
+    {
+      "id": "tactic-012",
+      "bestmove": "d5f5",
+      "solved": true,
+      "expected": [
+        "d5f5"
+      ],
+      "depth": 8,
+      "nodes": 2212,
+      "time": 0.002
+    },
+    {
+      "id": "tactic-013",
+      "bestmove": "e3f4",
+      "solved": true,
+      "expected": [
+        "e3f4"
+      ],
+      "depth": 8,
+      "nodes": 4960,
+      "time": 0.005
+    },
+    {
+      "id": "tactic-014",
+      "bestmove": "d4e3",
+      "solved": true,
+      "expected": [
+        "d4e3"
+      ],
+      "depth": 8,
+      "nodes": 1092,
+      "time": 0.001
+    },
+    {
+      "id": "tactic-015",
+      "bestmove": "g1b1",
+      "solved": true,
+      "expected": [
+        "g1b1"
+      ],
+      "depth": 8,
+      "nodes": 1881,
+      "time": 0.002
+    },
+    {
+      "id": "tactic-016",
+      "bestmove": "f3e4",
+      "solved": true,
+      "expected": [
+        "f3e4"
+      ],
+      "depth": 8,
+      "nodes": 6004,
+      "time": 0.006
+    },
+    {
+      "id": "tactic-017",
+      "bestmove": "b6d6",
+      "solved": true,
+      "expected": [
+        "b6d6"
+      ],
+      "depth": 8,
+      "nodes": 2770,
+      "time": 0.002
+    },
+    {
+      "id": "tactic-018",
+      "bestmove": "a5c4",
+      "solved": true,
+      "expected": [
+        "a5c4"
+      ],
+      "depth": 8,
+      "nodes": 2843,
+      "time": 0.003
+    },
+    {
+      "id": "tactic-019",
+      "bestmove": "h4g5",
+      "solved": true,
+      "expected": [
+        "h4g5"
+      ],
+      "depth": 8,
+      "nodes": 5623,
+      "time": 0.006
+    },
+    {
+      "id": "tactic-020",
+      "bestmove": "h1e1",
+      "solved": true,
+      "expected": [
+        "h1e1"
+      ],
+      "depth": 8,
+      "nodes": 1904,
+      "time": 0.002
+    },
+    {
+      "id": "tactic-021",
+      "bestmove": "g8h8",
+      "solved": true,
+      "expected": [
+        "g8h8"
+      ],
+      "depth": 8,
+      "nodes": 3309,
+      "time": 0.003
+    },
+    {
+      "id": "tactic-022",
+      "bestmove": "e2f3",
+      "solved": true,
+      "expected": [
+        "e2f3"
+      ],
+      "depth": 8,
+      "nodes": 1464,
+      "time": 0.001
+    },
+    {
+      "id": "tactic-023",
+      "bestmove": "e3c2",
+      "solved": true,
+      "expected": [
+        "e3c2"
+      ],
+      "depth": 8,
+      "nodes": 1755,
+      "time": 0.001
+    },
+    {
+      "id": "tactic-024",
+      "bestmove": "f1f2",
+      "solved": true,
+      "expected": [
+        "f1f2"
+      ],
+      "depth": 8,
+      "nodes": 3248,
+      "time": 0.004
+    },
+    {
+      "id": "tactic-025",
+      "bestmove": "c7f7",
+      "solved": true,
+      "expected": [
+        "c7f7"
+      ],
+      "depth": 8,
+      "nodes": 1901,
+      "time": 0.002
+    },
+    {
+      "id": "tactic-026",
+      "bestmove": "c1b2",
+      "solved": true,
+      "expected": [
+        "c1b2"
+      ],
+      "depth": 8,
+      "nodes": 2807,
+      "time": 0.002
+    },
+    {
+      "id": "tactic-027",
+      "bestmove": "f6e5",
+      "solved": true,
+      "expected": [
+        "f6e5"
+      ],
+      "depth": 8,
+      "nodes": 2367,
+      "time": 0.002
+    },
+    {
+      "id": "tactic-028",
+      "bestmove": "c8f5",
+      "solved": true,
+      "expected": [
+        "c8f5"
+      ],
+      "depth": 8,
+      "nodes": 3714,
+      "time": 0.004
+    },
+    {
+      "id": "tactic-029",
+      "bestmove": "b2c3",
+      "solved": true,
+      "expected": [
+        "b2c3"
+      ],
+      "depth": 8,
+      "nodes": 3273,
+      "time": 0.003
+    },
+    {
+      "id": "tactic-030",
+      "bestmove": "e4f4",
+      "solved": true,
+      "expected": [
+        "e4f4"
+      ],
+      "depth": 8,
+      "nodes": 7055,
+      "time": 0.006
+    },
+    {
+      "id": "tactic-031",
+      "bestmove": "e5d3",
+      "solved": true,
+      "expected": [
+        "e5d3"
+      ],
+      "depth": 8,
+      "nodes": 5873,
+      "time": 0.006
+    },
+    {
+      "id": "tactic-032",
+      "bestmove": "d5c4",
+      "solved": true,
+      "expected": [
+        "d5c4"
+      ],
+      "depth": 8,
+      "nodes": 3465,
+      "time": 0.003
+    }
+  ],
+  "interpretation": "Teacher-verified tactical regression set; neither an Elo estimate nor proof of general playing strength."
+}

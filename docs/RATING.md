@@ -1,5 +1,14 @@
 # Current rating and measurement policy
 
+The current **Rust 0.9.1** build is **not yet calibrated**. Its source foundation
+wins 63/64 audited short-control games against original Aster, and scores
+1 win, 39 draws and 24 losses against full-strength Stockfish 19. Those screens
+show substantial progress and a remaining gap; they do not assign an absolute
+Elo. The [Rust migration](RUST-MIGRATION.md) records exact binaries and provenance.
+The last calibrated C# reference below is historical and is not transferred to
+Rust or to the upstream engine’s public rating scale.
+
+
 The October 5 [visual play build](PLAY.md) has **no newly measured rating**.
 Its 64 paired regression games against the previous runtime are an engineering
 check, and the browser's 1..15 second reply budgets are uncalibrated. The

@@ -1,0 +1,20 @@
+{
+  "score": 0.984375,
+  "family_95_percent_interval": [
+    0.95,
+    1.0
+  ],
+  "families": 29,
+  "resolved_pairs": 32,
+  "unresolved_pairs": 0,
+  "bootstrap_samples": 20000,
+  "seed": 20261019,
+  "family_definition": "initial FEN plus first four UCI plies",
+  "wins": 63,
+  "draws": 0,
+  "losses": 1,
+  "forfeits": 0,
+  "report_sha256": "828a6b18827b1e5ac1bbeb53e078422c52f70d1ca47572ba0ed86d747c16f3e4",
+  "analyzer_sha256": "0be3022cdbf9afdb2792810660014387716bec509b85803d0e7ab6e013269272",
+  "interpretation": "Predeclared local screen, not an absolute/public Elo, not a universal Stockfish-superiority test. Family resampling is limited by the number and distribution of sampled families."
+}

@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "complete": true,
+  "reason": "complete",
+  "summary": "Black forces checkmate within 1 plies. Every legal defense is covered; all 2 leaves/positions are replayable.",
+  "rootFen": "2K5/1r6/8/4q1P1/5k2/8/8/8 b - - 0 1",
+  "strongSide": 1,
+  "rootDistance": 1,
+  "maxPlies": 3,
+  "visits": 4,
+  "nodeLimit": 100000,
+  "nodes": [
+    {
+      "id": 0,
+      "fen": "2K5/1r6/8/4q1P1/5k2/8/8/8 b - - 0 1",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "e5c7",
+          "to": 1
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "fen": "2K5/1rq5/8/6P1/5k2/8/8/8 w - - 1 2",
+      "distance": 0,
+      "edges": []
+    }
+  ]
+}

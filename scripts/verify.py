@@ -201,4 +201,6 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    # The C# verifier above remains readable for historical artifacts. Active builds are Rust.
+    from verify_rust import main as verify_rust_main
+    verify_rust_main()

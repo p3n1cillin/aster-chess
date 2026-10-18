@@ -1,0 +1,19 @@
+{
+  "runtime_binary_sha256": "246b2c6c1dbb6b98a0d90013fedb47b54b95317992593d98cc486ef66ef91fdb",
+  "mateLabel": "M2",
+  "passed": true,
+  "engine": "native Rust Aster",
+  "browser": "Microsoft Edge headless via Playwright 1.64.1",
+  "white": {
+    "depth": "21 / 38",
+    "main": "540.2K",
+    "roots": 1,
+    "history": "1.\ne4\ne6"
+  },
+  "blackTopLeft": "h1",
+  "consoleErrors": [],
+  "screenshots": [
+    "artifacts/play/rust-desktop-v3.png",
+    "artifacts/play/rust-mobile-v3.png"
+  ]
+}

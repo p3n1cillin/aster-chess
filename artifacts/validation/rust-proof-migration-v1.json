@@ -1,0 +1,142 @@
+{
+  "passed": true,
+  "certificates": 27,
+  "checked": [
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\castling-alternative-False.json",
+      "positions": 2,
+      "visits": 3
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\castling-alternative-True.json",
+      "positions": 2,
+      "visits": 3
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\defender-1-black.json",
+      "positions": 5,
+      "visits": 178
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\defender-1-white.json",
+      "positions": 5,
+      "visits": 181
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\defender-5-black.json",
+      "positions": 15,
+      "visits": 372
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\defender-5-white.json",
+      "positions": 15,
+      "visits": 164
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\example-0-black.json",
+      "positions": 2,
+      "visits": 3
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\example-0-white.json",
+      "positions": 2,
+      "visits": 3
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\example-1-black.json",
+      "positions": 6,
+      "visits": 2834
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\example-1-white.json",
+      "positions": 6,
+      "visits": 2751
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\example-2-black.json",
+      "positions": 2,
+      "visits": 3
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\example-2-white.json",
+      "positions": 2,
+      "visits": 3
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\example-3-black.json",
+      "positions": 2,
+      "visits": 4
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\example-3-white.json",
+      "positions": 2,
+      "visits": 4
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\example-4-black.json",
+      "positions": 2,
+      "visits": 3
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\example-4-white.json",
+      "positions": 2,
+      "visits": 3
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\example-5-black.json",
+      "positions": 16,
+      "visits": 37642
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\example-5-white.json",
+      "positions": 16,
+      "visits": 31806
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\seeded-21.json",
+      "positions": 2,
+      "visits": 4
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\seeded-27.json",
+      "positions": 4,
+      "visits": 1819
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\seeded-33.json",
+      "positions": 4,
+      "visits": 169
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\seeded-46.json",
+      "positions": 2,
+      "visits": 3
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\seeded-7.json",
+      "positions": 2,
+      "visits": 5
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\terminal-100-False.json",
+      "positions": 1,
+      "visits": 1
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\terminal-100-True.json",
+      "positions": 1,
+      "visits": 1
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\terminal-150-False.json",
+      "positions": 1,
+      "visits": 1
+    },
+    {
+      "source": "artifacts\\proofs\\mate-proof-general-v2\\terminal-150-True.json",
+      "positions": 1,
+      "visits": 1
+    }
+  ],
+  "failed": []
+}

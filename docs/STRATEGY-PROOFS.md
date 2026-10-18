@@ -1,5 +1,9 @@
 # Native explanations and independently checkable strategies
 
+This document preserves the historical C# implementation and its evidence.
+For the active Rust build and proof export, see [Rust migration](RUST-MIGRATION.md)
+and [current play controls](PLAY.md).
+
 Aster can explain queen/rook-versus-king choices and export a complete winning
 strategy certificate. This is the first implemented distinctive capability:
 the pinned Stockfish 19 binary responds to `explain` with an unknown-command

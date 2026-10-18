@@ -1,0 +1,52 @@
+{
+  "public_elo": null,
+  "last_measured_local_rating": 2319.019359271422,
+  "primary_95_percent_local_interval": [
+    2277.370617879139,
+    2360.3589099588767
+  ],
+  "local_scale": "SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash",
+  "rated_engine": "artifacts/publish/q-evasion-dev/Aster.dll",
+  "rated_engine_sha256": "a3994e4f350b2cfa261db5edc1e4ae5c332d85d4b3eaf34c0730267f3603d9a0",
+  "rated_version": "Aster 0.7.6-q-evasion-dev",
+  "reference_record": {
+    "path": "artifacts/ratings/session-20261004-q-evasion-confirmation.json",
+    "sha256": "78eeab42081af15787be31f35b9307143355c0b55a93119b741e7f95e81ca736"
+  },
+  "schema": 1,
+  "timestamp_utc": "2026-10-18T21:28:24.483084+00:00",
+  "status": "Rust conversion is uncalibrated; historical C# rating retained solely as a separate reference",
+  "active_engine": "Aster Rust 0.9.1 play-v3",
+  "active_binary": "artifacts/publish/rust-play-v3/aster.exe",
+  "active_binary_sha256": "246b2c6c1dbb6b98a0d90013fedb47b54b95317992593d98cc486ef66ef91fdb",
+  "active_source_manifest": "artifacts/research/rust-source-v3/manifest.json",
+  "active_local_rating": null,
+  "full_strength_stockfish_superiority": false,
+  "paired_screens": [
+    {
+      "report": "artifacts/matches/rust-foundation-v1-vs-original-30ms.json",
+      "wins": 63,
+      "draws": 0,
+      "losses": 1,
+      "forfeits": 0,
+      "unresolved": 0
+    },
+    {
+      "report": "artifacts/matches/rust-foundation-v1-vs-stockfish19-30ms.json",
+      "wins": 1,
+      "draws": 39,
+      "losses": 24,
+      "forfeits": 0,
+      "unresolved": 0
+    },
+    {
+      "report": "artifacts/matches/rust-safety-v2-vs-v1-30ms.json",
+      "wins": 3,
+      "draws": 25,
+      "losses": 4,
+      "forfeits": 0,
+      "unresolved": 0
+    }
+  ],
+  "limits": "30 ms requested per move, one thread, 64 MiB hash; local desktop without affinity; diagnostic screens, no absolute Elo inference. Final v3 changes the host only and matches v2 on 32 fixed-depth comparisons."
+}

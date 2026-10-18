@@ -1,0 +1,493 @@
+{
+  "binary": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\publish\\rust-play-v3\\aster.exe",
+  "binary_sha256": "246b2c6c1dbb6b98a0d90013fedb47b54b95317992593d98cc486ef66ef91fdb",
+  "build": "cargo build --release --locked; x86-64-v3 flags from .cargo/config.toml; no PGO; no optional features",
+  "cargo": "cargo 1.99.1 (5f94df478 2026-08-27)",
+  "compiler": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\nbinary: rustc\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\ncommit-date: 2026-10-13\nhost: x86_64-pc-windows-msvc\nrelease: 1.99.1\nLLVM version: 23.1.1",
+  "network": {
+    "tag": "v109",
+    "asset": "sandhi-s2-b200.nnue.zst",
+    "url": "https://github.com/cosmobobak/viridithas-networks/releases/download/v109/sandhi-s2-b200.nnue.zst",
+    "sha256": "066c172e22c25ee3d3b4084ad44ff761426f906a9c536cabd0127d17413d0585",
+    "size": 52442657,
+    "license": "CC0-1.0",
+    "license_commit": "d3da3953e41beb5c8a555ba97d1d59c6e3f07903",
+    "license_git_blob": "0e259d42c996742e9e3cba14c677129b2c1b6311",
+    "license_sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+    "source_note": "Upstream release knowledge, not trained by Aster. This exact v109 asset preceded Viridithas 20; baseline benchmark must identify the chosen pair."
+  },
+  "upstream": {
+    "repository": "https://github.com/cosmobobak/viridithas",
+    "tag": "v20.0.0",
+    "commit": "0631113e2215714c54d397cce9a8caebc5e6f8ee",
+    "license": "MIT at pinned release"
+  },
+  "runtime": "Standalone Rust engine and Rust HTTP host; no external engine, python-chess, C/C++ build, C tablebase or .NET runtime",
+  "source_files": [
+    {
+      "path": ".cargo/config.toml",
+      "sha256": "29424c07f5532b9cda675d89ced5f85c93b9638586221e432496d75cd6566b06"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "9bdae916886f288652120c1605041c17ecddd3cd516d8e3ad635618ef4d3fee0"
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "e771e58f70f92b8b5397182cfb27bb3e005fa4ab214528e4e06ffafd47fb2e81"
+    },
+    {
+      "path": "crates/engine/assets/epds/arasan21.epd",
+      "sha256": "88c8bdb716ece6b4afa9186c63408c48ebb3b96fa7eb5855421870173fc0169a"
+    },
+    {
+      "path": "crates/engine/assets/epds/bt2630.epd",
+      "sha256": "5a916afe0f30356ef96e89682abf884b32cced1dadec8f3f14bab8fa2de50714"
+    },
+    {
+      "path": "crates/engine/assets/epds/ecmgcp.epd",
+      "sha256": "712a9633baf9bf637937a0f065af6d3fd488885817f2063a39f5c89b284c9e7b"
+    },
+    {
+      "path": "crates/engine/assets/epds/eet.epd",
+      "sha256": "5f742bfb1f2bb19674c5bf8182c5baea7dee8af69c01bd5a3e52d562f63f3186"
+    },
+    {
+      "path": "crates/engine/assets/epds/frcperftsuite.epd",
+      "sha256": "05aa6e8d8e9b61e61cb90ae7c5934c976cf6373cf7b5682912a214bbea92e8da"
+    },
+    {
+      "path": "crates/engine/assets/epds/hardzugs.epd",
+      "sha256": "db7f7d55154c7b30a28fb2258b21195d0adca1fcc3d1dfee6ad76609cd5747c4"
+    },
+    {
+      "path": "crates/engine/assets/epds/iq4.epd",
+      "sha256": "96cf54a80fb7a2b603c05d27402ab0647bbe35bc20a26f3d9ecc31c27b6aab46"
+    },
+    {
+      "path": "crates/engine/assets/epds/lapuce2.epd",
+      "sha256": "67ced6a4712c81a1ae463cb361897d3c1635403a503878198daab2b0c171a19b"
+    },
+    {
+      "path": "crates/engine/assets/epds/perftsuite.epd",
+      "sha256": "b6997b76ae1939601c56e0b2dbdb1067a327e42d8d37003ad9e342a04ae2983c"
+    },
+    {
+      "path": "crates/engine/assets/epds/pet.epd",
+      "sha256": "dbc44a1205936901765ffb9c5a07d5b5737d60a307d74321a060521091af4db3"
+    },
+    {
+      "path": "crates/engine/assets/epds/prof.epd",
+      "sha256": "f8198d17375bff6b0cc023a731a52d47571111fbc2effcef27b922ce7d547822"
+    },
+    {
+      "path": "crates/engine/assets/epds/tbtest.epd",
+      "sha256": "f972940f64ac321f33fa585d460d284792d9014a13bdd8b14b1ef499600a644c"
+    },
+    {
+      "path": "crates/engine/assets/epds/wac.epd",
+      "sha256": "816818661f7ce1a7304674fac4697a14fab2468809f482ece582ae774bd35edb"
+    },
+    {
+      "path": "crates/engine/assets/epds/zugts.epd",
+      "sha256": "eecd7fea9984c452c75c6032e7dc89a482f330717a9fe4f1fdf687bce412df43"
+    },
+    {
+      "path": "crates/engine/assets/play/app.css",
+      "sha256": "afe8aa11b5c2f76345154dba14b304dedd964d6c606fbc3b8efbbc68a26f01cf"
+    },
+    {
+      "path": "crates/engine/assets/play/app.js",
+      "sha256": "129f89c859f7a8693f57746dd45e9505187457dec4111b72193fb7209d048a93"
+    },
+    {
+      "path": "crates/engine/assets/play/index.html",
+      "sha256": "a3292e837ee9d038231de537d39f07ee72c965c0772a9f14202b20495569a261"
+    },
+    {
+      "path": "crates/engine/build.rs",
+      "sha256": "a6efef54b341352ba460177db1a12ac8f4e6b3575742a4b44acffb78d1889d0b"
+    },
+    {
+      "path": "crates/engine/Cargo.toml",
+      "sha256": "d592d69329b98377f0016b4043015e4dec68a84b80ce6447ca180a87702434d2"
+    },
+    {
+      "path": "crates/engine/embeds/cuckoo_keys.bin",
+      "sha256": "06917c6bb6e811c734c53c1641a43919d516e9e59946c983c5c6b5c3e7bf1f6d"
+    },
+    {
+      "path": "crates/engine/embeds/cuckoo_moves.bin",
+      "sha256": "254f34ad03e6d5ecc52eeeb6ef2abb58056b211d82a55c35018905123f5195e7"
+    },
+    {
+      "path": "crates/engine/embeds/diagonal_attacks.bin",
+      "sha256": "ad2231db94aa8c5e2a5c7cb08d14355b4d1afdaf95c9a022d3791cf10d5a85eb"
+    },
+    {
+      "path": "crates/engine/embeds/orthogonal_attacks.bin",
+      "sha256": "6fd4d02d3e86da0018ff5b934da790882cba03ed926de42d7307df946211c197"
+    },
+    {
+      "path": "crates/engine/embeds/test-vf.bin",
+      "sha256": "3366b281b439aacd52fa6dc1d0ba17b1cbc2754c1e89c64ec940b69364517761"
+    },
+    {
+      "path": "crates/engine/LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "crates/engine/LICENSE.network-CC0.txt",
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "path": "crates/engine/LICENSE.upstream-MIT",
+      "sha256": "7ee7d175d4d12aed856df5e2db1569c7877c577d31a724becd72fb02141c6df3"
+    },
+    {
+      "path": "crates/engine/NETWORK.json",
+      "sha256": "cf826a80d0d505f9a8f7a7965dde4c4a5950c38904a5b9124caa24607e37d4a2"
+    },
+    {
+      "path": "crates/engine/README.md",
+      "sha256": "21878330a473eb241dbd808ebd9437fe79c48225b5ef63392ec2a56187a470c5"
+    },
+    {
+      "path": "crates/engine/README.upstream.md",
+      "sha256": "7a9b31b651c6ce2bc00b8912ff11025520928277f3925aba5e76c770a2b68183"
+    },
+    {
+      "path": "crates/engine/src/aster_proof.rs",
+      "sha256": "f86e6f10814988b72d14e2887d062e951b211684b22a8ee55df3aef03c6db46a"
+    },
+    {
+      "path": "crates/engine/src/aster_rules.rs",
+      "sha256": "c0a6e67c6b488cecdc6bfd709b8102d8e1382f6f963832456a72c2d6e294ced6"
+    },
+    {
+      "path": "crates/engine/src/aster_trace.rs",
+      "sha256": "6d0340ccc6157926f8a4e72dc903851e20e51956b5c6e1d81a07fb877a8aba68"
+    },
+    {
+      "path": "crates/engine/src/bench.rs",
+      "sha256": "9a6b511ec16db01dc0fd8325fbf762350c845bf359d31e41de25703e99008788"
+    },
+    {
+      "path": "crates/engine/src/chess/board/mod.rs",
+      "sha256": "35c5b45702d0e8866d5f681c908387bd71664f8364788779f0802239cafa2ad6"
+    },
+    {
+      "path": "crates/engine/src/chess/board/movegen.rs",
+      "sha256": "de8875767429192bc5779a14e87e8a980c9194b9263e74828a3438b15066e14d"
+    },
+    {
+      "path": "crates/engine/src/chess/board/san.rs",
+      "sha256": "91d7791066fd52eb35cd7e6816e0712a419a17c9c52220fcebc48656c8f24cb1"
+    },
+    {
+      "path": "crates/engine/src/chess/board/validation.rs",
+      "sha256": "fbaaa84e5274a8ad7fbe14299c20460d4dafbf36db7dfba251a4915657ef5248"
+    },
+    {
+      "path": "crates/engine/src/chess/chessmove.rs",
+      "sha256": "3d196db25b69f1901c1c472a6e52d60c269f8e4a7fa77292751685fa8c4392b2"
+    },
+    {
+      "path": "crates/engine/src/chess/fen.rs",
+      "sha256": "768fef331857ad7540800620f688839d930f76d40c467236589d25f13deac2b8"
+    },
+    {
+      "path": "crates/engine/src/chess/magic.rs",
+      "sha256": "082ab039d132a43a23f5b39d6728da7ef84f97b66c38e9f53c4c39b060dec874"
+    },
+    {
+      "path": "crates/engine/src/chess/mod.rs",
+      "sha256": "0d9b579ccb654c9883248eabf8cb808b339d69bccac3c06684e3c41d1df4912d"
+    },
+    {
+      "path": "crates/engine/src/chess/piece.rs",
+      "sha256": "17c6742058f4dd2ac16c24d239de20514e4614e9d05a5f8258f07e06b89b9127"
+    },
+    {
+      "path": "crates/engine/src/chess/piecelayout.rs",
+      "sha256": "bac466b4f79d8013dfca08ebe46cf2c7c76a21e24efac966ca93a1d5b13ee2ef"
+    },
+    {
+      "path": "crates/engine/src/chess/quick.rs",
+      "sha256": "fdef353f9d9f17a2d4ebacc478723b076b23691b8981d01f79979353afcb5e64"
+    },
+    {
+      "path": "crates/engine/src/chess/squareset.rs",
+      "sha256": "687490b55e6da09df398b27c7f486e4c50f7ac916f13c3d2ddbc1d74a6a7022a"
+    },
+    {
+      "path": "crates/engine/src/chess/types.rs",
+      "sha256": "00b99919a8e872868b3752de0445413bcaa600cf472893b63eb8b67782c18168"
+    },
+    {
+      "path": "crates/engine/src/cli.rs",
+      "sha256": "c68deac8742f1a2b11060ae38064b6e6db70a9ba4190e90cc71052c6431de4de"
+    },
+    {
+      "path": "crates/engine/src/cuckoo.rs",
+      "sha256": "10710ad2151fad5a42357489f98283d4ed5c40e42b0dc47db0f740c69fddea9b"
+    },
+    {
+      "path": "crates/engine/src/datagen/dataformat/marlinformat.rs",
+      "sha256": "a10da75e392f0decd808c20a29b5eb1f92fcc42fa096704466e535066bc19c70"
+    },
+    {
+      "path": "crates/engine/src/datagen/dataformat.rs",
+      "sha256": "cea6c941163c4bf1a760768461ed4d97efc0466cbf89c52a333f055c9ee83f19"
+    },
+    {
+      "path": "crates/engine/src/datagen/valid.sfens",
+      "sha256": "b4b83f8b84b5ca676568e23660dc3380e5d6137874bc055e2f1e1450202e1d77"
+    },
+    {
+      "path": "crates/engine/src/datagen.rs",
+      "sha256": "0719498ea3e373dc726dae3bbddb1159df7d947cb22454c50ed2f4dc33d8cac8"
+    },
+    {
+      "path": "crates/engine/src/errors.rs",
+      "sha256": "32783b5d6f07c36c7c210a1f5f49929bc3a61552a3828281e6a1257e91f2ab5c"
+    },
+    {
+      "path": "crates/engine/src/evaluation.rs",
+      "sha256": "20c3c33db0d121607f598aaeb466378bf713c48e34585088e86b02e0641fe384"
+    },
+    {
+      "path": "crates/engine/src/history.rs",
+      "sha256": "a43e3430498930765eca5f55161881c13cac2004a408d975bcddf88892a5d5e5"
+    },
+    {
+      "path": "crates/engine/src/historytable.rs",
+      "sha256": "78f172e98103e60e251ef5f1606723493d0e48a8c2ebbd0018ca88fa2317f958"
+    },
+    {
+      "path": "crates/engine/src/image.rs",
+      "sha256": "9d782ba76d05e6273c56356e0feb05c16de21ec3b862b993ae1b9b96f66f3e1c"
+    },
+    {
+      "path": "crates/engine/src/lookups.rs",
+      "sha256": "75b4c0bfb93613f38b5be3563b32131d4c551f31253668cf603778e4fd7d083d"
+    },
+    {
+      "path": "crates/engine/src/macros.rs",
+      "sha256": "77f77626825bc075fe638fb7aaffb19b033e60cd46251e4f2305e480797a3529"
+    },
+    {
+      "path": "crates/engine/src/main.rs",
+      "sha256": "16213ee6855d36a6252e78c33cac98400f4ba7d2e1b37b58dd7d12eeda6beb18"
+    },
+    {
+      "path": "crates/engine/src/movepicker.rs",
+      "sha256": "723695a0cc48b9a7f818bed5759743967168836f0971730f953dbc07f7b89dc1"
+    },
+    {
+      "path": "crates/engine/src/nnue/accumulator.rs",
+      "sha256": "ea31bdd7c65e4727b9df4cfbf1f3fa793dea15e2d35f520b2e128660e0d31fbe"
+    },
+    {
+      "path": "crates/engine/src/nnue/geometry/avx2.rs",
+      "sha256": "d7f3aee042735e9c7a06311fb9b547a432f549781aeefba8cb696a589abf1873"
+    },
+    {
+      "path": "crates/engine/src/nnue/geometry/neon.rs",
+      "sha256": "ec1eb509631eada087236a6e2c983c74413ea2d35b48a670a54abff66569ef22"
+    },
+    {
+      "path": "crates/engine/src/nnue/geometry/vbmi.rs",
+      "sha256": "d3c2245e25fd8c9258e6d122a2061e4f193f06230b0c5d3a4b9f1f390c1624df"
+    },
+    {
+      "path": "crates/engine/src/nnue/geometry.rs",
+      "sha256": "c279b973ad3652c7c8a7940957e16d9e8e749480758fede4e93d4903e67253fd"
+    },
+    {
+      "path": "crates/engine/src/nnue/mod.rs",
+      "sha256": "e67b71d26bcc6d83ebc3a5858062336d2ff1e3271a0ec59d89d68d7179d7a358"
+    },
+    {
+      "path": "crates/engine/src/nnue/network/feature.rs",
+      "sha256": "d2557088d4ea166a412dfaf9d8462530fe0c3dcf9ae71b6f31cfe409de7cd5bc"
+    },
+    {
+      "path": "crates/engine/src/nnue/network/layers.rs",
+      "sha256": "a0d6a3b074c7d8a554c3377f5e6dcf596e07b074cf12524c8d31971ad0b43943"
+    },
+    {
+      "path": "crates/engine/src/nnue/network/pawn_updates.rs",
+      "sha256": "165a44059d58459701cc02db1acb26821b7a0e0bf39ee0b5552d7ebad3f14d62"
+    },
+    {
+      "path": "crates/engine/src/nnue/network/threat_updates.rs",
+      "sha256": "a238855822f51fc145c23a14d9ec7a74aef1888e0967ab5320eb6525186d94e7"
+    },
+    {
+      "path": "crates/engine/src/nnue/network.rs",
+      "sha256": "162ab84441c5d1ed67176812e0ecab3f07c509824da769d271bfa590d25e2fa9"
+    },
+    {
+      "path": "crates/engine/src/nnue/simd.rs",
+      "sha256": "08211972547e9ca82943f1b396068746685a770205115d363c6151b433280ff9"
+    },
+    {
+      "path": "crates/engine/src/perft.rs",
+      "sha256": "82c8d8b054ddc118e9dd8d35847d3677248e31f76c7d7370a58c9ef3b5517939"
+    },
+    {
+      "path": "crates/engine/src/play.rs",
+      "sha256": "1e13fc17dbe2f49c19edc35bc913d8d8faa7b2313fbb09ada7db31e29c687df7"
+    },
+    {
+      "path": "crates/engine/src/rng.rs",
+      "sha256": "6a6fb387027d93284e9db188641cb0297b229a247797c7ae874b10f570ac35f1"
+    },
+    {
+      "path": "crates/engine/src/search/parameters.rs",
+      "sha256": "dfc43abebd69de7120f8589dde1324df78487e49addb78e582ba770a884d05a8"
+    },
+    {
+      "path": "crates/engine/src/search/pv.rs",
+      "sha256": "f4ce2f9cd6810eb0df81e9d2755af7ce58940d2bcd2979b0205bd53c8d7051bb"
+    },
+    {
+      "path": "crates/engine/src/search.rs",
+      "sha256": "53a231037b1fa615e7e905458b3dd0a3202b82ca3dd2cb855f9912f11833ad6c"
+    },
+    {
+      "path": "crates/engine/src/searchinfo.rs",
+      "sha256": "606e9030a432af2688a39763fb09b358f4f75b5112270031d71f468c0e08eb1e"
+    },
+    {
+      "path": "crates/engine/src/stack.rs",
+      "sha256": "bb5c1612173f01f7eeb1580a78b1d7381bc204d7342d798f8e963639af6adaca"
+    },
+    {
+      "path": "crates/engine/src/stats.rs",
+      "sha256": "389e2026123801c8c570ef3923395c8d7f3775fe089347e6287804f849c0c954"
+    },
+    {
+      "path": "crates/engine/src/tablebases/bindings.rs",
+      "sha256": "58cc1f20623b132edeb5efb90bd30d46589689ecb51b11950cb4d9c771ec0bc6"
+    },
+    {
+      "path": "crates/engine/src/tablebases/ffi.rs",
+      "sha256": "fe2e6007178d66de4f403c8a4936605b309db84a700235c1194c1eb33ea7fc1d"
+    },
+    {
+      "path": "crates/engine/src/tablebases/mod.rs",
+      "sha256": "e2731bc4108abc2f248596b17037a57c3c5cd193731b9841dca0adb604b5a141"
+    },
+    {
+      "path": "crates/engine/src/tablebases/probe.rs",
+      "sha256": "442e16d1d69d851b02e9ba2f38a71afcdded1bb8d59d87b398fba1afd72e4395"
+    },
+    {
+      "path": "crates/engine/src/term.rs",
+      "sha256": "29855ec45e75b3955d1dceb05d068d451244597455b27cc5d8149f05517e74ed"
+    },
+    {
+      "path": "crates/engine/src/threadlocal.rs",
+      "sha256": "d14752ee4cba793a49a54a4be2c6df081194373ccf4bf56fbe3af27c28aad6d3"
+    },
+    {
+      "path": "crates/engine/src/threadpool.rs",
+      "sha256": "e044758c130378294b7e215c89d9319104c817079761e38d375f8ded06af9e60"
+    },
+    {
+      "path": "crates/engine/src/timemgmt.rs",
+      "sha256": "f1ed3372bd21a8458598eef9b58dda34a5c6583598bb56c8ab0f4371419b7e43"
+    },
+    {
+      "path": "crates/engine/src/transpositiontable.rs",
+      "sha256": "67caa0103947afb3868a3f64a5350bc3e86aa6486d0f639396459857a4b3bfa1"
+    },
+    {
+      "path": "crates/engine/src/uci/fmt.rs",
+      "sha256": "2738b8b52b0a323a628be510ef12b5003668883d1c87421624f7ec56daff019a"
+    },
+    {
+      "path": "crates/engine/src/uci.rs",
+      "sha256": "79c548a3e2eb8889e86b3e4a88dbada703016b5ac813feb1d746bbc48bbd0fae"
+    },
+    {
+      "path": "crates/engine/src/util.rs",
+      "sha256": "57273d1a3bce3fd9e60ecd61a2b8f6bb87f4c456473e85e068490bb6bf92d1aa"
+    },
+    {
+      "path": "crates/engine/UPSTREAM.json",
+      "sha256": "016eba0b6e11ffed5b47f56ddd9916411fe7717f5edfd51d89ae3669f1cbf647"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "sha256": "391e529739e99dc63461425af4ad7afb10d89aa275922928ceb8e2f5dffa7149"
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "sha256": "d8c420f9c9a2fc00c09cf07b7bb570c92a09137ef1559cb9ef5b12c76f7557cc"
+    },
+    {
+      "path": "scripts/build.ps1",
+      "sha256": "54da782e6b63c19249efbe7bd5c2ddbf0b72079ebb3b2c7e9bf8c5753ade2c37"
+    },
+    {
+      "path": "scripts/fetch_rust_network.py",
+      "sha256": "d616757581ae57d1c405b90fdeec6acc2bedceadfbe895b60ff7c6f35f1e0dd2"
+    },
+    {
+      "path": "scripts/freeze_rust.py",
+      "sha256": "2cc84ba4f958988e5e2f23e91dc4db42431abdfd1e0e8909117120f142de2a4f"
+    },
+    {
+      "path": "scripts/match.py",
+      "sha256": "dc954667970520b4bf8823ea05805f38918ad6d81ef2296a859ebdbadf61ab5e"
+    },
+    {
+      "path": "scripts/play.ps1",
+      "sha256": "e0070a03630b855a31ec86bd1da3d4aee9845dbd7a1e5ea58de616b7036ca9d8"
+    },
+    {
+      "path": "scripts/rust-paths.ps1",
+      "sha256": "bf9b0f82e349800c5111610f4803aae8de364f68820e3504645c33e899902fab"
+    },
+    {
+      "path": "scripts/smoke_rust_play.py",
+      "sha256": "ad6e4e80468203843bc766cfb1bcd166ca952f57c1db357d4c44b44c21ab87c1"
+    },
+    {
+      "path": "scripts/uci_client.py",
+      "sha256": "dea46bfc8414374ffaa941c77dd4e170dffed8eef4332bf36ab687bf18cdb48c"
+    },
+    {
+      "path": "scripts/verify.py",
+      "sha256": "5e10c36094bc4dfb26077208ec9592c1cfb8550b909b9b1f634fb00eea504c68"
+    },
+    {
+      "path": "scripts/verify_mate_proof.py",
+      "sha256": "9bd2c170d989cb04eb9fccf9cabe26de0e89a8d148c53758cd934004beb3bbfe"
+    },
+    {
+      "path": "scripts/verify_rust.py",
+      "sha256": "adc87784f35a7b55737f303cb2948d77c7fe053c5032dce3d957e493156a6eee"
+    },
+    {
+      "path": "scripts/verify_rust_equivalence.py",
+      "sha256": "30935fe0b883c88681144af06957e5c331d87e69da64634ca34ae9d40e308051"
+    },
+    {
+      "path": "scripts/verify_rust_proofs.py",
+      "sha256": "1661d2168c8461227b8830f87844cb9f730255c7dc990fe1298f2f0d61ae9dca"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "d0ffa7ba1fa7c6b35dc24aad6bac7b48fb0417fe8b8e782fa93e5550a4ceef44"
+    }
+  ],
+  "note": "Compressed weights are reproducibly fetched from the immutable URL and SHA-256-checked by build.rs. The standalone binary embeds them. Fingerprints below preserve source, Cargo dependency lock, model/license pin and build scripts. No Elo or Stockfish superiority inferred."
+}

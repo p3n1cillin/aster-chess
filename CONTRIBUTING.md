@@ -5,18 +5,19 @@ for focused changes. State the observed behavior, the exact source version,
 reproduction steps, validation results and remaining limitations. Do not infer
 playing strength from a few games or from search speed.
 
-Install the .NET 8 SDK selected by `global.json`, then run:
+Install Rust with rustup; `rust-toolchain.toml` pins the compiler. Active builds
+are Rust only. Do not build the historical C# implementation.
 
 ```sh
-dotnet build Aster.sln -c Release
-dotnet run --project tests/Engine.Tests -c Release --no-build
-dotnet run --project tests/Play.Tests -c Release --no-build
-dotnet src/Engine/bin/Release/net8.0/Aster.dll bench 7
+python scripts/fetch_rust_network.py
+cargo build --release --locked
+cargo test --release --locked
+cargo run --release --locked -- bench 7
 ```
 
 For independent rule and protocol checks, create a Python environment, install
 `requirements-dev.txt`, and run `python scripts/verify.py` and
-`python scripts/smoke_play.py`. CI also runs tactics and proof checks on Windows
+`python scripts/smoke_rust_play.py`. CI also runs tactics and proof checks on Windows
 and Linux. See [AGENTS.md](AGENTS.md) for verification required by each change.
 
 Keep UCI stdout protocol-clean. Move-generation changes require perft and

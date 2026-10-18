@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "complete": true,
+  "reason": "complete",
+  "summary": "White forces checkmate within 5 plies. Every legal defense is covered; all 6 leaves/positions are replayable.",
+  "rootFen": "7k/7p/4K1Q1/8/8/8/8/8 w - - 0 1",
+  "strongSide": 0,
+  "rootDistance": 5,
+  "maxPlies": 7,
+  "visits": 2751,
+  "nodeLimit": 100000,
+  "nodes": [
+    {
+      "id": 0,
+      "fen": "7k/7p/4K1Q1/8/8/8/8/8 w - - 0 1",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "g6f6",
+          "to": 1
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "fen": "7k/7p/4KQ2/8/8/8/8/8 b - - 1 1",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "h8g8",
+          "to": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fen": "6k1/7p/4KQ2/8/8/8/8/8 w - - 2 2",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "f6f7",
+          "to": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fen": "6k1/5Q1p/4K3/8/8/8/8/8 b - - 3 2",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "g8h8",
+          "to": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fen": "7k/5Q1p/4K3/8/8/8/8/8 w - - 4 3",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "f7f8",
+          "to": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "fen": "5Q1k/7p/4K3/8/8/8/8/8 b - - 5 3",
+      "distance": 0,
+      "edges": []
+    }
+  ]
+}

@@ -1,20 +1,23 @@
 param([switch]$Publish)
 $ErrorActionPreference = 'Stop'
-Push-Location (Split-Path -Parent $PSScriptRoot)
+$projectRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
+. (Join-Path $PSScriptRoot 'rust-paths.ps1')
+$cargo = Get-AsterCargo
+$targetDirectory = Get-AsterTarget $projectRoot
+Push-Location $projectRoot
 try {
-    dotnet build Aster.sln -c Release
-    if ($LASTEXITCODE -ne 0) { throw 'Build failed' }
-    dotnet run --project tests/Engine.Tests -c Release --no-build
-    if ($LASTEXITCODE -ne 0) { throw 'Engine tests failed' }
-    $taskPython = Join-Path (Get-Location) '.venv\Scripts\python.exe'
-    if (Test-Path -LiteralPath $taskPython) {
-        & $taskPython scripts/verify.py
-        if ($LASTEXITCODE -ne 0) { throw 'Independent verification failed' }
-    } else {
-        Write-Host 'Independent verification needs the development environment described in README.md.'
-    }
+    python scripts/fetch_rust_network.py
+    if ($LASTEXITCODE -ne 0) { throw 'Neural weight verification failed.' }
+    & $cargo build --release --locked --target-dir $targetDirectory
+    if ($LASTEXITCODE -ne 0) { throw 'Rust build failed.' }
+    & $cargo test --release --locked --target-dir $targetDirectory
+    if ($LASTEXITCODE -ne 0) { throw 'Rust tests failed.' }
+    & $cargo test --locked --target-dir $targetDirectory
+    if ($LASTEXITCODE -ne 0) { throw 'Rust debug tests failed.' }
     if ($Publish) {
-        dotnet publish src/Engine/Engine.csproj -c Release -r win-x64 --self-contained false -p:PublishSingleFile=true -o artifacts/publish/win-x64
-        if ($LASTEXITCODE -ne 0) { throw 'Publish failed' }
+        $destination = Join-Path $projectRoot 'artifacts/publish/current-win-x64'
+        New-Item -ItemType Directory -Force -Path $destination | Out-Null
+        Copy-Item -LiteralPath (Join-Path $targetDirectory 'release/aster.exe') -Destination $destination
     }
+    Write-Output ("Rust executable: " + (Join-Path $targetDirectory 'release/aster.exe'))
 } finally { Pop-Location }

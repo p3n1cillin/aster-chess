@@ -7,11 +7,21 @@ Stockfish and python-chess are development tools only, never runtime dependencie
 
 ## Build and verification
 
-- `dotnet build Aster.sln -c Release`
-- `dotnet run --project tests/Engine.Tests -c Release --no-build`
+Active development is Rust only, as requested by the user on 2026-10-18.
+Do not build the historical C# implementation or introduce C/C++ build paths.
+The active source foundation is an attributed Viridithas 20 Rust fork; preserve
+its MIT notice and original source fingerprints. Stockfish is a development
+opponent/research reference, never an external runtime engine behind Aster.
+
+- `python scripts/fetch_rust_network.py`
+- `cargo build --release --locked`
+- `cargo test --release --locked`
+- `cargo test --locked`
 - `.venv/Scripts/python.exe scripts/verify.py` on Windows, or the corresponding
   environment Python on other platforms.
-- `dotnet src/Engine/bin/Release/net8.0/Aster.dll bench 7`
+- `.venv/Scripts/python.exe scripts/smoke_rust_play.py`
+- `.venv/Scripts/python.exe scripts/smoke_mate_proof.py`
+- `cargo run --release --locked -- bench 7`
 
 Keep UCI stdout protocol-clean and responsive to `isready`/`stop` during search.
 Every speculative move must be undone, including exceptions and cancellation.
