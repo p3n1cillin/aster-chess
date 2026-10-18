@@ -36,6 +36,13 @@ principal variations, and export PGN. Windows convenience launchers:
 
 On a Windows network share, use these scripts: they put executables in a local
 Cargo target directory, allowing the source checkout to remain on the share.
+If Windows blocks unsigned scripts on the share, use a process-scoped invocation:
+
+```powershell
+pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/build.ps1
+pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/play.ps1 -SkipBuild
+```
+
 The web server and its search workers run the same Rust executable. Its board,
 move rules, SAN and proof solver are also Rust. HTML/CSS/JavaScript presentation
 assets are embedded; no frontend build or remote runtime service is required.

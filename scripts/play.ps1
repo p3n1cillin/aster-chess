@@ -4,7 +4,7 @@ param(
     [switch]$Stop
 )
 $ErrorActionPreference = 'Stop'
-$projectRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
+$projectRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).ProviderPath
 . (Join-Path $PSScriptRoot 'rust-paths.ps1')
 $localDirectory = Join-Path $projectRoot '.aster-local'
 $recordPath = Join-Path $localDirectory "rust-play-$Port.json"

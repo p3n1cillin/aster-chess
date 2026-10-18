@@ -105,6 +105,14 @@ source, compiler and weights. Final tactical gates solve **32/32** original,
 Additional perft checks pass start depth 5 (4,865,609), Kiwipete depth 4
 (4,085,603) and rook endgame depth 5 (674,624).
 
+The subsequent v4 source snapshot retains the same native engine and binary,
+and fixes the Windows build/play helpers to use filesystem provider paths.
+Actual UNC-share testing exposed PowerShell's provider-qualified `.Path` value;
+`.ProviderPath` supplies a valid native Windows path and activates the intended
+local Cargo target directory. A process-scoped launcher invocation is documented
+for systems that block unsigned scripts on network shares. No system execution
+policy is changed.
+
 The Windows browser checks cover both colors, actual moves, mobile layout,
 live telemetry, a correctly displayed mate-in-two and a downloaded proof, with
 no JavaScript errors. The source

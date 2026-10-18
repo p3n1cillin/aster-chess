@@ -1,6 +1,6 @@
 param([switch]$Publish)
 $ErrorActionPreference = 'Stop'
-$projectRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
+$projectRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).ProviderPath
 . (Join-Path $PSScriptRoot 'rust-paths.ps1')
 $cargo = Get-AsterCargo
 $targetDirectory = Get-AsterTarget $projectRoot

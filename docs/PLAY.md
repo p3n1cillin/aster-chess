@@ -6,6 +6,9 @@ immutable local runtime directory, and starts it with a hidden console. Future
 builds do not overwrite an active game. Use `-SkipBuild` after a build,
 `-Port 5189` for another game, or `-Stop` to stop that launcher's owned host.
 Source checkouts on Windows network shares use a local Cargo target directory.
+If Windows blocks unsigned scripts on that share, run
+`pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/play.ps1`.
+This affects that PowerShell process only; it does not change the system policy.
 
 Cross-platform:
 
