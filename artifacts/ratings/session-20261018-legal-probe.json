@@ -1,0 +1,56 @@
+{
+  "public_elo": null,
+  "last_measured_local_rating": 2319.019359271422,
+  "primary_95_percent_local_interval": [
+    2277.370617879139,
+    2360.3589099588767
+  ],
+  "local_scale": "SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash",
+  "rated_engine": "artifacts/publish/q-evasion-dev/Aster.dll",
+  "rated_engine_sha256": "a3994e4f350b2cfa261db5edc1e4ae5c332d85d4b3eaf34c0730267f3603d9a0",
+  "rated_version": "Aster 0.7.6-q-evasion-dev",
+  "reference_record": {
+    "path": "artifacts/ratings/session-20261004-q-evasion-confirmation.json",
+    "sha256": "78eeab42081af15787be31f35b9307143355c0b55a93119b741e7f95e81ca736"
+  },
+  "schema": 1,
+  "timestamp_utc": "2026-10-18T21:56:56.316729+00:00",
+  "status": "Rust 0.9.2 promoted after predeclared engineering gates; still uncalibrated, with historical C# reference separate",
+  "active_engine": "Aster Rust 0.9.2",
+  "active_binary": "artifacts/publish/rust-legal-probe-v1/aster.exe",
+  "active_binary_sha256": "b51e97647dd086ed0a30682fba77ea627dd5d8cf9bfc291e34a4064b04916213",
+  "active_source_manifest": "artifacts/research/rust-legal-probe-source-v1/manifest.json",
+  "active_local_rating": null,
+  "full_strength_stockfish_superiority": false,
+  "decision": "artifacts/research/rust-legal-probe-decision-v1.json",
+  "same_work_timing_ratio": 1.0735823085815637,
+  "paired_regressions": [
+    {
+      "time_control": "30 ms/move",
+      "wins": 13,
+      "draws": 40,
+      "losses": 11,
+      "score": 0.515625,
+      "family_95_percent_score_interval": [
+        0.45161290322580644,
+        0.578125
+      ],
+      "unresolved_pairs": 0,
+      "forfeits": 0
+    },
+    {
+      "time_control": "100 ms/move",
+      "wins": 6,
+      "draws": 20,
+      "losses": 6,
+      "score": 0.5,
+      "family_95_percent_score_interval": [
+        0.40625,
+        0.578125
+      ],
+      "unresolved_pairs": 0,
+      "forfeits": 0
+    }
+  ],
+  "limits": "Local one-thread/64 MiB screens, without affinity/desktop isolation. Fixed-depth work and improved speed do not transfer historical/upstream Elo or establish a playing-strength gain."
+}

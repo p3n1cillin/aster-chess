@@ -144,4 +144,6 @@ full-strength Stockfish remains an unachieved project goal.
 
 Both Windows/Linux jobs also pass at final launcher revision `6db4554`; see
 [the final CI record](../artifacts/ci/rust-launcher-39168244576.json) and its
-complete logs. Subsequent commits add documentation and preserved evidence only.
+complete logs. Migration-closing commits added documentation and preserved
+evidence only. Later Rust 0.9.2 search work has its own
+[experiment and verification record](RUST-LEGAL-PROBES.md).

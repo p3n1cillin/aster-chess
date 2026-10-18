@@ -6,6 +6,15 @@ documented in `docs/RUST-MIGRATION.md`. C# results below remain historical;
 all future product builds and CI use Cargo. Current Rust strength must be
 measured separately; no historical Elo is transferred.
 
+Rust 0.9.2 now uses a verified pawn/knight shortcut before the complete terminal
+move query. It preserves fixed-depth work, reduces measured elapsed time by
+6.85% and passes all 96 predeclared paired engineering games, native/independent
+checks and Windows/Linux CI. The match intervals include 50%; no playing-strength
+or Elo gain is established. See `docs/RUST-LEGAL-PROBES.md`. Next investigate
+compatible neural knowledge or stronger endgame supervision with fresh held-out
+matches, and calibrate the exact Rust binary across controls. Keep the existing
+proof and visual capabilities independent of heuristic strength claims.
+
 
 ## Success criterion
 

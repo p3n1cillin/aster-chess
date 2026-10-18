@@ -20,6 +20,7 @@ opponent/research reference, never an external runtime engine behind Aster.
 - `.venv/Scripts/python.exe scripts/verify.py` on Windows, or the corresponding
   environment Python on other platforms.
 - `.venv/Scripts/python.exe scripts/smoke_rust_play.py`
+- `.venv/Scripts/python.exe scripts/verify_rust_legal_edges.py`
 - `.venv/Scripts/python.exe scripts/smoke_mate_proof.py`
 - `cargo run --release --locked -- bench 7`
 

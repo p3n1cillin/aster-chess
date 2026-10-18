@@ -1,12 +1,18 @@
 # Current rating and measurement policy
 
-The current **Rust 0.9.1** build is **not yet calibrated**. Its source foundation
+The current **Rust 0.9.2** build is **not yet calibrated**. Its frozen source foundation
 wins 63/64 audited short-control games against original Aster, and scores
 1 win, 39 draws and 24 losses against full-strength Stockfish 19. Those screens
 show substantial progress and a remaining gap; they do not assign an absolute
 Elo. The [Rust migration](RUST-MIGRATION.md) records exact binaries and provenance.
 The last calibrated C# reference below is historical and is not transferred to
 Rust or to the upstream engine’s public rating scale.
+
+The 0.9.2 terminal-query shortcut preserves fixed-depth work and reduces local
+measured elapsed time by 6.85%. Its 96 predeclared paired regression games pass
+the engineering gates, but both family score intervals include 50%; no playing
+rating increase is established. See [the complete experiment](RUST-LEGAL-PROBES.md)
+and [exact rating reference](../artifacts/ratings/session-20261018-legal-probe.json).
 
 
 The October 5 [visual play build](PLAY.md) has **no newly measured rating**.

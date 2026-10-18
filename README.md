@@ -90,6 +90,12 @@ build was about **2319 (95% interval 2277–2360)** on a local Stockfish 19
 UCI_Elo-setting scale at 30 ms/move, one thread and 64 MiB hash. That rating is
 not transferred to Rust and is not a public rating.
 
+Rust **0.9.2** shortens terminal queries while preserving fixed-depth search
+behavior. Its counterbalanced local benchmark takes about **6.85% less time**
+for the same work. All 96 paired regression games finish and pass the declared
+engineering gates; their intervals do not establish a playing-strength gain.
+See [the complete experiment](docs/RUST-LEGAL-PROBES.md).
+
 Original C# code, failed experiments and archived binaries remain as historical
 research evidence. They are not built by current scripts or CI. Their former
 instructions are preserved in [the legacy README](docs/LEGACY-CSHARP-README.md).

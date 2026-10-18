@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "auditor_sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6",
+  "matches": [
+    {
+      "status": "passed",
+      "games": 64,
+      "wins": 13,
+      "draws": 40,
+      "losses": 11,
+      "unresolved": 0,
+      "report": "artifacts/matches/rust-legal-probe-v1-30ms.json",
+      "report_sha256": "80202b2d3755de68755ca43daa6c9ce154c01fc548d4ee945a5c539c26742545",
+      "pgn_sha256": "d3ed5f86e1576374418a8e83239866b819771199c028668f7634126dab47001a"
+    },
+    {
+      "status": "passed",
+      "games": 32,
+      "wins": 6,
+      "draws": 20,
+      "losses": 6,
+      "unresolved": 0,
+      "report": "artifacts/matches/rust-legal-probe-v1-100ms.json",
+      "report_sha256": "96cde3a477eae9a058d02b122c23b0f9173c8f3693ffbef6ac6e0bee99b58a69",
+      "pgn_sha256": "d8d2d47d53e813074b792e07f4baa6e32e50c2ae5d3df44ded9f48c85b2ccabb"
+    }
+  ]
+}

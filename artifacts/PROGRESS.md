@@ -1,5 +1,38 @@
 # Project progress — 18 October 2026
 
+## Rust 0.9.2: faster terminal queries
+
+The default Rust engine now probes legal ordinary pawn/knight moves before
+falling back to full move generation for its terminal query. This retains all
+mate/stalemate guards and changes no evaluation, ordering, pruning or weights.
+The immutable board query preserves all 256 timed depth-twelve search outputs,
+including completed depth, nodes, best move, score and full PV. Eight
+counterbalanced rounds measure **6.85% less elapsed time** for the same work;
+all eight favor the candidate. This is a local timing result, not an Elo gain.
+
+Both release/debug suites pass **132 tests**. Independent checks pass **4630
+positions**, 14 perft cases and a separate **94** mirrored pin/promotion/terminal
+clock cases. Actual HTTP/SSE, proof exports, observer equivalence, readiness/stop
+and all tactical gates pass. Both Windows/Linux CI jobs pass at `ecbcee7`.
+
+All **96** predeclared paired games are independently audited with no forfeits
+or unresolved results. At 30 ms the candidate scores **13W/40D/11L** (51.56%,
+95% family interval 45.16%..57.81%); at 100 ms it scores **6W/20D/6L** (50%,
+40.63%..57.81%). Both intervals include 50%. Every predeclared engineering gate
+passes, so the shortcut is adopted without claiming a playing-strength gain.
+The [research record](../docs/RUST-LEGAL-PROBES.md),
+[decision](research/rust-legal-probe-decision-v1.json), exact binaries, source
+snapshots and complete PGNs preserve the experiment.
+
+The promoted binary SHA-256 is
+`b51e97647dd086ed0a30682fba77ea627dd5d8cf9bfc291e34a4064b04916213`.
+**Rust remains uncalibrated**; the last calibrated C# local reference remains
+2319 (95% interval 2277..2360), attached only to its exact historical binary.
+See [this continuation's rating reference](ratings/session-20261018-legal-probe.json).
+Surpassing full-strength Stockfish remains unachieved.
+
+## Rust migration
+
 Active development, engine builds, the local play host and CI now use **Rust
 only**, following the user's instruction. The engine is an attributed source
 fork of MIT-licensed **Viridithas 20.0.0**, with pinned CC0 neural weights and

@@ -1,0 +1,334 @@
+{
+  "conclusion": "success",
+  "headSha": "ecbcee73b696adc843de56a8f416ff4b5833aa07",
+  "jobs": [
+    {
+      "completedAt": "2026-10-18T21:49:32Z",
+      "conclusion": "success",
+      "databaseId": 117799067283,
+      "name": "rust (ubuntu-latest)",
+      "startedAt": "2026-10-18T21:47:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-18T21:47:31Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-18T21:47:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:47:41Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-18T21:47:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:47:49Z",
+          "conclusion": "success",
+          "name": "Run dtolnay/rust-toolchain@stable",
+          "number": 3,
+          "startedAt": "2026-10-18T21:47:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:47:50Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5",
+          "number": 4,
+          "startedAt": "2026-10-18T21:47:49Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:47:54Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install -r requirements-dev.txt",
+          "number": 5,
+          "startedAt": "2026-10-18T21:47:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:47:54Z",
+          "conclusion": "success",
+          "name": "Run python scripts/fetch_rust_network.py",
+          "number": 6,
+          "startedAt": "2026-10-18T21:47:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:47:54Z",
+          "conclusion": "success",
+          "name": "Run cargo fmt --all --check",
+          "number": 7,
+          "startedAt": "2026-10-18T21:47:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:48:28Z",
+          "conclusion": "success",
+          "name": "Run cargo build --release --locked",
+          "number": 8,
+          "startedAt": "2026-10-18T21:47:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:48:55Z",
+          "conclusion": "success",
+          "name": "Run cargo test --release --locked",
+          "number": 9,
+          "startedAt": "2026-10-18T21:48:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:49:12Z",
+          "conclusion": "success",
+          "name": "Run cargo test --locked",
+          "number": 10,
+          "startedAt": "2026-10-18T21:48:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:49:27Z",
+          "conclusion": "success",
+          "name": "Run python scripts/verify.py --setups 1000",
+          "number": 11,
+          "startedAt": "2026-10-18T21:49:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:49:28Z",
+          "conclusion": "success",
+          "name": "Run python scripts/verify_rust_legal_edges.py",
+          "number": 12,
+          "startedAt": "2026-10-18T21:49:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:49:29Z",
+          "conclusion": "success",
+          "name": "Run python scripts/smoke_rust_play.py",
+          "number": 13,
+          "startedAt": "2026-10-18T21:49:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:49:29Z",
+          "conclusion": "success",
+          "name": "Run python scripts/smoke_mate_proof.py",
+          "number": 14,
+          "startedAt": "2026-10-18T21:49:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:49:30Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-v1.json --depth 8 --require-solved 32 --output artifacts/tactics/rust-ci.json",
+          "number": 15,
+          "startedAt": "2026-10-18T21:49:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:49:30Z",
+          "conclusion": "success",
+          "name": "Run cargo run --release --locked -- bench 7",
+          "number": 16,
+          "startedAt": "2026-10-18T21:49:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:49:30Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@v5",
+          "number": 31,
+          "startedAt": "2026-10-18T21:49:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:49:31Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 32,
+          "startedAt": "2026-10-18T21:49:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:49:31Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 33,
+          "startedAt": "2026-10-18T21:49:31Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/p3n1cillin/aster-chess/actions/runs/39169381039/job/117799067283"
+    },
+    {
+      "completedAt": "2026-10-18T21:51:03Z",
+      "conclusion": "success",
+      "databaseId": 117799067623,
+      "name": "rust (windows-latest)",
+      "startedAt": "2026-10-18T21:47:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-18T21:47:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-18T21:47:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:47:47Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-18T21:47:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:48:01Z",
+          "conclusion": "success",
+          "name": "Run dtolnay/rust-toolchain@stable",
+          "number": 3,
+          "startedAt": "2026-10-18T21:47:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:48:02Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@v5",
+          "number": 4,
+          "startedAt": "2026-10-18T21:48:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:48:13Z",
+          "conclusion": "success",
+          "name": "Run python -m pip install -r requirements-dev.txt",
+          "number": 5,
+          "startedAt": "2026-10-18T21:48:02Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:48:15Z",
+          "conclusion": "success",
+          "name": "Run python scripts/fetch_rust_network.py",
+          "number": 6,
+          "startedAt": "2026-10-18T21:48:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:48:17Z",
+          "conclusion": "success",
+          "name": "Run cargo fmt --all --check",
+          "number": 7,
+          "startedAt": "2026-10-18T21:48:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:49:23Z",
+          "conclusion": "success",
+          "name": "Run cargo build --release --locked",
+          "number": 8,
+          "startedAt": "2026-10-18T21:48:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:50:10Z",
+          "conclusion": "success",
+          "name": "Run cargo test --release --locked",
+          "number": 9,
+          "startedAt": "2026-10-18T21:49:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:50:37Z",
+          "conclusion": "success",
+          "name": "Run cargo test --locked",
+          "number": 10,
+          "startedAt": "2026-10-18T21:50:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:50:54Z",
+          "conclusion": "success",
+          "name": "Run python scripts/verify.py --setups 1000",
+          "number": 11,
+          "startedAt": "2026-10-18T21:50:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:50:54Z",
+          "conclusion": "success",
+          "name": "Run python scripts/verify_rust_legal_edges.py",
+          "number": 12,
+          "startedAt": "2026-10-18T21:50:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:50:57Z",
+          "conclusion": "success",
+          "name": "Run python scripts/smoke_rust_play.py",
+          "number": 13,
+          "startedAt": "2026-10-18T21:50:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:50:57Z",
+          "conclusion": "success",
+          "name": "Run python scripts/smoke_mate_proof.py",
+          "number": 14,
+          "startedAt": "2026-10-18T21:50:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:50:58Z",
+          "conclusion": "success",
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-v1.json --depth 8 --require-solved 32 --output artifacts/tactics/rust-ci.json",
+          "number": 15,
+          "startedAt": "2026-10-18T21:50:57Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:50:59Z",
+          "conclusion": "success",
+          "name": "Run cargo run --release --locked -- bench 7",
+          "number": 16,
+          "startedAt": "2026-10-18T21:50:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:50:59Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@v5",
+          "number": 31,
+          "startedAt": "2026-10-18T21:50:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:51:01Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 32,
+          "startedAt": "2026-10-18T21:50:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-18T21:51:01Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 33,
+          "startedAt": "2026-10-18T21:51:01Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/p3n1cillin/aster-chess/actions/runs/39169381039/job/117799067623"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/p3n1cillin/aster-chess/actions/runs/39169381039"
+}
