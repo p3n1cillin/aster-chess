@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "timestamp_utc": "2026-10-18T21:33:14.737907+00:00",
+  "source_manifest": "artifacts/research/rust-source-v4/manifest.json",
+  "frozen_v3_binary_sha256": "246b2c6c1dbb6b98a0d90013fedb47b54b95317992593d98cc486ef66ef91fdb",
+  "source_files_verified": 116,
+  "native_code_unchanged_from_v3": true,
+  "changes": "PowerShell build/play helpers use Resolve-Path.ProviderPath for actual UNC filesystems; no native/search/eval changes. Process-scoped invocation avoids changing global execution policy.",
+  "unc_source_root": "\\\\192.168.0.115\\share\\repos\\WIP\\chess",
+  "cargo_target": "C:\\Users\\lukem\\AppData\\Local\\Aster\\cargo-target",
+  "unc_rebuilt_binary_sha256": "c80b3b743a8d7d92f88156713fa7b28703c68c04b203f3c7756eab59288cd801",
+  "build_log_sha256": "7d152e2ba318228d6b6e1d3d6db1175e62e99a8d9b930e55f63f521c9fe1ff7a",
+  "release_tests": 130,
+  "debug_tests": 130,
+  "fixed_depth_comparisons_identical": 32,
+  "http_sse_check": "artifacts/play/rust-share-v4-qualified.json",
+  "user_game_address": "http://127.0.0.1:5188",
+  "note": "The UNC compilation has a different binary hash due to its build location; no match-derived rating is attached to this build. The frozen matching-screen binaries remain preserved separately."
+}

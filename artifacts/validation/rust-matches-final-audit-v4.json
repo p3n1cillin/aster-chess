@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "auditor_sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6",
+  "matches": [
+    {
+      "status": "passed",
+      "games": 64,
+      "wins": 63,
+      "draws": 0,
+      "losses": 1,
+      "unresolved": 0,
+      "report": "artifacts/matches/rust-foundation-v1-vs-original-30ms.json",
+      "report_sha256": "828a6b18827b1e5ac1bbeb53e078422c52f70d1ca47572ba0ed86d747c16f3e4",
+      "pgn_sha256": "7974243cc6d764e2a39382392a7a237270253d2ed057457f9a045de750ab3403"
+    },
+    {
+      "status": "passed",
+      "games": 64,
+      "wins": 1,
+      "draws": 39,
+      "losses": 24,
+      "unresolved": 0,
+      "report": "artifacts/matches/rust-foundation-v1-vs-stockfish19-30ms.json",
+      "report_sha256": "94ec266d02b709ac80fa4e0cc0d58143cdb40029886ca90c951ee3248f22e2d7",
+      "pgn_sha256": "e6f147ffcf0374a529bdfbf5185848d10d25e53afeeb3844cf31ee997cdab37d"
+    },
+    {
+      "status": "passed",
+      "games": 32,
+      "wins": 3,
+      "draws": 25,
+      "losses": 4,
+      "unresolved": 0,
+      "report": "artifacts/matches/rust-safety-v2-vs-v1-30ms.json",
+      "report_sha256": "394613bdf1846d3539e54f053b12fd6f0f4404e062be5ff4f6e474b5ff8158aa",
+      "pgn_sha256": "5b5ec66ee0f4c002cbb00c82a68092be36f89ddd18fbfbb09b2fdac611e8e413"
+    }
+  ]
+}

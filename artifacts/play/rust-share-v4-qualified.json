@@ -1,0 +1,10 @@
+{
+  "proof_positions_checked": 2,
+  "status": "passed",
+  "play_binary_sha256": "c80b3b743a8d7d92f88156713fa7b28703c68c04b203f3c7756eab59288cd801",
+  "engine_binary_sha256": "c80b3b743a8d7d92f88156713fa7b28703c68c04b203f3c7756eab59288cd801",
+  "real_sse_samples_checked": 9,
+  "completed_depths_checked": 20,
+  "null_pass_clock_fixtures": 2,
+  "checks": "HTTP errors, assets UTF-8, SSE ordering, legal moves, independent SAN/PV/branch replay, PGN, undo, stop, Black opening"
+}

@@ -32,6 +32,17 @@ one thread and 64 MiB hash. It does not transfer to the Rust engine. The
 [session rating record](ratings/session-20261018-rust.json) identifies both.
 Surpassing full-strength Stockfish remains unachieved.
 
+Windows and Linux Rust CI both pass at `6ba7960`; the full run and logs are
+preserved under `artifacts/ci/rust-conversion-39168039854.*`. The subsequent
+PowerShell provider-path fix is tested on the actual UNC checkout, including
+130 release tests, 130 debug tests, 32 matching fixed-depth outputs and the real
+HTTP/SSE host. A fresh game is served by that native build at
+`http://127.0.0.1:5188`. No global execution policy was changed.
+
+The final launcher revision `6db4554` also passes both Windows/Linux CI jobs;
+[its full record](ci/rust-launcher-39168244576.json) and logs are preserved.
+Subsequent commits add documentation and evidence only.
+
 ## Historical progress — 5 October 2026
 
 The production engine is **Aster 0.6.0**, with experimental source identified

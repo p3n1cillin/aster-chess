@@ -1,0 +1,10 @@
+{"status": "verified", "sha256": "066c172e22c25ee3d3b4084ad44ff761426f906a9c536cabd0127d17413d0585", "url": "https://github.com/cosmobobak/viridithas-networks/releases/download/v109/sandhi-s2-b200.nnue.zst"}
+error: failed to create directory `\\192.168.0.115\share\repos\WIP\chess\Microsoft.PowerShell.Core\FileSystem::\\192.168.0.115\share\repos\WIP\chess\scripts\..`
+
+Caused by:
+  The specified path is invalid. (os error 161)
+Exception: \\192.168.0.115\share\repos\WIP\chess\scripts\build.ps1:12
+Line |
+  12 |      if ($LASTEXITCODE -ne 0) { throw 'Rust build failed.' }
+     |                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Rust build failed.

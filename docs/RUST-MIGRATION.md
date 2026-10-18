@@ -112,13 +112,20 @@ Actual UNC-share testing exposed PowerShell's provider-qualified `.Path` value;
 local Cargo target directory. A process-scoped launcher invocation is documented
 for systems that block unsigned scripts on network shares. No system execution
 policy is changed.
+The real share build passes both 130-test profiles, all 32 fixed-depth outputs
+agree with frozen play-v3, and its actual HTTP/SSE host passes independently.
+Its path-dependent binary hash and the source/toolchain record are retained in
+[the UNC launcher check](../artifacts/play/rust-launcher-unc-v4.json).
 
 The Windows browser checks cover both colors, actual moves, mobile layout,
 live telemetry, a correctly displayed mate-in-two and a downloaded proof, with
 no JavaScript errors. The source
 archives, paired reports and screenshots keep these checks auditable. Current
-CI builds and tests Rust on Windows and Linux; its final run status is recorded
-with the session evidence when complete.
+CI builds and tests Rust on Windows and Linux. Both jobs pass at `6ba7960`,
+including debug/release tests, independent rules/protocol checks, the real host,
+proof exports and tactical gates. The [CI record](../artifacts/ci/rust-conversion-39168039854.json)
+and complete logs are preserved. The launcher correction is separately verified
+on the user's actual Windows network share.
 
 ## Remaining work
 
@@ -134,3 +141,7 @@ Rust features. Extend native explanations and certificate browsing, calibrate
 the exact new binary at multiple controls, and investigate compatible newer
 neural knowledge and individually tested search improvements. Surpassing
 full-strength Stockfish remains an unachieved project goal.
+
+Both Windows/Linux jobs also pass at final launcher revision `6db4554`; see
+[the final CI record](../artifacts/ci/rust-launcher-39168244576.json) and its
+complete logs. Subsequent commits add documentation and preserved evidence only.
