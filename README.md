@@ -6,9 +6,15 @@ early, working foundation and is far below that target: version 0.6.0 lost all
 eight games in its full-strength Stockfish 19 smoke match. Detailed progress,
 regressions and preserved reports are in [measured progress](artifacts/PROGRESS.md).
 
-Source and research history are maintained in the private
+Source and research history are maintained in the public
 [GitHub repository](https://github.com/p3n1cillin/aster-chess).
 See [version control](docs/VERSION-CONTROL.md) for tracked evidence and exact-byte preservation.
+
+Aster's original source is open source under **GPL-3.0-or-later**; see
+[LICENSE](LICENSE) and [third-party notices](THIRD_PARTY_NOTICES.md).
+Contributions are welcome: [CONTRIBUTING.md](CONTRIBUTING.md) describes the
+build, verification and research gates. The engine and browser interface run
+without Stockfish or Python; those tools are used only for development checks.
 
 ## Build and run
 

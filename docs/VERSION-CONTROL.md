@@ -1,6 +1,6 @@
 # Version control
 
-The project is maintained in the private GitHub repository
+The project is maintained in the public GitHub repository
 `p3n1cillin/aster-chess`. Source, tests, experiment plans, immutable source
 snapshots, engine packages, datasets, trained checkpoints, reports, PGNs and
 rating evidence belong in version control. Every frozen file retains its exact
