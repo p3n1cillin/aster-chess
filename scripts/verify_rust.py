@@ -30,6 +30,8 @@ def main():
             client.send(command)
             line=client.command('legal','info string legal')
             assert set(line.removeprefix('info string legal').split())=={m.uci() for m in board.legal_moves},board.fen()
+            exists=client.command('legal-exists','info string legal-exists ')
+            assert exists=='info string legal-exists '+str(bool(list(board.legal_moves))).lower(),(board.fen(),exists)
             actual=client.command('d','info string fen ').removeprefix('info string fen ')
             assert same(actual,board.fen()),(actual,board.fen())
             checked+=1
@@ -100,7 +102,7 @@ def main():
         for fen,mate in [('7k/6Q1/6K1/8/8/8/8/8 b - - 100 1',True),('7k/5Q2/6K1/8/8/8/8/8 b - - 0 1',False),('7k/8/6K1/8/8/8/8/R7 w - - 100 1',False)]:
             client.send('position fen '+fen);client.send('go depth 2');lines=client.until('bestmove')
             assert any(('score mate 0' if mate else 'score cp 0') in line for line in lines),lines
-    report={'passed':True,'positions':checked,'perft':perfts,'ready_during_infinite_search_seconds':ready_seconds,
+    report={'passed':True,'positions':checked,'legal_existence_checks':checked,'perft':perfts,'ready_during_infinite_search_seconds':ready_seconds,
         'observer_equivalence':outputs,'independently_replayed_samples':samples,'independently_replayed_live_branches':branches,
         'binary_sha256':hashlib.sha256(pathlib.Path(args.engine).read_bytes()).hexdigest(),
         'verifier_sha256':hashlib.sha256(pathlib.Path(__file__).read_bytes()).hexdigest()}

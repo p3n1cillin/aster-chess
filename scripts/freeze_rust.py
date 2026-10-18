@@ -17,7 +17,7 @@ def main():
     directory.mkdir(parents=True)
     paths=[ROOT/name for name in ['Cargo.toml','Cargo.lock','rust-toolchain.toml','.cargo/config.toml','requirements-dev.txt','LICENSE','THIRD_PARTY_NOTICES.md']]
     paths+=sorted(p for p in (ROOT/'crates/engine').rglob('*') if p.is_file() and p.name!='viridithas.nnue.zst')
-    paths+=[ROOT/'scripts'/name for name in ['freeze_rust.py','fetch_rust_network.py','verify.py','verify_rust.py','verify_rust_equivalence.py','smoke_rust_play.py','verify_mate_proof.py','verify_rust_proofs.py','match.py','uci_client.py','build.ps1','play.ps1','rust-paths.ps1']]
+    paths+=[ROOT/'scripts'/name for name in ['freeze_rust.py','fetch_rust_network.py','verify.py','verify_rust.py','verify_rust_equivalence.py','smoke_rust_play.py','verify_mate_proof.py','verify_rust_proofs.py','match.py','uci_client.py','build.ps1','play.ps1','rust-paths.ps1','benchmark_rust_legal_probe.py']]
     entries=[]
     for path in sorted(paths):
         relative=path.relative_to(ROOT);target=directory/relative;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(path,target)

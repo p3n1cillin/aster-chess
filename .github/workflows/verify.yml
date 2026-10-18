@@ -26,6 +26,7 @@ jobs:
       - run: cargo test --release --locked
       - run: cargo test --locked
       - run: python scripts/verify.py --setups 1000
+      - run: python scripts/verify_rust_legal_edges.py
       - run: python scripts/smoke_rust_play.py
       - run: python scripts/smoke_mate_proof.py
       - run: python scripts/tactics.py tests/fixtures/tactics-v1.json --depth 8 --require-solved 32 --output artifacts/tactics/rust-ci.json

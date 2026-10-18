@@ -63,7 +63,7 @@ python scripts/smoke_mate_proof.py
 ```
 
 `stop` and `isready` remain responsive during search. Extra diagnostics include
-`legal`, `d`, and `aster-trace on|off`. Live visualization shows actual sampled
+`legal`, `legal-exists`, `d`, and `aster-trace on|off`. Live visualization shows actual sampled
 branches (including hypothetical null moves), search-function counts, visit
 heatmaps, real root attempt bounds and completed-depth evaluations. Samples are
 not a recording of every searched position. Neural values are not presented as

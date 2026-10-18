@@ -1304,6 +1304,39 @@ impl Board {
 
     /// Test terminal positions before heuristic evaluation or pruning.
     pub fn has_legal_move(&self) -> bool {
+        #[cfg(debug_assertions)]
+        self.check_validity();
+        // Outside check, an ordinary pawn push or knight move usually suffices.
+        // Each probe still uses the normal legality predicate (including pins).
+        // Promotions, en passant, castling, checks and all remaining cases use
+        // the complete generator below. No board state or move order changes.
+        if !self.in_check() {
+            let bbs = &self.state.bbs;
+            let ours = bbs.colours[self.side];
+            let empty = !bbs.occupied();
+            let promotion_sources = [SquareSet::RANK_7, SquareSet::RANK_2][self.side];
+            let pawns = bbs.pieces[PieceType::Pawn] & ours & !promotion_sources;
+            let push_sources = pawns
+                & if self.side == Colour::White {
+                    empty.south_one()
+                } else {
+                    empty.north_one()
+                };
+            for from in push_sources {
+                if let Some(to) = from.pawn_push(self.side)
+                    && self.is_legal(Move::new(from, to))
+                {
+                    return true;
+                }
+            }
+            for from in bbs.pieces[PieceType::Knight] & ours {
+                for to in movegen::knight_attacks(from) & !ours {
+                    if self.is_legal(Move::new(from, to)) {
+                        return true;
+                    }
+                }
+            }
+        }
         let mut moves = MoveList::new();
         self.generate_moves(&mut moves);
         moves.iter_moves().any(|m| self.is_legal(*m))
@@ -1592,6 +1625,66 @@ mod tests {
         chessmove::{Move, MoveFlags},
         types::Square,
     };
+
+    #[test]
+    fn legal_probe_special_positions() {
+        // These include pinned candidates, both colors, double check, late-clock
+        // mate/stalemate, promotion-only moves, en passant and castling rights.
+        let cases = [
+            (Board::STARTING_FEN, true),
+            ("7k/6Q1/6K1/8/8/8/8/8 b - - 150 1", false),
+            ("7k/5Q2/6K1/8/8/8/8/8 b - - 150 1", false),
+            ("8/7P/8/8/8/1q6/2k5/K7 w - - 0 1", true),
+            ("8/8/8/8/8/1q6/2k5/K7 w - - 0 1", false),
+            ("k7/2K5/1Q6/8/8/8/7p/8 b - - 0 1", true),
+            ("k7/2K5/1Q6/8/8/8/8/8 b - - 0 1", false),
+            ("4r1k1/8/8/8/8/8/4P3/4K3 w - - 0 1", true),
+            ("4r1k1/8/8/8/8/8/4N3/4K3 w - - 0 1", true),
+            ("4r1k1/8/8/8/1b6/8/8/4K3 w - - 0 1", true),
+            ("r3k2r/8/8/8/8/8/8/R3K2R w KQkq - 0 1", true),
+            ("5B2/7B/6P1/R4pPk/8/7K/8/8 w - f6 0 1", true),
+            ("8/8/8/8/R1pP2k1/8/8/7K b - d3 0 1", true),
+        ];
+        for (fen, expected) in cases {
+            let board = Board::from_fen(fen).unwrap();
+            let before = board.clone();
+            assert_eq!(board.has_legal_move(), expected, "{fen}");
+            assert_eq!(!board.legal_moves().is_empty(), expected, "{fen}");
+            assert_eq!(board, before, "The existence query must be read-only");
+        }
+    }
+
+    #[test]
+    fn legal_probe_reachable_tree() {
+        fn visit(board: &mut Board, depth: usize) {
+            let before = board.clone();
+            let legal = board.legal_moves();
+            assert_eq!(board.has_legal_move(), !legal.is_empty(), "{board}");
+            assert_eq!(*board, before);
+            if depth > 0 {
+                for m in legal {
+                    board.make_move_simple(m);
+                    visit(board, depth - 1);
+                    board.unmake_move_base();
+                    assert_eq!(*board, before);
+                }
+            }
+        }
+        for (fen, depth) in [
+            (Board::STARTING_FEN, 3),
+            (
+                "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1",
+                2,
+            ),
+            ("8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - - 0 1", 3),
+            (
+                "b1q1rrkb/pppppppp/3nn3/8/P7/1PPP4/4PPPP/BQNNRKRB w GE - 1 9",
+                2,
+            ),
+        ] {
+            visit(&mut Board::from_fen(fen).unwrap(), depth);
+        }
+    }
 
     #[test]
     fn game_end_states() {

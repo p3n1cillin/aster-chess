@@ -1,0 +1,413 @@
+{
+  "schema": 1,
+  "seed": 20261021,
+  "plies": 20,
+  "selection_nodes": 2048,
+  "verification_nodes": 20000,
+  "max_abs_teacher_cp": 80,
+  "teacher": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "training_exclusion": null,
+  "training_exclusions": [],
+  "prior_suites_excluded": [
+    {
+      "path": "tests\\fixtures\\capacity-classical-100ms-v1.json",
+      "sha256": "dcbebc58b5c33ec6b9e502031dc4cdc7190d76dbc222ded241970136d958b3f5",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\capacity-classical-30ms-v1.json",
+      "sha256": "01e773465168914fc65c45ac13df8db197f8e0cb4e37d4a25557e4f19701bdf8",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\capacity-control-30ms-v1.json",
+      "sha256": "76c1fefa9817b587f355cccd4dfe763ed5f435b6fc11b57fcee5eb991e2cdd30",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\capacity-parent-v1.json",
+      "sha256": "81e388417a56d17ce865237647a02506e9cc05677232c6bcbe73b1f8d2f7d39b",
+      "positions": 160
+    },
+    {
+      "path": "tests\\fixtures\\deep-turn-classical-100ms-v1.json",
+      "sha256": "b8c5da7d9648fd72ccf674ca694848f3bc526776b738087b31e3e82a6453165c",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\deep-turn-classical-30ms-v1.json",
+      "sha256": "1ffa275e525d665757213fa34a93aa4bed17982fd844d444299b01d556fd0255",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\deep-turn-control-30ms-v1.json",
+      "sha256": "99889d267db0879be7131c4039dd80d258ad2221fe54222133dd32709b595e03",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\deep-turn-parent-v1.json",
+      "sha256": "5addfa8b6a03c8fd844ff43ec8c8dc71f6c2d3184460d919fc7dee2676865237",
+      "positions": 160
+    },
+    {
+      "path": "tests\\fixtures\\iir-100ms-v1.json",
+      "sha256": "0b2e40c88ada4064628909ddba0293ce3594774520eaffae50daafcca41ecace",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\iir-30ms-v1.json",
+      "sha256": "de119d1f9630b753d18a634031c90cefac64853d43e11e386aee535b53bf4307",
+      "positions": 256
+    },
+    {
+      "path": "tests\\fixtures\\iir-behavior-v1.json",
+      "sha256": "b3680be4939c0e82ddb125c5a70a90b8c75312440333e9bc0b8d443f51fc0d15",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\iir-parent-v1.json",
+      "sha256": "46868852f9af1c2b95bc9bfaec9b68bb0b45fd916d0bfc27f792fe9596855baa",
+      "positions": 448
+    },
+    {
+      "path": "tests\\fixtures\\iir-rating-v1.json",
+      "sha256": "ce491f6df3345245f016f9b1b8f7658769da750a0826a422f4732b16eaf2653f",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\kpk-setups-v1.json",
+      "sha256": "550764811ecbb1761c70a30a82c941122450839ef442f56a8f5a5a67ed96dd13",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-100ms-v1.json",
+      "sha256": "12ed5a4dd3688e730ba6224b8c88e00bc5b016975aa8dd08e1e918bbb9f7be1e",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-30ms-v1.json",
+      "sha256": "e6f6a4f084d0c06ec7a1bcc8de86a9d13b3fa0faa3053208c3c86359e62ba423",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-behavior-v1.json",
+      "sha256": "00a8de1225c4a1e6b6f0b943c6d1d12565900eea579aa6f644d5a2b347e9f919",
+      "positions": 80
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-parent-v1.json",
+      "sha256": "d8ac1c505d3c46c819b87da63fe8308cebd18a234a1889a9215fbc2e75101f3a",
+      "positions": 208
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-rating-v1.json",
+      "sha256": "9c7886ac0b66b35fd6cc74c2937bb86ba5506c0363568e87cf769be6bca46652",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\mate-proof-match-v1.json",
+      "sha256": "14286109ef669ec3abab5d4bfeb8f5de1ca6468969b72b8fd0cd658ba94edc0a",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\mate-proof-parent-v1.json",
+      "sha256": "85553f4ff2dcc2ce9896e002ce5730d4ca54061c82f1032bdb47f0c83ae750c4",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\openings-v1.json",
+      "sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v2.json",
+      "sha256": "cdcc99af780b795546a22e84b2557bd20168097c2694cc9b12ce2e242f74bc25",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v3.json",
+      "sha256": "b2c84b63c566712b33102e1a5f246d47a010a0341f8396c5e036937c74e241f3",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v4.json",
+      "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v5.json",
+      "sha256": "e63c68d4024428bef2f84a4289db06c4aee70e60aa9f081cf437d2a6d237c46e",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\phase-classical-100ms-v1.json",
+      "sha256": "3b01d69ec7c31e2e5991b81ebb5860024b4393cb42d91c8a84db69ff20dacffc",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\phase-classical-30ms-v1.json",
+      "sha256": "3efc264b68683bd961a269679ecb493ccd53888651e5a767b34b66a7c0f5e3e1",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\phase-control-30ms-v1.json",
+      "sha256": "f29fbb72d1d3696bff82ff4630bc51b37d6148af3350e0b265509e96aab30758",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\phase-parent-v1.json",
+      "sha256": "35fd8dc040ab40538966d73d0f9c54d38ce490175e90fba10c9cf4c82363063f",
+      "positions": 80
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-100ms-v1.json",
+      "sha256": "9c760e96dc990a5ab465a5bf8eff9971ed8eae9856c76d57b6ca32f2563ba63f",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-30ms-v1.json",
+      "sha256": "940d8217dd7a6a583ddcabfe6edeffcd4769ac7f9118d00f67f081b52f238072",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-behavior-v1.json",
+      "sha256": "02d7afdbe0eb10296d53208cf96f551058d0b3323fe18570dd3cae1706b90e00",
+      "positions": 160
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-parent-v1.json",
+      "sha256": "13c3a7a689f83064490766a76d112589ef2098f93a9d92ebbfcee805f1c385f4",
+      "positions": 288
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-rating-v1.json",
+      "sha256": "b9d8a21feba1ae6c0390e1fa0dd26e3cf65848f0b2e87fd002ebbe0ef1f626fa",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\rating-confirm-v1.json",
+      "sha256": "1e904d67400433abedb8e48592b4598e8e5ed10ed82b0cdd13025de6eca8615d",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\rating-parent-v1.json",
+      "sha256": "6c4d7453e3572cadf786d81be8ad8b0b85fb9c461d5e93847612959836efb112",
+      "positions": 144
+    },
+    {
+      "path": "tests\\fixtures\\rating-screen-v1.json",
+      "sha256": "690bacaceff2559200ebb084424de85639cf045c14f094912e18f5b38ba9805f",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\relations-classical-100ms-v1.json",
+      "sha256": "2ded031474bc1542069632721b7ad8ef7807f32c1ad0378cc97438e465f64928",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\relations-classical-30ms-v1.json",
+      "sha256": "63b831b035cfbf5ed44ee4a89e7a374e29cef97918eb8d6e8b2a54893db56478",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\relations-control-30ms-v1.json",
+      "sha256": "9bd295a72aeeecafcf1234f923b27fe958065393a51c1b7331a3c7ea408d3f85",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\relations-parent-v1.json",
+      "sha256": "08d8909b4520243fa3b0f850595957b79087c532607d4c375eeb54eefc3a8a46",
+      "positions": 160
+    },
+    {
+      "path": "tests\\fixtures\\rust-foundation-original-v1.json",
+      "sha256": "f0ed641ffac5091b4dc75b076f36c2bfbc2e2f670deb8a4e613a1a24823b840f",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\rust-foundation-parent-v1.json",
+      "sha256": "ec2a76dbd775a3fcc94156c36ec0f4762f0dae6146640fe189b1d795632b40c9",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\rust-foundation-stockfish-v1.json",
+      "sha256": "7a4d448a988b4a77856d60102dedf6b5b5681bf6c6acf551239b29e23904bc36",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\rust-safety-v2.json",
+      "sha256": "6e8185bf92824481e77f7ab1b3e58d92e10f1a96a1f7f6a35c7daa111ba453b4",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\stable-endgame-classical-100ms-v1.json",
+      "sha256": "4682375ee99e6043c9a2face29f6ae3bd9bc46fa66c3978005ac09f09d32afe6",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\stable-endgame-classical-30ms-v1.json",
+      "sha256": "03139c4b9c389d6a607425a1fa64a3ddae9d92824fbdab765fd1138a2440f848",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\stable-endgame-control-30ms-v1.json",
+      "sha256": "19e001548702c754b8f97e37b7274b065880bc279c968954219bf356111be8fc",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\stable-endgame-parent-v1.json",
+      "sha256": "ee8a6137df3a3a0da43dcf783565e974483101bb41aeb956d52772f39fc06a19",
+      "positions": 160
+    }
+  ],
+  "attempts_used": 114,
+  "teacher_options": {
+    "Threads": 1,
+    "Hash": 64
+  },
+  "generator_sha256": "2ce0cc33144b61874a2d9f077cc0e4da0c43d1cbf146cb7c74e1513a04b02746",
+  "interpretation": "Seeded near-best MultiPV continuations from the start, distinct final positions, balanced under a bounded teacher check. Teacher scores do not prove equality; this is a regression suite, not an independent final superiority test.",
+  "openings": [
+    {
+      "id": "opening-043",
+      "moves": "e2e4 g8f6 d2d3 b8c6 g1f3 e7e6 g2g3 h7h6 a2a3 f8e7 e4e5 f6d5 c2c4 d5b6 b2b3 a7a5 d3d4 d7d5 h2h4 f7f6",
+      "fen": "r1bqk2r/1pp1b1p1/1nn1pp1p/p2pP3/2PP3P/PP3NP1/5P2/RNBQKB1R w KQkq - 0 11",
+      "teacher_white_cp": -11,
+      "teacher_depth": 12,
+      "attempt": 79
+    },
+    {
+      "id": "opening-058",
+      "moves": "d2d4 g8f6 c2c4 c7c5 e2e3 d7d5 d4c5 b8d7 b1c3 e7e6 g1f3 d5c4 e3e4 d7c5 d1c2 a7a6 e4e5 f6d7 f1c4 d8c7",
+      "fen": "r1b1kb1r/1pqn1ppp/p3p3/2n1P3/2B5/2N2N2/PPQ2PPP/R1B1K2R w KQkq - 1 11",
+      "teacher_white_cp": 2,
+      "teacher_depth": 12,
+      "attempt": 102
+    },
+    {
+      "id": "opening-051",
+      "moves": "g1f3 c7c6 c2c3 g8f6 h2h3 d8c7 d1c2 a7a6 d2d4 d7d5 e2e3 g7g6 c3c4 c8f5 c2d1 e7e6 g2g4 f5e4 g4g5 f6h5",
+      "fen": "rn2kb1r/1pq2p1p/p1p1p1p1/3p2Pn/2PPb3/4PN1P/PP3P2/RNBQKB1R w KQkq - 1 11",
+      "teacher_white_cp": -71,
+      "teacher_depth": 9,
+      "attempt": 90
+    },
+    {
+      "id": "opening-053",
+      "moves": "d2d4 b8c6 e2e4 e7e5 d4e5 c6e5 g1f3 d7d6 f3e5 d6e5 d1d8 e8d8 c1e3 f8b4 c2c3 b4e7 f2f3 a7a5 b1d2 f7f6",
+      "fen": "r1bk2nr/1pp1b1pp/5p2/p3p3/4P3/2P1BP2/PP1N2PP/R3KB1R w KQ - 0 11",
+      "teacher_white_cp": 59,
+      "teacher_depth": 10,
+      "attempt": 94
+    },
+    {
+      "id": "opening-056",
+      "moves": "c2c3 d7d5 g1f3 c7c6 d1c2 g7g6 a2a4 g8f6 g2g3 f8g7 d2d3 c8f5 f1g2 a7a5 c2b3 e8g8 e1g1 d8d7 d3d4 h7h6",
+      "fen": "rn3rk1/1p1qppb1/2p2npp/p2p1b2/P2P4/1QP2NP1/1P2PPBP/RNB2RK1 w - - 0 11",
+      "teacher_white_cp": -13,
+      "teacher_depth": 11,
+      "attempt": 98
+    },
+    {
+      "id": "opening-027",
+      "moves": "g1f3 c7c6 d2d4 g8f6 c2c3 d8c7 g2g3 d7d6 f1g2 c8f5 f3h4 f5e4 e1g1 e4g2 g1g2 e7e6 f1e1 b8d7 b1d2 d6d5",
+      "fen": "r3kb1r/ppqn1ppp/2p1pn2/3p4/3P3N/2P3P1/PP1NPPKP/R1BQR3 w kq - 0 11",
+      "teacher_white_cp": 20,
+      "teacher_depth": 14,
+      "attempt": 47
+    },
+    {
+      "id": "opening-035",
+      "moves": "c2c3 e7e5 d2d4 e5d4 c3d4 d7d5 g1f3 f8e7 a2a3 g8f6 d1c2 c7c6 e2e3 c8e6 h2h3 e7d6 c1d2 f6e4 f1d3 e8g8",
+      "fen": "rn1q1rk1/pp3ppp/2pbb3/3p4/3Pn3/P2BPN1P/1PQB1PP1/RN2K2R w KQ - 5 11",
+      "teacher_white_cp": 58,
+      "teacher_depth": 13,
+      "attempt": 59
+    },
+    {
+      "id": "opening-015",
+      "moves": "c2c3 d7d5 d2d4 a7a6 h2h3 e7e6 g2g3 f8d6 f1g2 b8d7 g1f3 c7c6 c3c4 g8e7 b2b3 b7b5 e1g1 e8g8 b1d2 h7h6",
+      "fen": "r1bq1rk1/3nnpp1/p1pbp2p/1p1p4/2PP4/1P3NPP/P2NPPB1/R1BQ1RK1 w - - 0 11",
+      "teacher_white_cp": 48,
+      "teacher_depth": 11,
+      "attempt": 21
+    },
+    {
+      "id": "opening-033",
+      "moves": "c2c3 d7d5 g1f3 c8f5 f3h4 f5e6 g2g3 c7c6 d2d4 g7g6 h4f3 f8g7 c1f4 b8d7 f1g2 d8b6 b1d2 e6f5 d1c1 g8f6",
+      "fen": "r3k2r/pp1nppbp/1qp2np1/3p1b2/3P1B2/2P2NP1/PP1NPPBP/R1Q1K2R w KQkq - 10 11",
+      "teacher_white_cp": 5,
+      "teacher_depth": 11,
+      "attempt": 56
+    },
+    {
+      "id": "opening-036",
+      "moves": "d2d4 g8f6 c1f4 f6h5 f4g3 c7c6 e2e4 h5g3 h2g3 d7d5 e4d5 d8b6 d5c6 b8c6 g1f3 b6b2 b1d2 c6d4 f3d4 b2d4",
+      "fen": "r1b1kb1r/pp2pppp/8/8/3q4/6P1/P1PN1PP1/R2QKB1R w KQkq - 0 11",
+      "teacher_white_cp": -43,
+      "teacher_depth": 10,
+      "attempt": 60
+    },
+    {
+      "id": "opening-025",
+      "moves": "c2c3 e7e6 g2g3 g8f6 d2d3 f8e7 g1f3 c7c6 a2a4 d7d5 d3d4 h7h6 b1d2 a7a5 f1g2 c6c5 d4c5 e7c5 d1c2 b7b6",
+      "fen": "rnbqk2r/5pp1/1p2pn1p/p1bp4/P7/2P2NP1/1PQNPPBP/R1B1K2R w KQkq - 0 11",
+      "teacher_white_cp": -44,
+      "teacher_depth": 12,
+      "attempt": 44
+    },
+    {
+      "id": "opening-020",
+      "moves": "e2e4 b8c6 d2d4 e7e6 g2g3 d7d6 b1c3 g8f6 a2a3 g7g6 c1e3 a7a6 f2f3 f8g7 f1g2 b7b5 b2b3 c6e7 d1d2 e8g8",
+      "fen": "r1bq1rk1/2p1npbp/p2ppnp1/1p6/3PP3/PPN1BPP1/2PQ2BP/R3K1NR w KQ - 3 11",
+      "teacher_white_cp": 31,
+      "teacher_depth": 12,
+      "attempt": 30
+    },
+    {
+      "id": "opening-055",
+      "moves": "e2e4 c7c5 g1f3 d7d6 d2d4 c5d4 c1g5 f7f6 g5d2 b8c6 c2c3 f6f5 e4f5 c8f5 f1b5 d4c3 b1c3 g8f6 a1c1 a7a6",
+      "fen": "r2qkb1r/1p2p1pp/p1np1n2/1B3b2/8/2N2N2/PP1B1PPP/2RQK2R w Kkq - 0 11",
+      "teacher_white_cp": 31,
+      "teacher_depth": 12,
+      "attempt": 96
+    },
+    {
+      "id": "opening-013",
+      "moves": "g1f3 g8f6 d2d4 c7c5 d4d5 e7e6 d5e6 f7e6 b1c3 b8c6 h2h3 f8e7 e2e4 d7d5 e4d5 e6d5 a2a3 c5c4 c1g5 c8e6",
+      "fen": "r2qk2r/pp2b1pp/2n1bn2/3p2B1/2p5/P1N2N1P/1PP2PP1/R2QKB1R w KQkq - 2 11",
+      "teacher_white_cp": -38,
+      "teacher_depth": 13,
+      "attempt": 18
+    },
+    {
+      "id": "opening-002",
+      "moves": "c2c3 d7d5 d2d4 a7a6 d1c2 g7g6 h2h3 f8g7 c1g5 g8f6 g1f3 f6e4 g5e3 c8f5 g2g4 e4f2 g4f5 f2h1 e3f4 b8d7",
+      "fen": "r2qk2r/1ppnppbp/p5p1/3p1P2/3P1B2/2P2N1P/PPQ1P3/RN2KB1n w Qkq - 2 11",
+      "teacher_white_cp": 57,
+      "teacher_depth": 12,
+      "attempt": 1
+    },
+    {
+      "id": "opening-046",
+      "moves": "d2d4 c7c6 c2c3 d7d5 d1c2 g8f6 b1d2 b8d7 a2a4 e7e5 e2e3 h7h5 a4a5 h5h4 c3c4 e5e4 c2c3 h8h6 f2f3 a8b8",
+      "fen": "1rbqkb2/pp1n1pp1/2p2n1r/P2p4/2PPp2p/2Q1PP2/1P1N2PP/R1B1KBNR w KQ - 1 11",
+      "teacher_white_cp": -57,
+      "teacher_depth": 11,
+      "attempt": 85
+    }
+  ],
+  "partition": [
+    0,
+    16
+  ],
+  "parent_sha256": "af5585d0312a4f16346b1254fe4570a40938ea13e0897504ad0592543d7d6435"
+}

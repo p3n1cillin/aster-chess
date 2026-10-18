@@ -155,6 +155,13 @@ pub fn main_loop() -> Result<(), UciError> {
                 crate::aster_trace::enable(false);
                 Ok(())
             }
+            "legal-exists" => {
+                println!(
+                    "info string legal-exists {}",
+                    thread_data[0].board.has_legal_move()
+                );
+                Ok(())
+            }
             "legal" => {
                 let b = &thread_data[0].board;
                 let moves: Vec<_> = b
