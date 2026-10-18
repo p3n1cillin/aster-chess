@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "timestamp_utc": "2026-10-18T21:58:20.573349+00:00",
+  "engine_version": "0.9.2",
+  "address": "http://127.0.0.1:5189",
+  "runtime_binary_sha256": "b51e97647dd086ed0a30682fba77ea627dd5d8cf9bfc291e34a4064b04916213",
+  "matches_frozen_candidate": true,
+  "source_manifest": "artifacts/research/rust-legal-probe-source-v1/manifest.json",
+  "returned_engine": "Aster Rust \u00b7 Viridithas 20 derived",
+  "note": "Exact tested standalone binary served by the owned Windows launcher; existing port 5188 game was not restarted."
+}
