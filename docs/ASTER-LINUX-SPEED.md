@@ -44,6 +44,20 @@ each round (`artifacts/research/aster-linux-speed-v1/`):
 The VM is noisy; individual runs vary by ±10%. Intermediate measurements had
 huge pages alone at about 0.87–0.89 and both changes at 0.90.
 
+## AVX2 paired widening
+
+Deterministic instruction counts (valgrind callgrind, which runs the AVX2 path)
+showed the AVX2 kernels still sign-extended one row at a time. They now use the
+same paired layout and `maddubs` widening with 32-byte chunks
+(`kernels::PAIR_YMM`), and a 128-lane tile (8 accumulator registers) so the
+widening temporaries fit in the 16 ymm registers; a 256-lane tile executed more
+instructions. Search instructions for `bench 16 1 8` fell from 1,146M to
+1,110M (upstream build for the same ISA: 999M). Timed with `ASTER_SIMD=avx2`
+against the upstream `x86-64-bmi2` clang build, 12 concurrent rounds: Aster
+before **0.740** (IQR 0.706–0.779), after **0.838** (0.807–0.885), i.e. +13%.
+The AVX-512 path is unchanged within noise. Both kernels are checked against
+the wide-sum oracle, including wrapping and in-place updates.
+
 ## Equal-time status match
 
 Predeclared plan, fastchess log/config, PGN and report:

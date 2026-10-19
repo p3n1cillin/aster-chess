@@ -647,7 +647,10 @@ pub fn refresh_from_scratch(persp: Color, ft: &FeatureTransformer, pos: &Positio
     while b != 0 {
         let sq = pop_lsb(&mut b);
         let i = psq_make_index(persp, sq, pos.piece_on(sq), ksq, q);
-        for (a, w) in acc.iter_mut().zip(logical_row(psq_row(ft, i), ft.paired)) {
+        for (a, w) in acc
+            .iter_mut()
+            .zip(logical_row(psq_row(ft, i), ft.pair_layout))
+        {
             *a = a.wrapping_add(w as i16);
         }
     }
@@ -655,7 +658,10 @@ pub fn refresh_from_scratch(persp: Color, ft: &FeatureTransformer, pos: &Positio
     threat_append_active_indices(persp, pos, &mut active);
     pp_append_active_indices(persp, pos, &mut active);
     for &i in active.as_slice() {
-        for (a, w) in acc.iter_mut().zip(logical_row(thr_row(ft, i), ft.paired)) {
+        for (a, w) in acc
+            .iter_mut()
+            .zip(logical_row(thr_row(ft, i), ft.pair_layout))
+        {
             *a = a.wrapping_add(w as i16);
         }
     }

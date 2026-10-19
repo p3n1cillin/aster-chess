@@ -76,37 +76,57 @@ pub fn prefetch_l1<T>(p: *const T) {
     }
 }
 
-/// Block order of every 64-byte chunk of an int8 feature row on the AVX-512
-/// path: stored 8-byte block `b` holds logical block `PAIR_ORDER[b]`. Byte
-/// unpacks work within 128-bit lanes, so with this order the low and high
-/// unpacks of a chunk widen to consecutive accumulator lanes (the upstream
-/// reference's paired widening add and `WideningPairOrder`).
-pub const PAIR_ORDER: [usize; 8] = [0, 4, 1, 5, 2, 6, 3, 7];
-
-/// Whether int8 feature rows are stored in the paired layout. Decided by the
-/// kernel level, which is fixed by the first `init` (network loading calls it).
-pub fn paired_rows() -> bool {
-    init();
-    level() == LEVEL_AVX512
+/// Paired layout of int8 feature rows for the SIMD kernels (the upstream
+/// reference's paired widening add and `WideningPairOrder`). Each chunk of one
+/// vector register's bytes stores its 8-byte blocks so that `order[b]` is the
+/// logical block in stored block `b`. Byte unpacks work within 128-bit lanes;
+/// with this order the low and high unpacks of a chunk (one row, or two rows
+/// interleaved) widen to consecutive accumulator lanes.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub struct PairLayout {
+    pub chunk: usize,
+    pub order: &'static [usize],
 }
 
-/// Converts logical int8 rows (a multiple of 64 bytes) to the paired layout.
-pub fn to_paired_layout(w: &mut [i8]) {
-    for chunk in w.as_chunks_mut::<64>().0 {
-        let logical = *chunk;
-        for (b, &from) in PAIR_ORDER.iter().enumerate() {
+pub const PAIR_ZMM: PairLayout = PairLayout {
+    chunk: 64,
+    order: &[0, 4, 1, 5, 2, 6, 3, 7],
+};
+pub const PAIR_YMM: PairLayout = PairLayout {
+    chunk: 32,
+    order: &[0, 2, 1, 3],
+};
+
+/// The int8 row layout of the active kernels. Decided by the kernel level,
+/// which is fixed by the first `init` (network loading calls it).
+pub fn pair_layout() -> Option<PairLayout> {
+    init();
+    match level() {
+        LEVEL_AVX512 => Some(PAIR_ZMM),
+        LEVEL_AVX2 => Some(PAIR_YMM),
+        _ => None,
+    }
+}
+
+/// Converts logical int8 rows (a multiple of `layout.chunk` bytes) to `layout`.
+pub fn to_paired_layout(w: &mut [i8], layout: PairLayout) {
+    let mut logical = [0i8; 64];
+    for chunk in w.chunks_exact_mut(layout.chunk) {
+        logical[..layout.chunk].copy_from_slice(chunk);
+        for (b, &from) in layout.order.iter().enumerate() {
             chunk[b * 8..b * 8 + 8].copy_from_slice(&logical[from * 8..from * 8 + 8]);
         }
     }
 }
 
 /// Logical order of one stored int8 row.
-pub fn logical_row(row: &[i8], paired: bool) -> [i8; L1] {
+pub fn logical_row(row: &[i8], layout: Option<PairLayout>) -> [i8; L1] {
     let mut out: [i8; L1] = row.try_into().unwrap();
-    if paired {
-        for (c, chunk) in row.as_chunks::<64>().0.iter().enumerate() {
-            for (b, &to) in PAIR_ORDER.iter().enumerate() {
-                out[c * 64 + to * 8..c * 64 + to * 8 + 8].copy_from_slice(&chunk[b * 8..b * 8 + 8]);
+    if let Some(layout) = layout {
+        for (c, chunk) in row.chunks_exact(layout.chunk).enumerate() {
+            for (b, &to) in layout.order.iter().enumerate() {
+                let at = c * layout.chunk + to * 8;
+                out[at..at + 8].copy_from_slice(&chunk[b * 8..b * 8 + 8]);
             }
         }
     }
@@ -352,8 +372,12 @@ pub fn dot128(input: &[u8; 128], w: &[i8; 128]) -> i32 {
 mod indexed_tests {
     use super::*;
 
-    /// `paired` passes 64-byte aligned rows in the AVX-512 paired layout.
-    fn exercise(paired: bool, mut kernel: impl FnMut(*mut i16, *const i16, &IdxRows)) {
+    /// `layout` passes 64-byte aligned rows in that paired layout; `None`
+    /// passes deliberately unaligned logical rows.
+    fn exercise(
+        layout: Option<PairLayout>,
+        mut kernel: impl FnMut(*mut i16, *const i16, &IdxRows),
+    ) {
         const ROWS: usize = 19;
         let mut seed = 0x4a73_985d_23cb_801fu64;
         let mut random = || {
@@ -373,13 +397,13 @@ mod indexed_tests {
         threat[1..5].copy_from_slice(&[i8::MAX, i8::MIN, 1, 0]);
         let stored = |logical: &[i8]| {
             let mut rows = logical[1..].to_vec();
-            if paired {
-                to_paired_layout(&mut rows);
+            if let Some(layout) = layout {
+                to_paired_layout(&mut rows, layout);
             }
             super::super::aligned::AlignedBuf::from_slice(&rows)
         };
         let (psq_stored, threat_stored) = (stored(&psq), stored(&threat));
-        let (base_psq, base8) = if paired {
+        let (base_psq, base8) = if layout.is_some() {
             (psq_stored.as_ptr(), threat_stored.as_ptr())
         } else {
             unsafe { (psq.as_ptr().add(1), threat.as_ptr().add(1)) }
@@ -436,59 +460,143 @@ mod indexed_tests {
 
     #[test]
     fn scalar_indexed_updates_match_wide_oracle_with_wrapping_and_aliasing() {
-        exercise(false, scalar_update_acc_idx);
+        exercise(None, scalar_update_acc_idx);
+    }
+
+    /// The indexed kernel and the row-slice kernel (int8 rows only) over the same rows.
+    fn exercise_both(
+        layout: PairLayout,
+        idx: unsafe fn(*mut i16, *const i16, &IdxRows),
+        slices: unsafe fn(*mut i16, *const i16, &Rows),
+    ) {
+        exercise(Some(layout), |dst, src, rows| unsafe {
+            idx(dst, src, rows)
+        });
+        exercise(Some(layout), |dst, src, rows| {
+            let rows_of = |base: *const i8, list: &[u16]| -> Vec<&[i8]> {
+                list.iter()
+                    .map(|&i| unsafe { std::slice::from_raw_parts(base.add(i as usize * L1), L1) })
+                    .collect()
+            };
+            let mut sub8 = rows_of(rows.base_psq, rows.sub_psq);
+            sub8.extend(rows_of(rows.base8, rows.sub8));
+            let mut add8 = rows_of(rows.base_psq, rows.add_psq);
+            add8.extend(rows_of(rows.base8, rows.add8));
+            let r = Rows {
+                sub16: &[],
+                add16: &[],
+                sub8: &sub8,
+                add8: &add8,
+            };
+            unsafe { slices(dst, src, &r) }
+        });
     }
 
     #[test]
     #[cfg(target_arch = "x86_64")]
-    fn avx2_indexed_updates_match_wide_oracle_with_wrapping_and_aliasing() {
+    fn avx2_paired_updates_match_wide_oracle_with_wrapping_and_aliasing() {
         if is_x86_feature_detected!("avx2") {
-            exercise(false, |dst, src, rows| unsafe {
-                avx2::update_acc_idx(dst, src, rows)
-            });
+            exercise_both(PAIR_YMM, avx2::update_acc_idx, avx2::update_acc);
         }
     }
 
     #[test]
     #[cfg(target_arch = "x86_64")]
-    fn avx512_paired_indexed_updates_match_wide_oracle_with_wrapping_and_aliasing() {
+    fn avx512_paired_updates_match_wide_oracle_with_wrapping_and_aliasing() {
         if is_x86_feature_detected!("avx512f") && is_x86_feature_detected!("avx512bw") {
-            exercise(true, |dst, src, rows| unsafe {
-                avx512::update_acc_idx(dst, src, rows)
-            });
-            // The row-slice kernel over the same rows (no int16 rows).
-            exercise(true, |dst, src, rows| {
-                let slices = |base: *const i8, list: &[u16]| -> Vec<&[i8]> {
-                    list.iter()
-                        .map(|&i| unsafe {
-                            std::slice::from_raw_parts(base.add(i as usize * L1), L1)
-                        })
-                        .collect()
-                };
-                let mut sub8 = slices(rows.base_psq, rows.sub_psq);
-                sub8.extend(slices(rows.base8, rows.sub8));
-                let mut add8 = slices(rows.base_psq, rows.add_psq);
-                add8.extend(slices(rows.base8, rows.add8));
-                let r = Rows {
-                    sub16: &[],
-                    add16: &[],
-                    sub8: &sub8,
-                    add8: &add8,
-                };
-                unsafe { avx512::update_acc(dst, src, &r) }
-            });
+            exercise_both(PAIR_ZMM, avx512::update_acc_idx, avx512::update_acc);
         }
     }
 
     #[test]
-    fn paired_layout_round_trips() {
+    fn paired_layouts_round_trip() {
         let logical: Vec<i8> = (0..L1).map(|i| (i * 7 + 3) as i8).collect();
-        let mut stored = logical.clone();
-        to_paired_layout(&mut stored);
-        assert_ne!(stored, logical);
-        assert_eq!(logical_row(&stored, true).to_vec(), logical);
-        assert_eq!(logical_row(&logical, false).to_vec(), logical);
+        for layout in [PAIR_YMM, PAIR_ZMM] {
+            let mut stored = logical.clone();
+            to_paired_layout(&mut stored, layout);
+            assert_ne!(stored, logical);
+            assert_eq!(logical_row(&stored, Some(layout)).to_vec(), logical);
+        }
+        assert_eq!(logical_row(&logical, None).to_vec(), logical);
     }
+}
+
+// Row pointers and chunk unrolling shared by the paired SIMD kernels.
+#[cfg(target_arch = "x86_64")]
+const MAX_ROWS: usize = 288;
+
+/// Row pointers of one update direction, piece-square rows first.
+#[cfg(target_arch = "x86_64")]
+struct RowPtrs {
+    p: [std::mem::MaybeUninit<*const i8>; MAX_ROWS],
+    n: usize,
+}
+
+#[cfg(target_arch = "x86_64")]
+impl RowPtrs {
+    #[inline(always)]
+    fn new() -> Self {
+        RowPtrs {
+            p: [const { std::mem::MaybeUninit::uninit() }; MAX_ROWS],
+            n: 0,
+        }
+    }
+    #[inline(always)]
+    unsafe fn push_indices(&mut self, base: *const i8, indices: &[u16]) {
+        debug_assert!(self.n + indices.len() <= MAX_ROWS);
+        let mut n = self.n;
+        for &i in indices {
+            unsafe { self.p.get_unchecked_mut(n).write(base.add(i as usize * L1)) };
+            n += 1;
+        }
+        self.n = n;
+    }
+    #[inline(always)]
+    unsafe fn push_rows(&mut self, rows: &[&[i8]]) {
+        debug_assert!(self.n + rows.len() <= MAX_ROWS);
+        let mut n = self.n;
+        for r in rows {
+            unsafe { self.p.get_unchecked_mut(n).write(r.as_ptr()) };
+            n += 1;
+        }
+        self.n = n;
+    }
+    #[inline(always)]
+    fn get(&self, i: usize) -> *const i8 {
+        unsafe { self.p.get_unchecked(i).assume_init() }
+    }
+    #[inline(always)]
+    fn from_idx(r: &IdxRows) -> (Self, Self) {
+        let (mut sub, mut add) = (Self::new(), Self::new());
+        unsafe {
+            sub.push_indices(r.base_psq, r.sub_psq);
+            sub.push_indices(r.base8, r.sub8);
+            add.push_indices(r.base_psq, r.add_psq);
+            add.push_indices(r.base8, r.add8);
+        }
+        (sub, add)
+    }
+    #[inline(always)]
+    fn from_rows(r: &Rows) -> (Self, Self) {
+        let (mut sub, mut add) = (Self::new(), Self::new());
+        unsafe {
+            sub.push_rows(r.sub8);
+            add.push_rows(r.add8);
+        }
+        (sub, add)
+    }
+}
+
+// Expands `$body` for each register-sized chunk of a tile; LLVM does not
+// reliably unroll this loop, and the accumulator must stay in registers.
+#[cfg(target_arch = "x86_64")]
+macro_rules! for_chunks {
+    ($c:ident in [$($i:literal),*] => $body:block) => {{
+        $({
+            let $c = $i;
+            $body
+        })*
+    }};
 }
 
 #[cfg(target_arch = "x86_64")]
@@ -499,50 +607,10 @@ mod avx512 {
     const TILE: usize = 512; // i16 lanes per tile (16 zmm registers)
     const REGS: usize = TILE / 32;
 
-    // Int8 rows use the paired layout (see PAIR_ORDER): one 64-byte load
-    // widens to two consecutive accumulator registers.
+    // Int8 rows use the paired layout PAIR_ZMM: one 64-byte load widens to
+    // two consecutive accumulator registers.
     const CHUNKS: usize = TILE / 64;
-    const MAX_ROWS: usize = 288;
-
-    /// Row pointers of one update direction, piece-square rows first.
-    struct RowPtrs {
-        p: [std::mem::MaybeUninit<*const i8>; MAX_ROWS],
-        n: usize,
-    }
-
-    impl RowPtrs {
-        #[inline(always)]
-        fn new() -> Self {
-            RowPtrs {
-                p: [const { std::mem::MaybeUninit::uninit() }; MAX_ROWS],
-                n: 0,
-            }
-        }
-        #[inline(always)]
-        unsafe fn push_indices(&mut self, base: *const i8, indices: &[u16]) {
-            debug_assert!(self.n + indices.len() <= MAX_ROWS);
-            let mut n = self.n;
-            for &i in indices {
-                unsafe { self.p.get_unchecked_mut(n).write(base.add(i as usize * L1)) };
-                n += 1;
-            }
-            self.n = n;
-        }
-        #[inline(always)]
-        unsafe fn push_rows(&mut self, rows: &[&[i8]]) {
-            debug_assert!(self.n + rows.len() <= MAX_ROWS);
-            let mut n = self.n;
-            for r in rows {
-                unsafe { self.p.get_unchecked_mut(n).write(r.as_ptr()) };
-                n += 1;
-            }
-            self.n = n;
-        }
-        #[inline(always)]
-        fn get(&self, i: usize) -> *const i8 {
-            unsafe { self.p.get_unchecked(i).assume_init() }
-        }
-    }
+    const _: () = assert!(CHUNKS == 8);
 
     #[inline(always)]
     fn add_or_sub<const ADD: bool>(a: __m512i, b: __m512i) -> __m512i {
@@ -553,46 +621,6 @@ mod avx512 {
                 _mm512_sub_epi16(a, b)
             }
         }
-    }
-
-    // Expands `$body` for each 64-byte chunk of a tile; LLVM does not reliably
-    // unroll this loop, and the accumulator must stay in registers.
-    macro_rules! for_chunks {
-        ($c:ident => $body:block) => {{
-            const _: () = assert!(CHUNKS == 8);
-            {
-                let $c = 0;
-                $body
-            }
-            {
-                let $c = 1;
-                $body
-            }
-            {
-                let $c = 2;
-                $body
-            }
-            {
-                let $c = 3;
-                $body
-            }
-            {
-                let $c = 4;
-                $body
-            }
-            {
-                let $c = 5;
-                $body
-            }
-            {
-                let $c = 6;
-                $body
-            }
-            {
-                let $c = 7;
-                $body
-            }
-        }};
     }
 
     /// acc ±= rows over one tile: pairs of rows are widened and summed by
@@ -610,7 +638,7 @@ mod avx512 {
             while i + 1 < rows.n {
                 let p0 = rows.get(i).add(base);
                 let p1 = rows.get(i + 1).add(base);
-                for_chunks!(c => {
+                for_chunks!(c in [0, 1, 2, 3, 4, 5, 6, 7] => {
                     let w0 = _mm512_load_si512(p0.add(c * 64) as *const _);
                     let w1 = _mm512_load_si512(p1.add(c * 64) as *const _);
                     let lo = _mm512_maddubs_epi16(ones, _mm512_unpacklo_epi8(w0, w1));
@@ -623,7 +651,7 @@ mod avx512 {
             if i < rows.n {
                 let p = rows.get(i).add(base);
                 let zero = _mm512_setzero_si512();
-                for_chunks!(c => {
+                for_chunks!(c in [0, 1, 2, 3, 4, 5, 6, 7] => {
                     let w = _mm512_load_si512(p.add(c * 64) as *const _);
                     let lo = _mm512_srai_epi16::<8>(_mm512_unpacklo_epi8(zero, w));
                     let hi = _mm512_srai_epi16::<8>(_mm512_unpackhi_epi8(zero, w));
@@ -638,9 +666,7 @@ mod avx512 {
     #[target_feature(enable = "avx512f,avx512bw")]
     pub unsafe fn update_acc(dst: *mut i16, src: *const i16, rows: &Rows) {
         unsafe {
-            let (mut sub, mut add) = (RowPtrs::new(), RowPtrs::new());
-            sub.push_rows(rows.sub8);
-            add.push_rows(rows.add8);
+            let (sub, add) = RowPtrs::from_rows(rows);
             for t in 0..L1 / TILE {
                 let base = t * TILE;
                 let mut acc = [_mm512_setzero_si512(); REGS];
@@ -673,11 +699,7 @@ mod avx512 {
     #[target_feature(enable = "avx512f,avx512bw")]
     pub unsafe fn update_acc_idx(dst: *mut i16, src: *const i16, r: &IdxRows) {
         unsafe {
-            let (mut sub, mut add) = (RowPtrs::new(), RowPtrs::new());
-            sub.push_indices(r.base_psq, r.sub_psq);
-            sub.push_indices(r.base8, r.sub8);
-            add.push_indices(r.base_psq, r.add_psq);
-            add.push_indices(r.base8, r.add8);
+            let (sub, add) = RowPtrs::from_idx(r);
             for t in 0..L1 / TILE {
                 let base = t * TILE;
                 let mut acc = [_mm512_setzero_si512(); REGS];
@@ -918,39 +940,78 @@ mod avx2 {
     use super::*;
     use std::arch::x86_64::*;
 
-    const TILE: usize = 256; // i16 lanes per tile (16 ymm registers)
+    // i16 lanes per tile: 8 accumulator registers leave room for the paired
+    // widening temporaries within the 16 ymm registers.
+    const TILE: usize = 128;
     const REGS: usize = TILE / 16;
 
-    // Same register tiles as the row-slice kernel, without constructing heap
-    // vectors of row references for every incremental update or cache refresh.
+    // Int8 rows use the paired layout PAIR_YMM: one 32-byte load widens to
+    // two consecutive accumulator registers.
+    const CHUNKS: usize = TILE / 32;
+    const _: () = assert!(CHUNKS == 4);
+
+    #[inline(always)]
+    fn add_or_sub<const ADD: bool>(a: __m256i, b: __m256i) -> __m256i {
+        unsafe {
+            if ADD {
+                _mm256_add_epi16(a, b)
+            } else {
+                _mm256_sub_epi16(a, b)
+            }
+        }
+    }
+
+    /// acc ±= rows over one tile, as the AVX-512 kernel (pairs by `maddubs`
+    /// against ones, a last odd row by sign-extending its interleaved bytes).
+    #[inline(always)]
+    unsafe fn apply_rows<const ADD: bool>(
+        mut acc: [__m256i; REGS],
+        rows: &RowPtrs,
+        base: usize,
+    ) -> [__m256i; REGS] {
+        unsafe {
+            let ones = _mm256_set1_epi8(1);
+            let mut i = 0;
+            while i + 1 < rows.n {
+                let p0 = rows.get(i).add(base);
+                let p1 = rows.get(i + 1).add(base);
+                for_chunks!(c in [0, 1, 2, 3] => {
+                    let w0 = _mm256_loadu_si256(p0.add(c * 32) as *const _);
+                    let w1 = _mm256_loadu_si256(p1.add(c * 32) as *const _);
+                    let lo = _mm256_maddubs_epi16(ones, _mm256_unpacklo_epi8(w0, w1));
+                    let hi = _mm256_maddubs_epi16(ones, _mm256_unpackhi_epi8(w0, w1));
+                    acc[2 * c] = add_or_sub::<ADD>(acc[2 * c], lo);
+                    acc[2 * c + 1] = add_or_sub::<ADD>(acc[2 * c + 1], hi);
+                });
+                i += 2;
+            }
+            if i < rows.n {
+                let p = rows.get(i).add(base);
+                let zero = _mm256_setzero_si256();
+                for_chunks!(c in [0, 1, 2, 3] => {
+                    let w = _mm256_loadu_si256(p.add(c * 32) as *const _);
+                    let lo = _mm256_srai_epi16::<8>(_mm256_unpacklo_epi8(zero, w));
+                    let hi = _mm256_srai_epi16::<8>(_mm256_unpackhi_epi8(zero, w));
+                    acc[2 * c] = add_or_sub::<ADD>(acc[2 * c], lo);
+                    acc[2 * c + 1] = add_or_sub::<ADD>(acc[2 * c + 1], hi);
+                });
+            }
+            acc
+        }
+    }
+
     #[target_feature(enable = "avx2")]
     pub unsafe fn update_acc_idx(dst: *mut i16, src: *const i16, r: &IdxRows) {
         unsafe {
+            let (sub, add) = RowPtrs::from_idx(r);
             for t in 0..L1 / TILE {
                 let base = t * TILE;
                 let mut acc = [_mm256_setzero_si256(); REGS];
                 for k in 0..REGS {
                     acc[k] = _mm256_loadu_si256(src.add(base + k * 16) as *const _);
                 }
-                for (weights, indices, subtract) in [
-                    (r.base_psq, r.sub_psq, true),
-                    (r.base_psq, r.add_psq, false),
-                    (r.base8, r.sub8, true),
-                    (r.base8, r.add8, false),
-                ] {
-                    for &index in indices {
-                        let p = weights.add(index as usize * L1 + base);
-                        for k in 0..REGS {
-                            let w =
-                                _mm256_cvtepi8_epi16(_mm_loadu_si128(p.add(k * 16) as *const _));
-                            acc[k] = if subtract {
-                                _mm256_sub_epi16(acc[k], w)
-                            } else {
-                                _mm256_add_epi16(acc[k], w)
-                            };
-                        }
-                    }
-                }
+                acc = apply_rows::<false>(acc, &sub, base);
+                acc = apply_rows::<true>(acc, &add, base);
                 for k in 0..REGS {
                     _mm256_storeu_si256(dst.add(base + k * 16) as *mut _, acc[k]);
                 }
@@ -961,6 +1022,7 @@ mod avx2 {
     #[target_feature(enable = "avx2")]
     pub unsafe fn update_acc(dst: *mut i16, src: *const i16, rows: &Rows) {
         unsafe {
+            let (sub, add) = RowPtrs::from_rows(rows);
             for t in 0..L1 / TILE {
                 let base = t * TILE;
                 let mut acc = [_mm256_setzero_si256(); REGS];
@@ -981,20 +1043,8 @@ mod avx2 {
                             _mm256_add_epi16(acc[k], _mm256_loadu_si256(p.add(k * 16) as *const _));
                     }
                 }
-                for r in rows.sub8 {
-                    let p = r.as_ptr().add(base);
-                    for k in 0..REGS {
-                        let w = _mm256_cvtepi8_epi16(_mm_loadu_si128(p.add(k * 16) as *const _));
-                        acc[k] = _mm256_sub_epi16(acc[k], w);
-                    }
-                }
-                for r in rows.add8 {
-                    let p = r.as_ptr().add(base);
-                    for k in 0..REGS {
-                        let w = _mm256_cvtepi8_epi16(_mm_loadu_si128(p.add(k * 16) as *const _));
-                        acc[k] = _mm256_add_epi16(acc[k], w);
-                    }
-                }
+                acc = apply_rows::<false>(acc, &sub, base);
+                acc = apply_rows::<true>(acc, &add, base);
                 for k in 0..REGS {
                     _mm256_storeu_si256(dst.add(base + k * 16) as *mut _, acc[k]);
                 }

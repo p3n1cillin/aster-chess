@@ -28,8 +28,8 @@ pub struct FeatureTransformer {
     pub biases: Box<[i16; L1]>,
     pub weights: AlignedBuf<i8>,           // PSQ_DIMENSIONS * L1
     pub threat_pp_weights: AlignedBuf<i8>, // THREAT_AND_PP_DIMENSIONS * L1
-    /// Rows are in the AVX-512 paired layout (kernels::PAIR_ORDER).
-    pub paired: bool,
+    /// Int8 row layout of the active SIMD kernels (`None`: logical order).
+    pub pair_layout: Option<kernels::PairLayout>,
 }
 
 impl FeatureTransformer {
@@ -188,17 +188,17 @@ impl Network {
         let mut threat_pp_weights = Vec::with_capacity(threat_w.len() + pp_w.len());
         threat_pp_weights.extend_from_slice(threat_w);
         threat_pp_weights.extend_from_slice(pp_w);
-        let paired = kernels::paired_rows();
-        if paired {
-            kernels::to_paired_layout(&mut weights);
-            kernels::to_paired_layout(&mut threat_pp_weights);
+        let pair_layout = kernels::pair_layout();
+        if let Some(layout) = pair_layout {
+            kernels::to_paired_layout(&mut weights, layout);
+            kernels::to_paired_layout(&mut threat_pp_weights, layout);
         }
 
         let ft = FeatureTransformer {
             biases,
             weights: AlignedBuf::from_slice(&weights),
             threat_pp_weights: AlignedBuf::from_slice(&threat_pp_weights),
-            paired,
+            pair_layout,
         };
         super::features::set_prefetch_base(ft.threat_pp_weights.as_ptr());
 
