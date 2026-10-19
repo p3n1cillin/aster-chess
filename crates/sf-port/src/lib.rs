@@ -18,6 +18,7 @@ pub mod position;
 mod prof;
 mod sampler;
 pub mod search;
+mod speedtest_positions;
 pub mod syzygy;
 pub mod timeman;
 pub mod trace;

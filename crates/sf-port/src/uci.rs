@@ -419,6 +419,10 @@ impl Engine {
         self.shared.nodes_searched()
     }
 
+    pub fn hashfull(&self, max_age: i32) -> i32 {
+        self.shared.tt.hashfull(max_age)
+    }
+
     pub fn setoption(&mut self, name: &str, value: &str) -> Option<String> {
         self.wait_for_search_finished();
         let lname = name.to_ascii_lowercase();
@@ -735,6 +739,118 @@ impl Uci {
         eprintln!("\n===========================\nTotal time (ms) : {}\nNodes searched  : {}\nNodes/second    : {}", elapsed, nodes, 1000 * nodes / elapsed as u64);
     }
 
+    /// Stockfish's `speedtest [threads] [hash MB] [seconds]`: replays positions from
+    /// five games with time budgets scaled to the requested duration.
+    pub fn speedtest(&mut self, args: &[&str]) {
+        const NUM_WARMUP_POSITIONS: usize = 3;
+        let hw = std::thread::available_parallelism().map(|n| n.get()).unwrap_or(1);
+        let threads = args.first().and_then(|v| v.parse::<i64>().ok()).map_or(hw as i64, |v| v.clamp(1, 1024)) as usize;
+        let hash = args.get(1).and_then(|v| v.parse::<i64>().ok()).map_or((128 * threads) as i64, |v| v.clamp(1, 33554432));
+        let secs = args.get(2).and_then(|v| v.parse::<i64>().ok()).map_or(150, |v| v.clamp(1, i32::MAX as i64 / 1000));
+
+        let corrected = |ply: usize| 50000.0f64 / (ply as f64 + 15.0);
+        let mut total_time: f32 = 0.0;
+        for game in crate::speedtest_positions::BENCHMARK_POSITIONS {
+            for i in 0..game.len() {
+                total_time += corrected(i + 1) as f32;
+            }
+        }
+        let scale = (secs * 1000) as f32 / total_time;
+        let mut commands = Vec::new();
+        for game in crate::speedtest_positions::BENCHMARK_POSITIONS {
+            commands.push("ucinewgame".to_string());
+            for (i, fen) in game.iter().enumerate() {
+                commands.push(format!("position fen {fen}"));
+                commands.push(format!("go movetime {}", (corrected(i + 1) * scale as f64) as i32));
+            }
+        }
+        let go_count = commands.iter().filter(|c| c.starts_with("go ")).count();
+
+        self.setoption(&format!("name Threads value {threads}"));
+        self.setoption(&format!("name Hash value {hash}"));
+        self.setoption("name UCI_Chess960 value false");
+        let saved_cb = self.engine.on_bestmove.clone();
+        self.engine.on_bestmove = Arc::new(|_: &str, _: &str| {});
+        self.engine.set_silent(true);
+
+        let run = |this: &mut Self, cmd: &str| -> Option<(u64, std::time::Duration)> {
+            let mut it = cmd.split_whitespace().peekable();
+            match it.next() {
+                Some("go") => {
+                    let limits = parse_limits(&mut it);
+                    let t = std::time::Instant::now();
+                    this.engine.go(limits);
+                    this.engine.wait_for_search_finished();
+                    Some((this.engine.nodes_searched(), t.elapsed()))
+                }
+                Some("position") => {
+                    this.position(&cmd["position".len()..]);
+                    None
+                }
+                Some("ucinewgame") => {
+                    this.engine.search_clear();
+                    None
+                }
+                _ => None,
+            }
+        };
+
+        let mut warm = 0;
+        for cmd in &commands {
+            if run(self, cmd).is_some() {
+                warm += 1;
+                eprint!("
+Warmup position {warm}/{NUM_WARMUP_POSITIONS}");
+                if warm >= NUM_WARMUP_POSITIONS {
+                    break;
+                }
+            }
+        }
+        eprintln!();
+        self.engine.search_clear();
+
+        let (mut nodes, mut total, mut cnt) = (0u64, std::time::Duration::ZERO, 0);
+        let (mut max_hf, mut sum_hf, mut max_hf_all, mut sum_hf_all) = (0, 0i64, 0, 0i64);
+        for cmd in &commands {
+            if let Some((n, t)) = run(self, cmd) {
+                cnt += 1;
+                eprint!("
+Position {cnt}/{go_count}");
+                nodes += n;
+                total += t;
+                let (h0, h999) = (self.engine.hashfull(0), self.engine.hashfull(999));
+                max_hf = max_hf.max(h0);
+                sum_hf += h0 as i64;
+                max_hf_all = max_hf_all.max(h999);
+                sum_hf_all += h999 as i64;
+            }
+        }
+        let ms = (total.as_millis() as u64).max(1);
+        eprintln!(
+            "
+===========================
+Version                    : {}
+User invocation            : speedtest {}
+Filled invocation          : speedtest {threads} {hash} {secs}
+Thread count               : {threads}
+TT size [MiB]              : {hash}
+Hash max, avg [per mille]  : 
+    single search          : {max_hf}, {}
+    single game            : {max_hf_all}, {}
+Total nodes searched       : {nodes}
+Total search time [s]      : {}
+Nodes/second               : {}",
+            self.engine.identity.name,
+            args.join(" "),
+            sum_hf / cnt.max(1) as i64,
+            sum_hf_all / cnt.max(1) as i64,
+            ms as f64 / 1000.0,
+            1000 * nodes / ms
+        );
+        self.engine.set_silent(false);
+        self.engine.on_bestmove = saved_cb;
+    }
+
     pub fn loop_(&mut self, cli: Vec<String>) {
         let one_shot = !cli.is_empty();
         let stdin = std::io::stdin();
@@ -780,6 +896,10 @@ impl Uci {
                 "bench" => {
                     let args: Vec<&str> = it.collect();
                     self.bench(&args);
+                }
+                "speedtest" => {
+                    let args: Vec<&str> = it.collect();
+                    self.speedtest(&args);
                 }
                 "d" => emit(&format!("{}\n", self.engine.position().pretty())),
                 "tbprobe" => {
