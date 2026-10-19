@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": [
+    "win",
+    "draw",
+    "loss",
+    "unresolved_rejected",
+    "control_change_rejected"
+  ],
+  "analyzer_sha256": "87b8cead7baae052aa79a45dbce05d03a6ebb746af62ec92f9e623e541ef9e50",
+  "scope": "Known all-win/draw/loss extremes verify exact intervals and strict >50% gate; unresolved and changed controls cannot pass."
+}

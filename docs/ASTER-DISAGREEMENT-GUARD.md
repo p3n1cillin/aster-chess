@@ -81,3 +81,45 @@ It now uses a separately frozen report from the unmodified development core:
 31/32 at depth eight. The older 30/32 release-core report is preserved. This
 rebinds the equivalence check to the current foundation; it does not relax a
 candidate promotion gate. The separate legacy 32/32 gate remains.
+
+## Completed result: retain as experimental
+
+All 96 color-swapped pairs completed, with no forfeits or unresolved games.
+Independent PGN replay and journal/report comparison pass for both controls,
+including complete search telemetry. Results are against the frozen Aster control,
+not a direct Stockfish match.
+
+| Control | Games | Candidate W/D/L | Score | 95% family interval |
+| --- | ---: | --- | ---: | --- |
+| 30 ms/move | 128 | 14/96/18 | 48.44% | 44.92..51.98% |
+| 100 ms/move | 64 | 2/57/5 | 47.66% | 44.17..50.78% |
+
+Both strength gates fail. The intervals include 50%, so neither improvement nor
+a definite regression is established by this sample. No parameters were retuned,
+no extra games were added, and no reference confirmation was triggered. The
+[decision](../artifacts/verification/aster-disagreement-decision-v1.json) keeps
+`eligible_for_confirmation` and `production_enabled` false. The feature remains
+available for research and is compiled out of normal builds.
+
+Both profiles pass 151 native tests plus two compile-fail lifetime checks in
+default and feature configurations. Windows and Linux
+[CI pass at the tested code commit](https://github.com/p3n1cillin/aster-chess/actions/runs/39256241550).
+The independent enabled checks cover 2,630 positions, 14 perft cases, 94 edge
+cases, real HTTP/SSE play and eight mate certificates over 42 positions. The
+legacy depth-seven bench also passes. All four source snapshots pass their hash
+audit; the final feature/default snapshots match current build and tool sources.
+Exact tested binaries are preserved outside the disposable worktree by SHA-256.
+
+The practical result is a reproducible negative experiment and improved research
+infrastructure. No new Elo, significant advantage over Stockfish or global
+novelty is established. These roots are now consumed evidence: any distinct
+future hypothesis needs a new frozen policy and fresh test roots. Raising the
+budget or changing thresholds to fit this result is not a valid confirmation.
+
+The reports and PGNs are
+[`30ms`](../artifacts/matches/aster-disagreement-30ms-v1.json),
+[`30ms PGN`](../artifacts/matches/aster-disagreement-30ms-v1.pgn),
+[`100ms`](../artifacts/matches/aster-disagreement-100ms-v1.json) and
+[`100ms PGN`](../artifacts/matches/aster-disagreement-100ms-v1.pgn).
+The [completion record](../artifacts/verification/aster-disagreement-completion-v1.json)
+indexes the checks and their fingerprints. Absolute/public Elo remains uncalibrated.

@@ -1,0 +1,184 @@
+{
+  "completed_utc": "2026-10-19T13:08:07.286678+00:00",
+  "status": "completed_negative_trial",
+  "tested_code_commit": "4c313de2951ffb20e54677dd4170b0c615d086f0",
+  "baseline_commit": "6cffbf26b5c456b814990a916f10d3b2a666f4dd",
+  "candidate_production_enabled": false,
+  "candidate_eligible_for_confirmation": false,
+  "default_search_equivalence_passed": true,
+  "default_bench_nodes": 1559611,
+  "games": 192,
+  "forfeits": 0,
+  "unresolved": 0,
+  "native_tests_per_configuration": 151,
+  "compile_fail_tests_per_configuration": 2,
+  "configurations": [
+    "default release",
+    "default debug",
+    "feature release",
+    "feature debug"
+  ],
+  "ci": "https://github.com/p3n1cillin/aster-chess/actions/runs/39256241550",
+  "decision": "artifacts/verification/aster-disagreement-decision-v1.json",
+  "controls": {
+    "30ms": {
+      "report_sha256": "51db3c60e927b82fad828cfa3596f87786675b25e896a463f98f1c1ebabf9961",
+      "candidate_sha256": "0c047f5edb69a236921ba30aa46591091cf3bd8c7c4c9fbd7eeef3e7bba30e32",
+      "baseline_sha256": "ffc0c943256226195e5ef0b487c1682a02c841e23864e77983361246c59a9edd",
+      "opening_suite_sha256": "6f4c5f2e7ccfa9917d940e71b500e5f4c641992c90a1f3bc39d33cd37a84ad32",
+      "games": 128,
+      "pairs": 64,
+      "resolved_pairs": 64,
+      "unresolved_pairs": 0,
+      "forfeits": 0,
+      "wins": 14,
+      "draws": 96,
+      "losses": 18,
+      "score": 0.484375,
+      "families": 53,
+      "opening_family_95_percent_interval": [
+        0.44921875,
+        0.5198412698412699
+      ],
+      "passes_strength_gate": false
+    },
+    "100ms": {
+      "report_sha256": "d2788ee1f480e4383c6c82870bc12b7a87ab91d1a21019e9b245c865aeb726be",
+      "candidate_sha256": "0c047f5edb69a236921ba30aa46591091cf3bd8c7c4c9fbd7eeef3e7bba30e32",
+      "baseline_sha256": "ffc0c943256226195e5ef0b487c1682a02c841e23864e77983361246c59a9edd",
+      "opening_suite_sha256": "ccfdf675f11ef770e2d957b23dd6b11220e7613d25f85fa47049276b59467501",
+      "games": 64,
+      "pairs": 32,
+      "resolved_pairs": 32,
+      "unresolved_pairs": 0,
+      "forfeits": 0,
+      "wins": 2,
+      "draws": 57,
+      "losses": 5,
+      "score": 0.4765625,
+      "families": 30,
+      "opening_family_95_percent_interval": [
+        0.44166666666666665,
+        0.5078125
+      ],
+      "passes_strength_gate": false
+    }
+  },
+  "evidence": [
+    {
+      "path": "artifacts/verification/aster-disagreement-activity-v1.json",
+      "sha256": "d0e32591c43e73d0b78f608d782c275d85f6ae6dfa5fd94646eb1e8efdf601ae"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-disabled-bench-v1.json",
+      "sha256": "c87fa7ad489c5471fb01b7acf560a820475e6d105980868446d013558a37fefe"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-default-equivalence-v1.json",
+      "sha256": "352a489b5ac657e2cd5ae883ae26d4694ec7c0caa44256a1f8ea230ce87e9ec7"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-default-bench-v1.json",
+      "sha256": "1cb322daf3eb9b6d34c330be7453ba74e6f00a23c1628ef8b4635b27af220784"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-rules-v1.json",
+      "sha256": "9ac38c06838a2d6df5bce3136faaf004a4550f6a5d339528d0a92d55c2edb02b"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-edges-v1.json",
+      "sha256": "94df0f75a23ea47a28d54b3ec19afd16341e00c051d4cf38a6309360fb65abcd"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-play-v1.json",
+      "sha256": "6dd5ea808b31097f091a5148949361f9a0fc2a7d225d535396aedc6e46ca366c"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-proofs-v1.json",
+      "sha256": "aca9fe98f59faffe93634eeb2f13c530bcd8f87099c20958633ab98528e66a71"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-lifecycle-v1.json",
+      "sha256": "66b506fe7249bed58d56f5bf1ae518716d8c9e3b389973d3417f4c3387e83209"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-source-names-v1.json",
+      "sha256": "d5411018790a75c8e5302c358a2ea87e3add9f23ebdf7d422a56e42a4d6d9761"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-snapshot-audit-v1.json",
+      "sha256": "911482083b52627de98a9d4c3a3677b695efc551de906dcb88d763a39954d824"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-analyzer-checks-v1.json",
+      "sha256": "30789da3fcae27e9c41f7b9d8843fee882b4390e2bef14987f3de641e264f3d4"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-30ms-pgn-audit-v1.json",
+      "sha256": "5148c514881c53331da8e166dbe6167f77177c59d20d25c04cf99422e25e9cd3"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-30ms-journal-audit-v1.json",
+      "sha256": "ab36b0947d23c93a91c6f82f2a9007ab2fcd2283d74db5ed37a847b1964d8034"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-100ms-pgn-audit-v1.json",
+      "sha256": "165d659320434b6b37e9333f6e11135d015c0438d24c13b630a385bfd16f23c0"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-100ms-journal-audit-v1.json",
+      "sha256": "3bf438e5da0c2704b7a1ae4bf20fcb4eaad9157720fe0cbc9290ea9ba35af79b"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-default-release-tests-v1.log",
+      "sha256": "12dbf608afde936e4e39df75d595506a0b5e706183b8ad7e8ccb272f212b9706"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-default-debug-tests-v1.log",
+      "sha256": "ef38bcb4da1da02207ef90ba72235817d2f7fd2da4ad18b1ef6ef15756a5927a"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-feature-release-tests-v1.log",
+      "sha256": "083b2eb41a28f6c7bc8bf4502662ebc4fa59574a79f63d31af36b393825f6036"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-feature-debug-tests-v1.log",
+      "sha256": "909cbe1db632d347794f6af4f24f1afaf9bfc9d020094816e594cebc239b9162"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-ci-jobs-v1.json",
+      "sha256": "49071f9b7e4a19397ec035c5621202e10e285fa7c1bbe999ae4d65b67d89f25f"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-legacy-bench-v1.log",
+      "sha256": "0061b77a48bbc17f11e4d781e8c7a5e2aa0908a484863d8b2b0d107badd78496"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-decision-v1.json",
+      "sha256": "3fe51957c7d51d0408066b7fbc640c550ff744097e96ecbd029ea69d891a3307"
+    },
+    {
+      "path": "artifacts/research/aster-disagreement-plan-v1.json",
+      "sha256": "dacc0c912bc6e3a1cca731705bbcbd7d68ed4b2458e740d9343cce9277830d08"
+    },
+    {
+      "path": "artifacts/research/aster-disagreement-execution-v1.json",
+      "sha256": "99fa75809ba54c724f7c20d0ad912498c4c98e5c69ac6be6c9e55a6d277dc576"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-preserved-binaries-v1.json",
+      "sha256": "d362044b1144285c33bcc5df78c6fec7e76e805520fac5af0ca6c0ef684d2a5d"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-baseline-repair-v1.json",
+      "sha256": "e0373d0fcea0ed591df67f25b1d15859d1818eaf6e62cd47759109a38cec00d7"
+    },
+    {
+      "path": "artifacts/verification/aster-disagreement-lifecycle-attempt-v1.json",
+      "sha256": "714b4a7fdf89faba5c31cc28d90277ffbb924abb26daf0d25cd66cab2090ff2d"
+    }
+  ],
+  "preserved_initial_failure": "Lifecycle verifier expected an obsolete FEN prefix; fixed verifier only, original attempt retained.",
+  "adoption": "Retain default-off research feature, frozen experiments and reusable qualification tooling; no playing policy or network change in normal builds.",
+  "limits": "Both family intervals include 50%; no demonstrated improvement or definite regression, no absolute/public Elo, global novelty or Stockfish superiority. No retuning or extra games."
+}

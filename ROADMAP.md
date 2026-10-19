@@ -1,17 +1,26 @@
 # Research roadmap
 
-Since Aster 1.0.0 (2026-10-19) the default playing core is a bit-exact Rust port
-of Stockfish 19 (`crates/aster-core`, `docs/ASTER-CORE.md`). Next: close the remaining
-13% speed gap (profile-guided optimization, further kernel work), port Syzygy
-probing, then test genuine improvements over Stockfish 19 with predeclared,
-color-swapped paired matches. Until such a test shows a lower bound above 50%,
-Aster is not stronger than Stockfish.
+The current default playing core is the attributed Rust port of development
+commit `effdc3fd3f` in `crates/aster-core`, with network `nn-c9e480e92425` and
+canonical bench signature **1,559,611**. Syzygy probing is implemented. The latest
+recorded local throughput is 93.1% of that source built with clang; this measures
+speed, not playing strength. See `docs/SF-PORT.md` and `artifacts/PROGRESS.md`.
+
+The Aster disagreement-guard experiment tests a bounded response to conflicting
+search evidence. Its policy, new opening roots and two controls were fixed before
+candidate queries. All 192 games are audited, but neither strength gate passes:
+48.44% at 30 ms and 47.66% at 100 ms, with both intervals including 50%. Normal
+builds exclude it. See `docs/ASTER-DISAGREEMENT-GUARD.md` for the completed decision
+and evidence. No significant advantage over Stockfish, or world-first technique,
+has been established. Distinct future policies require fresh roots and a new plan.
 
 Active development moved to Rust on 2026-10-18 at the user’s request. The
 Viridithas 20 source foundation, Aster proof port and Rust visual host are
 documented in `docs/RUST-MIGRATION.md`. C# results below remain historical;
 all future product builds and CI use Cargo. Current Rust strength must be
 measured separately; no historical Elo is transferred.
+
+## Earlier foundation research
 
 Rust 0.9.2 now uses a verified pawn/knight shortcut before the complete terminal
 move query. It preserves fixed-depth work, reduces measured elapsed time by

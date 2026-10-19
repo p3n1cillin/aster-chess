@@ -1,0 +1,76 @@
+{
+  "eligible_for_confirmation": false,
+  "production_enabled": false,
+  "controls": {
+    "30ms": {
+      "report_sha256": "51db3c60e927b82fad828cfa3596f87786675b25e896a463f98f1c1ebabf9961",
+      "candidate_sha256": "0c047f5edb69a236921ba30aa46591091cf3bd8c7c4c9fbd7eeef3e7bba30e32",
+      "baseline_sha256": "ffc0c943256226195e5ef0b487c1682a02c841e23864e77983361246c59a9edd",
+      "opening_suite_sha256": "6f4c5f2e7ccfa9917d940e71b500e5f4c641992c90a1f3bc39d33cd37a84ad32",
+      "games": 128,
+      "pairs": 64,
+      "resolved_pairs": 64,
+      "unresolved_pairs": 0,
+      "forfeits": 0,
+      "wins": 14,
+      "draws": 96,
+      "losses": 18,
+      "score": 0.484375,
+      "families": 53,
+      "opening_family_95_percent_interval": [
+        0.44921875,
+        0.5198412698412699
+      ],
+      "passes_strength_gate": false
+    },
+    "100ms": {
+      "report_sha256": "d2788ee1f480e4383c6c82870bc12b7a87ab91d1a21019e9b245c865aeb726be",
+      "candidate_sha256": "0c047f5edb69a236921ba30aa46591091cf3bd8c7c4c9fbd7eeef3e7bba30e32",
+      "baseline_sha256": "ffc0c943256226195e5ef0b487c1682a02c841e23864e77983361246c59a9edd",
+      "opening_suite_sha256": "ccfdf675f11ef770e2d957b23dd6b11220e7613d25f85fa47049276b59467501",
+      "games": 64,
+      "pairs": 32,
+      "resolved_pairs": 32,
+      "unresolved_pairs": 0,
+      "forfeits": 0,
+      "wins": 2,
+      "draws": 57,
+      "losses": 5,
+      "score": 0.4765625,
+      "families": 30,
+      "opening_family_95_percent_interval": [
+        0.44166666666666665,
+        0.5078125
+      ],
+      "passes_strength_gate": false
+    }
+  },
+  "tactics": [
+    {
+      "suite": "tactics-v1",
+      "baseline": 32,
+      "candidate": 32,
+      "passed": true,
+      "changed_positions": []
+    },
+    {
+      "suite": "tactics-quiet-v1",
+      "baseline": 31,
+      "candidate": 31,
+      "passed": true,
+      "changed_positions": []
+    },
+    {
+      "suite": "endgames-v1",
+      "baseline": 16,
+      "candidate": 16,
+      "passed": true,
+      "changed_positions": []
+    }
+  ],
+  "activity_passed": true,
+  "bootstrap_samples": 20000,
+  "seed": 20261019,
+  "cluster": "Full starting FEN and first four opening plies; whole families resampled within each control",
+  "interpretation": "Promotion needs correctness/audits and both strict lower bounds above 50%. An eligible candidate still needs separately declared reference confirmation. No parameter tuning, absolute Elo or world-first claim."
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "source": ".aster-local/disagreement-guard-baseline/aster.exe",
+    "sha256": "ffc0c943256226195e5ef0b487c1682a02c841e23864e77983361246c59a9edd",
+    "preserved": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\ffc0c943256226195e5ef0b487c1682a02c841e23864e77983361246c59a9edd\\aster.exe"
+  },
+  {
+    "source": ".aster-local/disagreement-guard-candidate/aster.exe",
+    "sha256": "0c047f5edb69a236921ba30aa46591091cf3bd8c7c4c9fbd7eeef3e7bba30e32",
+    "preserved": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\0c047f5edb69a236921ba30aa46591091cf3bd8c7c4c9fbd7eeef3e7bba30e32\\aster.exe"
+  },
+  {
+    "source": "target/release/aster.exe",
+    "sha256": "bd7d472f573053dfeac704805da4c8568820c693367fb5424cab65b57a07b99c",
+    "preserved": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\bd7d472f573053dfeac704805da4c8568820c693367fb5424cab65b57a07b99c\\aster.exe"
+  }
+]

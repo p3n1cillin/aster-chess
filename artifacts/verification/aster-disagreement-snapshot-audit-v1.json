@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "source_snapshots": [
+    {
+      "snapshot": "artifacts\\research\\aster-disagreement-baseline-source-v1",
+      "files": 180,
+      "manifest_sha256": "500c3fbc1daf259f92839260dd4a5abe8898cd373521a7abb45e2c3600991e59",
+      "snapshot_hashes_passed": true,
+      "matches_current_sources": false
+    },
+    {
+      "snapshot": "artifacts\\research\\aster-disagreement-candidate-source-v1",
+      "files": 181,
+      "manifest_sha256": "a97f3cec20f7d7138ba465643204673a2b5db16e9919204e77b459ffca745370",
+      "snapshot_hashes_passed": true,
+      "matches_current_sources": false
+    },
+    {
+      "snapshot": "artifacts\\research\\aster-disagreement-candidate-source-v2",
+      "files": 184,
+      "manifest_sha256": "f6551db134851e430bbf620b71d1200d84a9652a864b4550af8d0ca9f678a6f3",
+      "snapshot_hashes_passed": true,
+      "matches_current_sources": true
+    },
+    {
+      "snapshot": "artifacts\\research\\aster-disagreement-default-source-v1",
+      "files": 184,
+      "manifest_sha256": "143d89c018882ed44f9da1119acde2d0b8c20edafdc5a695f6915a32efef1944",
+      "snapshot_hashes_passed": true,
+      "matches_current_sources": true
+    }
+  ],
+  "preserved_binaries": 3,
+  "interpretation": "Frozen historical snapshots unchanged. Final feature/default snapshots match current build and tool sources; binary copies retain exact fingerprints."
+}

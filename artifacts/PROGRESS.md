@@ -1,3 +1,26 @@
+## 2026-10-19: Aster disagreement-guard trial completed; production unchanged
+
+A new Rust search experiment restores at most one reduced ply for selected quiet
+moves when cached search evidence and temporal neural evaluations disagree, with
+a hard per-worker budget. The policy and 96 new paired roots were fixed before
+candidate queries. It is a specific Aster hypothesis within established selective
+search research; global novelty is not established.
+
+All 192 games complete and pass independent PGN/journal audits: 14W/96D/18L at
+30 ms (48.44%, 95% family interval 44.92..51.98%) and 2W/57D/5L at 100 ms
+(47.66%, 44.17..50.78%). No forfeits or unresolved games occur. Both strength
+gates fail; there is no demonstrated gain or definite regression. No retuning or
+extra games follow. The policy remains compile-gated and absent from normal builds.
+
+Qualification passes: 151 native tests plus two lifetime compile-fail checks in
+each default/feature profile, Windows/Linux CI, 2,630 independent rule positions,
+14 perft cases, 94 edge cases, actual HTTP/SSE play and eight proof certificates.
+Tactics match control at 32/32, 31/32 and 16/16. Normal build moves, scores, nodes
+and PVs agree on all 96 depth-nine roots and all 51 canonical bench searches;
+signature stays **1,559,611**. Source snapshots, tested binaries, full journals,
+PGNs and failures are preserved. No absolute rating or Stockfish superiority is
+established. See `docs/ASTER-DISAGREEMENT-GUARD.md` and its completion record.
+
 ## 2026-10-19: Aster core updated to the Stockfish development source
 
 With the user's approval, Aster's core now follows Stockfish development commit

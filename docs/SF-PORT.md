@@ -1,5 +1,11 @@
 # Aster native Rust core
 
+Current foundation (2026-10-19): development commit `effdc3fd3f`, network
+`nn-c9e480e92425`, canonical bench **1,559,611**. Syzygy is implemented. The initial
+release-port measurements below are historical; the development-update section
+and `artifacts/PROGRESS.md` record the newer baseline. The new Aster search
+experiment is described in [ASTER-DISAGREEMENT-GUARD.md](ASTER-DISAGREEMENT-GUARD.md).
+
 On 2026-10-19 the user authorized porting Stockfish to Rust and using it to make
 Aster stronger. `crates/aster-core` is that port; since Aster 1.0.0 it is Aster's
 default UCI engine. The previous Viridithas-derived core runs as `aster legacy`.
