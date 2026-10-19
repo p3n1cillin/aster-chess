@@ -10,6 +10,24 @@ weights and version remain **0.9.2**; no rating gain is claimed. See
 [validation details](../docs/NNUE-VALIDATION.md). Windows/Linux CI verifies the
 complete production suites; its final status is retained with the session record.
 
+## Match storage recovery and fixed neural trial
+
+The development runner now journals complete games before atomic JSON snapshots,
+with bounded retries and exact-order resume into a new prefix. Five storage-fault
+tests pass locally and run in CI. See [recovery details](../docs/MATCH-RECOVERY.md).
+Production remains Rust 0.9.2 with v109 weights. Its existing 135 native tests and
+independent/host/tactical checks pass on both Windows and Linux in CI runs
+39179634626 and 39179954994, retained under `artifacts/ci`.
+
+The separate frozen v111 Hyperion candidate misses its original tactical gate
+(31/32 versus required 32/32), so it will not be promoted. Its predeclared
+384-game sample continues with unchanged binaries and openings. A legacy report
+write failed after game 83; the original 82-game JSON and 83-game PGN are frozen,
+and recovery resumes at game 84. One game's telemetry and wall time are explicitly
+unavailable; its complete moves and outcome are retained. The addendum and exact
+runner overlay preserve this boundary. Full match outcomes follow completion.
+No current Rust rating or Stockfish superiority is established.
+
 ## Prior progress — 18 October 2026
 
 ## Rust 0.9.2: faster terminal queries

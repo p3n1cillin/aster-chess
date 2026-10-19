@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-19",
+  "scope": "Development runner overlay for resumed short match and full long match; original engine source capsule remains immutable.",
+  "candidate_binary_sha256": "510ae5e88f0dc6d162602902df1d5778b49fcc8103a7296644b84915489801d7",
+  "original_engine_source_manifest": "artifacts/research/rust-hyperion-source-v1/manifest.json",
+  "recovery_addendum": "artifacts/research/rust-hyperion-recovery-addendum-v1.json",
+  "source_files": [
+    {
+      "path": "scripts/match.py",
+      "sha256": "b0cba240d953d5baaf3a0e75e98c6801e8315cb8811010ed8128610505908ca1"
+    },
+    {
+      "path": "scripts/match_recovery.py",
+      "sha256": "7ae27dbe0bb24579ae2517da7aa40cf593653c901b2eba0f438aca0cb394b2fb"
+    },
+    {
+      "path": "scripts/uci_client.py",
+      "sha256": "dea46bfc8414374ffaa941c77dd4e170dffed8eef4332bf36ab687bf18cdb48c"
+    },
+    {
+      "path": "scripts/audit_match.py",
+      "sha256": "99e9013e96bc5dbd012644e550836838d2f105d05def9d290b605c46bf1967d6"
+    },
+    {
+      "path": "tests/test_match_recovery.py",
+      "sha256": "2790c2014c0c2827d26e8bef0e81cb5f8d557489b346443578a7084fdaa77546"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "sha256": "391e529739e99dc63461425af4ad7afb10d89aa275922928ceb8e2f5dffa7149"
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "sha256": "2b737a325eaa0ca2e0141b4306ef2d7958f62c2297a84443da05b71c23d9cf0a"
+    }
+  ]
+}

@@ -15,6 +15,7 @@ import chess.engine
 import chess.pgn
 
 from uci_client import DEFAULT_ENGINE, ROOT, engine_command
+from match_recovery import append_journal, atomic_report, load_completed, validate_resume_configuration
 
 # Balanced opening sampling is still needed for serious strength testing. These
 # eight ordinary opening lines provide a deterministic initial smoke-test suite.
@@ -113,6 +114,7 @@ def main() -> None:
     parser.add_argument("--opponent-uci-elo", type=int, help="Explicit development opponent strength setting; not an observed rating")
     parser.add_argument("--openings", help="Frozen legal UCI lines, optionally from explicit start_fen setups; each pair uses a distinct entry")
     parser.add_argument("--output", default="artifacts/matches/baseline")
+    parser.add_argument("--resume-prefix", help="Retain completed games from a stopped run; always use a new output prefix")
     args = parser.parse_args()
     if args.pairs < 1 or args.movetime <= 0 or args.max_plies < 1 or (args.nodes is not None and args.nodes < 1) or not 1 <= args.hash <= 1024:
         parser.error("Pairs, time, nodes and maximum plies must be positive; Hash must be 1..1024 MiB")
@@ -144,7 +146,9 @@ def main() -> None:
     output.parent.mkdir(parents=True, exist_ok=True)
     pgn_path = pathlib.Path(str(output) + ".pgn")
     report_path = pathlib.Path(str(output) + ".json")
-    if pgn_path.exists() or report_path.exists(): parser.error("Preserve prior match PGN/report paths")
+    journal_path = pathlib.Path(str(output) + ".journal.jsonl")
+    if pgn_path.exists() or report_path.exists() or journal_path.exists(): parser.error("Preserve prior match PGN/report/journal paths")
+    recovered = load_completed(args.resume_prefix, openings) if args.resume_prefix else None
     summary: dict = {
         "timestamp_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "candidate": str(candidate_path), "opponent": str(opponent_path),
@@ -182,11 +186,34 @@ def main() -> None:
             summary["candidate_option_defaults"] = {name: option.default for name, option in candidate.options.items() if option.type != "button"}
             summary["opponent_option_defaults"] = {name: option.default for name, option in opponent.options.items() if option.type != "button"}
             summary["opponent_strength_mode"] = "UCI_Elo development setting" if args.opponent_uci_elo is not None else "engine defaults"
-            with pgn_path.open("w", encoding="utf-8") as pgn_file:
+            records = []
+            prior_seconds = 0
+            if recovered:
+                saved, records, origin = recovered
+                validate_resume_configuration(saved, summary)
+                summary['resume'] = origin
+                summary['games'] = saved['games']
+                for key in ['wins', 'draws', 'losses', 'unresolved', 'forfeits']:
+                    summary[key] = saved[key]
+                prior_seconds = saved.get('seconds', 0)
+                summary['seconds_definition'] = 'Known prior report elapsed plus resumed process elapsed; unavailable PGN-only game time and interruption downtime excluded.'
+            summary['journal_format'] = 1
+            summary['recovery_helper_sha256'] = hashlib.sha256((ROOT / 'scripts/match_recovery.py').read_bytes()).hexdigest()
+            with pgn_path.open("x", encoding="utf-8") as pgn_file, journal_path.open('x', encoding='utf-8') as journal_file:
+                header = dict(summary); header['games'] = []
+                append_journal(journal_file, {'type': 'header', 'summary': header})
+                for detail, pgn in records:
+                    append_journal(journal_file, {'type': 'game', 'detail': detail, 'pgn': pgn})
+                    pgn_file.write(pgn)
+                pgn_file.flush()
+                atomic_report(report_path, summary)
                 for pair in range(args.pairs):
                     setup = openings[pair % len(openings)]
                     opening = setup["moves"]
                     for candidate_white in (True, False):
+                        ordinal = pair * 2 + (0 if candidate_white else 1)
+                        if ordinal < len(records):
+                            continue
                         board = chess.Board(setup["start_fen"])
                         for text in opening.split():
                             board.push_uci(text)
@@ -248,9 +275,11 @@ def main() -> None:
                                   "initial_fen": initial_fen, "result": result, "termination": termination,
                                   "plies": len(board.move_stack), "seconds": round(time.monotonic() - game_started, 3), "searches": searches}
                         summary["games"].append(detail)
-                        pgn_file.write(str(game) + "\n\n"); pgn_file.flush()
-                        summary["seconds"] = round(time.monotonic() - started, 3)
-                        report_path.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
+                        pgn_text = str(game) + "\n\n"
+                        append_journal(journal_file, {'type': 'game', 'detail': detail, 'pgn': pgn_text})
+                        pgn_file.write(pgn_text); pgn_file.flush()
+                        summary["seconds"] = prior_seconds + round(time.monotonic() - started, 3)
+                        atomic_report(report_path, summary)
                         print(json.dumps({key: value for key, value in detail.items() if key != "searches"}), flush=True)
                         if summary["forfeits"]:
                             raise RuntimeError("Engine forfeit; inspect the saved report. Match stopped because process state may be invalid.")

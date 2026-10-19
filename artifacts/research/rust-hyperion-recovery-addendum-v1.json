@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-19",
+  "status": "Declared before resumed engine queries",
+  "reason": "Legacy JSON snapshot write failed with OSError errno22 after PGN flush. Engines exited cleanly; no engine forfeit. Original files are retained byte-for-byte.",
+  "original": {
+    "prefix": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\matches\\rust-hyperion-v1-30ms",
+    "report_sha256": "bf98a6256c0ed59642ecb372e136bb0c5d9fe42bcfe7836b149b60acd6378834",
+    "pgn_sha256": "d78e3c3bcbee7631c94680aabe7b04c4d7520f2752329617699bcd627ee0524b",
+    "completed_games": 83,
+    "next_game_ordinal": 84,
+    "pgn_only_games": 1,
+    "original_runner_sha256": "dc954667970520b4bf8823ea05805f38918ad6d81ef2296a859ebdbadf61ab5e"
+  },
+  "fixed_sample": "Keep all 83 PGN-completed outcomes, resume ordinal84 (pair42 Black), finish the original 256 short-control games and untouched 128 long-control games. No replay, extra openings, model changes or outcome-driven sample extension.",
+  "missing_telemetry": "Only game83 has no saved per-move telemetry or game wall time; its complete moves/outcome remain in original PGN and are retained explicitly.",
+  "new_writer": "Journal complete game details and PGN with flush/fsync before snapshot; atomic snapshot replacement with bounded retries and retained temporary payload on failure.",
+  "resume_prefix": "artifacts/matches/rust-hyperion-v1-30ms-complete",
+  "long_prefix": "artifacts/matches/rust-hyperion-v1-100ms",
+  "promotion": "Original tactical gate remains failed. Recovery does not alter gates or promote the model.",
+  "unchanged_candidate_sha256": "510ae5e88f0dc6d162602902df1d5778b49fcc8103a7296644b84915489801d7",
+  "unchanged_baseline_sha256": "b51e97647dd086ed0a30682fba77ea627dd5d8cf9bfc291e34a4064b04916213",
+  "new_runner_sha256": "b0cba240d953d5baaf3a0e75e98c6801e8315cb8811010ed8128610505908ca1",
+  "recovery_helper_sha256": "7ae27dbe0bb24579ae2517da7aa40cf593653c901b2eba0f438aca0cb394b2fb"
+}
