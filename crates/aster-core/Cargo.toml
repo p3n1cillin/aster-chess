@@ -18,7 +18,6 @@ name = "aster-core"
 path = "src/main.rs"
 
 [features]
-fused-input = []
 evaluation-risk = []
 # Bounded Aster search experiment; excluded from production builds.
 disagreement-guard = []

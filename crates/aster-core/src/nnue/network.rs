@@ -106,36 +106,6 @@ impl LayerStack {
         let denominator: i64 = HIDDEN_ONE_VAL * (1i64 << WEIGHT_SCALE_BITS) * 2;
         ((fwd as i64 * multiplier) / denominator) as i32
     }
-    // Kept compile-gated alongside the existing path for the fixed experiment.
-    #[cfg(feature = "fused-input")]
-    #[inline]
-    fn propagate_fused(&self, input: &kernels::FusedInput) -> i32 {
-        let mut fc0_out = self.fc0_biases;
-        input.affine(&self.fc0_weights, &mut fc0_out);
-        let t = crate::prof::prof_start!();
-
-        let mut concat_a = Aligned([0u8; 128]);
-        let concat = &mut concat_a.0;
-        kernels::activations::<{ WEIGHT_SCALE_BITS + 1 }>(&fc0_out, &mut concat[..2 * L2]);
-
-        let mut fc1_out = self.fc1_biases;
-        kernels::dense_affine_fc1(
-            concat[..64].try_into().unwrap(),
-            &self.fc1_weights,
-            &mut fc1_out,
-        );
-        crate::prof::prof_end!(9, t);
-        let t = crate::prof::prof_start!();
-        kernels::activations::<WEIGHT_SCALE_BITS>(&fc1_out, &mut concat[2 * L2..]);
-
-        let mut fwd = self.fc2_bias + kernels::dot128(concat, &self.fc2_weights);
-        fwd += fc0_out[L2 - 2] - fc0_out[L2 - 1];
-
-        crate::prof::prof_end!(10, t);
-        let multiplier: i64 = 600 * OUTPUT_SCALE as i64;
-        let denominator: i64 = HIDDEN_ONE_VAL * (1i64 << WEIGHT_SCALE_BITS) * 2;
-        ((fwd as i64 * multiplier) / denominator) as i32
-    }
 }
 
 pub struct Network {
@@ -285,18 +255,6 @@ impl Network {
         let t = crate::prof::prof_start!();
         let acc = stack.latest();
         let stm = pos.side_to_move();
-
-        #[cfg(feature = "fused-input")]
-        if let Some(input) =
-            kernels::FusedInput::new(&acc.accumulation[stm], &acc.accumulation[flip_color(stm)])
-        {
-            crate::prof::prof_end!(1, t);
-            let t = crate::prof::prof_start!();
-            let positional = self.stacks[bucket].propagate_fused(&input);
-            crate::prof::prof_end!(2, t);
-            crate::prof::prof_end!(5, t_total);
-            return positional / OUTPUT_SCALE;
-        }
 
         let persp = [stm, flip_color(stm)];
         // Fully written by the two transform calls below.

@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "baseline_commit": "f6fa30d3dc7afdae0d644c2dc69eba8aab655414",
+  "git_diff_scope": [
+    "crates",
+    ".cargo",
+    "Cargo.toml",
+    "Cargo.lock",
+    "rust-toolchain.toml",
+    ".github/workflows/verify.yml"
+  ],
+  "active_source_byte_identical_to_baseline": true,
+  "active_binary_sha256": "6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2",
+  "linker_metadata_receipt": "artifacts/verification/aster-fused-input-restored-metadata-v1.json",
+  "note": "Candidate source remains in its frozen archive and Git history. No live fusion feature or kernel remains."
+}

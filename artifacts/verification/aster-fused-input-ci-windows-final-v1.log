@@ -1,0 +1,15 @@
+##[group]Run python scripts/verify_aster_branding.py --output artifacts/verification/aster-fused-input-ci.json
+2026-10-19T15:25:13.1023328Z python scripts/verify_aster_branding.py --output artifacts/verification/aster-fused-input-ci.json
+2026-10-19T15:25:13.1106191Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-19T15:25:13.1106552Z env:
+2026-10-19T15:25:13.1106741Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+2026-10-19T15:25:13.1106991Z   CARGO_INCREMENTAL: 0
+2026-10-19T15:25:13.1107183Z   CARGO_TERM_COLOR: always
+2026-10-19T15:25:13.1107468Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-19T15:25:13.1107958Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-10-19T15:25:13.1108431Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-19T15:25:13.1108828Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-19T15:25:13.1109248Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-10-19T15:25:13.1109556Z ##[endgroup]
+2026-10-19T15:25:16.6366079Z {"passed": true, "signature": 1559611, "bench_bestmoves": 51}
+2026-10-19T15:25:16.8376218Z

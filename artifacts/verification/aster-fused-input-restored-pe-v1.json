@@ -1,0 +1,69 @@
+{
+  "baseline": {
+    "sha256": "6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2",
+    "bytes": 170488832,
+    "coff_timestamp": 1792417004,
+    "sections": [
+      {
+        "name": ".text",
+        "bytes": 1850368,
+        "sha256": "cebffcc4820eafd88d2a85f3754a3f22dc6b7328687af3154ddb0dc6d971569a"
+      },
+      {
+        "name": ".rdata",
+        "bytes": 168577024,
+        "sha256": "d508452e58b3a415f647d0effa28913b1ab7c333bcee92f93c5411127f322002"
+      },
+      {
+        "name": ".data",
+        "bytes": 26112,
+        "sha256": "8ddfff02f4371cd70fba1dc5f136f5a556002f29f0ed4b8cf4289991cf59064f"
+      },
+      {
+        "name": ".pdata",
+        "bytes": 27136,
+        "sha256": "476784514067d3ecb6e663fb9dddf212cd1a777e035be9e0fc8427f515813a3b"
+      },
+      {
+        "name": ".reloc",
+        "bytes": 7168,
+        "sha256": "1189244c022c6d4894e9f57814b61ee997e9c2f1a4bef99d8966dcb53f2183b0"
+      }
+    ]
+  },
+  "rebuilt": {
+    "sha256": "63be9211189f08da5acdc141dc3b8a878786bc4e2dde997be0e7e01210fcd572",
+    "bytes": 170488832,
+    "coff_timestamp": 1792423348,
+    "sections": [
+      {
+        "name": ".text",
+        "bytes": 1850368,
+        "sha256": "cebffcc4820eafd88d2a85f3754a3f22dc6b7328687af3154ddb0dc6d971569a"
+      },
+      {
+        "name": ".rdata",
+        "bytes": 168577024,
+        "sha256": "741ecec5203c571449a2388a8a2f016ef888d22d3ff17eeb072f0ffa29025e98"
+      },
+      {
+        "name": ".data",
+        "bytes": 26112,
+        "sha256": "8ddfff02f4371cd70fba1dc5f136f5a556002f29f0ed4b8cf4289991cf59064f"
+      },
+      {
+        "name": ".pdata",
+        "bytes": 27136,
+        "sha256": "476784514067d3ecb6e663fb9dddf212cd1a777e035be9e0fc8427f515813a3b"
+      },
+      {
+        "name": ".reloc",
+        "bytes": 7168,
+        "sha256": "1189244c022c6d4894e9f57814b61ee997e9c2f1a4bef99d8966dcb53f2183b0"
+      }
+    ]
+  },
+  "preserved_rebuilt_path": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\63be9211189f08da5acdc141dc3b8a878786bc4e2dde997be0e7e01210fcd572\\aster.exe",
+  "same_section_hashes": false,
+  "note": "Restored source is byte-identical to baseline; this receipt compares executable sections without assuming byte-reproducible linking. No new performance sample or candidate variant."
+}

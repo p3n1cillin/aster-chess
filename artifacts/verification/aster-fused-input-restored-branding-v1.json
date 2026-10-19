@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "identities": [
+    {
+      "binary": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\target\\release\\aster.exe",
+      "sha256": "6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2",
+      "transcript": "info string Aster 1.0.0 by Aster contributors\nid name Aster 1.0.0\nid author Aster contributors\n\noption name Debug Log File type string default <empty>\noption name NumaPolicy type string default auto\noption name Threads type spin default 1 min 1 max 1024\noption name Hash type spin default 16 min 1 max 33554432\noption name Clear Hash type button\noption name Ponder type check default false\noption name MultiPV type spin default 1 min 1 max 256\noption name Skill Level type spin default 20 min 0 max 20\noption name Move Overhead type spin default 10 min 0 max 5000\noption name nodestime type spin default 0 min 0 max 10000\noption name UCI_Chess960 type check default false\noption name UCI_LimitStrength type check default false\noption name UCI_Elo type spin default 1320 min 1320 max 3190\noption name UCI_ShowWDL type check default false\noption name SyzygyPath type string default <empty>\noption name SyzygyProbeDepth type spin default 1 min 1 max 100\noption name Syzygy50MoveRule type check default true\noption name SyzygyProbeLimit type spin default 7 min 0 max 7\noption name EvalFile type string default nn-c9e480e92425.nnue\nuciok\n\nAster is a native Rust chess engine for playing and analysis.\nLicensed under the GNU General Public License, version 3 or later.\nCopyright and upstream attribution: see AUTHORS, Copying.txt and THIRD_PARTY_NOTICES.md in the source distribution.\n\nreadyok\n"
+    },
+    {
+      "binary": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\target\\release\\aster-core.exe",
+      "sha256": "ae4860e35d9b5204ad7cd0491c827691dc7a5e0d7f211c24c1057a154cda5bb3",
+      "transcript": "info string Aster 1.0.0 by Aster contributors\nid name Aster 1.0.0\nid author Aster contributors\n\noption name Debug Log File type string default <empty>\noption name NumaPolicy type string default auto\noption name Threads type spin default 1 min 1 max 1024\noption name Hash type spin default 16 min 1 max 33554432\noption name Clear Hash type button\noption name Ponder type check default false\noption name MultiPV type spin default 1 min 1 max 256\noption name Skill Level type spin default 20 min 0 max 20\noption name Move Overhead type spin default 10 min 0 max 5000\noption name nodestime type spin default 0 min 0 max 10000\noption name UCI_Chess960 type check default false\noption name UCI_LimitStrength type check default false\noption name UCI_Elo type spin default 1320 min 1320 max 3190\noption name UCI_ShowWDL type check default false\noption name SyzygyPath type string default <empty>\noption name SyzygyProbeDepth type spin default 1 min 1 max 100\noption name Syzygy50MoveRule type check default true\noption name SyzygyProbeLimit type spin default 7 min 0 max 7\noption name EvalFile type string default nn-c9e480e92425.nnue\nuciok\n\nAster is a native Rust chess engine for playing and analysis.\nLicensed under the GNU General Public License, version 3 or later.\nCopyright and upstream attribution: see AUTHORS, Copying.txt and THIRD_PARTY_NOTICES.md in the source distribution.\n\nreadyok\n"
+    }
+  ],
+  "signature": 1559611,
+  "bench_bestmoves": 51,
+  "verifier_sha256": "1218eeb7072b956a4a984c888cdfdd5a24fcdf0a96c513e3ce291ad00a361d2c",
+  "timing_scope": "Local desktop, no affinity or isolation. Timing samples do not prove exactly identical speed, Elo or superiority to any reference engine."
+}

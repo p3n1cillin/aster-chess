@@ -1,0 +1,27 @@
+{
+  "source_commit": "f6fa30d3dc7afdae0d644c2dc69eba8aab655414",
+  "completion_record_sha256": "e665200bac5db5859db4b44ba0f20b88b6e4a43a8a5baa949f5a931bd6f62827",
+  "note": "Versioned documentation hashes in the old completion refer to this commit. These byte-exact archived copies preserve that state while live roadmap/progress documents advance. The completion report itself is unchanged.",
+  "files": [
+    {
+      "original_path": "docs/ASTER-PGO.md",
+      "archived_path": "artifacts/research/aster-pgo-documentation-v2/docs/ASTER-PGO.md",
+      "sha256": "5db81650396ad2fb66640e41713af32427bb6007f16462e75b56f6e7d44dbd05"
+    },
+    {
+      "original_path": "docs/ASTER-FUSED-INPUT-INVESTIGATION.md",
+      "archived_path": "artifacts/research/aster-pgo-documentation-v2/docs/ASTER-FUSED-INPUT-INVESTIGATION.md",
+      "sha256": "7a0ef363be738a38c50f76b92501e0a1cdb01cb6629623dc527a37cf500e3dd2"
+    },
+    {
+      "original_path": "ROADMAP.md",
+      "archived_path": "artifacts/research/aster-pgo-documentation-v2/ROADMAP.md",
+      "sha256": "6a8ebcb64419907f5f85a6fc1730bc020c65b283f7723af9d4d64abe8c2cf283"
+    },
+    {
+      "original_path": "artifacts/PROGRESS.md",
+      "archived_path": "artifacts/research/aster-pgo-documentation-v2/artifacts/PROGRESS.md",
+      "sha256": "292d9a555f0f163330adc8174f2bc75eb220e3326a8b54cbe43b2b34a9584ac9"
+    }
+  ]
+}

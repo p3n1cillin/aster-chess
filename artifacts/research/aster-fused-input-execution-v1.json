@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-19T15:16:54Z",
+  "code_commit": "525e4ecd",
+  "plan_sha256": "917a77a39fbc10b4e48ef0aef4adeca7833887e842aaf98f9c7bd34a225bd070",
+  "candidate_sha256": "fbb3fa6c328c4702b484d93545f2c2495200686553782fff5f6805f3db0c3ce6",
+  "control_sha256": "6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2",
+  "host": "AMD Ryzen 5 7600X, 6 cores / 12 logical processors; Windows x64",
+  "timing": "One active search at a time, 1 thread, 64 MiB. No concurrent local builds, matches or engine studies. Desktop wall time, no affinity or OS isolation.",
+  "gates": "28 total batches fixed in plan: 12 automatic, 8 AVX2, 8 scalar. Full held-out timing is preserved; no retries or variants based on outcomes. Conditional 128-game screen only starts if timing passes."
+}

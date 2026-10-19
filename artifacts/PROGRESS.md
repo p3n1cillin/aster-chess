@@ -1,3 +1,21 @@
+## 2026-10-19: fused neural input rejected at fixed timing gate
+
+One compile-gated Rust fusion implementation and 64 fresh roots are frozen
+before candidate search. Arithmetic, all canonical traces (1,559,611 nodes),
+all 64 depth-nine roots per mode, tactics, independent rules/perft/edges, actual
+visualization/proofs and SMP stop/undo pass. Feature profiles pass 160 native
+tests plus two compile-fail checks; default profiles pass 157 plus two.
+
+All 28 predeclared timing batches finish: automatic ratio 1.02665 (95% batch
+interval 1.02124..1.03248), AVX2 1.00694 (1.00106..1.01890), scalar 1.01573
+(1.00283..1.02102). Automatic/scalar fail; the candidate is not adopted. Its
+conditional 64 pairs remain unused, as prospectively declared, with no extra
+variants or repeated timing. Original live source is restored; source archives,
+exact binaries, raw results and the failed implementation's Git history remain.
+No strength gain, public/absolute Elo or reference superiority is established.
+See `docs/ASTER-FUSED-INPUT-INVESTIGATION.md`. Next investigate a distinct measured
+bottleneck in the unmodified automatic path; continuation remains active.
+
 ## 2026-10-19: compiler profile trial completed; no adoption
 
 PGO preserves exact calculations but fails the fixed speed gate. Eight held-out

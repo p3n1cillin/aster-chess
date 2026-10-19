@@ -22,10 +22,13 @@ The profile-guided compilation trial also completes all 192 declared games and
 audits, but fails timing: automatic elapsed is unchanged and AVX2 is about 9.9%
 slower. It is not adopted. The repaired native profiling driver and exactness
 checks are retained; ordinary builds are unchanged. See `docs/ASTER-PGO.md`.
-The next source-level hypothesis is fusing neural input transformation and
-nonzero-index collection. It requires a separate committed plan, fresh roots
-and matched correctness/timing/playing gates before candidate queries; see
-`docs/ASTER-FUSED-INPUT-INVESTIGATION.md`. No gain is yet established for it.
+The separate fused-input experiment passes exactness and runtime checks but
+fails fixed timing: automatic elapsed is 2.66% slower and scalar 1.57% slower.
+It is not adopted; the prospectively conditional 128 games remain unused.
+The original active source is restored and every candidate artifact is retained.
+See `docs/ASTER-FUSED-INPUT-INVESTIGATION.md`. Next profile the unchanged automatic
+path with a bounded diagnostic workload and select a distinct measured bottleneck
+before another predeclared candidate. Do not retune the failed fusion policy.
 
 The Aster disagreement-guard experiment tests a bounded response to conflicting
 search evidence. Its policy, new opening roots and two controls were fixed before

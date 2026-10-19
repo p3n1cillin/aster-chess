@@ -15,7 +15,6 @@ rust-version = "1.93.0"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [features]
-fused-input = ["aster-core/fused-input"]
 pgo-driver = []
 evaluation-risk = ["aster-core/evaluation-risk"]
 disagreement-guard = ["aster-core/disagreement-guard"]

@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-19",
+  "active_engine": "Aster Rust development core; original ordinary source and playable binary restored",
+  "active_binary_sha256": "6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2",
+  "active_local_rating": null,
+  "public_elo": null,
+  "candidate_binary_sha256": "fbb3fa6c328c4702b484d93545f2c2495200686553782fff5f6805f3db0c3ce6",
+  "candidate_local_rating": null,
+  "status": "Fusion passes correctness but fails timing. Not adopted. The prospectively conditional 64 pairs were not started.",
+  "decision_report": "artifacts/verification/aster-fused-input-decision-v1.json",
+  "limits": "No playing-strength result, absolute/public Elo or reference superiority follows from this engineering trial. Continue with a distinct measured hypothesis."
+}

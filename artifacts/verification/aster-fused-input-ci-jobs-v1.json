@@ -1,0 +1,23 @@
+{
+  "code_commit": "525e4ecd7a2e84c28f2dcafcdc2ac15b9f3dcd6a",
+  "run_id": 39276593072,
+  "url": "https://github.com/p3n1cillin/aster-chess/actions/runs/39276593072",
+  "jobs": [
+    {
+      "id": 118142364375,
+      "name": "rust (ubuntu-latest)",
+      "status": "completed",
+      "conclusion": "success",
+      "completed_at": "2026-10-19T15:22:21Z"
+    },
+    {
+      "id": 118142365126,
+      "name": "rust (windows-latest)",
+      "status": "completed",
+      "conclusion": "success",
+      "completed_at": "2026-10-19T15:25:21Z"
+    }
+  ],
+  "step_snapshot_limitation": "API step fields were stale despite completed job status. Preserve raw response separately; actual Windows final feature branding pass is confirmed from the timestamped completed job log.",
+  "windows_final_check_log": "artifacts/verification/aster-fused-input-ci-windows-final-v1.log"
+}

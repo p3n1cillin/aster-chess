@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "baseline_sha256": "6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2",
+  "rebuilt_sha256": "63be9211189f08da5acdc141dc3b8a878786bc4e2dde997be0e7e01210fcd572",
+  "difference_is_only_pe_linker_metadata": true,
+  "differing_byte_offsets": [
+    248,
+    249,
+    170375316,
+    170375317,
+    170375344,
+    170375345,
+    170375372,
+    170375373,
+    170375660,
+    170375661,
+    170375662,
+    170375663,
+    170375664,
+    170375665,
+    170375666,
+    170375667,
+    170375669,
+    170375670,
+    170375671,
+    170375672,
+    170375673,
+    170375674,
+    170375675
+  ],
+  "permitted_metadata_fields": [
+    {
+      "kind": "COFF TimeDateStamp",
+      "offset": 248,
+      "bytes": 4
+    },
+    {
+      "kind": "IMAGE_DEBUG_DIRECTORY TimeDateStamp",
+      "offset": 170375316,
+      "bytes": 4
+    },
+    {
+      "kind": "RSDS CodeView GUID",
+      "offset": 170375660,
+      "bytes": 16
+    },
+    {
+      "kind": "IMAGE_DEBUG_DIRECTORY TimeDateStamp",
+      "offset": 170375344,
+      "bytes": 4
+    },
+    {
+      "kind": "IMAGE_DEBUG_DIRECTORY TimeDateStamp",
+      "offset": 170375372,
+      "bytes": 4
+    }
+  ],
+  "interpretation": "Only linker timestamps and the CodeView debug GUID differ. Every other file byte, including executable code and data, is identical. Original tested binary remains active."
+}
