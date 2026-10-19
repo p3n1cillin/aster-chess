@@ -27,6 +27,15 @@ Replacing those with Aster would misidentify contributors, downloads or opponent
 This is a branded derivative with preserved attribution, not a claim that its
 upstream work was originally written by Aster.
 
+The follow-up naming review removes the live-match page's hardcoded opponent
+from its initial heading and browser title. Once connected, the page and newly
+written PGN events use the actual UCI names of both engines. The generic default
+opponent helper still reads the pinned development-opponent manifest; its real
+name and download paths remain accurate. The roadmap uses the current core and
+documentation paths. [Follow-up checks](../artifacts/verification/aster-naming-followup-v1.json)
+exercise the real HTTP page/state and two zero-ply unresolved PGN fixtures.
+No Rust source, model, build input or search option changes in this follow-up.
+
 The [review record](../artifacts/research/aster-branding-review-v1.json) retains
 the exact scope and checks. Both build profiles pass **140 native tests**. The
 core retains **2,497,913** bench nodes across automatic, AVX2 and scalar paths.

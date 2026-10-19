@@ -1,0 +1,60 @@
+{
+  "kind": "live demonstration match (not a rating)",
+  "started": "2026-10-19T09:41:47",
+  "engine": {
+    "name": "Aster 1.0.0",
+    "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\target\\release\\aster.exe",
+    "sha256": "6f45f681d842970446da7082668bc200f11e619585ccfb797bbe1f1e96a39fde"
+  },
+  "opponent": {
+    "name": "Aster 1.0.0",
+    "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\target\\release\\aster-core.exe",
+    "sha256": "69d38872884ebd20735640c550dee70986c1e88e5ffb4b10ee027c1e064d9f56"
+  },
+  "options": {
+    "Hash": 64,
+    "Threads": 1,
+    "Ponder": false
+  },
+  "time_control": {
+    "movetime_s": 1.0,
+    "clock_base_s": null,
+    "clock_increment_s": null
+  },
+  "openings": {
+    "path": "\\\\192.168.0.115\\share\\repos\\WIP\\chess\\tests\\fixtures\\openings-v4.json",
+    "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d",
+    "first_index": 0
+  },
+  "max_plies": 0,
+  "games": [
+    {
+      "game": 1,
+      "pair": 0,
+      "opening": "opening-037",
+      "aster_white": true,
+      "result": "*",
+      "termination": "unresolved_max_plies",
+      "plies": 20,
+      "aster_points": null
+    },
+    {
+      "game": 2,
+      "pair": 0,
+      "opening": "opening-037",
+      "aster_white": false,
+      "result": "*",
+      "termination": "unresolved_max_plies",
+      "plies": 20,
+      "aster_points": null
+    }
+  ],
+  "finished": "2026-10-19T09:41:47",
+  "summary": {
+    "games": 2,
+    "resolved": 0,
+    "aster_points": 0,
+    "unresolved": 2,
+    "interpretation": "Demonstration games only; far too few for a rating or a superiority claim."
+  }
+}

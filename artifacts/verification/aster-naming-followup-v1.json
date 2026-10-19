@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "base_commit": "466c507914ee7fa7c18aa490784f0b4934b267e4",
+  "watch_script_sha256": "71fb0bb9ede561fa374db0f8df870beb320a1a03f9b27b98b91231a85e9dcba2",
+  "checks": {
+    "python_syntax": true,
+    "live_http": [
+      {
+        "title": "Aster 1.0.0 vs Aster 1.0.0",
+        "games": 2,
+        "page_has_hardcoded_opponent": false
+      }
+    ],
+    "pgn_events_use_actual_engine_names": true,
+    "default_development_opponent_manifest_resolves": true,
+    "rust_source_and_build_inputs_unchanged": true
+  },
+  "match_scope": "Two zero-ply unresolved fixture games check metadata and HTTP presentation only; no playing-strength or speed inference.",
+  "preserved": "Original notices, source/weights provenance, factual opponent names, historical evidence and development tool paths."
+}

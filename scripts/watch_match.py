@@ -1,4 +1,4 @@
-"""Play a live, watchable Aster vs Stockfish match and record it.
+"""Play a live, watchable Aster match and record it.
 
 Serves a local page (http://127.0.0.1:5190 by default) showing the board, both
 engines' current depth, score and principal variation, the clocks, the move
@@ -31,7 +31,7 @@ DEFAULT_ASTER = ROOT / "target" / "release" / ("aster.exe" if __import__("os").n
 DEFAULT_OPENINGS = ROOT / "tests" / "fixtures" / "openings-v4.json"
 
 
-def default_stockfish() -> pathlib.Path:
+def default_opponent() -> pathlib.Path:
     manifest = json.loads((ROOT / "tools" / "stockfish" / "manifest.json").read_text())
     return ROOT / manifest["executable"].replace("\\", "/")
 
@@ -46,7 +46,7 @@ def sha256(path: pathlib.Path) -> str:
 
 PAGE = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aster vs Stockfish live</title>
+<title>Aster live match</title>
 <style>
 :root{--bg:#f6f5f2;--panel:#fff;--ink:#1d1d1f;--muted:#6b6b70;--line:#e3e1dc;--accent:#2f6fde;--win:#1f8a4c;--loss:#c0392b}
 @media (prefers-color-scheme:dark){:root{--bg:#141416;--panel:#1d1d21;--ink:#ececf0;--muted:#9a9aa3;--line:#2c2c33;--accent:#6ea0ff;--win:#4cc27e;--loss:#ff6b5c}}
@@ -66,7 +66,7 @@ table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:4px 6px;b
 .score{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums}.W{color:var(--win)}.L{color:var(--loss)}
 .status{color:var(--muted);font-size:13px;margin-top:6px}
 </style></head><body>
-<header><h1 id="title">Aster vs Stockfish</h1><span class="note" id="tc"></span><span class="note">Live demonstration games, not a rating.</span></header>
+<header><h1 id="title">Aster live match</h1><span class="note" id="tc"></span><span class="note">Live demonstration games, not a rating.</span></header>
 <main>
 <section><div class="panel"><div class="player" id="top"></div><div id="board"></div><div class="player" id="bottom"></div><div class="status" id="status"></div></div></section>
 <section>
@@ -80,7 +80,7 @@ function fmtClock(ms){if(ms==null)return"";const s=Math.max(0,ms)/1000;const m=M
 function esc(t){return String(t).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]))}
 async function tick(){
  try{const r=await fetch("/state",{cache:"no-store"});const s=await r.json();
-  document.getElementById("title").textContent=s.title;document.getElementById("tc").textContent=s.time_control;
+  document.title=s.title+" live";document.getElementById("title").textContent=s.title;document.getElementById("tc").textContent=s.time_control;
   document.getElementById("board").innerHTML=s.svg;
   const w={name:s.white,clock:s.clocks.white},b={name:s.black,clock:s.clocks.black};
   const top=s.orientation==="white"?b:w,bottom=s.orientation==="white"?w:b;
@@ -186,7 +186,7 @@ def main() -> None:
     args = parser.parse_args()
 
     engine_path = pathlib.Path(args.engine).resolve()
-    opponent_path = pathlib.Path(args.opponent).resolve() if args.opponent else default_stockfish()
+    opponent_path = pathlib.Path(args.opponent).resolve() if args.opponent else default_opponent()
     opening_path = pathlib.Path(args.openings).resolve()
     opening_doc = json.loads(opening_path.read_text())
     openings = opening_doc["openings"]
@@ -330,7 +330,7 @@ def main() -> None:
 
                 # Record the game
                 game = chess.pgn.Game.from_board(board)
-                game.headers["Event"] = "Aster vs Stockfish live demonstration"
+                game.headers["Event"] = f"{aster_name} vs {opp_name} live demonstration"
                 game.headers["Site"] = "local"
                 game.headers["Date"] = datetime.date.today().strftime("%Y.%m.%d")
                 game.headers["Round"] = str(game_no)

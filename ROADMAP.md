@@ -1,7 +1,7 @@
 # Research roadmap
 
 Since Aster 1.0.0 (2026-10-19) the default playing core is a bit-exact Rust port
-of Stockfish 19 (`crates/sf-port`, `docs/SF-PORT.md`). Next: close the remaining
+of Stockfish 19 (`crates/aster-core`, `docs/ASTER-CORE.md`). Next: close the remaining
 13% speed gap (profile-guided optimization, further kernel work), port Syzygy
 probing, then test genuine improvements over Stockfish 19 with predeclared,
 color-swapped paired matches. Until such a test shows a lower bound above 50%,
