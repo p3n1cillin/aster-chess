@@ -10,9 +10,15 @@ Rust 0.9.2 now uses a verified pawn/knight shortcut before the complete terminal
 move query. It preserves fixed-depth work, reduces measured elapsed time by
 6.85% and passes all 96 predeclared paired engineering games, native/independent
 checks and Windows/Linux CI. The match intervals include 50%; no playing-strength
-or Elo gain is established. See `docs/RUST-LEGAL-PROBES.md`. Next investigate
-compatible neural knowledge or stronger endgame supervision with fresh held-out
-matches, and calibrate the exact Rust binary across controls. Keep the existing
+or Elo gain is established. See `docs/RUST-LEGAL-PROBES.md`.
+
+The compatible CC0 v111 Hyperion trial completes all 384 predeclared paired games.
+Both score intervals include 50%, and an original tactical gate fails (31/32),
+so the existing v109 network is retained. Three independent neural arithmetic/state
+checks and durable match recovery are adopted without changing the playing model.
+See `docs/RUST-HYPERION-TRIAL.md`. Further neural experiments require fresh held-out
+families and stronger data/label coverage, rather than tuning to this sample.
+Calibrate the exact Rust binary separately across controls. Keep the existing
 proof and visual capabilities independent of heuristic strength claims.
 
 

@@ -10,29 +10,33 @@ weights and version remain **0.9.2**; no rating gain is claimed. See
 [validation details](../docs/NNUE-VALIDATION.md). Windows/Linux CI verifies the
 complete production suites; its final status is retained with the session record.
 
-## Match storage recovery and fixed neural trial
+## Hyperion trial complete: existing network retained
 
-The development runner now journals complete games before atomic JSON snapshots,
-with bounded retries and exact-order resume into a new prefix. Five storage-fault
-tests pass locally and run in CI. See [recovery details](../docs/MATCH-RECOVERY.md).
-Production remains Rust 0.9.2 with v109 weights. Its existing 135 native tests and
-independent/host/tactical checks pass on both Windows and Linux in CI runs
-39179634626 and 39179954994, retained under `artifacts/ci`.
+All **384** fixed color-swapped games are complete and independently audited.
+At 30 ms, Hyperion scores **42W/179D/35L** (51.37%, 95% family interval
+48.16%..54.60%). At 100 ms it scores **18W/92D/18L** (50%, 45.56%..54.30%).
+Both numerical screens pass, with zero forfeits or unresolved games, but neither
+interval establishes a playing-strength gain. Original tactics score **31/32**
+against required 32/32; quiet/endgames score 29/32 and 16/16. The model is
+**not promoted**. The retained play engine remains Rust 0.9.2/v109, SHA-256
+`b51e97647dd086ed0a30682fba77ea627dd5d8cf9bfc291e34a4064b04916213`.
+See [the complete trial](../docs/RUST-HYPERION-TRIAL.md) and
+[fixed decision](research/rust-hyperion-decision-v1.json).
 
-The separate frozen v111 Hyperion candidate misses its original tactical gate
-(31/32 versus required 32/32), so it will not be promoted. Its predeclared
-384-game sample uses unchanged binaries and openings. The completed 30 ms
-sample scores 42W/179D/35L (51.37%, 95% family interval 48.16%..54.60%); its
-256 outcomes pass independent rules and full journal/PGN/JSON audits. The fixed
-128-game 100 ms sample continues. The short interval includes 50%, so no
-playing-strength gain is established. A legacy report
-write failed after game 83; the original 82-game JSON and 83-game PGN are frozen,
-and recovery resumes at game 84. One game's telemetry and wall time are explicitly
-unavailable; its complete moves and outcome are retained. The addendum and exact
-runner overlay preserve this boundary. The full sample decision follows completion. Production recovery CI
-[39181015346](ci/rust-match-recovery-39181015346.json) passes both Windows and
-Linux, including all five recovery tests, native suites and 32/32 original tactics.
-No current Rust rating or Stockfish superiority is established.
+The legacy writer stopped after game 83's PGN flush. Its original 82-game JSON
+and 83-game PGN remain unchanged. Exact-order recovery starts at game 84 without
+replaying outcomes; one game's telemetry and wall time are explicitly missing.
+All 384 games' moves and outcomes are retained and audited. The new writer journals full
+games before atomic snapshots. Five meaningful storage-fault tests pass locally
+and on Windows/Linux CI. See [recovery details](../docs/MATCH-RECOVERY.md).
+
+The candidate passes 135 release and 135 debug native tests on both CI platforms,
+which both reproduce its tactical-gate miss. Retained-engine CI at `91c42f5`
+passes both complete platform jobs, including 32/32 tactics. Full CI logs,
+source/binary fingerprints, journals, PGNs, family analyses and the runner overlay
+are preserved. Rust remains unrated; the historical C# reference stays separate
+in [this session record](ratings/session-20261019-hyperion.json). Surpassing
+full-strength Stockfish remains unachieved.
 
 ## Prior progress — 18 October 2026
 

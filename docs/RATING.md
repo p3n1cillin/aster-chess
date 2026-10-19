@@ -15,6 +15,12 @@ rating increase is established. See [the complete experiment](RUST-LEGAL-PROBES.
 and [exact rating reference](../artifacts/ratings/session-20261018-legal-probe.json).
 
 
+The 19 October [Hyperion trial](RUST-HYPERION-TRIAL.md) completes all 384 fixed
+games against Rust 0.9.2. Both family intervals include 50%, and its original
+expected-move gate fails, so the candidate is not adopted. This supplies no new
+Rust rating or Stockfish-superiority claim. The retained model and historical
+reference are pinned in [the session record](../artifacts/ratings/session-20261019-hyperion.json).
+
 The October 5 [visual play build](PLAY.md) has **no newly measured rating**.
 Its 64 paired regression games against the previous runtime are an engineering
 check, and the browser's 1..15 second reply budgets are uncalibrated. The

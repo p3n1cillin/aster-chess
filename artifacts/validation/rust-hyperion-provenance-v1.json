@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "frozen_source_archives": {
+    "rust-legal-probe-source-v1": {
+      "files": 117,
+      "manifest_sha256": "6a3bf3274a7417aa0bab27226ac13460c7a91b2419bc65bd4a521a1cd407d585"
+    },
+    "rust-hyperion-source-v1": {
+      "files": 118,
+      "manifest_sha256": "1191a82df858c72308e148c5d999599875d4079cad343e3a99a475466e1332b5"
+    },
+    "rust-hyperion-recovery-source-v1": {
+      "files": 7,
+      "manifest_sha256": "b529577696359c6e9a12e4f503fa2236dd956e697372e28d21c934310ea2c4ed"
+    }
+  },
+  "immutable_files": {
+    "artifacts/publish/rust-legal-probe-v1/aster.exe": "b51e97647dd086ed0a30682fba77ea627dd5d8cf9bfc291e34a4064b04916213",
+    "artifacts/publish/rust-hyperion-v1/aster.exe": "510ae5e88f0dc6d162602902df1d5778b49fcc8103a7296644b84915489801d7",
+    "artifacts/matches/rust-hyperion-v1-30ms.json": "bf98a6256c0ed59642ecb372e136bb0c5d9fe42bcfe7836b149b60acd6378834",
+    "artifacts/matches/rust-hyperion-v1-30ms.pgn": "d78e3c3bcbee7631c94680aabe7b04c4d7520f2752329617699bcd627ee0524b",
+    "artifacts/research/rust-hyperion-plan-v1.json": "3ac00160e8f537009bcf036957e1d138e63c68be17b6b74bea05e708f4f58c6b"
+  },
+  "scope": "Byte fingerprints only; game-rule and journal audits are separate. All original interrupted evidence remains unchanged."
+}

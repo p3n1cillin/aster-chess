@@ -1,10 +1,11 @@
-# Hyperion neural-knowledge trial â€” 19 October 2026
+# Hyperion neural-knowledge trial — 19 October 2026
 
-**Not promoted.** The frozen Hyperion candidate passes correctness checks but
-scores 31/32 on the original expected-move suite, below its predeclared 32/32
-gate. The production engine keeps Rust 0.9.2 and its v109 Sandhi network.
-The separately fixed 384-game sample is completed and audited before closing
-this research record; its outcome does not waive the failed gate.
+**Not promoted.** All 384 fixed games are complete and independently audited.
+The candidate scores 31/32 on the original expected-move suite, below its
+predeclared 32/32 gate. Neither playing-control interval establishes a gain.
+The retained playable engine is Rust 0.9.2 with its v109 Sandhi network.
+The [recorded decision](../artifacts/research/rust-hyperion-decision-v1.json)
+applies every original gate without retuning or extending the sample.
 
 ## Scope and provenance
 
@@ -40,12 +41,15 @@ pin/promotion/terminal cases. Actual HTTP/SSE, live branch/PV replay, observer
 on/off behavior, ready/stop and all **27** certificates (**122** independently
 verified positions) pass. The product remains a standalone Rust executable.
 
-The [candidate CI record](../artifacts/ci/rust-hyperion-39179523535.json)
-reproduces 31/32 on Linux after its correctness checks pass. That expected-move
-gate fails; matrix fail-fast cancels the Windows job. The complete failed run
-is preserved rather than weakening the threshold. Local Windows release/debug
-suites above pass all 135 correctness tests. Production validation has a
-separate CI run against its unchanged v109 network.
+The [latest experimental CI](../artifacts/ci/rust-hyperion-freeze-39182133145.json)
+passes all 135 release and 135 debug native tests on both Windows and Linux.
+Both platforms reproduce the 31/32 expected-move miss, failing that gate;
+matrix fail-fast marks the Windows job cancelled. Earlier failed runs are also
+retained. This is a tactical-gate rejection, not an unsafe correctness failure.
+The [retained-engine CI](../artifacts/ci/rust-trial-auditor-39181461967.json)
+at `91c42f5` passes both full Windows/Linux jobs, including 135 tests in each
+profile, all five recovery tests and 32/32 original tactics with v109 weights.
+These results apply to the named commits and frozen binaries.
 
 Expected-move results at the fixed limits are **31/32** original (baseline 32),
 **29/32** quiet (baseline 28), and **16/16** endgames (baseline 16). This is a
@@ -77,4 +81,73 @@ Rules alone adjudicate games, with a 400-additional-ply cap and no books,
 tablebases, resignations or evaluation adjudications. The local desktop is not
 isolated and uses no CPU affinity. First-four-ply family bootstrap settings are
 20,000 samples and seed 20261019. No absolute/public Elo or Stockfish-superiority
-claim is inferred. Complete results and the recorded decision follow the fixed run.
+claim is inferred. Results below close the original fixed sample.
+
+| Control | Games | Wins | Draws | Losses | Score | 95% family score interval | Families |
+| --- | ---: | ---: | ---: | ---: | ---: | --- | ---: |
+| 30ms | 256 | 42 | 179 | 35 | 51.37% | 48.16%..54.60% | 90 |
+| 100ms | 128 | 18 | 92 | 18 | 50.00% | 45.56%..54.30% | 57 |
+
+Both controls pass their predeclared numerical engineering screens, with zero
+forfeits and zero unresolved games. Both intervals include 50%; no strength
+increase is established. The hard tactical gate and full candidate CI gate fail,
+so the model is rejected regardless of the match scores. This does not establish
+that Hyperion is globally weaker; its expected-move results show a mixed tradeoff.
+No blending, scaling, search retuning, relabelling or alternate-model shopping
+was performed. All 192 opening parents are now used research data and must be
+excluded from fresh confirmation samples.
+
+The complete [short report](../artifacts/matches/rust-hyperion-v1-30ms-complete.json)
+and [long report](../artifacts/matches/rust-hyperion-v1-100ms.json) have adjacent
+PGNs and full JSONL game journals. Independent rule audits pass all 256 and 128
+games. Journal audits verify exact game order, pair/color assignments, openings,
+configurations, full PGN headers/moves, JSON details and result counters:
+[short audit](../artifacts/validation/rust-hyperion-journal-30ms-v1.json),
+[long audit](../artifacts/validation/rust-hyperion-journal-100ms-v1.json).
+The adjacent family analyses retain their seed, resampling settings and hashes.
+
+## Storage interruption and exact recovery
+
+The legacy writer raised `OSError` errno 22 while opening its JSON report after
+flushing game 83's PGN. The cause is unknown; the engines exited cleanly. The
+original JSON retains 82 complete telemetry records and its PGN retains 83
+complete games. Both files remain byte-for-byte unchanged and are recovery
+evidence, not an additional playing sample.
+
+The [addendum](../artifacts/research/rust-hyperion-recovery-addendum-v1.json) was
+saved before resumed engine queries. Recovery keeps every original outcome and
+starts at game 84, pair 42 with the candidate Black, using the same binaries,
+options, opening suite and limits. Exactly one game, ordinal 83, lacks per-move
+telemetry and game wall time; its full moves and outcome are retained. Missing
+values are explicitly unavailable. Known aggregate elapsed excludes unavailable
+time and downtime; it is not a complete match-duration benchmark. Restarting
+both processes and using an unisolated desktop are additional practical limits.
+
+The new development writer journals full completed-game details and PGN with
+flush/fsync before replacing complete snapshots atomically with bounded retries.
+The [seven-file runner overlay](../artifacts/research/rust-hyperion-recovery-source-v1/manifest.json)
+identifies this tooling change; the original 118-file engine capsule stays
+immutable. Five storage-fault tests cover the recovery boundaries and are in
+Windows/Linux CI. [Recovery documentation](MATCH-RECOVERY.md) records the limits;
+truncated journal records stop for investigation rather than silently dropping a game.
+
+The [reproducible recorder](../artifacts/research/rust-hyperion-record-v1.py)
+checks the exact first 82 telemetry records and all 83 original PGN records,
+then applies the saved plan to both complete audited samples. The
+[provenance audit](../artifacts/validation/rust-hyperion-provenance-v1.json)
+verifies all 117 baseline source files, 118 candidate files, seven overlay files,
+both binaries, the original interrupted files and the plan fingerprint.
+
+## Retained engine and rating
+
+The test-only scalar/incremental/undo guards and durable match tooling are
+retained with the existing engine. Playing search, inference and the v109 model
+remain at Rust 0.9.2. The existing play server and saved user game are preserved.
+The neural trial is complete; its candidate is not deployed or merged into the
+active engine. The research branch and all evidence remain available.
+
+**Rust is still unrated.** The historical C# local SF19-setting equivalent is
+2319 (95% interval 2277..2360), attached only to its exact old binary and scale.
+It is not transferred to Rust or to the upstream network's reported strength.
+See [this session's rating record](../artifacts/ratings/session-20261019-hyperion.json).
+Full-strength Stockfish superiority remains unachieved.

@@ -1,0 +1,77 @@
+{
+  "public_elo": null,
+  "last_measured_local_rating": 2319.019359271422,
+  "primary_95_percent_local_interval": [
+    2277.370617879139,
+    2360.3589099588767
+  ],
+  "local_scale": "SF19 UCI_Elo-setting equivalent at 30 ms/move, one thread, 64 MiB hash",
+  "rated_engine": "artifacts/publish/q-evasion-dev/Aster.dll",
+  "rated_engine_sha256": "a3994e4f350b2cfa261db5edc1e4ae5c332d85d4b3eaf34c0730267f3603d9a0",
+  "rated_version": "Aster 0.7.6-q-evasion-dev",
+  "reference_record": {
+    "path": "artifacts/ratings/session-20261004-q-evasion-confirmation.json",
+    "sha256": "78eeab42081af15787be31f35b9307143355c0b55a93119b741e7f95e81ca736"
+  },
+  "schema": 1,
+  "active_engine": "Aster Rust 0.9.2",
+  "active_binary": "artifacts/publish/rust-legal-probe-v1/aster.exe",
+  "active_binary_sha256": "b51e97647dd086ed0a30682fba77ea627dd5d8cf9bfc291e34a4064b04916213",
+  "active_source_manifest": "artifacts/research/rust-legal-probe-source-v1/manifest.json",
+  "active_local_rating": null,
+  "full_strength_stockfish_superiority": false,
+  "date": "2026-10-19",
+  "timestamp_utc": "2026-10-19T00:58:31.726717+00:00",
+  "status": "Hyperion trial complete and rejected; production remains Rust 0.9.2/v109, unrated.",
+  "decision": "artifacts/research/rust-hyperion-decision-v1.json",
+  "rejected_candidate_binary_sha256": "510ae5e88f0dc6d162602902df1d5778b49fcc8103a7296644b84915489801d7",
+  "neural_trial_matches": [
+    {
+      "control": "30ms",
+      "report": "artifacts/matches/rust-hyperion-v1-30ms-complete.json",
+      "games": 256,
+      "score": 0.513671875,
+      "family_95_percent_interval": [
+        0.48161764705882354,
+        0.5459558823529411
+      ],
+      "families": 90,
+      "resolved_pairs": 128,
+      "unresolved_pairs": 0,
+      "bootstrap_samples": 20000,
+      "seed": 20261019,
+      "family_definition": "initial FEN plus first four UCI plies",
+      "wins": 42,
+      "draws": 179,
+      "losses": 35,
+      "forfeits": 0,
+      "report_sha256": "37d03d96678ce6ff1edd1c388cfb00bd9f2d5c6c8fe6d13e9ee405c4384fa956",
+      "analyzer_sha256": "0be3022cdbf9afdb2792810660014387716bec509b85803d0e7ab6e013269272",
+      "interpretation": "Predeclared local screen, not an absolute/public Elo, not a universal Stockfish-superiority test. Family resampling is limited by the number and distribution of sampled families."
+    },
+    {
+      "control": "100ms",
+      "report": "artifacts/matches/rust-hyperion-v1-100ms.json",
+      "games": 128,
+      "score": 0.5,
+      "family_95_percent_interval": [
+        0.45564516129032256,
+        0.54296875
+      ],
+      "families": 57,
+      "resolved_pairs": 64,
+      "unresolved_pairs": 0,
+      "bootstrap_samples": 20000,
+      "seed": 20261019,
+      "family_definition": "initial FEN plus first four UCI plies",
+      "wins": 18,
+      "draws": 92,
+      "losses": 18,
+      "forfeits": 0,
+      "report_sha256": "b2bf237116c9f2ad0feb23637286316bab20b076281677ae1f05ae71c830245c",
+      "analyzer_sha256": "0be3022cdbf9afdb2792810660014387716bec509b85803d0e7ab6e013269272",
+      "interpretation": "Predeclared local screen, not an absolute/public Elo, not a universal Stockfish-superiority test. Family resampling is limited by the number and distribution of sampled families."
+    }
+  ],
+  "limits": "Historical C# calibration stays attached only to its frozen binary. This model trial is against Rust 0.9.2, not a Stockfish rating calibration. No upstream/public Elo is transferred. One game lacks telemetry but has complete moves and outcome; no local CPU affinity/isolation."
+}
