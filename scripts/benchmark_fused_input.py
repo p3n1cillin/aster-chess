@@ -55,7 +55,7 @@ def main():
     save = lambda: output.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
     save()
     reference = {}
-    for mode in plan['timing']['modes']:
+    for mode in plan['timing']['replicates']:
         env = os.environ.copy()
         env.pop('ASTER_SIMD', None)
         if mode != 'auto':

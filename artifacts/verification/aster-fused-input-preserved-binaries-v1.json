@@ -1,0 +1,21 @@
+{
+  "binaries": [
+    {
+      "role": "control",
+      "sha256": "6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2",
+      "path": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2\\aster.exe"
+    },
+    {
+      "role": "candidate",
+      "sha256": "fbb3fa6c328c4702b484d93545f2c2495200686553782fff5f6805f3db0c3ce6",
+      "path": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\fbb3fa6c328c4702b484d93545f2c2495200686553782fff5f6805f3db0c3ce6\\aster.exe"
+    },
+    {
+      "role": "disabled_rebuild",
+      "sha256": "bf3477cc7ccc2bd20c119fb79c07b7bca5b5e931ae08809121ad7c06d01e0b1e",
+      "path": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\bf3477cc7ccc2bd20c119fb79c07b7bca5b5e931ae08809121ad7c06d01e0b1e\\aster.exe"
+    }
+  ],
+  "active_playable_binary_sha256": "6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2",
+  "note": "Ordinary rebuilt artifact is preserved separately; the original playable binary is restored pending adoption."
+}
