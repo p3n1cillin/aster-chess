@@ -8,8 +8,9 @@ that commit built from source, on AVX-512, AVX2 and scalar paths. Verifiers,
 perft, play/proof smoke tests and 149 workspace tests pass. Against the official
 Stockfish 19 binary at 8+0.08 (128 pairs) it scored 4W/4L/248D, Elo 0.0
 (95% −7.6..+7.6): level, no superiority. Aster-owned speed work since then raised
-speed from 90.6% to 93.1% of the same commit built with clang. See
-`docs/SF-PORT.md`.
+speed from 90.6% to 93.1% of the same commit built with clang. A second match
+with that build (256 pairs, 8+0.08) gave Elo +2.0 (95% −5.4..+9.5): still level
+within noise, no superiority. See `docs/SF-PORT.md`.
 
 ## 2026-10-19: typed Rust cache rewrite adopted
 

@@ -124,6 +124,14 @@ the reference speed, before the Aster speed work. Report and PGN:
 `artifacts/matches/aster-sfdev-port-vs-sf19-8+0.08-128pairs.*` (the report's
 final fields were added after a file-lock error at the end; see its `note`).
 
+After the Aster speed work (commit `0be4c77`, 93.1% of the reference speed), a
+second match against the official Stockfish 19 binary at 8+0.08 with 256
+color-swapped pairs gave **17 pairs won 1.5–0.5, 14 lost 0.5–1.5, 225 drawn**
+(pentanomial [0, 14, 225, 17, 0]), score 50.3%, Elo **+2.0**, 95% interval
+**−5.4 to +9.5**, no unresolved games. The interval includes zero: still level
+within noise. Report and PGN:
+`artifacts/matches/aster-sfdev-0be4c77-vs-sf19-8+0.08-256pairs.*`.
+
 ## Strength claims
 
 No strength claim follows from these results. The core plays the pinned
