@@ -17,13 +17,14 @@ Bitboards and attacks (magic bitboards, plus AVX2 dual hyperbola
 quintessence on AVX2 builds), position and make/unmake including NNUE threat
 tracking, move generation, move ordering, all histories and correction
 histories, the transposition table, search and quiescence search, Lazy SMP
-threads, time management, UCI options and output, `bench`, `perft`, Syzygy
+threads, time management, UCI options and output, `bench`, `speedtest`, `perft`, Syzygy
 tablebase probing (WDL/DTZ, root ranking, in-search probes, PV extension), and the
 complete NNUE: HalfKAv2_hm, FullThreats and PP_3Wide feature sets, the
 accumulator stack with Finny-table caches (incremental forward/backward,
 hybrid king-move and refresh paths) and the 1024→32→32→1 layer stacks.
 
-Not yet ported: NUMA binding, large pages and the `speedtest` command.
+Not yet ported: NUMA binding and large pages (neither is used by the official
+binary on a single-node machine without the lock-pages privilege).
 
 ## Exactness
 

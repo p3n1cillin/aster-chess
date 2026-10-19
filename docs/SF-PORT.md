@@ -13,10 +13,17 @@ cargo build --release --locked
 ./target/release/aster core bench      # bench of the default core
 ./target/release/aster legacy          # UCI, previous Viridithas-derived core
 ./target/release/aster-core bench         # standalone Aster UCI engine
+./target/release/aster-core speedtest     # multi-threaded benchmark
 ```
 
+Tablebases: set `SyzygyPath` as in Stockfish (`;`-separated on Windows). For
+development, `python scripts/fetch_syzygy_dev_tables.py` fetches all 3- and
+4-piece WDL/DTZ tables (4.3 MB, SHA-256 pinned) and
+`python scripts/verify_syzygy_probe.py --engine <exe> --tables tools/syzygy-development-v2`
+compares the engine's probes with python-chess.
+
 In Aster mode the core also answers `legal`, `legal-exists`, `d` (as
-`info string fen …`), `go perft N` (adds an `info depth N nodes …` line) and
+`info string fen â€¦`), `go perft N` (adds an `info depth N nodes â€¦` line) and
 `aster-trace on|off`, so the browser play host and Aster's python-chess
 verifiers work unchanged. Tracing only observes the search: best move, score and
 node count are identical with tracing on and off (checked by `verify_rust.py`).
@@ -35,7 +42,7 @@ node count are identical with tracing on and off (checked by `verify_rust.py`).
 | `scripts/verify_rust_legal_edges.py` | passed: 94 positions |
 | `scripts/smoke_rust_play.py` | passed against the new core |
 | UCI | `isready`/`stop` answered in under 1 ms during a 4-thread infinite search |
-| Syzygy WDL+DTZ vs python-chess (`scripts/verify_syzygy_probe.py`) | 14,000/14,000 positions equal (35 tables, 3–4 man) |
+| Syzygy WDL+DTZ vs python-chess (`scripts/verify_syzygy_probe.py`) | 14,000/14,000 positions equal (35 tables, 3â€“4 man) |
 | Syzygy searches vs official binary | 260/260 output lines identical (17 positions, depth 14, DTZ tables) |
 
 One verifier expectation changed deliberately. With the fifty-move clock at 100
@@ -60,7 +67,7 @@ AVX-512 VNNI and AVX2 kernels (sparse fc0 with compressed non-zero lists, tiled
 accumulator updates, pairwise transform), prefetching weight rows and history
 entries, 64-byte aligned weights and accumulators, removing hidden 4 KB copies of
 `const` lookup tables, and AVX-512 VBMI2 move writers. Rust was not the limit on
-these kernels. The remaining 12–13% is spread across search, move ordering and
+these kernels. The remaining 12â€“13% is spread across search, move ordering and
 memory latency (line-level sampling with `--features sampler`, a linker map or
 PDB line tables and `llvm-symbolizer`).
 
@@ -78,7 +85,7 @@ weight row (reverted: slower). Every kept change preserved the bench signature.
 `tests/fixtures/openings-v4.json` at 8+0.08 s, one thread, 16 MB hash, five games
 concurrently, against the pinned official Stockfish 19 binary. Aster 1.0.0 scored
 **5 wins, 2 losses, 121 draws** (51.2%), pentanomial [LL, LD, DD, WD, WW] =
-[0, 2, 57, 5, 0], Elo **+8.1** with a 95% interval of **−5.9 to +22.2**. No games
+[0, 2, 57, 5, 0], Elo **+8.1** with a 95% interval of **âˆ’5.9 to +22.2**. No games
 were unresolved. The interval includes zero: this is equality within noise, not
 superiority. Report and PGN: `artifacts/matches/aster-1.0.0-vs-sf19-8+0.08-64pairs.*`.
 

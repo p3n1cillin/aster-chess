@@ -53,7 +53,7 @@ preserved. The final binary additionally includes the corrected browser identity
 and protocol-clean startup banner; it is the binary used by the broad checks.
 No search tuning or model changes were made in response to timing results.
 
-The [153-file source capsule](../artifacts/research/aster-branding-source-v1/manifest.json)
+The [153-file source capsule](../artifacts/research/aster-branding-source-v2/manifest.json)
 pins the actual default core, legacy source, weights, compiler and helpers. Both
 exact executables remain in the local development cache, with fingerprints in
 the plan and result records. Historical match reports and fingerprints are
@@ -63,3 +63,6 @@ The initial CI run [39222407138](../artifacts/ci/aster-branding-39222407138.json
 failed at the original download server (HTTP 403), before compilation. The
 fetch helper now falls back to a commit-pinned official mirror and verifies the
 identical full SHA-256. A fresh download passed locally; network bytes are unchanged.
+
+Pre-existing documentation updates for the completed speedtest command and
+tablebase development instructions were carried forward through the crate rename.
