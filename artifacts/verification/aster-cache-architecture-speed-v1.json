@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "pairs": 16,
+  "median_candidate_over_baseline": 0.9902865443605382,
+  "bootstrap_95_percent_interval": [
+    0.9850884236598089,
+    0.9954679279824774
+  ],
+  "bootstrap_samples": 20000,
+  "seed": 20261019,
+  "candidate_sha256": "585e8f1e753c754263d488bcb88f3ff067007bc9603afdee9e0b9f054b4b11c2",
+  "baseline_sha256": "dc83154e2c3356e7ff741920b7dfcaaabb13d5db6e3711acdeed134ffbe6221f",
+  "gates": {
+    "median_max": 1.01,
+    "upper_max": 1.03
+  },
+  "interpretation": "Same-work desktop timing only. Confidence interval does not guarantee identical speed on other machines or playing-strength equivalence."
+}

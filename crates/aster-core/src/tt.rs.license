@@ -8,3 +8,8 @@ Original source header, preserved verbatim for tt.rs:
 //
 // Entries use relaxed atomics so racy multi-threaded access is defined
 // behaviour in Rust; on x86-64 these compile to plain loads and stores.
+
+Aster changes (2026-10-19): lifetime-checked write leases, typed associative
+cache storage, checked allocation/lookup, automatic thread-sharing traits,
+and state/replacement/concurrency/lifetime regression checks.
+Copyright (C) 2026 Aster contributors.

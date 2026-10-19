@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-19",
+  "baseline_commit": "53e6fc0e1bbe5862d738b21a7ba6cf240f3149e5",
+  "baseline_sha256": "dc83154e2c3356e7ff741920b7dfcaaabb13d5db6e3711acdeed134ffbe6221f",
+  "baseline_source": "artifacts/research/aster-source-names-v2/manifest.json",
+  "scope": "Rewrite cache storage/lease API in idiomatic Rust. Keep slot layout, generation and replacement decisions, atomic ordering, search algorithms and weights. Preserve all original attribution. This is not an independence or unrecognizability claim.",
+  "gates": {
+    "native": "Meaningful cache state/replacement/concurrency/lifetime checks plus all existing release and debug tests; formatting",
+    "deterministic": "2497913 canonical nodes and all 51 normalized bench searches; 64 depth-nine comparisons and baseline tactical agreement",
+    "independent": "Independent rule/perft/special edges; browser/SSE and proof smoke checks; ready/stop/hash-resize with multiple threads",
+    "timing": {
+      "pairs": 16,
+      "order": "AB/BA alternating, one warm bench each",
+      "accept_max_median_ratio": 1.01,
+      "accept_max_95_percent_bootstrap_upper": 1.03,
+      "bootstrap_samples": 20000,
+      "bootstrap_seed": 20261019,
+      "scope": "Desktop same-work engineering measurement, no guarantee of exact speed or playing strength. Retain a failed candidate/report rather than tune to its results."
+    },
+    "matches": {
+      "pairs": 48,
+      "openings": "tests/fixtures/rust-foundation-parent-v1.json",
+      "seconds_per_move": 0.03,
+      "threads": 1,
+      "hash_mib": 64,
+      "max_plies": 400,
+      "no_forfeits": true,
+      "retain_unresolved": true,
+      "decision": "All 96 games independently audited. Reject if the opening-pair bootstrap 95% upper score bound is below 50%; no Elo/superiority inference and no adaptive extension."
+    }
+  },
+  "outstanding": "The rest of the core is still inherited. This stage does not fulfill a full independent-engine rewrite."
+}

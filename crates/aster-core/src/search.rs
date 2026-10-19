@@ -1334,7 +1334,8 @@ impl Worker {
         // Step 4. Transposition table lookup
         let excluded_move = self.ss(ss).excluded_move;
         let pos_key = pos.key();
-        let (tt_hit, mut tt_data, tt_writer) = self.shared.tt.probe(pos_key);
+        let cache_owner = self.shared;
+        let (tt_hit, mut tt_data, tt_writer) = cache_owner.tt.probe(pos_key);
 
         self.ssm(ss).tt_hit = tt_hit;
         tt_data.mv = if root_node {
@@ -2314,7 +2315,8 @@ impl Worker {
 
         // Step 3. Transposition table lookup
         let pos_key = pos.key();
-        let (tt_hit, mut tt_data, tt_writer) = self.shared.tt.probe(pos_key);
+        let cache_owner = self.shared;
+        let (tt_hit, mut tt_data, tt_writer) = cache_owner.tt.probe(pos_key);
         self.ssm(ss).tt_hit = tt_hit;
         tt_data.mv = if tt_hit { tt_data.mv } else { Move::NONE };
         tt_data.value = if tt_hit {

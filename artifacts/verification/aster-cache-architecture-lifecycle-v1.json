@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "binary_sha256": "585e8f1e753c754263d488bcb88f3ff067007bc9603afdee9e0b9f054b4b11c2",
+  "cases": [
+    {
+      "threads": 1,
+      "hash_mib": 1,
+      "ready_seconds": 5.6899996707215905e-05,
+      "stop_seconds": 6.849999772384763e-05,
+      "stopped_bestmove": "bestmove e2e4 ponder d7d5",
+      "after_clear_bestmove": "bestmove e2e4 ponder c7c5"
+    },
+    {
+      "threads": 1,
+      "hash_mib": 8,
+      "ready_seconds": 4.129999433644116e-05,
+      "stop_seconds": 4.939999780617654e-05,
+      "stopped_bestmove": "bestmove e2e4 ponder d7d5",
+      "after_clear_bestmove": "bestmove e2e4 ponder c7c5"
+    },
+    {
+      "threads": 1,
+      "hash_mib": 3,
+      "ready_seconds": 3.1800009310245514e-05,
+      "stop_seconds": 4.709999484475702e-05,
+      "stopped_bestmove": "bestmove e2e4 ponder d7d5",
+      "after_clear_bestmove": "bestmove e2e4 ponder c7c5"
+    },
+    {
+      "threads": 2,
+      "hash_mib": 1,
+      "ready_seconds": 3.960001049563289e-05,
+      "stop_seconds": 5.9600002714432776e-05,
+      "stopped_bestmove": "bestmove e2e4 ponder c7c5",
+      "after_clear_bestmove": "bestmove e2e4 ponder c7c5"
+    },
+    {
+      "threads": 2,
+      "hash_mib": 8,
+      "ready_seconds": 4.370001261122525e-05,
+      "stop_seconds": 7.660000119358301e-05,
+      "stopped_bestmove": "bestmove e2e4 ponder c7c5",
+      "after_clear_bestmove": "bestmove e2e4 ponder c7c5"
+    },
+    {
+      "threads": 2,
+      "hash_mib": 3,
+      "ready_seconds": 4.0799990529194474e-05,
+      "stop_seconds": 6.940000457689166e-05,
+      "stopped_bestmove": "bestmove e2e4 ponder c7c5",
+      "after_clear_bestmove": "bestmove e2e4 ponder c7c5"
+    },
+    {
+      "threads": 4,
+      "hash_mib": 1,
+      "ready_seconds": 5.0700007705017924e-05,
+      "stop_seconds": 0.00011720000475179404,
+      "stopped_bestmove": "bestmove e2e4 ponder e7e5",
+      "after_clear_bestmove": "bestmove e2e4 ponder c7c5"
+    },
+    {
+      "threads": 4,
+      "hash_mib": 8,
+      "ready_seconds": 4.81999886687845e-05,
+      "stop_seconds": 8.060000254772604e-05,
+      "stopped_bestmove": "bestmove e2e4 ponder e7e5",
+      "after_clear_bestmove": "bestmove e2e4 ponder c7c5"
+    },
+    {
+      "threads": 4,
+      "hash_mib": 3,
+      "ready_seconds": 4.4200001866556704e-05,
+      "stop_seconds": 0.00010050000855699182,
+      "stopped_bestmove": "bestmove e2e4 ponder c7c5",
+      "after_clear_bestmove": "bestmove e2e4 ponder e7e5"
+    }
+  ],
+  "scope": "Native UCI lifecycle: active-search readiness, cancellation, clear, resize and repeat search with one/two/four threads and non-power-of-two cache size."
+}
