@@ -1,0 +1,1205 @@
+{
+  "kind": "paired match",
+  "started": "2026-10-19T08:57:39",
+  "candidate": {
+    "name": "Aster 1.0.0",
+    "path": "C:\\Users\\lukem\\AppData\\Local\\Temp\\claude\\Y--repos-WIP-chess\\06073324-a02c-4432-a500-f32b57515c49\\scratchpad\\target-aster\\release\\aster.exe",
+    "sha256": "38ae0bf9befe39cf3ee5e1e61b647914def659cef80c1eddac549f0bb085d788"
+  },
+  "baseline": {
+    "name": "Stockfish 19",
+    "path": "C:\\Users\\lukem\\AppData\\Local\\Temp\\claude\\Y--repos-WIP-chess\\06073324-a02c-4432-a500-f32b57515c49\\scratchpad\\sfref\\sf19.exe",
+    "sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0"
+  },
+  "options": {
+    "Hash": 16,
+    "Threads": 1,
+    "Ponder": false
+  },
+  "time_control": {
+    "base_s": 30.0,
+    "increment_s": 0.3
+  },
+  "concurrency": 5,
+  "openings": {
+    "path": "\\\\192.168.0.115\\share\\repos\\WIP\\chess\\tests\\fixtures\\openings-v4.json",
+    "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d"
+  },
+  "max_plies": 600,
+  "games": [
+    {
+      "pair": 2,
+      "opening": "opening-064",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 82,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 0,
+      "opening": "opening-037",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 92,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 1,
+      "opening": "opening-059",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 102,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 1,
+      "opening": "opening-059",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 130,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 2,
+      "opening": "opening-064",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 91,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 0,
+      "opening": "opening-037",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "stalemate",
+      "plies": 256,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 4,
+      "opening": "opening-053",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 139,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 3,
+      "opening": "opening-015",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 184,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 4,
+      "opening": "opening-053",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 87,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 5,
+      "opening": "opening-048",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 75,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 3,
+      "opening": "opening-015",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "stalemate",
+      "plies": 225,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 6,
+      "opening": "opening-035",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 82,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 5,
+      "opening": "opening-048",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 85,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 6,
+      "opening": "opening-035",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 130,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 7,
+      "opening": "opening-018",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 142,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 7,
+      "opening": "opening-018",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 176,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 8,
+      "opening": "opening-040",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 75,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 8,
+      "opening": "opening-040",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 146,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 9,
+      "opening": "opening-017",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 102,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 9,
+      "opening": "opening-017",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 165,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 10,
+      "opening": "opening-047",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 94,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 10,
+      "opening": "opening-047",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 128,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 11,
+      "opening": "opening-043",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "stalemate",
+      "plies": 97,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 12,
+      "opening": "opening-022",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 84,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 11,
+      "opening": "opening-043",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 122,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 12,
+      "opening": "opening-022",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 156,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 13,
+      "opening": "opening-055",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 134,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 13,
+      "opening": "opening-055",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "plies": 139,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 14,
+      "opening": "opening-014",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 116,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 16,
+      "opening": "opening-012",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 46,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 14,
+      "opening": "opening-014",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 125,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 15,
+      "opening": "opening-044",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 76,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 16,
+      "opening": "opening-012",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 44,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 15,
+      "opening": "opening-044",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 168,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 17,
+      "opening": "opening-025",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 87,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 18,
+      "opening": "opening-063",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 46,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 17,
+      "opening": "opening-025",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "stalemate",
+      "plies": 118,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 18,
+      "opening": "opening-063",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "plies": 185,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 19,
+      "opening": "opening-034",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 102,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 19,
+      "opening": "opening-034",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 150,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 20,
+      "opening": "opening-021",
+      "candidate_white": false,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 166,
+      "candidate_points": 1.0
+    },
+    {
+      "pair": 20,
+      "opening": "opening-021",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 179,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 21,
+      "opening": "opening-032",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 92,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 23,
+      "opening": "opening-038",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 38,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 22,
+      "opening": "opening-026",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 43,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 22,
+      "opening": "opening-026",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 77,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 21,
+      "opening": "opening-032",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "plies": 145,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 23,
+      "opening": "opening-038",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "plies": 118,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 24,
+      "opening": "opening-030",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 65,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 24,
+      "opening": "opening-030",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 96,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 25,
+      "opening": "opening-058",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 126,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 25,
+      "opening": "opening-058",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "fifty_moves",
+      "plies": 227,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 27,
+      "opening": "opening-023",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 146,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 26,
+      "opening": "opening-033",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 174,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 26,
+      "opening": "opening-033",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 230,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 28,
+      "opening": "opening-006",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 73,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 27,
+      "opening": "opening-023",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 230,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 29,
+      "opening": "opening-042",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 116,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 30,
+      "opening": "opening-013",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 86,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 31,
+      "opening": "opening-061",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 44,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 28,
+      "opening": "opening-006",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "stalemate",
+      "plies": 206,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 29,
+      "opening": "opening-042",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 146,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 31,
+      "opening": "opening-061",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 44,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 30,
+      "opening": "opening-013",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 68,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 32,
+      "opening": "opening-007",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 120,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 32,
+      "opening": "opening-007",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 108,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 33,
+      "opening": "opening-045",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 104,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 34,
+      "opening": "opening-039",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 108,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 33,
+      "opening": "opening-045",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 119,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 34,
+      "opening": "opening-039",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 100,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 35,
+      "opening": "opening-052",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 101,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 36,
+      "opening": "opening-046",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 103,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 35,
+      "opening": "opening-052",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 127,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 36,
+      "opening": "opening-046",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 124,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 37,
+      "opening": "opening-024",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 66,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 38,
+      "opening": "opening-050",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 76,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 37,
+      "opening": "opening-024",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 168,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 39,
+      "opening": "opening-031",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 83,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 38,
+      "opening": "opening-050",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 120,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 39,
+      "opening": "opening-031",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 119,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 40,
+      "opening": "opening-029",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 93,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 41,
+      "opening": "opening-003",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 87,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 41,
+      "opening": "opening-003",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 101,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 40,
+      "opening": "opening-029",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 128,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 42,
+      "opening": "opening-016",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 96,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 42,
+      "opening": "opening-016",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 141,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 43,
+      "opening": "opening-019",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 87,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 43,
+      "opening": "opening-019",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 134,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 44,
+      "opening": "opening-060",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 111,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 45,
+      "opening": "opening-011",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 79,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 45,
+      "opening": "opening-011",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 77,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 44,
+      "opening": "opening-060",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 138,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 47,
+      "opening": "opening-009",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 54,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 47,
+      "opening": "opening-009",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 57,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 46,
+      "opening": "opening-041",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 89,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 46,
+      "opening": "opening-041",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 112,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 48,
+      "opening": "opening-010",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 101,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 48,
+      "opening": "opening-010",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "insufficient_material",
+      "plies": 108,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 49,
+      "opening": "opening-062",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 147,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 50,
+      "opening": "opening-020",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 116,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 49,
+      "opening": "opening-062",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 149,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 51,
+      "opening": "opening-054",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 106,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 52,
+      "opening": "opening-002",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 64,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 51,
+      "opening": "opening-054",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 77,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 50,
+      "opening": "opening-020",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 138,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 52,
+      "opening": "opening-002",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 100,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 53,
+      "opening": "opening-028",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 111,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 53,
+      "opening": "opening-028",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 106,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 54,
+      "opening": "opening-005",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 158,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 54,
+      "opening": "opening-005",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 211,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 55,
+      "opening": "opening-051",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 177,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 56,
+      "opening": "opening-057",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 55,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 55,
+      "opening": "opening-051",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 103,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 56,
+      "opening": "opening-057",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 163,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 57,
+      "opening": "opening-049",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 84,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 58,
+      "opening": "opening-001",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 75,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 59,
+      "opening": "opening-027",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 35,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 58,
+      "opening": "opening-001",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 100,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 59,
+      "opening": "opening-027",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 84,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 57,
+      "opening": "opening-049",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 161,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 60,
+      "opening": "opening-008",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 103,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 60,
+      "opening": "opening-008",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 101,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 61,
+      "opening": "opening-036",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "stalemate",
+      "plies": 141,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 62,
+      "opening": "opening-056",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 63,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 62,
+      "opening": "opening-056",
+      "candidate_white": true,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 143,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 61,
+      "opening": "opening-036",
+      "candidate_white": false,
+      "result": "1/2-1/2",
+      "termination": "threefold_repetition",
+      "plies": 209,
+      "candidate_points": 0.5
+    },
+    {
+      "pair": 63,
+      "opening": "opening-004",
+      "candidate_white": true,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 164,
+      "candidate_points": 0.0
+    },
+    {
+      "pair": 63,
+      "opening": "opening-004",
+      "candidate_white": false,
+      "result": "0-1",
+      "termination": "checkmate",
+      "plies": 138,
+      "candidate_points": 1.0
+    }
+  ],
+  "pentanomial": {
+    "pairs": 64,
+    "score": 0.50390625,
+    "score_95": [
+      0.49625,
+      0.5115625
+    ],
+    "elo": 2.7143957373168446,
+    "elo_95": [
+      -2.605815751197758,
+      8.03588055710183
+    ],
+    "pentanomial_LL_LD_DD_WD_WW": [
+      0,
+      0,
+      63,
+      1,
+      0
+    ]
+  },
+  "finished": "2026-10-19T09:29:58",
+  "unresolved_games": 0
+}
