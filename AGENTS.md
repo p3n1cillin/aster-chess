@@ -8,8 +8,12 @@ Stockfish and python-chess are development tools only, never runtime dependencie
 On 2026-10-19 the user authorized a faithful Rust port of Stockfish 19 in
 `crates/aster-core` (GPL-3.0-or-later, Stockfish attribution preserved). It is a
 port, not a wrapper: no C++ code, Stockfish binary or external process runs
-behind it. Its first acceptance gate is an identical `bench` node signature to
-the pinned official sf_19 binary (2,497,913 nodes). The user's later goal is to
+behind it. Its first acceptance gate was an identical `bench` node signature to
+the pinned official sf_19 binary (2,497,913 nodes). On 2026-10-19 the user
+approved updating the core to the Stockfish development source at commit
+`effdc3fd3f` (2026-10-17, network nn-c9e480e92425); the gate is now that
+commit's signature, **1,559,611 nodes**, with Stockfish attribution recorded in
+`UPSTREAM.json` and the `.license` notices. The user's later goal is to
 use the port to make Aster stronger than Stockfish; that remains unproven until
 predeclared paired matches show it. A faster port is a speed result, not a
 strength claim.
@@ -25,7 +29,7 @@ opponent/research reference, never an external runtime engine behind Aster.
 - `python scripts/verify_source_names.py`
 - `python scripts/fetch_rust_network.py`
 - `python scripts/fetch_aster_network.py`
-- `cargo run --release --locked -p aster-core -- bench` must print 2,497,913 nodes
+- `cargo run --release --locked -p aster-core -- bench` must print 1,559,611 nodes
 - `cargo build --workspace --release --locked`
 - `cargo test --workspace --release --locked`
 - `cargo test --workspace --locked`

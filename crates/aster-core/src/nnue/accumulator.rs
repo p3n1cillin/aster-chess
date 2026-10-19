@@ -1,10 +1,10 @@
 // Aster core. Original attribution and source mapping: accumulator.rs.license.
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Modified 2026-10-19: source naming and notice layout only.
+// Modified 2026-10-19: source naming and notice layout; queen-split caches, no PSQT.
 
 use super::features::*;
 use super::kernels::*;
-use super::network::{FeatureTransformer, L1, PSQT_BUCKETS};
+use super::network::{FeatureTransformer, L1};
 use crate::bitboard::*;
 use crate::position::Position;
 use crate::types::*;
@@ -13,7 +13,6 @@ use crate::types::*;
 #[derive(Clone)]
 pub struct AccumulatorState {
     pub accumulation: [[i16; L1]; COLOR_NB],
-    pub psqt: [[i32; PSQT_BUCKETS]; COLOR_NB],
     pub computed: [bool; COLOR_NB],
     pub dirties: Dirties,
 }
@@ -22,7 +21,6 @@ impl Default for AccumulatorState {
     fn default() -> Self {
         AccumulatorState {
             accumulation: [[0; L1]; COLOR_NB],
-            psqt: [[0; PSQT_BUCKETS]; COLOR_NB],
             computed: [false; 2],
             dirties: Dirties::default(),
         }
@@ -33,14 +31,14 @@ impl Default for AccumulatorState {
 #[derive(Clone)]
 pub struct CacheEntry {
     pub accumulation: [i16; L1],
-    pub psqt: [i32; PSQT_BUCKETS],
     pub pieces: [u8; 64],
     pub piece_bb: Bitboard,
 }
 
-/// Finny tables: per king square and perspective, the HalfKA accumulation of
-/// the last position seen with that king square.
+/// Finny tables: per opponent-queen state, king square and perspective, the
+/// piece-square accumulation of the last position seen with that king square.
 pub struct AccumulatorCaches {
+    // index: opponent_has_queen * 64 + king square
     entries: Vec<[CacheEntry; COLOR_NB]>,
 }
 
@@ -48,24 +46,31 @@ impl AccumulatorCaches {
     pub fn new(ft: &FeatureTransformer) -> Self {
         let e = CacheEntry {
             accumulation: *ft.biases,
-            psqt: [0; PSQT_BUCKETS],
             pieces: [0; 64],
             piece_bb: 0,
         };
         AccumulatorCaches {
-            entries: vec![[e.clone(), e]; 64],
+            entries: vec![[e.clone(), e]; 2 * 64],
         }
     }
     pub fn clear(&mut self, ft: &FeatureTransformer) {
         for pair in self.entries.iter_mut() {
             for e in pair.iter_mut() {
                 e.accumulation = *ft.biases;
-                e.psqt = [0; PSQT_BUCKETS];
                 e.pieces = [0; 64];
                 e.piece_bb = 0;
             }
         }
     }
+    #[inline(always)]
+    fn slot(opponent_has_queen: bool, ksq: Square) -> usize {
+        opponent_has_queen as usize * 64 + ksq
+    }
+}
+
+#[inline(always)]
+fn opponent_has_queen(pos: &Position, persp: Color) -> bool {
+    pos.pieces_ct(flip_color(persp), QUEEN) != 0
 }
 
 pub const MAX_SIZE: usize = MAX_PLY as usize + 1;
@@ -89,41 +94,31 @@ fn get_changed_pieces(old: &[u8; 64], new: &[u8; 64]) -> Bitboard {
     changed_squares(old, new)
 }
 
-type PsqRows<'a> = ValueList<&'a [i16], 40>;
-type ThrRows<'a> = ValueList<&'a [i8], 256>;
+// Weight rows of one update: up to 32 piece-square plus 256 threat rows.
+type WeightRows<'a> = ValueList<&'a [i8], 288>;
 
 #[inline(always)]
-fn psq_rows<'a>(ft: &'a FeatureTransformer, idx: &PsqIndexList, out: &mut PsqRows<'a>) {
+fn psq_rows<'a>(ft: &'a FeatureTransformer, idx: &PsqIndexList, out: &mut WeightRows<'a>) {
     for &i in idx.as_slice() {
         out.push(psq_row(ft, i));
     }
 }
 #[inline(always)]
-fn thr_rows<'a>(ft: &'a FeatureTransformer, idx: &ThreatIndexList, out: &mut ThrRows<'a>) {
+fn thr_rows<'a>(ft: &'a FeatureTransformer, idx: &ThreatIndexList, out: &mut WeightRows<'a>) {
     for &i in idx.as_slice() {
         out.push(thr_row(ft, i));
     }
 }
 
 #[inline(always)]
-fn psq_row(ft: &FeatureTransformer, idx: u16) -> &[i16] {
+fn psq_row(ft: &FeatureTransformer, idx: u16) -> &[i8] {
     let i = idx as usize * L1;
     &ft.weights[i..i + L1]
-}
-#[inline(always)]
-fn psq_psqt_row(ft: &FeatureTransformer, idx: u16) -> &[i32] {
-    let i = idx as usize * PSQT_BUCKETS;
-    &ft.psqt_weights[i..i + PSQT_BUCKETS]
 }
 #[inline(always)]
 fn thr_row(ft: &FeatureTransformer, idx: u16) -> &[i8] {
     let i = idx as usize * L1;
     &ft.threat_pp_weights[i..i + L1]
-}
-#[inline(always)]
-fn thr_psqt_row(ft: &FeatureTransformer, idx: u16) -> &[i32] {
-    let i = idx as usize * PSQT_BUCKETS;
-    &ft.threat_pp_psqt_weights[i..i + PSQT_BUCKETS]
 }
 
 #[allow(clippy::too_many_arguments)]
@@ -141,29 +136,12 @@ fn apply_combined(
         to.accumulation[persp].as_mut_ptr(),
         from.accumulation[persp].as_ptr(),
         &IdxRows {
-            base16: ft.weights.as_ptr(),
-            sub16: psq_removed.as_slice(),
-            add16: psq_added.as_slice(),
+            base_psq: ft.weights.as_ptr(),
+            sub_psq: psq_removed.as_slice(),
+            add_psq: psq_added.as_slice(),
             base8: ft.threat_pp_weights.as_ptr(),
             sub8: thr_removed.as_slice(),
             add8: thr_added.as_slice(),
-        },
-    );
-
-    update_psqt_idx(
-        &IdxRows {
-            base16: std::ptr::null(),
-            sub16: psq_removed.as_slice(),
-            add16: psq_added.as_slice(),
-            base8: std::ptr::null(),
-            sub8: thr_removed.as_slice(),
-            add8: thr_added.as_slice(),
-        },
-        &PsqtRows {
-            src: from.psqt[persp].as_ptr(),
-            dst: to.psqt[persp].as_mut_ptr(),
-            base16: ft.psqt_weights.as_ptr(),
-            base8: ft.threat_pp_psqt_weights.as_ptr(),
         },
     );
 }
@@ -239,6 +217,7 @@ impl AccumulatorStack {
         } else {
             let dp = self.latest().dirties.dirty_piece;
             if dp.pc == make_piece(persp, KING)
+                && dp.remove_pc != make_piece(flip_color(persp), QUEEN)
                 && self.size >= 2
                 && self.accs[self.size - 2].computed[persp]
                 && popcount(pos.pieces()) >= MIN_PC_COUNT_HYBRID
@@ -280,9 +259,10 @@ impl AccumulatorStack {
         begin: usize,
     ) {
         let ksq = pos.king_square(persp);
+        let q = opponent_has_queen(pos, persp);
         for next in begin + 1..self.size {
             let (target, computed) = self.pair(next, next - 1);
-            update_accumulator_incremental::<true>(persp, ft, ksq, target, computed);
+            update_accumulator_incremental::<true>(persp, ft, ksq, q, target, computed);
         }
     }
 
@@ -294,10 +274,11 @@ impl AccumulatorStack {
         end: usize,
     ) {
         let ksq = pos.king_square(persp);
+        let q = opponent_has_queen(pos, persp);
         let mut next = self.size as isize - 2;
         while next >= end as isize {
             let (target, computed) = self.pair(next as usize, next as usize + 1);
-            update_accumulator_incremental::<false>(persp, ft, ksq, target, computed);
+            update_accumulator_incremental::<false>(persp, ft, ksq, q, target, computed);
             next -= 1;
         }
     }
@@ -311,18 +292,20 @@ impl AccumulatorStack {
     ) {
         let wk = pos.king_square(WHITE);
         let bk = pos.king_square(BLACK);
+        let wq = opponent_has_queen(pos, WHITE);
+        let bq = opponent_has_queen(pos, BLACK);
         let shared_begin = white_begin.max(black_begin);
         for next in white_begin + 1..=shared_begin {
             let (t, c) = self.pair(next, next - 1);
-            update_accumulator_incremental::<true>(WHITE, ft, wk, t, c);
+            update_accumulator_incremental::<true>(WHITE, ft, wk, wq, t, c);
         }
         for next in black_begin + 1..=shared_begin {
             let (t, c) = self.pair(next, next - 1);
-            update_accumulator_incremental::<true>(BLACK, ft, bk, t, c);
+            update_accumulator_incremental::<true>(BLACK, ft, bk, bq, t, c);
         }
         for next in shared_begin + 1..self.size {
             let (t, c) = self.pair(next, next - 1);
-            update_accumulator_incremental_both(ft, wk, bk, t, c);
+            update_accumulator_incremental_both(ft, [(wk, wq), (bk, bq)], t, c);
         }
     }
 }
@@ -331,6 +314,7 @@ fn update_accumulator_incremental<const FORWARD: bool>(
     persp: Color,
     ft: &FeatureTransformer,
     ksq: Square,
+    opp_queen: bool,
     target: &mut AccumulatorState,
     computed: &AccumulatorState,
 ) {
@@ -359,7 +343,14 @@ fn update_accumulator_incremental<const FORWARD: bool>(
             &mut thr_removed,
             &mut thr_added,
         );
-        psq_append_changed_indices(persp, ksq, &d.dirty_piece, &mut psq_removed, &mut psq_added);
+        psq_append_changed_indices(
+            persp,
+            ksq,
+            &d.dirty_piece,
+            opp_queen,
+            &mut psq_removed,
+            &mut psq_added,
+        );
     } else {
         threat_append_changed_indices(
             persp,
@@ -375,7 +366,14 @@ fn update_accumulator_incremental<const FORWARD: bool>(
             &mut thr_added,
             &mut thr_removed,
         );
-        psq_append_changed_indices(persp, ksq, &d.dirty_piece, &mut psq_added, &mut psq_removed);
+        psq_append_changed_indices(
+            persp,
+            ksq,
+            &d.dirty_piece,
+            opp_queen,
+            &mut psq_added,
+            &mut psq_removed,
+        );
     }
     apply_combined(
         persp,
@@ -392,41 +390,50 @@ fn update_accumulator_incremental<const FORWARD: bool>(
 
 fn update_accumulator_incremental_both(
     ft: &FeatureTransformer,
-    wk: Square,
-    bk: Square,
+    kings: [(Square, bool); COLOR_NB],
     target: &mut AccumulatorState,
     computed: &AccumulatorState,
 ) {
-    for (persp, ksq) in [(WHITE, wk), (BLACK, bk)] {
-        let mut psq_removed = PsqIndexList::new();
-        let mut psq_added = PsqIndexList::new();
-        let mut thr_removed = ThreatIndexList::new();
-        let mut thr_added = ThreatIndexList::new();
-        let d = &target.dirties;
-        threat_append_changed_indices(
-            persp,
-            ksq,
-            &d.dirty_threats,
-            &mut thr_removed,
-            &mut thr_added,
-        );
+    // Gather (and start prefetching) every changed row of both perspectives
+    // before touching either accumulator.
+    let mut thr_removed = [ThreatIndexList::new(), ThreatIndexList::new()];
+    let mut thr_added = [ThreatIndexList::new(), ThreatIndexList::new()];
+    let mut psq_removed = [PsqIndexList::new(), PsqIndexList::new()];
+    let mut psq_added = [PsqIndexList::new(), PsqIndexList::new()];
+    let d = &target.dirties;
+    threat_append_changed_indices_both(
+        [kings[WHITE].0, kings[BLACK].0],
+        &d.dirty_threats,
+        &mut thr_removed,
+        &mut thr_added,
+    );
+    for (persp, (ksq, opp_queen)) in [WHITE, BLACK].into_iter().zip(kings) {
         pp_append_changed_indices(
             persp,
             ksq,
             &d.dirty_pawn_pairs,
-            &mut thr_removed,
-            &mut thr_added,
+            &mut thr_removed[persp],
+            &mut thr_added[persp],
         );
-        psq_append_changed_indices(persp, ksq, &d.dirty_piece, &mut psq_removed, &mut psq_added);
+        psq_append_changed_indices(
+            persp,
+            ksq,
+            &d.dirty_piece,
+            opp_queen,
+            &mut psq_removed[persp],
+            &mut psq_added[persp],
+        );
+    }
+    for persp in [WHITE, BLACK] {
         apply_combined(
             persp,
             ft,
             computed,
             target,
-            &psq_added,
-            &psq_removed,
-            &thr_added,
-            &thr_removed,
+            &psq_added[persp],
+            &psq_removed[persp],
+            &thr_added[persp],
+            &thr_removed[persp],
         );
     }
     target.computed = [true, true];
@@ -458,9 +465,14 @@ fn update_accumulator_hybrid(
     previous[old_ksq] = make_piece(persp, KING) as u8;
     previous_bb |= square_bb(old_ksq);
 
+    let q = opponent_has_queen(pos, persp);
     let (old_entry, new_entry) = {
         let p = cache.entries.as_mut_ptr();
-        unsafe { (&(*p.add(old_ksq))[persp], &mut (*p.add(new_ksq))[persp]) }
+        let (o, n) = (
+            AccumulatorCaches::slot(q, old_ksq),
+            AccumulatorCaches::slot(q, new_ksq),
+        );
+        unsafe { (&(*p.add(o))[persp], &mut (*p.add(n))[persp]) }
     };
 
     let mut old_remove = PsqIndexList::new();
@@ -482,11 +494,12 @@ fn update_accumulator_hybrid(
             sq,
             old_entry.pieces[sq] as Piece,
             old_ksq,
+            q,
         ));
     }
     while old_added_bb != 0 {
         let sq = pop_lsb(&mut old_added_bb);
-        old_add.push(psq_make_index(persp, sq, previous[sq] as Piece, old_ksq));
+        old_add.push(psq_make_index(persp, sq, previous[sq] as Piece, old_ksq, q));
     }
     while new_removed_bb != 0 {
         let sq = pop_lsb(&mut new_removed_bb);
@@ -495,11 +508,12 @@ fn update_accumulator_hybrid(
             sq,
             new_entry.pieces[sq] as Piece,
             new_ksq,
+            q,
         ));
     }
     while new_added_bb != 0 {
         let sq = pop_lsb(&mut new_added_bb);
-        new_add.push(psq_make_index(persp, sq, current[sq] as Piece, new_ksq));
+        new_add.push(psq_make_index(persp, sq, current[sq] as Piece, new_ksq, q));
     }
 
     let mut thr_removed = ThreatIndexList::new();
@@ -519,74 +533,41 @@ fn update_accumulator_hybrid(
         &mut thr_added,
     );
 
-    // HalfKA part: refresh the new cache entry in place.
+    // Piece-square part: refresh the new cache entry in place.
     {
-        let (mut s16, mut a16) = (PsqRows::new(), PsqRows::new());
-        psq_rows(ft, &new_remove, &mut s16);
-        psq_rows(ft, &new_add, &mut a16);
+        let (mut s8, mut a8) = (WeightRows::new(), WeightRows::new());
+        psq_rows(ft, &new_remove, &mut s8);
+        psq_rows(ft, &new_add, &mut a8);
         let p = new_entry.accumulation.as_mut_ptr();
         update_acc(
             p,
             p,
             &Rows {
-                sub16: s16.as_slice(),
-                add16: a16.as_slice(),
-                sub8: &[],
-                add8: &[],
+                sub16: &[],
+                add16: &[],
+                sub8: s8.as_slice(),
+                add8: a8.as_slice(),
             },
         );
     }
     // Adding the old accumulator adds (most of) the threats and pp weights we need,
     // then correct for the stale cached psq accumulation of the old king square.
     {
-        let (mut s16, mut a16, mut s8, mut a8) = (
-            PsqRows::new(),
-            PsqRows::new(),
-            ThrRows::new(),
-            ThrRows::new(),
-        );
-        a16.push(&computed.accumulation[persp][..]);
-        s16.push(&old_entry.accumulation[..]);
-        psq_rows(ft, &old_remove, &mut a16);
-        psq_rows(ft, &old_add, &mut s16);
+        let (mut s8, mut a8) = (WeightRows::new(), WeightRows::new());
+        psq_rows(ft, &old_remove, &mut a8);
+        psq_rows(ft, &old_add, &mut s8);
         thr_rows(ft, &thr_removed, &mut s8);
         thr_rows(ft, &thr_added, &mut a8);
         update_acc(
             target.accumulation[persp].as_mut_ptr(),
             new_entry.accumulation.as_ptr(),
             &Rows {
-                sub16: s16.as_slice(),
-                add16: a16.as_slice(),
+                sub16: &[&old_entry.accumulation[..]],
+                add16: &[&computed.accumulation[persp][..]],
                 sub8: s8.as_slice(),
                 add8: a8.as_slice(),
             },
         );
-    }
-
-    for &i in new_remove.as_slice() {
-        sub_psqt(&mut new_entry.psqt, psq_psqt_row(ft, i));
-    }
-    for &i in new_add.as_slice() {
-        add_psqt(&mut new_entry.psqt, psq_psqt_row(ft, i));
-    }
-    let psqt = &mut target.psqt[persp];
-    *psqt = new_entry.psqt;
-    for j in 0..PSQT_BUCKETS {
-        psqt[j] = psqt[j]
-            .wrapping_add(computed.psqt[persp][j])
-            .wrapping_sub(old_entry.psqt[j]);
-    }
-    for &i in old_remove.as_slice() {
-        add_psqt(psqt, psq_psqt_row(ft, i));
-    }
-    for &i in old_add.as_slice() {
-        sub_psqt(psqt, psq_psqt_row(ft, i));
-    }
-    for &i in thr_removed.as_slice() {
-        sub_psqt(psqt, thr_psqt_row(ft, i));
-    }
-    for &i in thr_added.as_slice() {
-        add_psqt(psqt, thr_psqt_row(ft, i));
     }
 
     new_entry.pieces = *current;
@@ -603,7 +584,8 @@ fn update_accumulator_refresh_cache(
     cache: &mut AccumulatorCaches,
 ) {
     let ksq = pos.king_square(persp);
-    let entry = &mut cache.entries[ksq][persp];
+    let q = opponent_has_queen(pos, persp);
+    let entry = &mut cache.entries[AccumulatorCaches::slot(q, ksq)][persp];
     let mut removed = PsqIndexList::new();
     let mut added = PsqIndexList::new();
 
@@ -612,11 +594,11 @@ fn update_accumulator_refresh_cache(
     let mut added_bb = changed & pos.pieces();
     while removed_bb != 0 {
         let sq = pop_lsb(&mut removed_bb);
-        removed.push(psq_make_index(persp, sq, entry.pieces[sq] as Piece, ksq));
+        removed.push(psq_make_index(persp, sq, entry.pieces[sq] as Piece, ksq, q));
     }
     while added_bb != 0 {
         let sq = pop_lsb(&mut added_bb);
-        added.push(psq_make_index(persp, sq, pos.piece_on(sq), ksq));
+        added.push(psq_make_index(persp, sq, pos.piece_on(sq), ksq, q));
     }
     entry.piece_bb = pos.pieces();
     entry.pieces = *pos.piece_array();
@@ -626,16 +608,15 @@ fn update_accumulator_refresh_cache(
     pp_append_active_indices(persp, pos, &mut active);
 
     {
-        let (mut s16, mut a16) = (PsqRows::new(), PsqRows::new());
-        psq_rows(ft, &removed, &mut s16);
-        psq_rows(ft, &added, &mut a16);
         let p = entry.accumulation.as_mut_ptr();
-        update_acc(
+        update_acc_idx(
             p,
             p,
-            &Rows {
-                sub16: s16.as_slice(),
-                add16: a16.as_slice(),
+            &IdxRows {
+                base_psq: ft.weights.as_ptr(),
+                sub_psq: removed.as_slice(),
+                add_psq: added.as_slice(),
+                base8: ft.threat_pp_weights.as_ptr(),
                 sub8: &[],
                 add8: &[],
             },
@@ -644,47 +625,30 @@ fn update_accumulator_refresh_cache(
             acc_state.accumulation[persp].as_mut_ptr(),
             entry.accumulation.as_ptr(),
             &IdxRows {
-                base16: ft.weights.as_ptr(),
-                sub16: &[],
-                add16: &[],
+                base_psq: ft.weights.as_ptr(),
+                sub_psq: &[],
+                add_psq: &[],
                 base8: ft.threat_pp_weights.as_ptr(),
                 sub8: &[],
                 add8: active.as_slice(),
             },
         );
     }
-
-    for &i in removed.as_slice() {
-        sub_psqt(&mut entry.psqt, psq_psqt_row(ft, i));
-    }
-    for &i in added.as_slice() {
-        add_psqt(&mut entry.psqt, psq_psqt_row(ft, i));
-    }
-    let psqt = &mut acc_state.psqt[persp];
-    *psqt = entry.psqt;
-    for &i in active.as_slice() {
-        add_psqt(psqt, thr_psqt_row(ft, i));
-    }
     acc_state.computed[persp] = true;
 }
 
 /// Reference evaluation of one perspective from scratch (used by consistency checks).
-pub fn refresh_from_scratch(
-    persp: Color,
-    ft: &FeatureTransformer,
-    pos: &Position,
-) -> ([i16; L1], [i32; PSQT_BUCKETS]) {
+pub fn refresh_from_scratch(persp: Color, ft: &FeatureTransformer, pos: &Position) -> [i16; L1] {
     let ksq = pos.king_square(persp);
+    let q = opponent_has_queen(pos, persp);
     let mut acc = *ft.biases;
-    let mut psqt = [0i32; PSQT_BUCKETS];
     let mut b = pos.pieces();
     while b != 0 {
         let sq = pop_lsb(&mut b);
-        let i = psq_make_index(persp, sq, pos.piece_on(sq), ksq);
+        let i = psq_make_index(persp, sq, pos.piece_on(sq), ksq, q);
         for (a, w) in acc.iter_mut().zip(psq_row(ft, i)) {
-            *a = a.wrapping_add(*w);
+            *a = a.wrapping_add(*w as i16);
         }
-        add_psqt(&mut psqt, psq_psqt_row(ft, i));
     }
     let mut active = ThreatIndexList::new();
     threat_append_active_indices(persp, pos, &mut active);
@@ -693,7 +657,6 @@ pub fn refresh_from_scratch(
         for (a, w) in acc.iter_mut().zip(thr_row(ft, i)) {
             *a = a.wrapping_add(*w as i16);
         }
-        add_psqt(&mut psqt, thr_psqt_row(ft, i));
     }
-    (acc, psqt)
+    acc
 }

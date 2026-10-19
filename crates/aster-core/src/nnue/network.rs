@@ -1,6 +1,6 @@
 // Aster core. Original attribution and source mapping: network.rs.license.
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Modified 2026-10-19: source naming and notice layout only.
+// Modified 2026-10-19: source naming and notice layout; int8 network format without PSQT.
 
 use super::accumulator::{AccumulatorCaches, AccumulatorStack};
 use super::aligned::AlignedBuf;
@@ -13,24 +13,21 @@ pub const VERSION: u32 = 0x6A448AFA;
 pub const L1: usize = 1024;
 pub const L2: usize = 32;
 pub const L3: usize = 32;
-pub const PSQT_BUCKETS: usize = 8;
-pub const LAYER_STACKS: usize = 8;
+pub const LAYER_STACKS: usize = 32;
 pub const OUTPUT_SCALE: i32 = 16;
 pub const WEIGHT_SCALE_BITS: u32 = 6;
 pub const HIDDEN_ONE_VAL: i64 = 128;
 
 pub const THREAT_AND_PP_DIMENSIONS: usize = (THREAT_DIMENSIONS + PP_DIMENSIONS) as usize;
 
-pub const DEFAULT_NET_NAME: &str = "nn-1a298aa575a0.nnue";
+pub const DEFAULT_NET_NAME: &str = "nn-c9e480e92425.nnue";
 
 /// Input feature converter weights, stored in file (unpermuted) order:
 /// one row of L1 values per input feature.
 pub struct FeatureTransformer {
     pub biases: Box<[i16; L1]>,
-    pub weights: AlignedBuf<i16>,                // PSQ_DIMENSIONS * L1
-    pub threat_pp_weights: AlignedBuf<i8>,       // THREAT_AND_PP_DIMENSIONS * L1
-    pub psqt_weights: AlignedBuf<i32>,           // PSQ_DIMENSIONS * PSQT_BUCKETS
-    pub threat_pp_psqt_weights: AlignedBuf<i32>, // THREAT_AND_PP_DIMENSIONS * PSQT_BUCKETS
+    pub weights: AlignedBuf<i8>,           // PSQ_DIMENSIONS * L1
+    pub threat_pp_weights: AlignedBuf<i8>, // THREAT_AND_PP_DIMENSIONS * L1
 }
 
 impl FeatureTransformer {
@@ -44,7 +41,7 @@ impl FeatureTransformer {
     }
 }
 
-/// One of the 8 layer stacks selected by piece count.
+/// One of the 32 layer stacks, selected by piece count and queen presence.
 pub struct LayerStack {
     pub fc0_biases: [i32; L2],
     // Chunked layout (see kernels::chunk_layout): [L1 / 4][L2][4]
@@ -144,44 +141,17 @@ impl<'a> Reader<'a> {
     fn i32(&mut self) -> Result<i32, String> {
         Ok(i32::from_le_bytes(self.take(4)?.try_into().unwrap()))
     }
-    fn i8s(&mut self, n: usize) -> Result<Vec<i8>, String> {
-        Ok(self.take(n)?.iter().map(|&x| x as i8).collect())
+    fn i8s(&mut self, n: usize) -> Result<&'a [i8], String> {
+        let b = self.take(n)?;
+        // i8 and u8 have identical size and alignment.
+        Ok(unsafe { std::slice::from_raw_parts(b.as_ptr() as *const i8, n) })
     }
-    /// Signed LEB128 block: magic string, byte count, then `count` values.
-    fn leb128(&mut self, count: usize) -> Result<Vec<i32>, String> {
-        const MAGIC: &[u8] = b"COMPRESSED_LEB128";
-        if self.take(MAGIC.len())? != MAGIC {
-            return Err("missing LEB128 magic".into());
+    fn i16s(&mut self, out: &mut [i16]) -> Result<(), String> {
+        let bytes = self.take(out.len() * 2)?;
+        for (o, b) in out.iter_mut().zip(bytes.chunks_exact(2)) {
+            *o = i16::from_le_bytes([b[0], b[1]]);
         }
-        let bytes = self.u32()? as usize;
-        let data = self.take(bytes)?;
-        let mut out = Vec::with_capacity(count);
-        let mut p = 0;
-        while out.len() < count {
-            let mut result: u32 = 0;
-            let mut shift: u32 = 0;
-            loop {
-                let Some(&byte) = data.get(p) else {
-                    return Err("LEB128 data truncated".into());
-                };
-                p += 1;
-                result |= ((byte & 0x7f) as u32) << (shift % 32);
-                shift += 7;
-                if byte & 0x80 == 0 {
-                    let v = if shift >= 32 || byte & 0x40 == 0 {
-                        result
-                    } else {
-                        result | !((1u32 << shift) - 1)
-                    };
-                    out.push(v as i32);
-                    break;
-                }
-            }
-        }
-        if p != bytes {
-            return Err("LEB128 byte count mismatch".into());
-        }
-        Ok(out)
+        Ok(())
     }
 }
 
@@ -205,33 +175,22 @@ impl Network {
         if r.u32()? != FeatureTransformer::hash_value() {
             return Err("feature transformer hash mismatch".into());
         }
-        let biases_v = r.leb128(L1)?;
+        // Biases, threat rows, pawn-pair rows and piece-square rows, all
+        // plain little-endian (int16 biases, int8 weights).
         let mut biases = Box::new([0i16; L1]);
-        for (b, v) in biases.iter_mut().zip(biases_v) {
-            *b = v as i16;
-        }
+        r.i16s(&mut biases[..])?;
         let threat_w = r.i8s(THREAT_DIMENSIONS as usize * L1)?;
-        let threat_psqt = r.leb128(THREAT_DIMENSIONS as usize * PSQT_BUCKETS)?;
         let pp_w = r.i8s(PP_DIMENSIONS as usize * L1)?;
-        let pp_psqt = r.leb128(PP_DIMENSIONS as usize * PSQT_BUCKETS)?;
-        let weights: Vec<i16> = r
-            .leb128(PSQ_DIMENSIONS * L1)?
-            .into_iter()
-            .map(|v| v as i16)
-            .collect();
-        let psqt_weights = r.leb128(PSQ_DIMENSIONS * PSQT_BUCKETS)?;
+        let weights = r.i8s(PSQ_DIMENSIONS * L1)?;
 
-        let mut threat_pp_weights = threat_w;
-        threat_pp_weights.extend_from_slice(&pp_w);
-        let mut threat_pp_psqt_weights = threat_psqt;
-        threat_pp_psqt_weights.extend_from_slice(&pp_psqt);
+        let mut threat_pp_weights = Vec::with_capacity(threat_w.len() + pp_w.len());
+        threat_pp_weights.extend_from_slice(threat_w);
+        threat_pp_weights.extend_from_slice(pp_w);
 
         let ft = FeatureTransformer {
             biases,
-            weights: AlignedBuf::from_slice(&weights),
+            weights: AlignedBuf::from_slice(weights),
             threat_pp_weights: AlignedBuf::from_slice(&threat_pp_weights),
-            psqt_weights: AlignedBuf::from_slice(&psqt_weights),
-            threat_pp_psqt_weights: AlignedBuf::from_slice(&threat_pp_psqt_weights),
         };
         super::features::set_prefetch_base(ft.threat_pp_weights.as_ptr());
 
@@ -245,17 +204,16 @@ impl Network {
                 *b = r.i32()?;
             }
             let fc0_weights =
-                AlignedBuf::from_slice(&kernels::chunk_layout(&r.i8s(L2 * L1)?, L2, L1));
+                AlignedBuf::from_slice(&kernels::chunk_layout(r.i8s(L2 * L1)?, L2, L1));
             let mut fc1_biases = [0i32; L3];
             for b in fc1_biases.iter_mut() {
                 *b = r.i32()?;
             }
             let fc1_weights =
-                AlignedBuf::from_slice(&kernels::chunk_layout(&r.i8s(L3 * 64)?, L3, 64));
+                AlignedBuf::from_slice(&kernels::chunk_layout(r.i8s(L3 * 64)?, L3, 64));
             let fc2_bias = r.i32()?;
-            let w2 = r.i8s(128)?;
             let mut fc2_weights = [0i8; 128];
-            fc2_weights.copy_from_slice(&w2);
+            fc2_weights.copy_from_slice(r.i8s(128)?);
             stacks.push(LayerStack {
                 fc0_biases,
                 fc0_weights,
@@ -280,15 +238,15 @@ impl Network {
         Self::load_bytes(&bytes)
     }
 
-    /// Returns (psqt, positional) in internal units.
+    /// Raw network output in internal units, from the side to move's view.
     pub fn evaluate(
         &self,
         pos: &Position,
         stack: &mut AccumulatorStack,
         caches: &mut AccumulatorCaches,
-    ) -> (Value, Value) {
+    ) -> Value {
         let t_total = crate::prof::prof_start!();
-        let bucket = (popcount_all(pos) - 1) as usize / 4;
+        let bucket = Self::bucket(pos);
         let mut transformed = std::mem::MaybeUninit::<Aligned<[u8; L1]>>::uninit();
 
         let t = crate::prof::prof_start!();
@@ -297,7 +255,6 @@ impl Network {
         let t = crate::prof::prof_start!();
         let acc = stack.latest();
         let stm = pos.side_to_move();
-        let psqt = (acc.psqt[stm][bucket] - acc.psqt[flip_color(stm)][bucket]) / 2;
 
         let persp = [stm, flip_color(stm)];
         // Fully written by the two transform calls below.
@@ -318,7 +275,16 @@ impl Network {
         let positional = self.stacks[bucket].propagate(transformed);
         crate::prof::prof_end!(2, t);
         crate::prof::prof_end!(5, t_total);
-        (psqt / OUTPUT_SCALE, positional / OUTPUT_SCALE)
+        positional / OUTPUT_SCALE
+    }
+
+    /// Layer stack: four per piece-count band, by which sides have a queen.
+    #[inline(always)]
+    pub fn bucket(pos: &Position) -> usize {
+        let stm = pos.side_to_move();
+        let queens = ((pos.pieces_ct(stm, QUEEN) != 0) as usize) << 1
+            | (pos.pieces_ct(flip_color(stm), QUEEN) != 0) as usize;
+        (popcount_all(pos) - 1) as usize / 4 * 4 + queens
     }
 }
 

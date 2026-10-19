@@ -9,10 +9,10 @@ import urllib.request
 import uuid
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-NAME = "nn-1a298aa575a0.nnue"
+NAME = "nn-c9e480e92425.nnue"
 URL = research_text('network.primary_prefix') + NAME
 MIRROR = (research_text('network.mirror_prefix') + NAME)
-SHA256 = "1a298aa575a085434d29027978dc36867fe9c5bcea9376654b7a8eba1e52dfc2"
+SHA256 = "c9e480e92425f887df6ab9b05c6180fbd762b07879df9d9845f1aa75440caa73"
 
 
 def digest(path):

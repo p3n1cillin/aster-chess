@@ -1,24 +1,23 @@
 // Aster core. Original attribution and source mapping: movegen.rs.license.
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Modified 2026-10-19: source naming and notice layout only.
+// Modified 2026-10-19: source naming and notice layout; legal-only generation.
 
 use crate::bitboard::*;
 use crate::position::Position;
 use crate::types::*;
 
+/// All generated moves are legal. `Legal` is every legal move of the position.
 #[derive(Copy, Clone, PartialEq, Eq, Debug)]
 pub enum GenType {
     Captures,
     Quiets,
     Evasions,
-    NonEvasions,
     Legal,
 }
 
 pub const CAPTURES: u8 = 0;
 pub const QUIETS: u8 = 1;
 pub const EVASIONS: u8 = 2;
-pub const NON_EVASIONS: u8 = 3;
 
 pub struct MoveList {
     // 32 slack slots allow unmasked 32-move vector stores near the end.
@@ -41,7 +40,6 @@ impl MoveList {
             GenType::Captures => generate::<CAPTURES>(pos, &mut ml),
             GenType::Quiets => generate::<QUIETS>(pos, &mut ml),
             GenType::Evasions => generate::<EVASIONS>(pos, &mut ml),
-            GenType::NonEvasions => generate::<NON_EVASIONS>(pos, &mut ml),
             GenType::Legal => generate_legal(pos, &mut ml),
         }
         ml
@@ -162,7 +160,7 @@ fn splat_moves(ml: &mut MoveList, from: Square, mut to_bb: Bitboard) {
 
 #[inline(always)]
 fn make_promotions<const T: u8>(ml: &mut MoveList, d: Direction, enemy: bool, to: Square) {
-    let all = T == EVASIONS || T == NON_EVASIONS;
+    let all = T == EVASIONS;
     let from = sq_add(to, -d);
     if T == CAPTURES || all {
         ml.push(Move::make(PROMOTION, from, to, QUEEN));
@@ -195,11 +193,18 @@ fn generate_pawn_moves<const T: u8>(
         pos.pieces_c(them)
     };
 
+    let pinned = pos.blockers_for_king(us);
+    let ksq = pos.king_square(us);
+
     let pawns_on7 = pos.pieces_ct(us, PAWN) & t_rank7;
     let pawns_not_on7 = pos.pieces_ct(us, PAWN) & !t_rank7;
+    // A pinned pawn may only move along its pin ray
+    let pushable = !pinned | file_bb(file_of(ksq));
+    let can_capture_left = !pinned | antidiag_bb(ksq);
+    let can_capture_right = !pinned | diag_bb(ksq);
 
     if T != CAPTURES {
-        let mut b1 = shift(pawns_not_on7, up) & empty_squares;
+        let mut b1 = shift(pawns_not_on7 & pushable, up) & empty_squares;
         let mut b2 = shift(b1 & t_rank3, up) & empty_squares;
         if T == EVASIONS {
             b1 &= target;
@@ -210,9 +215,9 @@ fn generate_pawn_moves<const T: u8>(
     }
 
     if pawns_on7 != 0 {
-        let mut b1 = shift(pawns_on7, up_right) & enemies;
-        let mut b2 = shift(pawns_on7, up_left) & enemies;
-        let mut b3 = shift(pawns_on7, up) & empty_squares;
+        let mut b1 = shift(pawns_on7 & can_capture_right, up_right) & enemies;
+        let mut b2 = shift(pawns_on7 & can_capture_left, up_left) & enemies;
+        let mut b3 = shift(pawns_on7 & pushable, up) & empty_squares;
         if T == EVASIONS {
             b3 &= target;
         }
@@ -227,19 +232,20 @@ fn generate_pawn_moves<const T: u8>(
         }
     }
 
-    if T == CAPTURES || T == EVASIONS || T == NON_EVASIONS {
-        let b1 = shift(pawns_not_on7, up_right) & enemies;
-        let b2 = shift(pawns_not_on7, up_left) & enemies;
+    if T == CAPTURES || T == EVASIONS {
+        let b1 = shift(pawns_not_on7 & can_capture_right, up_right) & enemies;
+        let b2 = shift(pawns_not_on7 & can_capture_left, up_left) & enemies;
         splat_pawn_moves(ml, up_right, b1);
         splat_pawn_moves(ml, up_left, b2);
 
         let ep = pos.ep_square();
-        if ep != SQ_NONE {
-            // An en passant capture cannot resolve a discovered check
-            if T == EVASIONS && target & square_bb(sq_add(ep, up)) != 0 {
-                return;
-            }
-            let mut b1 = pawns_not_on7 & pawn_attacks_from(them, ep);
+        // An en passant capture cannot resolve a discovered check
+        if ep != SQ_NONE && !(T == EVASIONS && target & square_bb(sq_add(ep, up)) != 0) {
+            let ep_bb = square_bb(ep);
+            let mut b1 = pawns_not_on7
+                & ((can_capture_right & shift(ep_bb, -up_right))
+                    | (can_capture_left & shift(ep_bb, -up_left)));
+            debug_assert!(b1 != 0);
             while b1 != 0 {
                 ml.push(Move::make(EN_PASSANT, pop_lsb(&mut b1), ep, KNIGHT));
             }
@@ -249,11 +255,24 @@ fn generate_pawn_moves<const T: u8>(
 
 #[inline(always)]
 fn generate_moves(pos: &Position, ml: &mut MoveList, us: Color, pt: PieceType, target: Bitboard) {
-    let mut bb = pos.pieces_ct(us, pt);
+    let ksq = pos.king_square(us);
+    let pinned = pos.blockers_for_king(us);
+
+    let mut bb = pos.pieces_ct(us, pt) & !pinned;
     while bb != 0 {
         let from = pop_lsb(&mut bb);
         let b = attacks_bb(pt, from, pos.pieces()) & target;
         splat_moves(ml, from, b);
+    }
+
+    // Pinned sliders stay on the pin ray; pinned knights cannot move
+    if pt != KNIGHT {
+        let mut bb = pos.pieces_ct(us, pt) & pinned;
+        while bb != 0 {
+            let from = pop_lsb(&mut bb);
+            let b = attacks_bb(pt, from, pos.pieces()) & target & line_bb(ksq, from);
+            splat_moves(ml, from, b);
+        }
     }
 }
 
@@ -265,7 +284,6 @@ fn generate_all<const T: u8>(pos: &Position, ml: &mut MoveList, us: Color) {
     if T != EVASIONS || !more_than_one(pos.checkers()) {
         target = match T {
             EVASIONS => between_bb(ksq, lsb(pos.checkers())),
-            NON_EVASIONS => !pos.pieces_c(us),
             CAPTURES => pos.pieces_c(flip_color(us)),
             _ => !pos.pieces(),
         };
@@ -276,32 +294,33 @@ fn generate_all<const T: u8>(pos: &Position, ml: &mut MoveList, us: Color) {
         generate_moves(pos, ml, us, QUEEN, target);
     }
 
-    let b = pa(KING, ksq)
-        & if T == EVASIONS {
-            !pos.pieces_c(us)
-        } else {
-            target
-        };
-    splat_moves(ml, ksq, b);
+    if T == EVASIONS {
+        target = !pos.pieces_c(us);
+    }
+    // The king may only step onto squares the opponent does not attack
+    let threats = pos.threats_by(ALL_PIECES);
+    target &= !threats;
+    splat_moves(ml, ksq, pa(KING, ksq) & target);
 
-    if (T == QUIETS || T == NON_EVASIONS) && pos.can_castle(color_castling(us, ANY_CASTLING)) {
+    if T == QUIETS && pos.can_castle(color_castling(us, ANY_CASTLING)) {
         for cr in [
             color_castling(us, KING_SIDE),
             color_castling(us, QUEEN_SIDE),
         ] {
-            if !pos.castling_impeded(cr) && pos.can_castle(cr) {
-                ml.push(Move::make(
-                    CASTLING,
-                    ksq,
-                    pos.castling_rook_square(cr),
-                    KNIGHT,
-                ));
+            let rook_sq = pos.castling_rook_square(cr);
+            let to = relative_square(us, if rook_sq > ksq { SQ_G1 } else { SQ_C1 });
+            if !pos.castling_impeded(cr)
+                && pos.can_castle(cr)
+                && between_bb(ksq, to) & threats == 0
+                && pos.blockers_for_king(us) & square_bb(rook_sq) == 0
+            {
+                ml.push(Move::make(CASTLING, ksq, rook_sq, KNIGHT));
             }
         }
     }
 }
 
-/// Generates pseudo-legal moves of the given type, appending to `ml`.
+/// Generates legal moves of the given type, appending to `ml`.
 #[inline]
 pub fn generate<const T: u8>(pos: &Position, ml: &mut MoveList) {
     debug_assert!((T == EVASIONS) == (pos.checkers() != 0));
@@ -310,27 +329,10 @@ pub fn generate<const T: u8>(pos: &Position, ml: &mut MoveList) {
 
 /// Generates all the legal moves in the given position.
 pub fn generate_legal(pos: &Position, ml: &mut MoveList) {
-    let us = pos.side_to_move();
-    let pinned = pos.blockers_for_king(us) & pos.pieces_c(us);
-    let ksq = pos.king_square(us);
-    let start = ml.len;
     if pos.checkers() != 0 {
         generate::<EVASIONS>(pos, ml);
     } else {
-        generate::<NON_EVASIONS>(pos, ml);
-    }
-    let mut cur = start;
-    while cur != ml.len {
-        let m = ml.as_slice()[cur];
-        if ((pinned & square_bb(m.from_sq())) != 0
-            || m.from_sq() == ksq
-            || m.type_of() == EN_PASSANT)
-            && !pos.legal(m)
-        {
-            ml.len -= 1;
-            ml.moves[cur] = ml.moves[ml.len];
-        } else {
-            cur += 1;
-        }
+        generate::<CAPTURES>(pos, ml);
+        generate::<QUIETS>(pos, ml);
     }
 }

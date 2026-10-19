@@ -1,6 +1,6 @@
 // Aster core. Original attribution and source mapping: features.rs.license.
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Modified 2026-10-19: source naming and notice layout only.
+// Modified 2026-10-19: source naming and notice layout; K32Q2 king/queen buckets.
 
 use crate::bitboard::*;
 use crate::position::Position;
@@ -8,11 +8,12 @@ use crate::types::*;
 use std::sync::OnceLock;
 
 // ---------------------------------------------------------------------------
-// HalfKAv2_hm
+// King-bucketed piece-square features: 32 own-king buckets, each split by
+// whether the opponent still has a queen.
 // ---------------------------------------------------------------------------
 
-pub const PSQ_DIMENSIONS: usize = 64 * 11 * 64 / 2; // 22528
-pub const PSQ_HASH: u32 = 0x7f234cb8;
+pub const PSQ_DIMENSIONS: usize = 64 * 11 * 64; // 45056
+pub const PSQ_HASH: u32 = 0x32b5e284;
 
 const PS_W_PAWN: u16 = 0;
 const PS_B_PAWN: u16 = 64;
@@ -80,7 +81,7 @@ static KING_BUCKETS: [u32; 64] = {
     let mut r = [0u32; 64];
     let mut i = 0;
     while i < 64 {
-        r[i] = B[i] * PS_NB;
+        r[i] = B[i] * 2 * PS_NB;
         i += 1;
     }
     r
@@ -103,12 +104,56 @@ static HALFKA_ORIENT: [u32; 64] = {
 
 pub type PsqIndexList = ValueList<u16, 32>;
 
+/// Per (queen half, perspective, king square): the offset added to the
+/// oriented square for each piece. Offsets are multiples of 64, so adding the
+/// orientation (< 64) to them commutes with XOR-ing it into the square.
+struct PsqOffsets([[[[u16; PIECE_NB]; 64]; COLOR_NB]; 2]);
+
+static PSQ_OFFSETS: PsqOffsets = {
+    let mut t = [[[[0u16; PIECE_NB]; 64]; COLOR_NB]; 2];
+    let mut q = 0;
+    while q < 2 {
+        let mut c = 0;
+        while c < COLOR_NB {
+            let mut k = 0;
+            while k < 64 {
+                let flip = 56 * c as u32;
+                let orient = HALFKA_ORIENT[k] ^ flip;
+                let mut pc = 0;
+                while pc < PIECE_NB {
+                    t[q][c][k][pc] = (PIECE_SQUARE_INDEX[c][pc] as u32
+                        + KING_BUCKETS[k ^ flip as usize]
+                        + q as u32 * PS_NB
+                        + orient) as u16;
+                    pc += 1;
+                }
+                k += 1;
+            }
+            c += 1;
+        }
+        q += 1;
+    }
+    PsqOffsets(t)
+};
+
 #[inline(always)]
-pub fn psq_make_index(perspective: Color, s: Square, pc: Piece, ksq: Square) -> u16 {
-    let flip = 56 * perspective as u32;
-    ((s as u32 ^ HALFKA_ORIENT[ksq] ^ flip)
-        + PIECE_SQUARE_INDEX[perspective][pc] as u32
-        + KING_BUCKETS[ksq ^ flip as usize]) as u16
+pub fn psq_make_index(
+    perspective: Color,
+    s: Square,
+    pc: Piece,
+    ksq: Square,
+    opponent_has_queen: bool,
+) -> u16 {
+    debug_assert!(perspective < COLOR_NB && ksq < 64 && pc < PIECE_NB);
+    let off = unsafe {
+        *PSQ_OFFSETS
+            .0
+            .get_unchecked(opponent_has_queen as usize)
+            .get_unchecked(perspective)
+            .get_unchecked(ksq)
+            .get_unchecked(pc)
+    };
+    s as u16 ^ off
 }
 
 #[inline(always)]
@@ -116,34 +161,33 @@ pub fn psq_append_changed_indices(
     perspective: Color,
     ksq: Square,
     diff: &DirtyPiece,
+    opponent_has_queen: bool,
     removed: &mut PsqIndexList,
     added: &mut PsqIndexList,
 ) {
-    let push = |list: &mut PsqIndexList, i: u16| list.push(i);
-    push(
-        removed,
-        psq_make_index(perspective, diff.from, diff.pc, ksq),
-    );
+    let q = opponent_has_queen;
+    removed.push(psq_make_index(perspective, diff.from, diff.pc, ksq, q));
     if diff.to != SQ_NONE {
-        push(added, psq_make_index(perspective, diff.to, diff.pc, ksq));
+        added.push(psq_make_index(perspective, diff.to, diff.pc, ksq, q));
     }
     if diff.remove_sq != SQ_NONE {
-        push(
-            removed,
-            psq_make_index(perspective, diff.remove_sq, diff.remove_pc, ksq),
-        );
+        removed.push(psq_make_index(perspective, diff.remove_sq, diff.remove_pc, ksq, q));
     }
     if diff.add_sq != SQ_NONE {
-        push(
-            added,
-            psq_make_index(perspective, diff.add_sq, diff.add_pc, ksq),
-        );
+        added.push(psq_make_index(perspective, diff.add_sq, diff.add_pc, ksq, q));
     }
 }
 
+/// A king move, or the opponent's queen appearing or disappearing (which
+/// switches the feature half), requires a full refresh.
 #[inline(always)]
 pub fn psq_requires_refresh(diff: &DirtyPiece, perspective: Color) -> bool {
-    diff.pc == make_piece(perspective, KING)
+    if diff.pc == make_piece(perspective, KING) {
+        return true;
+    }
+    let their_queen = make_piece(flip_color(perspective), QUEEN);
+    (diff.remove_sq != SQ_NONE && diff.remove_pc == their_queen)
+        || (diff.add_sq != SQ_NONE && diff.add_pc == their_queen)
 }
 
 // ---------------------------------------------------------------------------
@@ -181,50 +225,63 @@ const ALL_PIECES_LIST: [Piece; 12] = [
 
 pub type ThreatIndexList = ValueList<u16, 256>;
 
+/// A threat feature index is lut1[attacker * 16 + attacked][from < to] +
+/// lut2[attacker type][from][to], all on oriented squares and pieces. lut2
+/// folds the per-square offsets of each attacker into the target rank.
 struct ThreatLuts {
-    // [attacker][attacked][from < to]
-    lut1: [[[u32; 2]; PIECE_NB]; PIECE_NB],
-    // [attacker][from]
-    offsets: [[u32; 64]; PIECE_NB],
-    // [attacker][from][to]
-    lut2: Box<[[[u8; 64]; 64]; PIECE_NB]>,
+    // [attacker * PIECE_NB + attacked][from < to]
+    lut1: [[u32; 2]; PIECE_NB * PIECE_NB],
+    // [attacker type][from][to]
+    lut2: Box<[[[u16; 64]; 64]; PIECE_TYPE_NB]>,
 }
 
 static LUTS: OnceLock<ThreatLuts> = OnceLock::new();
 
 #[inline(always)]
 fn luts() -> &'static ThreatLuts {
-    unsafe { LUTS.get().unwrap_unchecked() }
+    // SAFETY: set by init() before any evaluation.
+    unsafe { &*LUTS_PTR.load(std::sync::atomic::Ordering::Relaxed) }
 }
 
+static LUTS_PTR: std::sync::atomic::AtomicPtr<ThreatLuts> =
+    std::sync::atomic::AtomicPtr::new(std::ptr::null_mut());
+
 pub fn init() {
-    LUTS.get_or_init(build_luts);
+    let l = LUTS.get_or_init(build_luts);
+    LUTS_PTR.store(l as *const ThreatLuts as *mut ThreatLuts, std::sync::atomic::Ordering::Release);
 }
 
 fn build_luts() -> ThreatLuts {
-    // index_lut2: popcount of attacks below `to`
-    let mut lut2 = Box::new([[[0u8; 64]; 64]; PIECE_NB]);
-    for pc in ALL_PIECES_LIST {
+    // lut2: offset of the attacker's square plus the rank of `to` among its
+    // attacks. Pawn attacks go up for white (to > from) and down for black.
+    let mut lut2 = Box::new([[[0u16; 64]; 64]; PIECE_TYPE_NB]);
+    for pt in PAWN..=KING {
+        let mut offset = 0u32;
         for from in 0..64 {
-            let attacks = if type_of(pc) == PAWN {
-                PSEUDO_ATTACKS[color_of(pc)][from]
-            } else {
-                PSEUDO_ATTACKS[type_of(pc)][from]
-            };
             for to in 0..64 {
-                lut2[pc][from][to] = (((1u64 << to) - 1) & attacks).count_ones() as u8;
+                let attacks = if pt != PAWN {
+                    PSEUDO_ATTACKS[pt][from]
+                } else if to < from {
+                    PSEUDO_ATTACKS[BLACK][from]
+                } else {
+                    PSEUDO_ATTACKS[WHITE][from]
+                };
+                lut2[pt][from][to] = (offset + (((1u64 << to) - 1) & attacks).count_ones()) as u16;
+            }
+            if pt != PAWN {
+                offset += PSEUDO_ATTACKS[pt][from].count_ones();
+            } else if (SQ_A2..=SQ_H7).contains(&from) {
+                offset += PSEUDO_ATTACKS[WHITE][from].count_ones();
             }
         }
     }
 
-    // init_threat_offsets
+    // Per-attacker feature block sizes and starts
     let mut helper = [(0u32, 0u32); PIECE_NB]; // (cumulativePieceOffset, cumulativeOffset)
-    let mut offsets = [[0u32; 64]; PIECE_NB];
     let mut cumulative_offset = 0u32;
     for pc in ALL_PIECES_LIST {
         let mut cumulative_piece_offset = 0u32;
         for from in 0..64 {
-            offsets[pc][from] = cumulative_piece_offset;
             if type_of(pc) != PAWN {
                 cumulative_piece_offset += PSEUDO_ATTACKS[type_of(pc)][from].count_ones();
             } else if (SQ_A2..=SQ_H7).contains(&from) {
@@ -241,7 +298,7 @@ fn build_luts() -> ThreatLuts {
     }
 
     // init_index_luts
-    let mut lut1 = [[[0u32; 2]; PIECE_NB]; PIECE_NB];
+    let mut lut1 = [[0u32; 2]; PIECE_NB * PIECE_NB];
     for attacker in ALL_PIECES_LIST {
         for attacked in ALL_PIECES_LIST {
             let enemy = (attacker ^ attacked) == 8;
@@ -254,8 +311,8 @@ fn build_luts() -> ThreatLuts {
                     + map as i64)
                     * helper[attacker].0 as i64) as u32;
             let excluded = map < 0;
-            lut1[attacker][attacked][0] = if excluded { THREAT_DIMENSIONS } else { feature };
-            lut1[attacker][attacked][1] = if excluded || semi_excluded {
+            lut1[attacker * PIECE_NB + attacked][0] = if excluded { THREAT_DIMENSIONS } else { feature };
+            lut1[attacker * PIECE_NB + attacked][1] = if excluded || semi_excluded {
                 THREAT_DIMENSIONS
             } else {
                 feature
@@ -263,11 +320,7 @@ fn build_luts() -> ThreatLuts {
         }
     }
 
-    ThreatLuts {
-        lut1,
-        offsets,
-        lut2,
-    }
+    ThreatLuts { lut1, lut2 }
 }
 
 #[inline(always)]
@@ -283,14 +336,12 @@ pub fn threat_make_index(
     let from_o = from ^ orientation;
     let to_o = to ^ orientation;
     let swap = 8 * perspective;
-    let att_o = attacker ^ swap;
-    let atd_o = attacked ^ swap;
+    let pair = (attacker ^ swap) * PIECE_NB + (attacked ^ swap);
     let l = luts();
     unsafe {
-        l.lut1.get_unchecked(att_o).get_unchecked(atd_o)[(from_o < to_o) as usize]
-            + *l.offsets.get_unchecked(att_o).get_unchecked(from_o)
+        *l.lut1.get_unchecked(pair).get_unchecked((from_o < to_o) as usize)
             + *l.lut2
-                .get_unchecked(att_o)
+                .get_unchecked(type_of(attacker))
                 .get_unchecked(from_o)
                 .get_unchecked(to_o) as u32
     }
@@ -305,11 +356,21 @@ pub fn set_prefetch_base(p: *const i8) {
 }
 
 #[inline(always)]
-fn prefetch_row(index: u32) {
-    let base = WEIGHT_BASE.load(std::sync::atomic::Ordering::Relaxed);
+fn weight_base() -> *const i8 {
+    WEIGHT_BASE.load(std::sync::atomic::Ordering::Relaxed)
+}
+
+/// Starts loading a weight row; `base` comes from weight_base() (null: none).
+#[inline(always)]
+fn prefetch_row_at(base: *const i8, index: u32) {
     if !base.is_null() {
         super::kernels::prefetch(base.wrapping_add(index as usize * 1024));
     }
+}
+
+#[inline(always)]
+fn prefetch_row(index: u32) {
+    prefetch_row_at(weight_base(), index);
 }
 
 #[inline(always)]
@@ -383,21 +444,64 @@ pub fn threat_append_changed_indices(
     removed: &mut ThreatIndexList,
     added: &mut ThreatIndexList,
 ) {
+    // Decode the packed threat directly: byte 0 attacker square, byte 1
+    // target square, byte 2 attacker << 4 | target piece, bit 31 added.
+    let orient = THREAT_ORIENT[ksq] as u32 ^ (56 * perspective as u32);
+    let pair_swap = 0x88 * perspective as u32;
+    let l = luts();
+    let base = weight_base();
     for &d in diff.as_slice() {
-        let index = threat_make_index(
-            perspective,
-            d.pc(),
-            d.pc_sq(),
-            d.threatened_sq(),
-            d.threatened_pc(),
-            ksq,
-        );
-        prefetch_row(index);
-        if d.add() {
+        let raw = d.0;
+        let from = (raw & 0xff) ^ orient;
+        let to = ((raw >> 8) & 0xff) ^ orient;
+        let pair = (raw >> 16) & 0xff;
+        let index = unsafe {
+            *l.lut1
+                .get_unchecked((pair ^ pair_swap) as usize)
+                .get_unchecked((from < to) as usize)
+                + *l.lut2
+                    .get_unchecked(((pair >> 4) & 7) as usize)
+                    .get_unchecked(from as usize)
+                    .get_unchecked(to as usize) as u32
+        };
+        prefetch_row_at(base, index);
+        if raw >> 31 != 0 {
             push_if_lt(added, index);
         } else {
             push_if_lt(removed, index);
         }
+    }
+}
+
+/// Both perspectives in one pass over the changed threats (white, then black
+/// lists, in the same order as two single-perspective passes).
+pub fn threat_append_changed_indices_both(
+    kings: [Square; COLOR_NB],
+    diff: &DirtyThreatList,
+    removed: &mut [ThreatIndexList; COLOR_NB],
+    added: &mut [ThreatIndexList; COLOR_NB],
+) {
+    let w_orient = THREAT_ORIENT[kings[WHITE]] as u32;
+    let b_orient = THREAT_ORIENT[kings[BLACK]] as u32 ^ 56;
+    let l = luts();
+    let base = weight_base();
+    let index = |pair: u32, from: u32, to: u32| unsafe {
+        *l.lut1.get_unchecked(pair as usize).get_unchecked((from < to) as usize)
+            + *l.lut2
+                .get_unchecked(((pair >> 4) & 7) as usize)
+                .get_unchecked(from as usize)
+                .get_unchecked(to as usize) as u32
+    };
+    for &d in diff.as_slice() {
+        let raw = d.0;
+        let (from, to, pair) = (raw & 0xff, (raw >> 8) & 0xff, (raw >> 16) & 0xff);
+        let wi = index(pair, from ^ w_orient, to ^ w_orient);
+        let bi = index(pair ^ 0x88, from ^ b_orient, to ^ b_orient);
+        prefetch_row_at(base, wi);
+        prefetch_row_at(base, bi);
+        let lists = if raw >> 31 != 0 { &mut *added } else { &mut *removed };
+        push_if_lt(&mut lists[WHITE], wi);
+        push_if_lt(&mut lists[BLACK], bi);
     }
 }
 

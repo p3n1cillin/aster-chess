@@ -9,3 +9,9 @@ Original source header, preserved verbatim for movepick.rs:
 // Like the C++ original, the picker reads history tables through pointers:
 // child searches update those tables while this picker is alive, and quiet
 // moves are scored lazily with the then-current values.
+
+Updated 2026-10-19 with changes from Stockfish development source
+(https://github.com/official-stockfish/Stockfish commit effdc3fd3f6de6e75fe1374a51a7a7eed66f880b,
+2026-10-17): legal TT-move validation, lazy threats.
+Copyright (C) 2004-2026 The Stockfish developers (see AUTHORS file).
+Licensed under the GNU General Public License v3 or later.

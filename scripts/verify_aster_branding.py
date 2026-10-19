@@ -27,7 +27,7 @@ def bench(binary, output, label):
     output.with_name(output.stem + '-' + label + '.stdout.txt').write_bytes(result.stdout.encode())
     output.with_name(output.stem + '-' + label + '.stderr.txt').write_bytes(result.stderr.encode())
     signature = re.search(r'Nodes searched\s*:\s*(\d+)', result.stderr)
-    assert signature and int(signature[1]) == 2497913, result.stderr[-1000:]
+    assert signature and int(signature[1]) == 1559611, result.stderr[-1000:]
     lines = [re.sub(r'\b(time|nps) \d+', r'\1 <timing>', line)
              for line in result.stdout.splitlines()
              if line.startswith(('info depth ', 'bestmove '))]

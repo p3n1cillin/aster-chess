@@ -1,3 +1,16 @@
+## 2026-10-19: Aster core updated to the Stockfish development source
+
+With the user's approval, Aster's core now follows Stockfish development commit
+`effdc3fd3f` (2026-10-17): network `nn-c9e480e92425`, legal-only move generation,
+lazy threat maps and the post-19 search and time changes. It is exact: bench
+**1,559,611** nodes, all 690 bench lines and 45 static evaluations identical to
+that commit built from source, on AVX-512, AVX2 and scalar paths. Verifiers,
+perft, play/proof smoke tests and 149 workspace tests pass. Against the official
+Stockfish 19 binary at 8+0.08 (128 pairs) it scored 4W/4L/248D, Elo 0.0
+(95% −7.6..+7.6): level, no superiority. Aster-owned speed work since then raised
+speed from 90.6% to 93.1% of the same commit built with clang. See
+`docs/SF-PORT.md`.
+
 ## 2026-10-19: typed Rust cache rewrite adopted
 
 Aster's cache now uses typed buckets, checked lookup and borrowed write leases.

@@ -1,6 +1,6 @@
 // Aster core. Original attribution and source mapping: movepick.rs.license.
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Modified 2026-10-19: source naming and notice layout only.
+// Modified 2026-10-19: source naming and notice layout; legal-only move picking.
 
 use crate::bitboard::*;
 use crate::history::*;
@@ -170,7 +170,7 @@ impl MovePicker {
         sh: *const SharedHistories,
         ply: i32,
     ) -> Self {
-        let valid_tt = ttm.is_some() && pos.pseudo_legal(ttm);
+        let valid_tt = ttm.is_some() && pos.legal(ttm);
         let stage = if pos.checkers() != 0 {
             EVASION_TT + !valid_tt as u8
         } else {
@@ -207,7 +207,7 @@ impl MovePicker {
         threshold: i32,
         cph: *const CapturePieceToHistory,
     ) -> Self {
-        let valid = ttm.is_some() && pos.capture_stage(ttm) && pos.pseudo_legal(ttm);
+        let valid = ttm.is_some() && pos.capture_stage(ttm) && pos.legal(ttm);
         MovePicker {
             pos,
             main_history: std::ptr::null(),
@@ -246,29 +246,31 @@ impl MovePicker {
     fn score<const T: u8>(&mut self, ml: &MoveList) -> usize {
         let pos = unsafe { &*self.pos };
         let us = pos.side_to_move();
-        let them = flip_color(us);
 
         let mut threat_by_lesser = [0u64; KING + 1];
         if T == QUIETS {
-            threat_by_lesser[KNIGHT] = pos.attacks_by(PAWN, them);
+            threat_by_lesser[KNIGHT] = pos.threats_by(PAWN);
             threat_by_lesser[BISHOP] = threat_by_lesser[KNIGHT];
-            threat_by_lesser[ROOK] = pos.attacks_by(KNIGHT, them)
-                | pos.attacks_by(BISHOP, them)
+            threat_by_lesser[ROOK] = pos.threats_by(KNIGHT)
+                | pos.threats_by(BISHOP)
                 | threat_by_lesser[KNIGHT];
-            threat_by_lesser[QUEEN] = pos.attacks_by(ROOK, them) | threat_by_lesser[ROOK];
+            threat_by_lesser[QUEEN] = pos.threats_by(ROOK) | threat_by_lesser[ROOK];
         }
 
+        // Indices are masked to their table ranges (no-ops on valid values)
+        // so the lookups below need no bounds checks.
+        let us = us & 1;
         let mut it = self.cur;
         for &mv in ml.as_slice() {
-            let from = mv.from_sq();
-            let to = mv.to_sq();
-            let pc = pos.moved_piece(mv);
-            let pt = type_of(pc);
-            let captured = pos.piece_on(to);
+            let from = mv.from_sq() & 63;
+            let to = mv.to_sq() & 63;
+            let pc = pos.moved_piece(mv) & 15;
+            let pt = type_of(pc) & 7;
+            let captured = pos.piece_on(to) & 15;
             let value;
             unsafe {
                 if T == CAPTURES {
-                    value = (*self.capture_history)[pc][to][type_of(captured)] as i32
+                    value = (*self.capture_history)[pc][to][type_of(captured) & 7] as i32
                         + 7 * PIECE_VALUE[captured];
                 } else if T == QUIETS {
                     let ch = &self.continuation_history;

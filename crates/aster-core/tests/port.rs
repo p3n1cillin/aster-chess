@@ -118,18 +118,17 @@ fn nnue_incremental_matches_refresh() {
             let m = moves.as_slice()[(rng.rand64() % moves.len() as u64) as usize];
             let gc = p.gives_check(m);
             let d = stack.push();
-            p.do_move(m, gc, Some(d));
+            p.do_move(m, gc, Some(d), None);
             played.push(m);
             if p.checkers() == 0 {
                 net.evaluate(&p, &mut stack, &mut caches);
                 for c in [WHITE, BLACK] {
-                    let (acc, psqt) = refresh_from_scratch(c, &net.ft, &p);
+                    let acc = refresh_from_scratch(c, &net.ft, &p);
                     assert!(
                         acc == stack.latest().accumulation[c],
                         "game {game} ply {} perspective {c}",
                         played.len()
                     );
-                    assert_eq!(psqt, stack.latest().psqt[c]);
                 }
             }
             // Occasionally retract moves to exercise backward updates and caches.

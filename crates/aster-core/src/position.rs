@@ -1,6 +1,6 @@
 // Aster core. Original attribution and source mapping: position.rs.license.
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Modified 2026-10-19: source naming and notice layout only.
+// Modified 2026-10-19: source naming and notice layout; lazy threats, legal-only moves.
 
 use crate::bitboard::*;
 use crate::movegen::{GenType, MoveList};
@@ -17,7 +17,7 @@ pub const START_FEN: &str = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq 
 /// StateInfo stores the information needed to restore a Position to its
 /// previous state when a move is retracted.
 #[repr(C)]
-#[derive(Copy, Clone, Default)]
+#[derive(Clone, Default)]
 pub struct StateInfo {
     // Copied when making a move
     pub material_key: Key,
@@ -36,6 +36,9 @@ pub struct StateInfo {
     pub blockers_for_king: [Bitboard; COLOR_NB],
     pub pinners: [Bitboard; COLOR_NB],
     pub check_squares: [Bitboard; PIECE_TYPE_NB],
+    // Squares attacked by the side not to move, with x-rays through the
+    // mover's king; filled lazily by threats_by() (ALL_PIECES == 0: not yet).
+    pub threats: [std::cell::Cell<Bitboard>; PIECE_TYPE_NB],
     pub captured_piece: Piece,
     pub repetition: i32,
 }
@@ -352,11 +355,10 @@ impl Position {
         self.chess960 = is_chess960;
         self.set_state();
 
-        if self.attackers_to_exist(
-            self.king_square(flip_color(self.side_to_move)),
-            self.pieces(),
-            self.side_to_move,
-        ) {
+        if self.attackers_to(self.king_square(flip_color(self.side_to_move)))
+            & self.pieces_c(self.side_to_move)
+            != 0
+        {
             return err("Unsupported position. King can be captured.");
         }
         Ok(())
@@ -390,6 +392,33 @@ impl Position {
         st.check_squares[KING] = 0;
         st.check_squares[0] = 0;
         st.check_squares[7] = 0;
+        st.threats[ALL_PIECES].set(0);
+    }
+
+    /// Fills the threat bitboards of the side not to move.
+    #[cold]
+    fn compute_threats(&self) {
+        let them = flip_color(self.side_to_move);
+        let occ = self.pieces() ^ square_bb(self.king_square(self.side_to_move));
+        let st = self.st();
+        let mut all = 0;
+        for pt in PAWN..=KING {
+            let t = self.xattacks_by(pt, them, occ);
+            st.threats[pt].set(t);
+            all |= t;
+        }
+        st.threats[ALL_PIECES].set(all);
+    }
+
+    /// Squares attacked by pieces of type `pt` (or ALL_PIECES) of the side
+    /// not to move, x-raying through the mover's king.
+    #[inline(always)]
+    pub fn threats_by(&self, pt: PieceType) -> Bitboard {
+        let st = self.st();
+        if st.threats[ALL_PIECES].get() == 0 {
+            self.compute_threats();
+        }
+        st.threats[pt].get()
     }
 
     fn set_state(&mut self) {
@@ -561,55 +590,17 @@ impl Position {
         self.attackers_to_occ(s, self.pieces())
     }
 
-    #[inline(always)]
-    pub fn attackers_to_exist(&self, s: Square, occupied: Bitboard, c: Color) -> bool {
-        (rook_attacks(s, occupied) & self.pieces_ctt(c, ROOK, QUEEN)) != 0
-            || (bishop_attacks(s, occupied) & self.pieces_ctt(c, BISHOP, QUEEN)) != 0
-            || (pawn_attacks_from(flip_color(c), s) & self.pieces_ct(c, PAWN)) != 0
-            || (pa(KNIGHT, s) & self.pieces_ct(c, KNIGHT)) != 0
-            || (pa(KING, s) & self.pieces_ct(c, KING)) != 0
-    }
-
-    /// Tests whether a pseudo-legal move is legal
+    /// Tests whether an arbitrary move (e.g. from the TT, possibly corrupted
+    /// by concurrent access or key aliasing) is legal in this position.
     pub fn legal(&self, m: Move) -> bool {
-        let us = self.side_to_move;
-        let from = m.from_sq();
-        let mut to = m.to_sq();
-
-        if m.type_of() == CASTLING {
-            to = relative_square(us, if to > from { SQ_G1 } else { SQ_C1 });
-            let step: i32 = if to > from { WEST } else { EAST };
-            let mut s = to;
-            while s != from {
-                if self.attackers_to_exist(s, self.pieces(), flip_color(us)) {
-                    return false;
-                }
-                s = sq_add(s, step);
-            }
-            return !self.chess960 || self.blockers_for_king(us) & square_bb(m.to_sq()) == 0;
-        }
-
-        if type_of(self.piece_on(from)) == KING {
-            return !self.attackers_to_exist(to, self.pieces() ^ square_bb(from), flip_color(us));
-        }
-
-        self.blockers_for_king(us) & square_bb(from) == 0
-            || line_bb(from, to) & self.pieces_ct(us, KING) != 0
-    }
-
-    /// Tests whether a random move (e.g. from the TT) is pseudo-legal.
-    pub fn pseudo_legal(&self, m: Move) -> bool {
         let us = self.side_to_move;
         let from = m.from_sq();
         let to = m.to_sq();
         let pc = self.moved_piece(m);
 
+        // Uncommon move types use the slower but simpler generator test
         if m.type_of() != NORMAL {
-            return if self.checkers() != 0 {
-                MoveList::new(self, GenType::Evasions).contains(m)
-            } else {
-                MoveList::new(self, GenType::NonEvasions).contains(m)
-            };
+            return MoveList::new(self, GenType::Legal).contains(m);
         }
 
         if pc == NO_PIECE || color_of(pc) != us {
@@ -638,15 +629,24 @@ impl Position {
             return false;
         }
 
-        if self.checkers() != 0 && type_of(pc) != KING {
-            if more_than_one(self.checkers()) {
-                return false;
+        if type_of(pc) != KING {
+            if self.checkers() != 0 {
+                // In double check, only a king move can evade
+                if more_than_one(self.checkers()) {
+                    return false;
+                }
+                // The move must block the check or capture the checker
+                if between_bb(self.king_square(us), lsb(self.checkers())) & square_bb(to) == 0 {
+                    return false;
+                }
             }
-            if between_bb(self.king_square(us), lsb(self.checkers())) & square_bb(to) == 0 {
-                return false;
-            }
+            // A non-king move is legal iff it is not pinned or stays on the pin ray
+            self.blockers_for_king(us) & square_bb(from) == 0
+                || line_bb(from, to) & self.pieces_ct(us, KING) != 0
+        } else {
+            // The king may not step onto an attacked square
+            square_bb(to) & self.threats_by(ALL_PIECES) == 0
         }
-        true
     }
 
     /// Tests whether a pseudo-legal move gives a check
@@ -687,12 +687,18 @@ impl Position {
     /// Makes a move without NNUE bookkeeping (used outside the search tree).
     pub fn do_move_simple(&mut self, m: Move) {
         let gc = self.gives_check(m);
-        self.do_move(m, gc, None);
+        self.do_move(m, gc, None, None);
     }
 
     /// Makes a move, saving all information necessary for undo_move().
     /// When `dirties` is given, records what changed for the NNUE accumulators.
-    pub fn do_move(&mut self, m: Move, gives_check: bool, mut dirties: Option<&mut Dirties>) {
+    pub fn do_move(
+        &mut self,
+        m: Move,
+        gives_check: bool,
+        mut dirties: Option<&mut Dirties>,
+        hist: Option<&crate::history::SharedHistories>,
+    ) {
         let t = tables();
         let mut k = self.st().key ^ t.zobrist_side;
 
@@ -837,6 +843,17 @@ impl Position {
 
         self.st_mut().key = k;
 
+        // The new keys are known: start loading the history entries the child
+        // node reads while the board and threat updates run.
+        if let Some(h) = hist {
+            use crate::nnue::kernels::prefetch_l1 as prefetch;
+            prefetch(&h.pawn_entry(self)[pc][to]);
+            prefetch(h.pawn_correction_entry(self));
+            prefetch(h.minor_piece_correction_entry(self));
+            prefetch(h.nonpawn_correction_entry(WHITE, self));
+            prefetch(h.nonpawn_correction_entry(BLACK, self));
+        }
+
         if m.type_of() != CASTLING {
             let to_pc = if m.type_of() == PROMOTION {
                 make_piece(us, m.promotion_type())
@@ -964,7 +981,7 @@ impl Position {
     /// Flips the side to move without executing any move on the board.
     pub fn do_null_move(&mut self) {
         let t = tables();
-        let new_st = *self.st();
+        let new_st = self.st().clone();
         self.states.push(new_st);
         let st = self.st_mut();
         if st.ep_square != SQ_NONE {
@@ -1429,15 +1446,16 @@ impl Position {
     pub fn check_squares(&self, pt: PieceType) -> Bitboard {
         unsafe { *self.st().check_squares.get_unchecked(pt) }
     }
+    /// Attacks by pieces of type `pt` and color `c` on the given occupancy.
     #[inline(always)]
-    pub fn attacks_by(&self, pt: PieceType, c: Color) -> Bitboard {
+    pub fn xattacks_by(&self, pt: PieceType, c: Color, occupied: Bitboard) -> Bitboard {
         if pt == PAWN {
             return pawn_attacks_bb(c, self.pieces_ct(c, PAWN));
         }
         let mut threats = 0;
         let mut attackers = self.pieces_ct(c, pt);
         while attackers != 0 {
-            threats |= attacks_bb(pt, pop_lsb(&mut attackers), self.pieces());
+            threats |= attacks_bb(pt, pop_lsb(&mut attackers), occupied);
         }
         threats
     }
@@ -1476,7 +1494,7 @@ impl Position {
     }
     #[inline(always)]
     pub fn non_pawn_material_c(&self, c: Color) -> Value {
-        self.st().non_pawn_material[c]
+        self.st().non_pawn_material[c & 1]
     }
     #[inline(always)]
     pub fn non_pawn_material(&self) -> Value {

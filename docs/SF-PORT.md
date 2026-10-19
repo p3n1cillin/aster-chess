@@ -96,11 +96,39 @@ Stockfish `45bc8e49…`, openings `5d2b8f4a…`) gave **1 win, 0 losses, 127 dra
 interval again includes zero. Report and PGN:
 `artifacts/matches/aster-1.0.0-vs-sf19-30+0.3-64pairs.*`.
 
+## Development-source update (2026-10-19)
+
+With the user's approval the core was brought up to the Stockfish development
+source at commit `effdc3fd3f6de6e75fe1374a51a7a7eed66f880b` (2026-10-17, 55
+commits after `sf_19`): the SFNNv18 network `nn-c9e480e92425` (K32Q2 features,
+int8 weights, no PSQT, 32 layer stacks, new evaluation scaling), legal-only move
+generation, lazily computed threat maps, about fifteen search changes and two
+time-management changes. The port is exact: `bench` gives **1,559,611 nodes**,
+and all 690 bench `info`/`bestmove` lines and all 45 static evaluations equal
+the same commit built from source with clang 21. AVX-512, AVX2 and scalar kernel
+paths give the same signature. All python-chess verifiers, perft and the
+mate-proof and play smoke tests pass, as do 149 workspace tests in release and
+the core's tests in debug.
+
+Speed against that clang build of the same commit is 93.1% (7 interleaved
+bench runs; see the crate README for the individual Aster changes).
+
+Before porting, a scouting match of the clang-built development commit against
+the official Stockfish 19 binary at 8+0.08 (128 pairs) gave +2.7 Elo,
+95% interval −8.0 to +13.4: the development source's gain over 19 at short time
+controls is small. The ported Aster core then played the official Stockfish 19
+binary at 8+0.08, 128 color-swapped pairs, one thread, 16 MB hash: **4 wins, 4
+losses, 248 draws**, pentanomial [0, 4, 120, 4, 0], Elo **0.0**, 95% interval
+**−7.6 to +7.6**, no unresolved games. That run used the core at about 90.6% of
+the reference speed, before the Aster speed work. Report and PGN:
+`artifacts/matches/aster-sfdev-port-vs-sf19-8+0.08-128pairs.*` (the report's
+final fields were added after a file-lock error at the end; see its `note`).
+
 ## Strength claims
 
-No strength claim follows from these results. The core plays Stockfish 19's
-moves at fixed depth, but at equal time it is about 13% slower than the official
-binary, so it should be expected to score slightly below 50% against it. Any
+No strength claim follows from these results. The core plays the pinned
+development commit's moves at fixed depth and is level with Stockfish 19 within
+noise at equal time. Any
 claim that Aster is stronger than Stockfish requires predeclared paired matches
 with a statistical lower bound above 50%, as described in `ROADMAP.md`.
 

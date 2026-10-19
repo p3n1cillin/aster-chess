@@ -1,6 +1,6 @@
 // Aster core. Original attribution and source mapping: timeman.rs.license.
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Modified 2026-10-19: source naming and notice layout only.
+// Modified 2026-10-19: source naming and notice layout; clock-disadvantage scaling.
 
 use crate::search::LimitsType;
 use crate::types::*;
@@ -20,6 +20,8 @@ pub struct TimeManagement {
     maximum_time: TimePoint,
     pub available_nodes: i64,
     pub use_nodes_time: bool,
+    previous_moves_to_go: i32,
+    cyclic_budget: i64,
 }
 
 const NO_BOUND: TimePoint = i64::MAX / 2;
@@ -32,6 +34,8 @@ impl Default for TimeManagement {
             maximum_time: NO_BOUND,
             available_nodes: -1,
             use_nodes_time: false,
+            previous_moves_to_go: 0,
+            cyclic_budget: 0,
         }
     }
 }
@@ -51,6 +55,7 @@ impl TimeManagement {
     }
     pub fn clear(&mut self) {
         self.available_nodes = -1;
+        self.previous_moves_to_go = 0;
     }
     pub fn advance_nodes_time(&mut self, nodes: i64) {
         self.available_nodes = (self.available_nodes - nodes).max(0);
@@ -88,8 +93,17 @@ impl TimeManagement {
         let mut move_overhead = opts.move_overhead;
         if self.use_nodes_time {
             if self.available_nodes == -1 {
+                // The first time limit includes the increment (both in milliseconds)
                 self.available_nodes = npmsec * limits.time[us];
+                self.cyclic_budget = npmsec * (limits.time[us] - limits.inc[us]);
+            } else if limits.movestogo > 0
+                && limits.movestogo > self.previous_moves_to_go
+                && self.cyclic_budget > 0
+            {
+                // A new time-control cycle started
+                self.available_nodes += self.cyclic_budget;
             }
+            self.previous_moves_to_go = limits.movestogo;
             limits.time[us] = self.available_nodes;
             limits.inc[us] *= npmsec;
             limits.npmsec = npmsec;
@@ -112,7 +126,7 @@ impl TimeManagement {
             - move_overhead * (2 + mtg as i64))
             .max(1);
 
-        let opt_scale;
+        let mut opt_scale;
         let max_scale;
         if limits.movestogo == 0 {
             if *original_time_adjust < 0.0 {
@@ -129,6 +143,17 @@ impl TimeManagement {
             opt_scale = ((0.88 + ply as f64 / 116.4) / mtg as f64)
                 .min(0.88 * limits.time[us] as f64 / time_left as f64);
             max_scale = 1.3 + 0.11 * mtg as f64;
+        }
+
+        // Use less time when behind on the clock. Skipped in nodes-as-time mode
+        // (the opponent's node budget is unknown) and for the last move of a
+        // cyclic control, where the opponent's clock may already include the
+        // next period.
+        if !self.use_nodes_time && limits.movestogo != 1 {
+            let them = flip_color(us);
+            let time_advantage = (limits.time[us] - limits.time[them]) as f64
+                / (1.0 + limits.time[us] as f64 + limits.time[them] as f64);
+            opt_scale *= 1.0 + 0.9 * time_advantage.min(0.0);
         }
 
         self.optimum_time = (opt_scale * time_left as f64).max(1.0) as TimePoint;

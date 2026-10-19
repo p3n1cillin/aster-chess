@@ -1,6 +1,6 @@
 // Aster core. Original attribution and source mapping: kernels.rs.license.
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Modified 2026-10-19: source naming and notice layout only.
+// Modified 2026-10-19: source naming and notice layout; int8 piece-square rows.
 
 use super::network::{L1, L2};
 use std::sync::atomic::{AtomicU8, Ordering::Relaxed};
@@ -10,6 +10,7 @@ pub const LEVEL_AVX2: u8 = 1;
 pub const LEVEL_AVX512: u8 = 2;
 
 static LEVEL: AtomicU8 = AtomicU8::new(LEVEL_SCALAR);
+static VBMI2: std::sync::atomic::AtomicBool = std::sync::atomic::AtomicBool::new(false);
 
 /// Detects CPU features once; `ASTER_SIMD=scalar|avx2` can force a lower level.
 pub fn init() {
@@ -25,6 +26,7 @@ pub fn init() {
             && is_x86_feature_detected!("avx512vnni")
         {
             level = LEVEL_AVX512;
+            VBMI2.store(is_x86_feature_detected!("avx512vbmi2"), Relaxed);
         }
     }
     match std::env::var("ASTER_SIMD").as_deref() {
@@ -57,6 +59,15 @@ pub fn prefetch<T>(p: *const T) {
     }
 }
 
+/// Hint the CPU to load a small search-table entry into the L1 cache.
+#[inline(always)]
+pub fn prefetch_l1<T>(p: *const T) {
+    #[cfg(target_arch = "x86_64")]
+    unsafe {
+        std::arch::x86_64::_mm_prefetch::<{ std::arch::x86_64::_MM_HINT_T0 }>(p as *const i8);
+    }
+}
+
 /// Number of i32 chunks (4 input bytes) in the fc_0 input.
 pub const FC0_CHUNKS: usize = L1 / 4;
 
@@ -84,71 +95,36 @@ pub struct Rows<'a> {
 }
 
 /// Feature-index form of an accumulator update: rows are `base + index * L1`.
+/// Piece-square and threat/pawn-pair rows are both int8.
 pub struct IdxRows<'a> {
-    pub base16: *const i16,
-    pub sub16: &'a [u16],
-    pub add16: &'a [u16],
+    pub base_psq: *const i8,
+    pub sub_psq: &'a [u16],
+    pub add_psq: &'a [u16],
     pub base8: *const i8,
     pub sub8: &'a [u16],
     pub add8: &'a [u16],
 }
 
-/// PSQT counterpart of an IdxRows update (8 buckets per feature row).
-pub struct PsqtRows {
-    pub src: *const i32,
-    pub dst: *mut i32,
-    pub base16: *const i32,
-    pub base8: *const i32,
-}
-
-/// psqt_dst = psqt_src - Σ psq rows[sub16] + Σ psq rows[add16] - Σ thr rows[sub8] + Σ thr rows[add8]
-#[inline(always)]
-pub fn update_psqt_idx(r: &IdxRows, p: &PsqtRows) {
-    #[cfg(target_arch = "x86_64")]
-    if level() >= LEVEL_AVX2 {
-        return unsafe { avx2::update_psqt_idx(r, p) };
-    }
-    unsafe {
-        let mut acc = [0i32; 8];
-        std::ptr::copy_nonoverlapping(p.src, acc.as_mut_ptr(), 8);
-        let row = |b: *const i32, i: u16| std::slice::from_raw_parts(b.add(i as usize * 8), 8);
-        for &i in r.sub16 {
-            sub_psqt(&mut acc, row(p.base16, i));
-        }
-        for &i in r.add16 {
-            add_psqt(&mut acc, row(p.base16, i));
-        }
-        for &i in r.sub8 {
-            sub_psqt(&mut acc, row(p.base8, i));
-        }
-        for &i in r.add8 {
-            add_psqt(&mut acc, row(p.base8, i));
-        }
-        std::ptr::copy_nonoverlapping(acc.as_ptr(), p.dst, 8);
-    }
-}
-
-/// dst = src - Σ rows16[sub16] + Σ rows16[add16] - Σ rows8[sub8] + Σ rows8[add8]
+/// dst = src - Σ psq[sub_psq] + Σ psq[add_psq] - Σ thr[sub8] + Σ thr[add8]
 #[inline(always)]
 pub fn update_acc_idx(dst: *mut i16, src: *const i16, r: &IdxRows) {
     #[cfg(target_arch = "x86_64")]
     if level() == LEVEL_AVX512 {
         return unsafe { avx512::update_acc_idx(dst, src, r) };
     }
-    let s16: Vec<&[i16]> = Vec::new();
-    let row16 = |i: u16| unsafe { std::slice::from_raw_parts(r.base16.add(i as usize * L1), L1) };
-    let row8 = |i: u16| unsafe { std::slice::from_raw_parts(r.base8.add(i as usize * L1), L1) };
-    let sub16: Vec<&[i16]> = r.sub16.iter().map(|&i| row16(i)).collect();
-    let add16: Vec<&[i16]> = r.add16.iter().map(|&i| row16(i)).collect();
-    let sub8: Vec<&[i8]> = r.sub8.iter().map(|&i| row8(i)).collect();
-    let add8: Vec<&[i8]> = r.add8.iter().map(|&i| row8(i)).collect();
-    drop(s16);
+    let row = |b: *const i8, i: u16| unsafe { std::slice::from_raw_parts(b.add(i as usize * L1), L1) };
+    let sub8: Vec<&[i8]> = (r.sub_psq.iter().map(|&i| row(r.base_psq, i)))
+        .chain(r.sub8.iter().map(|&i| row(r.base8, i)))
+        .collect();
+    let add8: Vec<&[i8]> = (r.add_psq.iter().map(|&i| row(r.base_psq, i)))
+        .chain(r.add8.iter().map(|&i| row(r.base8, i)))
+        .collect();
     update_acc(
         dst,
         src,
         &Rows {
-            sub16: &sub16,
-            add16: &add16,
+            sub16: &[],
+            add16: &[],
             sub8: &sub8,
             add8: &add8,
         },
@@ -198,20 +174,6 @@ fn scalar_update_acc(dst: *mut i16, src: *const i16, rows: &Rows) {
         }
     }
     unsafe { std::ptr::copy_nonoverlapping(acc.as_ptr(), dst, L1) };
-}
-
-#[inline(always)]
-pub fn add_psqt(acc: &mut [i32; 8], w: &[i32]) {
-    for j in 0..8 {
-        acc[j] = acc[j].wrapping_add(w[j]);
-    }
-}
-
-#[inline(always)]
-pub fn sub_psqt(acc: &mut [i32; 8], w: &[i32]) {
-    for j in 0..8 {
-        acc[j] = acc[j].wrapping_sub(w[j]);
-    }
 }
 
 /// Bitboard of squares whose piece differs between two 64-byte boards.
@@ -389,18 +351,18 @@ mod avx512 {
                 for k in 0..REGS {
                     acc[k] = _mm512_loadu_si512(src.add(base + k * 32) as *const _);
                 }
-                for &i in r.sub16 {
-                    let p = r.base16.add(i as usize * L1 + base);
+                for &i in r.sub_psq {
+                    let p = r.base_psq.add(i as usize * L1 + base);
                     for k in 0..REGS {
-                        acc[k] =
-                            _mm512_sub_epi16(acc[k], _mm512_load_si512(p.add(k * 32) as *const _));
+                        let w = _mm512_cvtepi8_epi16(_mm256_load_si256(p.add(k * 32) as *const _));
+                        acc[k] = _mm512_sub_epi16(acc[k], w);
                     }
                 }
-                for &i in r.add16 {
-                    let p = r.base16.add(i as usize * L1 + base);
+                for &i in r.add_psq {
+                    let p = r.base_psq.add(i as usize * L1 + base);
                     for k in 0..REGS {
-                        acc[k] =
-                            _mm512_add_epi16(acc[k], _mm512_load_si512(p.add(k * 32) as *const _));
+                        let w = _mm512_cvtepi8_epi16(_mm256_load_si256(p.add(k * 32) as *const _));
+                        acc[k] = _mm512_add_epi16(acc[k], w);
                     }
                 }
                 for &i in r.sub8 {
@@ -459,11 +421,38 @@ mod avx512 {
     }
 
     #[target_feature(enable = "avx512f,avx512bw,avx512vnni")]
-    pub unsafe fn sparse_affine_fc0(input: &[u8; L1], w: &[i8], out: &mut [i32; L2]) {
+    /// Indices of the non-zero 4-byte chunks of the fc_0 input, gathered with
+    /// 16-bit compresses (two input vectors per step after a saturating pack,
+    /// which keeps non-zero values non-zero). Writes up to 32 slack slots.
+    #[target_feature(enable = "avx512f,avx512bw,avx512vbmi2")]
+    unsafe fn nnz_vbmi2(inp: *const i32, nnz: *mut u16) -> usize {
         unsafe {
-            let inp = input.as_ptr() as *const i32;
-            // Non-zero chunk indices, gathered branch-free with compress (16 slack slots).
-            let mut nnz = [0u16; FC0_CHUNKS + 16];
+            // packs interleaves 4-element groups of the two inputs per 128-bit lane
+            let mut idx = _mm512_set_epi16(
+                31, 30, 29, 28, 15, 14, 13, 12, 27, 26, 25, 24, 11, 10, 9, 8, 23, 22, 21, 20, 7, 6,
+                5, 4, 19, 18, 17, 16, 3, 2, 1, 0,
+            );
+            let step = _mm512_set1_epi16(32);
+            let mut count = 0usize;
+            for b in 0..FC0_CHUNKS / 32 {
+                let v0 = _mm512_loadu_si512(inp.add(b * 32) as *const _);
+                let v1 = _mm512_loadu_si512(inp.add(b * 32 + 16) as *const _);
+                let packed = _mm512_packs_epi32(v0, v1);
+                let m = _mm512_test_epi16_mask(packed, packed);
+                _mm512_storeu_si512(
+                    nnz.add(count) as *mut _,
+                    _mm512_maskz_compress_epi16(m, idx),
+                );
+                count += m.count_ones() as usize;
+                idx = _mm512_add_epi16(idx, step);
+            }
+            count
+        }
+    }
+
+    #[target_feature(enable = "avx512f,avx512bw")]
+    unsafe fn nnz_avx512(inp: *const i32, nnz: *mut u16) -> usize {
+        unsafe {
             let mut count = 0usize;
             let mut idx = _mm512_setr_epi32(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
             let step = _mm512_set1_epi32(16);
@@ -471,10 +460,34 @@ mod avx512 {
                 let v = _mm512_loadu_si512(inp.add(b * 16) as *const _);
                 let m = _mm512_test_epi32_mask(v, v);
                 let c = _mm512_cvtepi32_epi16(_mm512_maskz_compress_epi32(m, idx));
-                _mm256_storeu_si256(nnz.as_mut_ptr().add(count) as *mut _, c);
+                _mm256_storeu_si256(nnz.add(count) as *mut _, c);
                 count += m.count_ones() as usize;
                 idx = _mm512_add_epi32(idx, step);
             }
+            count
+        }
+    }
+
+    pub unsafe fn sparse_affine_fc0(input: &[u8; L1], w: &[i8], out: &mut [i32; L2]) {
+        unsafe {
+            let inp = input.as_ptr() as *const i32;
+            // Non-zero chunk indices (32 slack slots for full-width stores).
+            let mut nnz_buf = std::mem::MaybeUninit::<[u16; FC0_CHUNKS + 32]>::uninit();
+            let nnz_ptr = nnz_buf.as_mut_ptr() as *mut u16;
+            let count = if VBMI2.load(Relaxed) {
+                nnz_vbmi2(inp, nnz_ptr)
+            } else {
+                nnz_avx512(inp, nnz_ptr)
+            };
+            sparse_affine_fc0_list(input, w, out, std::slice::from_raw_parts(nnz_ptr, count))
+        }
+    }
+
+    #[target_feature(enable = "avx512f,avx512bw,avx512vnni")]
+    unsafe fn sparse_affine_fc0_list(input: &[u8; L1], w: &[i8], out: &mut [i32; L2], nnz: &[u16]) {
+        unsafe {
+            let inp = input.as_ptr() as *const i32;
+            let count = nnz.len();
 
             let mut a0 = _mm512_loadu_si512(out.as_ptr() as *const _);
             let mut a1 = _mm512_loadu_si512(out.as_ptr().add(16) as *const _);
@@ -642,38 +655,6 @@ mod avx2 {
                     _mm256_storeu_si256(dst.add(base + k * 16) as *mut _, acc[k]);
                 }
             }
-        }
-    }
-
-    #[target_feature(enable = "avx2")]
-    pub unsafe fn update_psqt_idx(r: &IdxRows, p: &PsqtRows) {
-        unsafe {
-            let mut acc = _mm256_loadu_si256(p.src as *const _);
-            for &i in r.sub16 {
-                acc = _mm256_sub_epi32(
-                    acc,
-                    _mm256_loadu_si256(p.base16.add(i as usize * 8) as *const _),
-                );
-            }
-            for &i in r.add16 {
-                acc = _mm256_add_epi32(
-                    acc,
-                    _mm256_loadu_si256(p.base16.add(i as usize * 8) as *const _),
-                );
-            }
-            for &i in r.sub8 {
-                acc = _mm256_sub_epi32(
-                    acc,
-                    _mm256_loadu_si256(p.base8.add(i as usize * 8) as *const _),
-                );
-            }
-            for &i in r.add8 {
-                acc = _mm256_add_epi32(
-                    acc,
-                    _mm256_loadu_si256(p.base8.add(i as usize * 8) as *const _),
-                );
-            }
-            _mm256_storeu_si256(p.dst as *mut _, acc);
         }
     }
 

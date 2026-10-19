@@ -6,8 +6,8 @@ fn main() {
         return;
     }
     use sha2::{Digest, Sha256};
-    const NAME: &str = "nn-1a298aa575a0.nnue";
-    const SHA256: &str = "1a298aa575a085434d29027978dc36867fe9c5bcea9376654b7a8eba1e52dfc2";
+    const NAME: &str = "nn-c9e480e92425.nnue";
+    const SHA256: &str = "c9e480e92425f887df6ab9b05c6180fbd762b07879df9d9845f1aa75440caa73";
     println!("cargo:rerun-if-changed={NAME}");
     let bytes = std::fs::read(NAME)
         .expect("Run python scripts/fetch_aster_network.py before building with embed-net");

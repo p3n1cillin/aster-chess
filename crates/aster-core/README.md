@@ -19,9 +19,16 @@ tracking, move generation, move ordering, all histories and correction
 histories, the transposition table, search and quiescence search, Lazy SMP
 threads, time management, UCI options and output, `bench`, `speedtest`, `perft`, Syzygy
 tablebase probing (WDL/DTZ, root ranking, in-search probes, PV extension), and the
-complete NNUE: HalfKAv2_hm, FullThreats and PP_3Wide feature sets, the
-accumulator stack with Finny-table caches (incremental forward/backward,
-hybrid king-move and refresh paths) and the 1024→32→32→1 layer stacks.
+complete NNUE: K32Q2 (king bucket x opponent-queen), FullThreats and PP_3Wide
+feature sets with int8 weights, the accumulator stack with queen-split
+Finny-table caches (incremental forward/backward, hybrid king-move and refresh
+paths) and 32 1024→32→32→1 layer stacks selected by piece count and queens.
+
+Since 2026-10-19 the core follows the Stockfish development source at commit
+`effdc3fd3f` (2026-10-17): the SFNNv18 network `nn-c9e480e92425`, legal-only move
+generation, lazily computed threat maps and the search and time-management
+changes made after `sf_19`. [UPSTREAM.json](UPSTREAM.json) pins the commit and a
+SHA-256 for each ported source file.
 
 Not yet ported: NUMA binding and large pages (neither is used by the official
 binary on a single-node machine without the lock-pages privilege).
@@ -30,11 +37,13 @@ binary on a single-node machine without the lock-pages privilege).
 
 The port reproduces Stockfish's search exactly, not approximately:
 
-* `bench` reports **2,497,913 nodes**, the same signature as the official
-  `sf_19` binary, and every one of the 51 bench searches prints identical
-  `info` lines (depth, seldepth, score, nodes, hashfull, PV) and best moves.
-* NNUE static evaluations equal the official binary's on all 45 evaluable
-  bench positions, including the two threat-heavy stress positions.
+* `bench` reports **1,559,611 nodes**, the signature of the pinned
+  development commit, and all 690 `info`/`bestmove` lines of the 51 bench
+  searches are identical to that commit built from source (excluding time,
+  nps and hashfull). Before the update the core matched the official `sf_19`
+  binary in the same way (2,497,913 nodes).
+* Raw and final NNUE evaluations equal the reference's on all 45 evaluable
+  bench positions.
 * The bench signature is identical on all three kernel paths: AVX-512 VNNI,
   AVX2 and scalar (`ASTER_SIMD=avx2|scalar` forces a lower path).
 * Tests: published perft counts (standard and Chess960, Chess960 counts
@@ -54,13 +63,23 @@ refreshed, scalar and SIMD evaluations are bit-identical.
 
 ## Speed
 
-Same-session medians of five interleaved `bench` runs on a Ryzen 5 7600X
-(Zen 4, AVX-512 VNNI), one thread, 16 MB hash, Windows:
+Same-session medians of seven interleaved `bench` runs on a Ryzen 5 7600X
+(Zen 4, AVX-512 VNNI), one thread, 16 MB hash, Windows. Both binaries search the
+same 1,559,611-node bench:
 
 | Binary | Nodes/second | Relative |
 | --- | ---: | ---: |
-| Official Stockfish 19 (GCC, AVX-512 ICL universal build) | 2,059,285 | 100% |
-| Aster Core, generic x86-64 build with runtime SIMD dispatch | 1,791,903 | 87.0% |
+| Pinned development commit, clang 21 `-O3 -flto -march=znver4` | 1,876,788 | 100% |
+| Aster Core, generic x86-64 build with runtime SIMD dispatch | 1,746,484 | 93.1% |
+
+Aster-side speed work since the update (each kept change preserved the
+signature): history prefetches issued as soon as `do_move` knows the new keys
+(+3.2%), L1 prefetch hints for search tables and plain-pointer access to
+init-time tables (+1.1%), folded threat-index tables with packed dirty-threat
+decoding, a two-perspective threat pass, unchecked fixed-capacity list pushes,
+VBMI2 16-bit compresses for the first layer's non-zero list and range-masked
+history indices (each within noise). Tried and rejected: paired `maddubs`
+widening of int8 rows (2% slower on Zen 4) and a T2 hint for weight rows.
 
 Speed is not strength evidence. At equal time, a slower identical search reaches
 fewer nodes, so this port should be expected to score slightly below 50% against
@@ -74,7 +93,7 @@ cargo build --release --locked -p aster-core
 ./target/release/aster-core bench
 ```
 
-The binary looks for `nn-1a298aa575a0.nnue` in the working directory, next to the
+The binary looks for `nn-c9e480e92425.nnue` in the working directory, next to the
 executable and in this crate. The `embed-net` feature (used by Aster) embeds the
 network after `build.rs` verifies its SHA-256.
 

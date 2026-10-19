@@ -171,7 +171,14 @@ def main():
             report["pentanomial"] = stats
             tmp = json_path.parent / (json_path.name + ".tmp")
             tmp.write_text(json.dumps(report, indent=2) + "\n")
-            tmp.replace(json_path)
+            # Another process (e.g. a scanner on a network share) can briefly
+            # hold the report open; retry rather than abort the match.
+            for attempt in range(20):
+                try:
+                    tmp.replace(json_path)
+                    break
+                except PermissionError:
+                    time.sleep(0.25 * (attempt + 1))
             n = len(report["games"])
             if stats:
                 print(f"[{n}/{2 * args.pairs}] pairs {stats['pairs']} score {100 * stats['score']:.1f}% "

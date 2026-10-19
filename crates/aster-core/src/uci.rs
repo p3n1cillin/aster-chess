@@ -238,7 +238,7 @@ fn find_network(name: &str) -> Option<std::path::PathBuf> {
 
 #[cfg(feature = "embed-net")]
 static EMBEDDED_NET: &[u8] =
-    include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/nn-1a298aa575a0.nnue"));
+    include_bytes!(concat!(env!("CARGO_MANIFEST_DIR"), "/nn-c9e480e92425.nnue"));
 
 /// Loads the default network: embedded when built with `embed-net`, otherwise
 /// from the working directory, the executable's directory or the crate directory.
@@ -549,8 +549,7 @@ impl Engine {
         }
         let mut stack = crate::nnue::accumulator::AccumulatorStack::default();
         let mut caches = crate::nnue::accumulator::AccumulatorCaches::new(&self.network.ft);
-        let (psqt, positional) = self.network.evaluate(pos, &mut stack, &mut caches);
-        let v = psqt + positional;
+        let v = self.network.evaluate(pos, &mut stack, &mut caches);
         let white = |x: Value| if pos.side_to_move() == WHITE { x } else { -x };
         let fin = crate::nnue::evaluate(&self.network, pos, &mut stack, &mut caches, 0);
         format!(

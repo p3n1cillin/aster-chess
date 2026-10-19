@@ -417,8 +417,9 @@ impl<T: Copy + Default, const N: usize> ValueList<T, N> {
     }
     #[inline(always)]
     pub fn push(&mut self, v: T) {
-        assert!(self.size < N);
-        self.values[self.size] = std::mem::MaybeUninit::new(v);
+        // Capacities are sized for the worst case of every use (as upstream).
+        debug_assert!(self.size < N);
+        unsafe { self.values.get_unchecked_mut(self.size).write(v) };
         self.size += 1;
     }
     #[inline(always)]

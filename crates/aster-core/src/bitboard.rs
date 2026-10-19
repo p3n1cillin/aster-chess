@@ -1,6 +1,6 @@
 // Aster core. Original attribution and source mapping: bitboard.rs.license.
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Modified 2026-10-19: source naming and notice layout only.
+// Modified 2026-10-19: source naming and notice layout; diagonal masks for legal movegen.
 
 use crate::types::*;
 use std::sync::OnceLock;
@@ -202,8 +202,8 @@ mod dual {
     pub struct DualMagic {
         mask_file: u64,
         mask_diag: u64,
-        mask_none: u64,
         mask_antidiag: u64,
+        mask_none: u64,
         r: u64,
         rr: u64,
         file: usize,
@@ -229,8 +229,8 @@ mod dual {
             DualMagic {
                 mask_file: 0,
                 mask_diag: 0,
-                mask_none: 0,
                 mask_antidiag: 0,
+                mask_none: 0,
                 r: 0,
                 rr: 0,
                 file: 0,
@@ -273,18 +273,16 @@ mod dual {
             let fwd = _mm256_sub_epi64(o, rs);
             let rev = bswap(_mm256_sub_epi64(bswap(o), rrs));
             let result = _mm256_and_si256(_mm256_xor_si256(fwd, rev), mask);
-            let rook_bishop = _mm_or_si128(
-                _mm256_extracti128_si256::<1>(result),
-                _mm256_castsi256_si128(result),
-            );
+            // Lane 0: file attacks; lanes 1 and 2 (after the swap): both diagonals
+            let bishop2 = _mm256_or_si256(result, _mm256_permute4x64_epi64::<0b11_01_10_00>(result));
             let row = *RANK_ATTACKS
                 .get_unchecked(m.file)
                 .get_unchecked(((occupied >> (m.shift + 1)) & 0x3f) as usize)
                 as u64;
             let rank_attacks = row << m.shift;
             (
-                _mm_extract_epi64::<1>(rook_bishop) as u64,
-                (_mm_cvtsi128_si64(rook_bishop) as u64).wrapping_add(rank_attacks),
+                _mm_extract_epi64::<1>(_mm256_castsi256_si128(bishop2)) as u64,
+                (_mm_cvtsi128_si64(_mm256_castsi256_si128(result)) as u64).wrapping_add(rank_attacks),
             )
         }
     }
@@ -324,12 +322,19 @@ static TABLES: OnceLock<Tables> = OnceLock::new();
 
 #[inline(always)]
 pub fn tables() -> &'static Tables {
-    // SAFETY: init() runs at program start before any table access.
-    unsafe { TABLES.get().unwrap_unchecked() }
+    // SAFETY: init() runs at program start before any table access, and the
+    // tables live in a static that is never modified afterwards.
+    unsafe { &*TABLES_PTR.load(std::sync::atomic::Ordering::Relaxed) }
 }
 
+// Plain pointer to the initialised tables: a relaxed load is an ordinary
+// move, unlike the initialisation check of `OnceLock::get` on every lookup.
+static TABLES_PTR: std::sync::atomic::AtomicPtr<Tables> =
+    std::sync::atomic::AtomicPtr::new(std::ptr::null_mut());
+
 pub fn init() {
-    TABLES.get_or_init(build_tables);
+    let t = TABLES.get_or_init(build_tables);
+    TABLES_PTR.store(t as *const Tables as *mut Tables, std::sync::atomic::Ordering::Release);
 }
 
 fn init_magics(pt: PieceType, magics: &mut [[Magic; 2]; 64], table: &mut Vec<Bitboard>) {
@@ -607,6 +612,36 @@ pub fn pawn_attacks_from(c: Color, s: Square) -> Bitboard {
 #[inline(always)]
 pub fn pseudo_attacks(pt: PieceType, s: Square) -> Bitboard {
     pa(pt, s)
+}
+/// The a1-h8 direction diagonal through `s`, including `s`.
+static DIAG_BB: [Bitboard; 64] = {
+    let mut r = [0u64; 64];
+    let mut s = 0;
+    while s < 64 {
+        r[s] = line_mask(s, NORTH_EAST, SOUTH_WEST) | (1u64 << s);
+        s += 1;
+    }
+    r
+};
+/// The a8-h1 direction diagonal through `s`, including `s`.
+static ANTIDIAG_BB: [Bitboard; 64] = {
+    let mut r = [0u64; 64];
+    let mut s = 0;
+    while s < 64 {
+        r[s] = line_mask(s, NORTH_WEST, SOUTH_EAST) | (1u64 << s);
+        s += 1;
+    }
+    r
+};
+#[inline(always)]
+pub fn diag_bb(s: Square) -> Bitboard {
+    debug_assert!(s < 64);
+    unsafe { *DIAG_BB.get_unchecked(s) }
+}
+#[inline(always)]
+pub fn antidiag_bb(s: Square) -> Bitboard {
+    debug_assert!(s < 64);
+    unsafe { *ANTIDIAG_BB.get_unchecked(s) }
 }
 #[inline(always)]
 pub fn line_bb(s1: Square, s2: Square) -> Bitboard {

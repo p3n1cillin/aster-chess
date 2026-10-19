@@ -1,6 +1,6 @@
 // Aster core. Original attribution and source mapping: search.rs.license.
 // SPDX-License-Identifier: GPL-3.0-or-later
-// Modified 2026-10-19: source naming and notice layout only.
+// Modified 2026-10-19: source naming and notice layout; search tuning through 2026-10-17.
 
 use crate::bitboard::*;
 use crate::history::*;
@@ -17,9 +17,12 @@ use crate::uci;
 use std::sync::Arc;
 use std::sync::atomic::{AtomicBool, AtomicU64, Ordering::Relaxed};
 
-static LMR_DIVISOR: [i32; 16] = [
-    3637, 2787, 2761, 2939, 3171, 3347, 3147, 2762, 2772, 3106, 3107, 3060, 3112, 2991, 3090, 3542,
-];
+/// History divisor for the LMR depth estimate in shallow-depth pruning.
+#[inline(always)]
+fn lmr_divisor(depth: Depth) -> i32 {
+    let d = depth.min(16);
+    3000 + 7 * (d - 8) * (d - 8)
+}
 const NODES_LIMIT_OUTPUT: u64 = 10_000_000;
 const SEARCHEDLIST_CAPACITY: usize = 32;
 type SearchedList = ValueList<Move, SEARCHEDLIST_CAPACITY>;
@@ -93,6 +96,7 @@ pub struct Stack {
     pub follow_pv: bool,
     pub cutoff_cnt: i32,
     pub reduction: i32,
+    pub prior_nmp_fail_high: i32,
 }
 
 impl Default for Stack {
@@ -113,6 +117,7 @@ impl Default for Stack {
             follow_pv: false,
             cutoff_cnt: 0,
             reduction: 0,
+            prior_nmp_fail_high: 0,
         }
     }
 }
@@ -371,7 +376,7 @@ pub struct Worker {
     pub root_pos: Position,
     pub root_moves: Vec<RootMove>,
     pub root_depth: Depth,
-    root_delta: Value,
+    seek_mate: bool,
     last_iteration_idx_pv: PVMoves,
     pub thread_idx: usize,
     numa_thread_idx: usize,
@@ -464,7 +469,7 @@ impl Worker {
             root_pos: Position::default(),
             root_moves: Vec::new(),
             root_depth: 0,
-            root_delta: 0,
+            seek_mate: false,
             last_iteration_idx_pv: PVMoves::default(),
             thread_idx,
             numa_thread_idx,
@@ -563,16 +568,15 @@ impl Worker {
             pos,
             &mut self.acc_stack,
             &mut self.refresh_table,
-            self.optimism[pos.side_to_move()],
+            self.optimism[pos.side_to_move() & 1],
         )
     }
 
     #[inline(always)]
-    fn reduction(&self, improving: bool, d: Depth, mn: i32, delta: i32) -> i32 {
-        let reduction_scale = self.reductions[d as usize] * self.reductions[mn as usize];
-        reduction_scale - delta * 577 / self.root_delta
-            + (!improving) as i32 * reduction_scale * 197 / 512
-            + 982
+    fn reduction(&self, improving: bool, d: Depth, mn: i32) -> i32 {
+        let reduction_scale = self.reductions[d as usize % MAX_MOVES]
+            * self.reductions[mn as usize % MAX_MOVES];
+        reduction_scale + (!improving) as i32 * reduction_scale * 197 / 512 + 948
     }
 
     fn elapsed(&self) -> TimePoint {
@@ -608,34 +612,35 @@ impl Worker {
     // ---- Move making with search bookkeeping ------------------------------
 
     #[inline(always)]
-    fn do_move(&mut self, pos: &mut Position, mv: Move, gives_check: bool, ss: Option<usize>) {
+    fn do_move(
+        &mut self,
+        pos: &mut Position,
+        mv: Move,
+        gives_check: bool,
+        capture: bool,
+        ss: Option<usize>,
+    ) {
         let t = crate::prof::prof_start!();
         self.shared.tt.prefetch(pos.prefetch_key(mv));
-        let capture = pos.capture_stage(mv);
         self.inc_nodes();
         if let Some(ss) = ss {
             let pc = pos.moved_piece(mv);
             let to = mv.to_sq();
             unsafe {
-                crate::nnue::kernels::prefetch(
+                crate::nnue::kernels::prefetch_l1(
                     &(*self.ss(ss - 1).continuation_correction_history)[pc][to],
                 );
-                crate::nnue::kernels::prefetch(
+                crate::nnue::kernels::prefetch_l1(
                     &(*self.ss(ss - 3).continuation_correction_history)[pc][to],
+                );
+                crate::nnue::kernels::prefetch_l1(
+                    &(*self.ss(ss - 5).continuation_correction_history)[pc][to],
                 );
             }
         }
+        let shared = self.shared;
         let dirties = self.acc_stack.push();
-        pos.do_move(mv, gives_check, Some(dirties));
-        {
-            use crate::nnue::kernels::prefetch;
-            let h = &self.shared.histories;
-            prefetch(h.pawn_correction_entry(pos));
-            prefetch(h.minor_piece_correction_entry(pos));
-            prefetch(h.nonpawn_correction_entry(WHITE, pos));
-            prefetch(h.nonpawn_correction_entry(BLACK, pos));
-            prefetch(&h.pawn_entry(pos)[pos.piece_on(mv.to_sq())][mv.to_sq()]);
-        }
+        pos.do_move(mv, gives_check, Some(dirties), Some(&shared.histories));
         if let Some(ss) = ss {
             let pc = self.acc_stack.latest().dirties.dirty_piece.pc;
             let to = mv.to_sq();
@@ -683,13 +688,14 @@ impl Worker {
             let to = m.to_sq();
             let pc = pos.piece_on(to);
             unsafe {
-                8761 * ((*self.ss(ss - 2).continuation_correction_history)[pc][to] as i32
+                7885 * ((*self.ss(ss - 2).continuation_correction_history)[pc][to] as i32
                     + (*self.ss(ss - 4).continuation_correction_history)[pc][to] as i32)
+                    + 6307 * (*self.ss(ss - 6).continuation_correction_history)[pc][to] as i32
             }
         } else {
-            64049
+            80695
         };
-        15341 * pcv + 10569 * micv + 12906 * (wnpcv + bnpcv) + cntcv
+        13806 * pcv + 9512 * micv + 11615 * (wnpcv + bnpcv) + cntcv
     }
 
     fn update_correction_history(&mut self, pos: &Position, ss: usize, bonus: i32) {
@@ -723,14 +729,17 @@ impl Worker {
                     &mut (*self.ss(ss - 4).continuation_correction_history)[pc][to],
                     bonus * 70 / 128,
                 );
+                update::<D>(
+                    &mut (*self.ss(ss - 6).continuation_correction_history)[pc][to],
+                    bonus * 35 / 128,
+                );
             }
         }
     }
 
     fn update_continuation_histories(&self, ss: usize, pc: Piece, to: Square, bonus: i32) {
-        const BONUSES: [(usize, i32); 6] =
-            [(1, 520), (2, 390), (3, 145), (4, 251), (5, 66), (6, 209)];
-        const CMHC_MULTIPLIERS: [i32; 7] = [94, 103, 110, 106, 119, 126, 121];
+        const BONUSES: [(usize, i32); 5] = [(1, 520), (2, 390), (3, 145), (4, 251), (6, 209)];
+        const CMHC_MULTIPLIERS: [i32; 6] = [94, 103, 110, 106, 119, 126];
         let mut positive_count = 0;
         for (i, weight) in BONUSES {
             if self.ss(ss).in_check && i > 2 {
@@ -910,6 +919,7 @@ impl Worker {
         multi_pv = multi_pv.min(self.root_moves.len());
 
         let mut search_again_counter = 0;
+        let mut fail_high_recovery = 0;
         let mut uci_pv_sent = false;
 
         for row in self.low_ply_history.iter_mut() {
@@ -928,7 +938,6 @@ impl Worker {
             self.root_depth += 1;
 
             if main {
-                tot_best_move_changes /= 2.0;
                 uci_pv_sent = false;
             }
 
@@ -971,15 +980,23 @@ impl Worker {
                 let mut alpha = (avg - delta).max(-VALUE_INFINITE);
                 let mut beta = (avg + delta).min(VALUE_INFINITE);
 
+                // Not a playing-strength parameter: switches mate-seeking behaviour.
+                self.seek_mate = self.root_moves[self.pv_idx].score.abs()
+                    >= 750 + 220000 / (self.root_depth * self.root_depth);
+
                 self.optimism[us] = 114 * avg / (avg.abs() + 85);
                 self.optimism[flip_color(us)] = -self.optimism[us];
 
                 let mut failed_high_cnt = 0;
+                if self.pv_idx == 0 {
+                    fail_high_recovery = (fail_high_recovery - 2).max(0);
+                }
                 loop {
-                    let adjusted_depth =
-                        (self.root_depth - failed_high_cnt - 3 * (search_again_counter + 1) / 4)
-                            .max(1);
-                    self.root_delta = beta - alpha;
+                    let adjusted_depth = (self.root_depth
+                        - failed_high_cnt
+                        - fail_high_recovery
+                        - 3 * (search_again_counter + 1) / 4)
+                        .max(1);
                     best_value =
                         self.search::<ROOT>(&mut pos, ss, alpha, beta, adjusted_depth, false);
 
@@ -1013,6 +1030,11 @@ impl Worker {
                         break;
                     }
                     delta += 47 * delta / 128;
+                }
+
+                // Gradually increase depth after reduced depth search
+                if failed_high_cnt > 0 && self.pv_idx == 0 {
+                    fail_high_recovery = (failed_high_cnt + 1) / 2 + 2;
                 }
 
                 let pv_idx = self.pv_idx;
@@ -1131,11 +1153,6 @@ impl Worker {
                 self.rng = rng;
             }
 
-            for bmc in &self.shared.best_move_changes {
-                tot_best_move_changes += bmc.load(Relaxed) as f64;
-                bmc.store(0, Relaxed);
-            }
-
             let stop_on_ponderhit = self.manager.as_ref().unwrap().stop_on_ponderhit;
             if self.limits.use_time_management() && !self.stopped() && !stop_on_ponderhit {
                 let nodes_effort = self.root_moves[0].effort * 100000 / self.nodes().max(1);
@@ -1155,6 +1172,13 @@ impl Worker {
                 )
                 .clamp(0.629, 1.544);
                 let reduction = (1.468 + mgr.previous_time_reduction) / (2.284 * time_reduction);
+
+                // Age out and update the PV variability metric
+                tot_best_move_changes /= 2.0;
+                for bmc in &self.shared.best_move_changes {
+                    tot_best_move_changes += bmc.load(Relaxed) as f64;
+                    bmc.store(0, Relaxed);
+                }
                 let best_move_instability =
                     1.077 + 2.229 * tot_best_move_changes / self.shared.nodes.len() as f64;
                 let high_best_move_effort =
@@ -1246,7 +1270,7 @@ impl Worker {
         let pv_node = NT != NON_PV;
         let root_node = NT == ROOT;
         let all_node = !(pv_node || cut_node);
-        let seek_mate = self.root_depth >= 16 && self.root_moves[self.pv_idx].score.abs() >= 2000;
+        let seek_mate = self.seek_mate;
 
         // Dive into quiescence search when the depth reaches zero
         if depth <= 0 {
@@ -1328,6 +1352,7 @@ impl Worker {
         self.ssm(ss - 1).reduction = 0;
         self.ssm(ss).stat_score = 0;
         self.ssm(ss + 2).cutoff_cnt = 0;
+        self.ssm(ss + 1).prior_nmp_fail_high = 0;
 
         let correction_value = self.correction_value(pos, ss);
 
@@ -1415,76 +1440,70 @@ impl Worker {
         // Step 6. Early TT cutoff at non-PV nodes
         if !pv_node
             && excluded_move.is_none()
-            && tt_data.depth > depth - (tt_data.value <= beta) as i32
             && is_valid(tt_data.value)
-            && (tt_data.bound
+            && tt_data.depth > depth - (tt_data.value <= beta) as i32
+        {
+            // Case A: the entry can produce a cutoff
+            if (tt_data.bound
                 & if tt_data.value >= beta {
                     BOUND_LOWER
                 } else {
                     BOUND_UPPER
                 })
                 != 0
-            && (cut_node == (tt_data.value >= beta) || depth > 4)
-        {
-            if tt_data.mv.is_some() && tt_data.value >= beta {
-                if !tt_capture {
-                    self.update_quiet_histories(pos, ss, tt_data.mv, (112 * depth).min(695));
+                && (cut_node == (tt_data.value >= beta) || depth > 4)
+            {
+                if tt_data.mv.is_some() && tt_data.value >= beta {
+                    if !tt_capture {
+                        self.update_quiet_histories(pos, ss, tt_data.mv, 131 * depth);
+                    }
+                    if prev_sq != SQ_NONE && self.ss(ss - 1).move_count < 5 && !prior_capture {
+                        self.update_continuation_histories(
+                            ss - 1,
+                            pos.piece_on(prev_sq),
+                            prev_sq,
+                            -2210,
+                        );
+                    }
                 }
-                if prev_sq != SQ_NONE && self.ss(ss - 1).move_count < 5 && !prior_capture {
-                    self.update_continuation_histories(
-                        ss - 1,
-                        pos.piece_on(prev_sq),
-                        prev_sq,
-                        -2210,
-                    );
-                }
-            }
 
-            if pos.rule50_count() < 96 {
-                if depth >= 7
-                    && tt_data.mv.is_some()
-                    && pos.pseudo_legal(tt_data.mv)
-                    && pos.legal(tt_data.mv)
-                    && !is_decisive(tt_data.value)
-                {
-                    pos.do_move_simple(tt_data.mv);
-                    let next_key = pos.key();
-                    let (_, tt_data_next, _) = self.shared.tt.probe(next_key);
-                    pos.undo_move(tt_data.mv);
-                    if !is_valid(tt_data_next.value) {
+                // Partial workaround for the graph history interaction problem:
+                // no cutoffs at high rule50 counts.
+                if pos.rule50_count() < 96 {
+                    if depth >= 7
+                        && tt_data.mv.is_some()
+                        && pos.legal(tt_data.mv)
+                        && !is_decisive(tt_data.value)
+                    {
+                        pos.do_move_simple(tt_data.mv);
+                        let next_key = pos.key();
+                        let (_, tt_data_next, _) = self.shared.tt.probe(next_key);
+                        pos.undo_move(tt_data.mv);
+                        if !is_valid(tt_data_next.value) {
+                            if self.trace_on {
+                                crate::trace::event(crate::trace::EVENT_TABLE_CUTOFF);
+                            }
+                            return tt_data.value;
+                        }
+                        if (tt_data.value >= beta) == (-tt_data_next.value >= beta) {
+                            if self.trace_on {
+                                crate::trace::event(crate::trace::EVENT_TABLE_CUTOFF);
+                            }
+                            return tt_data.value;
+                        }
+                    } else {
                         if self.trace_on {
                             crate::trace::event(crate::trace::EVENT_TABLE_CUTOFF);
                         }
                         return tt_data.value;
                     }
-                    if (tt_data.value >= beta) == (-tt_data_next.value >= beta) {
-                        if self.trace_on {
-                            crate::trace::event(crate::trace::EVENT_TABLE_CUTOFF);
-                        }
-                        return tt_data.value;
-                    }
-                } else {
-                    if self.trace_on {
-                        crate::trace::event(crate::trace::EVENT_TABLE_CUTOFF);
-                    }
-                    return tt_data.value;
                 }
             }
-        } else if !pv_node
-            && excluded_move.is_none()
-            && tt_data.depth > depth - (tt_data.value <= beta) as i32
-            && is_valid(tt_data.value)
-            && tt_data.bound != BOUND_EXACT
-            && (tt_data.bound
-                & if tt_data.value >= beta {
-                    BOUND_UPPER
-                } else {
-                    BOUND_LOWER
-                })
-                != 0
-            && depth > 5
-        {
-            tt_writer.penalize(1);
+            // Case B: deep enough, but the bound points the wrong way, so the
+            // entry is useless for this window.
+            else if depth > 5 {
+                tt_writer.penalize(1);
+            }
         }
 
         // Step 7. Tablebases probe
@@ -1576,7 +1595,7 @@ impl Worker {
             }
 
             // Step 8. Razoring
-            if !pv_node && eval < alpha - 482 * depth * depth {
+            if all_node && eval < alpha - 342 * depth && !seek_mate {
                 return self.qsearch::<NON_PV>(pos, ss, alpha, beta);
             }
 
@@ -1601,13 +1620,15 @@ impl Worker {
 
             // Step 10. Null move search with verification search
             if cut_node
-                && static_eval >= beta - 13 * depth - 47 * improving as i32 + 365
+                && static_eval + 50 * self.ss(ss).prior_nmp_fail_high
+                    >= beta - 13 * depth - 47 * improving as i32 + 365
                 && excluded_move.is_none()
                 && pos.non_pawn_material_c(us) != 0
                 && ply >= self.nmp_min_ply
                 && beta >= -2000
             {
-                let r = 7 + depth / 3 + ((static_eval - beta) / 256).max(0);
+                let mut r = 7 + depth / 3 + ((static_eval - beta) / 256).max(0);
+                r -= seek_mate as i32 * r / 2;
                 if self.trace_on {
                     crate::trace::event(crate::trace::EVENT_NULL_PROBE);
                 }
@@ -1618,12 +1639,14 @@ impl Worker {
 
                 if null_value >= beta && !is_win(null_value) {
                     if self.nmp_min_ply != 0 || depth < 16 {
+                        self.ssm(ss).prior_nmp_fail_high += 1;
                         return null_value;
                     }
                     self.nmp_min_ply = ply + 3 * (depth - r) / 4;
                     let v = self.search::<NON_PV>(pos, ss, beta - 1, beta, depth - r, false);
                     self.nmp_min_ply = 0;
                     if v >= beta {
+                        self.ssm(ss).prior_nmp_fail_high += 1;
                         return null_value;
                     }
                 }
@@ -1657,11 +1680,13 @@ impl Worker {
                     if mv == Move::NONE {
                         break;
                     }
-                    if mv == excluded_move || !pos.legal(mv) {
+                    if mv == excluded_move {
                         continue;
                     }
+                    let capture = pos.capture_stage(mv);
+                    debug_assert!(capture);
                     let gc = pos.gives_check(mv);
-                    self.do_move(pos, mv, gc, Some(ss));
+                    self.do_move(pos, mv, gc, capture, Some(ss));
                     let mut value =
                         -self.qsearch::<NON_PV>(pos, ss + 1, -prob_cut_beta, -prob_cut_beta + 1);
                     if value >= prob_cut_beta && prob_cut_depth > 0 {
@@ -1706,6 +1731,7 @@ impl Worker {
             && !is_decisive(beta)
             && is_valid(tt_data.value)
             && !is_decisive(tt_data.value)
+            && !seek_mate
         {
             return prob_cut_beta;
         }
@@ -1736,16 +1762,13 @@ impl Worker {
         let mut value = best_value;
         let mut move_count = 0;
 
-        // Step 14. Loop through all pseudo-legal moves
+        // Step 14. Loop through all legal moves
         loop {
             let mv = mp.next_move();
             if mv == Move::NONE {
                 break;
             }
             if mv == excluded_move {
-                continue;
-            }
-            if !pos.legal(mv) {
                 continue;
             }
             if root_node
@@ -1781,8 +1804,12 @@ impl Worker {
             let gives_check = pos.gives_check(mv);
 
             let mut new_depth = depth - 1;
-            let delta = beta - alpha;
-            let mut r = self.reduction(improving, depth, move_count, delta);
+            let mut r = self.reduction(improving, depth, move_count);
+
+            // Decrease reduction for PV nodes
+            if pv_node {
+                r -= 512;
+            }
 
             if self.ss(ss).tt_pv {
                 r += 929;
@@ -1820,7 +1847,6 @@ impl Worker {
                         continue;
                     }
                 } else if !self.ss(ss).follow_pv || !pv_node {
-                    let d_index = (depth as usize).min(LMR_DIVISOR.len()) - 1;
                     let to = mv.to_sq();
                     let mut history =
                         unsafe {
@@ -1833,7 +1859,7 @@ impl Worker {
                     }
 
                     history += 69 * self.main_history[us][mv.raw() as usize] as i32 / 32;
-                    lmr_depth += history / LMR_DIVISOR[d_index];
+                    lmr_depth += history / lmr_divisor(depth);
 
                     let futility_value = self.ss(ss).static_eval
                         + 119 * lmr_depth
@@ -1903,8 +1929,7 @@ impl Worker {
                 } else if value >= beta && !is_decisive(value) {
                     update::<TT_MOVE_D>(&mut self.tt_move_history, -421 - 110 * depth);
                     if !in_check && value > self.ss(ss).static_eval {
-                        let bonus = ((value - self.ss(ss).static_eval) * singular_depth * 177
-                            / 1024)
+                        let bonus = ((value - self.ss(ss).static_eval) * 664 / 1024)
                             .clamp(-CORRECTION_HISTORY_LIMIT / 4, CORRECTION_HISTORY_LIMIT / 4);
                         self.update_correction_history(pos, ss, bonus);
                     }
@@ -1920,7 +1945,7 @@ impl Worker {
             }
 
             // Step 17. Make the move
-            self.do_move(pos, mv, gives_check, Some(ss));
+            self.do_move(pos, mv, gives_check, capture, Some(ss));
 
             new_depth += extension;
 
@@ -1973,8 +1998,18 @@ impl Worker {
                 r += r * 276 / (256 * depth + 268);
             }
 
+            // When seeking a mate, reduce non-checking moves more and checking moves less
+            if seek_mate && r > 0 {
+                r += (if gives_check { -r } else { r }) / 4;
+            }
+
             if depth >= 2 && move_count > 1 {
-                let d = (new_depth - r / 1024).min(new_depth + 2).max(1) + pv_node as i32;
+                // Limited extensions beyond newDepth, but not deep in the tree
+                // relative to rootDepth, to avoid search explosion.
+                let d = (new_depth
+                    + (-r / 1024).min(if self.ss(ss).ply < 2 * self.root_depth { 2 } else { 0 }))
+                .max(1)
+                    + pv_node as i32;
 
                 self.ssm(ss).reduction = new_depth - d;
                 if self.trace_on && d < new_depth {
@@ -2204,7 +2239,8 @@ impl Worker {
                     scaled_bonus * 324 / 8192,
                 );
             }
-        } else if prior_capture && prev_sq != SQ_NONE {
+        } else if prev_sq != SQ_NONE {
+            debug_assert!(prior_capture);
             let captured = pos.captured_piece();
             update::<CAPTURE_D>(
                 &mut self.capture_history[pos.piece_on(prev_sq)][prev_sq][type_of(captured)],
@@ -2379,9 +2415,8 @@ impl Worker {
 
             // Stand pat
             if best_value >= beta {
-                if !is_decisive(best_value) {
-                    best_value = (441 * best_value + 583 * beta) / 1024;
-                }
+                debug_assert!(!is_decisive(best_value));
+                best_value = (441 * best_value + 583 * beta) / 1024;
                 if !tt_hit {
                     tt_writer.write(
                         pos_key,
@@ -2432,14 +2467,11 @@ impl Worker {
             ply,
         );
 
-        // Step 5. Loop through all pseudo-legal moves
+        // Step 5. Loop through all legal moves
         loop {
             let mv = mp.next_move();
             if mv == Move::NONE {
                 break;
-            }
-            if !pos.legal(mv) {
-                continue;
             }
             let gives_check = pos.gives_check(mv);
             let capture = pos.capture_stage(mv);
@@ -2474,7 +2506,7 @@ impl Worker {
             }
 
             // Step 7. Make and search the move
-            self.do_move(pos, mv, gives_check, Some(ss));
+            self.do_move(pos, mv, gives_check, capture, Some(ss));
             let value = -self.qsearch::<NT>(pos, ss + 1, -beta, -alpha);
             self.undo_move(pos, mv);
 
@@ -2910,7 +2942,7 @@ fn extract_ponder_from_tt(rm: &mut RootMove, tt: &TranspositionTable, pos: &mut 
     pos.do_move_simple(rm.pv[0]);
     if !pos.is_draw(1) {
         let (hit, data, _) = tt.probe(pos.key());
-        if hit && MoveList::new(pos, GenType::Legal).contains(data.mv) {
+        if hit && data.mv.is_some() && pos.legal(data.mv) {
             rm.pv.push(data.mv);
         }
     }

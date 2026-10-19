@@ -11,9 +11,9 @@
   },
   "license": "GPL-3.0-or-later (see Copying.txt); authors listed in AUTHORS",
   "network": {
-    "name": "nn-1a298aa575a0.nnue",
-    "sha256": "1a298aa575a085434d29027978dc36867fe9c5bcea9376654b7a8eba1e52dfc2",
-    "source": "exported from the pinned binary (export_net); also https://tests.stockfishchess.org/api/nn/nn-1a298aa575a0.nnue"
+    "name": "nn-c9e480e92425.nnue",
+    "sha256": "c9e480e92425f887df6ab9b05c6180fbd762b07879df9d9845f1aa75440caa73",
+    "source": "https://tests.stockfishchess.org/api/nn/nn-c9e480e92425.nnue; mirror https://github.com/official-stockfish/networks commit 935dd33472d08334adf233e7769e7af5bb6d8434"
   },
   "ported_sources": [
     {
@@ -238,5 +238,147 @@
         "wdl_dtz_v2_tables": 260
       }
     }
+  },
+  "development_update": {
+    "repository": "https://github.com/official-stockfish/Stockfish",
+    "commit": "effdc3fd3f6de6e75fe1374a51a7a7eed66f880b",
+    "commit_date": "2026-10-17",
+    "commits_since_sf_19": 55,
+    "verification": {
+      "bench_signature": 1559611,
+      "reference": "the same commit built locally with clang 21 (-O3, LTO, znver4) as a development tool",
+      "bench_lines": "all 690 info/bestmove lines identical, excluding time, nps and hashfull",
+      "static_eval": "raw and final evaluations identical on all 45 evaluable bench positions"
+    },
+    "ported_sources": [
+      {
+        "path": "src/attacks.h",
+        "sha256": "31c056f3027a100e3535e2ae2abdb9d5b9e64133372b9ddebbd9ae4f828eb257"
+      },
+      {
+        "path": "src/attacks.cpp",
+        "sha256": "d852abff8c3334c918f303a2490425966f9224e826adc25344336f76792cd474"
+      },
+      {
+        "path": "src/evaluate.h",
+        "sha256": "086c68dc1c36920fb783f5f1666ae5036d47200e594fc2a5ecd1430cd10d1b31"
+      },
+      {
+        "path": "src/evaluate.cpp",
+        "sha256": "566917116f4ab3ccac8cb1f9b433453ebb69e09ee9c77dfa455419350999bd7c"
+      },
+      {
+        "path": "src/movegen.h",
+        "sha256": "0ba251ab90282995eba69c83a583a3043ed6ca745efd073688abefdd4e04d3ec"
+      },
+      {
+        "path": "src/movegen.cpp",
+        "sha256": "7c9b415b3c6ae28b4f69f937b0b3ad49084dbd009d8f3895ba9374a937882313"
+      },
+      {
+        "path": "src/movepick.h",
+        "sha256": "540885af104936c9ec1094fc4bb862f239c685744c7fab7411031497bc3594f6"
+      },
+      {
+        "path": "src/movepick.cpp",
+        "sha256": "cced5d21e68e514d3ed6bcb0f68ef85c9a70886df3e3523f3fae1a637d21c895"
+      },
+      {
+        "path": "src/position.h",
+        "sha256": "6299d514af40e9d8f2c408173d23eb81339cd1bd0b1c2aa12e60b884a5c8bf20"
+      },
+      {
+        "path": "src/position.cpp",
+        "sha256": "b810d60457161c444e02b65030b87808f6b806c4ddc0f1ce87084e8f3f2579b1"
+      },
+      {
+        "path": "src/search.h",
+        "sha256": "80d6981444494876c27e4f3a0e8eeead7439ad8f8aa9c642c73a1222edd84a26"
+      },
+      {
+        "path": "src/search.cpp",
+        "sha256": "1a2fb447589e2c3f84b87c9d27efaf9e0feff1c52839cdecc6b95b4a7088222a"
+      },
+      {
+        "path": "src/timeman.h",
+        "sha256": "bb1b4a3124b36ac3cf511a2c5b781a340657aa4b4f17eb2bf965efb08c1121ed"
+      },
+      {
+        "path": "src/timeman.cpp",
+        "sha256": "f604f6387ace75d3eb7648f5b278f7d842bc72f5d0100637b26693fafbf6bc7d"
+      },
+      {
+        "path": "src/types.h",
+        "sha256": "701cb3784d5c69d7f0e065400a72b811dde46790413c19e16e685ce643a1a4d1"
+      },
+      {
+        "path": "src/perft.h",
+        "sha256": "8d56f3aa20aba4163e06ea4032b65812948a64d93d4fb9c9ea5d1bb7b85f4b21"
+      },
+      {
+        "path": "src/thread.cpp",
+        "sha256": "775f58a59e78c9bb5b4d13f2547178c89c7b2e1ed2a04b537b1dc4a3203463c2"
+      },
+      {
+        "path": "src/uci.cpp",
+        "sha256": "a2f75ac4cbc608082a8ef9fa7075118b72803a5393020236b8b854fc6ecef929"
+      },
+      {
+        "path": "src/syzygy/tbprobe.cpp",
+        "sha256": "cd60aaf3af7928045c599a7f39c4f328e0fd5208ea88d55c3117ee2db1f9afa1"
+      },
+      {
+        "path": "src/nnue/network.h",
+        "sha256": "fcd4c2f5b774a463f115009dcea2ae83cab38d2bf31bac4f2d33e8130aa9c656"
+      },
+      {
+        "path": "src/nnue/network.cpp",
+        "sha256": "cc3846de8347171ac377fb5556c7274ccdf2b7637f2e5d4c40d881a5cfbe2614"
+      },
+      {
+        "path": "src/nnue/nnue_accumulator.h",
+        "sha256": "23918bb7e2440c2c6e745e2e3a9e611413b32a4fa650e2f223a387f954cffa24"
+      },
+      {
+        "path": "src/nnue/nnue_accumulator.cpp",
+        "sha256": "21b0c1b22ba47436a8c107c2de2d564fea47a4d82d7218462bd30cc5e890b5f4"
+      },
+      {
+        "path": "src/nnue/nnue_architecture.h",
+        "sha256": "1c019f35bcdab11e7874338ebcd3b178705042416c331267f8805c3d5f4ef2bf"
+      },
+      {
+        "path": "src/nnue/nnue_common.h",
+        "sha256": "d1a7a97b74acabb1a335db4415890933cd5414bb93e6663a5cb47555eaf298a4"
+      },
+      {
+        "path": "src/nnue/nnue_feature_transformer.h",
+        "sha256": "f4970d8a025f8ced48e91ba476943cd2d18a02d5fed3dd851fbff9b1ccfe69c9"
+      },
+      {
+        "path": "src/nnue/nnz_helper.h",
+        "sha256": "5118876cd8008d84f397c07785be4f5ad2df9715e5d671b1537888f3d469fd0b"
+      },
+      {
+        "path": "src/nnue/simd.h",
+        "sha256": "5b852bfd84a6cbfd2ec86faa642122985fa6c2b49204c635c05cb8b7e524afee"
+      },
+      {
+        "path": "src/nnue/features/k32q2.h",
+        "sha256": "11d0b822bb3f35a9f9aedccab6e9e706cfaf7832119729faffc601562c48fc7d"
+      },
+      {
+        "path": "src/nnue/features/k32q2.cpp",
+        "sha256": "5d617b05c5605383e89e6db315ba4749fa32e69c4ee3f2bc990e74adeebea2f7"
+      },
+      {
+        "path": "src/nnue/features/full_threats.h",
+        "sha256": "26f54dc7707352010dd5799b3d5d376815d19e8102f525ed7b706e5b1b930f49"
+      },
+      {
+        "path": "src/nnue/features/full_threats.cpp",
+        "sha256": "0bd66d4aaf9b01fc04fef89759d3595e9656a8f5e5d35c1b6e9284f37485ad63"
+      }
+    ]
   }
 }
