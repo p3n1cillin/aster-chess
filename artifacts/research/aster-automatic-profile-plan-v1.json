@@ -1,0 +1,505 @@
+{
+  "created_utc": "2026-10-19T16:13:02.819949+00:00",
+  "baseline_commit": "79f4ccb8a608dea9f1724b5d368866b4518bfde2",
+  "production_sha256": "6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2",
+  "scope": "Bounded diagnostic of unchanged automatic native search, not a candidate or playing-strength test. No algorithm, weights, release default or search-option changes. Do not retune prior failed experiments.",
+  "playing_inputs": [
+    {
+      "path": "Cargo.toml",
+      "sha256": "ac3533624306bdc30a69960d0514a528e0221987ea76eafbdceb951db7dfcf84"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "11919d78a85470d26ea78091dbf4805913f711a91a8e0c985ac7c29eecf4ffc8"
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "sha256": "d8c420f9c9a2fc00c09cf07b7bb570c92a09137ef1559cb9ef5b12c76f7557cc"
+    },
+    {
+      "path": ".cargo/config.toml",
+      "sha256": "29424c07f5532b9cda675d89ced5f85c93b9638586221e432496d75cd6566b06"
+    },
+    {
+      "path": "crates/aster-core/AUTHORS",
+      "sha256": "59c7a457f0665f26453ad90f474db7cd328f0983a7e8031cded5d6f25e1a1eb6"
+    },
+    {
+      "path": "crates/aster-core/build.rs",
+      "sha256": "9cbfe4f3d97d39f068c826caf640758b6cc0faff58a9877fddb186abdaabc215"
+    },
+    {
+      "path": "crates/aster-core/Cargo.toml",
+      "sha256": "f2a227f2507ef24743b386fb1317075ed45915238e133b45d294a4d5fd3d24d2"
+    },
+    {
+      "path": "crates/aster-core/Copying.txt",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "crates/aster-core/README.md",
+      "sha256": "0eb47b04286d9d7b0f40209a14199278355529f21a5cde8b3812d0e3398569da"
+    },
+    {
+      "path": "crates/aster-core/src/bitboard.rs",
+      "sha256": "b7786cfac62c294b8389bc2566d4a749499e047679ecd84df9a37da393018a46"
+    },
+    {
+      "path": "crates/aster-core/src/bitboard.rs.license",
+      "sha256": "5256f7daa93680ae6f5d5aaf789e68d4432406c1e974fb0ad0c946d7fffcaa54"
+    },
+    {
+      "path": "crates/aster-core/src/disagreement.rs",
+      "sha256": "46a79843bebedb29074f08c0b380970fb263074e08c16b8399775a46b3ec64c4"
+    },
+    {
+      "path": "crates/aster-core/src/evaluation_risk.rs",
+      "sha256": "201f1ea1002d72cad7061f1a3ce75ae3ea7ee8541c3c6a6e5169faecb5c12fc7"
+    },
+    {
+      "path": "crates/aster-core/src/history.rs",
+      "sha256": "843961fccdd08943980d4bbd71f2ce2b46e07e09a6287e339df0e5409eb81024"
+    },
+    {
+      "path": "crates/aster-core/src/history.rs.license",
+      "sha256": "631171ad478cb43cfbaeea61317dc7c2ca285fce28a7c859371dffb125047c68"
+    },
+    {
+      "path": "crates/aster-core/src/lib.rs",
+      "sha256": "6e2d0cdbdcc589d9f6ca71140c54ec5a00993098a5d1c791617247aa3cd1f1d4"
+    },
+    {
+      "path": "crates/aster-core/src/lib.rs.license",
+      "sha256": "7b33002f284ab76fb429f3919bbd9d2d2647880fee8ac5be89978e57e6be7983"
+    },
+    {
+      "path": "crates/aster-core/src/main.rs",
+      "sha256": "2ebc9a1110512a5e2b5b521eb452b2623160e0d54607d9d13da7e532c917e8ee"
+    },
+    {
+      "path": "crates/aster-core/src/main.rs.license",
+      "sha256": "a666ca6e8f37095e343ff540fb41536e29e75c7a2a0adb42b5a0b03669a911b1"
+    },
+    {
+      "path": "crates/aster-core/src/movegen.rs",
+      "sha256": "c2a0783424128e49eba2ed8439b97f9e091052087e7db5e23a4a95798f5feb42"
+    },
+    {
+      "path": "crates/aster-core/src/movegen.rs.license",
+      "sha256": "f7d77536628cc218cd29630815f8c0d9b3e7f6cb912c3a0e9c6bdf24b71ee509"
+    },
+    {
+      "path": "crates/aster-core/src/movepick.rs",
+      "sha256": "acf5e704b115ca010bec91a3f61a4e28149107c70e32374db28be2d530077361"
+    },
+    {
+      "path": "crates/aster-core/src/movepick.rs.license",
+      "sha256": "66e01f88d40ead1a3ccc01e1b1a8418c221c0a139edb047c253f4b882f5899d8"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/accumulator.rs",
+      "sha256": "db64ee0300f080ddfa2e1c482af3faebdd1c560d7bacc362dc8ef2657419eb21"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/accumulator.rs.license",
+      "sha256": "4ca4297d836bc3b14d39b1380956767bdb35c2d9f747eac7f16b287ea52a77cc"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/aligned.rs",
+      "sha256": "c1bab1727299aa595b9d222329b95306793f27c4a28c2f62da98cf4ed0fd5b09"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/features.rs",
+      "sha256": "fd73cfbe5df4d29353f367ddda362837f5d477d47e5750e98f0c2ad13a735e5f"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/features.rs.license",
+      "sha256": "f0fb744a720e58289579538eefa541188573f0a9db676023f5481636244b52f6"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/kernels.rs",
+      "sha256": "cbace96f9c4a95cada5c96ea4b8cd912bf74ab30279ce1aa54634bafbdab3a6a"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/kernels.rs.license",
+      "sha256": "e4ed6d953c7f3ae90774e2caed15f33a0789cbc005a4d0108d2198c6248faaea"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/mod.rs",
+      "sha256": "b6ad6ac2d24c44293faecdbb14fd100aedb54eaf4f808d700cb1c17bcc99b58a"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/mod.rs.license",
+      "sha256": "8a1c5f0b6dbceb103b1cf36eb511d5de0ed56afbf8a899ee3489b2b6d5d37f18"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/network.rs",
+      "sha256": "871251e2176386669755463aa9de7f4558e1b79f48676c88d16678893e2d5ed6"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/network.rs.license",
+      "sha256": "42e358ccbcb20a0cee71aff26e79eb6c5e13ae88214fcc2a668798dddcefa571"
+    },
+    {
+      "path": "crates/aster-core/src/perft.rs",
+      "sha256": "e8b33750b7c24c681e0cfc7f3a5403ce694a3b628520d7f1051a87da76eb5325"
+    },
+    {
+      "path": "crates/aster-core/src/perft.rs.license",
+      "sha256": "46d257484ee4f8d9ae2048ec37dde08228ceebe2f27dec66280a6b234d51982d"
+    },
+    {
+      "path": "crates/aster-core/src/position.rs",
+      "sha256": "1f66270ffc7608cb42d2c2e6489d5a88cfa5011876d8573b9d4a4a2e6e40336c"
+    },
+    {
+      "path": "crates/aster-core/src/position.rs.license",
+      "sha256": "a8b474b9110a086e2f02dd92061d2587ab29f6c02e788ba14c16eee1e4c0f381"
+    },
+    {
+      "path": "crates/aster-core/src/prof.rs",
+      "sha256": "5922c14d28580b76fdaf7fcd381374c46d4192b8bbdb5c507a8ab1aa8a4fd8d6"
+    },
+    {
+      "path": "crates/aster-core/src/sampler.rs",
+      "sha256": "77d6d8eb6d4aced90bb8ff02b6ba5efe2d900bd880820b91320a09a738ea64e8"
+    },
+    {
+      "path": "crates/aster-core/src/search.rs",
+      "sha256": "0385e8b78ab7723c99bc760a50b4e2684214dae4029130711c48547dabffedf2"
+    },
+    {
+      "path": "crates/aster-core/src/search.rs.license",
+      "sha256": "374e2163481e03a4176708029991362ffb172f50e6ee6ab79bacf9c88865503a"
+    },
+    {
+      "path": "crates/aster-core/src/speedtest_positions.rs",
+      "sha256": "449647a0896bbfa107f6beaa72af7ff0f297b96d8341f124ee7e7549c68301c2"
+    },
+    {
+      "path": "crates/aster-core/src/speedtest_positions.rs.license",
+      "sha256": "990d44aa8c2149c63ee6c5c6b58b63c5e7ad7d1af2afb4b925d2451fac400b52"
+    },
+    {
+      "path": "crates/aster-core/src/syzygy.rs",
+      "sha256": "9ba3b95bb9743ec96fe5f773f41ca48fae84fcafc562a6b95886b7138aa1eda5"
+    },
+    {
+      "path": "crates/aster-core/src/syzygy.rs.license",
+      "sha256": "774770457cae71c9c332d17f0b2f65995558db75dbaaf3664b6169dc45bafd0b"
+    },
+    {
+      "path": "crates/aster-core/src/timeman.rs",
+      "sha256": "352f5f9bf023de9c867756045efa3dd404edf9209808a194a6b72787006743e8"
+    },
+    {
+      "path": "crates/aster-core/src/timeman.rs.license",
+      "sha256": "25adee76d6928eb68121c3c5bcc94b3320b5b8c39c1e08feffa90cb221fb74e0"
+    },
+    {
+      "path": "crates/aster-core/src/trace.rs",
+      "sha256": "9775667ac23f4d863b603e2e2541028878017718cc43eca3a6a15edacb13b577"
+    },
+    {
+      "path": "crates/aster-core/src/tt/tests.rs",
+      "sha256": "5ff13ef71ecc51757cef8e33062b2d357baa44d7402978e657042ca083cac70b"
+    },
+    {
+      "path": "crates/aster-core/src/tt.rs",
+      "sha256": "7e999a6c517b293d8817c4d417fb9aa7f787c5967506150365e188f50f070060"
+    },
+    {
+      "path": "crates/aster-core/src/tt.rs.license",
+      "sha256": "b6fa11f1fa30c1c23f63f2fe16ef833948b810d94b98cd5ee60cccef0316e5aa"
+    },
+    {
+      "path": "crates/aster-core/src/types.rs",
+      "sha256": "1a5d8026f00f64ec96dfe66f4de2a8ace3a67c7a989154d4ab09fedfb13a440e"
+    },
+    {
+      "path": "crates/aster-core/src/types.rs.license",
+      "sha256": "41d0b3b223077663b343ab36c44e292c87f0cd92e06bdcab4039ef94ff06a72e"
+    },
+    {
+      "path": "crates/aster-core/src/uci.rs",
+      "sha256": "25d5bdf2d140bc267f7dc9005a2639d76350992520347c3509618f8d9b878e7a"
+    },
+    {
+      "path": "crates/aster-core/src/uci.rs.license",
+      "sha256": "d00bcd70d5e6a64c3235f6480159e4c3f26fd75ed5034483454e350e93ba8a14"
+    },
+    {
+      "path": "crates/aster-core/tests/port.rs",
+      "sha256": "25ef1032e2aabfe63df73bb345095e9b2bfedb4a3be089e7b864a61ce7b1db14"
+    },
+    {
+      "path": "crates/aster-core/tests/port.rs.license",
+      "sha256": "a85e94d0c2ac5754c05d992290473e4c455f440a7f5d8b5d8dbc72e24dffbdb4"
+    },
+    {
+      "path": "crates/aster-core/UPSTREAM.json",
+      "sha256": "6832819ccf6e6f2c94125755d7fea2b43eff8fa7e944ed8b765a674ca37d0b05"
+    }
+  ],
+  "build": {
+    "rust": "1.99.1",
+    "host": "x86_64-pc-windows-msvc",
+    "flags": [
+      "-C",
+      "target-cpu=x86-64-v3"
+    ],
+    "cargo": [
+      "build",
+      "--release",
+      "--locked",
+      "--target",
+      "x86_64-pc-windows-msvc",
+      "-p",
+      "aster-core",
+      "--bin",
+      "aster-core"
+    ],
+    "features": {
+      "debug_control": [
+        "embed-net"
+      ],
+      "counters": [
+        "embed-net",
+        "prof"
+      ],
+      "sampler": [
+        "embed-net",
+        "sampler"
+      ]
+    },
+    "environment": {
+      "CARGO_PROFILE_RELEASE_DEBUG": "2",
+      "CARGO_PROFILE_RELEASE_STRIP": "none"
+    },
+    "map": "Each role gets its own absolute /MAP linker output; explicit target keeps target-only flags off build scripts. Copy EXE and its matching PDB before the next role build. Production full Aster is not rebuilt or overwritten."
+  },
+  "tools": {
+    "llvm-symbolizer": {
+      "path": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\Llvm\\x64\\bin\\llvm-symbolizer.exe",
+      "sha256": "2e2be23156941dbc2f2d36902b2e8c1404e6223bc3c54c633b3aa56d9c2aa76c",
+      "version": "llvm-symbolizer\nLLVM (http://llvm.org/):\n  LLVM version 22.1.3\n  Optimized build."
+    },
+    "llvm-pdbutil": {
+      "path": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\Llvm\\x64\\bin\\llvm-pdbutil.exe",
+      "sha256": "7e913f81c5f5e5dbd631a46e743f96ad8af77610940ee9fdadcadb577efd7ec4",
+      "version": "LLVM (http://llvm.org/):\n  LLVM version 22.1.3\n  Optimized build."
+    }
+  },
+  "workloads": {
+    "canonical": {
+      "args": [
+        "bench"
+      ],
+      "expected_nodes": 1559611,
+      "searches": 51,
+      "threads": 1,
+      "hash_mib": 16
+    },
+    "foundation16": {
+      "args": [
+        "bench",
+        "64",
+        "1",
+        "14",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-automatic-profile-workload-v1\\foundation16.fen",
+        "depth"
+      ],
+      "searches": 16,
+      "threads": 1,
+      "hash_mib": 64,
+      "input": "artifacts/research/aster-automatic-profile-workload-v1/foundation16.fen",
+      "input_sha256": "c63aae43a7fa5d03d76330d9c73ff4b4789c9fee2a42c1161113b60e5daf803a",
+      "parent": "tests/fixtures/rust-foundation-parent-v1.json",
+      "parent_sha256": "ec2a76dbd775a3fcc94156c36ec0f4762f0dae6146640fe189b1d795632b40c9",
+      "range": [
+        0,
+        16
+      ],
+      "history": "FEN-only diagnostic roots, unknown earlier repetition history; fixed order, one ucinewgame per whole workload. Not a fresh strength validation set."
+    }
+  },
+  "schedule": [
+    {
+      "workload": "canonical",
+      "repetition": 0,
+      "role": "production"
+    },
+    {
+      "workload": "canonical",
+      "repetition": 0,
+      "role": "debug_control"
+    },
+    {
+      "workload": "canonical",
+      "repetition": 0,
+      "role": "counters"
+    },
+    {
+      "workload": "canonical",
+      "repetition": 0,
+      "role": "sampler"
+    },
+    {
+      "workload": "canonical",
+      "repetition": 1,
+      "role": "debug_control"
+    },
+    {
+      "workload": "canonical",
+      "repetition": 1,
+      "role": "counters"
+    },
+    {
+      "workload": "canonical",
+      "repetition": 1,
+      "role": "sampler"
+    },
+    {
+      "workload": "canonical",
+      "repetition": 1,
+      "role": "production"
+    },
+    {
+      "workload": "canonical",
+      "repetition": 2,
+      "role": "counters"
+    },
+    {
+      "workload": "canonical",
+      "repetition": 2,
+      "role": "sampler"
+    },
+    {
+      "workload": "canonical",
+      "repetition": 2,
+      "role": "production"
+    },
+    {
+      "workload": "canonical",
+      "repetition": 2,
+      "role": "debug_control"
+    },
+    {
+      "workload": "canonical",
+      "repetition": 3,
+      "role": "sampler"
+    },
+    {
+      "workload": "canonical",
+      "repetition": 3,
+      "role": "production"
+    },
+    {
+      "workload": "canonical",
+      "repetition": 3,
+      "role": "debug_control"
+    },
+    {
+      "workload": "canonical",
+      "repetition": 3,
+      "role": "counters"
+    },
+    {
+      "workload": "foundation16",
+      "repetition": 0,
+      "role": "production"
+    },
+    {
+      "workload": "foundation16",
+      "repetition": 0,
+      "role": "debug_control"
+    },
+    {
+      "workload": "foundation16",
+      "repetition": 0,
+      "role": "counters"
+    },
+    {
+      "workload": "foundation16",
+      "repetition": 0,
+      "role": "sampler"
+    },
+    {
+      "workload": "foundation16",
+      "repetition": 1,
+      "role": "debug_control"
+    },
+    {
+      "workload": "foundation16",
+      "repetition": 1,
+      "role": "counters"
+    },
+    {
+      "workload": "foundation16",
+      "repetition": 1,
+      "role": "sampler"
+    },
+    {
+      "workload": "foundation16",
+      "repetition": 1,
+      "role": "production"
+    },
+    {
+      "workload": "foundation16",
+      "repetition": 2,
+      "role": "counters"
+    },
+    {
+      "workload": "foundation16",
+      "repetition": 2,
+      "role": "sampler"
+    },
+    {
+      "workload": "foundation16",
+      "repetition": 2,
+      "role": "production"
+    },
+    {
+      "workload": "foundation16",
+      "repetition": 2,
+      "role": "debug_control"
+    },
+    {
+      "workload": "foundation16",
+      "repetition": 3,
+      "role": "sampler"
+    },
+    {
+      "workload": "foundation16",
+      "repetition": 3,
+      "role": "production"
+    },
+    {
+      "workload": "foundation16",
+      "repetition": 3,
+      "role": "debug_control"
+    },
+    {
+      "workload": "foundation16",
+      "repetition": 3,
+      "role": "counters"
+    }
+  ],
+  "resources": {
+    "cpu": "Ryzen5 7600X,6cores12logical; Windows",
+    "search_threads": 1,
+    "active_searches": 1,
+    "sampler_helper_threads": 1,
+    "per_process_timeout_seconds": 180,
+    "build_timeout_seconds": 900,
+    "no_concurrent_local_builds_matches_or_engine_studies_during_collection": true
+  },
+  "gates": {
+    "exactness": "Every normalized info depth/bestmove line, full nodes and per-position ordering identical to production for each workload. Canonical1559611 and51searches. Stop on divergence/timeout; preserve failure, no replacement runs.",
+    "sample_coverage": "Each sampled run needs >=100 executable-region samples; retain all outside/unknown/caller samples, and report PDB line-resolution coverage. Below80% resolved executable samples means limited attribution, no confident line-level bottleneck claim.",
+    "overhead": "Report per-repetition bench and wall elapsed ratios to production and debug_control, medians over4runs. Median counters/debug_control or sampler/debug_control >2.0 flags heavy perturbation and prevents treating ranking as representative of ordinary runtime. No speed adoption or Elo from these timings.",
+    "limits": "RDTSC counters are inclusive, overlapping, unserialized and include timer/atomic cost. acc_kernel does not cover index-only updates. Sampling suspends search and consumes a helper core. Caller stack heuristics are not primary attribution. Raw PC sample shares are neither call costs nor independent draws; no sample-level confidence intervals.",
+    "completion": "Complete all32 fixed runs even if overhead flags fail, unless exactness/timeout fails. Preserve all raw traces, sample/caller files, symbolization results, matching PDBs/binaries/maps and hashes. New candidate needs a separate plan/fresh roots; diagnostic does not justify any gain or policy promotion."
+  },
+  "interpretation": "Use corroborating sampling and inclusive counter observations to nominate a distinct bottleneck for later research. Unknowns, resolution failures and perturbation remain visible; no retries selected by hotspots."
+}
