@@ -99,9 +99,14 @@ def main():
 
         client.send('stop');lines=client.until('bestmove',timeout=3);validate_pv(root,lines)
         position(root)
-        for fen,mate in [('7k/6Q1/6K1/8/8/8/8/8 b - - 100 1',True),('7k/5Q2/6K1/8/8/8/8/8 b - - 0 1',False),('7k/8/6K1/8/8/8/8/R7 w - - 100 1',False)]:
+        # A fifty-move draw must be claimed (FIDE 9.3), so with the clock at 100 the
+        # side to move may still mate: the Stockfish 19 core reports Ra8# as mate 1.
+        # The legacy Viridithas-derived core always treats the claimable draw as final.
+        legacy=('Viridithas' in client.name)
+        for fen,expected in [('7k/6Q1/6K1/8/8/8/8/8 b - - 100 1','score mate 0'),('7k/5Q2/6K1/8/8/8/8/8 b - - 0 1','score cp 0'),
+                             ('7k/8/6K1/8/8/8/8/R7 w - - 100 1','score cp 0' if legacy else 'score mate 1')]:
             client.send('position fen '+fen);client.send('go depth 2');lines=client.until('bestmove')
-            assert any(('score mate 0' if mate else 'score cp 0') in line for line in lines),lines
+            assert any(expected in line for line in lines),lines
     report={'passed':True,'positions':checked,'legal_existence_checks':checked,'perft':perfts,'ready_during_infinite_search_seconds':ready_seconds,
         'observer_equivalence':outputs,'independently_replayed_samples':samples,'independently_replayed_live_branches':branches,
         'binary_sha256':hashlib.sha256(pathlib.Path(args.engine).read_bytes()).hexdigest(),

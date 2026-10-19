@@ -49,8 +49,17 @@ use cli::Subcommands::{
     Bench, EvalStats, Merge, NNUEDryRun, Perft, Quantise, Spsa, Verbatim, VisNNUE,
 };
 
-/// The name of the engine.
+/// The name of the legacy engine core.
 pub static NAME: &str = "Aster (Viridithas 20 derived)";
+
+/// UCI identity of the default playing core.
+fn core_identity() -> sf_port::Identity {
+    sf_port::Identity {
+        name: format!("Aster {VERSION}"),
+        author: "Aster contributors; search and NNUE are a Rust port of Stockfish 19 by the Stockfish developers".to_string(),
+        aster_extensions: true,
+    }
+}
 /// The version of the engine.
 pub static VERSION: &str = env!("CARGO_PKG_VERSION");
 
@@ -63,8 +72,16 @@ fn main() -> anyhow::Result<()> {
         return aster_proof::cli(&args[2..]);
     }
     if std::env::args_os().len() == 1 {
-        // fast path to UCI:
+        // Default UCI engine: the Stockfish 19 Rust core.
+        std::process::exit(sf_port::run_uci(core_identity(), Vec::new()));
+    }
+    if args.get(1).is_some_and(|a| a == "legacy") {
+        // The previous Viridithas-derived Aster core, kept for comparisons and its tooling.
         return Ok(uci::main_loop()?);
+    }
+    if args.get(1).is_some_and(|a| a == "core") {
+        // One-shot commands for the default core, e.g. `aster core bench`.
+        std::process::exit(sf_port::run_uci(core_identity(), args[2..].to_vec()));
     }
 
     let cli = <cli::Cli as clap::Parser>::parse();

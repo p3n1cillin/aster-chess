@@ -5,6 +5,15 @@ Stockfish in controlled playing-strength tests. Do not claim that goal has been
 achieved without evidence. Do not implement the engine as a Stockfish wrapper.
 Stockfish and python-chess are development tools only, never runtime dependencies.
 
+On 2026-10-19 the user authorized a faithful Rust port of Stockfish 19 in
+`crates/sf-port` (GPL-3.0-or-later, Stockfish attribution preserved). It is a
+port, not a wrapper: no C++ code, Stockfish binary or external process runs
+behind it. Its first acceptance gate is an identical `bench` node signature to
+the pinned official sf_19 binary (2,497,913 nodes). The user's later goal is to
+use the port to make Aster stronger than Stockfish; that remains unproven until
+predeclared paired matches show it. A faster port is a speed result, not a
+strength claim.
+
 ## Build and verification
 
 Active development is Rust only, as requested by the user on 2026-10-18.
@@ -14,6 +23,8 @@ its MIT notice and original source fingerprints. Stockfish is a development
 opponent/research reference, never an external runtime engine behind Aster.
 
 - `python scripts/fetch_rust_network.py`
+- `python scripts/fetch_sf_port_network.py`
+- `cargo run --release --locked -p sf-port -- bench` must print 2,497,913 nodes
 - `cargo build --release --locked`
 - `cargo test --release --locked`
 - `cargo test --locked`

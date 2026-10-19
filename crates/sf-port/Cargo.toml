@@ -1,0 +1,25 @@
+[package]
+name = "sf-port"
+version = "19.0.0"
+edition = "2024"
+description = "Faithful Rust port of the Stockfish 19 UCI chess engine."
+license = "GPL-3.0-or-later"
+authors = ["The Stockfish developers (original C++ engine)", "Aster contributors (Rust port)"]
+rust-version = "1.93.0"
+
+[dependencies]
+
+[build-dependencies]
+sha2 = "=0.10.9"
+
+[[bin]]
+name = "sf-port"
+path = "src/main.rs"
+
+[features]
+# Embed the pinned network (verified by build.rs) so the binary is self-contained.
+embed-net = []
+# Cycle counters around hot sections (development only).
+prof = []
+# Windows-only instruction-pointer sampling profiler (development only).
+sampler = []

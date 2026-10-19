@@ -1,0 +1,78 @@
+[Event "Aster vs Stockfish live demonstration"]
+[Site "local"]
+[Date "2026.10.19"]
+[Round "1"]
+[White "Aster 1.0.0"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[Opening "opening-037"]
+[TimeControl "movetime 1s"]
+[Termination "threefold_repetition"]
+
+1. d4 c6 2. Nf3 Nf6 3. Nbd2 d5 4. c4 Qc7 5. Qb3 Bf5 6. h3 e6 7. g4 Be4 8. Bg2 Be7 9. O-O dxc4 10. Qc3 Nbd7 11. Nxe4 Nxe4 12. Qxc4 Nef6 13. Rd1 O-O 14. Bd2 h6 15. Rac1 Rfd8 16. e3 a5 17. a3 Nf8 18. Bf1 Bd6 19. Qc2 Qe7 20. Kh1 Ng6 21. Bd3 e5 22. Bxg6 e4 23. Bxe4 Nxe4 24. Be1 Nf6 25. Bc3 Re8 26. Kg2 Bc7 27. Re1 Rad8 28. e4 Nxe4 29. Re2 Rd6 30. Rce1 Re6 31. Bd2 Nc5 32. Be3 Ne4 33. Bc1 Nc5 34. Be3 Ne4 35. Bd2 Nc5 1/2-1/2
+
+[Event "Aster vs Stockfish live demonstration"]
+[Site "local"]
+[Date "2026.10.19"]
+[Round "2"]
+[White "Stockfish 19"]
+[Black "Aster 1.0.0"]
+[Result "1/2-1/2"]
+[Opening "opening-037"]
+[TimeControl "movetime 1s"]
+[Termination "threefold_repetition"]
+
+1. d4 c6 2. Nf3 Nf6 3. Nbd2 d5 4. c4 Qc7 5. Qb3 Bf5 6. h3 e6 7. g4 Be4 8. Bg2 Be7 9. O-O dxc4 10. Qc3 Nbd7 11. Nxe4 Nxe4 12. Qxc4 Nef6 13. Rd1 h6 14. Qc2 O-O 15. Bd2 Rac8 16. Rac1 Rfd8 17. e3 Bd6 18. Qa4 Re8 19. Qb3 Nf8 20. Ne5 Bxe5 21. dxe5 Nd5 22. f4 Red8 23. h4 g5 24. Be1 Qe7 25. hxg5 hxg5 26. Bg3 Ng6 27. Rc4 b5 28. Re4 Nh4 29. Bxh4 gxh4 30. Red4 c5 31. Rxd5 exd5 32. Bxd5 c4 33. Qc2 Kg7 34. Kh2 Rc5 35. Bxf7 Rd3 36. Bh5 Qd8 37. Rxd3 Qxd3 38. Qg2 Qd5 39. Qc2 Qd3 40. Qg2 Qd5 41. Qc2 1/2-1/2
+
+[Event "Aster vs Stockfish live demonstration"]
+[Site "local"]
+[Date "2026.10.19"]
+[Round "3"]
+[White "Aster 1.0.0"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[Opening "opening-059"]
+[TimeControl "movetime 1s"]
+[Termination "threefold_repetition"]
+
+1. Nf3 c5 2. Nc3 a6 3. g3 Nc6 4. Bg2 e5 5. e4 Be7 6. d3 Rb8 7. Nd5 b5 8. a4 h6 9. Be3 d6 10. O-O Nf6 11. c3 O-O 12. axb5 axb5 13. Nd2 Re8 14. Qf3 Be6 15. Ra6 Qd7 16. h3 Qb7 17. Rb6 Qd7 18. Ra6 Qb7 19. Raa1 Qc8 20. g4 Nh7 21. Nxe7+ Nxe7 22. d4 Ra8 23. Qe2 Rxa1 24. Rxa1 exd4 25. cxd4 cxd4 26. Bxd4 h5 27. Qxb5 hxg4 28. hxg4 Bxg4 29. Bc3 Be6 30. Qd3 Ng6 31. Qxd6 Bh3 32. Bh1 Re6 33. Qd4 Re5 34. Nf1 Bxf1 35. Kxf1 Nf4 36. Ke1 Nf6 37. Kd2 Re8 38. e5 N6d5 39. Bxd5 Nxd5 40. e6 f6 41. Re1 Qc6 42. b3 Nc7 43. e7 Nd5 44. Kd3 Nxc3 45. Qxc3 Qf3+ 46. Kc2 Qxf2+ 47. Kd1 Qh4 48. Qd3 Qh5+ 49. Re2 Qh1+ 50. Kd2 Qh6+ 51. Kd1 Qh1+ 52. Kd2 Qh6+ 53. Re3 Qh2+ 54. Ke1 Qh4+ 55. Kf1 Qh1+ 56. Ke2 Qh2+ 57. Kd1 Qh1+ 58. Ke2 Qg2+ 59. Ke1 Qg1+ 60. Ke2 Qg2+ 61. Kd1 Qh1+ 1/2-1/2
+
+[Event "Aster vs Stockfish live demonstration"]
+[Site "local"]
+[Date "2026.10.19"]
+[Round "4"]
+[White "Stockfish 19"]
+[Black "Aster 1.0.0"]
+[Result "1/2-1/2"]
+[Opening "opening-059"]
+[TimeControl "movetime 1s"]
+[Termination "threefold_repetition"]
+
+1. Nf3 c5 2. Nc3 a6 3. g3 Nc6 4. Bg2 e5 5. e4 Be7 6. d3 Rb8 7. Nd5 b5 8. a4 h6 9. Be3 d6 10. O-O Nf6 11. c3 O-O 12. axb5 axb5 13. d4 exd4 14. cxd4 c4 15. Nxe7+ Nxe7 16. d5 Nxe4 17. Nd4 Nf6 18. Nc6 Nxc6 19. dxc6 Bf5 20. Re1 Rc8 21. Bd4 b4 22. h4 b3 23. Qf3 Be6 24. Qf4 d5 25. Ra6 Nh5 26. Qe3 Re8 27. Bf3 Nf6 28. Qf4 Ne4 29. Kh2 Qc7 30. Bxe4 dxe4 31. Be5 Qd8 32. c7 Qd5 33. Rxe4 c3 34. Bxc3 Qb7 35. Rea4 Qxc7 36. Qd4 f6 37. Ra7 Qd8 38. Rxg7+ Kxg7 39. Ra7+ Kg8 40. Qe4 f5 41. Qe5 Re7 42. Qh8+ Kf7 43. Qf6+ Ke8 44. Qh8+ Kf7 45. Qf6+ Ke8 46. Ra6 Rxc3 47. Qh8+ Kd7 48. Qd4+ Ke8 49. Qh8+ Kd7 50. Qd4+ Ke8 1/2-1/2
+
+[Event "Aster vs Stockfish live demonstration"]
+[Site "local"]
+[Date "2026.10.19"]
+[Round "5"]
+[White "Aster 1.0.0"]
+[Black "Stockfish 19"]
+[Result "1/2-1/2"]
+[Opening "opening-064"]
+[TimeControl "movetime 1s"]
+[Termination "threefold_repetition"]
+
+1. e4 e5 2. Nc3 Nf6 3. Nf3 d6 4. Bc4 Be6 5. Bxe6 fxe6 6. O-O Qd7 7. d4 Nc6 8. Be3 Be7 9. Qe2 exd4 10. Bxd4 O-O 11. Rad1 Nh5 12. Be3 Nf4 13. Qd2 Ng6 14. Kh1 Rf7 15. b3 Raf8 16. Ne2 e5 17. Nfg1 h6 18. f3 b6 19. b4 Nd8 20. Qd3 Kh7 21. g3 Bg5 22. Bxg5 hxg5 23. Nc3 g4 24. Nd5 gxf3 25. Nxf3 Kg8 26. Ng5 Rxf1+ 27. Rxf1 Rxf1+ 28. Qxf1 Qg4 29. Qf5 Qd1+ 30. Kg2 Qe2+ 31. Kg1 Qd1+ 32. Kg2 Qe2+ 33. Kg1 Qd1+ 1/2-1/2
+
+[Event "Aster vs Stockfish live demonstration"]
+[Site "local"]
+[Date "2026.10.19"]
+[Round "6"]
+[White "Stockfish 19"]
+[Black "Aster 1.0.0"]
+[Result "1/2-1/2"]
+[Opening "opening-064"]
+[TimeControl "movetime 1s"]
+[Termination "threefold_repetition"]
+
+1. e4 e5 2. Nc3 Nf6 3. Nf3 d6 4. Bc4 Be6 5. Bxe6 fxe6 6. O-O Qd7 7. d4 Nc6 8. Be3 Be7 9. Qe2 exd4 10. Bxd4 O-O 11. Rad1 Nh5 12. Be3 Nf4 13. Qd2 Ng6 14. Ne1 Nce5 15. Qe2 Qc6 16. Nd3 a5 17. Nxe5 Nxe5 18. Nb5 Qxe4 19. Nxc7 Rac8 20. Nxe6 Rxc2 21. Qb5 Nf3+ 22. gxf3 Qxe6 23. Qxb7 Rf7 24. a3 h6 25. Qe4 Qxe4 26. fxe4 Rxb2 27. Kg2 Rf6 28. Rb1 Ra2 29. Ra1 Re2 30. Rad1 Ra2 31. Ra1 Rg6+ 32. Kf3 Rf6+ 1/2-1/2
+

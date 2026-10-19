@@ -1,0 +1,227 @@
+{
+  "project": "Stockfish",
+  "repository": "https://github.com/official-stockfish/Stockfish",
+  "tag": "sf_19",
+  "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+  "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+  "reference_binary": {
+    "asset": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "license": "GPL-3.0-or-later (see Copying.txt); authors listed in AUTHORS",
+  "network": {
+    "name": "nn-1a298aa575a0.nnue",
+    "sha256": "1a298aa575a085434d29027978dc36867fe9c5bcea9376654b7a8eba1e52dfc2",
+    "source": "exported from the pinned binary (export_net); also https://tests.stockfishchess.org/api/nn/nn-1a298aa575a0.nnue"
+  },
+  "ported_sources": [
+    {
+      "path": "src/types.h",
+      "sha256": "9a6bae5b151595eb80b56e90c4496fefa92e013f1772bcc7b3ce60c178bb95f6"
+    },
+    {
+      "path": "src/misc.h",
+      "sha256": "fa97bd3c16ab7ea48f1e1e392f7723843daaa6aa0056a43127facb158ccc10d4"
+    },
+    {
+      "path": "src/bitboard.h",
+      "sha256": "5d739e8b8300a04084c4dea41b9124f2a2d59dea365ad2996804f53c5340f5b7"
+    },
+    {
+      "path": "src/bitboard.cpp",
+      "sha256": "b73064f2270344bce175865174666b92d1f3653c6ee4f98fd075f0fb1865b735"
+    },
+    {
+      "path": "src/attacks.h",
+      "sha256": "561d2eb1268ba66e7aa065387a033e686a49925d8e8c58a75826239a358cb1f5"
+    },
+    {
+      "path": "src/attacks.cpp",
+      "sha256": "260c2cceb38d7a87a69e4df0f84d84e6729b1a77bbc321a13fed8cff66b2c704"
+    },
+    {
+      "path": "src/position.h",
+      "sha256": "2d67489c98c16b828fe80e5fdd000820613b79a0c5ff63161efd9ad6e9ee05b1"
+    },
+    {
+      "path": "src/position.cpp",
+      "sha256": "79bb06e1f73768e1a7e6ce39766fde94f481327168cf0aa2580f55a0865f8dec"
+    },
+    {
+      "path": "src/movegen.h",
+      "sha256": "8180128aafed4aacdfc75999b17e7cb64da250b6c94b87e06a2e1bf65b3a6276"
+    },
+    {
+      "path": "src/movegen.cpp",
+      "sha256": "a7f19e6167aae8b9f69da69cc656d346913aa37322ceecb8217597e1b91e71c2"
+    },
+    {
+      "path": "src/movepick.h",
+      "sha256": "6082a59beec9cd7badae9d2463df91d5067af490ae498a377eac9bc94ad1fe06"
+    },
+    {
+      "path": "src/movepick.cpp",
+      "sha256": "5ac6b57885a7e12428422438a28207f25a24182b008aca85a788e000a7a38217"
+    },
+    {
+      "path": "src/history.h",
+      "sha256": "f6e957d6e717348f58aa308f88aefddb5975e6a6c1d23e936ecf3548cbb48c39"
+    },
+    {
+      "path": "src/search.h",
+      "sha256": "06a9339666e75c43a92185c33a111307bca143cf57c85e64f368ca34a87c8071"
+    },
+    {
+      "path": "src/search.cpp",
+      "sha256": "a934524dd2f386ec38cdf95b7b2e41cecdc85c9b17e12c0668621e6ae16be28a"
+    },
+    {
+      "path": "src/tt.h",
+      "sha256": "0e8deb3207a9fc3adfe5f6df806bf7dd70cc818f89c3284484979aac20b15033"
+    },
+    {
+      "path": "src/tt.cpp",
+      "sha256": "56435808c1ed7557e69afb85fc0fa0116fcb574bfa528d53cc0f07d20a926702"
+    },
+    {
+      "path": "src/timeman.h",
+      "sha256": "8aed34863e004e978ab6c011d9ded7318c3e25da817d1760aa904b1249e88e85"
+    },
+    {
+      "path": "src/timeman.cpp",
+      "sha256": "96d3c58a5f20afe65423affc28ef43665c3325a98adad60da00b55ee84bce4b7"
+    },
+    {
+      "path": "src/evaluate.h",
+      "sha256": "bab0750b2d80c72bb121bfe730a55ecba5fc221394d3d8a7ae2aa3ae04fe9998"
+    },
+    {
+      "path": "src/evaluate.cpp",
+      "sha256": "68a1675ef7ae943026ca0e54368b88ab90dd0082d22b5504f743afb2765dffb7"
+    },
+    {
+      "path": "src/thread.h",
+      "sha256": "d39544eea0dc30fa6edd541f5f87ed06af554ba0364161ab04a78b4b9757a897"
+    },
+    {
+      "path": "src/thread.cpp",
+      "sha256": "26d04132676189a6b9ce59afb574c116a672ce8bb273f1b008af8522e7760006"
+    },
+    {
+      "path": "src/engine.cpp",
+      "sha256": "15c87f0b4ac5741d9b4f287cd7420a8599bda4193b2e0209fb0f7f9beb16960b"
+    },
+    {
+      "path": "src/uci.cpp",
+      "sha256": "a31fa10719b1d9ecaa23f774f14a5a995be65eeb52722798c2f2bb4255991b21"
+    },
+    {
+      "path": "src/ucioption.cpp",
+      "sha256": "5d699e2fa1d57cfa5f3169412dc8fc5d26685563be38c221cdbfde7237305e8a"
+    },
+    {
+      "path": "src/benchmark.cpp",
+      "sha256": "5706d3a9f7990442d0adf6bc4d9b0f50fff92c7e96156f62f3d166ca146acf0c"
+    },
+    {
+      "path": "src/perft.h",
+      "sha256": "3fd970d05be7e38299cdeeee8a9dc45b446a5527173245ff7d7296e0d439d356"
+    },
+    {
+      "path": "src/score.cpp",
+      "sha256": "c5877628d70984fef345f2ace3f155ea883f316505485f2115701aac313dfb01"
+    },
+    {
+      "path": "src/nnue/network.h",
+      "sha256": "9f5f0e8282ed8478a59005946618dfbfb4d8484a9d38923cfbe1a261436359c8"
+    },
+    {
+      "path": "src/nnue/network.cpp",
+      "sha256": "95cafe51c0d05842fdeffb8d2690549e9deee43edc0b56caf277f21fda63ec4b"
+    },
+    {
+      "path": "src/nnue/nnue_architecture.h",
+      "sha256": "00870050cb0c7c8862b76ed0ee65da2fd0118343432bcebbdb896f885283bc8e"
+    },
+    {
+      "path": "src/nnue/nnue_common.h",
+      "sha256": "89a9c40893ea8e341bb7874796fcec2e69aecf548e969b55fa33a59579b60eae"
+    },
+    {
+      "path": "src/nnue/nnue_feature_transformer.h",
+      "sha256": "9edc933b6bd53871ff8ba8cda35d35490a4eef34f0b72b6562da17b60fa888bc"
+    },
+    {
+      "path": "src/nnue/nnue_accumulator.h",
+      "sha256": "50f65fa2bd5a5c31f1ac70e34b3f9213d7b3ef22c922b4cf955e283be9931b26"
+    },
+    {
+      "path": "src/nnue/nnue_accumulator.cpp",
+      "sha256": "4450e090389760851e7aebaf38bb9b1acf0bfca73130ded3e8677a22c7c0824c"
+    },
+    {
+      "path": "src/nnue/nnz_helper.h",
+      "sha256": "5118876cd8008d84f397c07785be4f5ad2df9715e5d671b1537888f3d469fd0b"
+    },
+    {
+      "path": "src/nnue/features/half_ka_v2_hm.h",
+      "sha256": "c6c24b6246a10278e992e5494f38a02f96436764fe0fb0e11f21e96e6b3b45d5"
+    },
+    {
+      "path": "src/nnue/features/half_ka_v2_hm.cpp",
+      "sha256": "c00c84b37f979f9ff62b7081d5147a58982805fa5b42b802b841701a04802679"
+    },
+    {
+      "path": "src/nnue/features/full_threats.h",
+      "sha256": "dd1d9b1cd360b8c5e41b5e0e9836c335cc250ade8a30fc28357e482f0aeff874"
+    },
+    {
+      "path": "src/nnue/features/full_threats.cpp",
+      "sha256": "4bd9602142ca97cb40ba3c02718236e0e15e41e29913d5917de599288dd23277"
+    },
+    {
+      "path": "src/nnue/features/pp_3wide.h",
+      "sha256": "3889a046b7eb5c9147d0c89be69514200d414e276a68809b4f512c8fe139e635"
+    },
+    {
+      "path": "src/nnue/features/pp_3wide.cpp",
+      "sha256": "55dad256e38a27149d48958747131afa6c87a41f6b4771e12c6113bc82b6614f"
+    },
+    {
+      "path": "src/nnue/layers/affine_transform.h",
+      "sha256": "b0a30ba12d1f11e8fddab66d8592c42ac3ca56233d0117ccf3bb9a9c27fefda2"
+    },
+    {
+      "path": "src/nnue/layers/affine_transform_sparse_input.h",
+      "sha256": "5471180cbe69b91f7f39278bef5c79ce37f538307cb8f11d3f51fafe9a0eab14"
+    },
+    {
+      "path": "src/nnue/layers/clipped_relu.h",
+      "sha256": "13d0f93da3b40df3a7c4b23fe34a4199e5f3cee03f529eac4f060299efa64e76"
+    },
+    {
+      "path": "src/nnue/layers/sqr_clipped_relu.h",
+      "sha256": "d2b6fb4f7045d2851f7ca48c4daa9a6292655ba026dc7b94c34105706eb7504b"
+    }
+  ],
+  "not_yet_ported": [
+    "syzygy/tbprobe.cpp",
+    "syzygy/tbprobe.h",
+    "numa.h",
+    "shm.h",
+    "shm_unix.h",
+    "memory.cpp",
+    "memory.h",
+    "tune.cpp",
+    "tune.h",
+    "nnue/nnue_misc.cpp",
+    "universal/*"
+  ],
+  "verification": {
+    "bench_signature": 2497913,
+    "reference_bench_signature": 2497913,
+    "bench_info_and_bestmove_lines_identical": true,
+    "nnue_static_eval_positions_identical": 45
+  }
+}

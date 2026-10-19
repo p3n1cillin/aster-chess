@@ -1,5 +1,19 @@
 # Project progress — 19 October 2026
 
+## Aster 1.0.0: Stockfish 19 Rust core
+
+At the user's request, `crates/sf-port` ports Stockfish 19 to Rust and is now
+Aster's default UCI core (`aster legacy` keeps the Viridithas-derived core). Its
+`bench` signature is **2,497,913**, identical to the official `sf_19` binary, with
+identical `info`/`bestmove` lines on all 51 bench searches and identical NNUE
+static evaluations on all 45 evaluable bench positions. AVX-512, AVX2 and scalar
+kernel paths give the same signature. Aster's python-chess verifiers pass on the
+new core. Speed: **1.79M vs 2.06M** nodes/s (87%) against the official binary on
+this machine. In 64 color-swapped pairs at 8+0.08 s against the official binary
+it scored 5W/2L/121D (51.2%, Elo +8.1, 95% interval −5.9..+22.2): equal within
+noise. No superiority over Stockfish is established. Live demonstration games are recorded under
+`artifacts/matches/live-*`. See [the port report](../docs/SF-PORT.md).
+
 ## Independent neural evaluation checks
 
 Three test-only Rust guards now compare dense scalar first-layer arithmetic

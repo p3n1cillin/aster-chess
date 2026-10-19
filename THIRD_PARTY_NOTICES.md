@@ -22,8 +22,17 @@ retain their upstream provenance; adopting them is not an original Aster
 training or Stockfish-superiority claim. C-based optional tablebases and zstd
 are disabled; pure Rust `ruzstd` performs decompression.
 
-The engine and play host do not invoke Stockfish, python-chess or the historical
-C# engine at runtime. Stockfish remains a development reference and opponent.
+Since Aster 1.0.0 the default playing core is `crates/sf-port`, a Rust port of
+Stockfish 19 (tag `sf_19`) by the Stockfish developers, derived from Glaurung and
+licensed GPL-3.0-or-later. Its `AUTHORS`, `Copying.txt` and `UPSTREAM.json` (release,
+reference binary, network and per-file source fingerprints) are kept in that crate.
+The embedded `nn-1a298aa575a0.nnue` network is the official Stockfish 19 network,
+pinned by SHA-256 in `scripts/fetch_sf_port_network.py` and checked by `build.rs`.
+The previous Viridithas-derived core remains available as `aster legacy`.
+
+The engine and play host do not invoke the Stockfish executable, python-chess or the
+historical C# engine at runtime: the Stockfish-derived core is compiled Rust code.
+The official Stockfish binary remains a development reference and opponent.
 Cargo.lock records Rust dependency versions and registry checksums.
 
 `artifacts/research/conversion-stockfish19-source/` preserves the official
