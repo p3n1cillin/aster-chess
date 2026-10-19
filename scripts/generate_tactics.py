@@ -1,4 +1,5 @@
 """Create a bounded tactical regression suite from fresh, teacher-verified games."""
+from research_reference import research_text
 import argparse
 import hashlib
 import json
@@ -40,7 +41,7 @@ def main() -> None:
         for entry in suite.get("positions", suite.get("openings", [])):
             excluded.add(" ".join(chess.Board(entry["fen"]).fen().split()[:4]))
         exclusions.append({"path": str(path), "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
-    manifest = json.loads((ROOT / "tools/stockfish/manifest.json").read_text(encoding="utf-8"))
+    manifest = json.loads((ROOT / research_text('opponent_manifest')).read_text(encoding="utf-8"))
     teacher_path = ROOT / manifest["executable"]
     if hashlib.sha256(teacher_path.read_bytes()).hexdigest() != manifest["executable_sha256"]:
         raise ValueError("Teacher binary does not match its pinned manifest")

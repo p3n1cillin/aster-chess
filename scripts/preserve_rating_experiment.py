@@ -1,4 +1,5 @@
 """Independently re-audit and preserve the bounded local calibration evidence."""
+from research_reference import research_text
 import json
 import pathlib
 import shutil
@@ -59,14 +60,14 @@ def main():
               "artifacts/research/rating-plan-v1.json", "artifacts/research/conversion-default-source/manifest.json",
               "artifacts/publish/conversion-default-dotnet/Aster.dll", "artifacts/publish/conversion-default-dotnet/Aster.deps.json",
               "artifacts/publish/conversion-default-dotnet/Aster.runtimeconfig.json",
-              "artifacts/research/conversion-stockfish19-provenance.json",
-              "artifacts/research/conversion-stockfish19-source/manifest.json", "tools/stockfish/manifest.json"]
-    sf = read(ROOT / "tools/stockfish/manifest.json")
+              research_text('archive.reference_provenance'),
+              research_text('archive.reference_source_manifest'), research_text('opponent_manifest')]
+    sf = read(ROOT / research_text('opponent_manifest'))
     assert digest(ROOT / sf["executable"]) == sf["executable_sha256"]
-    assert digest(ROOT / "tools/stockfish/sf_19/stockfish-windows-x86-64-universal.zip") == sf["archive_sha256"]
-    paths += [sf["executable"], "tools/stockfish/sf_19/stockfish-windows-x86-64-universal.zip"]
+    assert digest(ROOT / research_text('archive.reference_zip')) == sf["archive_sha256"]
+    paths += [sf["executable"], research_text('archive.reference_zip')]
     for manifest_path in ("artifacts/research/conversion-default-source/manifest.json",
-                          "artifacts/research/conversion-stockfish19-source/manifest.json",
+                          research_text('archive.reference_source_manifest'),
                           "artifacts/research/rating-pipeline-start/manifest.json"):
         manifest_file = ROOT / manifest_path
         for entry in read(manifest_file)["source_files"]:
@@ -81,7 +82,7 @@ def main():
     paths += [p.relative_to(ROOT).as_posix() for p in (ROOT / "artifacts/benchmarks").glob("rating-session-*") if p.is_file()]
     write_new(final, {"schema": 1, "games": total, "rating": reference(rating_path),
                       "artifacts": [reference(p) for p in sorted(set(paths))],
-                      "interpretation": "Frozen independent Aster default; bounded predeclared local calibration, no engine promotion. Public rating and full-strength Stockfish-superiority goal unestablished. Documents and exact scripts retained as immutable copies."})
+                      "interpretation": research_text('preserve_rating_experiment.interpretation')})
     print(json.dumps({"games": total, "artifacts": len(read(final)["artifacts"]), "manifest_sha256": digest(final)}))
 
 

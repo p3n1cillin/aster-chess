@@ -280,7 +280,7 @@ mod simd {
             // harms performance on weaker architectures, which do not suffer
             // from the same issues. If you feel like conditionally compiling
             // this based on target CPU, past-cosmonaut would not object.
-            // c.f. https://github.com/official-stockfish/Stockfish/pull/6336.
+            // Optimization reference: see layers.rs.license.
             let mut acc = Align([0; L2_SIZE]);
             let mut aux = Align([0; L2_SIZE]);
 

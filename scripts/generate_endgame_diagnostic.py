@@ -1,4 +1,5 @@
 """Preserve fresh played endgames, native teacher labels and source outcomes."""
+from research_reference import research_text
 import argparse
 import collections
 import hashlib
@@ -66,7 +67,7 @@ def main():
         path = pathlib.Path(name); suite = json.loads(path.read_text())
         excluded.update(key(chess.Board(e["fen"])) for e in suite.get("openings", suite.get("positions", [])))
         exclusions.append({"path": str(path), "sha256": digest(path), "kind": "suite"})
-    teacher_manifest = json.loads((ROOT / "tools/stockfish/manifest.json").read_text())
+    teacher_manifest = json.loads((ROOT / research_text('opponent_manifest')).read_text())
     teacher_path = ROOT / teacher_manifest["executable"]
     if digest(teacher_path) != teacher_manifest["executable_sha256"]: raise ValueError("Changed teacher")
     output.parent.mkdir(parents=True, exist_ok=True)

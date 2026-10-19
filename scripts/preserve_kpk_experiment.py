@@ -1,4 +1,5 @@
 """Verify and freeze the completed KPK experiment, scripts and evidence."""
+from research_reference import research_text
 import hashlib
 import json
 import pathlib
@@ -89,7 +90,7 @@ def main():
     paths += [prefix + suffix for suffix in (".json", ".pgn", ".audit.json", ".analysis.json")]
     result = {"schema": 1, "pipeline": reference(directory.relative_to(ROOT) / "manifest.json"),
               "engines": engines, "artifacts": [reference(p) for p in sorted(set(map(str, paths)))],
-              "interpretation": "Original opt-in KPK evaluation with exhaustive oracle agreement, certified conservative bounds, move-choice checks and paired regressions. No production promotion, Elo or Stockfish superiority claim."}
+              "interpretation": research_text('preserve_kpk_experiment.interpretation')}
     final.write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps({"scripts": len(sources), "artifacts": len(result["artifacts"])}))
 

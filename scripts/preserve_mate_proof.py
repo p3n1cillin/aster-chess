@@ -1,4 +1,5 @@
 """Recheck and freeze complete general-proof evidence and paired regression."""
+from research_reference import research_text
 import argparse
 import datetime
 import json
@@ -74,7 +75,7 @@ def main():
         paths.update(ROOT / entry["path"] for entry in read(ROOT / "artifacts/validation/mate-proof-general-v2.json")["legacy_certificates"])
         manifest = {"schema": 1, "created_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(), "paired_regression_games": 32,
             "artifacts": [{"path": p.relative_to(ROOT).as_posix(), "bytes": p.stat().st_size, "sha256": digest(p)} for p in sorted(paths)],
-            "interpretation": "Complete native general-mate certificate experiment, independent positive/negative/oracle/protocol checks and audited paired unchanged-play regression. Original iterations retained. No Elo or full-strength Stockfish superiority inferred."}
+            "interpretation": research_text('preserve_mate_proof.interpretation')}
         write_new(path, manifest)
     print(json.dumps({"verified": True, "artifacts": len(manifest["artifacts"]), "manifest_sha256": digest(path)}))
 

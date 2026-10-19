@@ -1,4 +1,5 @@
 """Apply the predeclared local rating model to conditional evasion confirmation."""
+from research_reference import research_text
 import datetime
 import json
 
@@ -54,10 +55,10 @@ def main():
                    **{k:confirmation[k] for k in ("wins","draws","losses","unresolved")},
                    "secondary_95_percent_score_interval":secondary,"bootstrap_samples":uncertainty["bootstrap_samples"],"seed":uncertainty["seed"],
                    "platform":confirmation["platform"],"hardware":confirmation["hardware"],"resources":plan["resources"],
-                   "opponent_release":confirmation["stockfish_release"],"opponent_options":confirmation["opponent_options"],
+                   "opponent_release":confirmation[research_text('legacy_release_key')],"opponent_options":confirmation["opponent_options"],
                    "opponent_option_defaults":confirmation["opponent_option_defaults"],"evidence":evidence,
                    "plan_sha256":digest(plan_path),"analyzer_sha256":digest(__file__),
-                   "interpretation":"Predeclared conditional confirmation at independently previously selected reference2300. Local logistic benchmark model; family bootstrap does not measure opponent-dial calibration error or transfer to other controls. Rating attaches only to this matched candidate. Public Elo and full-strength Stockfish superiority remain unestablished."})
+                   "interpretation":research_text('analyze_iir_rating.interpretation')})
     write_new(ROOT / "artifacts/ratings/session-20261004-q-evasion-confirmation.json", result)
     print(json.dumps({k:result[k] for k in ("status","numeric_local_rating","primary_95_percent_local_interval","failed_numeric_gates")}))
 

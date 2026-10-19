@@ -1,0 +1,5 @@
+SPDX-License-Identifier: GPL-3.0-or-later
+
+Original test-source comments and count provenance:
+// Correctness checks for the Stockfish 19 Rust port.
+    // Chess960 positions; counts confirmed with the official Stockfish 19 binary.

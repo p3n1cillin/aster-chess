@@ -1,0 +1,10 @@
+SPDX-License-Identifier: GPL-3.0-or-later
+
+Original source header, preserved verbatim for kernels.rs:
+
+// Integer kernels for the NNUE port, with AVX-512 (VNNI), AVX2 and scalar
+// implementations selected at runtime. Every kernel is exact integer
+// arithmetic (wrapping i16 accumulators, exact i32 dot products), so all
+// paths give results identical to each other and to the upstream reference.
+// Copyright (C) 2004-2026 The Stockfish developers (see AUTHORS file)
+// Licensed under the GNU General Public License v3 or later.

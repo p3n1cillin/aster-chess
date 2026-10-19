@@ -1,4 +1,5 @@
 """Apply the frozen strength gates to the independent IIR candidate."""
+from research_reference import research_text
 import json
 
 from analyze_rating import bootstrap, paired_groups
@@ -50,7 +51,7 @@ def assess():
     return {"schema":1,"gates":gates,"failed_gates":[k for k,v in gates.items() if not v],"eligible_for_engineering_promotion":all(gates.values()),
         "matches":matches,"profile_reduced_nodes":triggers,"candidate_sha256":plan["candidate_sha256"],"baseline_sha256":plan["baseline_sha256"],
         "evidence":evidence,"plan_sha256":digest(path),"assessor_sha256":digest(__file__),
-        "interpretation":"Predeclared paired strength-regression qualification. A positive result here is bounded to this baseline, controls and opening selection; not Stockfish superiority or a public Elo."}
+        "interpretation":research_text('assess_iir.interpretation')}
 
 
 if __name__ == "__main__":

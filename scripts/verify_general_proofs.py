@@ -1,4 +1,5 @@
 """Independently check general certificates, bounded oracle agreement and protocol limits."""
+from research_reference import research_text
 import copy
 import argparse
 import json
@@ -181,7 +182,7 @@ def main():
         "corruptions_rejected": mutations, "legacy_certificates": legacy, "controls": controls,
         "protocol": {"ready_seconds": ready_seconds, "stop_seconds": stop_seconds, "cancellations": cancellations,
             "explanation_during_infinite_search": explanation, "overwrite_refused": True, "incomplete_export_refused": True},
-        "interpretation": "Independent winning strategies and bounded oracle agreement. Unknown budgets are retained. Covers general material, both colors, attacker/defender roots, special moves, cancellation and protocol. No playing strength or Stockfish superiority inferred."}
+        "interpretation": research_text('verify_general_proofs.interpretation')}
     write_new(ROOT / ("artifacts/validation/mate-proof-general" + ("" if args.suffix == "v1" else "-" + args.suffix) + ".json"), report)
     print(json.dumps({"passed": True, "certificates": len(certificates), "positions": report["certificate_positions"], "differential_cases": 64, "corruptions": len(mutations), "legacy_certificates": len(legacy)}))
 

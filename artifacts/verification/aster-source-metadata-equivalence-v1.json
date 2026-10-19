@@ -1,0 +1,210 @@
+{
+  "passed": true,
+  "baseline": "8859af7",
+  "scripts_ast_equivalent_after_resolving_metadata": [
+    "scripts/analyze_iir_rating.py",
+    "scripts/analyze_q_evasion_rating.py",
+    "scripts/analyze_rating.py",
+    "scripts/analyze_rust_foundation.py",
+    "scripts/assess_capacity.py",
+    "scripts/assess_deep_turn.py",
+    "scripts/assess_iir.py",
+    "scripts/assess_lazy_order.py",
+    "scripts/assess_phase.py",
+    "scripts/assess_q_evasion.py",
+    "scripts/assess_relations.py",
+    "scripts/assess_stable_endgames.py",
+    "scripts/audit_static_labels.py",
+    "scripts/audit_training_data.py",
+    "scripts/augment_turn_data.py",
+    "scripts/check_mate_proof.py",
+    "scripts/declare_capacity.py",
+    "scripts/declare_deep_turn.py",
+    "scripts/declare_iir.py",
+    "scripts/declare_mate_proof.py",
+    "scripts/declare_phase.py",
+    "scripts/declare_relations.py",
+    "scripts/declare_stable_endgames.py",
+    "scripts/diagnose_turn_dependence.py",
+    "scripts/fetch_aster_network.py",
+    "scripts/fetch_reference.py",
+    "scripts/freeze_rust.py",
+    "scripts/generate_data.py",
+    "scripts/generate_deep_turn.py",
+    "scripts/generate_endgame_diagnostic.py",
+    "scripts/generate_openings.py",
+    "scripts/generate_stable_endgames.py",
+    "scripts/generate_tactics.py",
+    "scripts/match.py",
+    "scripts/prepare_rust_foundation.py",
+    "scripts/preserve_capacity.py",
+    "scripts/preserve_conversion_experiment.py",
+    "scripts/preserve_deep_turn.py",
+    "scripts/preserve_endgame_diagnostic.py",
+    "scripts/preserve_iir.py",
+    "scripts/preserve_kpk_experiment.py",
+    "scripts/preserve_lazy_order.py",
+    "scripts/preserve_mate_proof.py",
+    "scripts/preserve_phase.py",
+    "scripts/preserve_q_evasion.py",
+    "scripts/preserve_rating_experiment.py",
+    "scripts/preserve_relations.py",
+    "scripts/preserve_stable_endgames.py",
+    "scripts/preserve_threat_experiment.py",
+    "scripts/preserve_turn_experiment.py",
+    "scripts/record_capacity_session.py",
+    "scripts/record_deep_turn_session.py",
+    "scripts/record_relations_session.py",
+    "scripts/record_stable_session.py",
+    "scripts/run_rating.py",
+    "scripts/score_static.py",
+    "scripts/train_network.py",
+    "scripts/verify_aster_branding.py",
+    "scripts/verify_general_proofs.py",
+    "scripts/verify_proof_protocol.py",
+    "scripts/verify_rust.py",
+    "scripts/watch_match.py"
+  ],
+  "rust_non_comment_lines_unchanged": [
+    "crates/aster-core/src/bitboard.rs",
+    "crates/aster-core/src/history.rs",
+    "crates/aster-core/src/lib.rs",
+    "crates/aster-core/src/main.rs",
+    "crates/aster-core/src/movegen.rs",
+    "crates/aster-core/src/movepick.rs",
+    "crates/aster-core/src/nnue/accumulator.rs",
+    "crates/aster-core/src/nnue/features.rs",
+    "crates/aster-core/src/nnue/kernels.rs",
+    "crates/aster-core/src/nnue/mod.rs",
+    "crates/aster-core/src/nnue/network.rs",
+    "crates/aster-core/src/perft.rs",
+    "crates/aster-core/src/position.rs",
+    "crates/aster-core/src/search.rs",
+    "crates/aster-core/src/speedtest_positions.rs",
+    "crates/aster-core/src/syzygy.rs",
+    "crates/aster-core/src/timeman.rs",
+    "crates/aster-core/src/tt.rs",
+    "crates/aster-core/src/types.rs",
+    "crates/aster-core/src/uci.rs",
+    "crates/aster-core/tests/port.rs",
+    "crates/engine/src/nnue/network/layers.rs"
+  ],
+  "preserved_notices": [
+    {
+      "source": "crates/aster-core/src/bitboard.rs",
+      "notice": "crates/aster-core/src/bitboard.rs.license",
+      "sha256": "90055ae2b67cb11e4452fd33c2d12cbe2958e811a8dd06e996110a3462c86cb6"
+    },
+    {
+      "source": "crates/aster-core/src/history.rs",
+      "notice": "crates/aster-core/src/history.rs.license",
+      "sha256": "631171ad478cb43cfbaeea61317dc7c2ca285fce28a7c859371dffb125047c68"
+    },
+    {
+      "source": "crates/aster-core/src/lib.rs",
+      "notice": "crates/aster-core/src/lib.rs.license",
+      "sha256": "7b33002f284ab76fb429f3919bbd9d2d2647880fee8ac5be89978e57e6be7983"
+    },
+    {
+      "source": "crates/aster-core/src/main.rs",
+      "notice": "crates/aster-core/src/main.rs.license",
+      "sha256": "a666ca6e8f37095e343ff540fb41536e29e75c7a2a0adb42b5a0b03669a911b1"
+    },
+    {
+      "source": "crates/aster-core/src/movegen.rs",
+      "notice": "crates/aster-core/src/movegen.rs.license",
+      "sha256": "d5dd634c8a04eb0fbbc59190889ca28ef8d9684eda8e66157b7176d967922b2a"
+    },
+    {
+      "source": "crates/aster-core/src/movepick.rs",
+      "notice": "crates/aster-core/src/movepick.rs.license",
+      "sha256": "17fd25d11bfda6358e9a7dd2c1c0f8a027ac813017287d00b2ccf0756d3c3685"
+    },
+    {
+      "source": "crates/aster-core/src/nnue/accumulator.rs",
+      "notice": "crates/aster-core/src/nnue/accumulator.rs.license",
+      "sha256": "04784902c45151a9032324223ef41c1c5788d44ec7cdd0d786259b35d527b0a9"
+    },
+    {
+      "source": "crates/aster-core/src/nnue/features.rs",
+      "notice": "crates/aster-core/src/nnue/features.rs.license",
+      "sha256": "577ac2f1dfb9e5aff05aae10e2b3111a211c8b0bbd13532c1a228749ebe86990"
+    },
+    {
+      "source": "crates/aster-core/src/nnue/kernels.rs",
+      "notice": "crates/aster-core/src/nnue/kernels.rs.license",
+      "sha256": "2067875cf47f21817e8fef04352b22baf169c2bb06d3ca4def106c372568e31e"
+    },
+    {
+      "source": "crates/aster-core/src/nnue/mod.rs",
+      "notice": "crates/aster-core/src/nnue/mod.rs.license",
+      "sha256": "ec97ada082002b8f1f4b7311e52c75370210fa9dde067cf0f2e395af86ae3bd9"
+    },
+    {
+      "source": "crates/aster-core/src/nnue/network.rs",
+      "notice": "crates/aster-core/src/nnue/network.rs.license",
+      "sha256": "0ef72ed481d65381d4997435517ac14a832e681fed766adbb951154c3909edbb"
+    },
+    {
+      "source": "crates/aster-core/src/perft.rs",
+      "notice": "crates/aster-core/src/perft.rs.license",
+      "sha256": "46d257484ee4f8d9ae2048ec37dde08228ceebe2f27dec66280a6b234d51982d"
+    },
+    {
+      "source": "crates/aster-core/src/position.rs",
+      "notice": "crates/aster-core/src/position.rs.license",
+      "sha256": "a86fb3e010917a9541d23759a9b6059b06c9ceea69ab10229d5fb87cbbf9bf17"
+    },
+    {
+      "source": "crates/aster-core/src/search.rs",
+      "notice": "crates/aster-core/src/search.rs.license",
+      "sha256": "15f1233a0a035159f9526faf92833471af19d87b3c0429ff8dfad187427c1b6e"
+    },
+    {
+      "source": "crates/aster-core/src/speedtest_positions.rs",
+      "notice": "crates/aster-core/src/speedtest_positions.rs.license",
+      "sha256": "990d44aa8c2149c63ee6c5c6b58b63c5e7ad7d1af2afb4b925d2451fac400b52"
+    },
+    {
+      "source": "crates/aster-core/src/syzygy.rs",
+      "notice": "crates/aster-core/src/syzygy.rs.license",
+      "sha256": "774770457cae71c9c332d17f0b2f65995558db75dbaaf3664b6169dc45bafd0b"
+    },
+    {
+      "source": "crates/aster-core/src/timeman.rs",
+      "notice": "crates/aster-core/src/timeman.rs.license",
+      "sha256": "b399cb39991a46796f1a9e1bb5b55eb3548c79741d7245f78ce6bab396033ebf"
+    },
+    {
+      "source": "crates/aster-core/src/tt.rs",
+      "notice": "crates/aster-core/src/tt.rs.license",
+      "sha256": "52ac12b942c9c1f7553a54a1d1b42ccfed720a06e1df28b245c3634d50329bf0"
+    },
+    {
+      "source": "crates/aster-core/src/types.rs",
+      "notice": "crates/aster-core/src/types.rs.license",
+      "sha256": "41d0b3b223077663b343ab36c44e292c87f0cd92e06bdcab4039ef94ff06a72e"
+    },
+    {
+      "source": "crates/aster-core/src/uci.rs",
+      "notice": "crates/aster-core/src/uci.rs.license",
+      "sha256": "b323acf8ce6a8419adce04a500e8cfa06939075bb1cbf6e9fb1fd07a7342b54d"
+    },
+    {
+      "source": "crates/aster-core/tests/port.rs",
+      "notice": "crates/aster-core/tests/port.rs.license",
+      "sha256": "a85e94d0c2ac5754c05d992290473e4c455f440a7f5d8b5d8dbc72e24dffbdb4"
+    },
+    {
+      "source": "crates/engine/src/nnue/network/layers.rs",
+      "notice": "crates/engine/src/nnue/network/layers.rs.license",
+      "sha256": "ef2056360c0e4aae380f9a311a3c12bacd42a4eff19799b6ed25cd75e1f53afa"
+    }
+  ],
+  "intentional_script_differences": [
+    "Generic fetch command docstring and executable-discovery error",
+    "Updated fetch command in missing-opponent help",
+    "Source-freeze includes new helper, metadata, fetch command and source-name verifier"
+  ],
+  "no_claim": "No independent algorithm rewrite or playing-strength improvement."
+}

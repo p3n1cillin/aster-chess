@@ -1,6 +1,6 @@
-// Rust port of Stockfish 19 `history.h`.
-// Copyright (C) 2004-2026 The Stockfish developers (see AUTHORS file)
-// Licensed under the GNU General Public License v3 or later.
+// Aster core. Original attribution and source mapping: history.rs.license.
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Modified 2026-10-19: source naming and notice layout only.
 
 use crate::position::Position;
 use crate::types::*;

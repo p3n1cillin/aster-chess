@@ -1,10 +1,6 @@
-// Rust port of Stockfish 19 `movepick.h/.cpp`.
-// Copyright (C) 2004-2026 The Stockfish developers (see AUTHORS file)
-// Licensed under the GNU General Public License v3 or later.
-//
-// Like the C++ original, the picker reads history tables through pointers:
-// child searches update those tables while this picker is alive, and quiet
-// moves are scored lazily with the then-current values.
+// Aster core. Original attribution and source mapping: movepick.rs.license.
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Modified 2026-10-19: source naming and notice layout only.
 
 use crate::bitboard::*;
 use crate::history::*;

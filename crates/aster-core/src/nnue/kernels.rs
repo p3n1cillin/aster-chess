@@ -1,9 +1,6 @@
-// Integer kernels for the NNUE port, with AVX-512 (VNNI), AVX2 and scalar
-// implementations selected at runtime. Every kernel is exact integer
-// arithmetic (wrapping i16 accumulators, exact i32 dot products), so all
-// paths give results identical to each other and to the upstream reference.
-// Copyright (C) 2004-2026 The Stockfish developers (see AUTHORS file)
-// Licensed under the GNU General Public License v3 or later.
+// Aster core. Original attribution and source mapping: kernels.rs.license.
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Modified 2026-10-19: source naming and notice layout only.
 
 use super::network::{L1, L2};
 use std::sync::atomic::{AtomicU8, Ordering::Relaxed};

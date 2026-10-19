@@ -1,4 +1,5 @@
 """Audit and preserve a terminal IIR experiment without rewriting earlier evidence."""
+from research_reference import research_text
 import argparse
 import json
 import pathlib
@@ -142,12 +143,12 @@ def main():
         for path in (ROOT / directory).glob("iir-*"):
             paths += [p.relative_to(ROOT).as_posix() for p in (path.rglob("*") if path.is_dir() else [path]) if p.is_file()]
     if assessment["eligible_for_engineering_promotion"]: paths.append(RATING.relative_to(ROOT).as_posix())
-    paths += ["artifacts/ratings/session-20261004-q-evasion-confirmation.json","artifacts/research/q-evasion-experiment-v1-manifest.json","tools/stockfish/manifest.json",
-        "tools/stockfish/sf_19/stockfish/stockfish-windows-x86-64-universal.exe","tools/stockfish/sf_19/stockfish-windows-x86-64-universal.zip"]
-    paths += [p.relative_to(ROOT).as_posix() for p in (ROOT / "artifacts/research/conversion-stockfish19-source").rglob("*") if p.is_file()]
+    paths += ["artifacts/ratings/session-20261004-q-evasion-confirmation.json","artifacts/research/q-evasion-experiment-v1-manifest.json",research_text('opponent_manifest'),
+        research_text('archive.reference_executable'),research_text('archive.reference_zip')]
+    paths += [p.relative_to(ROOT).as_posix() for p in (ROOT / research_text('archive.reference_sources')).rglob("*") if p.is_file()]
     write_new(FINAL,{"schema":1,"games":sum(p["games"] for p in state["phases"]),"candidate_promoted":decision["candidate_promoted"],
         "decision":reference(decision_path.relative_to(ROOT)),"failed_gates":assessment["failed_gates"],"artifacts":[reference(p) for p in sorted(set(paths))],
-        "interpretation":"Frozen bounded search experiment, all requested games independently audited, conditional rating only under original eligibility rules. Public Elo and full-strength Stockfish superiority unestablished; independent engine goal remains active."})
+        "interpretation":research_text('preserve_iir.interpretation')})
     print(json.dumps({"games":read(FINAL)["games"],"artifacts":len(read(FINAL)["artifacts"]),"candidate_promoted":decision["candidate_promoted"],"manifest_sha256":digest(FINAL)}))
 
 

@@ -1,5 +1,10 @@
 # Aster core identity and behavior-preserving refactor
 
+The subsequent [source-naming cleanup](SOURCE-NAMES.md) also removes literal
+upstream names from editable source by preserving original notices beside the
+files and moving development-reference metadata into JSON. Its scope excludes
+credits, provenance, data, archived evidence and Git history.
+
 The engine, standalone core, UCI identity, authorship display, help/license text,
 network diagnostics, browser state label and build integration now use **Aster**.
 The search library and binary are `aster-core` in `crates/aster-core`, imported

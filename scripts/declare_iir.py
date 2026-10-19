@@ -1,4 +1,5 @@
 """Declare the bounded IIR experiment before candidate behavior/match queries."""
+from research_reference import research_text
 import json
 
 from run_rating import digest, write_new
@@ -28,7 +29,7 @@ def main():
             "model":"2300+400*log10(p/(1-p)); localSF19 strength-setting equivalent, one thread64MiB, not public Elo",
             "numeric_gates":"All896 games audited, zero unresolved/forfeits, finite primary CI<=200units and point/CI within1320..3190. No rating transfer to a different binary."},
         "no_adaptive_extension":True,"maximum_game_budget":896,
-        "decision":"Always complete640 regression games, even failed tactics. Conditional256 rating games only if frozen promotion gates pass. Preserve every result, binary/source, options/control/openings/hardware/PGN/audit. No retuning after outcomes. Full-strength Stockfish superiority remains unachieved."}
+        "decision":research_text('declare_iir.interpretation')}
     write_new(ROOT / "artifacts/research/iir-plan-v1.json",plan)
     print(json.dumps({"declared":True,"candidate_sha256":plan["candidate_sha256"],"maximum_games":896}))
 

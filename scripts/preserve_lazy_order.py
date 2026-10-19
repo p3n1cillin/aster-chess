@@ -1,4 +1,5 @@
 """Re-audit and freeze the complete deferred-capture experiment, including failure."""
+from research_reference import research_text
 import datetime
 import json
 import pathlib
@@ -88,12 +89,12 @@ def main():
     paths += ["artifacts/research/lazy-order-plan-v1.json", "artifacts/research/lazy-order-plan-amendment-v1.json",
               "artifacts/research/lazy-order-execution-v1.json", "artifacts/research/lazy-order-assessment-v1.json",
               rating_path.relative_to(ROOT).as_posix(), original_rating_path,
-              "artifacts/research/rating-experiment-v1-manifest.json", "tools/stockfish/manifest.json"]
+              "artifacts/research/rating-experiment-v1-manifest.json", research_text('opponent_manifest')]
     start_manifest = ROOT / "artifacts/research/lazy-order-pipeline-start/manifest.json"
     for entry in read(start_manifest)["source_files"]: assert digest(start_manifest.parent / entry["path"]) == entry["sha256"]
     write_new(final, {"schema": 1, "games": 160, "artifacts": [reference(p) for p in sorted(set(paths))],
                       "candidate_promoted": False, "reserved_rating_pairs": 128, "reserved_rating_queried_by_aster": False,
-                      "interpretation": "Same deterministic behavior; 6.66% fewer SEE calls but0.66% warm speed gain fails5% gate. All160 paired games audited. Original failed tactical assumption and pre-match amendment retained. Independent chess-engine goal remains active, full-strength Stockfish superiority unachieved."})
+                      "interpretation": research_text('preserve_lazy_order.interpretation')})
     print(json.dumps({"games": 160, "artifacts": len(read(final)["artifacts"]), "candidate_promoted": False, "manifest_sha256": digest(final)}))
 
 

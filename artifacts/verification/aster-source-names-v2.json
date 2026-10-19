@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "files_scanned": 341,
+  "roots": [
+    "crates",
+    "scripts",
+    "src",
+    "tests",
+    ".github"
+  ],
+  "extensions": [
+    ".bat",
+    ".cmd",
+    ".cs",
+    ".css",
+    ".html",
+    ".js",
+    ".jsx",
+    ".ps1",
+    ".py",
+    ".rs",
+    ".sh",
+    ".ts",
+    ".tsx",
+    ".yaml",
+    ".yml"
+  ],
+  "hits": [],
+  "scope": "Editable source and filenames only. Original notices (.license), package attribution, JSON metadata, documents, datasets, archived evidence and Git history retain factual names."
+}

@@ -1,4 +1,5 @@
 """Freeze a nested H64/H128 capacity comparison before initialization/training."""
+from research_reference import research_text
 import json
 
 from run_rating import digest, read, write_new
@@ -29,7 +30,7 @@ def main():
         "cost_diagnostic":{"positions":64,"rounds":9,"warmup_rounds":3,"repetitions_per_round":300,
             "policy":"Separate original BCL-only harness linked to the frozen runtime. Identical frozen legal make/eval/undo/eval operations for classical,H64,H128 in seeded counterbalanced order. Check root restoration and repeatable score checksums. Preserve raw timings and harness source/binary. Descriptive cost, not a strength or promotion gate; do not contend with matches or training."},
         "maximum_match_games":320,"rating":prior["rating"],
-        "limits":"Same finite-label and endgame-biased source and historical static/deep mix. More capacity may worsen search cost; matched epoch count is not equal training compute. Extra units start zero-output, so initial function matches but optimization geometry differs. Teacher fit, timing and tactical gains do not establish Stockfish superiority."}
+        "limits":research_text('declare_capacity.interpretation')}
     path = ROOT / "artifacts/research/capacity-plan-v1.json"; write_new(path,plan)
     print(json.dumps({"declared":True,"plan_sha256":digest(path),"maximum_games":320}),flush=True)
 

@@ -21,6 +21,7 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install -r requirements-dev.txt
       - run: python -m unittest discover -s tests -p test_match_recovery.py
+      - run: python scripts/verify_source_names.py
       - run: python scripts/fetch_rust_network.py
       - run: python scripts/fetch_aster_network.py
       - run: cargo fmt --all --check

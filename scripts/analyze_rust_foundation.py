@@ -1,4 +1,5 @@
 """Apply the predeclared first-four-ply family bootstrap to a frozen Rust screen."""
+from research_reference import research_text
 import argparse
 import collections
 import hashlib
@@ -26,7 +27,7 @@ def main():
         'resolved_pairs':len(points),'unresolved_pairs':unresolved,'bootstrap_samples':20000,'seed':20261019,'family_definition':'initial FEN plus first four UCI plies',
         'wins':data['wins'],'draws':data['draws'],'losses':data['losses'],'forfeits':data['forfeits'],
         'report_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'analyzer_sha256':hashlib.sha256(pathlib.Path(__file__).read_bytes()).hexdigest(),
-        'interpretation':'Predeclared local screen, not an absolute/public Elo, not a universal Stockfish-superiority test. Family resampling is limited by the number and distribution of sampled families.'}
+        'interpretation':research_text('analyze_rust_foundation.interpretation')}
     out.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8');print(json.dumps(report))
 
 if __name__=='__main__':main()

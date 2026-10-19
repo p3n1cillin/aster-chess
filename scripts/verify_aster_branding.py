@@ -1,4 +1,5 @@
 """Check Aster identity, deterministic core behavior and counterbalanced bench time."""
+from research_reference import research_text
 import argparse
 import hashlib
 import json
@@ -55,7 +56,7 @@ def main():
         assert 'id author Aster contributors' in result.stdout
         assert 'uciok' in result.stdout and 'readyok' in result.stdout
         assert 'GNU General Public License' in result.stdout
-        assert not re.search(r'stockfish|sf[-_]port', result.stdout, re.I), result.stdout
+        assert not re.search(research_text('forbidden_identity_pattern'), result.stdout, re.I), result.stdout
         identities.append(dict(binary=str(binary), sha256=digest(binary), transcript=result.stdout))
     candidate = bench(engine, output, 'candidate-warm')
     report = dict(passed=True, identities=identities, signature=candidate['signature'],

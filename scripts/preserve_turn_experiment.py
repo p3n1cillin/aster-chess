@@ -1,4 +1,5 @@
 """Freeze a completed neural experiment's sources and provenance links."""
+from research_reference import research_text
 import argparse
 import hashlib
 import json
@@ -103,7 +104,7 @@ def main():
                  "artifacts/data/teacher-turn-augmented-60k-v1-classical.jsonl.classical.json",
                  "artifacts/validation/teacher-turn-augmented-60k-v1.json", "artifacts/validation/teacher-turn-pairs-10k-v1.json",
                  "artifacts/validation/turn-dependence-128-v1.json", "tests/fixtures/openings-v4.json",
-                 "tests/fixtures/tactics-v1.json", "tests/fixtures/tactics-quiet-v1.json", "tools/stockfish/manifest.json"]
+                 "tests/fixtures/tactics-v1.json", "tests/fixtures/tactics-quiet-v1.json", research_text('opponent_manifest')]
     artifacts.extend(p.relative_to(ROOT).as_posix() for p in (ROOT / "artifacts/validation").glob(args.prefix + "*.json"))
     artifacts.extend(p.relative_to(ROOT).as_posix() for p in (ROOT / "artifacts/validation").glob(args.prefix + "*.txt"))
     artifacts.extend(p.relative_to(ROOT).as_posix() for p in (ROOT / "artifacts/benchmarks").glob(args.prefix + "*.json"))
@@ -111,7 +112,7 @@ def main():
     result = {"schema": 1, "candidate_source": reference(candidate_manifest), "baseline_source": reference(baseline_manifest),
               "pipeline_source": reference(target.relative_to(ROOT) / "manifest.json"), "models": models,
               "matches": matches, "artifacts": [reference(p) for p in sorted(set(artifacts))],
-              "interpretation": "Independent optional runtime research; no selected neural default, Elo claim or Stockfish superiority."}
+              "interpretation": research_text('preserve_turn_experiment.interpretation')}
     output = ROOT / f"artifacts/research/{args.prefix}-experiment-manifest.json"
     if output.exists(): raise ValueError("Preserve prior experiment manifest")
     output.write_text(json.dumps(result, indent=2) + "\n")

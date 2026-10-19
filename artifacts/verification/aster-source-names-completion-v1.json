@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "binary_sha256": "dc83154e2c3356e7ff741920b7dfcaaabb13d5db6e3711acdeed134ffbe6221f",
+  "preserved_binary": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\dc83154e2c3356e7ff741920b7dfcaaabb13d5db6e3711acdeed134ffbe6221f\\aster.exe",
+  "source_snapshot": "artifacts/research/aster-source-names-v2/manifest.json",
+  "snapshot_files_match_final_inputs": true,
+  "source_files": 179,
+  "source_audit": {
+    "passed": true,
+    "files_scanned": 341,
+    "roots": [
+      "crates",
+      "scripts",
+      "src",
+      "tests",
+      ".github"
+    ],
+    "extensions": [
+      ".bat",
+      ".cmd",
+      ".cs",
+      ".css",
+      ".html",
+      ".js",
+      ".jsx",
+      ".ps1",
+      ".py",
+      ".rs",
+      ".sh",
+      ".ts",
+      ".tsx",
+      ".yaml",
+      ".yml"
+    ],
+    "hits": [],
+    "scope": "Editable source and filenames only. Original notices (.license), package attribution, JSON metadata, documents, datasets, archived evidence and Git history retain factual names."
+  },
+  "checks": {
+    "release_native_tests": 140,
+    "debug_native_tests": 140,
+    "recovery_tests": 5,
+    "independent_rule_positions": 2630,
+    "perft_cases": 14,
+    "special_rule_positions": 94,
+    "proof_certificates": 8,
+    "proof_positions": 42,
+    "browser": "HTTP/SSE/legal SAN/PV/branch replay/undo/stop/Black opening passed",
+    "python_compileall": true,
+    "cargo_fmt": true,
+    "metadata_ast_equivalence": "aster-source-metadata-equivalence-v2.json",
+    "unchanged_rust_noncomment_lines": "aster-source-metadata-equivalence-v1.json",
+    "deterministic_bench": "aster-source-names-behavior-v1.json"
+  },
+  "limits": "Naming and metadata only. Preserved notices, package authorship, reference data, archives and history keep factual names. No algorithm replacement, strength claim or statistically established speed change."
+}

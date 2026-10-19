@@ -1,4 +1,5 @@
 """Analyze the frozen calibration on its explicitly local reference-setting scale."""
+from research_reference import research_text
 import collections
 import datetime
 import json
@@ -161,11 +162,11 @@ def main():
                    "bootstrap_samples": uncertainty["bootstrap_samples"], "seed": uncertainty["seed"],
                    "bootstrap_implementation": "Each analysis starts a separate RNG with declared seed. Resample families/pairs, weighting all included pairs equally. Endpoints use sorted indices floor(B*.025), floor(B*.975).",
                    "platform": confirmation["platform"], "hardware": confirmation["hardware"], "resources": plan["resources"],
-                   "opponent_release": confirmation["stockfish_release"], "opponent_options": confirmation["opponent_options"],
+                   "opponent_release": confirmation[research_text('legacy_release_key')], "opponent_options": confirmation["opponent_options"],
                    "opponent_option_defaults": confirmation["opponent_option_defaults"], "candidate_options": confirmation["candidate_options"],
                    "candidate_option_defaults": confirmation["candidate_option_defaults"],
                    "plan_sha256": digest(plan_path), "analyzer_sha256": digest(__file__), "evidence": evidence,
-                   "interpretation": plan["scope"] + " Family bootstrap addresses opening dependence, not opponent-dial calibration error or generalization to other controls. Experimental proof/conversion scoring and production 0.6 are not rated by this result. Goal of surpassing full-strength Stockfish remains unachieved."})
+                   "interpretation": plan["scope"] + research_text('analyze_rating.interpretation')})
     output = ROOT / "artifacts/ratings/session-20261004-calibration-v1.json"
     write_new(output, result)
     print(json.dumps({k: result[k] for k in ("status", "numeric_local_rating", "primary_95_percent_local_interval", "score", "wins", "draws", "losses", "opening_families", "failed_numeric_gates")}))

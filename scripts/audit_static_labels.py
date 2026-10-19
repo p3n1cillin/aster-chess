@@ -1,4 +1,5 @@
 """Check row preservation and independently re-query a sample of static labels."""
+from research_reference import research_text
 import argparse
 import hashlib
 import json
@@ -28,7 +29,7 @@ def main():
     if not manifest["complete"] or manifest["input_sha256"] != digest(args.source) or manifest["data_sha256"] != digest(args.static):
         raise ValueError("Static provenance differs")
     for source, static in zip(before, after):
-        if static["search_score_white_cp"] != source["score_white_cp"] or static["label_kind"] != "stockfish_final_static_evaluation":
+        if static["search_score_white_cp"] != source["score_white_cp"] or static["label_kind"] != research_text('legacy_static_label'):
             raise ValueError("Original label lost")
         restored = dict(static)
         restored["score_white_cp"] = restored.pop("search_score_white_cp")

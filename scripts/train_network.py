@@ -1,5 +1,6 @@
 """Train and export a small original Aster position network on game-separated data."""
 from __future__ import annotations
+from research_reference import research_text
 
 import argparse
 import copy
@@ -421,7 +422,7 @@ def main() -> None:
               "validation_games": sorted(validation_games), "initial_validation": initial, "selected_validation": evaluate(validation),
               "selected_epoch": best_epoch, "epochs": history, "quantized_validation_mae_cp": float(np.abs(qp - yt).mean()),
               "quantization_mae_cp": float(np.abs(qp - float_predictions).mean()), "quantization_max_error_cp": float(np.abs(qp - float_predictions).max()),
-              "seconds": round(time.monotonic() - started, 3), "interpretation": "Teacher fit on held-out games, not playing strength or evidence of surpassing Stockfish."}
+              "seconds": round(time.monotonic() - started, 3), "interpretation": research_text('train_network.interpretation')}
     report["initial_activation"] = initial_activation
     if initial_checkpoint is not None:
         if hashlib.sha256(pathlib.Path(args.initial_checkpoint).read_bytes()).hexdigest() != initial_checkpoint["sha256"]:

@@ -3,7 +3,7 @@ using System.Numerics;
 namespace Aster;
 
 // Aster's own symmetric piece-square/king-context position network. This format
-// intentionally does not read Stockfish networks or use Stockfish inference.
+// uses its own legacy network format and inference.
 public sealed class NeuralNetwork
 {
     public const int FeatureCount = 768, ActivationScale = 256, OutputScale = 256;

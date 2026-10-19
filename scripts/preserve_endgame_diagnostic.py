@@ -1,4 +1,5 @@
 """Freeze the completed endgame diagnostic pipeline and all referenced evidence."""
+from research_reference import research_text
 import json
 import pathlib
 import shutil
@@ -46,8 +47,8 @@ def main():
     (directory / "manifest.json").write_text(json.dumps({"source_files": sources}, indent=2) + "\n")
     paths = [data, str(data) + ".manifest.json", str(data) + ".source.pgn", "tests/fixtures/endgames-v1.json", "docs/ENDGAME-DIAGNOSTIC.md",
              "artifacts/research/geometric-threats-experiment-manifest.json", "artifacts/research/pair-loss-experiment-manifest.json",
-             "artifacts/research/turn-static-experiment-manifest.json", "tools/stockfish/manifest.json"]
-    paths += ["tools/stockfish/sf_19/stockfish/src/" + name for name in ("evaluate.cpp", "score.cpp", "uci.cpp")]
+             "artifacts/research/turn-static-experiment-manifest.json", research_text('opponent_manifest')]
+    paths += [research_text('archive.reference_source_prefix') + name for name in ("evaluate.cpp", "score.cpp", "uci.cpp")]
     paths.extend(p.relative_to(ROOT) for p in (ROOT / "artifacts/validation").glob("endgame-diagnostic*.json"))
     paths.extend(p.relative_to(ROOT) for p in (ROOT / "artifacts/validation").glob("endgame-diagnostic*.txt"))
     result = {"schema": 1, "pipeline": reference(directory.relative_to(ROOT) / "manifest.json"),

@@ -1,4 +1,5 @@
 """Verify and freeze the completed phase experiment; refuse partial runs."""
+from research_reference import research_text
 import argparse
 import datetime
 import json
@@ -75,7 +76,7 @@ def main():
         manifest = {"schema": 1, "created_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
             "artifacts": entries, "games": sum(p["games"] for p in read(ROOT / "artifacts/research/phase-match-execution-v1.json")["phases"]),
             "decision": read(ROOT / "artifacts/research/phase-decision-v1.json"),
-            "interpretation": "Complete fixed-budget phase architecture ablation, source/binaries/models/data/checkpoints/diagnostics and independently audited PGNs. All hashes recomputed. No public Elo or Stockfish superiority inferred."}
+            "interpretation": research_text('preserve_phase.interpretation')}
         write_new(manifest_path, manifest)
     print(json.dumps({"verified": True, "artifacts": len(manifest["artifacts"]), "games": manifest["games"], "manifest_sha256": digest(manifest_path)}))
 

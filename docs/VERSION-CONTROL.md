@@ -10,7 +10,7 @@ survive checkout on another platform.
 Local Python environments, build output, Python caches, IDE user settings and
 credentials are ignored. Stockfish is a development tool only. Its release
 manifest is tracked; downloaded third-party executable/archive files stay local
-and can be fetched again with `scripts/fetch_stockfish.py --tag sf_19` on Windows.
+and can be fetched again with `scripts/fetch_reference.py --tag sf_19` on Windows.
 The original pinned Stockfish source snapshot and license are retained among
 the research evidence. No Git LFS or paid storage is required for this initial
 repository: the largest tracked file is below GitHub's ordinary file limit.

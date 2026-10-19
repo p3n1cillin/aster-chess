@@ -182,7 +182,7 @@ The engine itself has no third-party runtime dependency beyond .NET.
 dotnet src/Engine/bin/Release/net8.0/Aster.dll perft 5
 dotnet src/Engine/bin/Release/net8.0/Aster.dll bench 7
 .\.venv\Scripts\python.exe scripts/benchmark.py --depth 7 --output artifacts/benchmarks/current.json
-.\.venv\Scripts\python.exe scripts/fetch_stockfish.py --tag sf_19
+.\.venv\Scripts\python.exe scripts/fetch_reference.py --tag sf_19
 .\.venv\Scripts\python.exe scripts/match.py --pairs 8 --movetime 0.1 --output artifacts/matches/stockfish19
 ```
 

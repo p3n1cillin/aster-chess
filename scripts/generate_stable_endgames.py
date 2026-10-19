@@ -1,4 +1,5 @@
 """Collect bounded balanced endgames with static and stable-search targets."""
+from research_reference import research_text
 import collections
 import datetime
 import json
@@ -35,7 +36,7 @@ def main():
     manifest_path = pathlib.Path(str(output) + ".manifest.json")
     if any(p.exists() for p in (output, candidate_path, pgn_path, manifest_path)):
         raise ValueError("Preserve prior/partial runs; never restart from manifest state")
-    teacher_manifest = read(ROOT / "tools/stockfish/manifest.json"); teacher_path = ROOT / teacher_manifest["executable"]
+    teacher_manifest = read(ROOT / research_text('opponent_manifest')); teacher_path = ROOT / teacher_manifest["executable"]
     assert digest(teacher_path) == teacher_manifest["executable_sha256"]
     assert digest(ROOT / plan["old_data"]) == plan["old_data_sha256"]
     assert digest(ROOT / plan["baseline"]) == plan["baseline_sha256"]

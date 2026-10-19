@@ -1,4 +1,5 @@
 """Retain the exact prior rating after a completed non-calibration ablation."""
+from research_reference import research_text
 import datetime
 import json
 import shutil
@@ -28,7 +29,7 @@ def main():
         model_sha256={role:item["sha256"] for role,item in preflight["models"].items()},
         failed_gates=decision["failed_gates"],paired_screens=decision["results"],
         decision_sha256=digest(decision_path),recorder_sha256=digest(__file__),
-        reason="This fixed-budget teacher-label ablation is not a rating calibration. Neither model inherits the old exact binary's estimate. Public Elo and superiority to full-strength Stockfish remain unestablished.")
+        reason=research_text('record_stable_session.interpretation'))
     # The canonical record is also retained verbatim inside this experiment's
     # preserved research tree, so its bytes join the final artifact manifest.
     output = ROOT / "artifacts/ratings/session-20261004-stable-endgame.json"

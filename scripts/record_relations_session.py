@@ -1,4 +1,5 @@
 """Keep the exact calibrated rating separate from relation regression scores."""
+from research_reference import research_text
 import datetime
 import json
 import shutil
@@ -26,7 +27,7 @@ def main():
         plan={"path":plan_path.relative_to(ROOT).as_posix(),"sha256":digest(plan_path)},
         runtime_binary_sha256=preflight["engine_sha256"],model_sha256={role:item["sha256"] for role,item in preflight["models"].items()},
         failed_gates=decision["failed_gates"],paired_screens=decision["results"],decision_sha256=digest(decision_path),recorder_sha256=digest(__file__),
-        reason="This fixed-budget geometric relation feature ablation is not a rating calibration. Neither model nor the new runtime inherits the old exact binary's estimate. Public Elo and superiority to full-strength Stockfish remain unestablished.")
+        reason=research_text('record_relations_session.interpretation'))
     output = ROOT / "artifacts/ratings/session-20261004-relations.json"
     copy = ROOT / "artifacts/research/relations-rating-reference-v1.json"
     source = ROOT / "artifacts/research/relations-rating-source"

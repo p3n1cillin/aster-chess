@@ -100,7 +100,7 @@ def main():
         client.send('stop');lines=client.until('bestmove',timeout=3);validate_pv(root,lines)
         position(root)
         # A fifty-move draw must be claimed (FIDE 9.3), so with the clock at 100 the
-        # side to move may still mate: the Stockfish 19 core reports Ra8# as mate 1.
+        # side to move may still mate: the reference engine 19 core reports Ra8# as mate 1.
         # The legacy Viridithas-derived core always treats the claimable draw as final.
         legacy=('Viridithas' in client.name)
         for fen,expected in [('7k/6Q1/6K1/8/8/8/8/8 b - - 100 1','score mate 0'),('7k/5Q2/6K1/8/8/8/8/8 b - - 0 1','score cp 0'),

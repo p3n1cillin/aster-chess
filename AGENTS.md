@@ -22,6 +22,7 @@ The active source foundation is an attributed Viridithas 20 Rust fork; preserve
 its MIT notice and original source fingerprints. Stockfish is a development
 opponent/research reference, never an external runtime engine behind Aster.
 
+- `python scripts/verify_source_names.py`
 - `python scripts/fetch_rust_network.py`
 - `python scripts/fetch_aster_network.py`
 - `cargo run --release --locked -p aster-core -- bench` must print 2,497,913 nodes
@@ -45,3 +46,9 @@ Preserve match reports and PGNs. Pin external engine versions and record binarie
 source fingerprints, options, openings, time controls and unresolved games.
 Never infer Elo or Stockfish superiority from a few games or from search speed.
 See `ROADMAP.md` for the research direction and `artifacts/PROGRESS.md` for results.
+
+Editable source uses Aster naming. Preserve original per-file attribution in
+adjacent `.license` notices and ship them with the source. Development-reference
+URLs, historical keys and archive paths live in `scripts/research-reference.json`;
+do not relabel opponents or modify frozen evidence to pass the source-name audit.
+See `docs/SOURCE-NAMES.md` for the exact audit scope.

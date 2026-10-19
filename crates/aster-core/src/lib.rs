@@ -1,12 +1,6 @@
-// Aster Core: a faithful Rust port of Stockfish 19.
-// Stockfish, a UCI chess playing engine derived from Glaurung 2.1
-// Copyright (C) 2004-2026 The Stockfish developers (see AUTHORS file)
-// Rust port copyright (C) 2026 Aster contributors.
-//
-// This program is free software: you can redistribute it and/or modify it
-// under the terms of the GNU General Public License as published by the Free
-// Software Foundation, either version 3 of the License, or (at your option)
-// any later version. See the Copying.txt / LICENSE files.
+// Aster core. Original attribution and source mapping: lib.rs.license.
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Modified 2026-10-19: source naming and notice layout only.
 
 pub mod bitboard;
 pub mod history;

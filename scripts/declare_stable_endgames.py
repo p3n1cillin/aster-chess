@@ -1,4 +1,5 @@
 """Freeze the balanced stable-label endgame training ablation before generation."""
+from research_reference import research_text
 import json
 
 from run_rating import digest, write_new
@@ -36,7 +37,7 @@ def main():
             "openings": {"positions":160,"attempts":2048,"seed":20261118,"plies":20,"nodes":2048,"verify_nodes":20000,"max_cp":80,
                 "partition":"first64 pairs vs classical30ms,next64 vs static30ms,last32 conditional classical100ms; exclude old+fresh training data and every earlier parent suite. Freeze before Aster queries."}},
         "maximum_match_games":320,"rating":"No new calibration in this data screen. Retain exact earlier0.7.6-q-evasion local2319 interval2277..2360; new models do not inherit it.",
-        "no_adaptive_extension":True,"limits":"Single seed, bounded endgame-biased teacher play and finite-label selection. Labels/outcomes are not oracles. Distillation and native certificates do not establish exceeding full-strength Stockfish."}
+        "no_adaptive_extension":True,"limits":research_text('declare_stable_endgames.interpretation')}
     write_new(ROOT / "artifacts/research/stable-endgame-plan-v1.json", plan)
     print(json.dumps({"declared":True,"plan_sha256":digest(ROOT / "artifacts/research/stable-endgame-plan-v1.json"),"fresh_positions":4096,"maximum_games":320}))
 

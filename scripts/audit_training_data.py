@@ -1,4 +1,5 @@
 """Independently audit legal teacher data, provenance, exclusions and sampling."""
+from research_reference import research_text
 import argparse
 import collections
 import hashlib
@@ -59,10 +60,10 @@ def main():
               "checks": checks, "phase_distribution": dict(phases), "king_region_counts": dict(sorted(kings.items())),
               "score_distribution": {"negative": sum(s < 0 for s in scores), "zero": scores.count(0), "positive": sum(s > 0 for s in scores),
                                      "median_abs_cp": statistics.median(abs(s) for s in scores), "max_abs_cp": max(abs(s) for s in scores)},
-              "label_node_median": None if all(row.get("label_kind") == "stockfish_final_static_evaluation" for row in rows)
+              "label_node_median": None if all(row.get("label_kind") == research_text('legacy_static_label') for row in rows)
                   else statistics.median(row["nodes"] for row in rows),
               "source_search_node_median": statistics.median(row["nodes"] for row in rows)
-                  if all(row.get("label_kind") == "stockfish_final_static_evaluation" for row in rows) else None,
+                  if all(row.get("label_kind") == research_text('legacy_static_label') for row in rows) else None,
               "label_kind_counts": dict(collections.Counter(row.get("label_kind", "search_score") for row in rows)), "exclusions": suites,
               "manifest_checked": manifest is not None,
               "interpretation": "Legality/provenance and exact-position exclusions only; opening-family overlap can remain. Teacher-produced labels are not outcomes or playing-strength evidence; retained source search budgets do not describe static relabeling."}

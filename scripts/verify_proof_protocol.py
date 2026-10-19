@@ -1,4 +1,5 @@
 """Compare native proof protocol and fixed-node behavior with frozen references."""
+from research_reference import research_text
 import argparse
 import hashlib
 import json
@@ -20,7 +21,7 @@ def main():
     if output.exists(): parser.error("Preserve previous protocol reports")
     proof = pathlib.Path("artifacts/publish/proof-dev/Aster.exe")
     reference = pathlib.Path("artifacts/publish/conversion-dev/Aster.exe")
-    sf = json.loads(pathlib.Path("tools/stockfish/manifest.json").read_text())
+    sf = json.loads(pathlib.Path(research_text('opponent_manifest')).read_text())
     transcript = []
     with UciClient(proof) as client:
         client.send("position fen 7k/8/8/8/8/8/R7/K7 w - - 0 1")
@@ -56,8 +57,8 @@ def main():
     assert all(digest(source_a / name) == digest(source_b / name) for name in unchanged)
     result = {"passed": True, "behavior_positions": checked, "unchanged_core_files": unchanged, "transcripts": transcript,
               "proof_binary_sha256": digest(proof), "conversion_binary_sha256": digest(reference),
-              "stockfish": sf, "script_sha256": digest(__file__),
-              "interpretation": "Native Aster explanation works during infinite search without blocking readiness/stop. Pinned Stockfish's explain command emits no such proof explanation. Core search/evaluation unchanged; 66 fixed-node outputs agree. No claim about third-party Stockfish interfaces or general chess intelligence."}
+              research_text('legacy_opponent_key'): sf, "script_sha256": digest(__file__),
+              "interpretation": research_text('verify_proof_protocol.interpretation')}
     output.write_text(json.dumps(result, indent=2) + "\n"); print(json.dumps({"passed": True, "behavior_positions": checked, "transcripts": transcript}))
 
 

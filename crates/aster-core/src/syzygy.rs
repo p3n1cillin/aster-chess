@@ -1,7 +1,6 @@
-// Rust port of Stockfish 19 `syzygy/tbprobe.h/.cpp` (Syzygy tablebase probing,
-// originally based on code by Ronald de Man).
-// Copyright (C) 2004-2026 The Stockfish developers (see AUTHORS file)
-// Licensed under the GNU General Public License v3 or later.
+// Aster core. Original attribution and source mapping: syzygy.rs.license.
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Modified 2026-10-19: source naming and notice layout only.
 
 use crate::bitboard::*;
 use crate::movegen::{GenType, MoveList};

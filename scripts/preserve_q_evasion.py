@@ -1,4 +1,5 @@
 """Preserve or independently recheck the completed evasion optimization."""
+from research_reference import research_text
 import argparse
 import json
 import pathlib
@@ -139,13 +140,13 @@ def main():
             paths += [p.relative_to(ROOT).as_posix() for p in (path.rglob("*") if path.is_dir() else [path]) if p.is_file()]
     paths += [RATING.relative_to(ROOT).as_posix(),"artifacts/ratings/session-20261004-calibration-v1.json",
         "artifacts/research/rating-experiment-v1-manifest.json","artifacts/benchmarks/lazy-order-baseline-profile-depth9.json",
-        "artifacts/tactics/lazy-order-baseline-tactics-quiet-5000nodes.json","tools/stockfish/manifest.json",
-        "tools/stockfish/sf_19/stockfish/stockfish-windows-x86-64-universal.exe",
-        "tools/stockfish/sf_19/stockfish-windows-x86-64-universal.zip"]
-    paths += [p.relative_to(ROOT).as_posix() for p in (ROOT / "artifacts/research/conversion-stockfish19-source").rglob("*") if p.is_file()]
+        "artifacts/tactics/lazy-order-baseline-tactics-quiet-5000nodes.json",research_text('opponent_manifest'),
+        research_text('archive.reference_executable'),
+        research_text('archive.reference_zip')]
+    paths += [p.relative_to(ROOT).as_posix() for p in (ROOT / research_text('archive.reference_sources')).rglob("*") if p.is_file()]
     write_new(FINAL,{"schema":1,"games":576,"candidate_promoted":True,"promoted_default_source":manifests[2],
         "rating_record":reference(RATING.relative_to(ROOT)),"artifacts":[reference(p) for p in sorted(set(paths))],
-        "interpretation":"Same-work optimization passes every frozen engineering gate and becomes ordinary0.7.6 source. All576 PGNs independently audited. Exact matched candidate local estimate2319, interval2277..2360, overlaps earlier rating. Renamed default repeats416 full traces; no automatic rating transfer. Public Elo and full-strength Stockfish superiority remain unestablished; goal active."})
+        "interpretation":research_text('preserve_q_evasion.interpretation')})
     print(json.dumps({"games":576,"artifacts":len(read(FINAL)["artifacts"]),"candidate_promoted":True,"manifest_sha256":digest(FINAL)}))
 
 

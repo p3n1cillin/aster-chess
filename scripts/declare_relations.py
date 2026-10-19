@@ -1,4 +1,5 @@
 """Declare geometric relation features before implementation or initialization."""
+from research_reference import research_text
 import json
 
 from run_rating import digest, read, write_new
@@ -33,7 +34,7 @@ def main():
                 "partition":"160 fresh parent pairs: first64 classical30ms,next64 matched H64control30ms,last32 conditional classical100ms. Exclude all old/current training, diagnostics, tactical fixtures and prior opening parents including capacity; freeze before candidate queries."}},
         "cost_diagnostic":{**prior["cost_diagnostic"],"order_seed":20261126,
             "policy":"New BCL-only RelationCost harness, frozen new runtime, same64 held-out roots and legal children, 9 counterbalanced rounds,3warmups,300repeats. Independently verify every role's checksum and root restoration. No contention with training/matches; timing is descriptive only."},
-        "limits":"Relations are geometric and aggregate: no legal-capture or tactical oracle. More expensive inference may outweigh fit gains. Equal epochs are not equal compute. No promotion on fit/speed/tactics alone; all prior playing gates retained. Full Stockfish superiority and public Elo remain unestablished."}
+        "limits":research_text('declare_relations.interpretation')}
     plan.pop("baseline"); plan.pop("baseline_sha256"); plan.pop("baseline_source")
     plan["training"].pop("extra_initial_seed",None)
     path = ROOT / "artifacts/research/relations-plan-v1.json"

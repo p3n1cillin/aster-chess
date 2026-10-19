@@ -1,4 +1,5 @@
 """Bind a completed threat experiment to immutable sources and audited results."""
+from research_reference import research_text
 import hashlib
 import json
 import pathlib
@@ -60,7 +61,7 @@ def main():
     (destination / "manifest.json").write_text(json.dumps({"source_files": sources}, indent=2) + "\n")
     paths = ["docs/GEOMETRIC-THREATS.md", "tests/fixtures/openings-v5.json", "tests/fixtures/tactics-v1.json",
              "tests/fixtures/tactics-quiet-v1.json", "artifacts/research/turn-static-experiment-manifest.json",
-             "tools/stockfish/manifest.json", fit_path, fit_path.parent / "features.npz"]
+             research_text('opponent_manifest'), fit_path, fit_path.parent / "features.npz"]
     paths.extend(p.relative_to(ROOT) for p in (ROOT / fit_path.parent / "source").glob("*.py"))
     paths.extend(p.relative_to(ROOT) for p in (ROOT / "artifacts/data").glob("teacher-turn-60k-static-v1*"))
     paths.extend(p.relative_to(ROOT) for p in (ROOT / "artifacts/validation").glob("geometric-*.json"))
@@ -69,7 +70,7 @@ def main():
     paths.extend(str(match_prefix) + ending for ending in (".json", ".pgn", ".audit.json", ".analysis.json"))
     result = {"schema": 1, "engine_sources": engines, "pipeline": reference(destination.relative_to(ROOT) / "manifest.json"),
               "artifacts": [reference(path) for path in sorted(set(map(str, paths)))],
-              "interpretation": "Original fitted geometric threat research. Ordinary evaluator and production remain unchanged; no Elo or Stockfish-superiority claim."}
+              "interpretation": research_text('preserve_threat_experiment.interpretation')}
     final.write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps({"engines": len(engines), "artifacts": len(result["artifacts"])}))
 

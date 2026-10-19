@@ -1,4 +1,5 @@
 """Verify and preserve a completed deep-turn ablation without partial claims."""
+from research_reference import research_text
 import argparse
 import datetime
 import json
@@ -78,7 +79,7 @@ def main():
                 "artifacts/publish/mate-proof-dev-v2","artifacts/research/mate-proof-source-v2"):
             paths.update(p for p in (ROOT / folder).rglob("*") if p.is_file() and "__pycache__" not in p.parts)
         paths.add(ROOT / "artifacts/data/teacher-turn-60k-static-v1-classical.jsonl")
-        paths.add(ROOT / "tools/stockfish/manifest.json")
+        paths.add(ROOT / research_text('opponent_manifest'))
         for key in ("parents","parent_audit","prior_split"):
             paths.add(ROOT / plan[key])
         for suffix in (".source.pgn",".manifest.json"):
@@ -87,7 +88,7 @@ def main():
             "artifacts":[{"path":path.relative_to(ROOT).as_posix(),"bytes":path.stat().st_size,"sha256":digest(path)} for path in sorted(paths)],
             "games":sum(phase["games"] for phase in read(ROOT / "artifacts/research/deep-turn-match-execution-v1.json")["phases"]),
             "decision":read(ROOT / "artifacts/research/deep-turn-decision-v1.json"),
-            "interpretation":"Complete fixed-budget fresh paired-turn objective ablation, models/checkpoints/data/native labels/source histories and audited PGNs. No Elo/Stockfish superiority inferred."}
+            "interpretation":research_text('preserve_deep_turn.interpretation')}
         write_new(manifest_path,manifest)
     print(json.dumps({"verified":True,"artifacts":len(manifest["artifacts"]),"games":manifest["games"],"manifest_sha256":digest(manifest_path)}),flush=True)
 

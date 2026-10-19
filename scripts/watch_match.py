@@ -10,6 +10,7 @@ A handful of watchable games is a demonstration, not a rating: report the
 result with its uncertainty and never infer superiority from it.
 """
 from __future__ import annotations
+from research_reference import research_text
 
 import argparse
 import datetime
@@ -32,7 +33,7 @@ DEFAULT_OPENINGS = ROOT / "tests" / "fixtures" / "openings-v4.json"
 
 
 def default_opponent() -> pathlib.Path:
-    manifest = json.loads((ROOT / "tools" / "stockfish" / "manifest.json").read_text())
+    manifest = json.loads((ROOT / "tools" / research_text('legacy_opponent_key') / "manifest.json").read_text())
     return ROOT / manifest["executable"].replace("\\", "/")
 
 
@@ -172,7 +173,7 @@ def score_text(score: chess.engine.PovScore | None, turn: chess.Color) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--engine", default=str(DEFAULT_ASTER), help="Aster executable")
-    parser.add_argument("--opponent", default=None, help="Opponent executable (default: pinned official Stockfish)")
+    parser.add_argument("--opponent", default=None, help=research_text('watch.opponent_help'))
     parser.add_argument("--pairs", type=int, default=2, help="Color-swapped game pairs")
     parser.add_argument("--movetime", type=float, default=1.0, help="Seconds per move (ignored with --clock)")
     parser.add_argument("--clock", help="Game clock BASE+INC in seconds, e.g. 60+0.6")

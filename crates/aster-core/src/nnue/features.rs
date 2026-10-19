@@ -1,7 +1,6 @@
-// Rust port of Stockfish 19 NNUE feature sets:
-// `features/half_ka_v2_hm`, `features/full_threats`, `features/pp_3wide`.
-// Copyright (C) 2004-2026 The Stockfish developers (see AUTHORS file)
-// Licensed under the GNU General Public License v3 or later.
+// Aster core. Original attribution and source mapping: features.rs.license.
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Modified 2026-10-19: source naming and notice layout only.
 
 use crate::bitboard::*;
 use crate::position::Position;

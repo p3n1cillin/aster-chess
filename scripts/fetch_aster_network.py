@@ -1,4 +1,5 @@
 """Fetch and verify the pinned NNUE weights used by the Aster core (crates/aster-core)."""
+from research_reference import research_text
 import hashlib
 import json
 import pathlib
@@ -9,9 +10,8 @@ import uuid
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 NAME = "nn-1a298aa575a0.nnue"
-URL = "https://tests.stockfishchess.org/api/nn/" + NAME
-MIRROR = ("https://media.githubusercontent.com/media/official-stockfish/networks/"
-          "dd5c7f74c073a7d0bcbb52648d26c537a3d04cf4/" + NAME)
+URL = research_text('network.primary_prefix') + NAME
+MIRROR = (research_text('network.mirror_prefix') + NAME)
 SHA256 = "1a298aa575a085434d29027978dc36867fe9c5bcea9376654b7a8eba1e52dfc2"
 
 

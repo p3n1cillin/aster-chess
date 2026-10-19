@@ -1,4 +1,5 @@
 """Freeze the phase-output ablation before training or candidate queries."""
+from research_reference import research_text
 import json
 
 from run_rating import digest, write_new
@@ -35,7 +36,7 @@ def main():
             "primary": "First4 legal UCI ply families, preserve whole color-swapped pairs; primary95% interval includes unresolved0/1 bounds"},
         "gate": "Always complete both64-game short matches. Long32-game confirmation only if all correctness/tactical gates pass, zero forfeits/unresolved, classical short family lower strictly>50% and control short point>=50% with family lower>=45%. Promotion additionally requires long point>=50%, lower>=45% and zero forfeits/unresolved. No adaptive extension or parameter tuning.",
         "maximum_games": 160, "rating": "No new Elo calibration in this architecture screen; retain the last exact matched binary's rating. Strength is measured in games, never inferred from teacher error or speed.",
-        "limits": "One initialization and existing development data isolate architecture, not broad endgame generalization. Broader stable endgame supervision is a separate subsequent experiment. Stockfish superiority unachieved."}
+        "limits": research_text('declare_phase.interpretation')}
     write_new(ROOT / "artifacts/research/phase-plan-v1.json", plan)
     print(json.dumps({"declared": True, "plan_sha256": digest(ROOT / "artifacts/research/phase-plan-v1.json"), "maximum_games": 160}))
 

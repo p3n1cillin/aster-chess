@@ -1,7 +1,6 @@
-// Rust port of Stockfish 19 `types.h`.
-// Stockfish, a UCI chess playing engine derived from Glaurung 2.1
-// Copyright (C) 2004-2026 The Stockfish developers (see AUTHORS file)
-// Licensed under the GNU General Public License v3 or later.
+// Aster core. Original attribution and source mapping: types.rs.license.
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Modified 2026-10-19: source naming and notice layout only.
 
 pub type Key = u64;
 pub type Bitboard = u64;

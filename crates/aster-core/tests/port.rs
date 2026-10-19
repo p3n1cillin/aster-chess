@@ -1,4 +1,4 @@
-// Correctness checks for the Stockfish 19 Rust port.
+// Correctness checks for Aster core. Count provenance: port.rs.license.
 //
 // Perft results are the standard published counts. The NNUE tests compare the
 // incrementally updated accumulators with a from-scratch refresh along random
@@ -52,7 +52,7 @@ fn perft_standard_positions() {
 
 #[test]
 fn perft_chess960() {
-    // Chess960 positions; counts confirmed with the official Stockfish 19 binary.
+    // Chess960 positions; count provenance is preserved in port.rs.license.
     let cases: &[(&str, i32, u64)] = &[
         (
             "bqnb1rkr/pp3ppp/3ppn2/2p5/5P2/P2P4/NPP1P1PP/BQ1BNRKR w HFhf - 2 9",

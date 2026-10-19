@@ -1,9 +1,6 @@
-// Rust port of Stockfish 19 `tt.h/.cpp`.
-// Copyright (C) 2004-2026 The Stockfish developers (see AUTHORS file)
-// Licensed under the GNU General Public License v3 or later.
-//
-// Entries use relaxed atomics so racy multi-threaded access is defined
-// behaviour in Rust; on x86-64 these compile to plain loads and stores.
+// Aster core. Original attribution and source mapping: tt.rs.license.
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Modified 2026-10-19: source naming and notice layout only.
 
 use crate::types::*;
 use std::sync::atomic::{AtomicI16, AtomicU8, AtomicU16, Ordering::Relaxed};

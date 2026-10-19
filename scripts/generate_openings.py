@@ -1,5 +1,6 @@
 """Freeze diverse legal opening positions using a pinned development teacher."""
 from __future__ import annotations
+from research_reference import research_text
 
 import argparse
 import hashlib
@@ -45,7 +46,7 @@ def main() -> None:
         for entry in prior["openings"]:
             excluded.add(" ".join(chess.Board(entry["fen"]).fen().split()[:4]))
         prior_suites.append({"path": str(path), "sha256": hashlib.sha256(path.read_bytes()).hexdigest(), "positions": len(prior["openings"])})
-    manifest = json.loads((ROOT / "tools/stockfish/manifest.json").read_text(encoding="utf-8"))
+    manifest = json.loads((ROOT / research_text('opponent_manifest')).read_text(encoding="utf-8"))
     teacher_path = ROOT / manifest["executable"]
     if hashlib.sha256(teacher_path.read_bytes()).hexdigest() != manifest["executable_sha256"]:
         raise ValueError("Teacher binary does not match its pinned manifest")

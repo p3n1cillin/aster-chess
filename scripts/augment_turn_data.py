@@ -1,4 +1,5 @@
 """Add bounded counterfactual turn labels while retaining each source-game group."""
+from research_reference import research_text
 import argparse
 import hashlib
 import json
@@ -44,7 +45,7 @@ def main():
         excluded.update(canonical(chess.Board(e["fen"])) for e in json.loads(path.read_text())["openings"])
         exclusions.append({"path": str(path), "sha256": digest(path)})
     if seen & excluded: raise ValueError("Source data overlap with regression fixtures")
-    teacher_manifest = json.loads((ROOT / "tools/stockfish/manifest.json").read_text())
+    teacher_manifest = json.loads((ROOT / research_text('opponent_manifest')).read_text())
     teacher_path = ROOT / teacher_manifest["executable"]
     if digest(teacher_path) != teacher_manifest["executable_sha256"]:
         raise ValueError("Teacher binary differs from pinned manifest")

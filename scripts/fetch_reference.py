@@ -1,5 +1,6 @@
-"""Fetch an official Windows x64 Stockfish release and verify its published SHA-256."""
+'Fetch an official Windows x64 reference engine release and verify its published SHA-256.'
 from __future__ import annotations
+from research_reference import research_text
 
 import argparse
 import hashlib
@@ -20,26 +21,26 @@ def main() -> None:
         parser.error("Expected a release tag such as sf_19, or latest")
     endpoint = "latest" if args.tag == "latest" else "tags/" + args.tag
     request = urllib.request.Request(
-        "https://api.github.com/repos/official-stockfish/Stockfish/releases/" + endpoint,
+        research_text('download.release_api') + endpoint,
         headers={"User-Agent": "Aster-chess-benchmark", "Accept": "application/vnd.github+json"},
     )
     with urllib.request.urlopen(request, timeout=30) as response:
         release = json.load(response)
     compatible = [asset for asset in release["assets"]
-                  if asset["name"] == "stockfish-windows-x86-64-universal.zip"]
+                  if asset["name"] == research_text('download.universal_asset')]
     if not compatible:
         # Older releases use a portable, baseline x86-64 binary.
-        compatible = [asset for asset in release["assets"] if asset["name"] == "stockfish-windows-x86-64.zip"]
+        compatible = [asset for asset in release["assets"] if asset["name"] == research_text('download.portable_asset')]
     if not compatible:
         raise RuntimeError("This release has no supported Windows x64 asset. Download a compatible official binary manually.")
     asset = compatible[0]
     url = asset["browser_download_url"]
-    if not url.startswith("https://github.com/official-stockfish/Stockfish/releases/download/"):
+    if not url.startswith(research_text('download.allowed_origin')):
         raise RuntimeError("Unexpected download origin")
     expected = asset.get("digest", "")
     if not expected.startswith("sha256:"):
         raise RuntimeError("Release asset has no published SHA-256; verification requires a digest.")
-    destination = ROOT / "tools/stockfish" / release["tag_name"]
+    destination = ROOT / research_text('download.directory') / release["tag_name"]
     destination.mkdir(parents=True, exist_ok=True)
     archive = destination / asset["name"]
     if not archive.exists():
@@ -55,9 +56,9 @@ def main() -> None:
             if not target.is_relative_to(destination.resolve()):
                 raise RuntimeError("Archive contains a path outside its destination")
         zipped.extractall(destination)
-    executables = sorted(destination.rglob("stockfish*.exe"))
+    executables = sorted(destination.rglob(research_text('download.executable_glob')))
     if len(executables) != 1:
-        raise RuntimeError(f"Expected one universal Stockfish executable, found {executables}")
+        raise RuntimeError(f"Expected one universal reference executable, found {executables}")
     executable = executables[0]
     with UciClient(executable) as client:
         name = client.name
@@ -66,7 +67,7 @@ def main() -> None:
     manifest = {"tag": release["tag_name"], "release_url": release["html_url"], "asset_url": url,
                 "archive_sha256": actual, "executable": str(executable.relative_to(ROOT)),
                 "executable_sha256": executable_digest, "uci_name": name}
-    (ROOT / "tools/stockfish/manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    (ROOT / research_text('opponent_manifest')).write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(manifest, indent=2))
 
 

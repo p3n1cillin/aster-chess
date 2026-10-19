@@ -1,4 +1,5 @@
-"""Rescore non-check teacher positions with Stockfish's static evaluation trace."""
+"Rescore non-check teacher positions with reference engine's static evaluation trace."
+from research_reference import research_text
 import argparse
 import hashlib
 import json
@@ -22,7 +23,7 @@ def main() -> None:
     output = pathlib.Path(args.output)
     if output.exists():
         parser.error("Output already exists")
-    manifest = json.loads((ROOT / "tools/stockfish/manifest.json").read_text(encoding="utf-8"))
+    manifest = json.loads((ROOT / research_text('opponent_manifest')).read_text(encoding="utf-8"))
     teacher_path = ROOT / manifest["executable"]
     teacher_hash = hashlib.sha256(teacher_path.read_bytes()).hexdigest()
     if teacher_hash != manifest["executable_sha256"]:
@@ -56,7 +57,7 @@ def main() -> None:
             row["score_white_cp"] = int(round(float(match.group(1)) * 100))
             if abs(row["score_white_cp"]) > 30000:
                 raise ValueError("Static score outside centipawn range")
-            row["label_kind"] = "stockfish_final_static_evaluation"
+            row["label_kind"] = research_text('legacy_static_label')
             destination.write(json.dumps(row, separators=(",", ":")) + "\n")
             count += 1
             if count % 2000 == 0:

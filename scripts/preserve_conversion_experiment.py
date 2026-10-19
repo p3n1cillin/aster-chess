@@ -1,4 +1,5 @@
 """Verify and freeze complete-game conversion, native proofs and session rating status."""
+from research_reference import research_text
 import datetime
 import hashlib
 import json
@@ -34,15 +35,15 @@ def main():
         assert report["passed"] and report["entries"] == 524288
         assert report["dump_sha256"] == digest(ROOT / ("artifacts/validation/major-" + name + "-v1.bin"))
         assert report["script_sha256"] == digest(ROOT / "scripts/verify_major_mates.py")
-    sf_path = "tools/stockfish/manifest.json"; sf = read(sf_path)
+    sf_path = research_text('opponent_manifest'); sf = read(sf_path)
     assert digest(ROOT / sf["executable"]) == sf["executable_sha256"]
     oracle_path = "tools/syzygy-development-v1/manifest.json"; oracle = read(oracle_path)
     oracle_files = [str(pathlib.Path(oracle_path).parent / e["name"]) for e in oracle["files"]]
     for path, entry in zip(oracle_files, oracle["files"], strict=True): assert digest(ROOT / path) == entry["sha256"]
     prefixes = ["artifacts/matches/" + name for name in
-                ("kpk-conversion-vs-control-5000nodes", "kpk-conversion-vs-stockfish19-5000nodes",
-                 "kpk-control-vs-stockfish19-5000nodes", "major-conversion-vs-control-5000nodes",
-                 "major-conversion-vs-stockfish19-5000nodes", "major-conversion-vs-control-v5-100ms")]
+                ("kpk-conversion-vs-control-5000nodes", research_text('archive.kpk_reference_5000'),
+                 research_text('archive.kpk_control_reference_5000'), "major-conversion-vs-control-5000nodes",
+                 research_text('archive.major_reference_5000'), "major-conversion-vs-control-v5-100ms")]
     total_games = 0
     for prefix in prefixes:
         report = read(prefix + ".json"); audit = read(prefix + ".audit.json")
@@ -105,11 +106,11 @@ def main():
     for pattern in ("major*", "proof*", "conversion-default*"):
         paths += [p.relative_to(ROOT).as_posix() for p in (ROOT / "artifacts/validation").glob(pattern) if p.is_file()]
         paths += [p.relative_to(ROOT).as_posix() for p in (ROOT / "artifacts/benchmarks").glob(pattern) if p.is_file()]
-    for name in ("kpk-conversion-vs-control", "kpk-conversion-vs-stockfish19", "kpk-control-conversion-vs-stockfish19"):
+    for name in ("kpk-conversion-vs-control", research_text('archive.kpk_reference_match'), research_text('archive.kpk_control_reference_match')):
         paths.append("artifacts/validation/" + name + ".json")
     result = {"schema": 1, "pipeline": reference(directory.relative_to(ROOT) / "manifest.json"),
               "artifacts": [reference(p) for p in sorted(set(paths))], "complete_games": total_games,
-              "interpretation": "Original exact major-piece mating knowledge fixes targeted conversion failures; native complete strategy proofs independently verified. General timed regression negative/inconclusive: scoring remains opt-in, production preserved, rating unestablished, Stockfish-superiority goal unachieved."}
+              "interpretation": research_text('preserve_conversion_experiment.interpretation')}
     final.write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps({"scripts": len(sources), "artifacts": len(result["artifacts"]), "complete_games": total_games, "rating": "unestablished"}))
 

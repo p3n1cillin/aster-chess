@@ -1,9 +1,6 @@
-// Rust port of Stockfish 19 `movegen.h/.cpp`.
-// Copyright (C) 2004-2026 The Stockfish developers (see AUTHORS file)
-// Licensed under the GNU General Public License v3 or later.
-//
-// Move order must match the C++ generator exactly: move ordering ties are
-// broken by generation order, and the bench signature depends on it.
+// Aster core. Original attribution and source mapping: movegen.rs.license.
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Modified 2026-10-19: source naming and notice layout only.
 
 use crate::bitboard::*;
 use crate::position::Position;

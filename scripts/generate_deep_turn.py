@@ -1,4 +1,5 @@
 """Label every declared hypothetical Black counterpart once, retaining rejections."""
+from research_reference import research_text
 import collections
 import datetime
 import json
@@ -26,7 +27,7 @@ def main():
     assert len(parents) == setup["maximum_parents"]
     paths = {name: ROOT / f"artifacts/data/deep-turn-{name}-v1.{extension}" for name,extension in (("candidates","jsonl"),("pairs","jsonl"),("generation","json"))}
     if any(path.exists() for path in paths.values()): raise ValueError("Preserve partial runs; never restart from metadata")
-    teacher_meta = read(ROOT / "tools/stockfish/manifest.json"); teacher_path = ROOT / teacher_meta["executable"]
+    teacher_meta = read(ROOT / research_text('opponent_manifest')); teacher_path = ROOT / teacher_meta["executable"]
     assert digest(teacher_path) == teacher_meta["executable_sha256"]
     assert digest(ROOT / plan["baseline"]) == plan["baseline_sha256"]
     excluded = set(); exclusions = []

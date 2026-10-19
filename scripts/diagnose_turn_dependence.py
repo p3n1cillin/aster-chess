@@ -1,4 +1,5 @@
 """Measure a position-only network's limitation on paired side-to-move labels."""
+from research_reference import research_text
 import argparse
 import hashlib
 import json
@@ -40,7 +41,7 @@ def main():
     rows = [row for row in rows if row["game"] in validation_games]
     random.Random(args.seed).shuffle(rows)
     model = QuantizedModel(args.model)
-    teacher_manifest = json.loads((ROOT / "tools/stockfish/manifest.json").read_text())
+    teacher_manifest = json.loads((ROOT / research_text('opponent_manifest')).read_text())
     teacher_path = ROOT / teacher_manifest["executable"]
     if digest(teacher_path) != teacher_manifest["executable_sha256"]:
         raise ValueError("Teacher binary differs from its pinned manifest")

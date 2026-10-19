@@ -1,7 +1,6 @@
-// Rust port of Stockfish 19 `nnue/network.*`, `nnue_architecture.h`,
-// `nnue_feature_transformer.h` and the `layers/*` scalar semantics.
-// Copyright (C) 2004-2026 The Stockfish developers (see AUTHORS file)
-// Licensed under the GNU General Public License v3 or later.
+// Aster core. Original attribution and source mapping: network.rs.license.
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Modified 2026-10-19: source naming and notice layout only.
 
 use super::accumulator::{AccumulatorCaches, AccumulatorStack};
 use super::aligned::AlignedBuf;

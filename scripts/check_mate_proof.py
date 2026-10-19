@@ -1,4 +1,5 @@
 """Verify the general-proof candidate while checking unchanged playing behavior."""
+from research_reference import research_text
 import json
 import subprocess
 import sys
@@ -46,7 +47,7 @@ def main():
         "--suite", str(ROOT / "tests/fixtures/mate-proof-parent-v1.json"), "--depth", "8", "--output", str(output)])
     comparison = read(output)
     assert all(r["same_move"] and r["same_score"] and r["candidate"]["nodes"] == r["opponent"]["nodes"] for r in comparison["positions"])
-    sf = read(ROOT / "tools/stockfish/manifest.json"); assert digest(ROOT / sf["executable"]) == sf["executable_sha256"]
+    sf = read(ROOT / research_text('opponent_manifest')); assert digest(ROOT / sf["executable"]) == sf["executable_sha256"]
     with UciClient(ROOT / sf["executable"]) as client:
         client.send("explain mate 3"); client.send("isready"); transcript = client.until("readyok")
         assert not any(line.startswith("info string explanation ") for line in transcript)
@@ -54,9 +55,9 @@ def main():
         "candidate_sha256": digest(engine), "candidate_source": source.relative_to(ROOT).as_posix(), "candidate_source_sha256": digest(source),
         "plan_sha256": digest(plan_path), "general_verification_sha256": digest(ROOT / "artifacts/validation/mate-proof-general-v2.json"),
         "unchanged_playing_files": playing_files, "behavior": comparison["summary"], "tactics": tactics,
-        "native_stockfish_reference": {"manifest": sf, "responses": transcript},
+        research_text('legacy_native_reference_key'): {"manifest": sf, "responses": transcript},
         "candidate_revision": "Additional invalid-root triple-check rejection, expanded terminal clock/legacy tests, before matches. Original binary/source/diagnostics retained. No valid-position proof algorithm, playing code or declared gate changes.",
-        "interpretation": "New native general certificate interface passes independent strategy/protocol checks. Pinned Stockfish does not natively return this explanation command; external tools can add such functionality. Exact normal playing outputs retained, not a strength improvement claim."})
+        "interpretation": research_text('check_mate_proof.interpretation')})
     print(json.dumps({"passed": True, "behavior": comparison["summary"], "tactics": tactics}))
 
 

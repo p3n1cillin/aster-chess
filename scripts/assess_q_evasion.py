@@ -1,4 +1,5 @@
 """Apply the declared evasion optimization gates without changing thresholds."""
+from research_reference import research_text
 import json
 
 from analyze_rating import bootstrap, paired_groups
@@ -63,7 +64,7 @@ def assess():
             "legal_existence_calls_after": after, "avoided_legal_existence_calls": before - after,
             "candidate_sha256": plan["candidate_sha256"], "baseline_sha256": plan["baseline_sha256"], "evidence": evidence,
             "plan_sha256": digest(plan_path), "assessor_sha256": digest(__file__),
-            "interpretation": "Engineering optimization qualification under declared independent correctness, same-work, speed and equal-time regression gates. Not proof of Elo gain or full-strength Stockfish superiority."}
+            "interpretation": research_text('assess_q_evasion.interpretation')}
 
 
 if __name__ == "__main__":

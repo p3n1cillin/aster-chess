@@ -1,4 +1,5 @@
 """Declare fresh deep-turn pair supervision before counterfactual labels or training."""
+from research_reference import research_text
 import json
 
 from run_rating import digest, write_new
@@ -40,7 +41,7 @@ def main():
             "openings":{"positions":160,"attempts":2048,"seed":20261121,"plies":20,"nodes":2048,"verify_nodes":20000,"max_cp":80,
                 "partition":"first64 classical30ms,next64 matched control30ms,last32 conditional classical100ms; exclude old/current/fresh paired training and all prior parents; freeze before candidate queries."}},
         "maximum_match_games":320,"rating":"No new calibration; last exact0.7.6-q-evasion estimate2319,local95%2277..2360 retained. Models do not inherit it.",
-        "limits":"Same finite-label selection and endgame-biased parent source; counterfactual states are not played outcomes or retrograde reachability proofs. Labels are not oracles. Neither distillation nor this ablation establishes Stockfish superiority."}
+        "limits":research_text('declare_deep_turn.interpretation')}
     path = ROOT / "artifacts/research/deep-turn-plan-v1.json"; write_new(path,plan)
     print(json.dumps({"declared":True,"plan_sha256":digest(path),"maximum_counter_queries":4096,"maximum_match_games":320}))
 

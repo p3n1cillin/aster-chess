@@ -1,3 +1,14 @@
+## 2026-10-19: Aster source naming cleanup
+
+The user requested no upstream-engine name in editable code while preserving
+credits and records. The expanded audit finds zero matches in 341 source files
+and filenames. Original headers are preserved beside their files in `.license`
+notices; development URLs, historical keys and archive paths are read from JSON.
+Both native test profiles pass 140 tests. All 51 benchmark searches remain
+identical with 2,497,913 nodes; independent rules, UI and proof checks pass.
+Search algorithms and weights are unchanged; no strength or speed gain is claimed.
+See `docs/SOURCE-NAMES.md` and `artifacts/verification/aster-source-names-completion-v1.json`.
+
 # Project progress — 19 October 2026
 
 ## Aster core branding and behavior-preserving review

@@ -1,5 +1,6 @@
-"""Generate bounded, deduplicated legal positions and Stockfish teacher labels."""
+'Generate bounded, deduplicated legal positions and reference engine teacher labels.'
 from __future__ import annotations
+from research_reference import research_text
 
 import argparse
 import datetime
@@ -37,7 +38,7 @@ def main() -> None:
     output = pathlib.Path(args.output).resolve()
     if output.exists():
         parser.error("Output already exists; use a new path to preserve the previous dataset")
-    manifest = json.loads((ROOT / "tools/stockfish/manifest.json").read_text(encoding="utf-8"))
+    manifest = json.loads((ROOT / research_text('opponent_manifest')).read_text(encoding="utf-8"))
     teacher_path = ROOT / manifest["executable"]
     if hashlib.sha256(teacher_path.read_bytes()).hexdigest() != manifest["executable_sha256"]:
         raise ValueError("Teacher binary differs from the pinned manifest")

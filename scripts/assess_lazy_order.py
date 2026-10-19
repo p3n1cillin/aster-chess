@@ -1,4 +1,5 @@
 """Apply the retained original and amended pre-match optimization gates."""
+from research_reference import research_text
 import json
 
 from analyze_rating import bootstrap, paired_groups
@@ -67,7 +68,7 @@ def assess():
             "candidate_sha256": plan["candidate_sha256"], "baseline_sha256": plan["baseline_sha256"], "evidence": evidence,
             "plan_sha256": digest(ROOT / "artifacts/research/lazy-order-plan-v1.json"),
             "amendment_sha256": digest(ROOT / "artifacts/research/lazy-order-plan-amendment-v1.json"), "assessor_sha256": digest(__file__),
-            "interpretation": "Engineering optimization decision using explicitly amended baseline fact before matches/timing. Not proof of Elo gain or full-strength Stockfish superiority. All results and failures retained; no adaptive retuning."}
+            "interpretation": research_text('assess_lazy_order.interpretation')}
 
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 """Run reproducible, color-swapped UCI engine matches and save PGN plus a JSON report."""
 from __future__ import annotations
+from research_reference import research_text
 
 import argparse
 import datetime
@@ -101,7 +102,7 @@ def validate_openings(entries: list[dict]) -> list[dict]:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--engine", default=str(DEFAULT_ENGINE))
-    parser.add_argument("--opponent", help="Opponent executable or .dll; defaults to the fetched Stockfish")
+    parser.add_argument("--opponent", help=research_text('match.opponent_help'))
     parser.add_argument("--source-manifest", help="Frozen candidate source/build manifest matching its binary")
     parser.add_argument("--opponent-source-manifest", help="Frozen opponent source/build manifest matching its binary")
     parser.add_argument("--pairs", type=int, default=4)
@@ -129,15 +130,15 @@ def main() -> None:
             parser.error("Requested more pairs than distinct suite entries")
         opening_manifest = {"path": str(opening_path), "sha256": hashlib.sha256(opening_path.read_bytes()).hexdigest(),
                             "metadata": {key: value for key, value in opening_manifest.items() if key != "openings"}}
-    stockfish_manifest = None
+    opponent_manifest = None
     if args.opponent:
         opponent_path = pathlib.Path(args.opponent).resolve()
     else:
-        manifest_path = ROOT / "tools/stockfish/manifest.json"
+        manifest_path = ROOT / research_text('opponent_manifest')
         if not manifest_path.exists():
-            parser.error("Run scripts/fetch_stockfish.py first, or provide --opponent")
-        stockfish_manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        opponent_path = ROOT / stockfish_manifest["executable"]
+            parser.error(research_text('match.fetch_help'))
+        opponent_manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        opponent_path = ROOT / opponent_manifest["executable"]
     candidate_path = pathlib.Path(args.engine).resolve()
     for model_path in (args.eval_file, args.opponent_eval_file):
         if model_path and not pathlib.Path(model_path).is_file():
@@ -155,7 +156,7 @@ def main() -> None:
         "candidate_binary_sha256": hashlib.file_digest(candidate_path.open("rb"), "sha256").hexdigest(),
         "opponent_binary_sha256": hashlib.file_digest(opponent_path.open("rb"), "sha256").hexdigest(),
         "candidate_source_sha256": source_fingerprint() if candidate_path == DEFAULT_ENGINE else None,
-        "stockfish_release": stockfish_manifest, "platform": platform.platform(),
+        research_text('legacy_release_key'): opponent_manifest, "platform": platform.platform(),
         "hardware": {"processor": platform.processor(), "logical_processors": os.cpu_count()},
         "python_version": platform.python_version(),
         "history_policy": "Full moves retained from starting_fen. Repetition before an explicit FEN setup is unknown and not reconstructed.",

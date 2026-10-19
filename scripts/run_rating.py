@@ -1,4 +1,5 @@
 """Execute the frozen two-stage, bounded local rating calibration."""
+from research_reference import research_text
 import datetime
 import hashlib
 import json
@@ -31,7 +32,7 @@ def main():
     if execution_path.exists() or selection_path.exists(): raise ValueError("Do not restart/overwrite an existing calibration; inspect its actual process and retained evidence")
     candidate = ROOT / plan["engine"]; assert digest(candidate) == plan["engine_sha256"]
     frozen_source_manifest(str(ROOT / plan["source_manifest"]), plan["engine_sha256"])
-    teacher = read(ROOT / "tools/stockfish/manifest.json")
+    teacher = read(ROOT / research_text('opponent_manifest'))
     assert digest(ROOT / teacher["executable"]) == plan["opponent_sha256"] == teacher["executable_sha256"]
     screen_path = ROOT / "tests/fixtures/rating-screen-v1.json"; confirm_path = ROOT / "tests/fixtures/rating-confirm-v1.json"
     screen, confirm = read(screen_path), read(confirm_path)

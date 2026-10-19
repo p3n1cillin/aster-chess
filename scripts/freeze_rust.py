@@ -1,4 +1,5 @@
 """Freeze exact Rust sources, toolchain, model pin and standalone binary before matches."""
+from research_reference import research_text
 import argparse
 import hashlib
 import json
@@ -18,7 +19,7 @@ def main():
     paths=[ROOT/name for name in ['Cargo.toml','Cargo.lock','rust-toolchain.toml','.cargo/config.toml','requirements-dev.txt','LICENSE','THIRD_PARTY_NOTICES.md']]
     paths+=sorted(p for p in (ROOT/'crates/engine').rglob('*') if p.is_file() and p.name!='viridithas.nnue.zst')
     paths+=sorted(p for p in (ROOT/'crates/aster-core').rglob('*') if p.is_file() and p.suffix!='.nnue')
-    paths+=[ROOT/'scripts'/name for name in ['freeze_rust.py','fetch_rust_network.py','fetch_aster_network.py','verify_aster_branding.py','tactics.py','verify.py','verify_rust.py','verify_rust_equivalence.py','smoke_rust_play.py','verify_mate_proof.py','verify_rust_proofs.py','match.py','match_recovery.py','uci_client.py','build.ps1','play.ps1','rust-paths.ps1','benchmark_rust_legal_probe.py']]
+    paths+=[ROOT/'scripts'/name for name in ['freeze_rust.py','fetch_rust_network.py','fetch_aster_network.py','fetch_reference.py','research_reference.py','research-reference.json','verify_source_names.py','verify_aster_branding.py','tactics.py','verify.py','verify_rust.py','verify_rust_equivalence.py','smoke_rust_play.py','verify_mate_proof.py','verify_rust_proofs.py','match.py','match_recovery.py','uci_client.py','build.ps1','play.ps1','rust-paths.ps1','benchmark_rust_legal_probe.py']]
     entries=[]
     for path in sorted(paths):
         relative=path.relative_to(ROOT);target=directory/relative;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(path,target)
@@ -34,7 +35,7 @@ def main():
         'legacy_network':json.loads((ROOT/'crates/engine/NETWORK.json').read_text(encoding='utf-8')),
         'legacy_upstream':{'repository':'https://github.com/cosmobobak/viridithas','tag':'v20.0.0','commit':'0631113e2215714c54d397cce9a8caebc5e6f8ee','license':'MIT at pinned release'},
         'runtime':'Standalone Rust engine and Rust HTTP host; no external engine, python-chess, C/C++ build, C tablebase or .NET runtime',
-        'source_files':entries,'note':'Compressed weights are reproducibly fetched from the immutable URL and SHA-256-checked by build.rs. The standalone binary embeds them. Fingerprints below preserve source, Cargo dependency lock, model/license pin and build scripts. No Elo or Stockfish superiority inferred.'}
+        'source_files':entries,'note':research_text('freeze_rust.interpretation')}
     (directory/'manifest.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({'binary_sha256':report['binary_sha256'],'source_files':len(entries)}))
 

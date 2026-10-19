@@ -1,0 +1,259 @@
+{
+  "passed": true,
+  "baseline": "8859af7",
+  "scripts": [
+    {
+      "path": "scripts/analyze_iir_rating.py",
+      "sha256": "482c9273b6e8994d8336a82030ef328b7f823fd70a0518dc67c34a8835a12e99"
+    },
+    {
+      "path": "scripts/analyze_q_evasion_rating.py",
+      "sha256": "a04860a946758347c2ec07dae8c9a62670df108b32b6ed4af33e591094f896aa"
+    },
+    {
+      "path": "scripts/analyze_rating.py",
+      "sha256": "017c329597099277e91a5b5413172fe034bec8dc3a89a47afcf0bd960e443d44"
+    },
+    {
+      "path": "scripts/analyze_rust_foundation.py",
+      "sha256": "02fa91e8d9f6c65fa77c130878f358e8bfeb8fb339db27dffee27f13084dc926"
+    },
+    {
+      "path": "scripts/assess_capacity.py",
+      "sha256": "cce1eb772d02a7abc8056c66803819caad47d969ec49889891fd08b5d13091f5"
+    },
+    {
+      "path": "scripts/assess_deep_turn.py",
+      "sha256": "dabb1dbbcc4cf865fbd76c60de5445b3411c7552a561b0591acbd13c07b9be68"
+    },
+    {
+      "path": "scripts/assess_iir.py",
+      "sha256": "45dae470618a64b6869693bca18e5a4f0ff7a8a57e698a72564f803c5ec3327e"
+    },
+    {
+      "path": "scripts/assess_lazy_order.py",
+      "sha256": "7793395c8b3be1217206975d7319d7cff8948d709964f72c088462305c123242"
+    },
+    {
+      "path": "scripts/assess_phase.py",
+      "sha256": "9b8de2e95a6951197c518affdb6a3ae2787cc4e1a40546c1e4b6178e76090378"
+    },
+    {
+      "path": "scripts/assess_q_evasion.py",
+      "sha256": "6d1aa648609a8cbe293c8e134db5155fd02d8a7cec677d33acfbd4f132a3f158"
+    },
+    {
+      "path": "scripts/assess_relations.py",
+      "sha256": "15389cc8c35df360d48cca68beba3cee1af432aa7e02d32f21bdd6624385aac0"
+    },
+    {
+      "path": "scripts/assess_stable_endgames.py",
+      "sha256": "476a68e3d70fa64cb6fbd00a03193181c251e663763bb299c37a46abb9eb3f85"
+    },
+    {
+      "path": "scripts/audit_static_labels.py",
+      "sha256": "65262c4efd83f34dcf2264886f8da5a35811bf37f14ecd7df2412bca37e5e803"
+    },
+    {
+      "path": "scripts/audit_training_data.py",
+      "sha256": "d83ea80770152e17453679d0486ca6a20534401189432023ce070932cf7277fe"
+    },
+    {
+      "path": "scripts/augment_turn_data.py",
+      "sha256": "8a05da46deba13232d75ee73559817e0b02152a0a89e575f0181e1ea4aab86d5"
+    },
+    {
+      "path": "scripts/check_mate_proof.py",
+      "sha256": "ebd277dce9b722686c0d250c699451a89a54003506ce7f11dab122692db33c25"
+    },
+    {
+      "path": "scripts/declare_capacity.py",
+      "sha256": "6ff96fe875801c5962d1215216cacca8650ffed682e921ae9e4d832bf245e469"
+    },
+    {
+      "path": "scripts/declare_deep_turn.py",
+      "sha256": "7d9b977aa18fb0d3d5450669afce99f009199f19249c67ce2c44fe57c47494e3"
+    },
+    {
+      "path": "scripts/declare_iir.py",
+      "sha256": "4a63ab5adda01b6866cb5b5f51e7d3a2a1b81842fa9cbe1f665b3df077c68646"
+    },
+    {
+      "path": "scripts/declare_mate_proof.py",
+      "sha256": "7dde23f341fb30c895747aa9c39fd7927b1b144d10182255443d6c9e8e2585eb"
+    },
+    {
+      "path": "scripts/declare_phase.py",
+      "sha256": "3330665728d22eb92e0e44af756fa1faafd6aa00cbc89ae0f8f0c413a3301579"
+    },
+    {
+      "path": "scripts/declare_relations.py",
+      "sha256": "59dadcc2eae7e477cd50066f80d7f291ac43793474774d3e682b8bb039e3f7f1"
+    },
+    {
+      "path": "scripts/declare_stable_endgames.py",
+      "sha256": "0db4b3760b272ea063164d238be198f42a904f6f7914bebc57a56bb1e0968cdb"
+    },
+    {
+      "path": "scripts/diagnose_turn_dependence.py",
+      "sha256": "83a5bd6ef4eadc08401ed1ce80b557e85d863c835658631c6dc3ae4e80dbf0cd"
+    },
+    {
+      "path": "scripts/fetch_aster_network.py",
+      "sha256": "908ce6adcedbd9dced39f37adbae341c3440ce6d0da9f195050863672833b2de"
+    },
+    {
+      "path": "scripts/fetch_reference.py",
+      "sha256": "35c00f344c52dd36b0fa7784f9c8b8a87cb12c8fdefbd4a2f44214fe83c622d6"
+    },
+    {
+      "path": "scripts/freeze_rust.py",
+      "sha256": "befbd811cd0c7b290a7d3bbe1b25ed1a450c5ea5d694097f4a25b6c304731fad"
+    },
+    {
+      "path": "scripts/generate_data.py",
+      "sha256": "db9973ae2dcb16759f072818905f57a80836add49f434b45964b7dec4afe991e"
+    },
+    {
+      "path": "scripts/generate_deep_turn.py",
+      "sha256": "7ce3667880bf2ae061b20100d75f6a4f389fc5582ac2eb39e307d2c71041f8a9"
+    },
+    {
+      "path": "scripts/generate_endgame_diagnostic.py",
+      "sha256": "b57bc5a6d3ad9c4983a01a09221ed66ecb3e80b0b7be277d62d7341c64e7e007"
+    },
+    {
+      "path": "scripts/generate_openings.py",
+      "sha256": "67426a622fa8ae3d70088633833cd993b074c04547e5938012cb782788c23bed"
+    },
+    {
+      "path": "scripts/generate_stable_endgames.py",
+      "sha256": "e687b04fa3bfa36512835cac3d1fd696f04bcc90ebf88b865e84c5e1cc1df9b8"
+    },
+    {
+      "path": "scripts/generate_tactics.py",
+      "sha256": "85b7be5a7adaf81311dc9cb44e2b09fbe9e27b7d18b70af9e0a5dab00e06df62"
+    },
+    {
+      "path": "scripts/match.py",
+      "sha256": "d0bd6a1f0427b17bbb1887df3dbdb17370e7f4e424d25adda3c704b60b6946b5"
+    },
+    {
+      "path": "scripts/prepare_rust_foundation.py",
+      "sha256": "1ab148d74c3e2b98b780c5cfc0d1004e8f9b85d78176c452e795019e7823fcbe"
+    },
+    {
+      "path": "scripts/preserve_capacity.py",
+      "sha256": "fabb28f85d382dab899c69edf23979bc5286c19fa43917fe29d34524dec0f559"
+    },
+    {
+      "path": "scripts/preserve_conversion_experiment.py",
+      "sha256": "18b695d6a22feb5c1cfc6a6e9e1047357e89d78da864aac0809ddae502694d18"
+    },
+    {
+      "path": "scripts/preserve_deep_turn.py",
+      "sha256": "8fcffeafacd2c71fbd1056bd76d8c6e68f29fffb92aeb0ef23c2efbfefcdc4c8"
+    },
+    {
+      "path": "scripts/preserve_endgame_diagnostic.py",
+      "sha256": "b11f5e0ae9a7abe725a0f988ed45667462d717fe40082f89db7efb6c14a79df7"
+    },
+    {
+      "path": "scripts/preserve_iir.py",
+      "sha256": "10d3d65a98e877ba34fb0f277cc18bc36d728d1cb7186dd772128b405385e89f"
+    },
+    {
+      "path": "scripts/preserve_kpk_experiment.py",
+      "sha256": "2ab1691c7cd550708388d85fc9d4ec7cb06a35c4bd9683d8b0988934cb6d0061"
+    },
+    {
+      "path": "scripts/preserve_lazy_order.py",
+      "sha256": "7a195344f0bb9d6bb62362da9a87819d479237ed3efd0a989d468960cd4a699c"
+    },
+    {
+      "path": "scripts/preserve_mate_proof.py",
+      "sha256": "aa22ca805c1cd66961dd7ea0fc793ab4020cc9b261eb12cfd8e092c5fec39cbb"
+    },
+    {
+      "path": "scripts/preserve_phase.py",
+      "sha256": "a867dbfb4ebf4fbc313e57923ccca90a958cb85429b7226996b058df302473b1"
+    },
+    {
+      "path": "scripts/preserve_q_evasion.py",
+      "sha256": "91da9903b2197d2c857daee12e95d1c2d74345066c286157be34221b158e4d8e"
+    },
+    {
+      "path": "scripts/preserve_rating_experiment.py",
+      "sha256": "ac3dcceb166ebcb2c654309149042c9049276cfa7264b0cdd9d143490efd8ef2"
+    },
+    {
+      "path": "scripts/preserve_relations.py",
+      "sha256": "4e047dd01d28ed00f382473be3dc19c50b316da8bd5da28db00bf2c89a5080ea"
+    },
+    {
+      "path": "scripts/preserve_stable_endgames.py",
+      "sha256": "8164899b18cdf7492a505d8012fc8c770b7bbe00cb426dc29949e88082afca50"
+    },
+    {
+      "path": "scripts/preserve_threat_experiment.py",
+      "sha256": "8e11ecb7789abf6d6e458a52b5c5f20974ba8bbd4938fe98ca74ea7d13b7409a"
+    },
+    {
+      "path": "scripts/preserve_turn_experiment.py",
+      "sha256": "258a39952a90153fcfadbe625f7c872f0ced89e31d36693e36e2ba801bf58d4e"
+    },
+    {
+      "path": "scripts/record_capacity_session.py",
+      "sha256": "c4e04c0aabbee243c09b809bc507e3ce1581a1dae4173edf9760bff7f8a14b6d"
+    },
+    {
+      "path": "scripts/record_deep_turn_session.py",
+      "sha256": "2aad3caece96225915e7199d9f276ceef9bc1ed25bafa58a0e42b0efdf1c70e9"
+    },
+    {
+      "path": "scripts/record_relations_session.py",
+      "sha256": "8782ee9457ac8049dcf0206999bef828898b3a74ecc497c5cb41d85641de77a7"
+    },
+    {
+      "path": "scripts/record_stable_session.py",
+      "sha256": "916a0e03ac5806d38dd257e7f5900dde80185fedd975d1f610d8621087d15d9c"
+    },
+    {
+      "path": "scripts/run_rating.py",
+      "sha256": "cbd822a5bc32ebccc7160730c50b84a49fd981434b9190f17a3c4d0b21e6dc8c"
+    },
+    {
+      "path": "scripts/score_static.py",
+      "sha256": "1afb58a859942de1fca50674576b10e6e30231371cc14f3c158e6433058138f5"
+    },
+    {
+      "path": "scripts/train_network.py",
+      "sha256": "9ebd67d4fa06917ddf26f1d875ff12fcac5d9c494933f52df785f8eeeccc7f06"
+    },
+    {
+      "path": "scripts/verify_aster_branding.py",
+      "sha256": "96a4a1adb32e47f4c3ba785141db450ecd44c9575739d5ce7030ef471dca9eb1"
+    },
+    {
+      "path": "scripts/verify_general_proofs.py",
+      "sha256": "2083f8809b915a0e5f9f5b452166f32be679f5bc22f40756c1708a2412676316"
+    },
+    {
+      "path": "scripts/verify_proof_protocol.py",
+      "sha256": "1bdb0a67574b188f3c8bcbb11c3ba0f25635799a1415dc755111d058583dfcf7"
+    },
+    {
+      "path": "scripts/verify_rust.py",
+      "sha256": "e20b9091d3d929cf6ce80d63303a3e485c5a50efc88cb48e6b45c388fce435b6"
+    },
+    {
+      "path": "scripts/watch_match.py",
+      "sha256": "a707f0c777218e617148be6ba4cb300af4a56454348883db6d3b4547497dc787"
+    }
+  ],
+  "metadata_sha256": "46b170ecd44387eeac88088774ee89d5042d9c83865b585551cf0f3e8a66df0a",
+  "helper_sha256": "097f28c791d0248e2ae3674cab06e866213e99bb1963b0ac224b648f78e5ecbe",
+  "source_freeze_includes_metadata_and_all_notices": true,
+  "frozen_files": 179,
+  "ast_normalization": "Resolve research_text calls to exact metadata values; ignore docstrings/import of metadata helper; normalize renamed local variable. Only deliberate changes are the generic discovery error, fetch command help, and source-freeze inputs."
+}

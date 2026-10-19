@@ -1,4 +1,5 @@
 """Apply only the phase ablation's predeclared tactical and paired-game gates."""
+from research_reference import research_text
 import json
 
 from analyze_rating import bootstrap, paired_groups
@@ -40,7 +41,7 @@ def assess():
     return {"schema": 1, "plan_sha256": digest(plan_path), "assessor_sha256": digest(__file__),
         "results": results, "gates": gates, "failed_gates": [k for k, passed in gates.items() if not passed],
         "eligible_for_long_confirmation": eligible, "eligible_for_promotion": eligible and gates.get("classical_long", False),
-        "interpretation": "Predeclared architecture screen only. No Elo inferred and no Stockfish superiority. Failed tactics or confidence gates keep the neural model experimental; classical default retained."}
+        "interpretation": research_text('assess_phase.interpretation')}
 
 
 if __name__ == "__main__": print(json.dumps(assess()))

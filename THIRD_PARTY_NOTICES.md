@@ -26,6 +26,11 @@ Since Aster 1.0.0 the default playing core is `crates/aster-core`, a Rust port o
 Stockfish 19 (tag `sf_19`) by the Stockfish developers, derived from Glaurung and
 licensed GPL-3.0-or-later. Its `AUTHORS`, `Copying.txt` and `UPSTREAM.json` (release,
 reference binary, network and per-file source fingerprints) are kept in that crate.
+The original per-file Rust headers are preserved verbatim in adjacent `.license`
+notices, referenced from each affected source file. Keep those notices with the
+source. Test-count provenance and the legacy optimization citation are preserved
+the same way. See `docs/SOURCE-NAMES.md` for the source-naming audit and its scope.
+
 The embedded `nn-1a298aa575a0.nnue` network is the official Stockfish 19 network,
 pinned by SHA-256 in `scripts/fetch_aster_network.py` and checked by `build.rs`.
 The previous Viridithas-derived core remains available as `aster legacy`.
