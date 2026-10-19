@@ -44,6 +44,12 @@ jobs:
       - run: python scripts/tactics.py tests/fixtures/tactics-v1.json --engine-arg legacy --depth 8 --require-solved 32 --output artifacts/tactics/legacy-ci.json
       - run: python scripts/tactics.py tests/fixtures/tactics-v1.json --depth 8 --reference-report artifacts/tactics/aster-dev-effdc3-baseline-v1.json --output artifacts/tactics/core-ci.json
       - run: cargo run --release --locked -- bench 7
+      - name: Verify default and upstream-reference core signatures
+        run: |
+          cargo build --release --locked -p aster-core
+          python scripts/check_bench.py --binary target/release/aster-core --key aster
+          cargo build --release --locked -p aster-core --features upstream-reference --target-dir target/reference
+          python scripts/check_bench.py --binary target/reference/release/aster-core --key upstream_reference
       - run: python scripts/verify_aster_branding.py --output artifacts/verification/aster-branding-ci.json
       - name: Verify forced AVX2 core signature
         env:

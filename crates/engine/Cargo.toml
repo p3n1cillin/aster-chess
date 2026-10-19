@@ -18,6 +18,7 @@ rust-version = "1.93.0"
 pgo-driver = []
 evaluation-risk = ["aster-core/evaluation-risk"]
 disagreement-guard = ["aster-core/disagreement-guard"]
+upstream-reference = ["aster-core/upstream-reference"]
 
 tuning = []
 stats = ["dep:linkme", "dep:histogram"]

@@ -18,6 +18,10 @@ name = "aster-core"
 path = "src/main.rs"
 
 [features]
+# Exact port of the pinned upstream commit (bench 1,559,611): the fixed baseline
+# for strength tests. Aster changes that alter search or evaluation must be
+# compiled out under this feature (`#[cfg(not(feature = "upstream-reference"))]`).
+upstream-reference = []
 evaluation-risk = []
 # Bounded Aster search experiment; excluded from production builds.
 disagreement-guard = []

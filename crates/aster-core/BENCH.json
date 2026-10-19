@@ -1,0 +1,5 @@
+{
+  "comment": "Canonical `bench` node signatures. `upstream_reference` is the exact port of the pinned upstream development commit (cargo feature `upstream-reference`), the fixed baseline of every strength test. `aster` is the default engine, which may diverge only through changes that pass the statistical gates in docs/ASTER-DEVELOPMENT.md.",
+  "upstream_reference": 1559611,
+  "aster": 1559611
+}

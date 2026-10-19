@@ -18,6 +18,12 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def expected_signature():
+    """Default engine signature, or the exact upstream port's under ASTER_REFERENCE=1."""
+    data = json.loads((ROOT / 'crates/aster-core/BENCH.json').read_text(encoding='utf-8'))
+    return data['upstream_reference' if os.environ.get('ASTER_REFERENCE') == '1' else 'aster']
+
+
 def bench(binary, output, label):
     started = time.perf_counter()
     result = subprocess.run([str(binary), 'core', 'bench'], capture_output=True,
@@ -27,7 +33,7 @@ def bench(binary, output, label):
     output.with_name(output.stem + '-' + label + '.stdout.txt').write_bytes(result.stdout.encode())
     output.with_name(output.stem + '-' + label + '.stderr.txt').write_bytes(result.stderr.encode())
     signature = re.search(r'Nodes searched\s*:\s*(\d+)', result.stderr)
-    assert signature and int(signature[1]) == 1559611, result.stderr[-1000:]
+    assert signature and int(signature[1]) == expected_signature(), result.stderr[-1000:]
     lines = [re.sub(r'\b(time|nps) \d+', r'\1 <timing>', line)
              for line in result.stdout.splitlines()
              if line.startswith(('info depth ', 'bestmove '))]

@@ -1,0 +1,9 @@
+{
+  "name": "smoke",
+  "description": "Pipeline smoke test: default engine vs upstream-reference build of the same commit.",
+  "base": {"ref": "HEAD", "features": ["upstream-reference"], "bench": 1559611},
+  "candidate": {"ref": "HEAD", "features": []},
+  "nodes": 5000,
+  "hash": 16,
+  "threads": 1
+}

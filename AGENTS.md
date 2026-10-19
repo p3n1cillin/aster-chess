@@ -18,6 +18,15 @@ use the port to make Aster stronger than Stockfish; that remains unproven until
 predeclared paired matches show it. A faster port is a speed result, not a
 strength claim.
 
+On 2026-10-19 the user approved a dual track. The exact port stays available as
+the `upstream-reference` cargo feature (bench 1,559,611) and is the fixed
+baseline of every strength test. The default engine may diverge from it, but
+only through changes that pass the statistical gates in
+`docs/ASTER-DEVELOPMENT.md`; every such change is compiled out under
+`upstream-reference`, and the default signature is recorded in
+`crates/aster-core/BENCH.json`. The user also approved up to 8 Claude cloud
+sessions as distributed test workers (`scripts/testnet_worker.py`).
+
 ## Build and verification
 
 Active development is Rust only, as requested by the user on 2026-10-18.
@@ -29,7 +38,11 @@ opponent/research reference, never an external runtime engine behind Aster.
 - `python scripts/verify_source_names.py`
 - `python scripts/fetch_rust_network.py`
 - `python scripts/fetch_aster_network.py`
-- `cargo run --release --locked -p aster-core -- bench` must print 1,559,611 nodes
+- `python scripts/check_bench.py --binary target/release/aster-core --key aster` (default
+  engine signature recorded in `crates/aster-core/BENCH.json`)
+- `cargo build --release --locked -p aster-core --features upstream-reference --target-dir target/reference`
+  then `python scripts/check_bench.py --binary target/reference/release/aster-core --key upstream_reference`
+  must print 1,559,611 nodes
 - `cargo build --workspace --release --locked`
 - `cargo test --workspace --release --locked`
 - `cargo test --workspace --locked`
