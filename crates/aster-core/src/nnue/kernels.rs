@@ -1095,13 +1095,21 @@ mod avx2 {
                 acc[k] = _mm256_loadu_si256(out.as_ptr().add(k * 8) as *const _);
             }
             let wp = w.as_ptr();
+            // Non-zero chunk bitset first (as upstream), so the loop below
+            // runs over 64-chunk words: per-group inner loops of variable
+            // length mispredict at almost every group exit.
+            let mut words = [0u64; FC0_CHUNKS / 64];
             for b in 0..FC0_CHUNKS / 8 {
                 let v = _mm256_loadu_si256(inp.add(b * 8) as *const _);
                 let nz = _mm256_cmpeq_epi32(v, _mm256_setzero_si256());
-                let mut m = (!_mm256_movemask_ps(_mm256_castsi256_ps(nz)) as u32) & 0xff;
-                while m != 0 {
-                    let c = b * 8 + m.trailing_zeros() as usize;
-                    m &= m - 1;
+                let m = (!_mm256_movemask_ps(_mm256_castsi256_ps(nz)) as u32) & 0xff;
+                words[b / 8] |= (m as u64) << ((b % 8) * 8);
+            }
+            for (wi, &word) in words.iter().enumerate() {
+                let mut bits = word;
+                while bits != 0 {
+                    let c = wi * 64 + bits.trailing_zeros() as usize;
+                    bits &= bits - 1;
                     let x = _mm256_set1_epi32(*inp.add(c));
                     let wc = wp.add(c * 128);
                     for k in 0..4 {
