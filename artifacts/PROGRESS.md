@@ -21,11 +21,17 @@ independent/host/tactical checks pass on both Windows and Linux in CI runs
 
 The separate frozen v111 Hyperion candidate misses its original tactical gate
 (31/32 versus required 32/32), so it will not be promoted. Its predeclared
-384-game sample continues with unchanged binaries and openings. A legacy report
+384-game sample uses unchanged binaries and openings. The completed 30 ms
+sample scores 42W/179D/35L (51.37%, 95% family interval 48.16%..54.60%); its
+256 outcomes pass independent rules and full journal/PGN/JSON audits. The fixed
+128-game 100 ms sample continues. The short interval includes 50%, so no
+playing-strength gain is established. A legacy report
 write failed after game 83; the original 82-game JSON and 83-game PGN are frozen,
 and recovery resumes at game 84. One game's telemetry and wall time are explicitly
 unavailable; its complete moves and outcome are retained. The addendum and exact
-runner overlay preserve this boundary. Full match outcomes follow completion.
+runner overlay preserve this boundary. The full sample decision follows completion. Production recovery CI
+[39181015346](ci/rust-match-recovery-39181015346.json) passes both Windows and
+Linux, including all five recovery tests, native suites and 32/32 original tactics.
 No current Rust rating or Stockfish superiority is established.
 
 ## Prior progress — 18 October 2026
