@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-19",
+  "active_engine": "Aster Rust development core; evaluation-risk policy excluded from normal builds",
+  "active_binary_sha256": "6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2",
+  "active_local_rating": null,
+  "public_elo": null,
+  "source_manifest": "artifacts/research/aster-evaluation-risk-default-source-v1/manifest.json",
+  "candidate_binary_sha256": "819e714956c5dbc2a26209daa23e4d55c0f537c644b29c40fc13a337d9984057",
+  "candidate_local_rating": null,
+  "status": "Completed 256-game experiment fails both predeclared strength gates; no policy promotion or rating transfer.",
+  "decision_report": "artifacts/verification/aster-evaluation-risk-decision-v1.json",
+  "limits": "Both family intervals include50%; neither a gain nor definite regression is established. No absolute/public Elo, global novelty or reference superiority. Research continuation remains active."
+}

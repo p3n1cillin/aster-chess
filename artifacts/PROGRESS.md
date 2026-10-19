@@ -1,3 +1,20 @@
+## 2026-10-19: online evaluation-risk trial completed; no promotion
+
+The predeclared per-worker error-history policy completes all 256 paired games,
+with independent PGN/journal audits and no forfeits or unresolved games. Results
+are 16W/101D/11L at 30 ms (51.95%, family interval 48.41..55.38%) and 3W/120D/5L
+at 100 ms (49.22%, 47.27..51.12%). Both strict strength gates fail; no gain or
+definite regression is established. Production remains disabled. No retuning or
+extra games follow; all outcomes and frozen evidence are preserved.
+
+All four native configurations pass 157 tests plus two compile-fail checks,
+Windows/Linux CI pass, and legality, perft, terminal edges, real visualization,
+proofs, SMP stop/undo and reset checks pass. Normal and disabled searches preserve
+the current 1,559,611-node signature and all 128 fresh depth-nine comparisons.
+The isolated-root screen has only one deferral across 3,341 labels, limiting
+confidence in usefulness. See `docs/ASTER-EVALUATION-RISK.md`. Research continues
+with distinct, separately declared hypotheses; no new Elo or superiority claim.
+
 ## 2026-10-19: allocation-free AVX2/scalar accumulator updates adopted
 
 Indexed neural updates now consume feature indices directly, removing temporary

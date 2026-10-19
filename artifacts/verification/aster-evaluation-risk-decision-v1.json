@@ -1,0 +1,81 @@
+{
+  "eligible_for_confirmation": false,
+  "production_enabled": false,
+  "controls": {
+    "30ms": {
+      "report_sha256": "24d7969f6cf625f98b58c25ee15b2e7ca2f12681b25e3f8bb0c4df34936a9c1c",
+      "candidate_sha256": "819e714956c5dbc2a26209daa23e4d55c0f537c644b29c40fc13a337d9984057",
+      "baseline_sha256": "9361d9c3b066514451bf09a1767c534d8197f5909f06151433f531768cc81100",
+      "opening_suite_sha256": "fd37fb8ed08039c56dbd280e7ca100fa578220b85e16d7c56a7eb332b90fe601",
+      "games": 128,
+      "pairs": 64,
+      "resolved_pairs": 64,
+      "unresolved_pairs": 0,
+      "forfeits": 0,
+      "wins": 16,
+      "draws": 101,
+      "losses": 11,
+      "score": 0.51953125,
+      "families": 54,
+      "opening_family_95_percent_interval": [
+        0.48412698412698413,
+        0.5538461538461539
+      ],
+      "passes_strength_gate": false
+    },
+    "100ms": {
+      "report_sha256": "9dcdb94d17013db1fe7a46628b857204ef30e029e921cfea17cb12a66d247a22",
+      "candidate_sha256": "819e714956c5dbc2a26209daa23e4d55c0f537c644b29c40fc13a337d9984057",
+      "baseline_sha256": "9361d9c3b066514451bf09a1767c534d8197f5909f06151433f531768cc81100",
+      "opening_suite_sha256": "d59cdcb7621cf8f3db53d3f91a3d745169fc5029e8aecf5c4a545f279de31cc5",
+      "games": 128,
+      "pairs": 64,
+      "resolved_pairs": 64,
+      "unresolved_pairs": 0,
+      "forfeits": 0,
+      "wins": 3,
+      "draws": 120,
+      "losses": 5,
+      "score": 0.4921875,
+      "families": 55,
+      "opening_family_95_percent_interval": [
+        0.47265625,
+        0.5111940298507462
+      ],
+      "passes_strength_gate": false
+    }
+  },
+  "tactics": [
+    {
+      "suite": "tactics-v1",
+      "baseline": 32,
+      "candidate": 32,
+      "passed": true,
+      "changed_positions": []
+    },
+    {
+      "suite": "tactics-quiet-v1",
+      "baseline": 31,
+      "candidate": 31,
+      "passed": true,
+      "changed_positions": []
+    },
+    {
+      "suite": "endgames-v1",
+      "baseline": 16,
+      "candidate": 16,
+      "passed": true,
+      "changed_positions": []
+    }
+  ],
+  "activity_passed": true,
+  "audits_sha256": {
+    "artifacts/verification/aster-evaluation-risk-30ms-pgn-audit-v1.json": "15dd53e157a37bcb0d0d81cf77ec2a88c665add5912f2bab89ad77c3c6b9f080",
+    "artifacts/verification/aster-evaluation-risk-30ms-journal-audit-v1.json": "ed951525a5313425aec2940e57582caad92e4d2f9108fd5803919f6fb4054dc7",
+    "artifacts/verification/aster-evaluation-risk-100ms-pgn-audit-v1.json": "b408c755ad2d4442d6fc15857a3734b7b5df5a61d6e02f34346c711a15147804",
+    "artifacts/verification/aster-evaluation-risk-100ms-journal-audit-v1.json": "1585f359e1315053452c798c2cee36ef9e733f91eb7be677fb64d0843e737eb7"
+  },
+  "analyzer_sha256": "75e4df065ca0b00f8e796978d007af82d14066c37fdc8d10ad2b76706d48fe8b",
+  "bootstrap_implementation_sha256": "87b8cead7baae052aa79a45dbce05d03a6ebb746af62ec92f9e623e541ef9e50",
+  "interpretation": "Both strict 95% whole-opening-family score lower bounds must exceed 50%; fixed 20000 samples/20261019 seed. Eligibility still needs all correctness/CI gates and a separately declared reference confirmation. No Elo, calibrated probability, novelty or superiority claim."
+}

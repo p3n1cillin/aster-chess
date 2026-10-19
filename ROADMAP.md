@@ -13,6 +13,13 @@ regression games are checked. This does not establish Elo or superiority; see
 `docs/ASTER-INDEXED-ACCUMULATORS.md`. Next profile the automatic path and freeze
 a separate hypothesis before any new search-policy experiment.
 
+The online evaluation-risk experiment also completes all 256 declared games but
+fails both strict strength gates (51.95% at 30 ms, 49.22% at 100 ms; both family
+intervals include 50%). It remains absent from normal builds, without retuning.
+See `docs/ASTER-EVALUATION-RISK.md`. The next independent engineering experiment
+is profile-guided compilation for the automatic path, with fixed training inputs
+and separate fresh validation roots before any speed or strength claim.
+
 The Aster disagreement-guard experiment tests a bounded response to conflicting
 search evidence. Its policy, new opening roots and two controls were fixed before
 candidate queries. All 192 games are audited, but neither strength gate passes:

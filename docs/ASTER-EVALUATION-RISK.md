@@ -65,3 +65,32 @@ gates, zero forfeits and zero unresolved games. Families use full starting FEN
 and the first four opening plies; bootstrap is fixed at 20,000 samples, seed
 20261019. Eligibility would still require a separately declared reference trial.
 There is no adaptive retuning, extra games, Elo estimate or superiority claim.
+
+## Completed decision: keep disabled
+
+All 256 games are complete and independently audited, with no forfeits,
+unresolved games or missing telemetry. Results are against the frozen Aster
+control, not a reference-engine confirmation.
+
+| Control | W/D/L | Score | 95% whole-family interval |
+| --- | --- | ---: | --- |
+| 30 ms | 16/101/11 | 51.95% | 48.41..55.38% |
+| 100 ms | 3/120/5 | 49.22% | 47.27..51.12% |
+
+Both strength gates fail. Neither a gain nor a definite regression is established.
+The [decision](../artifacts/verification/aster-evaluation-risk-decision-v1.json)
+retains `eligible_for_confirmation=false` and `production_enabled=false`.
+No thresholds changed, no extra games were added and no reference trial was
+triggered. Sparse isolated-root activity remains a limitation of this hypothesis;
+these consumed roots cannot be reused as fresh confirmation for a retuned policy.
+
+All four workspace configurations pass 157 native tests plus two compile-fail
+lifetime checks. Windows and Linux
+[CI pass](https://github.com/p3n1cillin/aster-chess/actions/runs/39262037781), including
+combined research-feature tests. Normal builds preserve all 128 fresh depth-nine
+comparisons and all 51 bench traces at 1,559,611 nodes. Eight timing pairs give
+normal-build elapsed ratio 1.00424; this is diagnostic, not a claimed speed gain.
+The exact binaries, source snapshots, complete PGNs, journals and reports are
+preserved. The [completion record](../artifacts/verification/aster-evaluation-risk-completion-v1.json)
+indexes the verification. Absolute/public Elo and reference superiority remain
+unestablished. The research continuation stays active for distinct hypotheses.
