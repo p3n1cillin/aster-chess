@@ -26,7 +26,7 @@ def main():
     entries=[]
     paths += [ROOT / 'scripts' / 'benchmark_indexed_accumulators.py']
     paths += [ROOT / 'scripts' / name for name in ['verify_evaluation_risk.py', 'verify_evaluation_risk_lifecycle.py', 'analyze_evaluation_risk.py']]
-    paths += [ROOT / 'scripts' / name for name in ['build_pgo.py', 'benchmark_pgo.py']]
+    paths += [ROOT / 'scripts' / name for name in ['build_pgo.py', 'benchmark_pgo.py', 'verify_pgo_driver.py', 'verify_pgo_runtime.py', 'analyze_pgo.py']]
     for path in sorted(paths):
         relative=path.relative_to(ROOT);target=directory/relative;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(path,target)
         entries.append({'path':relative.as_posix(),'sha256':hashlib.sha256(target.read_bytes()).hexdigest()})
@@ -50,7 +50,8 @@ def main():
                 raise ValueError('Merged profile changed after compilation')
             shutil.copy2(profile, directory / 'merged.profdata')
             provenance['profile'] = {'file': 'merged.profdata', 'sha256': build['merged_profile']['sha256']}
-        description = ' '.join(build['optimized_build_command']) + '; compiler flags and build provenance recorded in pgo-build.json; role=' + args.pgo_role
+        command = next(step['argv'] for step in build['steps'] if step['label'] == 'build-' + args.pgo_role)
+        description = ' '.join(command) + '; compiler flags and build provenance recorded in pgo-build.json; role=' + args.pgo_role
     report={'binary':str(binary),'binary_sha256':hashlib.sha256(binary.read_bytes()).hexdigest(),
         'build':'cargo build --workspace --release --locked' + ''.join(' --features ' + feature for feature in args.cargo_feature) + '; x86-64-v3 flags from .cargo/config.toml; no PGO; core embed-net enabled by engine dependency',
         'cargo_features':args.cargo_feature,

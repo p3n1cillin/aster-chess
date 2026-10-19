@@ -1,0 +1,14 @@
+{"completed": "build-control"}
+{"completed": "control-signature"}
+{"completed": "build-instrumented"}
+{"completed": "train-bench-auto-0"}
+{"completed": "train-bench-auto-1"}
+{"completed": "train-bench-auto-2"}
+{"completed": "train-bench-avx2-0"}
+{"completed": "train-bench-scalar-0"}
+{"completed": "train-smoke_rust_play"}
+{"completed": "train-smoke_mate_proof"}
+{"completed": "merge-profile"}
+{"completed": "profile-coverage"}
+{"completed": "build-optimized"}
+{"status": "built_unqualified", "control": {"path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v2\\control\\aster.exe", "sha256": "a354c8edced146d82b8a77142f6d299722addc909a7e3de90f5f2592780951a3", "rustflags": ["-C", "target-cpu=x86-64-v3"], "training_driver": {"path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v2\\control\\aster-pgo-trainer.exe", "sha256": "2b17d7a813bd490ae3cb46aa5807321e65ea57482be1a91a49cbbfdabde15669"}}, "optimized": {"path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v2\\optimized\\aster.exe", "sha256": "ee768f65b73356e371f139f538faf85b6a68660191e5a01daa0cf671c20175a2", "rustflags": ["-C", "target-cpu=x86-64-v3", "-C", "profile-use=C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v2\\merged.profdata", "-C", "llvm-args=-pgo-warn-missing-function"], "training_driver": {"path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v2\\optimized\\aster-pgo-trainer.exe", "sha256": "b2ecff24431fa11d83a68bc3c926960cf65ead3e5a3bbb523ee2b56be7dc186a"}}, "raw_profiles": 13}

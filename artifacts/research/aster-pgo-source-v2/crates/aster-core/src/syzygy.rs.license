@@ -1,0 +1,8 @@
+SPDX-License-Identifier: GPL-3.0-or-later
+
+Original source header, preserved verbatim for syzygy.rs:
+
+// Rust port of Stockfish 19 `syzygy/tbprobe.h/.cpp` (Syzygy tablebase probing,
+// originally based on code by Ronald de Man).
+// Copyright (C) 2004-2026 The Stockfish developers (see AUTHORS file)
+// Licensed under the GNU General Public License v3 or later.

@@ -1,0 +1,4 @@
+{"mode": "auto", "median_ratio": 1.0001597360668288, "interval95": [0.9898593180528233, 1.0150510756402846], "passed": false}
+{"mode": "avx2", "median_ratio": 1.0987531683208853, "interval95": [1.0870998223482127, 1.1068470836638469], "passed": false}
+{"mode": "scalar", "median_ratio": 0.9995732318131776, "interval95": [0.9916796560697304, 1.0145891165026235], "passed": true}
+{"complete": true, "passed": false}

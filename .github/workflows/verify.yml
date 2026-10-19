@@ -26,6 +26,13 @@ jobs:
       - run: python scripts/fetch_aster_network.py
       - run: cargo fmt --all --check
       - run: cargo build --workspace --release --locked
+      - run: cargo build --release --locked -p aster-engine --features pgo-driver --bin aster-pgo-trainer
+      - name: Verify native profile driver
+        shell: python {0}
+        run: |
+          import os, subprocess, sys
+          suffix = '.exe' if os.name == 'nt' else ''
+          subprocess.run([sys.executable, 'scripts/verify_pgo_driver.py', '--engine', f'target/release/aster{suffix}', '--driver', f'target/release/aster-pgo-trainer{suffix}', '--output', 'artifacts/verification/pgo-driver-ci.json'], check=True)
       - run: cargo test --workspace --release --locked
       - run: cargo test --workspace --locked
       - run: cargo test --release --locked -p aster-core --features disagreement-guard

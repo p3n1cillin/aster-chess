@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "signature": 1559611,
+  "searches": 51,
+  "prior_report_sha256": "2dee7b61566efc42c24ec11b2e11a7ec2844949bfec1f08f6e7830c1193f8989",
+  "current_runtime_report_sha256": "a66921d6daa7013cc93d5e0116776fc86235f82f3ad3adc7e56a9189d6089381",
+  "checks": "All normalized search/bestmove lines of the matched control and PGO candidate equal the prior ordinary default build."
+}
