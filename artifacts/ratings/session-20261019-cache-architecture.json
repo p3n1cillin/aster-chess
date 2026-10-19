@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-19",
+  "active_engine": "Aster Rust 1.0.0 cache-architecture candidate",
+  "active_binary_sha256": "585e8f1e753c754263d488bcb88f3ff067007bc9603afdee9e0b9f054b4b11c2",
+  "active_local_rating": null,
+  "public_elo": null,
+  "source_manifest": "artifacts/research/aster-cache-architecture-source-v1/manifest.json",
+  "status": "Adopted after all declared correctness, equivalence, timing, 96-game regression and cross-platform CI gates. Absolute/public rating remains uncalibrated.",
+  "preserved_binary": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\585e8f1e753c754263d488bcb88f3ff067007bc9603afdee9e0b9f054b4b11c2\\aster.exe",
+  "limits": "Neither an old build rating nor an upstream engine rating transfers automatically. No superiority claim.",
+  "decision_report": "artifacts/verification/aster-cache-architecture-decision-v1.json"
+}

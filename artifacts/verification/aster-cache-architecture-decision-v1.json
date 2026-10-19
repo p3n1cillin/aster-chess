@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-19",
+  "adopted": true,
+  "change": "Typed cache storage and borrowed write leases; search policy and neural weights unchanged.",
+  "baseline_commit": "53e6fc0e1bbe5862d738b21a7ba6cf240f3149e5",
+  "candidate_code_commit": "53333506d8f7948f8da0f91de24ef21903d76957",
+  "candidate_binary_sha256": "585e8f1e753c754263d488bcb88f3ff067007bc9603afdee9e0b9f054b4b11c2",
+  "baseline_binary_sha256": "dc83154e2c3356e7ff741920b7dfcaaabb13d5db6e3711acdeed134ffbe6221f",
+  "source_manifest": "artifacts/research/aster-cache-architecture-source-v1/manifest.json",
+  "speed": {
+    "passed": true,
+    "pairs": 16,
+    "median_candidate_over_baseline": 0.9902865443605382,
+    "bootstrap_95_percent_interval": [
+      0.9850884236598089,
+      0.9954679279824774
+    ],
+    "bootstrap_samples": 20000,
+    "seed": 20261019,
+    "candidate_sha256": "585e8f1e753c754263d488bcb88f3ff067007bc9603afdee9e0b9f054b4b11c2",
+    "baseline_sha256": "dc83154e2c3356e7ff741920b7dfcaaabb13d5db6e3711acdeed134ffbe6221f",
+    "gates": {
+      "median_max": 1.01,
+      "upper_max": 1.03
+    },
+    "interpretation": "Same-work desktop timing only. Confidence interval does not guarantee identical speed on other machines or playing-strength equivalence."
+  },
+  "matches": {
+    "games": 96,
+    "wins": 11,
+    "draws": 79,
+    "losses": 6,
+    "unresolved": 0,
+    "forfeits": 0,
+    "score": 0.5260416666666666,
+    "opening_pair_95_percent_interval": [
+      0.4791666666666667,
+      0.5729166666666666
+    ],
+    "all_pgn_report_journal_audits_passed": true
+  },
+  "checks": {
+    "native_tests_per_profile": 147,
+    "compile_fail_lifetime_checks_per_profile": 2,
+    "canonical_bench_nodes": 2497913,
+    "bench_searches_identical": 51,
+    "depth_nine_positions_identical": 64,
+    "tactics": "30/32, exact agreement with baseline",
+    "independent_rule_positions": 2630,
+    "perft_cases": 14,
+    "special_edges": 94,
+    "proof_certificates": 8,
+    "proof_positions": 42,
+    "multithread_lifecycle_cases": 9,
+    "windows_linux_ci": "https://github.com/p3n1cillin/aster-chess/actions/runs/39233306841",
+    "legacy_bench_seven_nodes": 124781,
+    "source_names_audit_passed": true
+  },
+  "limitations": "This is one cache/API rewrite, not a full independent-engine rewrite or an unrecognizability guarantee. Local same-work speed is not Elo. Score interval includes 50%; current Rust build has no calibrated absolute rating."
+}

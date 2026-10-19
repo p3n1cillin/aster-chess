@@ -1,3 +1,16 @@
+## 2026-10-19: typed Rust cache rewrite adopted
+
+Aster's cache now uses typed buckets, checked lookup and borrowed write leases.
+It no longer fabricates entry slices or manually asserts the table's Sync trait.
+Both profiles pass 147 native tests plus two lifetime compile-fail checks; Windows
+and Linux CI pass. All 51 bench searches and 64 depth-nine comparisons are identical.
+Sixteen counterbalanced pairs measure 0.97% lower local elapsed (bootstrap ratio
+interval 0.98509..0.99547). This is a local speed result, not Elo.
+All 96 regression games are audited: 11W/79D/6L, no forfeits or unresolved games;
+score interval 47.92..57.29% includes 50%. Algorithms/weights remain inherited;
+a full independent rewrite and superiority remain unachieved. See
+`docs/ASTER-CACHE-ARCHITECTURE.md` for the declared gates, limits and full evidence.
+
 ## 2026-10-19: Aster source naming cleanup
 
 The user requested no upstream-engine name in editable code while preserving
