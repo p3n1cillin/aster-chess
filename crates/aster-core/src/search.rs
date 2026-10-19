@@ -1639,7 +1639,7 @@ impl Worker {
             }
 
             // Step 8. Razoring
-            if all_node && eval < alpha - 342 * depth && !seek_mate {
+            if all_node && eval < alpha - tp!(RazorMargin) * depth && !seek_mate {
                 return self.qsearch::<NON_PV>(pos, ss, alpha, beta);
             }
 
@@ -1651,10 +1651,13 @@ impl Worker {
                 && !is_loss(beta)
                 && !is_win(eval)
             {
-                let mut futility_mult = (45 + depth * 4).min(85);
-                futility_mult -= 20 * !tt_hit as i32;
+                let mut futility_mult =
+                    (tp!(FutMultBase) + depth * tp!(FutMultDepth)).min(tp!(FutMultMax));
+                futility_mult -= tp!(FutNoTtHit) * !tt_hit as i32;
                 let futility_margin = futility_mult * depth
-                    - (2789 * improving as i32 + 335 * opponent_worsening as i32) * futility_mult
+                    - (tp!(FutImproving) * improving as i32
+                        + tp!(FutOppWorsening) * opponent_worsening as i32)
+                        * futility_mult
                         / 1024
                     + correction_value.abs() / 198435;
                 if eval - futility_margin >= beta {
@@ -1669,7 +1672,8 @@ impl Worker {
                     #[cfg(not(feature = "evaluation-risk"))]
                     let defer = false;
                     if !defer {
-                        return (661 * beta + 363 * eval) / 1024;
+                        return (tp!(FutReturnBeta) * beta + (1024 - tp!(FutReturnBeta)) * eval)
+                            / 1024;
                     }
                 }
             }
@@ -1677,13 +1681,15 @@ impl Worker {
             // Step 10. Null move search with verification search
             if cut_node
                 && static_eval + 50 * self.ss(ss).prior_nmp_fail_high
-                    >= beta - 13 * depth - 47 * improving as i32 + 365
+                    >= beta - tp!(NmpDepthMargin) * depth - tp!(NmpImproving) * improving as i32
+                        + tp!(NmpBase)
                 && excluded_move.is_none()
                 && pos.non_pawn_material_c(us) != 0
                 && ply >= self.nmp_min_ply
                 && beta >= -2000
             {
-                let mut r = 7 + depth / 3 + ((static_eval - beta) / 256).max(0);
+                let mut r =
+                    tp!(NmpRedBase) + depth / 3 + ((static_eval - beta) / tp!(NmpEvalDiv)).max(0);
                 r -= seek_mate as i32 * r / 2;
                 if self.trace_on {
                     crate::trace::event(crate::trace::EVENT_NULL_PROBE);
@@ -1716,7 +1722,8 @@ impl Worker {
             }
 
             // Step 12. ProbCut
-            let prob_cut_beta = beta + 241 - 64 * improving as i32;
+            let prob_cut_beta =
+                beta + tp!(ProbCutMargin) - tp!(ProbCutImproving) * improving as i32;
             if depth >= 3
                 && !is_decisive(beta)
                 && !(is_valid(tt_data.value) && tt_data.value < prob_cut_beta)
@@ -1904,16 +1911,16 @@ impl Worker {
 
                     if !gives_check && lmr_depth < 8 {
                         let futility_value = self.ss(ss).static_eval
-                            + 234
-                            + 247 * lmr_depth
+                            + tp!(CapFutBase)
+                            + tp!(CapFutLmrDepth) * lmr_depth
                             + PIECE_VALUE[captured]
-                            + 134 * capt_hist / 1024;
+                            + tp!(CapFutHist) * capt_hist / 1024;
                         if futility_value <= alpha {
                             continue;
                         }
                     }
 
-                    let margin = 177 * depth + capt_hist * 34 / 1024;
+                    let margin = tp!(CapSeeDepth) * depth + capt_hist * tp!(CapSeeHist) / 1024;
                     if (alpha >= VALUE_DRAW
                         || pos.non_pawn_material_c(us) != PIECE_VALUE[moved_piece])
                         && !pos.see_ge(mv, -margin)
@@ -1928,17 +1935,18 @@ impl Worker {
                                 + get(&(*cont_hist[1])[moved_piece][to])
                         } + get(&self.shared.histories.pawn_entry(pos)[moved_piece][to]);
 
-                    if history < -4136 * depth {
+                    if history < -tp!(QuietHistPrune) * depth {
                         continue;
                     }
 
-                    history += 69 * self.main_history[us][mv.raw() as usize] as i32 / 32;
+                    history +=
+                        tp!(QuietHistMain) * self.main_history[us][mv.raw() as usize] as i32 / 32;
                     lmr_depth += history / lmr_divisor(depth);
 
                     let futility_value = self.ss(ss).static_eval
-                        + 119 * lmr_depth
-                        + 90 * (self.ss(ss).static_eval > alpha) as i32
-                        + 164;
+                        + tp!(QuietFutLmr) * lmr_depth
+                        + tp!(QuietFutAlpha) * (self.ss(ss).static_eval > alpha) as i32
+                        + tp!(QuietFutBase);
 
                     if !in_check && lmr_depth < 12 && futility_value <= alpha {
                         if best_value <= futility_value
@@ -1952,7 +1960,7 @@ impl Worker {
 
                     lmr_depth = lmr_depth.max(0);
 
-                    if !pos.see_ge(mv, -23 * lmr_depth * lmr_depth) {
+                    if !pos.see_ge(mv, -tp!(QuietSee) * lmr_depth * lmr_depth) {
                         continue;
                     }
                 }
@@ -1970,8 +1978,10 @@ impl Worker {
                 && !self.is_shuffling(mv, ss, pos)
                 && !seek_mate
             {
-                let singular_beta =
-                    tt_data.value - (59 + 66 * (self.ss(ss).tt_pv && !pv_node) as i32) * depth / 63;
+                let singular_beta = tt_data.value
+                    - (tp!(SeBetaBase) + tp!(SeBetaTtPv) * (self.ss(ss).tt_pv && !pv_node) as i32)
+                        * depth
+                        / 63;
                 let singular_depth = new_depth / 2;
 
                 self.ssm(ss).excluded_move = mv;
@@ -2025,44 +2035,47 @@ impl Worker {
 
             // Step 18. Late moves reduction / extension (LMR)
             if self.ss(ss).tt_pv {
-                r -= 3023
-                    + pv_node as i32 * 1004
-                    + (tt_data.value > alpha) as i32 * 885
-                    + (tt_data.depth >= depth) as i32 * (816 + cut_node as i32 * 940);
+                r -= tp!(LmrTtPvBase)
+                    + pv_node as i32 * tp!(LmrTtPvPv)
+                    + (tt_data.value > alpha) as i32 * tp!(LmrTtPvValue)
+                    + (tt_data.depth >= depth) as i32
+                        * (tp!(LmrTtPvDepth) + cut_node as i32 * tp!(LmrTtPvCut));
             }
-            r += 697;
-            r -= move_count * 65;
-            r -= correction_value.abs() / 26310;
+            r += tp!(LmrBase);
+            r -= move_count * tp!(LmrMoveCount);
+            r -= correction_value.abs() / tp!(LmrCorr);
 
             if cut_node {
-                r += 4026 + 933 * tt_data.mv.is_none() as i32;
+                r += tp!(LmrCutNode) + tp!(LmrCutNoTt) * tt_data.mv.is_none() as i32;
             }
             if tt_capture {
-                r += 1079;
+                r += tp!(LmrTtCapture);
             }
             let next_cutoff = self.ss(ss + 1).cutoff_cnt;
             if next_cutoff > 1 {
-                r += 264 + 1095 * (next_cutoff > 2) as i32 + 1138 * all_node as i32;
+                r += tp!(LmrCutoffBase)
+                    + tp!(LmrCutoffMany) * (next_cutoff > 2) as i32
+                    + tp!(LmrCutoffAll) * all_node as i32;
             } else if mv == tt_data.mv {
-                r -= 2179;
+                r -= tp!(LmrTtMove);
             }
 
             let stat_score = if capture {
                 let cp = pos.captured_piece();
-                873 * PIECE_VALUE[cp] / 128
+                tp!(StatCapPiece) * PIECE_VALUE[cp] / 128
                     + self.capture_history[moved_piece][mv.to_sq()][type_of(cp)] as i32
             } else {
                 let to = mv.to_sq();
                 unsafe {
-                    (2252 * self.main_history[us][mv.raw() as usize] as i32
-                        + 1126 * get(&(*cont_hist[0])[moved_piece][to])
-                        + 1093 * get(&(*cont_hist[1])[moved_piece][to]))
+                    (tp!(StatMain) * self.main_history[us][mv.raw() as usize] as i32
+                        + tp!(StatCont0) * get(&(*cont_hist[0])[moved_piece][to])
+                        + tp!(StatCont1) * get(&(*cont_hist[1])[moved_piece][to]))
                         / 1024
                 }
             };
             self.ssm(ss).stat_score = stat_score;
 
-            r -= stat_score * 439 / 4096;
+            r -= stat_score * tp!(LmrStatDiv) / 4096;
 
             if !capture && !is_decisive(alpha) {
                 r += 3 * (alpha - eval).clamp(-64, 96);

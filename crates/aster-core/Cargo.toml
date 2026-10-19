@@ -22,6 +22,8 @@ path = "src/main.rs"
 # for strength tests. Aster changes that alter search or evaluation must be
 # compiled out under this feature (`#[cfg(not(feature = "upstream-reference"))]`).
 upstream-reference = []
+# Expose search parameters (src/tune.rs) as UCI options for SPSA tuning.
+tune = []
 evaluation-risk = []
 # Bounded Aster search experiment; excluded from production builds.
 disagreement-guard = []

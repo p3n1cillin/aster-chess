@@ -2,6 +2,9 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // Modified 2026-10-19: source naming and notice layout only.
 
+// Declared first: `tp!` is used by later modules.
+#[macro_use]
+pub mod tune;
 pub mod bitboard;
 #[cfg(any(feature = "disagreement-guard", test))]
 mod disagreement;

@@ -233,8 +233,21 @@ impl Options {
             "option name SyzygyProbeLimit type spin default 7 min 0 max 7".to_string(),
             format!("option name EvalFile type string default {DEFAULT_NET_NAME}"),
         ]
+        .into_iter()
+        .chain(tune_options())
+        .collect::<Vec<_>>()
         .join("\n")
     }
+}
+
+#[cfg(feature = "tune")]
+fn tune_options() -> Vec<String> {
+    crate::tune::uci_options()
+}
+
+#[cfg(not(feature = "tune"))]
+fn tune_options() -> Vec<String> {
+    Vec::new()
 }
 
 fn find_network(name: &str) -> Option<std::path::PathBuf> {
@@ -556,6 +569,9 @@ impl Engine {
                     Err(e) => return Some(format!("ERROR: {e}")),
                 }
             }
+            #[cfg(feature = "tune")]
+            _ if value.trim().parse::<i32>().is_ok()
+                && crate::tune::set(name.trim(), value.trim().parse().unwrap()) => {}
             _ => return Some(format!("No such option: {name}")),
         }
         None
@@ -1051,6 +1067,7 @@ Nodes/second               : {}",
                     let args: Vec<&str> = it.collect();
                     self.speedtest(&args);
                 }
+                "tune-spec" => emit(&format!("{}\n", crate::tune::spec())),
                 "d" => emit(&format!("{}\n", self.engine.position().pretty())),
                 "tbprobe" => {
                     // Debugging aid: raw Syzygy WDL/DTZ probe of the current position.
