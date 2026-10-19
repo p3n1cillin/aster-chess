@@ -15,4 +15,5 @@ artifacts/build/
 target/
 crates/engine/viridithas.nnue.zst
 crates/aster-core/nn-*.nnue
+crates/aster-core/nn-*.partial
 tools/syzygy-development-v2/*.rtb*

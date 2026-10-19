@@ -58,3 +58,8 @@ pins the actual default core, legacy source, weights, compiler and helpers. Both
 exact executables remain in the local development cache, with fingerprints in
 the plan and result records. Historical match reports and fingerprints are
 unchanged. No playing-strength or Elo increase is claimed from this refactor.
+
+The initial CI run [39222407138](../artifacts/ci/aster-branding-39222407138.json)
+failed at the original download server (HTTP 403), before compilation. The
+fetch helper now falls back to a commit-pinned official mirror and verifies the
+identical full SHA-256. A fresh download passed locally; network bytes are unchanged.

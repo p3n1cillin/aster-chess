@@ -2,11 +2,16 @@
 import hashlib
 import json
 import pathlib
+import shutil
+import urllib.error
 import urllib.request
+import uuid
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 NAME = "nn-1a298aa575a0.nnue"
 URL = "https://tests.stockfishchess.org/api/nn/" + NAME
+MIRROR = ("https://media.githubusercontent.com/media/official-stockfish/networks/"
+          "dd5c7f74c073a7d0bcbb52648d26c537a3d04cf4/" + NAME)
 SHA256 = "1a298aa575a085434d29027978dc36867fe9c5bcea9376654b7a8eba1e52dfc2"
 
 
@@ -20,15 +25,33 @@ def digest(path):
 
 def main():
     path = ROOT / "crates/aster-core" / NAME
+    source = "existing verified file"
     if not path.exists():
-        temporary = path.with_suffix(".partial")
-        urllib.request.urlretrieve(URL, temporary)
-        if digest(temporary) != SHA256:
-            raise ValueError("Network download checksum mismatch")
-        temporary.replace(path)
+        failures = []
+        for url in [URL, MIRROR]:
+            temporary = path.with_suffix("." + uuid.uuid4().hex + ".partial")
+            try:
+                with urllib.request.urlopen(url, timeout=120) as response, temporary.open("xb") as stream:
+                    shutil.copyfileobj(response, stream)
+                if digest(temporary) != SHA256:
+                    raise ValueError("Network download checksum mismatch: " + str(temporary))
+            except (OSError, ValueError) as error:
+                failures.append(str(error))
+                continue
+            # Do not overwrite an unexpected model that appeared during download.
+            if path.exists():
+                if digest(path) != SHA256:
+                    raise ValueError("Existing network changed during download; preserve it for investigation")
+            else:
+                temporary.replace(path)
+            source = url
+            break
+        else:
+            raise RuntimeError("No verified network download succeeded: " + "; ".join(failures))
     if digest(path) != SHA256:
         raise ValueError("Existing network checksum mismatch; preserve it for investigation")
-    print(json.dumps({"status": "verified", "sha256": SHA256, "url": URL}))
+    print(json.dumps({"status": "verified", "sha256": SHA256, "source": source,
+                      "urls": [URL, MIRROR]}))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,1072 @@
+rust (ubuntu-latest)	Set up job	﻿2026-10-19T08:23:25.5527434Z Current runner version: '2.337.0'
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5637588Z ##[group]Runner Image Provisioner
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5639139Z Hosted Compute Agent
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5640236Z Version: 20261012.601
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5641441Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5642689Z Build Date: 2026-10-12T17:48:21Z
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5643971Z Worker ID: {bcf92c66-433c-46c0-8caa-715347dfee58}
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5645212Z Region: eastus
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5646386Z Cloud: Azure
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5677915Z ##[endgroup]
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5680440Z ##[group]Operating System
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5681690Z Ubuntu
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5682667Z 24.04.5
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5683509Z LTS
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5684464Z ##[endgroup]
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5685447Z ##[group]Runner Image
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5686790Z Image: ubuntu-24.04
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5687821Z Version: 20261012.334.1
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5689739Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5692805Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5694653Z ##[endgroup]
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5697045Z ##[group]GITHUB_TOKEN Permissions
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5700788Z Contents: read
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5701841Z Metadata: read
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5702972Z Packages: read
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5704148Z ##[endgroup]
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5717987Z Secret source: Actions
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5719665Z Cache mode: write
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.5721535Z Prepare workflow directory
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.6607182Z Prepare all required actions
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.6683506Z Getting action download info
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.8703333Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:25.9888279Z Download action repository 'dtolnay/rust-toolchain@stable' (SHA:b725eda525362e7cf34af9a7243cac1e3f01a7ec)
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:26.0974955Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+rust (ubuntu-latest)	Set up job	2026-10-19T08:23:26.3485047Z Complete job name: rust (ubuntu-latest)
+rust (ubuntu-latest)	Run actions/checkout@v4	﻿2026-10-19T08:23:26.4342878Z ##[group]Run actions/checkout@v4
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.4343798Z with:
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.4344270Z   repository: p3n1cillin/aster-chess
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.4348641Z   token: ***
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.4349086Z   ssh-strict: true
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.4349529Z   ssh-user: git
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.4349975Z   persist-credentials: true
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.4350465Z   clean: true
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.4350920Z   sparse-checkout-cone-mode: true
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.4351460Z   fetch-depth: 1
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.4351885Z   fetch-tags: false
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.4352328Z   show-progress: true
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.4352764Z   lfs: false
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.4353180Z   submodules: false
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.4353632Z   set-safe-directory: true
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.4354137Z   allow-unsafe-pr-checkout: false
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.4354923Z ##[endgroup]
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5372732Z Syncing repository: p3n1cillin/aster-chess
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5375521Z ##[group]Getting Git version info
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5377076Z Working directory is '/home/runner/work/aster-chess/aster-chess'
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5378850Z [command]/usr/bin/git version
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5470997Z git version 2.55.0
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5499972Z ##[endgroup]
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5519306Z Temporarily overriding HOME='/home/runner/work/_temp/b1a5fbb7-6c7a-42d2-8792-984a2d47bfc0' before making global git config changes
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5520895Z Adding repository directory to the temporary git global config as a safe directory
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5525458Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/aster-chess/aster-chess
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5590168Z Deleting the contents of '/home/runner/work/aster-chess/aster-chess'
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5595575Z ##[group]Initializing the repository
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5601689Z [command]/usr/bin/git init /home/runner/work/aster-chess/aster-chess
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5742199Z hint: Using 'master' as the name for the initial branch. This default branch name
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5744315Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5746855Z hint: to use in all of your new repositories, which will suppress this warning,
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5748197Z hint: call:
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5748935Z hint:
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5749760Z hint: 	git config --global init.defaultBranch <name>
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5750747Z hint:
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5751744Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5753313Z hint: 'development'. The just-created branch can be renamed via this command:
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5754565Z hint:
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5755236Z hint: 	git branch -m <name>
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5755990Z hint:
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5757255Z hint: Disable this message with "git config set advice.defaultBranchName false"
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5764502Z Initialized empty Git repository in /home/runner/work/aster-chess/aster-chess/.git/
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5775605Z [command]/usr/bin/git remote add origin https://github.com/p3n1cillin/aster-chess
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5832899Z ##[endgroup]
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5834194Z ##[group]Disabling automatic garbage collection
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5845438Z [command]/usr/bin/git config --local gc.auto 0
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5880821Z ##[endgroup]
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5881558Z ##[group]Setting up auth
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.5890006Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.6004735Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.6371544Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.6410240Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.6637608Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.6675886Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.6905002Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.6946467Z ##[endgroup]
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.6956104Z ##[group]Fetching the repository
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.6958173Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +32633a50d813b7dce46f6181f55e643dfe68b315:refs/remotes/origin/codex/aster-branding
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:33.9892559Z From https://github.com/p3n1cillin/aster-chess
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:33.9895455Z  * [new ref]         32633a50d813b7dce46f6181f55e643dfe68b315 -> origin/codex/aster-branding
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:33.9901627Z ##[endgroup]
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:33.9903180Z ##[group]Determining the checkout info
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:33.9904924Z ##[endgroup]
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:33.9908345Z [command]/usr/bin/git sparse-checkout disable
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:33.9976684Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:34.0017309Z ##[group]Checking out the ref
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:34.0029795Z [command]/usr/bin/git checkout --progress --force -B codex/aster-branding refs/remotes/origin/codex/aster-branding
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.0683805Z Updating files:  17% (842/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.0726857Z Updating files:  18% (886/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.0818018Z Updating files:  19% (935/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.0884347Z Updating files:  20% (984/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.0914076Z Updating files:  21% (1033/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1265417Z Updating files:  22% (1083/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1294968Z Updating files:  23% (1132/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1324304Z Updating files:  24% (1181/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1368259Z Updating files:  25% (1230/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1398492Z Updating files:  26% (1279/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1427142Z Updating files:  27% (1329/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1454218Z Updating files:  28% (1378/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1477661Z Updating files:  29% (1427/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1499020Z Updating files:  30% (1476/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1527423Z Updating files:  31% (1525/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1551455Z Updating files:  32% (1575/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1575083Z Updating files:  33% (1624/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1595969Z Updating files:  34% (1673/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1619390Z Updating files:  35% (1722/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1642784Z Updating files:  36% (1771/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1665667Z Updating files:  37% (1821/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1690444Z Updating files:  38% (1870/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1714141Z Updating files:  39% (1919/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1738689Z Updating files:  40% (1968/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1762771Z Updating files:  41% (2017/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1790374Z Updating files:  42% (2066/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1815520Z Updating files:  43% (2116/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1839020Z Updating files:  44% (2165/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1863547Z Updating files:  45% (2214/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1892853Z Updating files:  46% (2263/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.1916166Z Updating files:  47% (2312/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.2112715Z Updating files:  48% (2362/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.2135355Z Updating files:  49% (2411/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.2404934Z Updating files:  50% (2460/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.2488157Z Updating files:  51% (2509/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.2525048Z Updating files:  52% (2558/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.2589938Z Updating files:  53% (2608/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.2654532Z Updating files:  54% (2657/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.2698311Z Updating files:  55% (2706/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.2773775Z Updating files:  56% (2755/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.2811409Z Updating files:  57% (2804/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.2882263Z Updating files:  58% (2854/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.2944972Z Updating files:  59% (2903/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.2997387Z Updating files:  60% (2952/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.3060267Z Updating files:  61% (3001/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.3092192Z Updating files:  62% (3050/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.3175898Z Updating files:  63% (3099/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.3208297Z Updating files:  64% (3149/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.3234180Z Updating files:  65% (3198/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.3259435Z Updating files:  66% (3247/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.3288429Z Updating files:  67% (3296/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.3321523Z Updating files:  68% (3345/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.3352027Z Updating files:  69% (3395/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.3379929Z Updating files:  70% (3444/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.3405261Z Updating files:  71% (3493/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.3430541Z Updating files:  72% (3542/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.4389855Z Updating files:  73% (3591/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.6360834Z Updating files:  74% (3641/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.8150977Z Updating files:  75% (3690/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.8567521Z Updating files:  76% (3739/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.8735383Z Updating files:  77% (3788/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.8793255Z Updating files:  78% (3837/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.8857868Z Updating files:  79% (3887/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.9192685Z Updating files:  80% (3936/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.9216091Z Updating files:  81% (3985/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.9516035Z Updating files:  82% (4034/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.9581258Z Updating files:  83% (4083/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.9604843Z Updating files:  84% (4132/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.9637419Z Updating files:  85% (4182/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.9664955Z Updating files:  86% (4231/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.9728708Z Updating files:  87% (4280/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.9765501Z Updating files:  88% (4329/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.9803812Z Updating files:  89% (4378/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.9841833Z Updating files:  90% (4428/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.9919540Z Updating files:  91% (4477/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:35.9981792Z Updating files:  92% (4526/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:36.0009342Z Updating files:  93% (4575/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:36.0032509Z Updating files:  94% (4624/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:36.0057455Z Updating files:  95% (4674/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:36.0080668Z Updating files:  96% (4723/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:36.0105686Z Updating files:  97% (4772/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:36.0148975Z Updating files:  98% (4821/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:36.0150257Z Updating files:  99% (4870/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:36.0191795Z Updating files:  99% (4871/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:36.0196798Z Updating files: 100% (4919/4919)
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:36.0197856Z Updating files: 100% (4919/4919), done.
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:36.0263558Z Switched to a new branch 'codex/aster-branding'
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:36.0271440Z branch 'codex/aster-branding' set up to track 'origin/codex/aster-branding'.
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:36.0339889Z ##[endgroup]
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:36.0397765Z [command]/usr/bin/git log -1 --format=%H
+rust (ubuntu-latest)	Run actions/checkout@v4	2026-10-19T08:23:36.0430361Z 32633a50d813b7dce46f6181f55e643dfe68b315
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	﻿2026-10-19T08:23:36.0810714Z ##[group]Run dtolnay/rust-toolchain@stable
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.0811047Z with:
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.0811240Z   toolchain: 1.99.1
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.0811463Z   components: rustfmt, clippy
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.0811702Z ##[endgroup]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.0881537Z ##[start-action display=Parse toolchain version;id=__dtolnay_rust-toolchain.parse]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1070444Z ##[group]Run if [[ -z $toolchain ]]; then
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1070874Z ^[[36;1mif [[ -z $toolchain ]]; then^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1071424Z ^[[36;1m  # GitHub does not enforce `required: true` inputs itself. https://github.com/actions/runner/issues/1070^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1072389Z ^[[36;1m  echo "'toolchain' is a required input" >&2^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1072878Z ^[[36;1m  exit 1^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1073417Z ^[[36;1melif [[ $toolchain =~ ^stable' '[0-9]+' '(year|month|week|day)s?' 'ago$ ]]; then^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1074120Z ^[[36;1m  if [[ Linux == macOS ]]; then^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1074982Z ^[[36;1m    echo "toolchain=1.$((($(date -v-$(sed 's/stable \([0-9]*\) \(.\).*/\1\2/' <<< $toolchain) +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1075889Z ^[[36;1m  else^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1076747Z ^[[36;1m    echo "toolchain=1.$((($(date --date "${toolchain#stable }" +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1077553Z ^[[36;1m  fi^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1078045Z ^[[36;1melif [[ $toolchain =~ ^stable' 'minus' '[0-9]+' 'releases?$ ]]; then^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1078945Z ^[[36;1m  echo "toolchain=1.$((($(date +%s)/60/60/24-16569)/7/6-${toolchain//[^0-9]/}))" >> $GITHUB_OUTPUT^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1079727Z ^[[36;1melif [[ $toolchain =~ ^1\.[0-9]+$ ]]; then^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1080602Z ^[[36;1m  echo "toolchain=1.$((i=${toolchain#1.}, c=($(date +%s)/60/60/24-16569)/7/6, i+9*i*(10*i<=c)+90*i*(100*i<=c)))" >> $GITHUB_OUTPUT^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1081434Z ^[[36;1melse^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1081763Z ^[[36;1m  delimiter=EOF^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1082261Z ^[[36;1m  while [[ $toolchain == *$delimiter* ]]; do delimiter+=_; done^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1083117Z ^[[36;1m  printf 'toolchain<<%s\n%s\n%s\n' "$delimiter" "$toolchain" "$delimiter" >> $GITHUB_OUTPUT^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.1083820Z ^[[36;1mfi^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.5528874Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.5529391Z env:
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.5529661Z   toolchain: 1.99.1
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.5529949Z ##[endgroup]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.5877156Z ##[end-action id=__dtolnay_rust-toolchain.parse;outcome=success;conclusion=success;duration_ms=499]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.5883536Z ##[start-action display=Set $CARGO_HOME;id=__dtolnay_rust-toolchain.__run]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.5932248Z ##[group]Run echo CARGO_HOME=${CARGO_HOME:-"$HOME/.cargo"} >> $GITHUB_ENV
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.5932744Z ^[[36;1mecho CARGO_HOME=${CARGO_HOME:-"$HOME/.cargo"} >> $GITHUB_ENV^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6011012Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6011634Z ##[endgroup]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6125872Z ##[end-action id=__dtolnay_rust-toolchain.__run;outcome=success;conclusion=success;duration_ms=24]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6128836Z ##[start-action display=Install rustup if needed;id=__dtolnay_rust-toolchain.__run_2]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6224445Z ##[group]Run if ! command -v rustup &>/dev/null; then
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6224836Z ^[[36;1mif ! command -v rustup &>/dev/null; then^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6225639Z ^[[36;1m  curl --proto '=https' --tlsv1.2 --retry 10 --retry-connrefused --location --silent --show-error --fail https://sh.rustup.rs | sh -s -- --default-toolchain none -y^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6226439Z ^[[36;1m  echo "$CARGO_HOME/bin" >> $GITHUB_PATH^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6226968Z ^[[36;1mfi^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6288931Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6289337Z env:
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6289571Z   CARGO_HOME: /home/runner/.cargo
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6289884Z ##[endgroup]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6394706Z ##[end-action id=__dtolnay_rust-toolchain.__run_2;outcome=success;conclusion=success;duration_ms=26]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6398295Z ##[start-action display=Install rustup if needed on windows;id=__dtolnay_rust-toolchain.__run_3]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6409541Z ##[end-action id=__dtolnay_rust-toolchain.__run_3;outcome=skipped;conclusion=skipped;duration_ms=0]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6430342Z ##[start-action display=rustup toolchain install 1.99.1;id=__dtolnay_rust-toolchain.__run_4]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6469966Z ##[group]Run set -f  # split targets and components on commas and whitespace, without glob expansion
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6470630Z ^[[36;1mset -f  # split targets and components on commas and whitespace, without glob expansion^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6471057Z ^[[36;1mflags=()^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6471330Z ^[[36;1mfor t in ${targets//,/ }; do flags+=(--target "$t"); done^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6471781Z ^[[36;1mfor c in ${components//,/ }; do flags+=(--component "$c"); done^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6472300Z ^[[36;1mif [[ $toolchain == nightly && -n $components ]]; then flags+=(--allow-downgrade); fi^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6472735Z ^[[36;1mlog=$(mktemp)^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6472970Z ^[[36;1mtrap 'rm -f "$log"' EXIT^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6473227Z ^[[36;1mfor attempt in 1 2 3 4 5; do^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6473801Z ^[[36;1m  if rustup toolchain install "$toolchain" "${flags[@]}" --profile minimal --no-self-update --force-non-host 2>&1 | tee "$log"; then^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6474383Z ^[[36;1m    break^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6474575Z ^[[36;1m  else^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6474775Z ^[[36;1m    status=$?^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6474990Z ^[[36;1m  fi^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6475283Z ^[[36;1m  if [[ $attempt == 5 ]] || ! grep -Fq 'checksum failed for ' "$log" \^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6475837Z ^[[36;1m      || ! grep -Fq 'this is likely due to an ongoing update of the official release server' "$log"; then^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6476298Z ^[[36;1m    exit "$status"^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6476784Z ^[[36;1m  fi^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6477357Z ^[[36;1m  echo "Retrying rustup toolchain install in 30 seconds (retry $attempt of 4)" >&2^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6478015Z ^[[36;1m  sleep 30^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6478382Z ^[[36;1mdone^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6560881Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6561234Z env:
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6561922Z   CARGO_HOME: /home/runner/.cargo
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6562365Z   toolchain: 1.99.1
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6562703Z   targets: 
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6563031Z   components: rustfmt, clippy
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6563457Z   RUSTUP_PERMIT_COPY_RENAME: 1
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.6563854Z ##[endgroup]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:36.9915700Z info: syncing channel updates for 1.99.1-x86_64-unknown-linux-gnu
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:37.4050404Z info: latest update on 2026-10-15 for version 1.99.1 (58cf8f9c3 2026-10-13)
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:37.4050905Z info: downloading 5 components
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6741350Z 
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6810420Z   1.99.1-x86_64-unknown-linux-gnu installed - rustc 1.99.1 (58cf8f9c3 2026-10-13)
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6810945Z 
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6914373Z ##[end-action id=__dtolnay_rust-toolchain.__run_4;outcome=success;conclusion=success;duration_ms=9048]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6925924Z ##[start-action display=rustup default 1.99.1;id=__dtolnay_rust-toolchain.__run_5]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6948701Z ##[group]Run rustup default "$toolchain" --force-non-host
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6949142Z ^[[36;1mrustup default "$toolchain" --force-non-host^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7015386Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7015740Z env:
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7015941Z   CARGO_HOME: /home/runner/.cargo
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7016204Z   toolchain: 1.99.1
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7016406Z ##[endgroup]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7147431Z info: using existing install for 1.99.1-x86_64-unknown-linux-gnu
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7154189Z info: default toolchain set to 1.99.1-x86_64-unknown-linux-gnu
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7154483Z 
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7219300Z   1.99.1-x86_64-unknown-linux-gnu unchanged - rustc 1.99.1 (58cf8f9c3 2026-10-13)
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7220254Z 
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7220832Z info: note that the toolchain '1.99.1-x86_64-unknown-linux-gnu' is currently in use (overridden by '/home/runner/work/aster-chess/aster-chess/rust-toolchain.toml')
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7238105Z ##[end-action id=__dtolnay_rust-toolchain.__run_5;outcome=success;conclusion=success;duration_ms=31]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7242258Z ##[start-action display=Create cachekey;id=__dtolnay_rust-toolchain.rustc-version]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7264376Z ##[group]Run DATE=$(rustc +"$toolchain" --version --verbose | sed -ne 's/^commit-date: \(20[0-9][0-9]\)-\([01][0-9]\)-\([0-3][0-9]\)$/\1\2\3/p')
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7265239Z ^[[36;1mDATE=$(rustc +"$toolchain" --version --verbose | sed -ne 's/^commit-date: \(20[0-9][0-9]\)-\([01][0-9]\)-\([0-3][0-9]\)$/\1\2\3/p')^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7265912Z ^[[36;1mHASH=$(rustc +"$toolchain" --version --verbose | sed -ne 's/^commit-hash: //p')^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7266429Z ^[[36;1mecho "cachekey=$(echo $DATE$HASH | head -c12)" >> $GITHUB_OUTPUT^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7332315Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7332674Z env:
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7332884Z   CARGO_HOME: /home/runner/.cargo
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7333146Z   toolchain: 1.99.1
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7333354Z ##[endgroup]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7675650Z ##[end-action id=__dtolnay_rust-toolchain.rustc-version;outcome=success;conclusion=success;duration_ms=43]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7679078Z ##[start-action display=Disable incremental compilation;id=__dtolnay_rust-toolchain.__run_6]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7701746Z ##[group]Run if [ -z "${CARGO_INCREMENTAL+set}" ]; then
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7702139Z ^[[36;1mif [ -z "${CARGO_INCREMENTAL+set}" ]; then^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7702479Z ^[[36;1m  echo CARGO_INCREMENTAL=0 >> $GITHUB_ENV^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7702786Z ^[[36;1mfi^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7771052Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7771479Z env:
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7771723Z   CARGO_HOME: /home/runner/.cargo
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7772032Z ##[endgroup]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7866023Z ##[end-action id=__dtolnay_rust-toolchain.__run_6;outcome=success;conclusion=success;duration_ms=18]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7868855Z ##[start-action display=Enable colors in Cargo output;id=__dtolnay_rust-toolchain.__run_7]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7889872Z ##[group]Run if [ -z "${CARGO_TERM_COLOR+set}" ]; then
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7890249Z ^[[36;1mif [ -z "${CARGO_TERM_COLOR+set}" ]; then^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7890577Z ^[[36;1m  echo CARGO_TERM_COLOR=always >> $GITHUB_ENV^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7890871Z ^[[36;1mfi^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7954567Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7954946Z env:
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7955164Z   CARGO_HOME: /home/runner/.cargo
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7955447Z   CARGO_INCREMENTAL: 0
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.7955680Z ##[endgroup]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8046312Z ##[end-action id=__dtolnay_rust-toolchain.__run_7;outcome=success;conclusion=success;duration_ms=17]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8050620Z ##[start-action display=Enable Cargo sparse registry;id=__dtolnay_rust-toolchain.__run_8]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8077272Z ##[group]Run # implemented in 1.66, stabilized in 1.68, made default in 1.70
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8077802Z ^[[36;1m# implemented in 1.66, stabilized in 1.68, made default in 1.70^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8078520Z ^[[36;1mif [ -z "${CARGO_REGISTRIES_CRATES_IO_PROTOCOL+set}" -o -f "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol ]; then^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8079273Z ^[[36;1m  if rustc +"$toolchain" --version --verbose | grep -q '^release: 1\.6[89]\.'; then^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8079879Z ^[[36;1m    touch "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8080427Z ^[[36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse >> $GITHUB_ENV^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8080951Z ^[[36;1m  elif rustc +"$toolchain" --version --verbose | grep -q '^release: 1\.6[67]\.'; then^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8081552Z ^[[36;1m    touch "/home/runner/work/_temp"/.implicit_cargo_registries_crates_io_protocol || true^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8082262Z ^[[36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=git >> $GITHUB_ENV^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8082608Z ^[[36;1m  fi^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8082795Z ^[[36;1mfi^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8151616Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8151994Z env:
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8152215Z   CARGO_HOME: /home/runner/.cargo
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8152498Z   CARGO_INCREMENTAL: 0
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8152745Z   CARGO_TERM_COLOR: always
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8152994Z   toolchain: 1.99.1
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8153265Z ##[endgroup]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8530871Z ##[end-action id=__dtolnay_rust-toolchain.__run_8;outcome=success;conclusion=success;duration_ms=47]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8535224Z ##[start-action display=Work around spurious network errors in curl 8.0;id=__dtolnay_rust-toolchain.__run_9]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8584031Z ##[group]Run # https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/timeout.20investigation
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8584917Z ^[[36;1m# https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/timeout.20investigation^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8585635Z ^[[36;1mif rustc +"$toolchain" --version --verbose | grep -q '^release: 1\.7[01]\.'; then^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8586168Z ^[[36;1m  echo CARGO_HTTP_MULTIPLEXING=false >> $GITHUB_ENV^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8586781Z ^[[36;1mfi^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8654815Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8655195Z env:
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8655428Z   CARGO_HOME: /home/runner/.cargo
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8655715Z   CARGO_INCREMENTAL: 0
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8655962Z   CARGO_TERM_COLOR: always
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8656210Z   toolchain: 1.99.1
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8656429Z ##[endgroup]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8882355Z ##[end-action id=__dtolnay_rust-toolchain.__run_9;outcome=success;conclusion=success;duration_ms=34]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8888081Z ##[start-action display=rustc +1.99.1 --version --verbose;id=__dtolnay_rust-toolchain.__run_10]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0322240Z ##[group]Run rustc +"$toolchain" --version --verbose
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0322693Z ^[[36;1mrustc +"$toolchain" --version --verbose^[[0m
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0386795Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0387199Z env:
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0387436Z   CARGO_HOME: /home/runner/.cargo
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0387745Z   CARGO_INCREMENTAL: 0
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0388026Z   CARGO_TERM_COLOR: always
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0388304Z   toolchain: 1.99.1
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0388546Z ##[endgroup]
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0576687Z rustc 1.99.1 (58cf8f9c3 2026-10-13)
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0577508Z binary: rustc
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0578070Z commit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0578763Z commit-date: 2026-10-13
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0579279Z host: x86_64-unknown-linux-gnu
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0580033Z release: 1.99.1
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0580334Z LLVM version: 23.1.1
+rust (ubuntu-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0595116Z ##[end-action id=__dtolnay_rust-toolchain.__run_10;outcome=success;conclusion=success;duration_ms=170]
+rust (ubuntu-latest)	Run actions/setup-python@v5	﻿2026-10-19T08:23:46.0699025Z ##[group]Run actions/setup-python@v5
+rust (ubuntu-latest)	Run actions/setup-python@v5	2026-10-19T08:23:46.0699327Z with:
+rust (ubuntu-latest)	Run actions/setup-python@v5	2026-10-19T08:23:46.0699522Z   python-version: 3.12
+rust (ubuntu-latest)	Run actions/setup-python@v5	2026-10-19T08:23:46.0699742Z   check-latest: false
+rust (ubuntu-latest)	Run actions/setup-python@v5	2026-10-19T08:23:46.0702145Z   token: ***
+rust (ubuntu-latest)	Run actions/setup-python@v5	2026-10-19T08:23:46.0702353Z   update-environment: true
+rust (ubuntu-latest)	Run actions/setup-python@v5	2026-10-19T08:23:46.0702593Z   allow-prereleases: false
+rust (ubuntu-latest)	Run actions/setup-python@v5	2026-10-19T08:23:46.0702818Z   freethreaded: false
+rust (ubuntu-latest)	Run actions/setup-python@v5	2026-10-19T08:23:46.0703016Z env:
+rust (ubuntu-latest)	Run actions/setup-python@v5	2026-10-19T08:23:46.0703206Z   CARGO_HOME: /home/runner/.cargo
+rust (ubuntu-latest)	Run actions/setup-python@v5	2026-10-19T08:23:46.0703454Z   CARGO_INCREMENTAL: 0
+rust (ubuntu-latest)	Run actions/setup-python@v5	2026-10-19T08:23:46.0703677Z   CARGO_TERM_COLOR: always
+rust (ubuntu-latest)	Run actions/setup-python@v5	2026-10-19T08:23:46.0703886Z ##[endgroup]
+rust (ubuntu-latest)	Run actions/setup-python@v5	2026-10-19T08:23:46.2078160Z ##[group]Installed versions
+rust (ubuntu-latest)	Run actions/setup-python@v5	2026-10-19T08:23:46.2188397Z (node:2424) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+rust (ubuntu-latest)	Run actions/setup-python@v5	2026-10-19T08:23:46.2190058Z (Use `node --trace-deprecation ...` to show where the warning was created)
+rust (ubuntu-latest)	Run actions/setup-python@v5	2026-10-19T08:23:46.2205583Z Successfully set up CPython (3.12.15)
+rust (ubuntu-latest)	Run actions/setup-python@v5	2026-10-19T08:23:46.2206979Z ##[endgroup]
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	﻿2026-10-19T08:23:46.2345575Z ##[group]Run python -m pip install -r requirements-dev.txt
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:46.2346043Z ^[[36;1mpython -m pip install -r requirements-dev.txt^[[0m
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:46.2429870Z shell: /usr/bin/bash -e {0}
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:46.2430176Z env:
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:46.2430416Z   CARGO_HOME: /home/runner/.cargo
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:46.2430730Z   CARGO_INCREMENTAL: 0
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:46.2430994Z   CARGO_TERM_COLOR: always
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:46.2431359Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:46.2432114Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:46.2432651Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:46.2433119Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:46.2433606Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:46.2434073Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:46.2434466Z ##[endgroup]
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:47.0801603Z Collecting python-chess==1.999 (from -r requirements-dev.txt (line 1))
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:47.1332057Z   Downloading python_chess-1.999-py3-none-any.whl.metadata (776 bytes)
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:47.1450801Z Collecting chess==1.11.2 (from -r requirements-dev.txt (line 2))
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:47.1494671Z   Downloading chess-1.11.2.tar.gz (6.1 MB)
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:47.2141186Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.1/6.1 MB 149.2 MB/s  0:00:00
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:47.3577678Z   Installing build dependencies: started
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:48.1408596Z   Installing build dependencies: finished with status 'done'
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:48.1413991Z   Getting requirements to build wheel: started
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:48.6047296Z   Getting requirements to build wheel: finished with status 'done'
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:48.6056387Z   Preparing metadata (pyproject.toml): started
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:48.8409735Z   Preparing metadata (pyproject.toml): finished with status 'done'
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:48.8478998Z Downloading python_chess-1.999-py3-none-any.whl (1.4 kB)
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:48.8553131Z Building wheels for collected packages: chess
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:48.8561143Z   Building wheel for chess (pyproject.toml): started
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:49.1533997Z   Building wheel for chess (pyproject.toml): finished with status 'done'
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:49.1541364Z   Created wheel for chess: filename=chess-1.11.2-py3-none-any.whl size=147879 sha256=ac604e5204704d641af3d262e2ba2adbd167fcda7f63e68c7bb88a834a04612e
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:49.1542879Z   Stored in directory: /home/runner/.cache/pip/wheels/83/1f/4e/8f4300f7dd554eb8de70ddfed96e94d3d030ace10c5b53d447
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:49.1573604Z Successfully built chess
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:49.1722053Z Installing collected packages: chess, python-chess
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:49.3064755Z 
+rust (ubuntu-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:23:49.3074563Z Successfully installed chess-1.11.2 python-chess-1.999
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	﻿2026-10-19T08:23:49.3833813Z ##[group]Run python -m unittest discover -s tests -p test_match_recovery.py
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:23:49.3834442Z ^[[36;1mpython -m unittest discover -s tests -p test_match_recovery.py^[[0m
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:23:49.3898679Z shell: /usr/bin/bash -e {0}
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:23:49.3898973Z env:
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:23:49.3899202Z   CARGO_HOME: /home/runner/.cargo
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:23:49.3899509Z   CARGO_INCREMENTAL: 0
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:23:49.3899768Z   CARGO_TERM_COLOR: always
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:23:49.3900129Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:23:49.3900648Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:23:49.3901159Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:23:49.3901618Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:23:49.3902088Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:23:49.3902576Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:23:49.3902967Z ##[endgroup]
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:23:49.7932269Z .....
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:23:49.7932965Z ----------------------------------------------------------------------
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:23:49.7933778Z Ran 5 tests in 0.014s
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:23:49.7934003Z 
+rust (ubuntu-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:23:49.7934119Z OK
+rust (ubuntu-latest)	Run python scripts/fetch_rust_network.py	﻿2026-10-19T08:23:49.8180668Z ##[group]Run python scripts/fetch_rust_network.py
+rust (ubuntu-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:23:49.8181128Z ^[[36;1mpython scripts/fetch_rust_network.py^[[0m
+rust (ubuntu-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:23:49.8243400Z shell: /usr/bin/bash -e {0}
+rust (ubuntu-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:23:49.8243653Z env:
+rust (ubuntu-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:23:49.8243856Z   CARGO_HOME: /home/runner/.cargo
+rust (ubuntu-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:23:49.8244119Z   CARGO_INCREMENTAL: 0
+rust (ubuntu-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:23:49.8244344Z   CARGO_TERM_COLOR: always
+rust (ubuntu-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:23:49.8244654Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+rust (ubuntu-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:23:49.8245094Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+rust (ubuntu-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:23:49.8245524Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+rust (ubuntu-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:23:49.8245918Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+rust (ubuntu-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:23:49.8246291Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+rust (ubuntu-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:23:49.8246826Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+rust (ubuntu-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:23:49.8247150Z ##[endgroup]
+rust (ubuntu-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:23:50.2871023Z {"status": "verified", "sha256": "066c172e22c25ee3d3b4084ad44ff761426f906a9c536cabd0127d17413d0585", "url": "https://github.com/cosmobobak/viridithas-networks/releases/download/v109/sandhi-s2-b200.nnue.zst"}
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	﻿2026-10-19T08:23:50.3016802Z ##[group]Run python scripts/fetch_aster_network.py
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.3017548Z ^[[36;1mpython scripts/fetch_aster_network.py^[[0m
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.3089790Z shell: /usr/bin/bash -e {0}
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.3090059Z env:
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.3090256Z   CARGO_HOME: /home/runner/.cargo
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.3090524Z   CARGO_INCREMENTAL: 0
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.3090748Z   CARGO_TERM_COLOR: always
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.3091074Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.3091538Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.3091970Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.3092367Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.3092748Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.3093136Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.3093462Z ##[endgroup]
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7135374Z Traceback (most recent call last):
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7143701Z   File "/home/runner/work/aster-chess/aster-chess/scripts/fetch_aster_network.py", line 35, in <module>
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7144463Z     main()
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7145103Z   File "/home/runner/work/aster-chess/aster-chess/scripts/fetch_aster_network.py", line 25, in main
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7145857Z     urllib.request.urlretrieve(URL, temporary)
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7147239Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 240, in urlretrieve
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7285505Z     with contextlib.closing(urlopen(url, data)) as fp:
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7286351Z                             ^^^^^^^^^^^^^^^^^^
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7287947Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 215, in urlopen
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7289288Z     return opener.open(url, data, timeout)
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7290040Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7291338Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 521, in open
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7341459Z     response = meth(req, response)
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7342148Z                ^^^^^^^^^^^^^^^^^^^
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7343577Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 630, in http_response
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7344978Z     response = self.parent.error(
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7345654Z                ^^^^^^^^^^^^^^^^^^
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7347463Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 553, in error
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7348805Z     result = self._call_chain(*args)
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7358123Z              ^^^^^^^^^^^^^^^^^^^^^^^
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7359372Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 492, in _call_chain
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7360346Z     result = func(*args)
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7360744Z              ^^^^^^^^^^^
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7361612Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 745, in http_error_302
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7362615Z     return self.parent.open(new, timeout=req.timeout)
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7363139Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7363961Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 521, in open
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7364718Z     response = meth(req, response)
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7365107Z                ^^^^^^^^^^^^^^^^^^^
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7365864Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 630, in http_response
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7366954Z     response = self.parent.error(
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7367344Z                ^^^^^^^^^^^^^^^^^^
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7368063Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 559, in error
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7368799Z     return self._call_chain(*args)
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7369180Z            ^^^^^^^^^^^^^^^^^^^^^^^
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7370306Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 492, in _call_chain
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7371037Z     result = func(*args)
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7371369Z              ^^^^^^^^^^^
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7372117Z   File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/urllib/request.py", line 639, in http_error_default
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7373224Z     raise HTTPError(req.full_url, code, msg, hdrs, fp)
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7373845Z urllib.error.HTTPError: HTTP Error 403: Forbidden
+rust (ubuntu-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:23:50.7475703Z ##[error]Process completed with exit code 1.
+rust (ubuntu-latest)	Post Run actions/checkout@v4	﻿2026-10-19T08:23:50.7644040Z Post job cleanup.
+rust (ubuntu-latest)	Post Run actions/checkout@v4	2026-10-19T08:23:50.8505349Z [command]/usr/bin/git version
+rust (ubuntu-latest)	Post Run actions/checkout@v4	2026-10-19T08:23:50.8551983Z git version 2.55.0
+rust (ubuntu-latest)	Post Run actions/checkout@v4	2026-10-19T08:23:50.8624763Z Temporarily overriding HOME='/home/runner/work/_temp/5fe93135-bc41-4c8c-a914-d54d9466ac12' before making global git config changes
+rust (ubuntu-latest)	Post Run actions/checkout@v4	2026-10-19T08:23:50.8626772Z Adding repository directory to the temporary git global config as a safe directory
+rust (ubuntu-latest)	Post Run actions/checkout@v4	2026-10-19T08:23:50.8631051Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/aster-chess/aster-chess
+rust (ubuntu-latest)	Post Run actions/checkout@v4	2026-10-19T08:23:50.8673421Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+rust (ubuntu-latest)	Post Run actions/checkout@v4	2026-10-19T08:23:50.8712387Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+rust (ubuntu-latest)	Post Run actions/checkout@v4	2026-10-19T08:23:50.8987938Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+rust (ubuntu-latest)	Post Run actions/checkout@v4	2026-10-19T08:23:50.9021353Z http.https://github.com/.extraheader
+rust (ubuntu-latest)	Post Run actions/checkout@v4	2026-10-19T08:23:50.9044075Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+rust (ubuntu-latest)	Post Run actions/checkout@v4	2026-10-19T08:23:50.9077456Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+rust (ubuntu-latest)	Post Run actions/checkout@v4	2026-10-19T08:23:50.9448403Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+rust (ubuntu-latest)	Post Run actions/checkout@v4	2026-10-19T08:23:50.9507922Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+rust (ubuntu-latest)	Complete job	﻿2026-10-19T08:23:50.9971224Z Cleaning up orphan processes
+rust (ubuntu-latest)	Complete job	2026-10-19T08:23:51.0263623Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+rust (windows-latest)	Set up job	﻿2026-10-19T08:23:25.0359934Z Current runner version: '2.337.0'
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0436347Z ##[group]Runner Image Provisioner
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0437754Z Hosted Compute Agent
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0438719Z Version: 20261002.596
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0439891Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0441259Z Build Date: 2026-10-02T22:28:27Z
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0442389Z Worker ID: {56b3a125-7e85-4972-998f-824867fb63bc}
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0443581Z Region: centralus
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0444576Z Cloud: Azure
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0445555Z ##[endgroup]
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0447875Z ##[group]Operating System
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0448958Z Microsoft Windows Server 2025
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0449958Z 10.0.26100
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0450881Z Datacenter
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0451801Z ##[endgroup]
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0452742Z ##[group]Runner Image
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0453767Z Image: windows-2025-vs2026
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0454800Z Version: 20261007.264.1
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0457371Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261007.264/images/windows/Windows2025-VS2026-Readme.md
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0461143Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261007.264
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0462966Z ##[endgroup]
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0465084Z ##[group]GITHUB_TOKEN Permissions
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0468130Z Contents: read
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0469078Z Metadata: read
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0470031Z Packages: read
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0470938Z ##[endgroup]
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0473996Z Secret source: Actions
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0475556Z Cache mode: write
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0477214Z Prepare workflow directory
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0900232Z Prepare all required actions
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.0975451Z Getting action download info
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.3708622Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.5349979Z Download action repository 'dtolnay/rust-toolchain@stable' (SHA:b725eda525362e7cf34af9a7243cac1e3f01a7ec)
+rust (windows-latest)	Set up job	2026-10-19T08:23:25.7123943Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+rust (windows-latest)	Set up job	2026-10-19T08:23:26.0474817Z Complete job name: rust (windows-latest)
+rust (windows-latest)	Run actions/checkout@v4	﻿2026-10-19T08:23:26.2062826Z ##[group]Run actions/checkout@v4
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.2063918Z with:
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.2064346Z   repository: p3n1cillin/aster-chess
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.2068876Z   token: ***
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.2069289Z   ssh-strict: true
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.2069686Z   ssh-user: git
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.2070090Z   persist-credentials: true
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.2070541Z   clean: true
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.2070943Z   sparse-checkout-cone-mode: true
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.2071773Z   fetch-depth: 1
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.2072187Z   fetch-tags: false
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.2072598Z   show-progress: true
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.2073013Z   lfs: false
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.2073390Z   submodules: false
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.2073804Z   set-safe-directory: true
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.2074308Z   allow-unsafe-pr-checkout: false
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.2075113Z ##[endgroup]
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.3742257Z Syncing repository: p3n1cillin/aster-chess
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.3745187Z ##[group]Getting Git version info
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.3746566Z Working directory is 'D:\a\aster-chess\aster-chess'
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.4713377Z [command]"C:\Program Files\Git\bin\git.exe" version
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.8100181Z git version 2.56.0.windows.2
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.8159748Z ##[endgroup]
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.8180157Z Temporarily overriding HOME='D:\a\_temp\ff358c62-2123-4f20-a96f-602b8046f905' before making global git config changes
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.8182606Z Adding repository directory to the temporary git global config as a safe directory
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.8191851Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\aster-chess\aster-chess
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.8902201Z Deleting the contents of 'D:\a\aster-chess\aster-chess'
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.8909805Z ##[group]Initializing the repository
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.8918666Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\aster-chess\aster-chess
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.9902644Z Initialized empty Git repository in D:/a/aster-chess/aster-chess/.git/
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:26.9964077Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/p3n1cillin/aster-chess
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:27.0843179Z ##[endgroup]
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:27.0846876Z ##[group]Disabling automatic garbage collection
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:27.0854785Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:27.1490455Z ##[endgroup]
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:27.1493820Z ##[group]Setting up auth
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:27.1504305Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:27.1940745Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:28.7332226Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:28.7817601Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:29.4028579Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:29.4486448Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:30.0866420Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:30.1293072Z ##[endgroup]
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:30.1293977Z ##[group]Fetching the repository
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:30.1313443Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +32633a50d813b7dce46f6181f55e643dfe68b315:refs/remotes/origin/codex/aster-branding
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:41.5008104Z From https://github.com/p3n1cillin/aster-chess
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:41.5009676Z  * [new ref]         32633a50d813b7dce46f6181f55e643dfe68b315 -> origin/codex/aster-branding
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:41.5063975Z ##[endgroup]
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:41.5064635Z ##[group]Determining the checkout info
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:41.5068461Z ##[endgroup]
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:41.5081546Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:41.7495476Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:41.7970518Z ##[group]Checking out the ref
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:41.7971514Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B codex/aster-branding refs/remotes/origin/codex/aster-branding
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:42.9060986Z Updating files:   8% (400/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:42.9387661Z Updating files:   9% (443/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:42.9586244Z Updating files:  10% (492/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:42.9661331Z Updating files:  11% (542/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:42.9870640Z Updating files:  12% (591/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.0147678Z Updating files:  13% (640/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.0341113Z Updating files:  14% (689/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.0549719Z Updating files:  15% (738/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.0741206Z Updating files:  16% (788/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.4835532Z Updating files:  17% (837/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.4986598Z Updating files:  18% (886/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.5229933Z Updating files:  19% (935/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.5427513Z Updating files:  20% (984/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.5580082Z Updating files:  21% (1033/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.6105119Z Updating files:  22% (1083/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.6240445Z Updating files:  23% (1132/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.6377247Z Updating files:  24% (1181/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.6530244Z Updating files:  25% (1230/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.6666201Z Updating files:  26% (1279/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.6794101Z Updating files:  27% (1329/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.6929018Z Updating files:  28% (1378/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.7056651Z Updating files:  29% (1427/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.7181832Z Updating files:  30% (1476/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.7309010Z Updating files:  31% (1525/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.7430434Z Updating files:  32% (1575/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.7553955Z Updating files:  33% (1624/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.7705620Z Updating files:  34% (1673/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.7830307Z Updating files:  35% (1722/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.7958781Z Updating files:  36% (1771/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.8087843Z Updating files:  37% (1821/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.8219837Z Updating files:  38% (1870/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.8342462Z Updating files:  39% (1919/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.8469329Z Updating files:  40% (1968/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.8600026Z Updating files:  41% (2017/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.8693114Z Updating files:  42% (2066/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.8753092Z Updating files:  42% (2102/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.8879491Z Updating files:  43% (2116/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.8999706Z Updating files:  44% (2165/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.9121810Z Updating files:  45% (2214/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.9244059Z Updating files:  46% (2263/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.9384709Z Updating files:  47% (2312/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.9741951Z Updating files:  48% (2362/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:43.9866876Z Updating files:  49% (2411/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.0287263Z Updating files:  50% (2460/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.0492179Z Updating files:  51% (2509/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.0653269Z Updating files:  52% (2558/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.0855207Z Updating files:  53% (2608/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.1034683Z Updating files:  54% (2657/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.1199475Z Updating files:  55% (2706/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.1618591Z Updating files:  56% (2755/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.1774660Z Updating files:  57% (2804/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.1949932Z Updating files:  58% (2854/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.2128136Z Updating files:  59% (2903/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.2297836Z Updating files:  60% (2952/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.2476692Z Updating files:  61% (3001/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.2614788Z Updating files:  62% (3050/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.2824906Z Updating files:  63% (3099/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.2962639Z Updating files:  64% (3149/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.3083566Z Updating files:  65% (3198/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.3236262Z Updating files:  66% (3247/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.3362475Z Updating files:  67% (3296/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.3485017Z Updating files:  68% (3345/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.3608819Z Updating files:  69% (3395/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.3734322Z Updating files:  70% (3444/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.3856293Z Updating files:  71% (3493/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.3988010Z Updating files:  72% (3542/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.5306121Z Updating files:  73% (3591/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.7675797Z Updating files:  74% (3641/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.8919717Z Updating files:  75% (3690/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:44.9901731Z Updating files:  75% (3715/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.0472779Z Updating files:  76% (3739/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.0811046Z Updating files:  77% (3788/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.0963970Z Updating files:  78% (3837/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.1132405Z Updating files:  79% (3887/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.1656244Z Updating files:  80% (3936/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.1762649Z Updating files:  81% (3985/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.2198729Z Updating files:  82% (4034/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.2363676Z Updating files:  83% (4083/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.2484378Z Updating files:  84% (4132/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.2612354Z Updating files:  85% (4182/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.2726064Z Updating files:  86% (4231/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.2891840Z Updating files:  87% (4280/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.3061212Z Updating files:  88% (4329/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.3226134Z Updating files:  89% (4378/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.3366956Z Updating files:  90% (4428/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.3534221Z Updating files:  91% (4477/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.3695051Z Updating files:  92% (4526/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.3819144Z Updating files:  93% (4575/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.3938485Z Updating files:  94% (4624/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.4058933Z Updating files:  95% (4674/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.4170291Z Updating files:  96% (4723/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.4292114Z Updating files:  97% (4772/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.4440346Z Updating files:  98% (4821/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.4597323Z Updating files:  99% (4870/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.4597826Z Updating files: 100% (4919/4919)
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.4598256Z Updating files: 100% (4919/4919), done.
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.4805079Z Switched to a new branch 'codex/aster-branding'
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.4826240Z branch 'codex/aster-branding' set up to track 'origin/codex/aster-branding'.
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.5262459Z ##[endgroup]
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.5700978Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+rust (windows-latest)	Run actions/checkout@v4	2026-10-19T08:23:45.6073548Z 32633a50d813b7dce46f6181f55e643dfe68b315
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	﻿2026-10-19T08:23:45.6685539Z ##[group]Run dtolnay/rust-toolchain@stable
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6685981Z with:
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6686202Z   toolchain: 1.99.1
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6686451Z   components: rustfmt, clippy
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6686720Z ##[endgroup]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6757206Z ##[start-action display=Parse toolchain version;id=__dtolnay_rust-toolchain.parse]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6949250Z ##[group]Run if [[ -z $toolchain ]]; then
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6949666Z ^[[36;1mif [[ -z $toolchain ]]; then^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6950206Z ^[[36;1m  # GitHub does not enforce `required: true` inputs itself. https://github.com/actions/runner/issues/1070^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6950757Z ^[[36;1m  echo "'toolchain' is a required input" >&2^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6951059Z ^[[36;1m  exit 1^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6951379Z ^[[36;1melif [[ $toolchain =~ ^stable' '[0-9]+' '(year|month|week|day)s?' 'ago$ ]]; then^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6951784Z ^[[36;1m  if [[ Windows == macOS ]]; then^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6952302Z ^[[36;1m    echo "toolchain=1.$((($(date -v-$(sed 's/stable \([0-9]*\) \(.\).*/\1\2/' <<< $toolchain) +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6952848Z ^[[36;1m  else^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6953229Z ^[[36;1m    echo "toolchain=1.$((($(date --date "${toolchain#stable }" +%s)/60/60/24-16569)/7/6))" >> $GITHUB_OUTPUT^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6953676Z ^[[36;1m  fi^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6953961Z ^[[36;1melif [[ $toolchain =~ ^stable' 'minus' '[0-9]+' 'releases?$ ]]; then^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6954491Z ^[[36;1m  echo "toolchain=1.$((($(date +%s)/60/60/24-16569)/7/6-${toolchain//[^0-9]/}))" >> $GITHUB_OUTPUT^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6954942Z ^[[36;1melif [[ $toolchain =~ ^1\.[0-9]+$ ]]; then^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6955454Z ^[[36;1m  echo "toolchain=1.$((i=${toolchain#1.}, c=($(date +%s)/60/60/24-16569)/7/6, i+9*i*(10*i<=c)+90*i*(100*i<=c)))" >> $GITHUB_OUTPUT^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6955938Z ^[[36;1melse^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6956131Z ^[[36;1m  delimiter=EOF^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6956416Z ^[[36;1m  while [[ $toolchain == *$delimiter* ]]; do delimiter+=_; done^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6956912Z ^[[36;1m  printf 'toolchain<<%s\n%s\n%s\n' "$delimiter" "$toolchain" "$delimiter" >> $GITHUB_OUTPUT^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6957313Z ^[[36;1mfi^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6978574Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6978995Z env:
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6979175Z   toolchain: 1.99.1
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.6979366Z ##[endgroup]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8867773Z ##[end-action id=__dtolnay_rust-toolchain.parse;outcome=success;conclusion=success;duration_ms=210]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.8872483Z ##[start-action display=Set $CARGO_HOME;id=__dtolnay_rust-toolchain.__run]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.9031243Z ##[group]Run echo CARGO_HOME=${CARGO_HOME:-"$USERPROFILE\.cargo"} >> $GITHUB_ENV
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.9031785Z ^[[36;1mecho CARGO_HOME=${CARGO_HOME:-"$USERPROFILE\.cargo"} >> $GITHUB_ENV^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.9048500Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.9048924Z ##[endgroup]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.9465101Z ##[end-action id=__dtolnay_rust-toolchain.__run;outcome=success;conclusion=success;duration_ms=59]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.9468005Z ##[start-action display=Install rustup if needed;id=__dtolnay_rust-toolchain.__run_2]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.9479325Z ##[end-action id=__dtolnay_rust-toolchain.__run_2;outcome=skipped;conclusion=skipped;duration_ms=0]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.9481441Z ##[start-action display=Install rustup if needed on windows;id=__dtolnay_rust-toolchain.__run_3]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.9636043Z ##[group]Run if ! command -v rustup &>/dev/null; then
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.9636440Z ^[[36;1mif ! command -v rustup &>/dev/null; then^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.9637240Z ^[[36;1m  curl --proto '=https' --tlsv1.2 --retry 10 --retry-connrefused --location --silent --show-error --fail https://win.rustup.rs/x86_64 --output 'D:\a\_temp\rustup-init.exe'^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.9638099Z ^[[36;1m  'D:\a\_temp\rustup-init.exe' --default-toolchain none --no-modify-path -y^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.9640398Z ^[[36;1m  echo "$CARGO_HOME\bin" >> $GITHUB_PATH^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.9640670Z ^[[36;1mfi^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.9656881Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.9657268Z env:
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.9657451Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:45.9657699Z ##[endgroup]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0206369Z ##[end-action id=__dtolnay_rust-toolchain.__run_3;outcome=success;conclusion=success;duration_ms=72]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0222994Z ##[start-action display=rustup toolchain install 1.99.1;id=__dtolnay_rust-toolchain.__run_4]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0381633Z ##[group]Run set -f  # split targets and components on commas and whitespace, without glob expansion
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0382320Z ^[[36;1mset -f  # split targets and components on commas and whitespace, without glob expansion^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0382768Z ^[[36;1mflags=()^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0383032Z ^[[36;1mfor t in ${targets//,/ }; do flags+=(--target "$t"); done^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0383504Z ^[[36;1mfor c in ${components//,/ }; do flags+=(--component "$c"); done^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0384003Z ^[[36;1mif [[ $toolchain == nightly && -n $components ]]; then flags+=(--allow-downgrade); fi^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0384408Z ^[[36;1mlog=$(mktemp)^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0384617Z ^[[36;1mtrap 'rm -f "$log"' EXIT^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0384856Z ^[[36;1mfor attempt in 1 2 3 4 5; do^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0385419Z ^[[36;1m  if rustup toolchain install "$toolchain" "${flags[@]}" --profile minimal --no-self-update --force-non-host 2>&1 | tee "$log"; then^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0385986Z ^[[36;1m    break^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0386236Z ^[[36;1m  else^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0386437Z ^[[36;1m    status=$?^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0386626Z ^[[36;1m  fi^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0386888Z ^[[36;1m  if [[ $attempt == 5 ]] || ! grep -Fq 'checksum failed for ' "$log" \^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0387427Z ^[[36;1m      || ! grep -Fq 'this is likely due to an ongoing update of the official release server' "$log"; then^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0387883Z ^[[36;1m    exit "$status"^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0388083Z ^[[36;1m  fi^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0388415Z ^[[36;1m  echo "Retrying rustup toolchain install in 30 seconds (retry $attempt of 4)" >&2^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0388817Z ^[[36;1m  sleep 30^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0388997Z ^[[36;1mdone^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0406130Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0406527Z env:
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0406718Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0406975Z   toolchain: 1.99.1
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0407913Z   targets: 
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0408105Z   components: rustfmt, clippy
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0408348Z   RUSTUP_PERMIT_COPY_RENAME: 1
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.0408566Z ##[endgroup]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:46.8282141Z info: syncing channel updates for 1.99.1-x86_64-pc-windows-msvc
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:47.4462795Z info: latest update on 2026-10-15 for version 1.99.1 (58cf8f9c3 2026-10-13)
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:47.4621425Z info: downloading 5 components
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.1208446Z 
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.1526658Z   1.99.1-x86_64-pc-windows-msvc installed - rustc 1.99.1 (58cf8f9c3 2026-10-13)
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.1527539Z 
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.2032771Z ##[end-action id=__dtolnay_rust-toolchain.__run_4;outcome=success;conclusion=success;duration_ms=13180]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.2042609Z ##[start-action display=rustup default 1.99.1;id=__dtolnay_rust-toolchain.__run_5]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.2197153Z ##[group]Run rustup default "$toolchain" --force-non-host
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.2197615Z ^[[36;1mrustup default "$toolchain" --force-non-host^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.2214608Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.2215011Z env:
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.2215201Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.2215455Z   toolchain: 1.99.1
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.2215645Z ##[endgroup]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.2988765Z info: using existing install for 1.99.1-x86_64-pc-windows-msvc
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.3134002Z info: default toolchain set to 1.99.1-x86_64-pc-windows-msvc
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.3139061Z 
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.3360810Z   1.99.1-x86_64-pc-windows-msvc unchanged - rustc 1.99.1 (58cf8f9c3 2026-10-13)
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.3361232Z 
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.3365434Z info: note that the toolchain '1.99.1-x86_64-pc-windows-msvc' is currently in use (overridden by 'D:\a\aster-chess\aster-chess\rust-toolchain.toml')
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.3449929Z ##[end-action id=__dtolnay_rust-toolchain.__run_5;outcome=success;conclusion=success;duration_ms=140]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.3454025Z ##[start-action display=Create cachekey;id=__dtolnay_rust-toolchain.rustc-version]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.3592451Z ##[group]Run DATE=$(rustc +"$toolchain" --version --verbose | sed -ne 's/^commit-date: \(20[0-9][0-9]\)-\([01][0-9]\)-\([0-3][0-9]\)$/\1\2\3/p')
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.3593407Z ^[[36;1mDATE=$(rustc +"$toolchain" --version --verbose | sed -ne 's/^commit-date: \(20[0-9][0-9]\)-\([01][0-9]\)-\([0-3][0-9]\)$/\1\2\3/p')^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.3594385Z ^[[36;1mHASH=$(rustc +"$toolchain" --version --verbose | sed -ne 's/^commit-hash: //p')^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.3594941Z ^[[36;1mecho "cachekey=$(echo $DATE$HASH | head -c12)" >> $GITHUB_OUTPUT^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.3611737Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.3612162Z env:
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.3612362Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.3612625Z   toolchain: 1.99.1
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:23:59.3612817Z ##[endgroup]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.3966840Z ##[end-action id=__dtolnay_rust-toolchain.rustc-version;outcome=success;conclusion=success;duration_ms=1051]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.3970144Z ##[start-action display=Disable incremental compilation;id=__dtolnay_rust-toolchain.__run_6]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4117573Z ##[group]Run if [ -z "${CARGO_INCREMENTAL+set}" ]; then
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4117978Z ^[[36;1mif [ -z "${CARGO_INCREMENTAL+set}" ]; then^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4118319Z ^[[36;1m  echo CARGO_INCREMENTAL=0 >> $GITHUB_ENV^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4118597Z ^[[36;1mfi^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4134227Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4134635Z env:
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4134835Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4135094Z ##[endgroup]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4562149Z ##[end-action id=__dtolnay_rust-toolchain.__run_6;outcome=success;conclusion=success;duration_ms=59]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4565299Z ##[start-action display=Enable colors in Cargo output;id=__dtolnay_rust-toolchain.__run_7]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4701208Z ##[group]Run if [ -z "${CARGO_TERM_COLOR+set}" ]; then
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4701587Z ^[[36;1mif [ -z "${CARGO_TERM_COLOR+set}" ]; then^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4701918Z ^[[36;1m  echo CARGO_TERM_COLOR=always >> $GITHUB_ENV^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4702199Z ^[[36;1mfi^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4717767Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4718189Z env:
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4718386Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4718652Z   CARGO_INCREMENTAL: 0
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.4718854Z ##[endgroup]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5140571Z ##[end-action id=__dtolnay_rust-toolchain.__run_7;outcome=success;conclusion=success;duration_ms=57]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5145041Z ##[start-action display=Enable Cargo sparse registry;id=__dtolnay_rust-toolchain.__run_8]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5281036Z ##[group]Run # implemented in 1.66, stabilized in 1.68, made default in 1.70
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5281594Z ^[[36;1m# implemented in 1.66, stabilized in 1.68, made default in 1.70^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5282330Z ^[[36;1mif [ -z "${CARGO_REGISTRIES_CRATES_IO_PROTOCOL+set}" -o -f "D:\a\_temp"/.implicit_cargo_registries_crates_io_protocol ]; then^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5283255Z ^[[36;1m  if rustc +"$toolchain" --version --verbose | grep -q '^release: 1\.6[89]\.'; then^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5284082Z ^[[36;1m    touch "D:\a\_temp"/.implicit_cargo_registries_crates_io_protocol || true^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5284592Z ^[[36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse >> $GITHUB_ENV^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5285131Z ^[[36;1m  elif rustc +"$toolchain" --version --verbose | grep -q '^release: 1\.6[67]\.'; then^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5285684Z ^[[36;1m    touch "D:\a\_temp"/.implicit_cargo_registries_crates_io_protocol || true^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5286185Z ^[[36;1m    echo CARGO_REGISTRIES_CRATES_IO_PROTOCOL=git >> $GITHUB_ENV^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5286537Z ^[[36;1m  fi^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5286714Z ^[[36;1mfi^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5301600Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5302007Z env:
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5302224Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5302494Z   CARGO_INCREMENTAL: 0
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5302700Z   CARGO_TERM_COLOR: always
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5302918Z   toolchain: 1.99.1
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.5303110Z ##[endgroup]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.7441886Z ##[end-action id=__dtolnay_rust-toolchain.__run_8;outcome=success;conclusion=success;duration_ms=229]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.7446794Z ##[start-action display=Work around spurious network errors in curl 8.0;id=__dtolnay_rust-toolchain.__run_9]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.7578249Z ##[group]Run # https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/timeout.20investigation
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.7579047Z ^[[36;1m# https://rust-lang.zulipchat.com/#narrow/stream/246057-t-cargo/topic/timeout.20investigation^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.7579995Z ^[[36;1mif rustc +"$toolchain" --version --verbose | grep -q '^release: 1\.7[01]\.'; then^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.7580608Z ^[[36;1m  echo CARGO_HTTP_MULTIPLEXING=false >> $GITHUB_ENV^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.7581053Z ^[[36;1mfi^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.7595679Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.7596081Z env:
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.7596290Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.7596595Z   CARGO_INCREMENTAL: 0
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.7596833Z   CARGO_TERM_COLOR: always
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.7597083Z   toolchain: 1.99.1
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.7597269Z ##[endgroup]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.8870949Z ##[end-action id=__dtolnay_rust-toolchain.__run_9;outcome=success;conclusion=success;duration_ms=142]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.8891393Z ##[start-action display=rustc +1.99.1 --version --verbose;id=__dtolnay_rust-toolchain.__run_10]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.9065331Z ##[group]Run rustc +"$toolchain" --version --verbose
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.9065749Z ^[[36;1mrustc +"$toolchain" --version --verbose^[[0m
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.9081379Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.9081787Z env:
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.9081988Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.9082249Z   CARGO_INCREMENTAL: 0
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.9082696Z   CARGO_TERM_COLOR: always
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.9082928Z   toolchain: 1.99.1
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.9083124Z ##[endgroup]
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.9946233Z rustc 1.99.1 (58cf8f9c3 2026-10-13)
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.9946706Z binary: rustc
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.9946995Z commit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.9947356Z commit-date: 2026-10-13
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.9947615Z host: x86_64-pc-windows-msvc
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.9947874Z release: 1.99.1
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:00.9949196Z LLVM version: 23.1.1
+rust (windows-latest)	Run dtolnay/rust-toolchain@stable	2026-10-19T08:24:01.0075686Z ##[end-action id=__dtolnay_rust-toolchain.__run_10;outcome=success;conclusion=success;duration_ms=118]
+rust (windows-latest)	Run actions/setup-python@v5	﻿2026-10-19T08:24:01.0314477Z ##[group]Run actions/setup-python@v5
+rust (windows-latest)	Run actions/setup-python@v5	2026-10-19T08:24:01.0314846Z with:
+rust (windows-latest)	Run actions/setup-python@v5	2026-10-19T08:24:01.0315037Z   python-version: 3.12
+rust (windows-latest)	Run actions/setup-python@v5	2026-10-19T08:24:01.0315256Z   check-latest: false
+rust (windows-latest)	Run actions/setup-python@v5	2026-10-19T08:24:01.0317859Z   token: ***
+rust (windows-latest)	Run actions/setup-python@v5	2026-10-19T08:24:01.0318057Z   update-environment: true
+rust (windows-latest)	Run actions/setup-python@v5	2026-10-19T08:24:01.0318284Z   allow-prereleases: false
+rust (windows-latest)	Run actions/setup-python@v5	2026-10-19T08:24:01.0318491Z   freethreaded: false
+rust (windows-latest)	Run actions/setup-python@v5	2026-10-19T08:24:01.0318672Z env:
+rust (windows-latest)	Run actions/setup-python@v5	2026-10-19T08:24:01.0318851Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+rust (windows-latest)	Run actions/setup-python@v5	2026-10-19T08:24:01.0319106Z   CARGO_INCREMENTAL: 0
+rust (windows-latest)	Run actions/setup-python@v5	2026-10-19T08:24:01.0319311Z   CARGO_TERM_COLOR: always
+rust (windows-latest)	Run actions/setup-python@v5	2026-10-19T08:24:01.0319508Z ##[endgroup]
+rust (windows-latest)	Run actions/setup-python@v5	2026-10-19T08:24:01.2077998Z ##[group]Installed versions
+rust (windows-latest)	Run actions/setup-python@v5	2026-10-19T08:24:01.2284164Z (node:3680) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+rust (windows-latest)	Run actions/setup-python@v5	2026-10-19T08:24:01.2285489Z (Use `node --trace-deprecation ...` to show where the warning was created)
+rust (windows-latest)	Run actions/setup-python@v5	2026-10-19T08:24:01.2286677Z Successfully set up CPython (3.12.10)
+rust (windows-latest)	Run actions/setup-python@v5	2026-10-19T08:24:01.2287537Z ##[endgroup]
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	﻿2026-10-19T08:24:01.2602593Z ##[group]Run python -m pip install -r requirements-dev.txt
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:01.2603114Z ^[[36;1mpython -m pip install -r requirements-dev.txt^[[0m
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:01.3451531Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:01.3452056Z env:
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:01.3452330Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:01.3452697Z   CARGO_INCREMENTAL: 0
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:01.3452983Z   CARGO_TERM_COLOR: always
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:01.3453427Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:01.3454139Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:01.3454810Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:01.3455853Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:01.3456447Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:01.3456937Z ##[endgroup]
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:06.4439614Z Collecting python-chess==1.999 (from -r requirements-dev.txt (line 1))
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:06.6887937Z   Downloading python_chess-1.999-py3-none-any.whl.metadata (776 bytes)
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:06.7595567Z Collecting chess==1.11.2 (from -r requirements-dev.txt (line 2))
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:06.7799800Z   Downloading chess-1.11.2.tar.gz (6.1 MB)
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:07.2869347Z      ---------------------------------------- 6.1/6.1 MB 14.5 MB/s  0:00:00
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:07.8694571Z   Installing build dependencies: started
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:10.5311935Z   Installing build dependencies: finished with status 'done'
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:10.5330340Z   Getting requirements to build wheel: started
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:11.4000766Z   Getting requirements to build wheel: finished with status 'done'
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:11.4033960Z   Preparing metadata (pyproject.toml): started
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:11.9339355Z   Preparing metadata (pyproject.toml): finished with status 'done'
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:11.9574790Z Downloading python_chess-1.999-py3-none-any.whl (1.4 kB)
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:12.0034574Z Building wheels for collected packages: chess
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:12.0076224Z   Building wheel for chess (pyproject.toml): started
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:12.5274940Z   Building wheel for chess (pyproject.toml): finished with status 'done'
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:12.5299344Z   Created wheel for chess: filename=chess-1.11.2-py3-none-any.whl size=147920 sha256=d5da69e188dd9046e63b565e09c2c8b9b6a674cbf63c614397568328cb363e9c
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:12.5302913Z   Stored in directory: c:\users\runneradmin\appdata\local\pip\cache\wheels\83\1f\4e\8f4300f7dd554eb8de70ddfed96e94d3d030ace10c5b53d447
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:12.5343313Z Successfully built chess
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:12.5628724Z Installing collected packages: chess, python-chess
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:12.8491828Z 
+rust (windows-latest)	Run python -m pip install -r requirements-dev.txt	2026-10-19T08:24:12.8510716Z Successfully installed chess-1.11.2 python-chess-1.999
+rust (windows-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	﻿2026-10-19T08:24:13.2715330Z ##[group]Run python -m unittest discover -s tests -p test_match_recovery.py
+rust (windows-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:24:13.2716245Z ^[[36;1mpython -m unittest discover -s tests -p test_match_recovery.py^[[0m
+rust (windows-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:24:13.2794020Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+rust (windows-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:24:13.2794408Z env:
+rust (windows-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:24:13.2794615Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+rust (windows-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:24:13.2794889Z   CARGO_INCREMENTAL: 0
+rust (windows-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:24:13.2795096Z   CARGO_TERM_COLOR: always
+rust (windows-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:24:13.2795408Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+rust (windows-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:24:13.2795902Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+rust (windows-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:24:13.2796387Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+rust (windows-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:24:13.2796814Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+rust (windows-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:24:13.2797239Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+rust (windows-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:24:13.2797579Z ##[endgroup]
+rust (windows-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:24:14.5336770Z .....
+rust (windows-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:24:14.5337436Z ----------------------------------------------------------------------
+rust (windows-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:24:14.5338068Z Ran 5 tests in 0.336s
+rust (windows-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:24:14.5338310Z 
+rust (windows-latest)	Run python -m unittest discover -s tests -p test_match_recovery.py	2026-10-19T08:24:14.5338423Z OK
+rust (windows-latest)	Run python scripts/fetch_rust_network.py	﻿2026-10-19T08:24:14.6780545Z ##[group]Run python scripts/fetch_rust_network.py
+rust (windows-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:24:14.6781028Z ^[[36;1mpython scripts/fetch_rust_network.py^[[0m
+rust (windows-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:24:14.6856473Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+rust (windows-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:24:14.6856864Z env:
+rust (windows-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:24:14.6857072Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+rust (windows-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:24:14.6857347Z   CARGO_INCREMENTAL: 0
+rust (windows-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:24:14.6857562Z   CARGO_TERM_COLOR: always
+rust (windows-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:24:14.6857877Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+rust (windows-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:24:14.6858370Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+rust (windows-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:24:14.6858860Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+rust (windows-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:24:14.6859301Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+rust (windows-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:24:14.6859746Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+rust (windows-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:24:14.6860090Z ##[endgroup]
+rust (windows-latest)	Run python scripts/fetch_rust_network.py	2026-10-19T08:24:15.7958809Z {"status": "verified", "sha256": "066c172e22c25ee3d3b4084ad44ff761426f906a9c536cabd0127d17413d0585", "url": "https://github.com/cosmobobak/viridithas-networks/releases/download/v109/sandhi-s2-b200.nnue.zst"}
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	﻿2026-10-19T08:24:15.9508424Z ##[group]Run python scripts/fetch_aster_network.py
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:15.9508931Z ^[[36;1mpython scripts/fetch_aster_network.py^[[0m
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:15.9590261Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:15.9590668Z env:
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:15.9590891Z   CARGO_HOME: C:\Users\runneradmin\.cargo
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:15.9591184Z   CARGO_INCREMENTAL: 0
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:15.9591411Z   CARGO_TERM_COLOR: always
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:15.9591758Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:15.9592280Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:15.9594238Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:15.9594709Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:15.9595189Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:15.9595544Z ##[endgroup]
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9394181Z Traceback (most recent call last):
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9403522Z   File "D:\a\aster-chess\aster-chess\scripts\fetch_aster_network.py", line 35, in <module>
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9404304Z     main()
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9404909Z   File "D:\a\aster-chess\aster-chess\scripts\fetch_aster_network.py", line 25, in main
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9405643Z     urllib.request.urlretrieve(URL, temporary)
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9406465Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\urllib\request.py", line 240, in urlretrieve
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9454007Z     with contextlib.closing(urlopen(url, data)) as fp:
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9454951Z                             ^^^^^^^^^^^^^^^^^^
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9455787Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\urllib\request.py", line 215, in urlopen
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9458796Z     return opener.open(url, data, timeout)
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9459488Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9460243Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\urllib\request.py", line 521, in open
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9464619Z     response = meth(req, response)
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9465155Z                ^^^^^^^^^^^^^^^^^^^
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9465936Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\urllib\request.py", line 630, in http_response
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9468642Z     response = self.parent.error(
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9469573Z                ^^^^^^^^^^^^^^^^^^
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9470239Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\urllib\request.py", line 553, in error
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9472521Z     result = self._call_chain(*args)
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9473432Z              ^^^^^^^^^^^^^^^^^^^^^^^
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9474145Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\urllib\request.py", line 492, in _call_chain
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9476567Z     result = func(*args)
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9477376Z              ^^^^^^^^^^^
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9478005Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\urllib\request.py", line 745, in http_error_302
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9483398Z     return self.parent.open(new, timeout=req.timeout)
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9484033Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9484636Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\urllib\request.py", line 521, in open
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9486894Z     response = meth(req, response)
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9487704Z                ^^^^^^^^^^^^^^^^^^^
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9488280Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\urllib\request.py", line 630, in http_response
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9490772Z     response = self.parent.error(
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9491595Z                ^^^^^^^^^^^^^^^^^^
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9492122Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\urllib\request.py", line 559, in error
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9494270Z     return self._call_chain(*args)
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9495319Z            ^^^^^^^^^^^^^^^^^^^^^^^
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9498610Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\urllib\request.py", line 492, in _call_chain
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9499348Z     result = func(*args)
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9499594Z              ^^^^^^^^^^^
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9500190Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\urllib\request.py", line 639, in http_error_default
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9502563Z     raise HTTPError(req.full_url, code, msg, hdrs, fp)
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:16.9503151Z urllib.error.HTTPError: HTTP Error 403: Forbidden
+rust (windows-latest)	Run python scripts/fetch_aster_network.py	2026-10-19T08:24:17.0771429Z ##[error]Process completed with exit code 1.
+rust (windows-latest)	Post Run actions/checkout@v4	﻿2026-10-19T08:24:17.1074858Z Post job cleanup.
+rust (windows-latest)	Post Run actions/checkout@v4	2026-10-19T08:24:17.3095735Z [command]"C:\Program Files\Git\bin\git.exe" version
+rust (windows-latest)	Post Run actions/checkout@v4	2026-10-19T08:24:17.3461986Z git version 2.56.0.windows.2
+rust (windows-latest)	Post Run actions/checkout@v4	2026-10-19T08:24:17.3541873Z Temporarily overriding HOME='D:\a\_temp\82904ecf-8664-4861-a38d-19a81fdf64cb' before making global git config changes
+rust (windows-latest)	Post Run actions/checkout@v4	2026-10-19T08:24:17.3543023Z Adding repository directory to the temporary git global config as a safe directory
+rust (windows-latest)	Post Run actions/checkout@v4	2026-10-19T08:24:17.3553871Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\aster-chess\aster-chess
+rust (windows-latest)	Post Run actions/checkout@v4	2026-10-19T08:24:17.4001275Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+rust (windows-latest)	Post Run actions/checkout@v4	2026-10-19T08:24:17.4457434Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+rust (windows-latest)	Post Run actions/checkout@v4	2026-10-19T08:24:18.1155351Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+rust (windows-latest)	Post Run actions/checkout@v4	2026-10-19T08:24:18.1559581Z http.https://github.com/.extraheader
+rust (windows-latest)	Post Run actions/checkout@v4	2026-10-19T08:24:18.1624884Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+rust (windows-latest)	Post Run actions/checkout@v4	2026-10-19T08:24:18.2041007Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+rust (windows-latest)	Post Run actions/checkout@v4	2026-10-19T08:24:18.8191869Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+rust (windows-latest)	Post Run actions/checkout@v4	2026-10-19T08:24:18.8592035Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+rust (windows-latest)	Complete job	﻿2026-10-19T08:24:19.5065423Z Cleaning up orphan processes
+rust (windows-latest)	Complete job	2026-10-19T08:24:19.5755077Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
