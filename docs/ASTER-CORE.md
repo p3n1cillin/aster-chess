@@ -66,3 +66,10 @@ identical full SHA-256. A fresh download passed locally; network bytes are uncha
 
 Pre-existing documentation updates for the completed speedtest command and
 tablebase development instructions were carried forward through the crate rename.
+
+Both complete [Windows/Linux CI jobs](../artifacts/ci/aster-branding-39222784183.json)
+pass at code commit `46a7b22`. The [completion record](../artifacts/research/aster-branding-completion-v1.json)
+records all four exact binaries preserved outside the disposable worktree, plus
+source hashes and CI provenance. Rust remains unrated; the
+[session record](../artifacts/ratings/session-20261019-branding.json) retains the
+historical C# local reference separately.

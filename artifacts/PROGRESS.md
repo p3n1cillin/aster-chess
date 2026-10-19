@@ -1,5 +1,40 @@
 # Project progress — 19 October 2026
 
+## Aster core branding and behavior-preserving review
+
+The native core is now `crates/aster-core` (`aster_core`, binary `aster-core`),
+with Aster identity in UCI, help/license text, diagnostics and browser state.
+The SIMD override is `ASTER_SIMD`; the helper is `fetch_aster_network.py`.
+Copyright notices, real upstream sources and historical opponents remain factual.
+Search, evaluation, weights, move generation, tablebases and dependency pins
+are unchanged. Source is formatted with rustfmt.
+
+The review also fixes clean-build integration: both model downloads and both
+crates' tests run in build helpers/CI, root `cargo run` selects the application,
+and source freezes include the actual playing core. The original download
+server's CI HTTP 403 is handled with a SHA-verified, commit-pinned official mirror.
+
+Both profiles pass **140 native tests**; all **51** bench search traces and
+**64** depth-nine positions match the unmodified baseline. Canonical nodes remain
+**2,497,913** across automatic, AVX2 and scalar modes. Independent checks pass
+**4630** positions, **14** perft cases, **94** edge cases, real HTTP/SSE, ready/stop,
+observer equivalence, **8** proof certificates (**42** positions) and five recovery
+tests. Both full Windows/Linux CI jobs pass at code commit `46a7b22`.
+
+The default core and its unmodified baseline both score **30/32**, with exact
+moves and nodes preserved. Legacy keeps its separate **32/32** tactical gate;
+CI requires the default core to match its frozen baseline exactly. Eight final
+counterbalanced timing pairs show no measured slowdown (median elapsed ratio
+0.98645); this short unisolated check does not guarantee identical speed or a
+reproducible gain. All earlier timings and the initial failed CI run are retained.
+
+See [the full record](../docs/ASTER-CORE.md),
+[completion evidence](research/aster-branding-completion-v1.json) and
+[current rating reference](ratings/session-20261019-branding.json). Rust is
+unrated; neither this refactor nor benchmark equality establishes Stockfish
+superiority or an Elo improvement.
+
+
 ## Aster 1.0.0: Stockfish 19 Rust core
 
 At the user's request, `crates/sf-port` ports Stockfish 19 to Rust and is now

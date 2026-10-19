@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-19",
+  "active_engine": "Aster Rust 1.0.0",
+  "active_binary_sha256": "6f45f681d842970446da7082668bc200f11e619585ccfb797bbe1f1e96a39fde",
+  "active_local_rating": null,
+  "public_elo": null,
+  "full_strength_stockfish_superiority": false,
+  "source_manifest": "artifacts/research/aster-branding-source-v2/manifest.json",
+  "status": "Branding refactor preserves deterministic search outputs; no playing-strength gain or calibration claimed.",
+  "historical_reference": {
+    "engine": "Aster C# 0.7.6-q-evasion-dev",
+    "binary_sha256": "a3994e4f350b2cfa261db5edc1e4ae5c332d85d4b3eaf34c0730267f3603d9a0",
+    "scale": "Local SF19 UCI_Elo-setting equivalent, 30ms/move, one thread, 64 MiB hash",
+    "estimate": 2319.019359271422,
+    "interval_95": [
+      2277.370617879139,
+      2360.3589099588767
+    ]
+  },
+  "limits": "Historical C# rating does not transfer to Rust. Port/bench equality is not a playing-strength rating. Timing is a local short check, not proof of exactly identical speed."
+}

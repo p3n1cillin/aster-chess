@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-19",
+  "timestamp_utc": "2026-10-19T08:32:24.229795+00:00",
+  "status": "Complete: rebranded/refactored on the active Rust branch with unchanged deterministic search behavior.",
+  "source_manifest": "artifacts/research/aster-branding-source-v2/manifest.json",
+  "source_manifest_sha256": "3cb6a26d995cd8629525a090b450ba9a770d1453fce4e6ceeb1c3a2ece9d04f2",
+  "ci_url": "https://github.com/p3n1cillin/aster-chess/actions/runs/39222784183",
+  "ci_code_commit": "46a7b224836577d07c6b059e53d97555204deeac",
+  "binaries": [
+    {
+      "label": "baseline-aster",
+      "sha256": "5e7a6d15fa295f1eb03b0aa2184228abc3567d9eae451a3b8afcde36f271c550",
+      "preserved_local_path": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\5e7a6d15fa295f1eb03b0aa2184228abc3567d9eae451a3b8afcde36f271c550\\aster.exe"
+    },
+    {
+      "label": "baseline-core",
+      "sha256": "f78138623379b310e975665e37ec0fe5fcfbf6c16c13c9c17dd2e181f5769647",
+      "preserved_local_path": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\f78138623379b310e975665e37ec0fe5fcfbf6c16c13c9c17dd2e181f5769647\\core.exe"
+    },
+    {
+      "label": "aster",
+      "sha256": "6f45f681d842970446da7082668bc200f11e619585ccfb797bbe1f1e96a39fde",
+      "preserved_local_path": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\6f45f681d842970446da7082668bc200f11e619585ccfb797bbe1f1e96a39fde\\aster.exe"
+    },
+    {
+      "label": "aster-core",
+      "sha256": "69d38872884ebd20735640c550dee70986c1e88e5ffb4b10ee027c1e064d9f56",
+      "preserved_local_path": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\69d38872884ebd20735640c550dee70986c1e88e5ffb4b10ee027c1e064d9f56\\aster-core.exe"
+    }
+  ],
+  "runtime_changed": "Identity strings, protocol-clean startup banner and browser identity label; no search/eval/weights/rule changes.",
+  "third_party_references": "Required credit/provenance and real dev tools/opponents remain accurately named.",
+  "public_elo": null,
+  "playing_strength_gain_claimed": false
+}
