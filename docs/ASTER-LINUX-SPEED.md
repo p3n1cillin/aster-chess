@@ -58,6 +58,16 @@ before **0.740** (IQR 0.706–0.779), after **0.838** (0.807–0.885), i.e. +13%
 The AVX-512 path is unchanged within noise. Both kernels are checked against
 the wide-sum oracle, including wrapping and in-place updates.
 
+## AVX2 first-layer branch fix
+
+Comparing wall-clock samples (perf) with instruction counts (callgrind) on the
+AVX2 path showed the first affine layer taking far more time than its
+instruction share: it scanned the 256 input chunks in 32 groups of 8 with a
+variable-length inner loop, which mispredicts at nearly every group exit. It
+now builds the 256-bit non-zero bitset first and iterates four 64-bit words, as
+upstream does. Exact (bench 1,559,611 on every path). Forced-AVX2 speed against
+the upstream bmi2 build, 10 concurrent rounds: **0.847 → 0.903**.
+
 ## Equal-time status match
 
 Predeclared plan, fastchess log/config, PGN and report:
@@ -74,6 +84,11 @@ The upstream AVX-512 ICL `write_multiple_dirties` (VBMI byte compress and
 permute of dirty threats) was ported and kept the bench signature on every
 path, but 16 concurrent rounds against the adopted build showed no difference
 beyond the VM's noise (median ratios 0.99–1.03 for identical binaries).
+
+Also neutral on this machine: Rust PGO trained on two benches (median ratio
+within noise of the default build), and making the scalar insertion sort use
+unchecked indexing (callgrind instruction count unchanged; the compiler had
+already removed the bounds checks).
 
 Compiling the whole crate with `-C target-cpu=native` (instead of x86-64-v3 plus
 runtime dispatch) was also neutral here (median ratio 0.99 to the default build).
