@@ -402,11 +402,20 @@ impl Position {
         let occ = self.pieces() ^ square_bb(self.king_square(self.side_to_move));
         let st = self.st();
         let mut all = 0;
-        for pt in PAWN..=KING {
-            let t = self.xattacks_by(pt, them, occ);
-            st.threats[pt].set(t);
-            all |= t;
+        // Unrolled so each piece type's attack lookup is specialized.
+        macro_rules! by {
+            ($pt:expr) => {{
+                let t = self.xattacks_by($pt, them, occ);
+                st.threats[$pt].set(t);
+                all |= t;
+            }};
         }
+        by!(PAWN);
+        by!(KNIGHT);
+        by!(BISHOP);
+        by!(ROOK);
+        by!(QUEEN);
+        by!(KING);
         st.threats[ALL_PIECES].set(all);
     }
 
