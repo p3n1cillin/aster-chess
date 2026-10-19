@@ -1,0 +1,81 @@
+{
+  "completed_utc": "2026-10-19T13:25:39.869661+00:00",
+  "status": "adopted_engineering_speed_improvement",
+  "tested_code_commit": "0f9a8fc8419b3bfa07071a352f27e8acd5ee9780",
+  "baseline_commit": "7aa677ec81f55f87dd1e48d6d0ead8973bb51b3d",
+  "binary_sha256": "9361d9c3b066514451bf09a1767c534d8197f5909f06151433f531768cc81100",
+  "canonical_bench_nodes": 1559611,
+  "exact_bench_runs": 86,
+  "exact_depth9_comparisons": 192,
+  "native_tests_per_profile": 153,
+  "lifetime_compile_fail_tests_per_profile": 2,
+  "independent_rule_positions_per_mode": 2630,
+  "perft_cases_per_mode": 14,
+  "games": 128,
+  "forfeits": 0,
+  "unresolved": 0,
+  "timing": {
+    "auto": {
+      "median_ratio": 1.0005988023952095,
+      "interval95": [
+        0.9976047904191616,
+        1.0029797547761619
+      ],
+      "passed": true
+    },
+    "avx2": {
+      "median_ratio": 0.8758881670857781,
+      "interval95": [
+        0.8735478959025471,
+        0.8769410858226647
+      ],
+      "passed": true
+    },
+    "scalar": {
+      "median_ratio": 0.6447054275755432,
+      "interval95": [
+        0.6409516943042538,
+        0.6457577955039884
+      ],
+      "passed": true
+    }
+  },
+  "controls": {
+    "auto": {
+      "games": 64,
+      "wins": 6,
+      "draws": 50,
+      "losses": 8,
+      "score": 0.484375,
+      "pair_bootstrap95": [
+        0.4375,
+        0.53125
+      ],
+      "passed": true
+    },
+    "avx2": {
+      "games": 64,
+      "wins": 13,
+      "draws": 46,
+      "losses": 5,
+      "score": 0.5625,
+      "pair_bootstrap95": [
+        0.5,
+        0.6171875
+      ],
+      "passed": true
+    }
+  },
+  "decision": "artifacts/verification/aster-indexed-accumulators-decision-v1.json",
+  "ci": "https://github.com/p3n1cillin/aster-chess/actions/runs/39258829100",
+  "additional_evidence_sha256": {
+    "artifacts/verification/aster-indexed-accumulators-source-names-v1.json": "b46a15c55e9ae17cd3e7c5fdbd08bae332fe4a073f2b2e7ba93ee1cf1a85d19b",
+    "artifacts/verification/aster-indexed-accumulators-snapshot-audit-v1.json": "da8dfb451fd10a85f71699d41c2e72de417fdf9286e68a2f80b5881be5403fdf",
+    "artifacts/verification/aster-indexed-accumulators-feature-tests-v1.log": "11fcfcd2739b11c999b521e9795665fc58eefd1bf2e37a1387d689ca5aa01f67",
+    "artifacts/verification/aster-indexed-accumulators-core-bench-v1.log": "403935aee0f1b3ef0a3d5df47685007b5a48a5608f8effdf5eba9a10b3d57015",
+    "artifacts/verification/aster-indexed-accumulators-legacy-bench-v1.log": "5841c80916fe36b71bc958733f40c6136fa0ce9c955ee06dbf69bc2bae500861",
+    "artifacts/verification/aster-indexed-accumulators-independent-run-v1.log": "d154511c44044a9505735903813083ef6b95681f74e80c857f077260985617b0",
+    "artifacts/research/aster-indexed-accumulators-analysis-v1.json": "5916652b134688f07e290fc6a8d1239385dea6d2eacdd510404839b3dd6bfd69"
+  },
+  "limits": "Engineering speed gain only in forced AVX2/scalar paths on this machine, with identical work. Automatic AVX-512 is effectively unchanged. No general playing-strength gain, absolute/public Elo, novelty or reference superiority established. All modes use x86-64-v3; scalar may be compiler-vectorized. No retuning or extra games."
+}

@@ -26,6 +26,8 @@ The baseline's instrumented AVX2 profile places substantial cost in accumulator
 work. These counters overlap and add measurement overhead; their cycle totals
 are diagnostic, not a speed gain. The candidate must instead preserve full bench
 outputs and fresh fixed-depth searches, then pass paired uninstrumented timing.
+The `acc_kernel` counter covers slice-based dispatch, so it does not count direct
+indexed paths; use the enclosing `acc_update` counter when comparing these paths.
 
 Two new native tests compare the scalar and available AVX2 implementations with
 an independent wide-integer sum narrowed once per lane. Each exercises 128 cases
@@ -44,3 +46,60 @@ seven remains 124,781.
 No novelty, Elo or superiority claim follows from eliminating allocations. A local
 speed gain would give more search work within a time budget, but playing-strength
 improvement requires its own controlled evidence. Final results are recorded below.
+
+## Completed timing
+
+All 86 timed/warm runs preserve all 51 normalized search traces and the
+1,559,611-node signature. Candidate/baseline elapsed ratios are:
+
+| Mode | Pairs | Median ratio | 95% paired median interval | Gate |
+| --- | ---: | ---: | --- | --- |
+| Automatic (AVX-512 here) | 16 | 1.00060 | 0.99760..1.00298 | Pass |
+| Forced AVX2 | 16 | 0.87589 | 0.87355..0.87694 | Pass |
+| Forced scalar kernel | 8 | 0.64471 | 0.64095..0.64576 | Pass |
+
+AVX2 uses 12.41% less elapsed time; the scalar kernel uses 35.53% less.
+Automatic mode is effectively unchanged. These are same-work desktop results.
+All modes use the same `x86-64-v3` build: compiler auto-vectorization remains
+allowed in the scalar implementation. This does not measure a CPU lacking AVX2,
+or promise these gains on other processors. The source-level allocation removal
+does not depend on timing noise.
+
+Both profiles pass **153 native tests plus two lifetime compile-fail checks**.
+Windows and Linux [CI pass](https://github.com/p3n1cillin/aster-chess/actions/runs/39258829100),
+including explicit AVX2 and scalar signature checks. The tested source snapshots
+and binary copies pass their fingerprint audits.
+
+## Adoption decision
+
+All 128 declared games complete and pass independent PGN replay and complete
+journal/report checks. There are no forfeits, unresolved games or missing search
+telemetry. Both modes use 30 ms/move, one thread and 64 MiB hash per engine.
+The two runs execute concurrently on this 12-logical-processor desktop, with
+mode selection inherited by both engines and recorded before the games.
+
+| Mode | Games | Candidate W/D/L | Score | 95% pair interval |
+| --- | ---: | --- | ---: | --- |
+| Automatic | 64 | 6/50/8 | 48.44% | 43.75..53.13% |
+| AVX2 | 64 | 13/46/5 | 56.25% | 50.00..61.72% |
+
+Both pass the predeclared engineering regression screen: neither upper score
+bound is below 50%. These small samples and pair intervals, which do not model
+opening-family correlations, establish no general playing-strength gain. There
+is no direct reference-engine match, Elo estimate or superiority claim here.
+
+The [decision](../artifacts/verification/aster-indexed-accumulators-decision-v1.json)
+adopts the change after all timing and correctness gates pass. Search policy,
+evaluation arithmetic and neural weights remain identical; the prior disagreement
+experiment remains excluded from normal builds. No parameters changed after the
+trial began, and no adaptive games were added. The analysis script and its hash
+were registered while the games were still in progress.
+
+Reports and PGNs: [automatic report](../artifacts/matches/aster-indexed-accumulators-auto-v1.json),
+[automatic PGN](../artifacts/matches/aster-indexed-accumulators-auto-v1.pgn),
+[AVX2 report](../artifacts/matches/aster-indexed-accumulators-avx2-v1.json),
+[AVX2 PGN](../artifacts/matches/aster-indexed-accumulators-avx2-v1.pgn).
+The [completion record](../artifacts/verification/aster-indexed-accumulators-completion-v1.json)
+indexes the remaining verification and preservation evidence. Absolute/public Elo
+remains uncalibrated. Further work should profile automatic AVX-512 mode and use
+a separate frozen experiment for any changed search policy.

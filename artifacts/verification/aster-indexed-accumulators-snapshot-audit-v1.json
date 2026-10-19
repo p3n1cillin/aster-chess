@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "snapshots": [
+    {
+      "snapshot": "artifacts/research/aster-disagreement-default-source-v1",
+      "files": 184,
+      "manifest_sha256": "143d89c018882ed44f9da1119acde2d0b8c20edafdc5a695f6915a32efef1944",
+      "snapshot_hashes_passed": true,
+      "matches_current_sources": false
+    },
+    {
+      "snapshot": "artifacts/research/aster-indexed-accumulators-source-v1",
+      "files": 185,
+      "manifest_sha256": "a8c8500cebc1fc68060fd98b88a7670857654f666e822bb2b6bfb9476c0bec2e",
+      "snapshot_hashes_passed": true,
+      "matches_current_sources": true
+    }
+  ],
+  "binaries": [
+    {
+      "role": "baseline",
+      "sha256": "bd7d472f573053dfeac704805da4c8568820c693367fb5424cab65b57a07b99c",
+      "preserved": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\bd7d472f573053dfeac704805da4c8568820c693367fb5424cab65b57a07b99c\\aster.exe"
+    },
+    {
+      "role": "candidate",
+      "sha256": "9361d9c3b066514451bf09a1767c534d8197f5909f06151433f531768cc81100",
+      "preserved": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\9361d9c3b066514451bf09a1767c534d8197f5909f06151433f531768cc81100\\aster.exe"
+    }
+  ]
+}

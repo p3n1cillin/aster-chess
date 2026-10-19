@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-19",
+  "active_engine": "Aster Rust development core with allocation-free AVX2/scalar indexed accumulators",
+  "active_binary_sha256": "9361d9c3b066514451bf09a1767c534d8197f5909f06151433f531768cc81100",
+  "active_local_rating": null,
+  "public_elo": null,
+  "source_manifest": "artifacts/research/aster-indexed-accumulators-source-v1/manifest.json",
+  "status": "Adopted after fixed arithmetic, exact-output, timing, correctness, CI and 128-game engineering regression gates. Absolute/public Elo remains uncalibrated.",
+  "preserved_binary": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\9361d9c3b066514451bf09a1767c534d8197f5909f06151433f531768cc81100\\aster.exe",
+  "limits": "Local AVX2/scalar speed results do not establish a general playing-strength gain or Stockfish superiority. Both regression score intervals include 50%. Pair bootstrap does not model opening-family correlations. Historical and upstream ratings do not transfer.",
+  "decision_report": "artifacts/verification/aster-indexed-accumulators-decision-v1.json"
+}

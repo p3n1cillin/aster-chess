@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-10-19T13:20:06.094499+00:00",
+  "code_commit": "0f9a8fc8419b3bfa07071a352f27e8acd5ee9780",
+  "plan_sha256": "45f95cbd0e2c11f7b84eb23b5864b2056d087fc5060d447d86f78b8736ae59b1",
+  "candidate_sha256": "9361d9c3b066514451bf09a1767c534d8197f5909f06151433f531768cc81100",
+  "baseline_sha256": "bd7d472f573053dfeac704805da4c8568820c693367fb5424cab65b57a07b99c",
+  "simultaneous_control_matches": 2,
+  "active_search_threads_total": 2,
+  "logical_processors": 12,
+  "resources": "One thread, 64 MiB per engine; two sequential internally color-swapped matches run concurrently, no local compilation or timing benchmarks during games. No tuning or extra games.",
+  "modes": {
+    "auto": {
+      "environment": "ASTER_SIMD unset for both engines",
+      "pairs": 32,
+      "seconds_per_move": 0.03,
+      "suite_range": [
+        0,
+        32
+      ]
+    },
+    "avx2": {
+      "environment": "ASTER_SIMD=avx2 inherited by both engines",
+      "pairs": 32,
+      "seconds_per_move": 0.03,
+      "suite_range": [
+        32,
+        64
+      ]
+    }
+  }
+}

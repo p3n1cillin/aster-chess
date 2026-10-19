@@ -1,0 +1,11 @@
+{
+  "created_utc": "2026-10-19T13:22:04.594547+00:00",
+  "analyzer": "scripts/analyze_indexed_accumulators.py",
+  "analyzer_sha256": "a6b8880f1d9e609e46efa335de0e9f6eb432d1df2f05e5c37724f1c335cebbe3",
+  "samples": 20000,
+  "seed": 20261019,
+  "unit": "whole color-swapped opening pair within each mode",
+  "decision": "Fixed plan engineering nonregression screen: upper 95% pair score bound must not be below 50%; no forfeits/unresolved; timing and all correctness/CI gates pass. No superiority inference.",
+  "timing_finished": true,
+  "matches_still_in_progress": true
+}

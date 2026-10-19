@@ -1,0 +1,2943 @@
+{
+  "complete": true,
+  "passed": true,
+  "plan_sha256": "45f95cbd0e2c11f7b84eb23b5864b2056d087fc5060d447d86f78b8736ae59b1",
+  "checker_sha256": "81a8341a4269b9bfa0bc95e08211d090bce12bb2cb067a3958ad41c956fe4218",
+  "binaries": {
+    "baseline": {
+      "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\indexed-accumulators-baseline\\aster.exe",
+      "sha256": "bd7d472f573053dfeac704805da4c8568820c693367fb5424cab65b57a07b99c"
+    },
+    "candidate": {
+      "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\indexed-accumulators-candidate\\aster.exe",
+      "sha256": "9361d9c3b066514451bf09a1767c534d8197f5909f06151433f531768cc81100"
+    }
+  },
+  "modes": {
+    "auto": {
+      "pairs": [
+        {
+          "index": 0,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 836,
+            "candidate": 834
+          },
+          "ratio": 0.9976076555023924
+        },
+        {
+          "index": 1,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 835,
+            "baseline": 834
+          },
+          "ratio": 1.001199040767386
+        },
+        {
+          "index": 2,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 835,
+            "candidate": 836
+          },
+          "ratio": 1.0011976047904192
+        },
+        {
+          "index": 3,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 838,
+            "baseline": 847
+          },
+          "ratio": 0.9893742621015348
+        },
+        {
+          "index": 4,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 837,
+            "candidate": 839
+          },
+          "ratio": 1.002389486260454
+        },
+        {
+          "index": 5,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 831,
+            "baseline": 843
+          },
+          "ratio": 0.9857651245551602
+        },
+        {
+          "index": 6,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 840,
+            "candidate": 844
+          },
+          "ratio": 1.0047619047619047
+        },
+        {
+          "index": 7,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 831,
+            "baseline": 835
+          },
+          "ratio": 0.9952095808383233
+        },
+        {
+          "index": 8,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 835,
+            "candidate": 836
+          },
+          "ratio": 1.0011976047904192
+        },
+        {
+          "index": 9,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 846,
+            "baseline": 829
+          },
+          "ratio": 1.020506634499397
+        },
+        {
+          "index": 10,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 838,
+            "candidate": 837
+          },
+          "ratio": 0.9988066825775657
+        },
+        {
+          "index": 11,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 830,
+            "baseline": 839
+          },
+          "ratio": 0.9892729439809297
+        },
+        {
+          "index": 12,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 824,
+            "candidate": 829
+          },
+          "ratio": 1.0060679611650485
+        },
+        {
+          "index": 13,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 831,
+            "baseline": 831
+          },
+          "ratio": 1.0
+        },
+        {
+          "index": 14,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 831,
+            "candidate": 831
+          },
+          "ratio": 1.0
+        },
+        {
+          "index": 15,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 837,
+            "baseline": 827
+          },
+          "ratio": 1.0120918984280531
+        }
+      ],
+      "median_ratio": 1.0005988023952095,
+      "interval95": [
+        0.9976047904191616,
+        1.0029797547761619
+      ],
+      "passed": true
+    },
+    "avx2": {
+      "pairs": [
+        {
+          "index": 0,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 1188,
+            "candidate": 1046
+          },
+          "ratio": 0.8804713804713805
+        },
+        {
+          "index": 1,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 1034,
+            "baseline": 1194
+          },
+          "ratio": 0.8659966499162479
+        },
+        {
+          "index": 2,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 1190,
+            "candidate": 1041
+          },
+          "ratio": 0.8747899159663866
+        },
+        {
+          "index": 3,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 1038,
+            "baseline": 1184
+          },
+          "ratio": 0.8766891891891891
+        },
+        {
+          "index": 4,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 1194,
+            "candidate": 1038
+          },
+          "ratio": 0.8693467336683417
+        },
+        {
+          "index": 5,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 1048,
+            "baseline": 1198
+          },
+          "ratio": 0.8747913188647746
+        },
+        {
+          "index": 6,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 1195,
+            "candidate": 1045
+          },
+          "ratio": 0.8744769874476988
+        },
+        {
+          "index": 7,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 1053,
+            "baseline": 1201
+          },
+          "ratio": 0.8767693588676103
+        },
+        {
+          "index": 8,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 1204,
+            "candidate": 1049
+          },
+          "ratio": 0.8712624584717608
+        },
+        {
+          "index": 9,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 1049,
+            "baseline": 1189
+          },
+          "ratio": 0.8822539949537427
+        },
+        {
+          "index": 10,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 1200,
+            "candidate": 1051
+          },
+          "ratio": 0.8758333333333334
+        },
+        {
+          "index": 11,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 1050,
+            "baseline": 1197
+          },
+          "ratio": 0.8771929824561403
+        },
+        {
+          "index": 12,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 1193,
+            "candidate": 1046
+          },
+          "ratio": 0.8767812238055323
+        },
+        {
+          "index": 13,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 1045,
+            "baseline": 1193
+          },
+          "ratio": 0.875943000838223
+        },
+        {
+          "index": 14,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 1203,
+            "candidate": 1063
+          },
+          "ratio": 0.8836242726517041
+        },
+        {
+          "index": 15,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 1049,
+            "baseline": 1205
+          },
+          "ratio": 0.870539419087137
+        }
+      ],
+      "median_ratio": 0.8758881670857781,
+      "interval95": [
+        0.8735478959025471,
+        0.8769410858226647
+      ],
+      "passed": true
+    },
+    "scalar": {
+      "pairs": [
+        {
+          "index": 0,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 2750,
+            "candidate": 1771
+          },
+          "ratio": 0.644
+        },
+        {
+          "index": 1,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 1808,
+            "baseline": 2796
+          },
+          "ratio": 0.6466380543633763
+        },
+        {
+          "index": 2,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 2774,
+            "candidate": 1778
+          },
+          "ratio": 0.6409516943042538
+        },
+        {
+          "index": 3,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 1776,
+            "baseline": 2752
+          },
+          "ratio": 0.6453488372093024
+        },
+        {
+          "index": 4,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 2758,
+            "candidate": 1781
+          },
+          "ratio": 0.6457577955039884
+        },
+        {
+          "index": 5,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 1784,
+            "baseline": 2765
+          },
+          "ratio": 0.6452079566003617
+        },
+        {
+          "index": 6,
+          "order": [
+            "baseline",
+            "candidate"
+          ],
+          "elapsed_ms": {
+            "baseline": 2760,
+            "candidate": 1778
+          },
+          "ratio": 0.6442028985507247
+        },
+        {
+          "index": 7,
+          "order": [
+            "candidate",
+            "baseline"
+          ],
+          "elapsed_ms": {
+            "candidate": 1769,
+            "baseline": 2772
+          },
+          "ratio": 0.6381673881673882
+        }
+      ],
+      "median_ratio": 0.6447054275755432,
+      "interval95": [
+        0.6409516943042538,
+        0.6457577955039884
+      ],
+      "passed": true
+    }
+  },
+  "interpretation": "Local same-work elapsed candidate/baseline. No CPU affinity or isolation; forced AVX2 on this CPU does not establish all AVX2 hardware performance.",
+  "normalized_reference": [
+    "info depth 1 seldepth 2 multipv 1 score cp 13 nodes 20 nps <timing> hashfull 0 tbhits 0 time <timing> pv d2d4",
+    "info depth 2 seldepth 3 multipv 1 score cp 26 nodes 47 nps <timing> hashfull 0 tbhits 0 time <timing> pv d2d4",
+    "info depth 3 seldepth 2 multipv 1 score cp 26 nodes 68 nps <timing> hashfull 0 tbhits 0 time <timing> pv d2d4",
+    "info depth 4 seldepth 6 multipv 1 score cp 16 nodes 816 nps <timing> hashfull 0 tbhits 0 time <timing> pv c2c4 c7c5 b1c3",
+    "info depth 5 seldepth 6 multipv 1 score cp 17 nodes 1716 nps <timing> hashfull 0 tbhits 0 time <timing> pv e2e4 c7c5 c2c3 b8c6",
+    "info depth 6 seldepth 8 multipv 1 score cp 20 nodes 1882 nps <timing> hashfull 0 tbhits 0 time <timing> pv e2e4 c7c5 c2c3 b8c6",
+    "info depth 7 seldepth 11 multipv 1 score cp 14 nodes 2930 nps <timing> hashfull 0 tbhits 0 time <timing> pv e2e4 c7c5 c2c3 d7d5 e4d5 d8d5",
+    "info depth 8 seldepth 12 multipv 1 score cp 24 nodes 4079 nps <timing> hashfull 0 tbhits 0 time <timing> pv e2e4 c7c5 g1f3 e7e6",
+    "info depth 9 seldepth 13 multipv 1 score cp 20 nodes 5457 nps <timing> hashfull 1 tbhits 0 time <timing> pv e2e4 c7c5 g1f3 b8c6 c2c3 e7e5",
+    "info depth 10 seldepth 11 multipv 1 score cp 20 nodes 5868 nps <timing> hashfull 1 tbhits 0 time <timing> pv e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 g8f6",
+    "info depth 11 seldepth 14 multipv 1 score cp 29 nodes 8801 nps <timing> hashfull 2 tbhits 0 time <timing> pv e2e4 c7c5 g1f3 b8c6 d2d4 c5d4 f3d4",
+    "info depth 12 seldepth 18 multipv 1 score cp 20 nodes 15349 nps <timing> hashfull 5 tbhits 0 time <timing> pv e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 g8f6 d4c6 b7c6",
+    "info depth 13 seldepth 19 multipv 1 score cp 26 nodes 20789 nps <timing> hashfull 7 tbhits 0 time <timing> pv e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 g8f6 b1c3",
+    "bestmove e2e4 ponder e7e5",
+    "info depth 1 seldepth 11 multipv 1 score cp -166 nodes 150 nps <timing> hashfull 0 tbhits 0 time <timing> pv e2a6 b4c3 d2c3 e6d5",
+    "info depth 2 seldepth 6 multipv 1 score cp -166 nodes 207 nps <timing> hashfull 0 tbhits 0 time <timing> pv e2a6 b4c3 d2c3 e6d5",
+    "info depth 3 seldepth 6 multipv 1 score cp -166 nodes 264 nps <timing> hashfull 0 tbhits 0 time <timing> pv e2a6 b4c3 d2c3 e6d5",
+    "info depth 4 seldepth 6 multipv 1 score cp -166 nodes 324 nps <timing> hashfull 0 tbhits 0 time <timing> pv e2a6 b4c3 d2c3 e6d5",
+    "info depth 5 seldepth 11 multipv 1 score cp -139 nodes 441 nps <timing> hashfull 0 tbhits 0 time <timing> pv e2a6 b4c3 d2c3 e6d5",
+    "info depth 6 seldepth 11 multipv 1 score cp -130 nodes 543 nps <timing> hashfull 0 tbhits 0 time <timing> pv e2a6 b4c3 d2c3 e6d5",
+    "info depth 7 seldepth 13 multipv 1 score cp -138 nodes 655 nps <timing> hashfull 0 tbhits 0 time <timing> pv e2a6 b4c3 d2c3 e6d5 e5g4 h3g2 f3g2",
+    "info depth 8 seldepth 15 multipv 1 score cp -138 nodes 7274 nps <timing> hashfull 2 tbhits 0 time <timing> pv e2a6 e6d5",
+    "info depth 9 seldepth 13 multipv 1 score cp -188 nodes 9086 nps <timing> hashfull 3 tbhits 0 time <timing> pv e2a6 h3g2 f3g2 b4c3 d2c3 e6d5 e4d5 f6d5 e1g1 d5c3",
+    "info depth 10 seldepth 15 multipv 1 score cp -170 nodes 12935 nps <timing> hashfull 4 tbhits 0 time <timing> pv e2a6 h3g2 f3g2 b4c3 d2c3 e6d5 e4d5 f6d5 e1g1 d5f4",
+    "info depth 11 seldepth 11 multipv 1 score cp -170 nodes 13062 nps <timing> hashfull 4 tbhits 0 time <timing> pv e2a6 h3g2 f3g2 b4c3 d2c3 e6d5 e4d5 f6d5 e1g1 d5f4",
+    "info depth 12 seldepth 17 multipv 1 score cp -138 nodes 16637 nps <timing> hashfull 6 tbhits 0 time <timing> pv e2a6 h3g2 f3g2 b4c3 d2c3 e6d5 e4d5 f6d5 e1g1 d5f4 g2f3",
+    "info depth 13 seldepth 22 multipv 1 score cp -232 nodes 32054 nps <timing> hashfull 11 tbhits 0 time <timing> pv e2a6 b4c3 d2c3 h3g2 f3g2 e6d5 e1c1 f6e4 e5g6 f7g6",
+    "bestmove e2a6 ponder b4c3",
+    "info depth 1 seldepth 3 multipv 1 score cp 56 nodes 16 nps <timing> hashfull 0 tbhits 0 time <timing> pv b4f4 h4g3",
+    "info depth 2 seldepth 3 multipv 1 score cp 56 nodes 41 nps <timing> hashfull 0 tbhits 0 time <timing> pv b4f4 h4g3",
+    "info depth 3 seldepth 5 multipv 1 score cp 51 nodes 195 nps <timing> hashfull 0 tbhits 0 time <timing> pv e2e3 h4g3 e3f4",
+    "info depth 4 seldepth 5 multipv 1 score cp 58 nodes 259 nps <timing> hashfull 0 tbhits 0 time <timing> pv b4f4 h4g3",
+    "info depth 5 seldepth 5 multipv 1 score cp 63 nodes 285 nps <timing> hashfull 0 tbhits 0 time <timing> pv b4f4 h4g3",
+    "info depth 6 seldepth 6 multipv 1 score cp 98 nodes 332 nps <timing> hashfull 0 tbhits 0 time <timing> pv b4f4 h4g3",
+    "info depth 7 seldepth 5 multipv 1 score cp 173 nodes 385 nps <timing> hashfull 0 tbhits 0 time <timing> pv b4f4 h4g3",
+    "info depth 8 seldepth 9 multipv 1 score cp 153 nodes 579 nps <timing> hashfull 0 tbhits 0 time <timing> pv b4f4 h4g3 f4c4 h5c5 c4c5 d6c5",
+    "info depth 9 seldepth 14 multipv 1 score cp 139 nodes 2846 nps <timing> hashfull 1 tbhits 0 time <timing> pv b4f4 h4g3 f4c4 h5c5 c4c5 d6c5 a5a4 g3g2 e2e4 g2f3 e4e5 f3e4",
+    "info depth 10 seldepth 16 multipv 1 score cp 110 nodes 5646 nps <timing> hashfull 2 tbhits 0 time <timing> pv b4f4 h4g3 f4c4 h5h7 a5a6 g3g2 c4c3 h7e7",
+    "info depth 11 seldepth 11 multipv 1 score cp 121 nodes 6598 nps <timing> hashfull 2 tbhits 0 time <timing> pv b4f4 h4g3 f4c4 h5h7 a5a6 g3g2 c4c3 g2f2",
+    "info depth 12 seldepth 26 multipv 1 score cp 62 nodes 65622 nps <timing> hashfull 21 tbhits 0 time <timing> pv b4f4 h4g3 f4c4 h5h7 a5a6 g3g2 c4c3 g2f2 e2e4 h7e7 a6b7 e7e4 b7c7 d6d5 c3d3 d5d4 b5b6 e4e7 c7c8",
+    "info depth 13 seldepth 18 multipv 1 score cp 62 nodes 66027 nps <timing> hashfull 21 tbhits 0 time <timing> pv b4f4 h4g3 f4c4 h5h7 a5a6 g3g2 c4c3 g2f2 e2e4 h7e7 a6b7 e7e4 b7c7 d6d5 c3d3 d5d4 b5b6",
+    "bestmove b4f4 ponder h4g3",
+    "info depth 1 seldepth 5 multipv 1 score cp 54 nodes 53 nps <timing> hashfull 0 tbhits 0 time <timing> pv c5d4",
+    "info depth 2 seldepth 6 multipv 1 score cp 0 nodes 480 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5d3",
+    "info depth 3 seldepth 5 multipv 1 score cp 7 nodes 588 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5d3 f1f8 e8f8",
+    "info depth 4 seldepth 5 multipv 1 score cp 14 nodes 672 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5d3 f1f8 e8f8",
+    "info depth 5 seldepth 5 multipv 1 score cp 16 nodes 756 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5d3 f1f8 e8f8",
+    "info depth 6 seldepth 7 multipv 1 score cp 22 nodes 911 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5d3 f1f8 e8f8",
+    "info depth 7 seldepth 7 multipv 1 score cp 25 nodes 1048 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5d3 f1f8 e8f8",
+    "info depth 8 seldepth 7 multipv 1 score cp 36 nodes 1220 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5d3 f1f8 e8f8",
+    "info depth 9 seldepth 10 multipv 1 score cp 46 nodes 1818 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5d3 f1f8 e8f8 g3e4 d3e4 e1e4",
+    "info depth 10 seldepth 16 multipv 1 score cp 4 nodes 3960 nps <timing> hashfull 1 tbhits 0 time <timing> pv f5d3 f1f8 d6f8 h6h4 c5d4 c3d4 d3c4 d4e5 d7e5",
+    "info depth 11 seldepth 16 multipv 1 score cp 7 nodes 8129 nps <timing> hashfull 3 tbhits 0 time <timing> pv f5d3 f1f8 d6f8 h6g5 c5d4 c3d4 d3c4 d4e5",
+    "info depth 12 seldepth 19 multipv 1 score cp 1 nodes 11431 nps <timing> hashfull 4 tbhits 0 time <timing> pv f5d3 f1f8 d6f8 h6h4 f8f7 h2h3 f7c4 g3e4 e5d4 e4d6 e8e1 h4e1 c4a2",
+    "info depth 13 seldepth 17 multipv 1 score cp 9 nodes 13788 nps <timing> hashfull 5 tbhits 0 time <timing> pv f5d3 f1f8 d6f8 h6h4 e5d4 e1e8 f8e8 c3d4 d3c4 d4c5",
+    "bestmove f5d3 ponder f1f8",
+    "info depth 1 seldepth 8 multipv 1 score cp -77 nodes 33 nps <timing> hashfull 0 tbhits 0 time <timing> pv f7e6",
+    "info depth 2 seldepth 3 multipv 1 score cp -68 nodes 71 nps <timing> hashfull 0 tbhits 0 time <timing> pv f7e6",
+    "info depth 3 seldepth 3 multipv 1 score cp -65 nodes 109 nps <timing> hashfull 0 tbhits 0 time <timing> pv f7e6",
+    "info depth 4 seldepth 4 multipv 1 score cp -56 nodes 162 nps <timing> hashfull 0 tbhits 0 time <timing> pv f7e6",
+    "info depth 5 seldepth 3 multipv 1 score cp -46 nodes 213 nps <timing> hashfull 0 tbhits 0 time <timing> pv f7e6",
+    "info depth 6 seldepth 3 multipv 1 score cp -35 nodes 286 nps <timing> hashfull 0 tbhits 0 time <timing> pv f7e6",
+    "info depth 7 seldepth 5 multipv 1 score cp -13 nodes 440 nps <timing> hashfull 0 tbhits 0 time <timing> pv f7e6",
+    "info depth 8 seldepth 7 multipv 1 score cp 6 nodes 576 nps <timing> hashfull 0 tbhits 0 time <timing> pv f7e6",
+    "info depth 9 seldepth 7 multipv 1 score cp 11 nodes 901 nps <timing> hashfull 0 tbhits 0 time <timing> pv f7e6 d5f4",
+    "info depth 10 seldepth 11 multipv 1 score cp 30 nodes 1966 nps <timing> hashfull 0 tbhits 0 time <timing> pv f7e6 d5f4",
+    "info depth 11 seldepth 10 multipv 1 score cp 36 nodes 2462 nps <timing> hashfull 0 tbhits 0 time <timing> pv f7e6 d5e3",
+    "info depth 12 seldepth 18 multipv 1 score cp 38 nodes 4492 nps <timing> hashfull 1 tbhits 0 time <timing> pv f7e6 d5e3 b8e8 f2f3 h7h6 g5h4 e8g6 e3c4",
+    "info depth 13 seldepth 15 multipv 1 score cp 39 nodes 12236 nps <timing> hashfull 3 tbhits 0 time <timing> pv f7e6 d5e3 b8e8 f2f3 h7h6 g5h4 e8g6 h4f2 a7a5",
+    "bestmove f7e6 ponder d5e3",
+    "info depth 1 seldepth 5 multipv 1 score cp 176 nodes 39 nps <timing> hashfull 0 tbhits 0 time <timing> pv g7g6",
+    "info depth 2 seldepth 4 multipv 1 score cp 183 nodes 106 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f3 h2h3",
+    "info depth 3 seldepth 6 multipv 1 score cp 186 nodes 347 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f3 h2h3",
+    "info depth 4 seldepth 4 multipv 1 score cp 184 nodes 399 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f3 h2h3 c8d7",
+    "info depth 5 seldepth 6 multipv 1 score cp 154 nodes 622 nps <timing> hashfull 0 tbhits 0 time <timing> pv f8f6 f2f3 f6h6 h5f7 c8d7",
+    "info depth 6 seldepth 10 multipv 1 score cp 150 nodes 1197 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f3 g1h1 c8d7 f1g1",
+    "info depth 7 seldepth 10 multipv 1 score cp 137 nodes 1801 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f3 g1h1 f8f6 f1g1 c8d7 d3d4 e5d4 d1d4",
+    "info depth 8 seldepth 13 multipv 1 score cp 157 nodes 3177 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f3 h5g5 f8f4 h2h3 h7h6 g5h4 d8f8",
+    "info depth 9 seldepth 11 multipv 1 score cp 184 nodes 5066 nps <timing> hashfull 1 tbhits 0 time <timing> pv f4f3 h5g5 f8f4 h2h3 h7h6 g5h4 d8f8 d3d4",
+    "info depth 10 seldepth 12 multipv 1 score cp 178 nodes 5638 nps <timing> hashfull 1 tbhits 0 time <timing> pv f4f3 h5g5 f8f4 h2h3 h7h6 g5h4 d8f8 g1h2",
+    "info depth 11 seldepth 12 multipv 1 score cp 165 nodes 6431 nps <timing> hashfull 1 tbhits 0 time <timing> pv f4f3 h5h4 f8f4 h2h3 d8f8 g1h2 e7g6 h4g3 c7c6 d3d4",
+    "info depth 12 seldepth 17 multipv 1 score cp 249 nodes 12176 nps <timing> hashfull 2 tbhits 0 time <timing> pv f4f3 h5h4 f8f6 d3d4 f6h6 h4g3 e7g6 c3d5",
+    "info depth 13 seldepth 15 multipv 1 score cp 224 nodes 12930 nps <timing> hashfull 2 tbhits 0 time <timing> pv f4f3 h5h4 f8f6 d3d4 f6h6 h4g3 e7g6 c3d5 h6h4 h2h3",
+    "bestmove f4f3 ponder h5h4",
+    "info depth 1 seldepth 4 multipv 1 score cp -31 nodes 54 nps <timing> hashfull 0 tbhits 0 time <timing> pv b4b2",
+    "info depth 2 seldepth 3 multipv 1 score cp 17 nodes 110 nps <timing> hashfull 0 tbhits 0 time <timing> pv b4b2",
+    "info depth 3 seldepth 2 multipv 1 score cp 17 nodes 159 nps <timing> hashfull 0 tbhits 0 time <timing> pv b4b2",
+    "info depth 4 seldepth 5 multipv 1 score cp -36 nodes 456 nps <timing> hashfull 0 tbhits 0 time <timing> pv b4b2 e3c5 b2b6",
+    "info depth 5 seldepth 6 multipv 1 score cp -27 nodes 534 nps <timing> hashfull 0 tbhits 0 time <timing> pv b4b2 e3c5 b2b6",
+    "info depth 6 seldepth 6 multipv 1 score cp -19 nodes 673 nps <timing> hashfull 0 tbhits 0 time <timing> pv b4b2 e3c5 b2b6",
+    "info depth 7 seldepth 7 multipv 1 score cp -17 nodes 792 nps <timing> hashfull 0 tbhits 0 time <timing> pv b4b2 e3c5 b2b6 c5b6 c7b6",
+    "info depth 8 seldepth 10 multipv 1 score cp -34 nodes 3163 nps <timing> hashfull 0 tbhits 0 time <timing> pv b4b2 e3d2 a8d8 h2h3 b2a3 c3e2 c6c5 e2g3",
+    "info depth 9 seldepth 11 multipv 1 score cp -29 nodes 3799 nps <timing> hashfull 0 tbhits 0 time <timing> pv b4b2 e3d2 b2a3 h2h3 a8d8",
+    "info depth 10 seldepth 11 multipv 1 score cp -29 nodes 4509 nps <timing> hashfull 1 tbhits 0 time <timing> pv b4b2 e3d2 c6c5 a1b1",
+    "info depth 11 seldepth 13 multipv 1 score cp -20 nodes 6282 nps <timing> hashfull 1 tbhits 0 time <timing> pv b4b2 e3d2 b2a3 h2h3 c6c5 f3g5",
+    "info depth 12 seldepth 11 multipv 1 score cp -21 nodes 8233 nps <timing> hashfull 1 tbhits 0 time <timing> pv b4b2 e3d2 b2a3 h2h3 a8d8 g1h2 f6d7 e4e5",
+    "info depth 13 seldepth 15 multipv 1 score cp -24 nodes 16549 nps <timing> hashfull 5 tbhits 0 time <timing> pv b4b2 e3d2 b2a3 c3e2 c6c5 e4e5 f6d5",
+    "bestmove b4b2 ponder e3d2",
+    "info depth 1 seldepth 5 multipv 1 score cp 507 nodes 61 nps <timing> hashfull 0 tbhits 0 time <timing> pv c4d6 e8d7",
+    "info depth 2 seldepth 6 multipv 1 score cp 494 nodes 156 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4g3 e8f8 b5d4 c6d4 d1d4",
+    "info depth 3 seldepth 9 multipv 1 score cp 446 nodes 298 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4c7 a7a6 c7d8",
+    "info depth 4 seldepth 8 multipv 1 score cp 437 nodes 423 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4g3 g8e7 b5d4 c6d4 c4d6 e8f8 d1d4",
+    "info depth 5 seldepth 8 multipv 1 score cp 437 nodes 483 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4g3 g8e7 b5d4 c6d4 c4d6 e8f8 d1d4",
+    "info depth 6 seldepth 8 multipv 1 score cp 409 nodes 614 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4g3 g8e7 b5d4 e8g8 d4c6 e7c6",
+    "info depth 7 seldepth 9 multipv 1 score cp 445 nodes 1166 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4g3 c8g4 d1d2 g8e7",
+    "info depth 8 seldepth 13 multipv 1 score cp 453 nodes 1248 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4g3 c8g4 d1d2 g8e7 b5d6 e8d7 d6b7",
+    "info depth 9 seldepth 14 multipv 1 score cp 417 nodes 2227 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4g3 g8e7 b5d4 c6d4 c4d6 e8f8 d1d4 e7f5 d4d1 f5g3 h2g3",
+    "info depth 10 seldepth 13 multipv 1 score cp 417 nodes 2323 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4g3 g8e7 b5d4 c6d4 c4d6 e8f8 d1d4 e7f5 d4d1",
+    "info depth 11 seldepth 12 multipv 1 score cp 417 nodes 2748 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4g3 g8e7 b5d4 c6d4 c4d6 e8f8 d1d4 e7f5 d4d1 f5g3 h2g3",
+    "info depth 12 seldepth 14 multipv 1 score cp 409 nodes 4138 nps <timing> hashfull 1 tbhits 0 time <timing> pv f4g3 g8e7 b5d4 c6d4 c4d6 e8f8 d1d4 e7f5 d4d2 f5g3 h2g3 c8g4",
+    "info depth 13 seldepth 17 multipv 1 score cp 451 nodes 6868 nps <timing> hashfull 2 tbhits 0 time <timing> pv f4g3 e8f8 b5d4 c6d4 d1d4 c8e6 c4d6 b7b6 f1c4 h7h5 c4e6 f7e6 h1e1",
+    "bestmove f4g3 ponder e8f8",
+    "info depth 1 seldepth 5 multipv 1 score cp 31 nodes 60 nps <timing> hashfull 0 tbhits 0 time <timing> pv a1e1",
+    "info depth 2 seldepth 3 multipv 1 score cp 43 nodes 117 nps <timing> hashfull 0 tbhits 0 time <timing> pv a1e1",
+    "info depth 3 seldepth 2 multipv 1 score cp 43 nodes 167 nps <timing> hashfull 0 tbhits 0 time <timing> pv a1e1",
+    "info depth 4 seldepth 6 multipv 1 score cp 69 nodes 264 nps <timing> hashfull 0 tbhits 0 time <timing> pv a1e1 f7f6",
+    "info depth 5 seldepth 4 multipv 1 score cp 69 nodes 334 nps <timing> hashfull 0 tbhits 0 time <timing> pv a1e1 f7f6",
+    "info depth 6 seldepth 10 multipv 1 score cp 36 nodes 2466 nps <timing> hashfull 1 tbhits 0 time <timing> pv a1e1 f7f6 b3c2 f6f5 c2f5 e7f5 f1f5 f8f5 h5f5",
+    "info depth 7 seldepth 12 multipv 1 score cp 52 nodes 3360 nps <timing> hashfull 1 tbhits 0 time <timing> pv b3c2 g7g6 h5e5",
+    "info depth 8 seldepth 7 multipv 1 score cp 52 nodes 3502 nps <timing> hashfull 1 tbhits 0 time <timing> pv b3c2 g7g6 h5e5 d8d6 e5d6 c7d6",
+    "info depth 9 seldepth 12 multipv 1 score cp 57 nodes 3974 nps <timing> hashfull 1 tbhits 0 time <timing> pv a1e1 f7f6 b3c2 g7g6 h5h4 e6g7 f1f6 e7f5 f6f8 d8f8",
+    "info depth 10 seldepth 13 multipv 1 score cp 57 nodes 4809 nps <timing> hashfull 1 tbhits 0 time <timing> pv a1e1 f7f6 b3c2 g7g6 h5h4 e6g7 f1f6 e7f5 f6f8 d8f8",
+    "info depth 11 seldepth 17 multipv 1 score cp 58 nodes 10679 nps <timing> hashfull 6 tbhits 0 time <timing> pv f1f3 f7f6 f3h3 h7h6 e3h6 d8e8 h5h4",
+    "info depth 12 seldepth 17 multipv 1 score cp 54 nodes 19269 nps <timing> hashfull 10 tbhits 0 time <timing> pv a1e1 c7c6 b3c2 f7f5 d2f3 d8e8 h5e8 f8e8 e3d2 e6f8 d2g5 c8e6",
+    "info depth 13 seldepth 21 multipv 1 score cp 55 nodes 32840 nps <timing> hashfull 14 tbhits 0 time <timing> pv a1e1 b7b6 b3c2 f7f5 d2f3 d8e8 h5e8 f8e8",
+    "bestmove a1e1 ponder b7b6",
+    "info depth 1 seldepth 7 multipv 1 score cp 122 nodes 74 nps <timing> hashfull 0 tbhits 0 time <timing> pv a1e1",
+    "info depth 2 seldepth 5 multipv 1 score cp 93 nodes 434 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f6 g7f6",
+    "info depth 3 seldepth 4 multipv 1 score cp 20 nodes 1117 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f6 g7f6",
+    "info depth 4 seldepth 5 multipv 1 score cp 68 nodes 1200 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f6 g7f6",
+    "info depth 5 seldepth 5 multipv 1 score cp 79 nodes 1270 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f6 g7f6",
+    "info depth 6 seldepth 7 multipv 1 score cp 103 nodes 1368 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f6 g7f6",
+    "info depth 7 seldepth 7 multipv 1 score cp 169 nodes 1474 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f6 g7f6",
+    "info depth 8 seldepth 7 multipv 1 score cp 256 nodes 1612 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f6 g7f6 e3g3",
+    "info depth 9 seldepth 9 multipv 1 score cp 145 nodes 2140 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f6 g7f6 e3h6 c7e5 d3h7 g8h8 h2h3",
+    "info depth 10 seldepth 18 multipv 1 score cp 121 nodes 6439 nps <timing> hashfull 1 tbhits 0 time <timing> pv f4f6 g7f6 e3h6 f6f5 h2h3 e8e6 h6h4 c7e5 h3g4 e5e3 h4f2 f5g4 b3d4 e3f2 g1f2 e6d6",
+    "info depth 11 seldepth 23 multipv 1 score cp 137 nodes 8543 nps <timing> hashfull 1 tbhits 0 time <timing> pv f4f6 g7f6 e3h6 f6f5 h2h3 e8e6 h6h4 c7e7",
+    "info depth 12 seldepth 23 multipv 1 score cp 161 nodes 14710 nps <timing> hashfull 2 tbhits 0 time <timing> pv f4f6 g7f6 e3h6 f6f5 h2h3 e8e6 h6h4 c7e5 h3g4 e5e3 h4f2 f5g4",
+    "info depth 13 seldepth 24 multipv 1 score cp 169 nodes 19097 nps <timing> hashfull 3 tbhits 0 time <timing> pv f4f6 g7f6 e3h6 f6f5 h2h3 e8e6 h6h4 c7e5 h3g4 e5e3 h4f2 f5g4 b3d4 e3f2 g1f2 e6f6 f2g3 c6c5 d4f5 c5c4 d3e4 f6e6 e4d5",
+    "bestmove f4f6 ponder g7f6",
+    "info depth 1 seldepth 7 multipv 1 score cp -76 nodes 52 nps <timing> hashfull 0 tbhits 0 time <timing> pv d8h4 e1d2",
+    "info depth 2 seldepth 5 multipv 1 score cp -140 nodes 469 nps <timing> hashfull 0 tbhits 0 time <timing> pv e5d7",
+    "info depth 3 seldepth 6 multipv 1 score cp -128 nodes 551 nps <timing> hashfull 0 tbhits 0 time <timing> pv e5d7 c1e3 d8h4 e1d2",
+    "info depth 4 seldepth 7 multipv 1 score cp -163 nodes 1015 nps <timing> hashfull 0 tbhits 0 time <timing> pv e5d7 e1g1 a7a6 b5d4",
+    "info depth 5 seldepth 8 multipv 1 score cp -141 nodes 1168 nps <timing> hashfull 0 tbhits 0 time <timing> pv e5d7 e1g1 a7a6 b5d4 f8g7",
+    "info depth 6 seldepth 8 multipv 1 score cp -141 nodes 1230 nps <timing> hashfull 0 tbhits 0 time <timing> pv e5d7 e1g1 a7a6 b5d4 f8g7",
+    "info depth 7 seldepth 10 multipv 1 score cp -205 nodes 3761 nps <timing> hashfull 1 tbhits 0 time <timing> pv e5g4 e1g1 a7a6 f4f5 e6d5 e4d5",
+    "info depth 8 seldepth 10 multipv 1 score cp -177 nodes 3944 nps <timing> hashfull 1 tbhits 0 time <timing> pv e5g4 e1g1 a7a6 f4f5 e6d5 e4d5 c6e5 b5d4",
+    "info depth 9 seldepth 17 multipv 1 score cp -142 nodes 7138 nps <timing> hashfull 2 tbhits 0 time <timing> pv e5g4 e1g1 a7a6 f4f5 g6f5 e4f5 e6d5 c4d5",
+    "info depth 10 seldepth 11 multipv 1 score cp -142 nodes 8392 nps <timing> hashfull 2 tbhits 0 time <timing> pv e5g4 e1g1 a7a6 f4f5 g6f5 e4f5 e6d5 c4d5",
+    "info depth 11 seldepth 15 multipv 1 score cp -154 nodes 8668 nps <timing> hashfull 2 tbhits 0 time <timing> pv e5g4 e1g1 a7a6 b5d4 e6d5 c4d5 c6d4 d1d4 d8f6 d4a4 b7b5 a4c2",
+    "info depth 12 seldepth 13 multipv 1 score cp -154 nodes 9651 nps <timing> hashfull 3 tbhits 0 time <timing> pv e5g4 e1g1 a7a6 b5d4 e6d5 c4d5 c6d4 d1d4 d8f6 d4a4 b7b5 a4c2",
+    "info depth 13 seldepth 23 multipv 1 score cp -179 nodes 44691 nps <timing> hashfull 17 tbhits 0 time <timing> pv e5g4 d1d3 a7a6 b5c3 f7f5 h2h3 g4f6 c1e3 f8g7 e1g1 d8d7 a1d1 c6e7 e3d4 e6d5 c4d5",
+    "bestmove e5g4 ponder d1d3",
+    "info depth 1 seldepth 3 multipv 1 score cp 44 nodes 36 nps <timing> hashfull 0 tbhits 0 time <timing> pv d1d3",
+    "info depth 2 seldepth 3 multipv 1 score cp 45 nodes 91 nps <timing> hashfull 0 tbhits 0 time <timing> pv d1d3 c7c6",
+    "info depth 3 seldepth 4 multipv 1 score cp 48 nodes 143 nps <timing> hashfull 0 tbhits 0 time <timing> pv d1d3 c7c6 b3c2",
+    "info depth 4 seldepth 7 multipv 1 score cp 32 nodes 778 nps <timing> hashfull 0 tbhits 0 time <timing> pv d1d3 a7b6 b3c2",
+    "info depth 5 seldepth 9 multipv 1 score cp 26 nodes 2076 nps <timing> hashfull 0 tbhits 0 time <timing> pv a2a4 b5a4 b3c2 a8b8 a1a4 b8b2",
+    "info depth 6 seldepth 11 multipv 1 score cp 24 nodes 4296 nps <timing> hashfull 0 tbhits 0 time <timing> pv a2a4 a8b8 d1d3 c8d7 b3c2 b5a4 c2a4",
+    "info depth 7 seldepth 9 multipv 1 score cp 24 nodes 4381 nps <timing> hashfull 0 tbhits 0 time <timing> pv a2a4 a8b8 d1d3 c8d7 b3c2 b5a4 c2a4",
+    "info depth 8 seldepth 9 multipv 1 score cp 23 nodes 5004 nps <timing> hashfull 0 tbhits 0 time <timing> pv a2a4 b5a4 a1a4 c8d7 a4a1 d7b5",
+    "info depth 9 seldepth 13 multipv 1 score cp 26 nodes 7976 nps <timing> hashfull 1 tbhits 0 time <timing> pv d1d2 a8b8 b3c2 c7c5 a1d1 a7b6 d4c5 b6c5",
+    "info depth 10 seldepth 12 multipv 1 score cp 22 nodes 10714 nps <timing> hashfull 1 tbhits 0 time <timing> pv a2a4 b5a4 a1a4 a8b8 f1e1 e7g6 d1c2",
+    "info depth 11 seldepth 24 multipv 1 score cp 30 nodes 22504 nps <timing> hashfull 6 tbhits 0 time <timing> pv a2a4 b5a4 a1a4 a8b8 f1e1 c7c6 a4a3 d6d5 d1d3 c6c5 e3d5",
+    "info depth 12 seldepth 16 multipv 1 score cp 24 nodes 26227 nps <timing> hashfull 7 tbhits 0 time <timing> pv a2a4 b5a4 a1a4 a8b8 a4a3 e7g6 g2g3 c7c5 d4d5 c5c4 e3c4",
+    "info depth 13 seldepth 20 multipv 1 score cp 22 nodes 39258 nps <timing> hashfull 14 tbhits 0 time <timing> pv a2a4 b5a4 a1a4 a8b8 a4a3 f7f5 e4f5 e7f5 b3c2 b8b2 d1d3 d8f6 e3d5",
+    "bestmove a2a4 ponder b5a4",
+    "info depth 1 seldepth 7 multipv 1 score cp 142 nodes 65 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6c5",
+    "info depth 2 seldepth 3 multipv 1 score cp 193 nodes 110 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6c5",
+    "info depth 3 seldepth 4 multipv 1 score cp 215 nodes 159 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6c5",
+    "info depth 4 seldepth 5 multipv 1 score cp 250 nodes 222 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6c5",
+    "info depth 5 seldepth 7 multipv 1 score cp 304 nodes 291 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6c5 f4f5 e6f5",
+    "info depth 6 seldepth 8 multipv 1 score cp 229 nodes 429 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6c5 b1b3 c5d4 e3d4 d8d4",
+    "info depth 7 seldepth 8 multipv 1 score cp 264 nodes 542 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6c5 f2f3 c5d4 e3d4 d8d4 e2e6 g8h8",
+    "info depth 8 seldepth 14 multipv 1 score cp 207 nodes 1280 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6c5 e2d3 c5d4 e3d4 f8f7 d3e3 a3f8 b1c1 f7c7",
+    "info depth 9 seldepth 13 multipv 1 score cp 219 nodes 1807 nps <timing> hashfull 1 tbhits 0 time <timing> pv c6c5 e2d3 c5d4 e3d4 f8f7 f2e2 f7d7 d3b3 a4b3 b1b3 a3f8",
+    "info depth 10 seldepth 18 multipv 1 score cp 221 nodes 4980 nps <timing> hashfull 1 tbhits 0 time <timing> pv c6c5 e2d3 c5d4 e3d4 a3c5 d3b3 a4b3 d2b3 d8d4 b3c5 b6c5",
+    "info depth 11 seldepth 12 multipv 1 score cp 221 nodes 5089 nps <timing> hashfull 1 tbhits 0 time <timing> pv c6c5 e2d3 c5d4 e3d4 a3c5 d3b3 a4b3 d2b3 d8d4 b3c5 b6c5",
+    "info depth 12 seldepth 16 multipv 1 score cp 208 nodes 5320 nps <timing> hashfull 1 tbhits 0 time <timing> pv c6c5 e2d3 c5d4 e3d4 a3c5 d3b3 a4b3 d2b3 d8d4 b3d4 c5d4 e1b4 f8d8",
+    "info depth 13 seldepth 19 multipv 1 score cp 216 nodes 6241 nps <timing> hashfull 1 tbhits 0 time <timing> pv c6c5 e2d3 c5d4 e3d4 a3c5 d3b3 a4b3 d2b3 d8d4 b3d4 c5d4 g2g3",
+    "bestmove c6c5 ponder e2d3",
+    "info depth 1 seldepth 3 multipv 1 score cp 41 nodes 41 nps <timing> hashfull 0 tbhits 0 time <timing> pv d4b5",
+    "info depth 2 seldepth 3 multipv 1 score cp 3 nodes 433 nps <timing> hashfull 0 tbhits 0 time <timing> pv a4b5 f7f5",
+    "info depth 3 seldepth 3 multipv 1 score cp -4 nodes 763 nps <timing> hashfull 0 tbhits 0 time <timing> pv a4b5 f7f5",
+    "info depth 4 seldepth 7 multipv 1 score cp 4 nodes 850 nps <timing> hashfull 0 tbhits 0 time <timing> pv a4b5 f7f5",
+    "info depth 5 seldepth 7 multipv 1 score cp 5 nodes 912 nps <timing> hashfull 0 tbhits 0 time <timing> pv a4b5 f7f5 b5d5 h5f7 d4f5",
+    "info depth 6 seldepth 7 multipv 1 score cp 4 nodes 1005 nps <timing> hashfull 0 tbhits 0 time <timing> pv a4b5 f7f5 b5d5 g8h8",
+    "info depth 7 seldepth 10 multipv 1 score cp 0 nodes 1869 nps <timing> hashfull 0 tbhits 0 time <timing> pv a4b5 f7f5 b5d5 h5f7 d4f5 e7f6 d5e4",
+    "info depth 8 seldepth 8 multipv 1 score cp 0 nodes 1936 nps <timing> hashfull 0 tbhits 0 time <timing> pv a4b5 f7f5 b5d5 h5f7 d4f5 e7f6 d5e4",
+    "info depth 9 seldepth 17 multipv 1 score cp -33 nodes 16120 nps <timing> hashfull 5 tbhits 0 time <timing> pv h1e1 f7f5 g2g3 e7f6 h2h3",
+    "info depth 10 seldepth 12 multipv 1 score cp -32 nodes 17175 nps <timing> hashfull 5 tbhits 0 time <timing> pv a4b5 f7f5 a2a4 h5f7 d4f5 e7f6 e3d4 f6g5",
+    "info depth 11 seldepth 17 multipv 1 score cp -33 nodes 24814 nps <timing> hashfull 9 tbhits 0 time <timing> pv a4b5 f7f5 a2a4 h5e8 g2g3 e7f6 b5b7",
+    "info depth 12 seldepth 18 multipv 1 score cp -14 nodes 32551 nps <timing> hashfull 12 tbhits 0 time <timing> pv a4b5 f7f5 a2a4 h5e8 g2g3 e7f6 b2b3 h7h6",
+    "info depth 13 seldepth 14 multipv 1 score cp -22 nodes 33224 nps <timing> hashfull 12 tbhits 0 time <timing> pv a4b5 f7f5 a2a4 h5e8 g2g3 e7f6 b2b3 a8a6",
+    "bestmove a4b5 ponder f7f5",
+    "info depth 1 seldepth 3 multipv 1 score cp 82 nodes 32 nps <timing> hashfull 0 tbhits 0 time <timing> pv e8d7",
+    "info depth 2 seldepth 5 multipv 1 score cp 75 nodes 209 nps <timing> hashfull 0 tbhits 0 time <timing> pv e8e7",
+    "info depth 3 seldepth 5 multipv 1 score cp 87 nodes 340 nps <timing> hashfull 0 tbhits 0 time <timing> pv e8d7",
+    "info depth 4 seldepth 4 multipv 1 score cp 91 nodes 377 nps <timing> hashfull 0 tbhits 0 time <timing> pv e8d7",
+    "info depth 5 seldepth 5 multipv 1 score cp 103 nodes 493 nps <timing> hashfull 0 tbhits 0 time <timing> pv e8d7 f3e5 d7e7",
+    "info depth 6 seldepth 6 multipv 1 score cp 101 nodes 579 nps <timing> hashfull 0 tbhits 0 time <timing> pv e8d7 f3e5 d7e7 g1f1",
+    "info depth 7 seldepth 8 multipv 1 score cp 139 nodes 1359 nps <timing> hashfull 0 tbhits 0 time <timing> pv e8d7",
+    "info depth 8 seldepth 6 multipv 1 score cp 140 nodes 1611 nps <timing> hashfull 0 tbhits 0 time <timing> pv e8d7",
+    "info depth 9 seldepth 9 multipv 1 score cp 134 nodes 2150 nps <timing> hashfull 0 tbhits 0 time <timing> pv e8d7 g2g4 h8a8 b1b2 c3c1 g1g2 f7f6",
+    "info depth 10 seldepth 14 multipv 1 score cp 114 nodes 6448 nps <timing> hashfull 1 tbhits 0 time <timing> pv c3c2 b5b2 c2b2 b1b2 e8d7 g1f1 h8a8 g2g4 f7f6 g4g5 d7c6",
+    "info depth 11 seldepth 17 multipv 1 score cp 126 nodes 16171 nps <timing> hashfull 4 tbhits 0 time <timing> pv e8d7 g2g4 h8a8 b5b2 f7f6 g4g5 c3a3 g5f6 g7f6 b1a1 h7h6 g1g2 h6h5 f3g1 a8g8 g2f1",
+    "info depth 12 seldepth 21 multipv 1 score cp 120 nodes 32792 nps <timing> hashfull 12 tbhits 0 time <timing> pv e8d7 g2g4 h8a8 b5b2 h7h6 g1g2 f7f6 h2h4 c3a3 b1a1 a8a5",
+    "info depth 13 seldepth 19 multipv 1 score cp 115 nodes 37889 nps <timing> hashfull 15 tbhits 0 time <timing> pv c3a3 b5b2 f7f6 f3e1 e8d7 e1c2 a3a5 g2g4",
+    "bestmove c3a3 ponder b5b2",
+    "info depth 1 seldepth 4 multipv 1 score cp 156 nodes 59 nps <timing> hashfull 0 tbhits 0 time <timing> pv d8e7",
+    "info depth 2 seldepth 3 multipv 1 score cp 148 nodes 194 nps <timing> hashfull 0 tbhits 0 time <timing> pv c5d5",
+    "info depth 3 seldepth 5 multipv 1 score cp 174 nodes 276 nps <timing> hashfull 0 tbhits 0 time <timing> pv c5d5",
+    "info depth 4 seldepth 4 multipv 1 score cp 175 nodes 342 nps <timing> hashfull 0 tbhits 0 time <timing> pv c5d5 d1d5 e6d5",
+    "info depth 5 seldepth 7 multipv 1 score cp 248 nodes 496 nps <timing> hashfull 0 tbhits 0 time <timing> pv c5d5 d1d5",
+    "info depth 6 seldepth 5 multipv 1 score cp 280 nodes 606 nps <timing> hashfull 0 tbhits 0 time <timing> pv c5d5 d1d5 e6d5",
+    "info depth 7 seldepth 11 multipv 1 score cp 212 nodes 1012 nps <timing> hashfull 0 tbhits 0 time <timing> pv c5d5 d1d5 e6d5 c4b2 d5d4 a1d1",
+    "info depth 8 seldepth 10 multipv 1 score cp 212 nodes 1110 nps <timing> hashfull 0 tbhits 0 time <timing> pv c5d5 d1d5 e6d5 c4b2 d5d4 a1d1 d4e3",
+    "info depth 9 seldepth 12 multipv 1 score cp 327 nodes 1989 nps <timing> hashfull 0 tbhits 0 time <timing> pv c5d5 d1d5 e6d5 c4b2 d8c7 a1b1",
+    "info depth 10 seldepth 9 multipv 1 score cp 376 nodes 2604 nps <timing> hashfull 0 tbhits 0 time <timing> pv c5d5 c4b2 d5d6 d1d6 d8d6",
+    "info depth 11 seldepth 20 multipv 1 score cp 269 nodes 9307 nps <timing> hashfull 2 tbhits 0 time <timing> pv c5d5 d1d5 e6d5 c4b2 d8c8 f4d3 c8c3 a1d1 b7a6",
+    "info depth 12 seldepth 24 multipv 1 score cp 231 nodes 16747 nps <timing> hashfull 4 tbhits 0 time <timing> pv c5d5 d1d5 e6d5 c4b2 d8c8 a1b1 c8c3 b2d3 d5d4 e3d4 f6d4 b1e1 g8f8 e1c3 b4c3 f4e2 d4g7 f2f3 b7d5",
+    "info depth 13 seldepth 25 multipv 1 score cp 237 nodes 18071 nps <timing> hashfull 4 tbhits 0 time <timing> pv c5d5 d1d5 e6d5 c4b2 d8c8 a1b1 c8c3 b2d3 d5d4 e3d4 f6d4 b1e1 g8f8 e1c3 b4c3 f4e2 d4g7 f2f3 b7d5 d3c1 c3c2",
+    "bestmove c5d5 ponder d1d5",
+    "info depth 1 seldepth 3 multipv 1 score cp 203 nodes 20 nps <timing> hashfull 0 tbhits 0 time <timing> pv e4d2 f3g2",
+    "info depth 2 seldepth 3 multipv 1 score cp 66 nodes 172 nps <timing> hashfull 0 tbhits 0 time <timing> pv e4d2 f3e2",
+    "info depth 3 seldepth 6 multipv 1 score cp -13 nodes 661 nps <timing> hashfull 0 tbhits 0 time <timing> pv e4d2 f3e2 d2b1 f2f4",
+    "info depth 4 seldepth 4 multipv 1 score cp 23 nodes 702 nps <timing> hashfull 0 tbhits 0 time <timing> pv e4d2 f3e2",
+    "info depth 5 seldepth 3 multipv 1 score cp 23 nodes 731 nps <timing> hashfull 0 tbhits 0 time <timing> pv e4d2 f3e2",
+    "info depth 6 seldepth 7 multipv 1 score cp 31 nodes 869 nps <timing> hashfull 0 tbhits 0 time <timing> pv e4f6 f3f4",
+    "info depth 7 seldepth 8 multipv 1 score cp 16 nodes 1064 nps <timing> hashfull 0 tbhits 0 time <timing> pv e4f6 f3f4 f6d5 f4e5 d5b4",
+    "info depth 8 seldepth 15 multipv 1 score cp 5 nodes 5729 nps <timing> hashfull 1 tbhits 0 time <timing> pv e4f6 f3f4 g8f8 f4e5 f8e7 f2f3 f6d7 e5d5 h6h5 d1f2 d7f8 d5c5 f8g6",
+    "info depth 9 seldepth 9 multipv 1 score cp 5 nodes 5790 nps <timing> hashfull 1 tbhits 0 time <timing> pv e4f6 f3f4 g8f8 f4e5 f8e7 f2f3 f6d7 e5d5",
+    "info depth 10 seldepth 11 multipv 1 score cp 5 nodes 5893 nps <timing> hashfull 1 tbhits 0 time <timing> pv e4f6 f3f4 g8f8 f4e5 f8e7 f2f3 f6d7 e5d5 h6h5 d1f2",
+    "info depth 11 seldepth 13 multipv 1 score cp 5 nodes 6047 nps <timing> hashfull 1 tbhits 0 time <timing> pv e4f6 f3f4 g8f8 f4e5 f8e7 f2f3 f6d7 e5d5 h6h5 d1f2 d7f8",
+    "info depth 12 seldepth 22 multipv 1 score cp 18 nodes 10810 nps <timing> hashfull 1 tbhits 0 time <timing> pv e4d2 f3e2 d2e4 e2d3 e4d6 c2c3 d4c3 d1c3",
+    "info depth 13 seldepth 22 multipv 1 score cp 20 nodes 12692 nps <timing> hashfull 2 tbhits 0 time <timing> pv e4f6 f3f4 g8f8 f4e5 f8e7 f2f3 f6d7 e5d5 h6h5 d1f2 d7f8 f2d3 f8g6",
+    "bestmove e4f6 ponder f3f4",
+    "info depth 1 seldepth 3 multipv 1 score cp 50 nodes 12 nps <timing> hashfull 0 tbhits 0 time <timing> pv d3e2",
+    "info depth 2 seldepth 6 multipv 1 score cp 63 nodes 42 nps <timing> hashfull 0 tbhits 0 time <timing> pv c4c5 d6c5",
+    "info depth 3 seldepth 3 multipv 1 score cp 17 nodes 382 nps <timing> hashfull 0 tbhits 0 time <timing> pv e3c2",
+    "info depth 4 seldepth 6 multipv 1 score cp 48 nodes 419 nps <timing> hashfull 0 tbhits 0 time <timing> pv c4c5 d6c5",
+    "info depth 5 seldepth 4 multipv 1 score cp 62 nodes 440 nps <timing> hashfull 0 tbhits 0 time <timing> pv c4c5 d6c5",
+    "info depth 6 seldepth 9 multipv 1 score cp 74 nodes 1014 nps <timing> hashfull 0 tbhits 0 time <timing> pv c4c5 d6c5 d5d6 f7f8",
+    "info depth 7 seldepth 7 multipv 1 score cp 92 nodes 1106 nps <timing> hashfull 0 tbhits 0 time <timing> pv c4c5 d6c5 d5d6",
+    "info depth 8 seldepth 7 multipv 1 score cp 122 nodes 1203 nps <timing> hashfull 0 tbhits 0 time <timing> pv c4c5 d6c5 d5d6",
+    "info depth 9 seldepth 8 multipv 1 score cp 84 nodes 1355 nps <timing> hashfull 0 tbhits 0 time <timing> pv c4c5 d6c5 d5d6 f7f8 d3c4 f8e8 c4b3",
+    "info depth 10 seldepth 15 multipv 1 score cp 187 nodes 3197 nps <timing> hashfull 0 tbhits 0 time <timing> pv c4c5 d6c5 d5d6 f7e8 d3c4 e8d7",
+    "info depth 11 seldepth 11 multipv 1 score cp 273 nodes 4631 nps <timing> hashfull 1 tbhits 0 time <timing> pv c4c5 b6c5",
+    "info depth 12 seldepth 15 multipv 1 score cp 300 nodes 7837 nps <timing> hashfull 1 tbhits 0 time <timing> pv c4c5 b6c5 e3c4 f7e7 b5b6 e7d7 b6b7 d8c7",
+    "info depth 13 seldepth 17 multipv 1 score cp 402 nodes 14290 nps <timing> hashfull 2 tbhits 0 time <timing> pv c4c5 d6c5 d5d6 f7f8 d3c4 f8g8",
+    "bestmove c4c5 ponder d6c5",
+    "info depth 1 seldepth 3 multipv 1 score cp 113 nodes 17 nps <timing> hashfull 0 tbhits 0 time <timing> pv g5h5",
+    "info depth 2 seldepth 4 multipv 1 score cp 81 nodes 97 nps <timing> hashfull 0 tbhits 0 time <timing> pv g5h5 a2c2 c8b7",
+    "info depth 3 seldepth 4 multipv 1 score cp 81 nodes 141 nps <timing> hashfull 0 tbhits 0 time <timing> pv g5h5 a2c2 c8b7",
+    "info depth 4 seldepth 6 multipv 1 score cp 86 nodes 341 nps <timing> hashfull 0 tbhits 0 time <timing> pv g5h5 a2c2 c8d7",
+    "info depth 5 seldepth 6 multipv 1 score cp 106 nodes 443 nps <timing> hashfull 0 tbhits 0 time <timing> pv g5h5 a2c2 c8d7",
+    "info depth 6 seldepth 8 multipv 1 score cp 114 nodes 537 nps <timing> hashfull 0 tbhits 0 time <timing> pv g5h5 a2c2 c8d7 f5f4",
+    "info depth 7 seldepth 8 multipv 1 score cp 154 nodes 699 nps <timing> hashfull 0 tbhits 0 time <timing> pv g5h5 a2c2 c8d7",
+    "info depth 8 seldepth 10 multipv 1 score cp 89 nodes 1236 nps <timing> hashfull 1 tbhits 0 time <timing> pv g5h5 a2c2 c8b7",
+    "info depth 9 seldepth 15 multipv 1 score cp 75 nodes 5016 nps <timing> hashfull 2 tbhits 0 time <timing> pv g5h5 a2e2 c8d7 e2b2 d7e6",
+    "info depth 10 seldepth 19 multipv 1 score cp 54 nodes 45086 nps <timing> hashfull 12 tbhits 0 time <timing> pv g5h5 a2e2 c8d7 e2b2 h6h7 b2b8 h5f5 f3g4 d7e6 b8h8 f5f7 g4g5 f7g7 g5h6 g7g1 h8f8",
+    "info depth 11 seldepth 28 multipv 1 score cp 14 nodes 106647 nps <timing> hashfull 22 tbhits 0 time <timing> pv g5h5 a2e2 c8d7 e2b2 h6h7 b2b8 h5f5 f3g4 d7e6 b8h8 f5f7 g4g5 f7a7 g5g6 a7a2 h8e8 e6d6 e8d8 d6e7",
+    "info depth 12 seldepth 25 multipv 1 score cp 9 nodes 169110 nps <timing> hashfull 31 tbhits 0 time <timing> pv g5h5 a2e2 c8d7 e2b2 d7c7 b2c2 c7d8 c2b2 h5h3 f3g4 d8c8 g4h3",
+    "info depth 13 seldepth 13 multipv 1 score cp 9 nodes 169275 nps <timing> hashfull 31 tbhits 0 time <timing> pv g5h5 a2e2 c8d7 e2b2 d7c7 b2c2 c7d8 c2b2 h5h3 f3g4 d8c8 g4h3",
+    "bestmove g5h5 ponder a2e2",
+    "info depth 1 seldepth 4 multipv 1 score cp 195 nodes 28 nps <timing> hashfull 0 tbhits 0 time <timing> pv d1d3 h7g8",
+    "info depth 2 seldepth 6 multipv 1 score cp 145 nodes 192 nps <timing> hashfull 0 tbhits 0 time <timing> pv d1c2 h7h6 c2c6 g7g6 c6b6",
+    "info depth 3 seldepth 6 multipv 1 score cp 146 nodes 303 nps <timing> hashfull 0 tbhits 0 time <timing> pv d1d3 g7g6",
+    "info depth 4 seldepth 6 multipv 1 score cp 149 nodes 406 nps <timing> hashfull 0 tbhits 0 time <timing> pv d1c2 h7h6 c2c6 g7g6 c6b6",
+    "info depth 5 seldepth 6 multipv 1 score cp 149 nodes 464 nps <timing> hashfull 0 tbhits 0 time <timing> pv d1c2 h7h6 c2c6 g7g6 c6b6",
+    "info depth 6 seldepth 10 multipv 1 score cp 153 nodes 731 nps <timing> hashfull 0 tbhits 0 time <timing> pv a4a5 b6a5 b4a5 h2g2 d1d3 h7h6 d3d6 h6h7",
+    "info depth 7 seldepth 11 multipv 1 score cp 165 nodes 1403 nps <timing> hashfull 0 tbhits 0 time <timing> pv d1c2 g7g6 a4a5 b6a5 b4a5 h2g1",
+    "info depth 8 seldepth 9 multipv 1 score cp 156 nodes 1545 nps <timing> hashfull 0 tbhits 0 time <timing> pv d1c2 g7g6 a4a5 b6a5 b4a5 h4h3",
+    "info depth 9 seldepth 9 multipv 1 score cp 170 nodes 1754 nps <timing> hashfull 0 tbhits 0 time <timing> pv d1c2 g7g6 a4a5 b6a5 b4a5 h4h3 a5a6 h2g1",
+    "info depth 10 seldepth 11 multipv 1 score cp 166 nodes 2502 nps <timing> hashfull 0 tbhits 0 time <timing> pv d1c2 h7h6 c2c6 g7g6 c6b6 h4h3 b6b8",
+    "info depth 11 seldepth 20 multipv 1 score cp 239 nodes 9279 nps <timing> hashfull 3 tbhits 0 time <timing> pv a4a5 b6a5 b4a5 h2h3 d1c2 h7h8 c2c6 h3f5 c6e8 h8h7 e8e4 f5e4 f3e4",
+    "info depth 12 seldepth 14 multipv 1 score cp 191 nodes 9673 nps <timing> hashfull 3 tbhits 0 time <timing> pv a4a5 b6a5 b4a5 h2h3 d1c2 h7h8 c2c6 h3h1 a5a6 h1a1 c6a8 h8h7",
+    "info depth 13 seldepth 16 multipv 1 score cp 190 nodes 10850 nps <timing> hashfull 3 tbhits 0 time <timing> pv a4a5 b6a5 b4a5 h2h3 d1c2 h7h8 c2c6 h3h1 a5a6 h1a1 c6e8 h8h7 e8h5 h7g8",
+    "bestmove a4a5 ponder b6a5",
+    "info depth 1 seldepth 5 multipv 1 score cp -486 nodes 36 nps <timing> hashfull 0 tbhits 0 time <timing> pv e4a8 e6g8 a8g8 h8g8",
+    "info depth 2 seldepth 5 multipv 1 score cp -394 nodes 82 nps <timing> hashfull 0 tbhits 0 time <timing> pv e4e6 d7e6",
+    "info depth 3 seldepth 5 multipv 1 score cp -486 nodes 152 nps <timing> hashfull 0 tbhits 0 time <timing> pv e4a8 e6g8 a8g8 h8g8",
+    "info depth 4 seldepth 5 multipv 1 score cp -486 nodes 190 nps <timing> hashfull 0 tbhits 0 time <timing> pv e4a8 e6g8 a8g8 h8g8",
+    "info depth 5 seldepth 6 multipv 1 score cp -327 nodes 246 nps <timing> hashfull 0 tbhits 0 time <timing> pv e4a8 e6g8 a8g8 h8g8 f3g2",
+    "info depth 6 seldepth 6 multipv 1 score cp -327 nodes 298 nps <timing> hashfull 0 tbhits 0 time <timing> pv e4a8 e6g8 a8g8 h8g8 f3g2",
+    "info depth 7 seldepth 7 multipv 1 score cp -332 nodes 375 nps <timing> hashfull 0 tbhits 0 time <timing> pv e4a8 e6g8 a8g8 h8g8 f3g2 d7d6",
+    "info depth 8 seldepth 11 multipv 1 score cp -162 nodes 679 nps <timing> hashfull 0 tbhits 0 time <timing> pv e4e6 d7e6 f3g2 h7h5 a2a4",
+    "info depth 9 seldepth 8 multipv 1 score cp -145 nodes 841 nps <timing> hashfull 0 tbhits 0 time <timing> pv e4e6 d7e6 f3g2 h8g8",
+    "info depth 10 seldepth 9 multipv 1 score cp -92 nodes 1434 nps <timing> hashfull 0 tbhits 0 time <timing> pv e4e6 d7e6 f3g2 h7h5 a2a4 h5h4",
+    "info depth 11 seldepth 18 multipv 1 score cp -39 nodes 3141 nps <timing> hashfull 1 tbhits 0 time <timing> pv e4e6 d7e6 f3g2 h7h5 a2a4 e6e5",
+    "info depth 12 seldepth 17 multipv 1 score cp -41 nodes 4806 nps <timing> hashfull 1 tbhits 0 time <timing> pv e4e6 d7e6 f3g2 h7h5 a2a4 h5h4",
+    "info depth 13 seldepth 17 multipv 1 score cp -34 nodes 8222 nps <timing> hashfull 1 tbhits 0 time <timing> pv e4e6 d7e6 f3g2 h7h5 a2a4 h8h7",
+    "bestmove e4e6 ponder d7e6",
+    "info depth 1 seldepth 3 multipv 1 score cp 201 nodes 11 nps <timing> hashfull 0 tbhits 0 time <timing> pv e5f5 c5d5",
+    "info depth 2 seldepth 3 multipv 1 score cp 201 nodes 28 nps <timing> hashfull 0 tbhits 0 time <timing> pv e5f5 c5d5",
+    "info depth 3 seldepth 4 multipv 1 score cp 214 nodes 51 nps <timing> hashfull 0 tbhits 0 time <timing> pv e5f5 c5d5 f5g5",
+    "info depth 4 seldepth 6 multipv 1 score cp 174 nodes 106 nps <timing> hashfull 0 tbhits 0 time <timing> pv e5f5 c5d5 f5g5 d5e4 g5h5",
+    "info depth 5 seldepth 7 multipv 1 score cp 179 nodes 272 nps <timing> hashfull 0 tbhits 0 time <timing> pv e5f5 c5d5 f5g5 d5e4 g5h5",
+    "info depth 6 seldepth 7 multipv 1 score cp 182 nodes 348 nps <timing> hashfull 0 tbhits 0 time <timing> pv e5f5 c5d5 f5g6 d5e4 g6h5 e4f5",
+    "info depth 7 seldepth 9 multipv 1 score cp 203 nodes 452 nps <timing> hashfull 0 tbhits 0 time <timing> pv e5f5 c5d5 f5g6 d5e4 g6h5 e4d3",
+    "info depth 8 seldepth 9 multipv 1 score cp 200 nodes 542 nps <timing> hashfull 0 tbhits 0 time <timing> pv e5f5 c5d5 f5g6 d5e4 g6h5 e4f5",
+    "info depth 9 seldepth 11 multipv 1 score cp 193 nodes 729 nps <timing> hashfull 0 tbhits 0 time <timing> pv e5f5 c5d5 f5g6 d5e4 g6h5 e4d3 h5g4 d3d2 h4h5",
+    "info depth 10 seldepth 16 multipv 1 score cp 203 nodes 2749 nps <timing> hashfull 0 tbhits 0 time <timing> pv d5d6 c7d6 e5f5 c5d5 f5f4 d5e6 f4g5 d6d5 g5h5 e6f5 h5h6 f5e4",
+    "info depth 11 seldepth 13 multipv 1 score cp 203 nodes 3083 nps <timing> hashfull 0 tbhits 0 time <timing> pv d5d6 c7d6 e5f5 c5d5 f5f4 d5e6 f4g5 d6d5 g5h5 e6f5 h5h6 f5e4",
+    "info depth 12 seldepth 12 multipv 1 score cp 203 nodes 3203 nps <timing> hashfull 0 tbhits 0 time <timing> pv d5d6 c7d6 e5f5 c5d5 f5f4 d5e6 f4g5 d6d5 g5h5 e6f5 h5h6",
+    "info depth 13 seldepth 19 multipv 1 score cp 321 nodes 7644 nps <timing> hashfull 1 tbhits 0 time <timing> pv d5d6 c7d6 e5f5 c5d5 f5g6 d5e4 g6h5 e4f5",
+    "bestmove d5d6 ponder c7d6",
+    "info depth 1 seldepth 2 multipv 1 score cp -215 nodes 10 nps <timing> hashfull 0 tbhits 0 time <timing> pv f2f4",
+    "info depth 2 seldepth 7 multipv 1 score cp -226 nodes 117 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5f6 g7f6",
+    "info depth 3 seldepth 3 multipv 1 score cp -252 nodes 196 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5f6 g7f6",
+    "info depth 4 seldepth 5 multipv 1 score cp -217 nodes 253 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5f6 g7f6 f2f4 c4d4",
+    "info depth 5 seldepth 5 multipv 1 score cp -267 nodes 326 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5f6 g7f6 f2f4 c4d4",
+    "info depth 6 seldepth 7 multipv 1 score cp -162 nodes 486 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5f6 g7f6 f2f4 c4d4",
+    "info depth 7 seldepth 9 multipv 1 score cp -149 nodes 569 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5f6 g7f6 f2f4 c4d5",
+    "info depth 8 seldepth 9 multipv 1 score cp -31 nodes 975 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5f6 g7f6 f2f4 c4d4 g4g5 f6g5 f4g5",
+    "info depth 9 seldepth 9 multipv 1 score cp -6 nodes 1553 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5f6 g7f6 f2f4 c4d5 g4g5 f6g5 f4g5",
+    "info depth 10 seldepth 10 multipv 1 score cp 21 nodes 1983 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5f6 g7f6 f2f4 b7b5",
+    "info depth 11 seldepth 9 multipv 1 score cp 60 nodes 2650 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5f6 g7f6 f2f4 c4d5",
+    "info depth 12 seldepth 15 multipv 1 score cp 141 nodes 4469 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5f6 g7f6 f2f4 c4d5 g4g5 f6g5 f4g5 d5e6",
+    "info depth 13 seldepth 13 multipv 1 score cp 169 nodes 6300 nps <timing> hashfull 0 tbhits 0 time <timing> pv f5f6 g7f6 f2f4 c4d5 g4g5 f6g5 f4g5 d5e5",
+    "bestmove f5f6 ponder g7f6",
+    "info depth 1 seldepth 2 multipv 1 score cp 92 nodes 10 nps <timing> hashfull 0 tbhits 0 time <timing> pv g3g2",
+    "info depth 2 seldepth 5 multipv 1 score cp 90 nodes 117 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f5 e7f7",
+    "info depth 3 seldepth 4 multipv 1 score cp 90 nodes 132 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f5 e7f7",
+    "info depth 4 seldepth 7 multipv 1 score cp 98 nodes 240 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f5 e6f5",
+    "info depth 5 seldepth 5 multipv 1 score cp 124 nodes 279 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f5 e6f5",
+    "info depth 6 seldepth 5 multipv 1 score cp 190 nodes 441 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f5 e6f5 g3f4",
+    "info depth 7 seldepth 7 multipv 1 score cp 230 nodes 694 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f5 e6f5 g3f4 g7g6",
+    "info depth 8 seldepth 7 multipv 1 score cp 263 nodes 1101 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f5 e6f5 g3f4 e7e8",
+    "info depth 9 seldepth 12 multipv 1 score cp 204 nodes 1636 nps <timing> hashfull 0 tbhits 0 time <timing> pv f4f5 e6f5 g3f4 e7e6 h3g3 e6g6 g3g5 g6g5 f4g5 f5f4 g5f4",
+    "info depth 10 seldepth 20 multipv 1 score cp 279 nodes 3846 nps <timing> hashfull 1 tbhits 0 time <timing> pv f4f5 g7h6 f5f6 e7e8 g3f2 e8g8 h3f3",
+    "info depth 11 seldepth 12 multipv 1 score cp 245 nodes 6683 nps <timing> hashfull 1 tbhits 0 time <timing> pv f4f5 g7h6 g3f4 e7g7 f5e6 g7g4 f4f5 h6g7 a3a4",
+    "info depth 12 seldepth 19 multipv 1 score cp 327 nodes 19584 nps <timing> hashfull 4 tbhits 0 time <timing> pv f4f5 g7h6 g3f4 e7g7 f5e6 g7g4 f4f5 h6g7 h3f3 g7f8",
+    "info depth 13 seldepth 15 multipv 1 score cp 328 nodes 25319 nps <timing> hashfull 6 tbhits 0 time <timing> pv f4f5 g7h7 g3f4 e7g7 f5e6 g7g4 f4f5 h7g7 h3f3 a7a6 a3a4 g4g1 e6e7",
+    "bestmove f4f5 ponder g7h7",
+    "info depth 1 seldepth 3 multipv 1 score cp 116 nodes 11 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6b7",
+    "info depth 2 seldepth 3 multipv 1 score cp 83 nodes 117 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6a8",
+    "info depth 3 seldepth 6 multipv 1 score cp 98 nodes 155 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6a8 f1e2",
+    "info depth 4 seldepth 6 multipv 1 score cp 102 nodes 243 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6b7 f1g2",
+    "info depth 5 seldepth 5 multipv 1 score cp 116 nodes 276 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6b7 f1g2 b7c8",
+    "info depth 6 seldepth 6 multipv 1 score cp 101 nodes 375 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6b7 f1g2 b7c8 g2h1",
+    "info depth 7 seldepth 12 multipv 1 score cp 57 nodes 1799 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6a8 f1g2 a8b7 g2h1 b7c8 h1g2 d6c6 g2f1 c8b7",
+    "info depth 8 seldepth 12 multipv 1 score cp 66 nodes 2339 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6a8 f1g2 a8b7 g2h1 d6c6 h1g2 b7c8 g2h1",
+    "info depth 9 seldepth 15 multipv 1 score cp 74 nodes 2640 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6a8 f1g2 a8b7 g2h1 d6c6 h1g2 b7c8 g2h1 d7d6 h1g2",
+    "info depth 10 seldepth 12 multipv 1 score cp 72 nodes 2733 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6a8 f1g2 a8b7 g2h1 b7c8 h1g2 d6c6 g2h1 d7d6 h1g2 c8d7",
+    "info depth 11 seldepth 12 multipv 1 score cp 72 nodes 2833 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6a8 f1g2 a8b7 g2h1 b7c8 h1g2 d6c6 g2h1 d7d6 h1g2 c8d7",
+    "info depth 12 seldepth 16 multipv 1 score cp 72 nodes 3373 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6a8 f1g2 a8b7 g2h1 b7c8 h1g2 d6c6 g2f1 d7d6 f1g2 c8d7 g2f1 d7e8",
+    "info depth 13 seldepth 23 multipv 1 score cp 93 nodes 5057 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6a8 f1g2 a8b7 g2h1 b7c8 h1g2 d6c6 g2f1 d7d6 f1e2",
+    "bestmove c6a8 ponder f1g2",
+    "info depth 1 seldepth 3 multipv 1 score cp -113 nodes 23 nps <timing> hashfull 0 tbhits 0 time <timing> pv a4a3",
+    "info depth 2 seldepth 3 multipv 1 score cp -91 nodes 50 nps <timing> hashfull 0 tbhits 0 time <timing> pv a4a3",
+    "info depth 3 seldepth 3 multipv 1 score cp -86 nodes 82 nps <timing> hashfull 0 tbhits 0 time <timing> pv a4a3",
+    "info depth 4 seldepth 7 multipv 1 score cp -114 nodes 293 nps <timing> hashfull 0 tbhits 0 time <timing> pv a4a3 h7f7 f8g8",
+    "info depth 5 seldepth 7 multipv 1 score cp -95 nodes 553 nps <timing> hashfull 0 tbhits 0 time <timing> pv h4h3 h7h6 a4a3 h6h3",
+    "info depth 6 seldepth 6 multipv 1 score cp -91 nodes 602 nps <timing> hashfull 0 tbhits 0 time <timing> pv h4h3 h7h6 a4a3 h6h3",
+    "info depth 7 seldepth 10 multipv 1 score cp -106 nodes 1070 nps <timing> hashfull 0 tbhits 0 time <timing> pv h4h3 h7h6 a4a3 h6h3 c4a4 h3h8 f8e7",
+    "info depth 8 seldepth 12 multipv 1 score cp -85 nodes 1800 nps <timing> hashfull 0 tbhits 0 time <timing> pv h4h3 f5e5 a4a3",
+    "info depth 9 seldepth 13 multipv 1 score cp -77 nodes 2858 nps <timing> hashfull 1 tbhits 0 time <timing> pv c4b4 h7h6 f8g7 e6e7 b4b5 f5e6 b5b6 e6e5",
+    "info depth 10 seldepth 16 multipv 1 score cp -83 nodes 3413 nps <timing> hashfull 1 tbhits 0 time <timing> pv h4h3 h7h6 a4a3 h6h8 f8e7 h8h7 e7f8 h7h3",
+    "info depth 11 seldepth 15 multipv 1 score cp -40 nodes 5708 nps <timing> hashfull 1 tbhits 0 time <timing> pv h4h3 h7h6 a4a3 h6h8 f8e7 h8h7 e7f8 e6e7 f8e8",
+    "info depth 12 seldepth 19 multipv 1 score cp 0 nodes 10774 nps <timing> hashfull 2 tbhits 0 time <timing> pv h4h3 h7h6 a4a3 h6h8 f8e7 h8h7 e7d8 h7h8 d8e7",
+    "info depth 13 seldepth 9 multipv 1 score cp -13 nodes 13899 nps <timing> hashfull 3 tbhits 0 time <timing> pv h4h3 h7h6 a4a3 h6h8 f8e7 h8h7 e7f8 h7h3",
+    "bestmove h4h3 ponder h7h6",
+    "info depth 1 seldepth 3 multipv 1 score cp 42 nodes 36 nps <timing> hashfull 0 tbhits 0 time <timing> pv e1b1",
+    "info depth 2 seldepth 3 multipv 1 score cp 63 nodes 73 nps <timing> hashfull 0 tbhits 0 time <timing> pv e1b1",
+    "info depth 3 seldepth 3 multipv 1 score cp 62 nodes 103 nps <timing> hashfull 0 tbhits 0 time <timing> pv e1b1",
+    "info depth 4 seldepth 5 multipv 1 score cp 49 nodes 507 nps <timing> hashfull 0 tbhits 0 time <timing> pv e1b1 b2f6 b1b8 g8f7",
+    "info depth 5 seldepth 7 multipv 1 score cp 81 nodes 1187 nps <timing> hashfull 0 tbhits 0 time <timing> pv e1e4 b2f6",
+    "info depth 6 seldepth 5 multipv 1 score cp 108 nodes 1285 nps <timing> hashfull 0 tbhits 0 time <timing> pv e1e4 f4f3",
+    "info depth 7 seldepth 6 multipv 1 score cp 117 nodes 1449 nps <timing> hashfull 0 tbhits 0 time <timing> pv e1e4 b2f6",
+    "info depth 8 seldepth 7 multipv 1 score cp 159 nodes 1844 nps <timing> hashfull 0 tbhits 0 time <timing> pv e1e4 b2f6",
+    "info depth 9 seldepth 9 multipv 1 score cp 165 nodes 2526 nps <timing> hashfull 0 tbhits 0 time <timing> pv e1e4 a5c5 e4e8 g8f7 a6a7",
+    "info depth 10 seldepth 13 multipv 1 score cp 297 nodes 9527 nps <timing> hashfull 2 tbhits 0 time <timing> pv e1e4 a5c5 e4e8 g8f7 a6a7 c5c1 g1h2",
+    "info depth 11 seldepth 11 multipv 1 score cp 294 nodes 9948 nps <timing> hashfull 2 tbhits 0 time <timing> pv e1e4 a5c5 e4e8 g8f7 a6a7 c5c1 g1h2 c1a1",
+    "info depth 12 seldepth 18 multipv 1 score cp 371 nodes 24955 nps <timing> hashfull 5 tbhits 0 time <timing> pv e1e4 a5c5 e4e8 g8h7",
+    "info depth 13 seldepth 21 multipv 1 score cp 382 nodes 37154 nps <timing> hashfull 8 tbhits 0 time <timing> pv e1e4 a5a1 g1h2 g8h7 e4a4 a1a4 c5a4 b2d4 h2g1 g7g5 g1f1 h7g7 f1e2",
+    "bestmove e1e4 ponder a5a1",
+    "info depth 1 seldepth 6 multipv 1 score cp 276 nodes 42 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6c7",
+    "info depth 2 seldepth 3 multipv 1 score cp 354 nodes 79 nps <timing> hashfull 0 tbhits 0 time <timing> pv c6c7",
+    "info depth 3 seldepth 5 multipv 1 score cp 300 nodes 211 nps <timing> hashfull 0 tbhits 0 time <timing> pv g3g4 h6g5",
+    "info depth 4 seldepth 6 multipv 1 score cp 305 nodes 297 nps <timing> hashfull 0 tbhits 0 time <timing> pv g3g4 f8g7 d1c3",
+    "info depth 5 seldepth 7 multipv 1 score cp 270 nodes 422 nps <timing> hashfull 0 tbhits 0 time <timing> pv g3g4 f8g7 f2f3 e7a7 c4e4 a7g1",
+    "info depth 6 seldepth 7 multipv 1 score cp 278 nodes 524 nps <timing> hashfull 0 tbhits 0 time <timing> pv g3g4 f4f3 e2f3",
+    "info depth 7 seldepth 8 multipv 1 score cp 288 nodes 663 nps <timing> hashfull 0 tbhits 0 time <timing> pv g3g4 f8g7 d1c3 f4f3 d5f3 b8f8 c3d5",
+    "info depth 8 seldepth 17 multipv 1 score cp 242 nodes 2630 nps <timing> hashfull 0 tbhits 0 time <timing> pv g3g4 f8g7 d1c3 f4f3 d5f3 b8f8 c6c7 e7g5 c7c8q f8c8 c4c8",
+    "info depth 9 seldepth 10 multipv 1 score cp 242 nodes 2722 nps <timing> hashfull 0 tbhits 0 time <timing> pv g3g4 f8g7 d1c3 f4f3 d5f3 b8f8 c6c7 e7g5",
+    "info depth 10 seldepth 12 multipv 1 score cp 243 nodes 2990 nps <timing> hashfull 0 tbhits 0 time <timing> pv g3g4 f8g7 d1c3 f4f3 d5f3 b8f8 c6c7 e7g5 e2f1",
+    "info depth 11 seldepth 17 multipv 1 score cp 270 nodes 5353 nps <timing> hashfull 1 tbhits 0 time <timing> pv g3g4 f4f3 e2f3 f8g7 f3g2 h6g5 d1c3 g5d2",
+    "info depth 12 seldepth 14 multipv 1 score cp 260 nodes 6030 nps <timing> hashfull 1 tbhits 0 time <timing> pv g3g4 f8g7 d1c3 f4f3 d5f3 b8f8 c4b3",
+    "info depth 13 seldepth 19 multipv 1 score cp 284 nodes 21281 nps <timing> hashfull 7 tbhits 0 time <timing> pv g3g4 h6g5 d1c3 g5h4 c6c7 b8c8 c3b5 f8g7 c4c6",
+    "bestmove g3g4 ponder h6g5",
+    "info depth 1 seldepth 3 multipv 1 score cp 197 nodes 25 nps <timing> hashfull 0 tbhits 0 time <timing> pv a5a6",
+    "info depth 2 seldepth 4 multipv 1 score cp 247 nodes 57 nps <timing> hashfull 0 tbhits 0 time <timing> pv a5a6",
+    "info depth 3 seldepth 4 multipv 1 score cp 261 nodes 92 nps <timing> hashfull 0 tbhits 0 time <timing> pv a5a6 b3b1 g1h2",
+    "info depth 4 seldepth 4 multipv 1 score cp 292 nodes 146 nps <timing> hashfull 0 tbhits 0 time <timing> pv a5a6 b3b8",
+    "info depth 5 seldepth 6 multipv 1 score cp 249 nodes 203 nps <timing> hashfull 0 tbhits 0 time <timing> pv a5a6 b3b1 g1g2 b1b8 a6a7",
+    "info depth 6 seldepth 8 multipv 1 score cp 211 nodes 446 nps <timing> hashfull 0 tbhits 0 time <timing> pv a5a6 b3b8 f2f4",
+    "info depth 7 seldepth 11 multipv 1 score cp 183 nodes 1063 nps <timing> hashfull 0 tbhits 0 time <timing> pv f2f4 e5g7 g1f2 b3b7 f2e2 f7f5 e2d3",
+    "info depth 8 seldepth 15 multipv 1 score cp 183 nodes 1524 nps <timing> hashfull 0 tbhits 0 time <timing> pv g1f1 b3b7 f2f4 e5g7 f1e2 f7f5",
+    "info depth 9 seldepth 11 multipv 1 score cp 194 nodes 2368 nps <timing> hashfull 0 tbhits 0 time <timing> pv a5a6 b3b8 f2f4 e5g7 g1f2 b8a8 f2e2 g8f8",
+    "info depth 10 seldepth 10 multipv 1 score cp 192 nodes 2632 nps <timing> hashfull 0 tbhits 0 time <timing> pv a5a6 b3b8 g1f1 g8f8 f1e2 f8e8 e2d3 e8d7",
+    "info depth 11 seldepth 17 multipv 1 score cp 256 nodes 4394 nps <timing> hashfull 0 tbhits 0 time <timing> pv g1f1 b3b8 a5a6 g8f8 a6a7 b8a8 f1e2 f8e8",
+    "info depth 12 seldepth 14 multipv 1 score cp 241 nodes 6270 nps <timing> hashfull 0 tbhits 0 time <timing> pv a5a6 b3b8 g1f1 e7e6 e3e4 g8f8 a6a7 b8a8 f1e2 f8e8",
+    "info depth 13 seldepth 19 multipv 1 score cp 239 nodes 8735 nps <timing> hashfull 1 tbhits 0 time <timing> pv a5a6 b3b8 a6a7 b8a8 g1f1 g8f8 f1e2 e7e6 e3e4 e5d4 e2d3 e6d5 e4d5 d4f2 d3c4 f8e8",
+    "bestmove a5a6 ponder b3b8",
+    "info depth 1 seldepth 3 multipv 1 score cp -30 nodes 8 nps <timing> hashfull 0 tbhits 0 time <timing> pv b3a4 a2a3",
+    "info depth 2 seldepth 3 multipv 1 score cp -30 nodes 17 nps <timing> hashfull 0 tbhits 0 time <timing> pv b3a4 a2a3",
+    "info depth 3 seldepth 5 multipv 1 score cp -26 nodes 39 nps <timing> hashfull 0 tbhits 0 time <timing> pv b3a4 a2a3",
+    "info depth 4 seldepth 4 multipv 1 score cp -24 nodes 57 nps <timing> hashfull 0 tbhits 0 time <timing> pv b3a4 a2a3",
+    "info depth 5 seldepth 5 multipv 1 score cp -14 nodes 112 nps <timing> hashfull 0 tbhits 0 time <timing> pv b3a4 a2a3",
+    "info depth 6 seldepth 5 multipv 1 score cp -4 nodes 149 nps <timing> hashfull 0 tbhits 0 time <timing> pv b3a4 a2a3",
+    "info depth 7 seldepth 6 multipv 1 score cp 3 nodes 258 nps <timing> hashfull 0 tbhits 0 time <timing> pv b3a4 a2a3",
+    "info depth 8 seldepth 6 multipv 1 score cp 15 nodes 394 nps <timing> hashfull 0 tbhits 0 time <timing> pv b3a4 a2a3",
+    "info depth 9 seldepth 5 multipv 1 score cp 23 nodes 529 nps <timing> hashfull 0 tbhits 0 time <timing> pv b3a4 a2a3",
+    "info depth 10 seldepth 5 multipv 1 score cp 70 nodes 792 nps <timing> hashfull 0 tbhits 0 time <timing> pv b3a4 a2a3",
+    "info depth 11 seldepth 7 multipv 1 score cp 71 nodes 1604 nps <timing> hashfull 0 tbhits 0 time <timing> pv b3a4 h3g4 a4a5 a2a3 g1f2 g4d1",
+    "info depth 12 seldepth 18 multipv 1 score cp 95 nodes 10924 nps <timing> hashfull 2 tbhits 0 time <timing> pv b3a4 a2a3 a4a5 h3g4 g1f2 g4d1 h7g8 d1c2",
+    "info depth 13 seldepth 13 multipv 1 score cp 103 nodes 17171 nps <timing> hashfull 2 tbhits 0 time <timing> pv b3a4 a2a3 a4a5 h3g4 g1f2 g4d1 h7g8 d1a4",
+    "bestmove b3a4 ponder a2a3",
+    "info depth 1 seldepth 3 multipv 1 score cp 55 nodes 43 nps <timing> hashfull 0 tbhits 0 time <timing> pv g3d6",
+    "info depth 2 seldepth 6 multipv 1 score cp 53 nodes 172 nps <timing> hashfull 0 tbhits 0 time <timing> pv a3a4 b5a4",
+    "info depth 3 seldepth 4 multipv 1 score cp 51 nodes 222 nps <timing> hashfull 0 tbhits 0 time <timing> pv a3a4 b5a4",
+    "info depth 4 seldepth 4 multipv 1 score cp 54 nodes 272 nps <timing> hashfull 0 tbhits 0 time <timing> pv a3a4 b5a4",
+    "info depth 5 seldepth 8 multipv 1 score cp 60 nodes 342 nps <timing> hashfull 0 tbhits 0 time <timing> pv a3a4 b5a4",
+    "info depth 6 seldepth 8 multipv 1 score cp 63 nodes 487 nps <timing> hashfull 0 tbhits 0 time <timing> pv a3a4 b5a4 g3d6",
+    "info depth 7 seldepth 8 multipv 1 score cp 74 nodes 651 nps <timing> hashfull 0 tbhits 0 time <timing> pv a3a4 b5a4 g3d6",
+    "info depth 8 seldepth 8 multipv 1 score cp 77 nodes 790 nps <timing> hashfull 0 tbhits 0 time <timing> pv a3a4 b5a4 g3d6 a7a6",
+    "info depth 9 seldepth 13 multipv 1 score cp 59 nodes 4573 nps <timing> hashfull 0 tbhits 0 time <timing> pv g3h2 a7f7 a1h1 f5f2 e3f2 f7f2 h2f2 f8f2 b2b3",
+    "info depth 10 seldepth 10 multipv 1 score cp 59 nodes 5131 nps <timing> hashfull 0 tbhits 0 time <timing> pv g3h2 a7f7 a1h1 f5f2 e3f2 f7f2 h2f2 f8f2 b2b3",
+    "info depth 11 seldepth 16 multipv 1 score cp 60 nodes 20636 nps <timing> hashfull 5 tbhits 0 time <timing> pv g3h2 a7b7 h6g6 h7g6 a1h1 b7g7 b2b3 f5f3",
+    "info depth 12 seldepth 20 multipv 1 score cp 64 nodes 36700 nps <timing> hashfull 9 tbhits 0 time <timing> pv g3h2 a7b7 a1h1 b7f7 a3a4 b5a4 b2a3 f8d8 a3a2",
+    "info depth 13 seldepth 25 multipv 1 score cp 48 nodes 66016 nps <timing> hashfull 17 tbhits 0 time <timing> pv g3h2 f8d8 a1h1 a7g7 a3a4 b5a4 b2a3 f5f3 a3a2 d8f8 a2a1 f8d8 h1b1 g7b7 h2e5 b7b5",
+    "bestmove g3h2 ponder f8d8",
+    "info depth 1 seldepth 6 multipv 1 score cp 747 nodes 74 nps <timing> hashfull 0 tbhits 0 time <timing> pv f3d5 e7f7 d5f7 f8f7",
+    "info depth 2 seldepth 6 multipv 1 score cp -86 nodes 428 nps <timing> hashfull 0 tbhits 0 time <timing> pv h1h2 c5d4 f3g4 h5g4",
+    "info depth 3 seldepth 6 multipv 1 score cp -93 nodes 961 nps <timing> hashfull 0 tbhits 0 time <timing> pv h1h2 c5d4 f3g4 h5g4",
+    "info depth 4 seldepth 6 multipv 1 score cp -69 nodes 1402 nps <timing> hashfull 0 tbhits 0 time <timing> pv h1h2 c5d4 f3g4 h5g4",
+    "info depth 5 seldepth 5 multipv 1 score cp -97 nodes 1850 nps <timing> hashfull 0 tbhits 0 time <timing> pv h1h2 c5d4 f3g4 h5g4",
+    "info depth 6 seldepth 10 multipv 1 score cp -156 nodes 4060 nps <timing> hashfull 0 tbhits 0 time <timing> pv h1h2 g8g7 f3d5 c5d4 d3d4",
+    "info depth 7 seldepth 7 multipv 1 score cp -164 nodes 4128 nps <timing> hashfull 0 tbhits 0 time <timing> pv h1h2 g8g7 f3d5 c5d4 d3d4 d7c5",
+    "info depth 8 seldepth 13 multipv 1 score cp -145 nodes 6190 nps <timing> hashfull 0 tbhits 0 time <timing> pv h1h2 g8g7",
+    "info depth 9 seldepth 11 multipv 1 score cp -101 nodes 9744 nps <timing> hashfull 1 tbhits 0 time <timing> pv f3d5 g8g7 g1f3 g4f3 d5f3 c5d4",
+    "info depth 10 seldepth 10 multipv 1 score cp -110 nodes 11240 nps <timing> hashfull 2 tbhits 0 time <timing> pv h1h2 c5d4 d2b4 d7c5 b4c5 e7c5",
+    "info depth 11 seldepth 15 multipv 1 score cp -44 nodes 12201 nps <timing> hashfull 2 tbhits 0 time <timing> pv h1h2 c5d4 d2b4 d7c5 b4c5 e7c5",
+    "info depth 12 seldepth 14 multipv 1 score cp -47 nodes 15168 nps <timing> hashfull 3 tbhits 0 time <timing> pv h1h2 g4f5 f3d5 g8h8 d3b3 g5g4 g1e2 g3e2 h2e2 c5d4",
+    "info depth 13 seldepth 22 multipv 1 score cp -56 nodes 31330 nps <timing> hashfull 8 tbhits 0 time <timing> pv h1h2 g4f5 f3d5 g8h8 d3b3 g5g4",
+    "bestmove h1h2 ponder g4f5",
+    "info depth 1 seldepth 5 multipv 1 score cp 174 nodes 46 nps <timing> hashfull 7 tbhits 0 time <timing> pv f4f5",
+    "info depth 2 seldepth 5 multipv 1 score cp 178 nodes 92 nps <timing> hashfull 7 tbhits 0 time <timing> pv f4f5 a6b7 f5e6 f7e6",
+    "info depth 3 seldepth 5 multipv 1 score cp 178 nodes 137 nps <timing> hashfull 7 tbhits 0 time <timing> pv f4f5 a6b7 f5e6 f7e6",
+    "info depth 4 seldepth 5 multipv 1 score cp 178 nodes 196 nps <timing> hashfull 7 tbhits 0 time <timing> pv f4f5 a6b7 f5e6 f7e6",
+    "info depth 5 seldepth 11 multipv 1 score cp 86 nodes 1189 nps <timing> hashfull 7 tbhits 0 time <timing> pv a1c1",
+    "info depth 6 seldepth 9 multipv 1 score cp 51 nodes 2856 nps <timing> hashfull 7 tbhits 0 time <timing> pv f4f5 d7f6 f3d2 a6d3 d1f3 e8g8",
+    "info depth 7 seldepth 8 multipv 1 score cp 73 nodes 3278 nps <timing> hashfull 7 tbhits 0 time <timing> pv f4f5 d7f6 f3d2 a6d3 d1f3 e8g8",
+    "info depth 8 seldepth 8 multipv 1 score cp 75 nodes 3454 nps <timing> hashfull 7 tbhits 0 time <timing> pv f4f5 d7f6 f3d2 a6d3 d1f3 e8g8",
+    "info depth 9 seldepth 12 multipv 1 score cp 147 nodes 4806 nps <timing> hashfull 8 tbhits 0 time <timing> pv f4f5 a8c8 d1d2 e8g8 e3h6 d7f6 h6g7 g8g7",
+    "info depth 10 seldepth 11 multipv 1 score cp 132 nodes 8599 nps <timing> hashfull 9 tbhits 0 time <timing> pv f4f5 e6f5 g4f5 a8c8 d1d2 b4b3 e3h6",
+    "info depth 11 seldepth 15 multipv 1 score cp 114 nodes 16751 nps <timing> hashfull 13 tbhits 0 time <timing> pv f4f5 e8g8 d1d2 b4b3 e3h6 a8c8 h6g7 g8g7 a1d1 c8c2",
+    "info depth 12 seldepth 19 multipv 1 score cp 126 nodes 19996 nps <timing> hashfull 15 tbhits 0 time <timing> pv f4f5 e8g8 d1d2 a8c8 e3g5 e7c6 g5h6 b4b3 h6g7 g8g7 a1d1",
+    "info depth 13 seldepth 15 multipv 1 score cp 118 nodes 20684 nps <timing> hashfull 16 tbhits 0 time <timing> pv f4f5 e8g8 d1d2 a8c8 e3g5 e7c6 g5h6 b4b3 h6g7 g8g7 a1d1 c6b4",
+    "bestmove f4f5 ponder e8g8",
+    "info depth 1 seldepth 7 multipv 1 score cp -126 nodes 50 nps <timing> hashfull 10 tbhits 0 time <timing> pv f7f5",
+    "info depth 2 seldepth 6 multipv 1 score cp -169 nodes 286 nps <timing> hashfull 10 tbhits 0 time <timing> pv h4h3 g2g4 h3h2 b6c8",
+    "info depth 3 seldepth 4 multipv 1 score cp -169 nodes 391 nps <timing> hashfull 10 tbhits 0 time <timing> pv h4h3 g2g4 h3h2",
+    "info depth 4 seldepth 8 multipv 1 score cp -237 nodes 682 nps <timing> hashfull 10 tbhits 0 time <timing> pv h4h3 g2g4 h3h2 b6c8",
+    "info depth 5 seldepth 9 multipv 1 score cp -183 nodes 777 nps <timing> hashfull 10 tbhits 0 time <timing> pv h4h3 g2g4 h3h2 b6c8",
+    "info depth 6 seldepth 9 multipv 1 score cp -168 nodes 864 nps <timing> hashfull 10 tbhits 0 time <timing> pv h4h3 g2g4 h3h2 b6c8",
+    "info depth 7 seldepth 8 multipv 1 score cp -214 nodes 1248 nps <timing> hashfull 10 tbhits 0 time <timing> pv h4h3 g2g4 f7f5",
+    "info depth 8 seldepth 14 multipv 1 score cp -246 nodes 3472 nps <timing> hashfull 11 tbhits 0 time <timing> pv h4h3 g2g4 g8h7 b1g1 h3h2 g1g2 h5h3 b6c8",
+    "info depth 9 seldepth 10 multipv 1 score cp -246 nodes 3547 nps <timing> hashfull 11 tbhits 0 time <timing> pv h4h3 g2g4 g8h7 b1g1 h3h2 g1g2 h5h3 b6c8",
+    "info depth 10 seldepth 11 multipv 1 score cp -225 nodes 3999 nps <timing> hashfull 12 tbhits 0 time <timing> pv h4h3 g2g4 g8h7 b1c1 h3h2 b6c8 b7d7 d8e7 d7e7 c8e7",
+    "info depth 11 seldepth 22 multipv 1 score cp -258 nodes 22970 nps <timing> hashfull 21 tbhits 0 time <timing> pv g8h7 b1g1 h7h8 g2g4 h8h7 b6c8",
+    "info depth 12 seldepth 22 multipv 1 score cp -213 nodes 28672 nps <timing> hashfull 23 tbhits 0 time <timing> pv h4h3 g2g4 f7f5 g5f6 g6f6 b1g1 h5h7 e3c5 f6f8",
+    "info depth 13 seldepth 26 multipv 1 score cp -162 nodes 56583 nps <timing> hashfull 34 tbhits 0 time <timing> pv h4h3 g2g4 f7f5 g5f6 g6f6 e3c5 f6f8 b1g1 h5h7 b6c8 e8h5 d8f8 g8f8",
+    "bestmove h4h3 ponder g2g4",
+    "info depth 1 seldepth 8 multipv 1 score cp 451 nodes 106 nps <timing> hashfull 17 tbhits 0 time <timing> pv d3g3",
+    "info depth 2 seldepth 7 multipv 1 score cp 182 nodes 336 nps <timing> hashfull 17 tbhits 0 time <timing> pv d3g3 c4b6",
+    "info depth 3 seldepth 8 multipv 1 score cp 196 nodes 502 nps <timing> hashfull 17 tbhits 0 time <timing> pv d3g3 c4b6 e2h2 g6f5 e4f5 f7f5",
+    "info depth 4 seldepth 8 multipv 1 score cp 196 nodes 614 nps <timing> hashfull 17 tbhits 0 time <timing> pv d3g3 c4b6 e2h2 g6f5 e4f5 f7f5",
+    "info depth 5 seldepth 11 multipv 1 score cp 137 nodes 1853 nps <timing> hashfull 18 tbhits 0 time <timing> pv b6d7 g3e2 d7e5 c4e5 d4e5 e6e5",
+    "info depth 6 seldepth 14 multipv 1 score cp 94 nodes 2502 nps <timing> hashfull 18 tbhits 0 time <timing> pv b3a4 g3e2",
+    "info depth 7 seldepth 9 multipv 1 score cp 113 nodes 2902 nps <timing> hashfull 18 tbhits 0 time <timing> pv b6d7 g3e2 d7e5 c4e5 d4e5 e6e5",
+    "info depth 8 seldepth 9 multipv 1 score cp 126 nodes 3084 nps <timing> hashfull 18 tbhits 0 time <timing> pv b6d7 g3e2 d7e5 c4e5 d4e5 e6e5",
+    "info depth 9 seldepth 11 multipv 1 score cp 152 nodes 3376 nps <timing> hashfull 19 tbhits 0 time <timing> pv b6d7 g3e2 d7e5 c4e5 d4e5 e6e5",
+    "info depth 10 seldepth 11 multipv 1 score cp 178 nodes 3687 nps <timing> hashfull 19 tbhits 0 time <timing> pv b6d7 g3e2 d7e5 c4e5 d4e5",
+    "info depth 11 seldepth 15 multipv 1 score cp 104 nodes 8895 nps <timing> hashfull 19 tbhits 0 time <timing> pv b6d7 g3e2 d7e5 c4e5 b3a4 e8d8 d4e5 e6e5 f5d6 e2f4 d6f7 g6f7",
+    "info depth 12 seldepth 23 multipv 1 score cp 43 nodes 94099 nps <timing> hashfull 56 tbhits 0 time <timing> pv b6d7 g3e2 c2c4 d5c4 b3c4 e2f4 c4e6 f4d3 f5d6 e8e7 e6f7 g6f7 d7e5 d3e5",
+    "info depth 13 seldepth 20 multipv 1 score cp 59 nodes 109578 nps <timing> hashfull 62 tbhits 0 time <timing> pv b6d7 g3e2 d7c5 e2f4 b3a4 e8f8 c5e6 f4e6 e4d5 g6f5 c2c4 f5d3 c4c8 f8g7 d5e6",
+    "bestmove b6d7 ponder g3e2",
+    "info depth 1 seldepth 3 multipv 1 score cp 25 nodes 48 nps <timing> hashfull 3 tbhits 0 time <timing> pv a5c4",
+    "info depth 2 seldepth 6 multipv 1 score cp -60 nodes 648 nps <timing> hashfull 3 tbhits 0 time <timing> pv a5c4 d6c5 d2b4",
+    "info depth 3 seldepth 5 multipv 1 score cp -34 nodes 725 nps <timing> hashfull 3 tbhits 0 time <timing> pv g3b3 d4d3",
+    "info depth 4 seldepth 5 multipv 1 score cp -34 nodes 860 nps <timing> hashfull 3 tbhits 0 time <timing> pv g3b3 g7h6",
+    "info depth 5 seldepth 5 multipv 1 score cp -22 nodes 1054 nps <timing> hashfull 3 tbhits 0 time <timing> pv g3b3 d4d3",
+    "info depth 6 seldepth 7 multipv 1 score cp -89 nodes 2073 nps <timing> hashfull 3 tbhits 0 time <timing> pv d2b4 d6f4 b4c4",
+    "info depth 7 seldepth 9 multipv 1 score cp -115 nodes 2998 nps <timing> hashfull 3 tbhits 0 time <timing> pv g3b3 d6c7 d2b4 e4e3 f2e3 d4e3 b4c4",
+    "info depth 8 seldepth 9 multipv 1 score cp -117 nodes 3154 nps <timing> hashfull 4 tbhits 0 time <timing> pv g3b3 d6c7 d2b4 e4e3 f2e3 d4e3 b4c4",
+    "info depth 9 seldepth 9 multipv 1 score cp -65 nodes 3734 nps <timing> hashfull 4 tbhits 0 time <timing> pv g3b3 d6c7 b1c1 e4e3 f2e3 d4e3 b3e3",
+    "info depth 10 seldepth 9 multipv 1 score cp -62 nodes 4090 nps <timing> hashfull 4 tbhits 0 time <timing> pv g3b3 d6c7 b1c1 e4e3 f2e3 d4e3 b3e3",
+    "info depth 11 seldepth 11 multipv 1 score cp -53 nodes 5019 nps <timing> hashfull 4 tbhits 0 time <timing> pv g3b3 d6c7 d2b4 e4e3 f2e3 d4e3",
+    "info depth 12 seldepth 15 multipv 1 score cp -38 nodes 8774 nps <timing> hashfull 5 tbhits 0 time <timing> pv g3b3 e6f6 a5c4 d6c7 d2b4 e4e3 f2e3",
+    "info depth 13 seldepth 20 multipv 1 score cp -41 nodes 12948 nps <timing> hashfull 6 tbhits 0 time <timing> pv g3b3 d6c5 d2b4 c5b4 b3b4 e4e3 f2e3 d4e3 b4b6 e6b6 b1b6 e3e2 b6e6",
+    "bestmove g3b3 ponder d6c5",
+    "info depth 1 seldepth 15 multipv 1 score cp 1831 nodes 453 nps <timing> hashfull 2 tbhits 0 time <timing> pv f2d1",
+    "info depth 2 seldepth 6 multipv 1 score cp 1581 nodes 1368 nps <timing> hashfull 2 tbhits 0 time <timing> pv c5a6 c7a6",
+    "info depth 3 seldepth 11 multipv 1 score cp 1340 nodes 2714 nps <timing> hashfull 3 tbhits 0 time <timing> pv d6e8 c6e8 d2c4",
+    "info depth 4 seldepth 23 multipv 1 score cp 1330 nodes 3385 nps <timing> hashfull 4 tbhits 0 time <timing> pv f5h7",
+    "info depth 5 seldepth 13 multipv 1 score cp 1204 nodes 5876 nps <timing> hashfull 5 tbhits 0 time <timing> pv d6e8 c6e8 d2c4",
+    "info depth 6 seldepth 15 multipv 1 score cp 1269 nodes 7451 nps <timing> hashfull 5 tbhits 0 time <timing> pv d6c8 e6c8 c3d5 g5e4 d5b6 a8a7 b6c8 e7c8 d3e4",
+    "info depth 7 seldepth 15 multipv 1 score cp 1245 nodes 7784 nps <timing> hashfull 5 tbhits 0 time <timing> pv d6b5 c7b5",
+    "info depth 8 seldepth 15 multipv 1 score cp 1199 nodes 10196 nps <timing> hashfull 5 tbhits 0 time <timing> pv h1g1 g5f3 f4f3 d5e4 d4e4",
+    "info depth 9 seldepth 13 multipv 1 score cp 1201 nodes 12311 nps <timing> hashfull 6 tbhits 0 time <timing> pv h1g1 g5f3 f4f3 f6e4 e5e4 d5e4 d3e4",
+    "info depth 10 seldepth 17 multipv 1 score cp 1158 nodes 16703 nps <timing> hashfull 7 tbhits 0 time <timing> pv d6c8 e6c8 c3d5 g5e4 d5b6 a8b8 d4e4",
+    "info depth 11 seldepth 17 multipv 1 score cp 1149 nodes 21917 nps <timing> hashfull 8 tbhits 0 time <timing> pv c3d5 g5e4 d5b6 a8a7 d3e4 e7f5 e4f5",
+    "info depth 12 seldepth 14 multipv 1 score cp 1238 nodes 33979 nps <timing> hashfull 13 tbhits 0 time <timing> pv c3d5 g5e4 d5b6 a8a7 f3e4 e7f5 e4c6 f5e3",
+    "info depth 13 seldepth 21 multipv 1 score cp 1274 nodes 75519 nps <timing> hashfull 39 tbhits 0 time <timing> pv d2c4 f6e4 c4b6 a8a7 d6c8 a7b8",
+    "bestmove d2c4 ponder f6e4",
+    "info depth 1 seldepth 4 multipv 1 score cp 2453 nodes 153 nps <timing> hashfull 2 tbhits 0 time <timing> pv f5g3 f1g3",
+    "info depth 2 seldepth 4 multipv 1 score cp 2453 nodes 263 nps <timing> hashfull 2 tbhits 0 time <timing> pv f5g3 f1g3",
+    "info depth 3 seldepth 8 multipv 1 score cp 2119 nodes 591 nps <timing> hashfull 2 tbhits 0 time <timing> pv a3a2 d1c3",
+    "info depth 4 seldepth 5 multipv 1 score cp 911 nodes 1012 nps <timing> hashfull 2 tbhits 0 time <timing> pv g4f2 d1f2 g5e3",
+    "info depth 5 seldepth 5 multipv 1 score cp 1748 nodes 1138 nps <timing> hashfull 2 tbhits 0 time <timing> pv g4f2 d1f2 g5e3",
+    "info depth 6 seldepth 7 multipv 1 score cp 460 nodes 1360 nps <timing> hashfull 2 tbhits 0 time <timing> pv g4f2 d1f2 g5e3 b1c3 e3c1",
+    "info depth 7 seldepth 10 multipv 1 score cp 323 nodes 1689 nps <timing> hashfull 2 tbhits 0 time <timing> pv g4f2 d1f2 g5e3 b1c3 e3c1 e1e5 d5c3",
+    "info depth 8 seldepth 13 multipv 1 score cp 572 nodes 2167 nps <timing> hashfull 2 tbhits 0 time <timing> pv g4f2 d1f2 g5e3 b1c3 e3c1 e1e5 d5c3 a1c3 c5e5 c3e5 a3h3 f2h3",
+    "info depth 9 seldepth 13 multipv 1 score cp 572 nodes 2300 nps <timing> hashfull 2 tbhits 0 time <timing> pv g4f2 d1f2 g5e3 b1c3 e3c1 e1e5 d5c3 a1c3 c5e5 c3e5 a3h3 f2h3",
+    "info depth 10 seldepth 13 multipv 1 score cp 572 nodes 2493 nps <timing> hashfull 2 tbhits 0 time <timing> pv g4f2 d1f2 g5e3 b1c3 e3c1 e1e5 d5c3 a1c3 c5e5 c3e5 a3h3 f2h3",
+    "info depth 11 seldepth 18 multipv 1 score cp 701 nodes 6569 nps <timing> hashfull 3 tbhits 0 time <timing> pv g4f2 d1f2 g5e3 b1c3 e3c1 f2e4 c5c7 a2c1 a3a1 g1h2 a4c3 h2e5 c7e5 h1g1",
+    "info depth 12 seldepth 20 multipv 1 score cp 655 nodes 13919 nps <timing> hashfull 5 tbhits 0 time <timing> pv g4f2 d1f2 g5e3 b1c3 e3c1 e1e5 a8b7 e5f5 a3c3 h3c3 d5c3 f5h7 b5c7 a1c3 c5d5 h7b1 c7b5",
+    "info depth 13 seldepth 26 multipv 1 score cp 599 nodes 50298 nps <timing> hashfull 16 tbhits 0 time <timing> pv g4f2 d1f2 g5e3 b1c3 e3c1 e1e5 a8b7 e5f5 d5c3 h3h7 b7a6 f5g6 a4b6 f2d3 c5d6 g6d6 b5d6",
+    "bestmove g4f2 ponder d1f2",
+    "info depth 1 seldepth 2 multipv 1 score cp 196 nodes 10 nps <timing> hashfull 3 tbhits 0 time <timing> pv b1c2",
+    "info depth 2 seldepth 5 multipv 1 score cp 25 nodes 197 nps <timing> hashfull 3 tbhits 0 time <timing> pv d1f2 f4f3",
+    "info depth 3 seldepth 3 multipv 1 score cp -9 nodes 372 nps <timing> hashfull 3 tbhits 0 time <timing> pv d1f2 f4f3",
+    "info depth 4 seldepth 5 multipv 1 score cp 20 nodes 452 nps <timing> hashfull 3 tbhits 0 time <timing> pv d1f2",
+    "info depth 5 seldepth 4 multipv 1 score cp 27 nodes 495 nps <timing> hashfull 3 tbhits 0 time <timing> pv d1f2 g4g3",
+    "info depth 6 seldepth 7 multipv 1 score cp 58 nodes 618 nps <timing> hashfull 3 tbhits 0 time <timing> pv d1f2 g4g3",
+    "info depth 7 seldepth 7 multipv 1 score cp 74 nodes 695 nps <timing> hashfull 3 tbhits 0 time <timing> pv d1f2 g4g3",
+    "info depth 8 seldepth 7 multipv 1 score cp 83 nodes 940 nps <timing> hashfull 3 tbhits 0 time <timing> pv d1f2 g4g3 f2h3 f4g4",
+    "info depth 9 seldepth 8 multipv 1 score cp 91 nodes 1079 nps <timing> hashfull 3 tbhits 0 time <timing> pv d1f2 g4g3 f2h3 f4f3",
+    "info depth 10 seldepth 18 multipv 1 score cp 23 nodes 8588 nps <timing> hashfull 6 tbhits 0 time <timing> pv d1f2 g4g3 f2h3 f4e5 h3g1 g3g2 b1c2 e5d6 c2d3 d6c5 d3e2",
+    "info depth 11 seldepth 16 multipv 1 score cp 62 nodes 13051 nps <timing> hashfull 7 tbhits 0 time <timing> pv b1c2 g4g3 c2d3 g3g2 d1c3 g2g1q",
+    "info depth 12 seldepth 9 multipv 1 score cp 101 nodes 13506 nps <timing> hashfull 7 tbhits 0 time <timing> pv b1c2 g4g3 c2d3 g3g2 d1c3 f4e5",
+    "info depth 13 seldepth 23 multipv 1 score cp 165 nodes 23518 nps <timing> hashfull 9 tbhits 0 time <timing> pv b1c2 g4g3 c2d3 g3g2 d1c3 g2g1r",
+    "bestmove b1c2 ponder g4g3",
+    "info depth 1 seldepth 3 multipv 1 score cp 46 nodes 18 nps <timing> hashfull 2 tbhits 0 time <timing> pv d1d2",
+    "info depth 2 seldepth 5 multipv 1 score cp 38 nodes 261 nps <timing> hashfull 2 tbhits 0 time <timing> pv d1e2",
+    "info depth 3 seldepth 4 multipv 1 score cp 43 nodes 290 nps <timing> hashfull 2 tbhits 0 time <timing> pv d1e2",
+    "info depth 4 seldepth 6 multipv 1 score cp 49 nodes 412 nps <timing> hashfull 2 tbhits 0 time <timing> pv c1a2 h1h2 d1e2",
+    "info depth 5 seldepth 5 multipv 1 score cp 59 nodes 573 nps <timing> hashfull 2 tbhits 0 time <timing> pv c1a2 h1g1",
+    "info depth 6 seldepth 7 multipv 1 score cp 84 nodes 813 nps <timing> hashfull 2 tbhits 0 time <timing> pv c1a2 h1g2 d1e2 g2h3",
+    "info depth 7 seldepth 8 multipv 1 score cp 91 nodes 1092 nps <timing> hashfull 2 tbhits 0 time <timing> pv c1a2 h1h2 d1e2 h2h3 e2f3 h3h2 f3f2",
+    "info depth 8 seldepth 13 multipv 1 score cp 131 nodes 1820 nps <timing> hashfull 2 tbhits 0 time <timing> pv c1a2 h1g2 d1e2 g2h2",
+    "info depth 9 seldepth 13 multipv 1 score cp 135 nodes 1981 nps <timing> hashfull 2 tbhits 0 time <timing> pv c1a2 h1g2 d1e2 g2h3",
+    "info depth 10 seldepth 18 multipv 1 score cp 26 nodes 4446 nps <timing> hashfull 2 tbhits 0 time <timing> pv f5d4",
+    "info depth 11 seldepth 11 multipv 1 score cp 81 nodes 7192 nps <timing> hashfull 2 tbhits 0 time <timing> pv c1a2 h1h2 d1e2 h2g2 e2e3 g2h3",
+    "info depth 12 seldepth 14 multipv 1 score cp 90 nodes 7458 nps <timing> hashfull 2 tbhits 0 time <timing> pv c1a2 h1h2 d1e2 h2g2 e2e3 g2g1",
+    "info depth 13 seldepth 22 multipv 1 score cp 122 nodes 17993 nps <timing> hashfull 8 tbhits 0 time <timing> pv c1a2 h1h2 d1e2 h2g2 e2e3 g2f1 f5h4 f1g1",
+    "bestmove c1a2 ponder h1h2",
+    "info depth 1 seldepth 2 multipv 1 score cp 444 nodes 21 nps <timing> hashfull 9 tbhits 0 time <timing> pv e2d2",
+    "info depth 2 seldepth 6 multipv 1 score cp 280 nodes 320 nps <timing> hashfull 9 tbhits 0 time <timing> pv c1b2",
+    "info depth 3 seldepth 7 multipv 1 score cp 294 nodes 630 nps <timing> hashfull 10 tbhits 0 time <timing> pv f2g3 d7c6 e2d1 c6d7",
+    "info depth 4 seldepth 5 multipv 1 score cp 305 nodes 692 nps <timing> hashfull 10 tbhits 0 time <timing> pv f2g3 d7c6 e2d1 c6b7",
+    "info depth 5 seldepth 9 multipv 1 score cp 328 nodes 1646 nps <timing> hashfull 10 tbhits 0 time <timing> pv f2g3 d7c6 e2d1 c6d5",
+    "info depth 6 seldepth 10 multipv 1 score cp 328 nodes 1894 nps <timing> hashfull 10 tbhits 0 time <timing> pv f2g3 d7c8",
+    "info depth 7 seldepth 13 multipv 1 score cp 376 nodes 4987 nps <timing> hashfull 12 tbhits 0 time <timing> pv e3h6 d7c7",
+    "info depth 8 seldepth 11 multipv 1 score cp 378 nodes 6062 nps <timing> hashfull 13 tbhits 0 time <timing> pv c1b2 d7e6 e3d2 e6d5",
+    "info depth 9 seldepth 16 multipv 1 score cp 358 nodes 18508 nps <timing> hashfull 19 tbhits 0 time <timing> pv f2g3 d7c6 c1b2 c6b5",
+    "info depth 10 seldepth 14 multipv 1 score cp 370 nodes 27570 nps <timing> hashfull 20 tbhits 0 time <timing> pv e2d3 d7c6 c1b2 c6d5 e3g5 d5c6 b2a1 c6d7 g5d2 d7c8",
+    "info depth 11 seldepth 15 multipv 1 score cp 376 nodes 36864 nps <timing> hashfull 23 tbhits 0 time <timing> pv e2d3 d7c6 e3d4 c6c7",
+    "info depth 12 seldepth 17 multipv 1 score cp 372 nodes 61740 nps <timing> hashfull 32 tbhits 0 time <timing> pv e2d3 d7c6 e3d4 c6d5 d4b2 d5e6",
+    "info depth 13 seldepth 26 multipv 1 score cp 320 nodes 177244 nps <timing> hashfull 62 tbhits 0 time <timing> pv e3f4 d7e6 c1a3 e6f7 e2d1 f7g6 f2c5",
+    "bestmove e3f4 ponder d7e6",
+    "info depth 1 seldepth 2 multipv 1 score cp 195 nodes 22 nps <timing> hashfull 2 tbhits 0 time <timing> pv b6b7",
+    "info depth 2 seldepth 4 multipv 1 score cp 264 nodes 50 nps <timing> hashfull 2 tbhits 0 time <timing> pv b6b7",
+    "info depth 3 seldepth 4 multipv 1 score cp 291 nodes 81 nps <timing> hashfull 2 tbhits 0 time <timing> pv b6b7 g5g1 c1c2",
+    "info depth 4 seldepth 9 multipv 1 score cp 102 nodes 374 nps <timing> hashfull 2 tbhits 0 time <timing> pv e3b3 g5g1 c1c2 g1g2 c2c3 g2g3 c3c4",
+    "info depth 5 seldepth 8 multipv 1 score cp 49 nodes 1693 nps <timing> hashfull 2 tbhits 0 time <timing> pv e3e8",
+    "info depth 6 seldepth 10 multipv 1 score cp 24 nodes 3735 nps <timing> hashfull 3 tbhits 0 time <timing> pv c1d2 f5f4 e3b3 g5g8 d2e2",
+    "info depth 7 seldepth 11 multipv 1 score cp 341 nodes 5720 nps <timing> hashfull 3 tbhits 0 time <timing> pv e3f3 h2g2 b6b7 g2f3 b7b8q",
+    "info depth 8 seldepth 8 multipv 1 score cp 98 nodes 6022 nps <timing> hashfull 3 tbhits 0 time <timing> pv e3f3 g5g6 b6b7 g6c6 f3c3 c6c3 c1d2",
+    "info depth 9 seldepth 14 multipv 1 score cp 46 nodes 9032 nps <timing> hashfull 4 tbhits 0 time <timing> pv e3f3 g5g6 b6b7 g6b6 f3f2 h2g1",
+    "info depth 10 seldepth 9 multipv 1 score cp 81 nodes 9295 nps <timing> hashfull 4 tbhits 0 time <timing> pv e3f3 g5g6 b6b7 g6b6 f3f2 h2g1 f2b2",
+    "info depth 11 seldepth 9 multipv 1 score cp 88 nodes 9492 nps <timing> hashfull 4 tbhits 0 time <timing> pv e3f3 g5g6 b6b7 g6b6 f3f2 h2g1 f2b2",
+    "info depth 12 seldepth 14 multipv 1 score cp 93 nodes 14202 nps <timing> hashfull 6 tbhits 0 time <timing> pv e3e5 g5g1 c1c2 g1g2 c2d3 g2g3 d3e2",
+    "info depth 13 seldepth 18 multipv 1 score cp 160 nodes 19663 nps <timing> hashfull 6 tbhits 0 time <timing> pv e3e5 g5g1 c1c2 g1g2 c2d3 g2g3 d3c4",
+    "bestmove e3e5 ponder g5g1",
+    "info depth 1 seldepth 4 multipv 1 score cp 151 nodes 8 nps <timing> hashfull 10 tbhits 0 time <timing> pv b1c2",
+    "info depth 2 seldepth 4 multipv 1 score cp 260 nodes 22 nps <timing> hashfull 10 tbhits 0 time <timing> pv b1c2",
+    "info depth 3 seldepth 2 multipv 1 score cp 260 nodes 27 nps <timing> hashfull 10 tbhits 0 time <timing> pv b1c2",
+    "info depth 4 seldepth 6 multipv 1 score cp 41 nodes 186 nps <timing> hashfull 10 tbhits 0 time <timing> pv b1c1",
+    "info depth 5 seldepth 9 multipv 1 score cp 287 nodes 694 nps <timing> hashfull 10 tbhits 0 time <timing> pv b1a1 b5h5 g4g5 h5g5 h7h8q",
+    "info depth 6 seldepth 7 multipv 1 score cp 156 nodes 1273 nps <timing> hashfull 10 tbhits 0 time <timing> pv b1c2 b5c5 c2d2 c5d5 d2e3",
+    "info depth 7 seldepth 9 multipv 1 score cp 200 nodes 1701 nps <timing> hashfull 11 tbhits 0 time <timing> pv b1a2 b5h5 g4g5 h5g5 h7h8q g5c5",
+    "info depth 8 seldepth 7 multipv 1 score cp 271 nodes 1801 nps <timing> hashfull 11 tbhits 0 time <timing> pv b1a2 b5h5 g4g5 h5g5 h7h8q",
+    "info depth 9 seldepth 9 multipv 1 score cp 24 nodes 3048 nps <timing> hashfull 11 tbhits 0 time <timing> pv b1a2 b5h5 g4g5 h5g5 h7h8q g5c5 h8a8 a5b6",
+    "info depth 10 seldepth 15 multipv 1 score cp 227 nodes 6763 nps <timing> hashfull 12 tbhits 0 time <timing> pv b1a2 b5h5 g4g5 h5g5 h7h8q",
+    "info depth 11 seldepth 15 multipv 1 score cp 153 nodes 6905 nps <timing> hashfull 12 tbhits 0 time <timing> pv b1a2 b5h5 g4g5 h5g5 h7h8q g5c5 h8d4 c5c6",
+    "info depth 12 seldepth 18 multipv 1 score cp 150 nodes 10682 nps <timing> hashfull 13 tbhits 0 time <timing> pv b1a2 b5h5 g4g5 h5g5 h7h8q g5b5 h8f6 b5c5 f6d4 a5b6",
+    "info depth 13 seldepth 27 multipv 1 score cp 153 nodes 24304 nps <timing> hashfull 17 tbhits 0 time <timing> pv b1a2 b5h5 g4g5 h5g5 h7h8q g5b5 h8f6 b5c5 f6d4 c5c6 d4a7 a5b4 a2b2 c6c5 a7b7 b4a5 b2a2 c5c1 b7a7 a5b5 a2b3 b5c6",
+    "bestmove b1a2 ponder b5h5",
+    "info depth 1 seldepth 3 multipv 1 score cp -6 nodes 12 nps <timing> hashfull 8 tbhits 0 time <timing> pv f1d2 b1a2",
+    "info depth 2 seldepth 3 multipv 1 score cp -110 nodes 115 nps <timing> hashfull 8 tbhits 0 time <timing> pv f1d2 b1c2",
+    "info depth 3 seldepth 4 multipv 1 score cp -64 nodes 141 nps <timing> hashfull 8 tbhits 0 time <timing> pv f1d2 b1c2",
+    "info depth 4 seldepth 4 multipv 1 score cp -57 nodes 167 nps <timing> hashfull 8 tbhits 0 time <timing> pv f1d2 b1c2",
+    "info depth 5 seldepth 8 multipv 1 score cp -142 nodes 469 nps <timing> hashfull 8 tbhits 0 time <timing> pv f1d2 b1c2 d2e4 d6d7",
+    "info depth 6 seldepth 9 multipv 1 score cp -112 nodes 673 nps <timing> hashfull 8 tbhits 0 time <timing> pv f1d2 b1c2 d2f3 d6d7 f3d4 c2d3",
+    "info depth 7 seldepth 7 multipv 1 score cp -115 nodes 713 nps <timing> hashfull 8 tbhits 0 time <timing> pv f1d2 b1c2 d2f3 d6d7 f3d4 c2d3",
+    "info depth 8 seldepth 9 multipv 1 score cp -72 nodes 948 nps <timing> hashfull 8 tbhits 0 time <timing> pv f1d2 b1c2 d2f3 d6d7 f3d4 c2d3",
+    "info depth 9 seldepth 9 multipv 1 score cp -66 nodes 1066 nps <timing> hashfull 8 tbhits 0 time <timing> pv f1d2 b1c2 d2f3 d6d7 f3d4 c2d3",
+    "info depth 10 seldepth 16 multipv 1 score cp -348 nodes 6774 nps <timing> hashfull 8 tbhits 0 time <timing> pv f1d2 b1a2 b4b3 a2a1 h6g5 d6d7 g5f4 d7d8q f4e3 d8b6 e3d3",
+    "info depth 11 seldepth 12 multipv 1 score cp -314 nodes 7180 nps <timing> hashfull 8 tbhits 0 time <timing> pv f1d2 b1a2 h6g5 d6d7 b4b3 a2a1 g5f4 d7d8q f4e3 d8g5 e3d3",
+    "info depth 12 seldepth 14 multipv 1 score cp -336 nodes 7739 nps <timing> hashfull 8 tbhits 0 time <timing> pv f1d2 b1a2 h6g5 d6d7 b4b3 a2a1 g5f4 d7d8q f4e3 d8g5 e3d3 g5g6 d3c4",
+    "info depth 13 seldepth 16 multipv 1 score cp -318 nodes 8331 nps <timing> hashfull 8 tbhits 0 time <timing> pv f1d2 b1a2 b4b3 a2a1 h6g5 d6d7 g5f4 d7d8q f4e3 d8g5 e3e2 g5g4 e2e3",
+    "bestmove f1d2 ponder b1a2",
+    "info depth 1 seldepth 2 multipv 1 score cp 250 nodes 29 nps <timing> hashfull 1 tbhits 0 time <timing> pv h1h2",
+    "info depth 2 seldepth 4 multipv 1 score cp 299 nodes 60 nps <timing> hashfull 1 tbhits 0 time <timing> pv h1h2 c6c1 a1a2",
+    "info depth 3 seldepth 4 multipv 1 score cp 299 nodes 90 nps <timing> hashfull 1 tbhits 0 time <timing> pv h1h2 c6c1 a1a2",
+    "info depth 4 seldepth 6 multipv 1 score cp 113 nodes 278 nps <timing> hashfull 1 tbhits 0 time <timing> pv h1h2 c6c1 a1a2 c1c4 a2a1",
+    "info depth 5 seldepth 6 multipv 1 score cp 184 nodes 510 nps <timing> hashfull 1 tbhits 0 time <timing> pv h1h2",
+    "info depth 6 seldepth 6 multipv 1 score cp 178 nodes 684 nps <timing> hashfull 1 tbhits 0 time <timing> pv h1h2 c6c1 a1a2",
+    "info depth 7 seldepth 6 multipv 1 score cp 113 nodes 936 nps <timing> hashfull 1 tbhits 0 time <timing> pv h1h2 c6c1 a1a2 c1c4 a2a1",
+    "info depth 8 seldepth 9 multipv 1 score cp 265 nodes 1091 nps <timing> hashfull 1 tbhits 0 time <timing> pv h1h2",
+    "info depth 9 seldepth 6 multipv 1 score cp 336 nodes 1185 nps <timing> hashfull 1 tbhits 0 time <timing> pv h1h2 c6c1 a1a2 c1f1",
+    "info depth 10 seldepth 11 multipv 1 score cp 290 nodes 1654 nps <timing> hashfull 1 tbhits 0 time <timing> pv h1h2 g4f4 h2f2 f4e3",
+    "info depth 11 seldepth 16 multipv 1 score cp 296 nodes 4135 nps <timing> hashfull 1 tbhits 0 time <timing> pv h1h2 c6c1 a1a2 c1c4 b2b3 c4c5 a7a4 g4f5",
+    "info depth 12 seldepth 23 multipv 1 score cp 0 nodes 17596 nps <timing> hashfull 7 tbhits 0 time <timing> pv h1h2 c6c1 a1a2 g4g3 h2h8 c1c4 a2b1 c4d3 b1a2",
+    "info depth 13 seldepth 20 multipv 1 score cp 3 nodes 45020 nps <timing> hashfull 10 tbhits 0 time <timing> pv h1h2 c6c1 a1a2 g4g3 h2h7 c1c4 b2b3 c4c2 a2a3 c2c5 a3b2",
+    "bestmove h1h2 ponder c6c1",
+    "info depth 1 seldepth 3 multipv 1 score cp -102 nodes 51 nps <timing> hashfull 6 tbhits 0 time <timing> pv c5a4",
+    "info depth 2 seldepth 5 multipv 1 score cp -141 nodes 367 nps <timing> hashfull 6 tbhits 0 time <timing> pv c5a4 b2c2 a5b4 a3b4",
+    "info depth 3 seldepth 5 multipv 1 score cp -119 nodes 702 nps <timing> hashfull 6 tbhits 0 time <timing> pv c5a4",
+    "info depth 4 seldepth 5 multipv 1 score cp 798 nodes 1032 nps <timing> hashfull 6 tbhits 0 time <timing> pv h4f4 f1e1 f4e3",
+    "info depth 5 seldepth 7 multipv 1 score cp 862 nodes 1121 nps <timing> hashfull 6 tbhits 0 time <timing> pv h4f4 d4f3 f4e3",
+    "info depth 6 seldepth 8 multipv 1 score cp 1032 nodes 1243 nps <timing> hashfull 6 tbhits 0 time <timing> pv h4f4 d4f3 h7h1 e3g1 h1g1 f1g1",
+    "info depth 7 seldepth 8 multipv 1 score cp 1032 nodes 1300 nps <timing> hashfull 6 tbhits 0 time <timing> pv h4f4 d4f3 h7h1 e3g1 h1g1 f1g1",
+    "info depth 8 seldepth 10 multipv 1 score cp 930 nodes 1389 nps <timing> hashfull 6 tbhits 0 time <timing> pv h4f4 d4f3 h7h1 e3g1 h1g1 f1g1 f4e3 g1h1",
+    "info depth 9 seldepth 13 multipv 1 score mate 5 nodes 2525 nps <timing> hashfull 6 tbhits 0 time <timing> pv h4f4 e2f3 f4e3 f3h5 h7h5 d4f3 h5h1 f3g1 h1g1",
+    "info depth 10 seldepth 10 multipv 1 score mate 5 nodes 3034 nps <timing> hashfull 6 tbhits 0 time <timing> pv h4f4 e2f3 f4e3 f3h5 h7h5 d4f3 h5h1 f3g1 h1g1",
+    "info depth 11 seldepth 10 multipv 1 score mate 5 nodes 4023 nps <timing> hashfull 6 tbhits 0 time <timing> pv h4f4 e2f3 f4e3 f3h5 h7h5 d4f3 h5h1 f3g1 h1g1",
+    "info depth 12 seldepth 10 multipv 1 score mate 5 nodes 4861 nps <timing> hashfull 6 tbhits 0 time <timing> pv h4f4 e2f3 f4e3 f3h5 h7h5 d4f3 h5h1 f3g1 h1g1",
+    "info depth 13 seldepth 10 multipv 1 score mate 5 nodes 5701 nps <timing> hashfull 6 tbhits 0 time <timing> pv h4f4 e2f3 f4e3 f3h5 h7h5 d4f3 h5h1 f3g1 h1g1",
+    "bestmove h4f4 ponder e2f3",
+    "info depth 1 seldepth 6 multipv 1 score cp 857 nodes 57 nps <timing> hashfull 10 tbhits 0 time <timing> pv g4f3 e7f6 f3f6 f7e8",
+    "info depth 2 seldepth 6 multipv 1 score cp 364 nodes 361 nps <timing> hashfull 10 tbhits 0 time <timing> pv f1e1 f7e8",
+    "info depth 3 seldepth 3 multipv 1 score cp 298 nodes 460 nps <timing> hashfull 10 tbhits 0 time <timing> pv f1b1",
+    "info depth 4 seldepth 5 multipv 1 score cp 279 nodes 506 nps <timing> hashfull 10 tbhits 0 time <timing> pv f1b1 f7e8 g3f3 d8b8",
+    "info depth 5 seldepth 6 multipv 1 score cp 266 nodes 601 nps <timing> hashfull 10 tbhits 0 time <timing> pv f1e1 f7e8 g3f3 e8d7",
+    "info depth 6 seldepth 8 multipv 1 score cp 407 nodes 962 nps <timing> hashfull 10 tbhits 0 time <timing> pv c3c4 d5c4",
+    "info depth 7 seldepth 9 multipv 1 score cp 449 nodes 1377 nps <timing> hashfull 10 tbhits 0 time <timing> pv c3c4 d5f5 g3f3",
+    "info depth 8 seldepth 9 multipv 1 score cp 246 nodes 1965 nps <timing> hashfull 10 tbhits 0 time <timing> pv c3c4 d5a5 g4g7 f7e8 g3f3 d8d7",
+    "info depth 9 seldepth 11 multipv 1 score cp 476 nodes 2666 nps <timing> hashfull 10 tbhits 0 time <timing> pv c3c4 d5a5 d4d5 e6d5 g4h5 f7e6",
+    "info depth 10 seldepth 10 multipv 1 score cp 562 nodes 3165 nps <timing> hashfull 10 tbhits 0 time <timing> pv c3c4 d5a5 d4d5 e6d5 g4h5 f7e6 g3g7",
+    "info depth 11 seldepth 15 multipv 1 score cp 544 nodes 3362 nps <timing> hashfull 10 tbhits 0 time <timing> pv c3c4 d5a5 d4d5 e6d5 g4h5 f7e6 g3g7 e6d7 e4f6 d7e6 c4d5 c6d5",
+    "info depth 12 seldepth 15 multipv 1 score cp 541 nodes 4191 nps <timing> hashfull 11 tbhits 0 time <timing> pv c3c4 d5a5 d4d5 e6d5 g4h5 f7e6 g3g7 a5b4 h5g4 e6e5 f2f4 e5e4",
+    "info depth 13 seldepth 16 multipv 1 score cp 518 nodes 5063 nps <timing> hashfull 11 tbhits 0 time <timing> pv c3c4 d5a5 d4d5 e6d5 g4h5 f7e6 g3g7 a5b4 h5g4 e6e5 g4g3 e5e6 g3h3 e6e5",
+    "bestmove c3c4 ponder d5a5",
+    "info depth 0 score cp 0",
+    "bestmove (none)",
+    "info depth 0 score mate 0",
+    "bestmove (none)",
+    "info depth 1 seldepth 3 multipv 1 score cp 75 nodes 36 nps <timing> hashfull 1 tbhits 0 time <timing> pv e7e3",
+    "info depth 2 seldepth 3 multipv 1 score cp 182 nodes 74 nps <timing> hashfull 1 tbhits 0 time <timing> pv e7e3",
+    "info depth 3 seldepth 2 multipv 1 score cp 182 nodes 103 nps <timing> hashfull 1 tbhits 0 time <timing> pv e7e3",
+    "info depth 4 seldepth 7 multipv 1 score cp 37 nodes 484 nps <timing> hashfull 1 tbhits 0 time <timing> pv e7e3 f8e8 e3f3 g8h8 f3d5 f8f7",
+    "info depth 5 seldepth 7 multipv 1 score cp 35 nodes 640 nps <timing> hashfull 1 tbhits 0 time <timing> pv e7e3 f8e8 e3f3 g8h8 f3d5 f8f7",
+    "info depth 6 seldepth 9 multipv 1 score cp -2 nodes 1794 nps <timing> hashfull 1 tbhits 0 time <timing> pv e7e3 f8e8 e3d3 b7b5",
+    "info depth 7 seldepth 10 multipv 1 score cp -17 nodes 1886 nps <timing> hashfull 1 tbhits 0 time <timing> pv e7e3 f8e8 e3d3 b7b5 e1g2 g8h8 g2f4 h3c8",
+    "info depth 8 seldepth 12 multipv 1 score cp -21 nodes 3818 nps <timing> hashfull 2 tbhits 0 time <timing> pv e7e3 b7b5 c2c3 h7h5 f2f3 f8e8 e3d3",
+    "info depth 9 seldepth 19 multipv 1 score cp -21 nodes 7585 nps <timing> hashfull 3 tbhits 0 time <timing> pv e7e3 f8e8 e3d2 g8h8 c2c3 b7b5",
+    "info depth 10 seldepth 19 multipv 1 score cp -31 nodes 16844 nps <timing> hashfull 7 tbhits 0 time <timing> pv e7e3 b7b6 f2f3 c7c5 b2b3 f8e8 e3d2 h7h5 d1f2",
+    "info depth 11 seldepth 18 multipv 1 score cp -27 nodes 22412 nps <timing> hashfull 7 tbhits 0 time <timing> pv e7e3 b7b6 f2f3 f8e8 e3d3 c7c5 b2b3",
+    "info depth 12 seldepth 15 multipv 1 score cp -20 nodes 24221 nps <timing> hashfull 7 tbhits 0 time <timing> pv e7e3 b7b6 f2f3 f8e8 e3d3 c7c5 b2b3",
+    "info depth 13 seldepth 15 multipv 1 score cp -19 nodes 26927 nps <timing> hashfull 8 tbhits 0 time <timing> pv e7e3 b7b6 b2b3 f8e8 e3d3 c7c5 c2c3",
+    "bestmove e7e3 ponder b7b6",
+    "info depth 1 seldepth 2 multipv 1 score cp 67 nodes 20 nps <timing> hashfull 23 tbhits 0 time <timing> pv c2c3",
+    "info depth 2 seldepth 3 multipv 1 score cp 73 nodes 47 nps <timing> hashfull 23 tbhits 0 time <timing> pv c2c3",
+    "info depth 3 seldepth 3 multipv 1 score cp 78 nodes 78 nps <timing> hashfull 23 tbhits 0 time <timing> pv c2c3",
+    "info depth 4 seldepth 4 multipv 1 score cp 93 nodes 128 nps <timing> hashfull 23 tbhits 0 time <timing> pv c2c3",
+    "info depth 5 seldepth 4 multipv 1 score cp 72 nodes 274 nps <timing> hashfull 23 tbhits 0 time <timing> pv c2c3 f8g8 g2g4",
+    "info depth 6 seldepth 8 multipv 1 score cp -36 nodes 2083 nps <timing> hashfull 23 tbhits 0 time <timing> pv c2c3 f8g8 d1e3 c7c6 f1g1 g7g6",
+    "info depth 7 seldepth 8 multipv 1 score cp 2 nodes 2771 nps <timing> hashfull 23 tbhits 0 time <timing> pv a1b3 c7c6 c2c3 f8g8",
+    "info depth 8 seldepth 8 multipv 1 score cp 11 nodes 2932 nps <timing> hashfull 23 tbhits 0 time <timing> pv a1b3 c7c6 f1g1",
+    "info depth 9 seldepth 8 multipv 1 score cp 18 nodes 3164 nps <timing> hashfull 23 tbhits 0 time <timing> pv a1b3 c7c6 f1g1",
+    "info depth 10 seldepth 9 multipv 1 score cp 28 nodes 3475 nps <timing> hashfull 23 tbhits 0 time <timing> pv a1b3 c7c6 f1g1",
+    "info depth 11 seldepth 9 multipv 1 score cp 35 nodes 3922 nps <timing> hashfull 24 tbhits 0 time <timing> pv a1b3 c7c6 f1g1 d8e6",
+    "info depth 12 seldepth 14 multipv 1 score cp -17 nodes 8309 nps <timing> hashfull 24 tbhits 0 time <timing> pv b2b4 f8g8 g2g3 g7g6",
+    "info depth 13 seldepth 16 multipv 1 score cp -14 nodes 12450 nps <timing> hashfull 25 tbhits 0 time <timing> pv b2b4 c7c6 g2g3 d7d5 f1g1 f8g8 e2e4",
+    "bestmove b2b4 ponder c7c6"
+  ],
+  "runs": [
+    {
+      "mode": "auto",
+      "role": "baseline",
+      "label": "warm",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-warm.stdout.txt",
+          "sha256": "f390147bd2e33f2afcdf65c88ae3006b651e0aad11dd46933416c58e5123d18d"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-warm.stderr.txt",
+          "sha256": "c4893188f179caa25343e1918947e74e541e9ba19beacfd87f386dc318b4107f"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 851,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "candidate",
+      "label": "warm",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-warm.stdout.txt",
+          "sha256": "1a46eed8c1780a8e8d8a1606bd23a4e89a2ab91f47c6251661f4ec26a90e610a"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-warm.stderr.txt",
+          "sha256": "ec629ebe4c4dc6a5e0ec4d692f9f79b526b96850432759deef073a97a0e219dc"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 838,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "baseline",
+      "label": "00",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-00.stdout.txt",
+          "sha256": "377a7fcca8599120d79b5a0bcf0000c7c45df89e9f5974b96466ff68902cc2a0"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-00.stderr.txt",
+          "sha256": "297f0119513c4e405a22e18a676fe4c201c279b74f0c6040089d8d520bb13ad4"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 836,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "candidate",
+      "label": "00",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-00.stdout.txt",
+          "sha256": "2f1397aa5f149e6397b646b3ef8bb29818fdccf7930bf650b93928c8a64b8ca0"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-00.stderr.txt",
+          "sha256": "5cdf54d3f14311abf4e918da77964fa0b3ce329abc3dcb24b6bfe76cbbe93f73"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 834,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "candidate",
+      "label": "01",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-01.stdout.txt",
+          "sha256": "53b88eff5ba4edb85613e56254e5119a62a158e8ad41fc5fbda11673c12709c6"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-01.stderr.txt",
+          "sha256": "656d3736bf4cad9b388d42b94632447aed4b5fdf413069f13eb4ba0456c0d869"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 835,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "baseline",
+      "label": "01",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-01.stdout.txt",
+          "sha256": "ffa5473234c1bf1baa0626ea8ff7386c2e8ae8949e3a224066cafa08c86f05be"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-01.stderr.txt",
+          "sha256": "5cdf54d3f14311abf4e918da77964fa0b3ce329abc3dcb24b6bfe76cbbe93f73"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 834,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "baseline",
+      "label": "02",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-02.stdout.txt",
+          "sha256": "2b6a9ff09762723157224605b31c38c0eb0b83b19c77d8183cfb96ac962266b4"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-02.stderr.txt",
+          "sha256": "656d3736bf4cad9b388d42b94632447aed4b5fdf413069f13eb4ba0456c0d869"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 835,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "candidate",
+      "label": "02",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-02.stdout.txt",
+          "sha256": "db59aa554b38bf6a62358f3e9c6eda8384d36446b8949db91a515f9085de025e"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-02.stderr.txt",
+          "sha256": "297f0119513c4e405a22e18a676fe4c201c279b74f0c6040089d8d520bb13ad4"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 836,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "candidate",
+      "label": "03",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-03.stdout.txt",
+          "sha256": "1aff8de5bceaa2c07cd37fb751961d4dab8b79c509c133a30ca9e090f5a049e9"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-03.stderr.txt",
+          "sha256": "ec629ebe4c4dc6a5e0ec4d692f9f79b526b96850432759deef073a97a0e219dc"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 838,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "baseline",
+      "label": "03",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-03.stdout.txt",
+          "sha256": "315067a59c5abeb861edaa13dfb21385443d1fae7cb56e15187a81d3a1fdcc38"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-03.stderr.txt",
+          "sha256": "b9eb1199cdfbc145e491a48cd463526007297fbc15a3b40fbc38d871b1854afc"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 847,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "baseline",
+      "label": "04",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-04.stdout.txt",
+          "sha256": "468eaa73d79cdd35d441e545c56d14ccdfcc01177e4b51fe47a7461698a614b9"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-04.stderr.txt",
+          "sha256": "455ec0b4df667c061190a81f9ed49a574d5c69dd50d0bba9adf61929b5f3bbdc"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 837,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "candidate",
+      "label": "04",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-04.stdout.txt",
+          "sha256": "c01161ee2dafaa5d38ab7d9740751148d68742367289d9168b25eeae4c45fdf4"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-04.stderr.txt",
+          "sha256": "cf07ee4e9dd4e93c965f9f731a010d36339e05fc63747c42c3ed2efca2c59ad2"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 839,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "candidate",
+      "label": "05",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-05.stdout.txt",
+          "sha256": "7bd5f538cbc90a02a1d6fa1081522e0a911978f9ac2c981a99799e3e23a0876f"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-05.stderr.txt",
+          "sha256": "a192e15eaf6371ebfd50821af08ff0f23f118cae855521f5cc3eefbb17a2d673"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 831,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "baseline",
+      "label": "05",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-05.stdout.txt",
+          "sha256": "62db97e2e8dce976f95efee837851f8eee2ce38df6acb2d7098c08c48e45f53a"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-05.stderr.txt",
+          "sha256": "311657c86b7a18bc97b81a23389aac883f377fd50b16067517867a68a87fe389"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 843,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "baseline",
+      "label": "06",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-06.stdout.txt",
+          "sha256": "a883486f99ff1db9af2e7cd126207bc734b364d5db35adc423ab098f0cabf6a0"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-06.stderr.txt",
+          "sha256": "9cfc940a220278c3085f55922c2d39bba3fc9989e80e14b7f4533642e63f2211"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 840,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "candidate",
+      "label": "06",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-06.stdout.txt",
+          "sha256": "a0e298cd9d11084cd6339cb0614b157889b81d8fc3f614ced758bcf20fac3c5e"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-06.stderr.txt",
+          "sha256": "103d6c19de2b9177a2e68134d5629bec10a5846238ad7fe3f37394bb68f16830"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 844,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "candidate",
+      "label": "07",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-07.stdout.txt",
+          "sha256": "acb45acee71a782deca6b4b1e2922b6f3d1c8561357b387eaf1a65d0fca38fe9"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-07.stderr.txt",
+          "sha256": "a192e15eaf6371ebfd50821af08ff0f23f118cae855521f5cc3eefbb17a2d673"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 831,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "baseline",
+      "label": "07",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-07.stdout.txt",
+          "sha256": "78949ae65ba0be7a7bb0b541bda97c8be19e542ed6f2a153c0fd9191536cbae4"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-07.stderr.txt",
+          "sha256": "656d3736bf4cad9b388d42b94632447aed4b5fdf413069f13eb4ba0456c0d869"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 835,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "baseline",
+      "label": "08",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-08.stdout.txt",
+          "sha256": "d24bfb5df5d59e52bffc5ac023b60ccfffd5c297d7a2a9bd83b0f1f69931da05"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-08.stderr.txt",
+          "sha256": "656d3736bf4cad9b388d42b94632447aed4b5fdf413069f13eb4ba0456c0d869"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 835,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "candidate",
+      "label": "08",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-08.stdout.txt",
+          "sha256": "a45cc089dafba4bee25cfd0601dc0cbf6fd6bc6b6330c446885f11ed2271df17"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-08.stderr.txt",
+          "sha256": "297f0119513c4e405a22e18a676fe4c201c279b74f0c6040089d8d520bb13ad4"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 836,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "candidate",
+      "label": "09",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-09.stdout.txt",
+          "sha256": "e0f9201ea324d873e0f84a0921af6abe3fa36706b664f3d0b5cefe5533a77020"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-09.stderr.txt",
+          "sha256": "a5e275e8e210d6adaf65c498f24c597d94fb9f03d3431ac1c0aad7e1ac761dc5"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 846,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "baseline",
+      "label": "09",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-09.stdout.txt",
+          "sha256": "0cbfd43dcce11b15815e15ceec0de8c96f5434c8b6e6a5f0345c34c94eb9a1f8"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-09.stderr.txt",
+          "sha256": "415d042a9144142bd6b23f54de4a4fcc3ffc5f1a01a0c5acc0249bf6b0332f1f"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 829,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "baseline",
+      "label": "10",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-10.stdout.txt",
+          "sha256": "fcf4538c2bbe6b0f90a927d08b590c01be34b6b5fe625fd8fdc4e669a3f7a8bc"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-10.stderr.txt",
+          "sha256": "ec629ebe4c4dc6a5e0ec4d692f9f79b526b96850432759deef073a97a0e219dc"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 838,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "candidate",
+      "label": "10",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-10.stdout.txt",
+          "sha256": "c47d8dafb96a99911912b7cbde15e27488c6f69ae6ee31966578dee528116da6"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-10.stderr.txt",
+          "sha256": "455ec0b4df667c061190a81f9ed49a574d5c69dd50d0bba9adf61929b5f3bbdc"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 837,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "candidate",
+      "label": "11",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-11.stdout.txt",
+          "sha256": "2a65ef88a5cc32f5ff997aeb28e34113d0d1102ce3e5e30c8b05d143ab67567f"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-11.stderr.txt",
+          "sha256": "3fd0913605248a7ad452119cb137ebd65f26c3055f003e28e128d0c4327eab92"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 830,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "baseline",
+      "label": "11",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-11.stdout.txt",
+          "sha256": "52c4062050e871daae5eaac377321d9140b9480840589d07d6841448579ec3b3"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-11.stderr.txt",
+          "sha256": "cf07ee4e9dd4e93c965f9f731a010d36339e05fc63747c42c3ed2efca2c59ad2"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 839,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "baseline",
+      "label": "12",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-12.stdout.txt",
+          "sha256": "a1e234d5a57b19675b44fe9ba62e72f6125fda5bf92fec8fff5f8ef56feb44b1"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-12.stderr.txt",
+          "sha256": "332fa3882baa67f8a011d2bed5b41448df98d424df5a85a11b7d4b8cd9a5bce1"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 824,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "candidate",
+      "label": "12",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-12.stdout.txt",
+          "sha256": "120a0db79ea053d1cbd677075b12e5c3123c6141e537b8505acd69efa5c4a150"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-12.stderr.txt",
+          "sha256": "415d042a9144142bd6b23f54de4a4fcc3ffc5f1a01a0c5acc0249bf6b0332f1f"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 829,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "candidate",
+      "label": "13",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-13.stdout.txt",
+          "sha256": "5131557a09c580173716e92ff3683667cbb8f9f35a8bad35ac69bf60c6a7ee7f"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-13.stderr.txt",
+          "sha256": "a192e15eaf6371ebfd50821af08ff0f23f118cae855521f5cc3eefbb17a2d673"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 831,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "baseline",
+      "label": "13",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-13.stdout.txt",
+          "sha256": "37743cbf222d362548247223aa2298cf99bdea96a17915dc3a929fef82ab72b1"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-13.stderr.txt",
+          "sha256": "a192e15eaf6371ebfd50821af08ff0f23f118cae855521f5cc3eefbb17a2d673"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 831,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "baseline",
+      "label": "14",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-14.stdout.txt",
+          "sha256": "c9fc5cb91dba707810d51ca9b1b62934c9888e5411b0c009ee4cb710b6a9fb23"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-14.stderr.txt",
+          "sha256": "a192e15eaf6371ebfd50821af08ff0f23f118cae855521f5cc3eefbb17a2d673"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 831,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "candidate",
+      "label": "14",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-14.stdout.txt",
+          "sha256": "5dacca0a5550fc8271991bbd62a78915e5ade398b15ac3eff60d0f1b861e6121"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-14.stderr.txt",
+          "sha256": "a192e15eaf6371ebfd50821af08ff0f23f118cae855521f5cc3eefbb17a2d673"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 831,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "candidate",
+      "label": "15",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-15.stdout.txt",
+          "sha256": "3db1436f6eb6d16a3057e42def95a291bc3150ca27766b824e4714610be3f611"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-candidate-15.stderr.txt",
+          "sha256": "455ec0b4df667c061190a81f9ed49a574d5c69dd50d0bba9adf61929b5f3bbdc"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 837,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "auto",
+      "role": "baseline",
+      "label": "15",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-15.stdout.txt",
+          "sha256": "c90ced556d47ad5e611a221c41264609f1664939330a51af92664b6a445d6ea6"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-auto-baseline-15.stderr.txt",
+          "sha256": "0f499b7eb705d93b5511b83ddf92bd4af4891e37bbcc40cfffb0f12273f2a1b5"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 827,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "baseline",
+      "label": "warm",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-warm.stdout.txt",
+          "sha256": "039c3007c7ec6191d1b662ae35471822dbb3e8236f4a3898abdd435572b54060"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-warm.stderr.txt",
+          "sha256": "96efd3bb1f4235976107cdc56ecc3b2d74e3c59cedca8e0d7314550e34882641"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1181,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "candidate",
+      "label": "warm",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-warm.stdout.txt",
+          "sha256": "c7d2941ce8d868d3c572caaf4d35ae3254d16737781119d7df87967def8842de"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-warm.stderr.txt",
+          "sha256": "98553a845437a12ab5de1d81812328d71b6741f7d71dc55666911c5fd5273198"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1038,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "baseline",
+      "label": "00",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-00.stdout.txt",
+          "sha256": "d9b23d2904baf855d46ede71bc140e85dca1c56aedee20cb6d3f8e2a98421e19"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-00.stderr.txt",
+          "sha256": "1ad2cecd879bf16bb925235bddce482b62b93a3c3e7407f9964d9a16301aa6d8"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1188,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "candidate",
+      "label": "00",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-00.stdout.txt",
+          "sha256": "c321871a8cbf63dc724254df2f737db938346d8343b1349d88c22028a0e37f13"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-00.stderr.txt",
+          "sha256": "7461d96b93080ad76791a3ccbd2650be7888cef0ae06649ba381224ca502ff88"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1046,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "candidate",
+      "label": "01",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-01.stdout.txt",
+          "sha256": "88375c7beb30e8367f344669380dd6b198fe76377ad7964a428d6421b3e2d0b5"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-01.stderr.txt",
+          "sha256": "c6126150ade306a74b3ff4a4d403b87f0425ff04bfa508f7f07fe232893c9648"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1034,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "baseline",
+      "label": "01",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-01.stdout.txt",
+          "sha256": "6748ef4794908977eec3e19fc3e4c255bed17a9997250daa9c4de768da676235"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-01.stderr.txt",
+          "sha256": "a394e04c43e5c6a32aa137826c4c24d22bcd2817a10228e69ec3ae1f330ca001"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1194,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "baseline",
+      "label": "02",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-02.stdout.txt",
+          "sha256": "112b254cbcfd3e33cc1858016c6f8145e19bf7063a31b81d38582e896b0b7c9c"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-02.stderr.txt",
+          "sha256": "e25d352f887403e2fb963f36ea6c21f867e42e0d7c64920288c6796785e9f662"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1190,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "candidate",
+      "label": "02",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-02.stdout.txt",
+          "sha256": "5f7781a38db84c424221282643c3f07852e851e60da410902998cb5bd14898fd"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-02.stderr.txt",
+          "sha256": "05d7e5c95e9fd53068d9fb64f3fbb90ab4cc68146ff39cad701f0800fc592665"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1041,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "candidate",
+      "label": "03",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-03.stdout.txt",
+          "sha256": "705408c877bcd6cb35d4000f68e091e2dcf8008079fd4888c910a6d6449b2b45"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-03.stderr.txt",
+          "sha256": "98553a845437a12ab5de1d81812328d71b6741f7d71dc55666911c5fd5273198"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1038,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "baseline",
+      "label": "03",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-03.stdout.txt",
+          "sha256": "b368b0098b61e813e2ab2a34e7fa3da9c1cf24107d26f8d589d317a25eded32d"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-03.stderr.txt",
+          "sha256": "d03e17acc3fa515a5844b88232cd50f040a1629faab450be8ffa9d15c9f63bd5"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1184,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "baseline",
+      "label": "04",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-04.stdout.txt",
+          "sha256": "4ffad0e16e6dc9fb9cfc129aab20e49daff9fa029bab77f32b618c463aedcfc8"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-04.stderr.txt",
+          "sha256": "a394e04c43e5c6a32aa137826c4c24d22bcd2817a10228e69ec3ae1f330ca001"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1194,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "candidate",
+      "label": "04",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-04.stdout.txt",
+          "sha256": "9e98c3c15a69b9d81905c9025c62256a167ad2c4584f4c2f54dd79f74e1498d6"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-04.stderr.txt",
+          "sha256": "98553a845437a12ab5de1d81812328d71b6741f7d71dc55666911c5fd5273198"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1038,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "candidate",
+      "label": "05",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-05.stdout.txt",
+          "sha256": "b5cf4b6f7c371599187d548e104cae215ba56dd6064fca02d082ac8dcba1082f"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-05.stderr.txt",
+          "sha256": "f61a3d7bba6f426584510afd73d4d979f56884206341299cc7501ed2fbe82d4a"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1048,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "baseline",
+      "label": "05",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-05.stdout.txt",
+          "sha256": "1df9304ad2eefe2482cdd27a8e084c24f88a106bd720817cecec758c24bd7e54"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-05.stderr.txt",
+          "sha256": "52347e38b978b1095bcc48e5c7f5e47fb867f5cbf86e5674555d700c0b182c4a"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1198,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "baseline",
+      "label": "06",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-06.stdout.txt",
+          "sha256": "f333102130642653913e16c51c8ecfc5885be136de55d3d7c61fe74f56d7511a"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-06.stderr.txt",
+          "sha256": "1179ed2d1180a2d924b4baf56f69f6941699d0c77360c9480cc4279c353b06bd"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1195,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "candidate",
+      "label": "06",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-06.stdout.txt",
+          "sha256": "5c398489e9cedc9dd328a352bfae3e88b4c220c29ee81d15f0ad876462369d75"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-06.stderr.txt",
+          "sha256": "5f16281039b6cb3ed9d8b6b09f9c78d6cddf368388312b5e7ae8f5af45b3e104"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1045,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "candidate",
+      "label": "07",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-07.stdout.txt",
+          "sha256": "e4b6d531a23f7545108babac9164e9391782ebb47ceef860d7fa66ebf2d93be1"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-07.stderr.txt",
+          "sha256": "af5a39662c7f7a2131f592d66ab60fa093069ba26ec95b4c3741858f08505d56"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1053,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "baseline",
+      "label": "07",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-07.stdout.txt",
+          "sha256": "2dc895bffb40ce924e17b2689e9729916246568a0b8d986acce1b374f309b7e4"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-07.stderr.txt",
+          "sha256": "2036cf793e47acfa991ae54e07fd95b0ef9256a2b321220fc692195b4bb20e64"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1201,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "baseline",
+      "label": "08",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-08.stdout.txt",
+          "sha256": "c783b192b2938e86067470143ad4295af58f6009171189ebf15bc4561f5c7e70"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-08.stderr.txt",
+          "sha256": "7c5ee26396fea7253aa4e6e972fd9ddaf42d5bc0116ccba8e67a9ab9ae08c6d6"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1204,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "candidate",
+      "label": "08",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-08.stdout.txt",
+          "sha256": "97d72a76ee0113668cfebc9df57fb2e70b0a97ce6ddff886795b650d0f74a8e4"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-08.stderr.txt",
+          "sha256": "db6548c0c8a5db59158c49beeed8382d6c72152adf29e621a285a1ff3c906991"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1049,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "candidate",
+      "label": "09",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-09.stdout.txt",
+          "sha256": "110281fe2590b4d4fa09037d8b6740e52877ecf9ccdc0fd5101cd16042bac807"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-09.stderr.txt",
+          "sha256": "db6548c0c8a5db59158c49beeed8382d6c72152adf29e621a285a1ff3c906991"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1049,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "baseline",
+      "label": "09",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-09.stdout.txt",
+          "sha256": "966c16a63f57c549849cfaca9d807b45477b008c61927386659694e94dc53546"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-09.stderr.txt",
+          "sha256": "f96df5f083c153eb0da58cbc34533c15ce4faa43083412303932c07cd9d4dbb7"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1189,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "baseline",
+      "label": "10",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-10.stdout.txt",
+          "sha256": "825b49694d5c0dbcf92aa1c7134a82d4ef7052cc98d17a8390d266b459e90a46"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-10.stderr.txt",
+          "sha256": "13c826d646542d2bce99dd4b02f75824592f6038e99be0c4f57fd8c8d365b2ef"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1200,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "candidate",
+      "label": "10",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-10.stdout.txt",
+          "sha256": "dcc52156e1ebe8d8629f5bdd93dd30eb970c77fc276bb16e8712ac44424a13bd"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-10.stderr.txt",
+          "sha256": "bb5f77f6e6587d4d5bde1dd0b3b28dd420c4c64950900494ff23b37ec09950d4"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1051,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "candidate",
+      "label": "11",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-11.stdout.txt",
+          "sha256": "f4ae8e77dcef6a8984db9cb70d972d8eedb0360b7bedafa9f3a108ef05a9d115"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-11.stderr.txt",
+          "sha256": "271d77b24661167843447ff6c763ed4093263b198e427042ca7977e0b191dd22"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1050,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "baseline",
+      "label": "11",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-11.stdout.txt",
+          "sha256": "12c81ed6ec44f342f4f4392f0891e02b6248b0d54519c2f6e31c3313c9109e88"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-11.stderr.txt",
+          "sha256": "fa55e31520f61b6ea253ff267d18892f4cd2cbd248ae8a34c5c1a634ff52cc7e"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1197,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "baseline",
+      "label": "12",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-12.stdout.txt",
+          "sha256": "30da81914d82d2ff4f52bef1d54e61e3de5d87701994d470abf56713f030548d"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-12.stderr.txt",
+          "sha256": "1f04e5fb172966f3f14d50f136a3bdee5fe9e1849679721cc5952d9a4c002318"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1193,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "candidate",
+      "label": "12",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-12.stdout.txt",
+          "sha256": "e0059ecfc7f69272cef5006437c2f10d026ede6278e098c26b2820b81c05180d"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-12.stderr.txt",
+          "sha256": "7461d96b93080ad76791a3ccbd2650be7888cef0ae06649ba381224ca502ff88"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1046,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "candidate",
+      "label": "13",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-13.stdout.txt",
+          "sha256": "1d9c8fa3349c1f6d3b23c5c4f253b2bdfe09f760765dbe661a242e4d2ebc8ab9"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-13.stderr.txt",
+          "sha256": "5f16281039b6cb3ed9d8b6b09f9c78d6cddf368388312b5e7ae8f5af45b3e104"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1045,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "baseline",
+      "label": "13",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-13.stdout.txt",
+          "sha256": "1d2d2f8f0dc88e697d05bac999773dac8b0dff3ae1e1bed5f4029cb355fdb050"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-13.stderr.txt",
+          "sha256": "1f04e5fb172966f3f14d50f136a3bdee5fe9e1849679721cc5952d9a4c002318"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1193,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "baseline",
+      "label": "14",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-14.stdout.txt",
+          "sha256": "889dbe6cc5ea3852aca9ffe10a1207dce44b55886b8c16114f465a83314b1aed"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-14.stderr.txt",
+          "sha256": "f5e77bfe4e6c5bbab26f170a673415672ab00adb726954870d9b1885b03ddad9"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1203,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "candidate",
+      "label": "14",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-14.stdout.txt",
+          "sha256": "d5ca5b89b70ab3048659b2ca2a3dfc793f3a47d9a43b0bf9ffc55c9edf86c7e1"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-14.stderr.txt",
+          "sha256": "19f092982256089e318e9b5616972ec38470be9dabeb1cebf2e7bbe3ad658e36"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1063,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "candidate",
+      "label": "15",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-15.stdout.txt",
+          "sha256": "36fbadf9aa2f516294b1f240a74ef42c01373a98c8900159360f16679b85b1f0"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-candidate-15.stderr.txt",
+          "sha256": "db6548c0c8a5db59158c49beeed8382d6c72152adf29e621a285a1ff3c906991"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1049,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "avx2",
+      "role": "baseline",
+      "label": "15",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-15.stdout.txt",
+          "sha256": "04da1469f6014d72db909f29af24d351827e19d4d5ae4e6387bec7b775e51aca"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-avx2-baseline-15.stderr.txt",
+          "sha256": "026d757fc2ba0c8769a83622fb935dad96ef2d61d6ca9f1a7e9b9ae2cb967c50"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1205,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "scalar",
+      "role": "baseline",
+      "label": "warm",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-baseline-warm.stdout.txt",
+          "sha256": "d72f532e11d50f954a8e1e19e068f862f2624a6fda0dacdb11e2f09aac62dbf7"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-baseline-warm.stderr.txt",
+          "sha256": "1d2640f3ef8ba41b47c2d6b2cc6a892c4f1c74171a6f4897c2c87da31495c586"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 2763,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "scalar",
+      "role": "candidate",
+      "label": "warm",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-candidate-warm.stdout.txt",
+          "sha256": "e0622198bf76ead6cc8616e7b059c2493fc08b2d31ee54c922aacb8a71d9cf0b"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-candidate-warm.stderr.txt",
+          "sha256": "578818a2f22513fd5e46d39e3b145b6545775806f81a98cd380e12b8fcfda0fa"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1792,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "scalar",
+      "role": "baseline",
+      "label": "00",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-baseline-00.stdout.txt",
+          "sha256": "d8510760943494e529b73709f8d45506e00131bd19a50e6569872b952e655a87"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-baseline-00.stderr.txt",
+          "sha256": "8659e71620a12398a94d26e77a61c48a8d3dd61fdb3d6d63c26c2431470fec46"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 2750,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "scalar",
+      "role": "candidate",
+      "label": "00",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-candidate-00.stdout.txt",
+          "sha256": "e9e6bce57927852857b512e816bc6f60497e445d8a6691ef49afbd177990fcbd"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-candidate-00.stderr.txt",
+          "sha256": "e8b455ace94850df04598cbcc0444c092dc6b86a498d8bfd7ea8dc8d72f0b033"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1771,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "scalar",
+      "role": "candidate",
+      "label": "01",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-candidate-01.stdout.txt",
+          "sha256": "1d3c694af9bae277e7b596c21f90de7d395d8d2c82d85e528a7ac24757a3b125"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-candidate-01.stderr.txt",
+          "sha256": "2ddeb303139c48ba1b1f567d666b50a884993c7ede23ae99a7922bf324f6b27c"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1808,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "scalar",
+      "role": "baseline",
+      "label": "01",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-baseline-01.stdout.txt",
+          "sha256": "871c4693dfcb4c027550f4573aa4441b24e256496db46e5dcd39d2071e4dd9d4"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-baseline-01.stderr.txt",
+          "sha256": "58b225dc14745dde832962864b6c6ed6c38ce48cb509b0f0b7c0bf848d57dd4d"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 2796,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "scalar",
+      "role": "baseline",
+      "label": "02",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-baseline-02.stdout.txt",
+          "sha256": "ea61e22360f737172b62066d041fa48a7a32380c990ed013b937464de9e8da5f"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-baseline-02.stderr.txt",
+          "sha256": "fac8a673ba52437c8702c9cf013b37b70b8511ed27356342d83ec0194ee5c139"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 2774,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "scalar",
+      "role": "candidate",
+      "label": "02",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-candidate-02.stdout.txt",
+          "sha256": "6c5efe6c6a1aae842afa06377956e7eae8d5944e4246c2366f2c3ed3c43a7a4c"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-candidate-02.stderr.txt",
+          "sha256": "73f1f60e66a0532d4cdb9112d250cf3ff7d4612d9509175459e32b80d6a4cf36"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1778,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "scalar",
+      "role": "candidate",
+      "label": "03",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-candidate-03.stdout.txt",
+          "sha256": "169b059f7c35c49f5b73c20ff9581a232fb8d4051ed5a52267b43c839e5e418d"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-candidate-03.stderr.txt",
+          "sha256": "09b703adb2b933f23b95833eccedb2827255fe37fefc82389f7a843bdfd5507a"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1776,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "scalar",
+      "role": "baseline",
+      "label": "03",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-baseline-03.stdout.txt",
+          "sha256": "74b3b7885f0cddf8c5369921f33717d74a2f6798ea8fceace4bdf46c502c1390"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-baseline-03.stderr.txt",
+          "sha256": "0f784f19c936ea3a16e9dbb3521a249f90a1acf0a65119e9407bc516cbee75ec"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 2752,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "scalar",
+      "role": "baseline",
+      "label": "04",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-baseline-04.stdout.txt",
+          "sha256": "4c2fbe2ba1800f5ca3e93df1671a05bcb3ba6038ed4d97193a3800d5b3d1af50"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-baseline-04.stderr.txt",
+          "sha256": "0faf4b9820107ae043b52e8d330fade72614ef468436e69f696f17ac532e6eff"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 2758,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "scalar",
+      "role": "candidate",
+      "label": "04",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-candidate-04.stdout.txt",
+          "sha256": "cebbe5a9ec86f291c6f50a5433ea4fffb2271ada975de267fb628f61315b974d"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-candidate-04.stderr.txt",
+          "sha256": "427d85ce1f5108b0edbbfa6194b74ac352060754b1c65082a0e770049f8ca3d0"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1781,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "scalar",
+      "role": "candidate",
+      "label": "05",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-candidate-05.stdout.txt",
+          "sha256": "2e72c53af64bd06e7f6ce6c5f39cb5b83e58ab099f3466f519bc1964403bed64"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-candidate-05.stderr.txt",
+          "sha256": "28f8dd63e6523fa145d9a1077987b740173ff8a8b9f52b18423e305e600ebda2"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1784,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "scalar",
+      "role": "baseline",
+      "label": "05",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-baseline-05.stdout.txt",
+          "sha256": "e0656188cce2406320bb3332a89ac7604c2d8a8ad1ba7d99dec66ac33b70d8ed"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-baseline-05.stderr.txt",
+          "sha256": "ff8401c933d101e5452491af5efe1cf0104679b8e34faf1f1b0ee862b0e7fa4f"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 2765,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "scalar",
+      "role": "baseline",
+      "label": "06",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-baseline-06.stdout.txt",
+          "sha256": "5670e214b15d25d075677ad2d31d52c38306700bdee323b685b0912aef46e945"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-baseline-06.stderr.txt",
+          "sha256": "61d7dabb624847029f6043148dee9fd9fd446be38afabb1d191e815e53283506"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 2760,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "scalar",
+      "role": "candidate",
+      "label": "06",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-candidate-06.stdout.txt",
+          "sha256": "0b493f41d7c536d23a25e9c37b1e4211ea91090ef7afd17bc36df28fafa8b156"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-candidate-06.stderr.txt",
+          "sha256": "73f1f60e66a0532d4cdb9112d250cf3ff7d4612d9509175459e32b80d6a4cf36"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1778,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "scalar",
+      "role": "candidate",
+      "label": "07",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-candidate-07.stdout.txt",
+          "sha256": "758a67c48c7f541e82fd1210498621a9c56adf2b77a1e7ef36db0caa95b7b032"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-candidate-07.stderr.txt",
+          "sha256": "bf43b01da204c03ce3d9d1e9b5800e816cb17ce37bb76b4ef41520dc48f7d05f"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 1769,
+      "exact_reference": true,
+      "searches": 51
+    },
+    {
+      "mode": "scalar",
+      "role": "baseline",
+      "label": "07",
+      "exit_code": 0,
+      "raw": {
+        "stdout": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-baseline-07.stdout.txt",
+          "sha256": "644dbac49266757a659b9e1e25c2cea3c126a5fd658ad62afbe383ff60ab96f7"
+        },
+        "stderr": {
+          "path": "artifacts\\verification\\aster-indexed-accumulators-timing-v1-scalar-baseline-07.stderr.txt",
+          "sha256": "1c379f5e2628e3298552b6e079f270b1b1caa1071af226f59472154b9f02ac8d"
+        }
+      },
+      "nodes": 1559611,
+      "elapsed_ms": 2772,
+      "exact_reference": true,
+      "searches": 51
+    }
+  ]
+}

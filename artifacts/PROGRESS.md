@@ -1,3 +1,24 @@
+## 2026-10-19: allocation-free AVX2/scalar accumulator updates adopted
+
+Indexed neural updates now consume feature indices directly, removing temporary
+heap row-reference vectors. Arithmetic, neural weights, search decisions and the
+AVX-512 kernel are unchanged. All 86 bench runs preserve every normalized search
+trace and **1,559,611** nodes; all 64 fresh depth-nine roots agree in each of three
+modes. At fixed work, 16 paired AVX2 timings show **12.41% lower elapsed** and
+eight scalar timings **35.53% lower elapsed**. Automatic AVX-512 mode is effectively
+unchanged. These are local x86-64-v3 build measurements, not Elo or universal
+hardware claims.
+
+All 128 games pass independent PGN/journal audits: automatic 6W/50D/8L (48.44%,
+95% pair interval 43.75..53.13%) and AVX2 13W/46D/5L (56.25%, 50.00..61.72%).
+Both pass the engineering regression screen; no general strength or reference
+superiority is established. There are no forfeits or unresolved games. All native
+profiles pass 153 tests plus two lifetime compile-fail checks; Windows/Linux CI
+add explicit AVX2/scalar signature checks. Independent rules, stop/undo, terminal
+edges, real HTTP/SSE and proof checks pass. Binary/source fingerprints, timing
+transcripts and full game evidence are retained. See
+`docs/ASTER-INDEXED-ACCUMULATORS.md` for the fixed plan, limits and adopted decision.
+
 ## 2026-10-19: Aster disagreement-guard trial completed; production unchanged
 
 A new Rust search experiment restores at most one reduced ply for selected quiet

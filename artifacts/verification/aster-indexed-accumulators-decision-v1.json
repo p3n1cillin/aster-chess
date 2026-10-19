@@ -1,0 +1,69 @@
+{
+  "adopted": true,
+  "timing_passed": true,
+  "controls": {
+    "auto": {
+      "games": 64,
+      "wins": 6,
+      "draws": 50,
+      "losses": 8,
+      "score": 0.484375,
+      "pair_bootstrap95": [
+        0.4375,
+        0.53125
+      ],
+      "passed": true
+    },
+    "avx2": {
+      "games": 64,
+      "wins": 13,
+      "draws": 46,
+      "losses": 5,
+      "score": 0.5625,
+      "pair_bootstrap95": [
+        0.5,
+        0.6171875
+      ],
+      "passed": true
+    }
+  },
+  "bootstrap_samples": 20000,
+  "bootstrap_seed": 20261019,
+  "analyzer_sha256": "a6b8880f1d9e609e46efa335de0e9f6eb432d1df2f05e5c37724f1c335cebbe3",
+  "evidence_sha256": {
+    "artifacts/research/aster-indexed-accumulators-plan-v1.json": "45f95cbd0e2c11f7b84eb23b5864b2056d087fc5060d447d86f78b8736ae59b1",
+    "artifacts/research/aster-indexed-accumulators-execution-v1.json": "20b92e7e3956a1881911bfae9a97596315e8ec1af438082eba42c3f6dc1258d3",
+    "artifacts/verification/aster-indexed-accumulators-timing-v1.json": "bd10204175b320a098901994cc2a79b1b96c3a9de32a3608a580a11b3442f71d",
+    "artifacts/matches/aster-indexed-accumulators-auto-v1.json": "b973fa14490a35c296cabad1daae5fda9e6ab80c61e8fecbafe72ef6289fc689",
+    "artifacts/verification/aster-indexed-accumulators-auto-pgn-audit-v1.json": "6bef30d62115bb345cc0ef2eff148d73fec4e24887833cc60d575d38876dc9dc",
+    "artifacts/verification/aster-indexed-accumulators-auto-journal-audit-v1.json": "afe7605859d8ba461a6caa06d7175d41462c6f126012a271e3dec513846f98ef",
+    "artifacts/matches/aster-indexed-accumulators-avx2-v1.json": "749e3c71a8653be7cb005b0dcf51cc2cc4ae23418177bfdd01f62048a9c382a2",
+    "artifacts/verification/aster-indexed-accumulators-avx2-pgn-audit-v1.json": "38aa2f4b522404389ba511b82e377bc79c4ed214c840b18ff250ff45ee799fba",
+    "artifacts/verification/aster-indexed-accumulators-avx2-journal-audit-v1.json": "9c2585faa610daf4fc78b8e82827e90c156fe287d3025c9ccae384331e01bc7d",
+    "artifacts/verification/aster-indexed-accumulators-equivalence-auto-v1.json": "b8819851684a17dbd188070d7bf286b0eecea38e371275d0b824f18ef3323bdc",
+    "artifacts/verification/aster-indexed-accumulators-auto-rules-v1.json": "c78da2825fe7f895806a328b2292a3b64c9316fa4d5f07fc1ff2386e380da3e5",
+    "artifacts/verification/aster-indexed-accumulators-auto-edges-v1.json": "f0393df9b6da67cd526a59b7f0f57f1e1b33703d6cb0be1ded5ac27dec472bf9",
+    "artifacts/verification/aster-indexed-accumulators-auto-play-v1.json": "2f36b8630657b16cc7fa924044a744c5677b6624590badceabba18a965792f1a",
+    "artifacts/verification/aster-indexed-accumulators-auto-proofs-v1.json": "aca9fe98f59faffe93634eeb2f13c530bcd8f87099c20958633ab98528e66a71",
+    "artifacts/tactics/aster-indexed-accumulators-auto-candidate-tactics-v1.json": "f920b27deddd553f19abb3703b11492dc99f0c219f19bbb12b5517cb1f5b893f",
+    "artifacts/tactics/aster-indexed-accumulators-auto-candidate-tactics-quiet-v1.json": "9f953f94dcc7ebe63607a316ae31838aa5c2a7d13a081cb9df58b58cc6f821d4",
+    "artifacts/tactics/aster-indexed-accumulators-auto-candidate-endgames-v1.json": "5b0cdfd5315130770b6a79d2ec3a435f66b6a57f8d386446d85a2fd52bf1a883",
+    "artifacts/verification/aster-indexed-accumulators-equivalence-avx2-v1.json": "b8819851684a17dbd188070d7bf286b0eecea38e371275d0b824f18ef3323bdc",
+    "artifacts/verification/aster-indexed-accumulators-avx2-rules-v1.json": "a0e845f02ce8135565a9372105f2d90d74905289cb4955dbe0d60968f2d61f20",
+    "artifacts/verification/aster-indexed-accumulators-avx2-edges-v1.json": "f0393df9b6da67cd526a59b7f0f57f1e1b33703d6cb0be1ded5ac27dec472bf9",
+    "artifacts/verification/aster-indexed-accumulators-avx2-play-v1.json": "2f36b8630657b16cc7fa924044a744c5677b6624590badceabba18a965792f1a",
+    "artifacts/verification/aster-indexed-accumulators-avx2-proofs-v1.json": "aca9fe98f59faffe93634eeb2f13c530bcd8f87099c20958633ab98528e66a71",
+    "artifacts/tactics/aster-indexed-accumulators-avx2-candidate-tactics-v1.json": "8c1a4c25c6351b40feb9e089d6b772e3aeb716f4fad688f5f5c36f029e4b77c7",
+    "artifacts/tactics/aster-indexed-accumulators-avx2-candidate-tactics-quiet-v1.json": "c61e604d1fd2c76b28caba154732027b7e4edc6bf6c084be4cf825f7e1c80ba7",
+    "artifacts/tactics/aster-indexed-accumulators-avx2-candidate-endgames-v1.json": "735c91f6baa2220caa7a9c3c9f0f7b20e1df00ecd545de259241a94aab2b7c2a",
+    "artifacts/verification/aster-indexed-accumulators-equivalence-scalar-v1.json": "b8819851684a17dbd188070d7bf286b0eecea38e371275d0b824f18ef3323bdc",
+    "artifacts/verification/aster-indexed-accumulators-scalar-rules-v1.json": "ff73cffa27fc792700144d328060e4fac734b42cb90f19ae87549c5239bfffc7",
+    "artifacts/tactics/aster-indexed-accumulators-scalar-candidate-tactics-v1.json": "c8ca620438be31099f7d895e7b9b1b90e8f9728df98d7e2a583c24d084be835a",
+    "artifacts/tactics/aster-indexed-accumulators-scalar-candidate-tactics-quiet-v1.json": "59ab5157b91b23fc2db9bcdc9f7dc69f4581b6e53e01f3de46b6d7e7b9a1650c",
+    "artifacts/tactics/aster-indexed-accumulators-scalar-candidate-endgames-v1.json": "17dd4ef71944ba4a486fbd8877a51c2e024eaa6a12a11a786aae1870325dd630",
+    "artifacts/verification/aster-indexed-accumulators-release-tests-v1.log": "93df794eda9c6397739bceef811993750e2f6b276e95c94d9eb622239304e1ca",
+    "artifacts/verification/aster-indexed-accumulators-debug-tests-v1.log": "698ce352d3db1bd0c697de8227b800086640592c8986fe275a0cdf482a1d08a5",
+    "artifacts/verification/aster-indexed-accumulators-ci-jobs-v1.json": "c87b81bc41b7f5ec9fd5c3cb649d8666c209b98bdc430ae21ee3c7a9b0dbe86a"
+  },
+  "interpretation": "Engineering speed/nonregression decision. Pair bootstrap does not model correlated opening families. No absolute Elo, playing-strength gain, novelty or reference superiority established."
+}

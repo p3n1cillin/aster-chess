@@ -6,6 +6,13 @@ canonical bench signature **1,559,611**. Syzygy probing is implemented. The late
 recorded local throughput is 93.1% of that source built with clang; this measures
 speed, not playing strength. See `docs/SF-PORT.md` and `artifacts/PROGRESS.md`.
 
+Allocation-free indexed neural updates are now adopted: local same-work timings
+show 12.41% less AVX2 elapsed and 35.53% less scalar-kernel elapsed, with automatic
+AVX-512 effectively unchanged. Exact calculations and all 128 engineering
+regression games are checked. This does not establish Elo or superiority; see
+`docs/ASTER-INDEXED-ACCUMULATORS.md`. Next profile the automatic path and freeze
+a separate hypothesis before any new search-policy experiment.
+
 The Aster disagreement-guard experiment tests a bounded response to conflicting
 search evidence. Its policy, new opening roots and two controls were fixed before
 candidate queries. All 192 games are audited, but neither strength gate passes:
