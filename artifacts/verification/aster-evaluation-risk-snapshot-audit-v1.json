@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "snapshots": [
+    {
+      "snapshot": "artifacts/research/aster-evaluation-risk-source-v1",
+      "files": 188,
+      "manifest_sha256": "136057cf03e371896dbd5d72adbcfa87de948dfd7de4d5dbb139caa8b6169871",
+      "own_hashes_passed": true,
+      "matches_current_sources": false
+    },
+    {
+      "snapshot": "artifacts/research/aster-evaluation-risk-source-v2",
+      "files": 189,
+      "manifest_sha256": "026da8865162d9869038e17d8d06f952055ed916b4ff37f475416cdd3756b79c",
+      "own_hashes_passed": true,
+      "matches_current_sources": true
+    },
+    {
+      "snapshot": "artifacts/research/aster-evaluation-risk-default-source-v1",
+      "files": 189,
+      "manifest_sha256": "ea5ff2ebef9f6d9d4cd8a89451fb8c54af7e7c529bdb184c5c8e72b93899c80b",
+      "own_hashes_passed": true,
+      "matches_current_sources": true
+    }
+  ],
+  "binaries": [
+    {
+      "role": "baseline",
+      "sha256": "9361d9c3b066514451bf09a1767c534d8197f5909f06151433f531768cc81100",
+      "preserved": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\9361d9c3b066514451bf09a1767c534d8197f5909f06151433f531768cc81100\\aster.exe"
+    },
+    {
+      "role": "candidate",
+      "sha256": "819e714956c5dbc2a26209daa23e4d55c0f537c644b29c40fc13a337d9984057",
+      "preserved": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\819e714956c5dbc2a26209daa23e4d55c0f537c644b29c40fc13a337d9984057\\aster.exe"
+    },
+    {
+      "role": "default",
+      "sha256": "6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2",
+      "preserved": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2\\aster.exe"
+    }
+  ]
+}

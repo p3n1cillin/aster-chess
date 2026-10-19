@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-10-19T13:40:00.338268+00:00",
+  "code_commit": "4b23738f8b0fa58e41ed17b70bb5aa23788e9629",
+  "plan_commit": "e0233c527815cc6d556aa0477ce2033acfc5790a",
+  "plan_sha256": "0774dfc435ea9c80aead444460c191da77d0abc699c943208c13e5444b56c43b",
+  "candidate_sha256": "819e714956c5dbc2a26209daa23e4d55c0f537c644b29c40fc13a337d9984057",
+  "baseline_sha256": "9361d9c3b066514451bf09a1767c534d8197f5909f06151433f531768cc81100",
+  "parent_openings_sha256": "a4c465b2614486828f9f80ce4e6461a8f4389cc154cc17ef4d909933c284391d",
+  "simultaneous_control_matches": 2,
+  "active_search_threads_total": 2,
+  "logical_processors": 12,
+  "resources": "Automatic SIMD; one thread,64MiB each engine; two control matches run concurrently and sequentially internally. No local compilation or benchmark during games. No adaptive tuning or extra games.",
+  "controls": {
+    "30ms": {
+      "pairs": 64,
+      "suite_range": [
+        0,
+        64
+      ],
+      "seconds_per_move": 0.03
+    },
+    "100ms": {
+      "pairs": 64,
+      "suite_range": [
+        64,
+        128
+      ],
+      "seconds_per_move": 0.1
+    }
+  }
+}

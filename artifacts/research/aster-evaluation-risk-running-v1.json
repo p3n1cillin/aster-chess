@@ -1,0 +1,51 @@
+{
+  "checkpoint_utc": "2026-10-19T13:44:43.664120+00:00",
+  "status": "trial_in_progress_goal_unachieved",
+  "automation_id": "continue-aster-research",
+  "automation_status": "ACTIVE",
+  "continuation": "Hourly heartbeat on this thread; meaningful results or blockers only.",
+  "worktree": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess",
+  "primary_workspace": "\\\\192.168.0.115\\share\\repos\\WIP\\chess",
+  "primary_branch": "aster-core-sf-dev-port",
+  "primary_head_at_start": "2f84d46087538006ef059e18ceabcc59a5da5aa4",
+  "research_branch": "codex/aster-evaluation-risk",
+  "tested_code_commit": "4b23738f8b0fa58e41ed17b70bb5aa23788e9629",
+  "ci_run_id": 39262037781,
+  "controls": {
+    "30ms": {
+      "games_completed_at_checkpoint": 85,
+      "requested_games": 128,
+      "forfeits": 0,
+      "unresolved": 0,
+      "exec_session_id": 94317,
+      "launcher_and_child_process_ids": [
+        16124,
+        27448
+      ],
+      "prefix": "artifacts/matches/aster-evaluation-risk-30ms-v1"
+    },
+    "100ms": {
+      "games_completed_at_checkpoint": 28,
+      "requested_games": 128,
+      "forfeits": 0,
+      "unresolved": 0,
+      "exec_session_id": 72712,
+      "launcher_and_child_process_ids": [
+        63012,
+        44480
+      ],
+      "prefix": "artifacts/matches/aster-evaluation-risk-100ms-v1"
+    }
+  },
+  "qualified": "All four workspace native configurations157+2 pass; activity/cost passes with3341 labels and1 deferral; disabled/default128-root comparisons, canonical bench, tactics, independent rules/edges/UI/proofs, SMP lifecycle and reset checks pass. Original model/policy unchanged.",
+  "next_steps": [
+    "Inspect current reports and existing processes first; Windows venv launchers spawn children with the same arguments, so these are two matches rather than four. Do not duplicate or terminate active runs.",
+    "Wait for all256 declared games; no local compilation or benchmarks while games run. Preserve any incomplete or failed evidence. If a process ended early use durable recovery with a fresh output prefix, never discard completed games or add adaptive games.",
+    "Fetch CI39262037781 status; Linux was passed and Windows in progress at checkpoint. Save successful jobs, or diagnose actual failures preserving original logs.",
+    "After each control completes, run scripts/audit_match.py PREFIX and scripts/audit_match_journal.py PREFIX --output fresh artifact. After both audits run scripts/analyze_evaluation_risk.py --output artifacts/verification/aster-evaluation-risk-decision-v1.json.",
+    "Complete docs/ASTER-EVALUATION-RISK.md, progress, final rating and completion records; preserve all PGNs/journals/binaries/snapshots, commit/push. Keep production disabled on failed gates. Any eligible policy still needs separate reference confirmation.",
+    "Check primary checkout for concurrent changes before safe integration of default-off research code and tooling. Do not overwrite user work.",
+    "Continue distinct research toward the goal after this trial. A promising independent next experiment is Rust PGO for automatic AVX-512, following official rustc documentation; llvm-profdata is installed. Predeclare flags, training/excluded test data, exactness, timings and match gates before queries. No PGO build/training has started."
+  ],
+  "goal_limits": "No world-first, absolute Elo or Stockfish-superiority claim established. The user asks continued work until convincing controlled evidence meets the project criterion; finishing this iteration does not complete the overarching goal."
+}
