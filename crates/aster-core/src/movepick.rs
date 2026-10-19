@@ -260,6 +260,12 @@ impl MovePicker {
         // Indices are masked to their table ranges (no-ops on valid values)
         // so the lookups below need no bounds checks.
         let us = us & 1;
+        // The pawn-structure history row is the same for every move here.
+        let pawn_hist = if T == QUIETS {
+            unsafe { (*self.shared).pawn_entry(pos) as *const PieceToHistory }
+        } else {
+            std::ptr::null()
+        };
         let mut it = self.cur;
         for &mv in ml.as_slice() {
             let from = mv.from_sq() & 63;
@@ -275,7 +281,7 @@ impl MovePicker {
                 } else if T == QUIETS {
                     let ch = &self.continuation_history;
                     let mut v = 2 * (*self.main_history)[us][mv.raw() as usize] as i32;
-                    v += 2 * get(&(*self.shared).pawn_entry(pos)[pc][to]);
+                    v += 2 * get(&(*pawn_hist)[pc][to]);
                     v += get(&(*ch[0])[pc][to]);
                     v += get(&(*ch[1])[pc][to]);
                     v += get(&(*ch[2])[pc][to]);

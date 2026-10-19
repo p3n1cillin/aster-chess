@@ -422,6 +422,13 @@ impl<T: Copy + Default, const N: usize> ValueList<T, N> {
         unsafe { self.values.get_unchecked_mut(self.size).write(v) };
         self.size += 1;
     }
+    /// Writes `v` into the next slot and keeps it only if `keep` (no branch).
+    #[inline(always)]
+    pub fn push_if(&mut self, v: T, keep: bool) {
+        debug_assert!(self.size < N);
+        unsafe { self.values.get_unchecked_mut(self.size).write(v) };
+        self.size += keep as usize;
+    }
     #[inline(always)]
     pub fn as_slice(&self) -> &[T] {
         unsafe { std::slice::from_raw_parts(self.values.as_ptr() as *const T, self.size) }

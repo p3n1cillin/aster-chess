@@ -375,10 +375,8 @@ fn prefetch_row(index: u32) {
 
 #[inline(always)]
 fn push_if_lt(list: &mut ThreatIndexList, index: u32) {
-    // Mirrors ValueList<u16>::push_back_if_lt(index, Dimensions) (values fit in u16).
-    if index < THREAT_DIMENSIONS {
-        list.push(index as u16);
-    }
+    // Branchless: store, then keep it only when it is a real feature.
+    list.push_if(index as u16, index < THREAT_DIMENSIONS);
 }
 
 pub fn threat_append_active_indices(

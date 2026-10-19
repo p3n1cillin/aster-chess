@@ -379,6 +379,9 @@ pub struct Worker {
     seek_mate: bool,
     last_iteration_idx_pv: PVMoves,
     pub thread_idx: usize,
+    // This thread's counter in the shared node table, refreshed at each
+    // search start (the table is rebuilt only with the thread pool).
+    node_counter: *const AtomicU64,
     numa_thread_idx: usize,
     numa_total: usize,
     reductions: [i32; MAX_MOVES],
@@ -472,6 +475,7 @@ impl Worker {
             seek_mate: false,
             last_iteration_idx_pv: PVMoves::default(),
             thread_idx,
+            node_counter: std::ptr::null(),
             numa_thread_idx,
             numa_total,
             reductions: [0; MAX_MOVES],
@@ -489,6 +493,7 @@ impl Worker {
             tb_config: crate::syzygy::Config::default(),
             tb: None,
         });
+        w.node_counter = &w.shared.nodes[thread_idx] as *const AtomicU64;
         w.clear();
         w
     }
@@ -507,7 +512,7 @@ impl Worker {
     }
     #[inline(always)]
     fn inc_nodes(&self) {
-        let n = &self.shared.nodes[self.thread_idx];
+        let n = unsafe { &*self.node_counter };
         n.store(n.load(Relaxed) + 1, Relaxed);
     }
     #[inline(always)]
@@ -866,6 +871,8 @@ impl Worker {
         self.root_game_ply = self.root_pos.game_ply();
         let mut pos = std::mem::take(&mut self.root_pos);
         pos.reserve_states(MAX_PLY as usize + 16);
+
+        self.node_counter = &self.shared.nodes[self.thread_idx] as *const AtomicU64;
 
         let mut pv = PVMoves::default();
         let mut last_best_move_pv: Vec<Move> = Vec::new();
