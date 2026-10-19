@@ -1,0 +1,1472 @@
+{
+  "status": "built_unqualified",
+  "created_utc": "2026-10-19T14:29:20.572889+00:00",
+  "plan": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-plan-v1.json",
+  "plan_sha256": "e26ab9bb5b9ed9244a524f24a8b93cef8710aeb43e6f0a10f1c7901476439274",
+  "compiler": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\nbinary: rustc\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\ncommit-date: 2026-10-13\nhost: x86_64-pc-windows-msvc\nrelease: 1.99.1\nLLVM version: 23.1.1",
+  "llvm_profdata": "C:\\Users\\lukem\\.rustup\\toolchains\\1.99.1-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\bin\\llvm-profdata.exe",
+  "llvm_profdata_sha256": "6d381285f5c9fae7ba9808ee701c192a681be421712a535f616f001563531d2a",
+  "builder_sha256": "4ddcb4088b0647e314a2375dbcce03f07b726f1a1277640d8e5a06ee3cea0791",
+  "stage": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1",
+  "steps": [
+    {
+      "label": "build-control",
+      "argv": [
+        "C:\\Users\\lukem\\.cargo\\bin\\cargo.exe",
+        "build",
+        "--workspace",
+        "--release",
+        "--locked",
+        "--target",
+        "x86_64-pc-windows-msvc"
+      ],
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-build-v1-build-control.log",
+      "environment": {
+        "CARGO_TARGET_DIR": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\target",
+        "CARGO_ENCODED_RUSTFLAGS": "-C\u001ftarget-cpu=x86-64-v3"
+      },
+      "exit_code": 0,
+      "log_sha256": "93e0a45741a443e334553826035a921d08379ebaeb209f8a7ed91d07b7830eaf"
+    },
+    {
+      "label": "control-signature",
+      "argv": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\control\\aster.exe",
+        "core",
+        "bench"
+      ],
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-build-v1-control-signature.log",
+      "environment": {
+        "CARGO_TARGET_DIR": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\target"
+      },
+      "exit_code": 0,
+      "log_sha256": "d79fe70e7fc9d2c45c9f0e298e1309119ea084d38e35b73c7c0b900957b629ff"
+    },
+    {
+      "label": "build-instrumented",
+      "argv": [
+        "C:\\Users\\lukem\\.cargo\\bin\\cargo.exe",
+        "build",
+        "--workspace",
+        "--release",
+        "--locked",
+        "--target",
+        "x86_64-pc-windows-msvc"
+      ],
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-build-v1-build-instrumented.log",
+      "environment": {
+        "CARGO_TARGET_DIR": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\target",
+        "CARGO_ENCODED_RUSTFLAGS": "-C\u001ftarget-cpu=x86-64-v3\u001f-C\u001fprofile-generate=C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw"
+      },
+      "exit_code": 0,
+      "log_sha256": "9ca31af410913a649a06e8fc89c321023e92b64958412d5509071553424c7ee9"
+    },
+    {
+      "label": "train-bench-auto-0",
+      "argv": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\instrumented\\aster.exe",
+        "core",
+        "bench"
+      ],
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-build-v1-train-bench-auto-0.log",
+      "environment": {
+        "CARGO_TARGET_DIR": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\target",
+        "CARGO_ENCODED_RUSTFLAGS": "-C\u001ftarget-cpu=x86-64-v3\u001f-C\u001fprofile-generate=C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw",
+        "LLVM_PROFILE_FILE": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\%p-%m.profraw"
+      },
+      "exit_code": 0,
+      "log_sha256": "0102ed4fac5edb081e0377fde6ae6a17db03594c554e19f909dd57ceee7c3d20"
+    },
+    {
+      "label": "train-bench-auto-1",
+      "argv": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\instrumented\\aster.exe",
+        "core",
+        "bench"
+      ],
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-build-v1-train-bench-auto-1.log",
+      "environment": {
+        "CARGO_TARGET_DIR": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\target",
+        "CARGO_ENCODED_RUSTFLAGS": "-C\u001ftarget-cpu=x86-64-v3\u001f-C\u001fprofile-generate=C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw",
+        "LLVM_PROFILE_FILE": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\%p-%m.profraw"
+      },
+      "exit_code": 0,
+      "log_sha256": "2e5ae94e903dc8f79883d29c6737bbcd6220ae5c795d3f1ade9b77356db3e6de"
+    },
+    {
+      "label": "train-bench-auto-2",
+      "argv": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\instrumented\\aster.exe",
+        "core",
+        "bench"
+      ],
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-build-v1-train-bench-auto-2.log",
+      "environment": {
+        "CARGO_TARGET_DIR": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\target",
+        "CARGO_ENCODED_RUSTFLAGS": "-C\u001ftarget-cpu=x86-64-v3\u001f-C\u001fprofile-generate=C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw",
+        "LLVM_PROFILE_FILE": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\%p-%m.profraw"
+      },
+      "exit_code": 0,
+      "log_sha256": "18a697769f0312118467a207cbcd66db9d6cb1ddaa3d6bcedcbea75089d88508"
+    },
+    {
+      "label": "train-bench-avx2-0",
+      "argv": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\instrumented\\aster.exe",
+        "core",
+        "bench"
+      ],
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-build-v1-train-bench-avx2-0.log",
+      "environment": {
+        "CARGO_TARGET_DIR": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\target",
+        "CARGO_ENCODED_RUSTFLAGS": "-C\u001ftarget-cpu=x86-64-v3\u001f-C\u001fprofile-generate=C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw",
+        "LLVM_PROFILE_FILE": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\%p-%m.profraw",
+        "ASTER_SIMD": "avx2"
+      },
+      "exit_code": 0,
+      "log_sha256": "9ac1619928f0004869cda3cb84c865260896f410a7c87085d6f3f6dd4b176885"
+    },
+    {
+      "label": "train-bench-scalar-0",
+      "argv": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\instrumented\\aster.exe",
+        "core",
+        "bench"
+      ],
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-build-v1-train-bench-scalar-0.log",
+      "environment": {
+        "CARGO_TARGET_DIR": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\target",
+        "CARGO_ENCODED_RUSTFLAGS": "-C\u001ftarget-cpu=x86-64-v3\u001f-C\u001fprofile-generate=C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw",
+        "LLVM_PROFILE_FILE": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\%p-%m.profraw",
+        "ASTER_SIMD": "scalar"
+      },
+      "exit_code": 0,
+      "log_sha256": "f990a3cd11d774dc152bd88e2b40436890a536efff4cce654a1d124b4de65276"
+    },
+    {
+      "label": "train-smoke_rust_play",
+      "argv": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/smoke_rust_play.py",
+        "--engine",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\instrumented\\aster.exe",
+        "--output",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-build-v1-train-smoke_rust_play.json"
+      ],
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-build-v1-train-smoke_rust_play.log",
+      "environment": {
+        "CARGO_TARGET_DIR": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\target",
+        "CARGO_ENCODED_RUSTFLAGS": "-C\u001ftarget-cpu=x86-64-v3\u001f-C\u001fprofile-generate=C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw",
+        "LLVM_PROFILE_FILE": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\%p-%m.profraw"
+      },
+      "exit_code": 0,
+      "log_sha256": "ceeeb06cc2f8eb42fe98e90713c0649aca0864fc666633ec74e2a9c2f38ccab9"
+    },
+    {
+      "label": "train-smoke_mate_proof",
+      "argv": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/smoke_mate_proof.py",
+        "--engine",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\instrumented\\aster.exe",
+        "--output",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-build-v1-train-smoke_mate_proof.json"
+      ],
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-build-v1-train-smoke_mate_proof.log",
+      "environment": {
+        "CARGO_TARGET_DIR": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\target",
+        "CARGO_ENCODED_RUSTFLAGS": "-C\u001ftarget-cpu=x86-64-v3\u001f-C\u001fprofile-generate=C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw",
+        "LLVM_PROFILE_FILE": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\%p-%m.profraw"
+      },
+      "exit_code": 0,
+      "log_sha256": "65980d47d3d7d3d104733bf7844ec585071c273aede0f20e464bb34b2b6f3b76"
+    },
+    {
+      "label": "merge-profile",
+      "argv": [
+        "C:\\Users\\lukem\\.rustup\\toolchains\\1.99.1-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\bin\\llvm-profdata.exe",
+        "merge",
+        "-o",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\merged.profdata",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\2668-8098244646646887991_0.profraw",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\34904-8098244646646887991_0.profraw",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\3848-8098244646646887991_0.profraw",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\45716-8098244646646887991_0.profraw",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\49044-8098244646646887991_0.profraw",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\49400-8098244646646887991_0.profraw",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\51980-8098244646646887991_0.profraw",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\61672-8098244646646887991_0.profraw"
+      ],
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-build-v1-merge-profile.log",
+      "environment": {
+        "CARGO_TARGET_DIR": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\target"
+      },
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "build-optimized",
+      "argv": [
+        "C:\\Users\\lukem\\.cargo\\bin\\cargo.exe",
+        "build",
+        "--workspace",
+        "--release",
+        "--locked",
+        "--target",
+        "x86_64-pc-windows-msvc"
+      ],
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-build-v1-build-optimized.log",
+      "environment": {
+        "CARGO_TARGET_DIR": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\target",
+        "CARGO_ENCODED_RUSTFLAGS": "-C\u001ftarget-cpu=x86-64-v3\u001f-C\u001fprofile-use=C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\merged.profdata\u001f-C\u001fllvm-args=-pgo-warn-missing-function"
+      },
+      "exit_code": 0,
+      "log_sha256": "7d13e1f85d258cb3802c4f34cd38753ad5339cc7d162e813e0ac517abc5bcac2"
+    }
+  ],
+  "binaries": {
+    "control": {
+      "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\control\\aster.exe",
+      "sha256": "abfeab6e7efad7c666c25ff844ab92df0d87871f53da6091cb11014bab913960",
+      "rustflags": [
+        "-C",
+        "target-cpu=x86-64-v3"
+      ]
+    },
+    "instrumented": {
+      "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\instrumented\\aster.exe",
+      "sha256": "e89d2baf3a28d5baed9b6a443611e4c59a8c9f6720bbe9be672b81f91306b6f2",
+      "rustflags": [
+        "-C",
+        "target-cpu=x86-64-v3",
+        "-C",
+        "profile-generate=C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw"
+      ]
+    },
+    "optimized": {
+      "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\optimized\\aster.exe",
+      "sha256": "fdf963252b8311dd909b9c2c09b3d5b6e3cce302335b02901beac2da2687ab9d",
+      "rustflags": [
+        "-C",
+        "target-cpu=x86-64-v3",
+        "-C",
+        "profile-use=C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\merged.profdata",
+        "-C",
+        "llvm-args=-pgo-warn-missing-function"
+      ]
+    }
+  },
+  "training_roots": [
+    {
+      "id": "opening-055",
+      "bestmove": "c3d5",
+      "nodes": 9218,
+      "depth": 12,
+      "pv": [
+        "c3d5",
+        "d8d5",
+        "a5a6",
+        "b7b6",
+        "d1c2",
+        "g8f6",
+        "f1e2",
+        "a8c8",
+        "e1g1",
+        "d5d4",
+        "d2c3"
+      ]
+    },
+    {
+      "id": "opening-024",
+      "bestmove": "e2d4",
+      "nodes": 23553,
+      "depth": 12,
+      "pv": [
+        "e2d4",
+        "c6e5",
+        "d4e6",
+        "e5f3",
+        "d1f3",
+        "f7e6",
+        "f3e4",
+        "d8d6",
+        "b1d2"
+      ]
+    },
+    {
+      "id": "opening-035",
+      "bestmove": "e5e6",
+      "nodes": 7985,
+      "depth": 12,
+      "pv": [
+        "e5e6",
+        "f7e6",
+        "c4d5",
+        "e8g8",
+        "f1e2",
+        "d7e5",
+        "e1g1",
+        "e6d5",
+        "d2b3",
+        "f8d8",
+        "f1e1"
+      ]
+    },
+    {
+      "id": "opening-029",
+      "bestmove": "g1f3",
+      "nodes": 16816,
+      "depth": 12,
+      "pv": [
+        "g1f3",
+        "c6a5",
+        "d1a4",
+        "f5d7",
+        "a4c2",
+        "c8c3",
+        "c2c3",
+        "d8c8",
+        "c3c8",
+        "d7c8",
+        "f4c7",
+        "a5b3"
+      ]
+    },
+    {
+      "id": "opening-010",
+      "bestmove": "f3e5",
+      "nodes": 16118,
+      "depth": 12,
+      "pv": [
+        "f3e5",
+        "d7e5",
+        "d4e5",
+        "d8d1",
+        "f1d1",
+        "a8b8",
+        "a2a4",
+        "c6c5",
+        "e4b7",
+        "b8b7",
+        "a4a5",
+        "e8g8",
+        "c1e3",
+        "f7f6",
+        "e5f6",
+        "e7f6",
+        "a5a6",
+        "b7c7"
+      ]
+    },
+    {
+      "id": "opening-027",
+      "bestmove": "g1f3",
+      "nodes": 8124,
+      "depth": 12,
+      "pv": [
+        "g1f3",
+        "h4h5",
+        "d2g5",
+        "h5f7",
+        "c1e3",
+        "c6d4",
+        "e3d4"
+      ]
+    },
+    {
+      "id": "opening-006",
+      "bestmove": "e1g1",
+      "nodes": 34717,
+      "depth": 12,
+      "pv": [
+        "e1g1",
+        "g8e7",
+        "d1e1",
+        "c6d4",
+        "e2d1",
+        "c8d7",
+        "d2f3"
+      ]
+    },
+    {
+      "id": "opening-014",
+      "bestmove": "b1d2",
+      "nodes": 40527,
+      "depth": 12,
+      "pv": [
+        "b1d2",
+        "e8c8",
+        "e1f1",
+        "c8b8",
+        "d2c4",
+        "a5c7",
+        "f3f4",
+        "e5f4",
+        "b2d4",
+        "f8c5"
+      ]
+    },
+    {
+      "id": "opening-018",
+      "bestmove": "e1g1",
+      "nodes": 18659,
+      "depth": 12,
+      "pv": [
+        "e1g1",
+        "e8g8",
+        "c4b3",
+        "f6d5",
+        "f3g5",
+        "h7h6",
+        "g5e4",
+        "c5d4",
+        "b1a3"
+      ]
+    },
+    {
+      "id": "opening-002",
+      "bestmove": "e1g1",
+      "nodes": 12867,
+      "depth": 12,
+      "pv": [
+        "e1g1",
+        "d7f5",
+        "a4b5",
+        "f5c8",
+        "e2f3",
+        "e8f8",
+        "f3c6",
+        "b7c6",
+        "b5c6",
+        "g7c3",
+        "b2c3"
+      ]
+    },
+    {
+      "id": "opening-058",
+      "bestmove": "d2e4",
+      "nodes": 4445,
+      "depth": 12,
+      "pv": [
+        "d2e4",
+        "d5e4",
+        "f1c4",
+        "b8d7",
+        "c4b3",
+        "e7e6"
+      ]
+    },
+    {
+      "id": "opening-045",
+      "bestmove": "f1g2",
+      "nodes": 29211,
+      "depth": 12,
+      "pv": [
+        "f1g2",
+        "c5d4",
+        "a3b5",
+        "c7d8",
+        "b5d4",
+        "c6d4",
+        "c3d4",
+        "a7a5",
+        "e2d1",
+        "e8g8"
+      ]
+    },
+    {
+      "id": "opening-017",
+      "bestmove": "c1a3",
+      "nodes": 10851,
+      "depth": 12,
+      "pv": [
+        "c1a3",
+        "d5c4",
+        "b3c4",
+        "c5d4",
+        "a3e7",
+        "d4d3",
+        "c2d3",
+        "c7e7",
+        "f1d1",
+        "b6d7"
+      ]
+    },
+    {
+      "id": "opening-049",
+      "bestmove": "g2g3",
+      "nodes": 9590,
+      "depth": 12,
+      "pv": [
+        "g2g3",
+        "c8e6",
+        "f3d2",
+        "f8g7",
+        "f1h3",
+        "e6d5",
+        "e4d5",
+        "c6e7"
+      ]
+    },
+    {
+      "id": "opening-041",
+      "bestmove": "d4e5",
+      "nodes": 27129,
+      "depth": 12,
+      "pv": [
+        "d4e5",
+        "d7e5",
+        "e1g1",
+        "e8g8",
+        "d1d4",
+        "e5g4",
+        "b1d2",
+        "f8d8",
+        "d4c4"
+      ]
+    },
+    {
+      "id": "opening-050",
+      "bestmove": "c5d6",
+      "nodes": 29320,
+      "depth": 12,
+      "pv": [
+        "c5d6",
+        "a5c3",
+        "c1d2",
+        "c3g7",
+        "g1f3",
+        "h8g8",
+        "d2g5",
+        "g7c3",
+        "e1f1",
+        "c8e6",
+        "g5e7",
+        "c6e7",
+        "d6e7",
+        "c3c4",
+        "f1g1",
+        "c4e4"
+      ]
+    },
+    {
+      "id": "opening-052",
+      "bestmove": "a1c1",
+      "nodes": 31409,
+      "depth": 12,
+      "pv": [
+        "a1c1",
+        "d7c5",
+        "c3c4",
+        "f6e4",
+        "b3b4",
+        "e4d2",
+        "f3d2",
+        "c5e4",
+        "d2e4",
+        "d5e4",
+        "d1c2",
+        "f8d8"
+      ]
+    },
+    {
+      "id": "opening-040",
+      "bestmove": "f1e1",
+      "nodes": 3872,
+      "depth": 12,
+      "pv": [
+        "f1e1",
+        "b8d7",
+        "e5d7",
+        "f6d7",
+        "e2e4",
+        "d6e7"
+      ]
+    },
+    {
+      "id": "opening-004",
+      "bestmove": "f1e1",
+      "nodes": 33107,
+      "depth": 12,
+      "pv": [
+        "f1e1",
+        "f8e7",
+        "d1e2",
+        "b6b7",
+        "d2d3",
+        "h7h6",
+        "b2b4",
+        "c5b4",
+        "f3d4",
+        "c8g4",
+        "e2e7",
+        "b7e7",
+        "e1e7",
+        "e8e7",
+        "d4c6",
+        "e7d7",
+        "c6b4",
+        "g4f5",
+        "c1e3"
+      ]
+    },
+    {
+      "id": "opening-037",
+      "bestmove": "d1c2",
+      "nodes": 22796,
+      "depth": 12,
+      "pv": [
+        "d1c2",
+        "a8a5",
+        "f3e5",
+        "d6e7",
+        "b1d2",
+        "a5a8",
+        "a2a4",
+        "d7e5",
+        "d4e5",
+        "f6d7",
+        "f2f4"
+      ]
+    },
+    {
+      "id": "opening-001",
+      "bestmove": "b1c3",
+      "nodes": 8475,
+      "depth": 12,
+      "pv": [
+        "b1c3",
+        "d5b4",
+        "e1c1",
+        "b4c6",
+        "c3e2",
+        "f7f5",
+        "c1b1",
+        "f8d6"
+      ]
+    },
+    {
+      "id": "opening-043",
+      "bestmove": "e1g1",
+      "nodes": 17198,
+      "depth": 12,
+      "pv": [
+        "e1g1",
+        "c8b7",
+        "e2e4",
+        "d5h5",
+        "a1c1",
+        "b5b4",
+        "a3b2",
+        "e8g8",
+        "f3e5"
+      ]
+    },
+    {
+      "id": "opening-064",
+      "bestmove": "e1g1",
+      "nodes": 22253,
+      "depth": 12,
+      "pv": [
+        "e1g1",
+        "c8b7",
+        "f1e1",
+        "c6c5",
+        "a1d1"
+      ]
+    },
+    {
+      "id": "opening-003",
+      "bestmove": "f1e1",
+      "nodes": 19087,
+      "depth": 12,
+      "pv": [
+        "f1e1",
+        "e7f6",
+        "g3g4",
+        "h5g6",
+        "a3c4",
+        "e8g8",
+        "c4e5",
+        "c6e5",
+        "f3e5",
+        "f6e5",
+        "e1e5"
+      ]
+    },
+    {
+      "id": "opening-057",
+      "bestmove": "b1c3",
+      "nodes": 7414,
+      "depth": 12,
+      "pv": [
+        "b1c3",
+        "a8d8",
+        "c3d5",
+        "g4f3",
+        "g2f3",
+        "c6d4",
+        "a1b1",
+        "d4f3",
+        "e1d1"
+      ]
+    },
+    {
+      "id": "opening-054",
+      "bestmove": "d2c4",
+      "nodes": 14079,
+      "depth": 12,
+      "pv": [
+        "d2c4",
+        "c8f5",
+        "f3h4",
+        "f5e4"
+      ]
+    },
+    {
+      "id": "opening-015",
+      "bestmove": "c3c4",
+      "nodes": 7693,
+      "depth": 12,
+      "pv": [
+        "c3c4",
+        "f6f5",
+        "e1g1",
+        "a8b8",
+        "c4d5",
+        "e6d5",
+        "d1b3",
+        "d7e6",
+        "d2b1",
+        "d8d7",
+        "b1c3",
+        "d7f7"
+      ]
+    },
+    {
+      "id": "opening-046",
+      "bestmove": "e5e6",
+      "nodes": 62731,
+      "depth": 12,
+      "pv": [
+        "e5e6",
+        "d8b6",
+        "d1e2",
+        "a5c3",
+        "b2c3",
+        "b6e6"
+      ]
+    },
+    {
+      "id": "opening-048",
+      "bestmove": "d2e3",
+      "nodes": 9200,
+      "depth": 12,
+      "pv": [
+        "d2e3",
+        "g4f3",
+        "g2f3",
+        "f6h5",
+        "b1c3",
+        "e6f4",
+        "e1c1",
+        "e7e6",
+        "c1b1",
+        "d6d5",
+        "c3e2",
+        "f4d3",
+        "d1d3",
+        "g7g6"
+      ]
+    },
+    {
+      "id": "opening-047",
+      "bestmove": "a1b1",
+      "nodes": 12603,
+      "depth": 12,
+      "pv": [
+        "a1b1",
+        "b4c5",
+        "d1d5",
+        "c5b6",
+        "f6g7"
+      ]
+    },
+    {
+      "id": "opening-009",
+      "bestmove": "f3h4",
+      "nodes": 15661,
+      "depth": 12,
+      "pv": [
+        "f3h4",
+        "c5c4",
+        "b3d1",
+        "e6e5",
+        "h4f5",
+        "c8f5",
+        "e2e3",
+        "c4d3",
+        "f1d3",
+        "f5e6",
+        "e1g1"
+      ]
+    },
+    {
+      "id": "opening-063",
+      "bestmove": "b1c3",
+      "nodes": 5452,
+      "depth": 12,
+      "pv": [
+        "b1c3",
+        "e4c3",
+        "b2c3",
+        "e8g8",
+        "a3a4",
+        "a8c8",
+        "f1d1"
+      ]
+    },
+    {
+      "id": "opening-012",
+      "bestmove": "c3b5",
+      "nodes": 54903,
+      "depth": 12,
+      "pv": [
+        "c3b5",
+        "d6b6",
+        "g1f3",
+        "c8e6",
+        "c4c2",
+        "b8c6",
+        "b5c7",
+        "b6c7",
+        "c2c5",
+        "e8c8",
+        "f1b5"
+      ]
+    },
+    {
+      "id": "opening-028",
+      "bestmove": "b3c2",
+      "nodes": 25412,
+      "depth": 12,
+      "pv": [
+        "b3c2",
+        "f5h7",
+        "a2a4",
+        "c7c5",
+        "d4b5",
+        "c5c4",
+        "c2d1",
+        "e8g8",
+        "e1g1",
+        "d7c5",
+        "d3c4",
+        "d5c4",
+        "d1d8",
+        "f8d8",
+        "c1e3",
+        "f6g4"
+      ]
+    },
+    {
+      "id": "opening-025",
+      "bestmove": "g2g4",
+      "nodes": 21740,
+      "depth": 12,
+      "pv": [
+        "g2g4",
+        "h7h6",
+        "g5c1",
+        "f5d6",
+        "f1d3",
+        "b8d7",
+        "e1g1",
+        "g7g5",
+        "f1e1",
+        "f8g7"
+      ]
+    },
+    {
+      "id": "opening-030",
+      "bestmove": "e1g1",
+      "nodes": 37799,
+      "depth": 12,
+      "pv": [
+        "e1g1",
+        "b4d3",
+        "c2d3",
+        "c8d7",
+        "a2a4",
+        "a7a6"
+      ]
+    },
+    {
+      "id": "opening-023",
+      "bestmove": "d2e4",
+      "nodes": 20712,
+      "depth": 12,
+      "pv": [
+        "d2e4",
+        "d5e4",
+        "c1f4",
+        "e5c5",
+        "e1c1",
+        "f8e7",
+        "f2f3",
+        "g7g5",
+        "b2b4",
+        "c5c6"
+      ]
+    },
+    {
+      "id": "opening-061",
+      "bestmove": "c1a3",
+      "nodes": 28832,
+      "depth": 12,
+      "pv": [
+        "c1a3",
+        "b7b6",
+        "c4d5",
+        "e6d5",
+        "d4c5",
+        "b6c5",
+        "c3d5",
+        "f6d5"
+      ]
+    },
+    {
+      "id": "opening-022",
+      "bestmove": "d2e4",
+      "nodes": 12500,
+      "depth": 12,
+      "pv": [
+        "d2e4",
+        "e8g8",
+        "e4f2",
+        "e5d4",
+        "e2d4",
+        "d7e5",
+        "e1g1",
+        "e7c5",
+        "c1d2",
+        "c5d4",
+        "c3d4",
+        "e5f3",
+        "g2f3",
+        "f8f3"
+      ]
+    },
+    {
+      "id": "opening-056",
+      "bestmove": "d3f5",
+      "nodes": 28112,
+      "depth": 12,
+      "pv": [
+        "d3f5",
+        "e6f5",
+        "g2g3",
+        "f8e8",
+        "f1g2",
+        "c6c5",
+        "d1d2",
+        "a5d8",
+        "c1a3",
+        "b7b6",
+        "e2f4",
+        "b8c6",
+        "b1c3",
+        "a8c8"
+      ]
+    },
+    {
+      "id": "opening-060",
+      "bestmove": "d3a6",
+      "nodes": 7241,
+      "depth": 12,
+      "pv": [
+        "d3a6",
+        "a8a6",
+        "f3d2",
+        "f8g7",
+        "e3e4",
+        "f6e4",
+        "d2e4",
+        "d5e4",
+        "e1e4",
+        "e8g8",
+        "c1f4",
+        "c7b7",
+        "a3c4",
+        "d7f6"
+      ]
+    },
+    {
+      "id": "opening-008",
+      "bestmove": "c2c3",
+      "nodes": 8668,
+      "depth": 12,
+      "pv": [
+        "c2c3",
+        "d4c3",
+        "d1d5",
+        "b4d5",
+        "e2c3",
+        "d5c3",
+        "b2c3",
+        "c8e6"
+      ]
+    },
+    {
+      "id": "opening-062",
+      "bestmove": "e2c4",
+      "nodes": 10884,
+      "depth": 12,
+      "pv": [
+        "e2c4",
+        "d8d1",
+        "f1d1",
+        "e8d8",
+        "d1d8",
+        "c6d8",
+        "e3e4",
+        "b7b6",
+        "e4e5"
+      ]
+    },
+    {
+      "id": "opening-044",
+      "bestmove": "f2f4",
+      "nodes": 25711,
+      "depth": 12,
+      "pv": [
+        "f2f4",
+        "b8c6",
+        "d2d3",
+        "h6g7",
+        "e1g1",
+        "h7h6",
+        "g5f3",
+        "e7e8",
+        "c1d2",
+        "d8c7"
+      ]
+    },
+    {
+      "id": "opening-021",
+      "bestmove": "f3d2",
+      "nodes": 19050,
+      "depth": 12,
+      "pv": [
+        "f3d2",
+        "d6h6",
+        "f1e1",
+        "f8g7",
+        "b2g7",
+        "h6g7",
+        "e2f1",
+        "c8e6",
+        "d2e4"
+      ]
+    },
+    {
+      "id": "opening-007",
+      "bestmove": "a1c1",
+      "nodes": 8688,
+      "depth": 12,
+      "pv": [
+        "a1c1",
+        "c3a2",
+        "c1c2",
+        "c8e6",
+        "c2b2",
+        "f8g7",
+        "b2b6",
+        "e8g8",
+        "b6b7"
+      ]
+    },
+    {
+      "id": "opening-051",
+      "bestmove": "g1f3",
+      "nodes": 31207,
+      "depth": 12,
+      "pv": [
+        "g1f3",
+        "g8f6",
+        "d1c2",
+        "a7a5",
+        "b4b5",
+        "c6b5",
+        "f1b5",
+        "b8c6",
+        "e4e5",
+        "f6g4",
+        "d2c4",
+        "e8g8",
+        "e1g1",
+        "d8e7"
+      ]
+    },
+    {
+      "id": "opening-020",
+      "bestmove": "h2h4",
+      "nodes": 6639,
+      "depth": 12,
+      "pv": [
+        "h2h4",
+        "g5h7",
+        "d2f3",
+        "a5a4"
+      ]
+    },
+    {
+      "id": "opening-038",
+      "bestmove": "f1e2",
+      "nodes": 10583,
+      "depth": 12,
+      "pv": [
+        "f1e2",
+        "e7d6",
+        "e1g1",
+        "f8e8",
+        "f1e1",
+        "d7f8",
+        "h2h3"
+      ]
+    },
+    {
+      "id": "opening-039",
+      "bestmove": "f1d1",
+      "nodes": 23898,
+      "depth": 12,
+      "pv": [
+        "f1d1",
+        "e8g8",
+        "d2e4",
+        "b7b6"
+      ]
+    },
+    {
+      "id": "opening-019",
+      "bestmove": "c4d2",
+      "nodes": 16288,
+      "depth": 12,
+      "pv": [
+        "c4d2",
+        "a7a6",
+        "f2f3",
+        "g4h5",
+        "g3f2",
+        "f8g7",
+        "e3e4"
+      ]
+    },
+    {
+      "id": "opening-036",
+      "bestmove": "d4e6",
+      "nodes": 9035,
+      "depth": 12,
+      "pv": [
+        "d4e6",
+        "f7e6",
+        "e3f4",
+        "d8d1",
+        "a1d1",
+        "e8e7",
+        "f1c4",
+        "b8c6",
+        "e1g1",
+        "c6a5"
+      ]
+    },
+    {
+      "id": "opening-013",
+      "bestmove": "b1c3",
+      "nodes": 10817,
+      "depth": 12,
+      "pv": [
+        "b1c3",
+        "f8e7",
+        "a2a4",
+        "e8g8",
+        "f2f3",
+        "f8e8"
+      ]
+    },
+    {
+      "id": "opening-059",
+      "bestmove": "e1g1",
+      "nodes": 13952,
+      "depth": 12,
+      "pv": [
+        "e1g1",
+        "b8a6",
+        "b3a3",
+        "a6c7",
+        "d5c6",
+        "d7c6",
+        "e2e4",
+        "b6b5",
+        "c3b5",
+        "c7b5",
+        "c4b5",
+        "c6b5"
+      ]
+    },
+    {
+      "id": "opening-033",
+      "bestmove": "b1c3",
+      "nodes": 20658,
+      "depth": 12,
+      "pv": [
+        "b1c3",
+        "b8c6",
+        "f1d3",
+        "f5d3",
+        "d1d3",
+        "g5g4",
+        "f3h4",
+        "c5d4",
+        "e3d4",
+        "g7d4",
+        "h4f5",
+        "h5g3",
+        "h2g3",
+        "d4e5",
+        "c3d5"
+      ]
+    },
+    {
+      "id": "opening-034",
+      "bestmove": "c2c4",
+      "nodes": 20591,
+      "depth": 12,
+      "pv": [
+        "c2c4",
+        "e8g8",
+        "e3e4",
+        "d5e4",
+        "d2e4",
+        "c6c5",
+        "d4d5",
+        "e6d5"
+      ]
+    },
+    {
+      "id": "opening-005",
+      "bestmove": "e1g1",
+      "nodes": 15856,
+      "depth": 12,
+      "pv": [
+        "e1g1",
+        "e8g8",
+        "d1e2",
+        "b7b6",
+        "d2e4",
+        "c8b7",
+        "f1d1",
+        "f6d5",
+        "e4d6",
+        "d8d6"
+      ]
+    },
+    {
+      "id": "opening-026",
+      "bestmove": "g5h4",
+      "nodes": 16212,
+      "depth": 12,
+      "pv": [
+        "g5h4",
+        "d7d6",
+        "b1d2",
+        "c8e6",
+        "e2e3",
+        "g7g5",
+        "h4g3",
+        "b8d7",
+        "a4a5",
+        "e8c8"
+      ]
+    },
+    {
+      "id": "opening-032",
+      "bestmove": "f1b5",
+      "nodes": 8844,
+      "depth": 12,
+      "pv": [
+        "f1b5",
+        "e4c3",
+        "b5c4",
+        "c3e4",
+        "c1e3",
+        "f8b4",
+        "e1f1",
+        "e4d2",
+        "e3d2",
+        "b4d2"
+      ]
+    },
+    {
+      "id": "opening-042",
+      "bestmove": "c1g5",
+      "nodes": 20593,
+      "depth": 12,
+      "pv": [
+        "c1g5",
+        "f6g8",
+        "g5e7",
+        "g8e7",
+        "f2f4",
+        "f7f6",
+        "e1f3",
+        "e5f4",
+        "g3f4",
+        "h5h4",
+        "b2b4"
+      ]
+    },
+    {
+      "id": "opening-011",
+      "bestmove": "e1g1",
+      "nodes": 25176,
+      "depth": 12,
+      "pv": [
+        "e1g1",
+        "f7f5",
+        "e4f5",
+        "e7f5",
+        "e2h5",
+        "e8e7",
+        "h5f3",
+        "f5h4",
+        "f3c6",
+        "a8b8",
+        "d1h5",
+        "h4g6",
+        "c6e4",
+        "e7e8",
+        "f2f4",
+        "e5f4"
+      ]
+    },
+    {
+      "id": "opening-053",
+      "bestmove": "b5a4",
+      "nodes": 14993,
+      "depth": 12,
+      "pv": [
+        "b5a4",
+        "f8e8",
+        "e1g1",
+        "c8g4",
+        "h2h3",
+        "g4h5",
+        "e4d5",
+        "f6d5",
+        "d2e4"
+      ]
+    },
+    {
+      "id": "opening-016",
+      "bestmove": "d2b3",
+      "nodes": 35122,
+      "depth": 12,
+      "pv": [
+        "d2b3",
+        "d5e4",
+        "b3a5",
+        "e4f3",
+        "d1f3",
+        "d8d5",
+        "a5c4",
+        "c8b7",
+        "e1e2",
+        "f8e7",
+        "a4a5",
+        "b6b5",
+        "f3d5"
+      ]
+    },
+    {
+      "id": "opening-031",
+      "bestmove": "f1h3",
+      "nodes": 8113,
+      "depth": 12,
+      "pv": [
+        "f1h3",
+        "d8c7",
+        "d2e4",
+        "h7h6",
+        "f2f3",
+        "f7f5",
+        "h3g4",
+        "f5g4",
+        "e4f2"
+      ]
+    }
+  ],
+  "raw_profiles": [
+    {
+      "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\2668-8098244646646887991_0.profraw",
+      "bytes": 1149648,
+      "sha256": "5b6c5193db8dc750e01f3376481f1246105f39c9cc319fc5778de19383c97c8a"
+    },
+    {
+      "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\34904-8098244646646887991_0.profraw",
+      "bytes": 1149920,
+      "sha256": "23f3b2f319a3f6c902721766e605c700f4a9a19dc4342b82518c357ca5458294"
+    },
+    {
+      "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\3848-8098244646646887991_0.profraw",
+      "bytes": 1149648,
+      "sha256": "dbb2f6e8022f968532d27076c8cf61905a6a7c3e950930e5766da21221264708"
+    },
+    {
+      "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\45716-8098244646646887991_0.profraw",
+      "bytes": 1149584,
+      "sha256": "3dc8d2d5ac26fdaf6c2400a386973809b89e5824bad47a8c8f01d60a4710f049"
+    },
+    {
+      "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\49044-8098244646646887991_0.profraw",
+      "bytes": 1149584,
+      "sha256": "410bd9772afe43d87e642e71a88ebe2c368fb4bcbcc254292d382b711594ba52"
+    },
+    {
+      "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\49400-8098244646646887991_0.profraw",
+      "bytes": 1149920,
+      "sha256": "a4d5df3fbfb52d267d64e75587e3faa4270c2b680d70c3f8a590a66e226f6931"
+    },
+    {
+      "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\51980-8098244646646887991_0.profraw",
+      "bytes": 1149648,
+      "sha256": "52b2316c3e606487d95627ba22fd1bdc63b019769d5c156301fc922a55dc5581"
+    },
+    {
+      "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\raw\\61672-8098244646646887991_0.profraw",
+      "bytes": 1149648,
+      "sha256": "6e7f5f0739d4684194e3fd33b011bc8a22401a254813dd1941502794ed07bcc1"
+    }
+  ],
+  "merged_profile": {
+    "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\merged.profdata",
+    "bytes": 1183896,
+    "sha256": "e3a1c6c55440b89ddff67ae593ca9120e756c1a524f3ad9c70b2b370ac3d4b49"
+  },
+  "completed_utc": "2026-10-19T14:31:21.367516+00:00",
+  "optimized_build_command": [
+    "C:\\Users\\lukem\\.cargo\\bin\\cargo.exe",
+    "build",
+    "--workspace",
+    "--release",
+    "--locked",
+    "--target",
+    "x86_64-pc-windows-msvc"
+  ],
+  "optimized_build_environment": {
+    "CARGO_TARGET_DIR": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\pgo-v1\\target",
+    "CARGO_ENCODED_RUSTFLAGS": "-C\u001ftarget-cpu=x86-64-v3\u001f-C\u001fprofile-use=C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-profile-v1\\merged.profdata\u001f-C\u001fllvm-args=-pgo-warn-missing-function"
+  },
+  "binary_sha256": "fdf963252b8311dd909b9c2c09b3d5b6e3cce302335b02901beac2da2687ab9d",
+  "interpretation": "Build/training completed, not an adoption or speed/strength result. Test only on the separately frozen fresh roots. Ordinary builds remain available."
+}

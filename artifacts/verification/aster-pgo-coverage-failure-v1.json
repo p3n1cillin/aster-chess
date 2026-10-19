@@ -1,0 +1,51 @@
+{
+  "created_utc": "2026-10-19T14:36:03.143267+00:00",
+  "passed": false,
+  "status": "invalid_search_profile_coverage",
+  "build_report": "artifacts/research/aster-pgo-build-v1.json",
+  "profile_sha256": "e3a1c6c55440b89ddff67ae593ca9120e756c1a524f3ad9c70b2b370ac3d4b49",
+  "search_functions": [
+    {
+      "name": "aster_core.80108b81a0ea241c-cgu.0;_RINvMsb_NtCsaZGtbTYARya_10aster_core6searchNtB6_6Worker7qsearchKh0_EB8_:",
+      "maximum_recorded_count": 0
+    },
+    {
+      "name": "_RNvMs1_NtNtCsaZGtbTYARya_10aster_core4nnue7networkNtB5_7Network8evaluate:",
+      "maximum_recorded_count": 0
+    },
+    {
+      "name": "aster_core.80108b81a0ea241c-cgu.0;_RINvMsb_NtCsaZGtbTYARya_10aster_core6searchNtB6_6Worker7qsearchKh1_EB8_:",
+      "maximum_recorded_count": 0
+    },
+    {
+      "name": "aster_core.80108b81a0ea241c-cgu.0;_RINvMsb_NtCsaZGtbTYARya_10aster_core6searchNtB6_6Worker6searchKh0_EB8_:",
+      "maximum_recorded_count": 0
+    },
+    {
+      "name": "aster_core.80108b81a0ea241c-cgu.0;_RINvMsb_NtCsaZGtbTYARya_10aster_core6searchNtB6_6Worker6searchKh1_EB8_:",
+      "maximum_recorded_count": 0
+    }
+  ],
+  "candidate_timing_queries": 0,
+  "candidate_search_queries": 0,
+  "matches": 0,
+  "reason": "All main-search, quiescence and neural-evaluation profile counters are zero. Normal engine UCI paths call process::exit; eight normal-return proof processes emitted profiles. Use a development-only normal-return Rust training driver, then require positive search-profile coverage before compilation/use.",
+  "preserved_binaries": [
+    {
+      "role": "control",
+      "sha256": "abfeab6e7efad7c666c25ff844ab92df0d87871f53da6091cb11014bab913960",
+      "path": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\abfeab6e7efad7c666c25ff844ab92df0d87871f53da6091cb11014bab913960\\aster.exe"
+    },
+    {
+      "role": "instrumented",
+      "sha256": "e89d2baf3a28d5baed9b6a443611e4c59a8c9f6720bbe9be672b81f91306b6f2",
+      "path": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\e89d2baf3a28d5baed9b6a443611e4c59a8c9f6720bbe9be672b81f91306b6f2\\aster.exe"
+    },
+    {
+      "role": "optimized",
+      "sha256": "fdf963252b8311dd909b9c2c09b3d5b6e3cce302335b02901beac2da2687ab9d",
+      "path": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\fdf963252b8311dd909b9c2c09b3d5b6e3cce302335b02901beac2da2687ab9d\\aster.exe"
+    }
+  ],
+  "limits": "This is a profiling setup failure detected before candidate testing, not a measured speed result. No flags, training positions, timing thresholds or game counts were adapted."
+}
