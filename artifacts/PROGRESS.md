@@ -1,4 +1,16 @@
-# Project progress — 18 October 2026
+# Project progress — 19 October 2026
+
+## Independent neural evaluation checks
+
+Three test-only Rust guards now compare dense scalar first-layer arithmetic
+against AVX2 SIMD, incremental evaluation against fresh reconstruction, and
+lazy updates/full undo against the initial board. They passed locally with the
+existing v109 network before the separate model trial. Playing code, inference,
+weights and version remain **0.9.2**; no rating gain is claimed. See
+[validation details](../docs/NNUE-VALIDATION.md). Windows/Linux CI verifies the
+complete production suites; its final status is retained with the session record.
+
+## Prior progress — 18 October 2026
 
 ## Rust 0.9.2: faster terminal queries
 

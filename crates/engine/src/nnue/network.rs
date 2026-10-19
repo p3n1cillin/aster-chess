@@ -1987,3 +1987,6 @@ impl NNUEParams {
         (min, max)
     }
 }
+
+#[cfg(test)]
+mod validation_tests;
