@@ -18,6 +18,7 @@ pub mod position;
 mod prof;
 mod sampler;
 pub mod search;
+pub mod syzygy;
 pub mod timeman;
 pub mod trace;
 pub mod tt;

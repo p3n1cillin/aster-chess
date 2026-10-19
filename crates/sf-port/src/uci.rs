@@ -156,6 +156,9 @@ impl Options {
             nodestime: self.nodestime,
             ponder: self.ponder,
             show_wdl: self.show_wdl,
+            syzygy_50_move_rule: self.syzygy_50_move_rule,
+            syzygy_probe_depth: self.syzygy_probe_depth,
+            syzygy_probe_limit: self.syzygy_probe_limit,
         }
     }
 
@@ -321,6 +324,13 @@ impl Engine {
         self.wait_for_search_finished();
         self.shared.tt.clear();
         self.clear_threads();
+        // Re-open the tables (frees memory-mapped files, as in Stockfish).
+        if !self.options.syzygy_path.is_empty() {
+            if let Some(msg) = crate::syzygy::init(&self.options.syzygy_path) {
+                emit(&format!("info string {msg}
+"));
+            }
+        }
     }
 
     pub fn fen(&self) -> String {
@@ -369,6 +379,13 @@ impl Engine {
             }
         }
 
+        let tb_opts = crate::syzygy::TbOptions {
+            rule50: self.options.syzygy_50_move_rule,
+            probe_depth: self.options.syzygy_probe_depth,
+            probe_limit: self.options.syzygy_probe_limit,
+        };
+        let tb_config = crate::syzygy::rank_root_moves(tb_opts, &mut self.pos, &mut root_moves, false, &|| false);
+
         let so = self.options.search_options();
         for (i, w) in workers.iter_mut().enumerate() {
             w.limits = limits.clone();
@@ -379,6 +396,7 @@ impl Engine {
             w.root_moves = root_moves.clone();
             w.root_pos = self.pos.clone();
             w.options = so.clone();
+            w.tb_config = tb_config;
             w.reset_nmp();
         }
 
@@ -430,7 +448,10 @@ impl Engine {
             "uci_limitstrength" => self.options.limit_strength = parse_b(value),
             "uci_elo" => self.options.elo = parse_i(value).unwrap_or(1320).clamp(1320, 3190) as i32,
             "uci_showwdl" => self.options.show_wdl = parse_b(value),
-            "syzygypath" => self.options.syzygy_path = value.to_string(),
+            "syzygypath" => {
+                self.options.syzygy_path = value.to_string();
+                return crate::syzygy::init(value);
+            }
             "syzygyprobedepth" => self.options.syzygy_probe_depth = parse_i(value).unwrap_or(1).clamp(1, 100) as i32,
             "syzygy50moverule" => self.options.syzygy_50_move_rule = parse_b(value),
             "syzygyprobelimit" => self.options.syzygy_probe_limit = parse_i(value).unwrap_or(7).clamp(0, 7) as i32,
@@ -761,6 +782,19 @@ impl Uci {
                     self.bench(&args);
                 }
                 "d" => emit(&format!("{}\n", self.engine.position().pretty())),
+                "tbprobe" => {
+                    // Debugging aid: raw Syzygy WDL/DTZ probe of the current position.
+                    let mut p = self.engine.position().clone();
+                    match crate::syzygy::current() {
+                        Some(tb) => {
+                            let (mut s1, mut s2) = (crate::syzygy::ProbeState::Ok, crate::syzygy::ProbeState::Ok);
+                            let wdl = tb.probe_wdl(&mut p, &mut s1);
+                            let dtz = tb.probe_dtz(&mut p, &mut s2);
+                            emit(&format!("info string tbprobe wdl {wdl} {s1:?} dtz {dtz} {s2:?}\n"));
+                        }
+                        None => emit("info string tbprobe no tablebases\n"),
+                    }
+                }
                 "eval" => {
                     let s = self.engine.trace_eval();
                     emit(&format!("\n{s}\n"));

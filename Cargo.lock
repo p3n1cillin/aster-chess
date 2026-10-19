@@ -702,6 +702,7 @@ dependencies = [
 name = "sf-port"
 version = "19.0.0"
 dependencies = [
+ "memmap2",
  "sha2",
 ]
 

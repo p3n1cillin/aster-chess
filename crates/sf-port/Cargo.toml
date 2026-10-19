@@ -8,6 +8,7 @@ authors = ["The Stockfish developers (original C++ engine)", "Aster contributors
 rust-version = "1.93.0"
 
 [dependencies]
+memmap2 = "0.9.5"
 
 [build-dependencies]
 sha2 = "=0.10.9"

@@ -16,13 +16,15 @@ Bitboards and attacks (magic bitboards, plus Stockfish's AVX2 dual hyperbola
 quintessence on AVX2 builds), position and make/unmake including NNUE threat
 tracking, move generation, move ordering, all histories and correction
 histories, the transposition table, search and quiescence search, Lazy SMP
-threads, time management, UCI options and output, `bench`, `perft`, and the
+threads, time management, UCI options and output, `bench`, `perft`, Syzygy
+tablebase probing (WDL/DTZ, root ranking, in-search probes, PV extension), and the
 complete SF 19 NNUE: HalfKAv2_hm, FullThreats and PP_3Wide feature sets, the
 accumulator stack with Finny-table caches (incremental forward/backward,
 hybrid king-move and refresh paths) and the 1024→32→32→1 layer stacks.
 
-Not yet ported: Syzygy tablebase probing (`SyzygyPath` is accepted but no tables
-are probed), NUMA binding, large pages and the `speedtest` command.
+Not yet ported: NUMA binding, large pages and the `speedtest` command. Syzygy
+WDL probing is verified (below); DTZ probing is ported but not yet verified,
+because no DTZ tables are available locally.
 
 ## Exactness
 
@@ -40,6 +42,10 @@ The port reproduces Stockfish's search exactly, not approximately:
   reference generator, and incremental accumulators against full refreshes
   along random games. Aster's independent python-chess verifiers pass against
   this core as well.
+* Syzygy: WDL probes equal python-chess's independent reader on 5,000 random
+  positions (both colors, all 3-man development tables), and with
+  `SyzygyPath` set, fixed-depth searches of 12 tablebase positions print the
+  same 180 lines as the official binary (TB scores, tbhits, PVs).
 
 Integer-exactness is what makes this possible: NNUE accumulators use wrapping
 16-bit arithmetic and the layers use exact 32-bit dot products, so incremental,

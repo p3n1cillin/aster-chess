@@ -203,11 +203,17 @@
     {
       "path": "src/nnue/layers/sqr_clipped_relu.h",
       "sha256": "d2b6fb4f7045d2851f7ca48c4daa9a6292655ba026dc7b94c34105706eb7504b"
+    },
+    {
+      "path": "src/syzygy/tbprobe.cpp",
+      "sha256": "39d87629573a92ee75c30ea6d76bc53c8aaaa0ea16a706300a840de0a256bc32"
+    },
+    {
+      "path": "src/syzygy/tbprobe.h",
+      "sha256": "5b86ca73b73cd9850f7cd89a766a7d8e861fbb2e0dfa8ae3ebf151801e1d3930"
     }
   ],
   "not_yet_ported": [
-    "syzygy/tbprobe.cpp",
-    "syzygy/tbprobe.h",
     "numa.h",
     "shm.h",
     "shm_unix.h",
@@ -222,6 +228,12 @@
     "bench_signature": 2497913,
     "reference_bench_signature": 2497913,
     "bench_info_and_bestmove_lines_identical": true,
-    "nnue_static_eval_positions_identical": 45
+    "nnue_static_eval_positions_identical": 45,
+    "syzygy": {
+      "wdl_probes_vs_python_chess": 5000,
+      "tables": "tools/syzygy-development-v1 (3-man WDL only)",
+      "tb_search_output_identical_lines": 180,
+      "dtz": "implemented, not yet verified (no DTZ tables available locally)"
+    }
   }
 }

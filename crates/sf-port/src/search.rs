@@ -213,6 +213,9 @@ pub struct SearchOptions {
     pub nodestime: i64,
     pub ponder: bool,
     pub show_wdl: bool,
+    pub syzygy_50_move_rule: bool,
+    pub syzygy_probe_depth: i32,
+    pub syzygy_probe_limit: i32,
 }
 
 /// Stable pointer to the engine-owned SharedState (outlives every search).
@@ -368,6 +371,8 @@ pub struct Worker {
     // Aster observer (main thread only); never influences search decisions.
     trace_on: bool,
     root_game_ply: i32,
+    pub tb_config: crate::syzygy::Config,
+    tb: Option<std::sync::Arc<crate::syzygy::Tablebases>>,
 }
 
 unsafe impl Send for Worker {}
@@ -452,6 +457,8 @@ impl Worker {
             rng: Prng::new((now() as u64).max(1)),
             trace_on: false,
             root_game_ply: 0,
+            tb_config: crate::syzygy::Config::default(),
+            tb: None,
         });
         w.clear();
         w
@@ -735,6 +742,7 @@ impl Worker {
     /// Main iterative deepening loop. Returns whether the final PV was sent.
     pub fn iterative_deepening(&mut self) -> bool {
         let main = self.is_mainthread();
+        self.tb = if self.tb_config.cardinality > 0 || self.tb_config.root_in_tb { crate::syzygy::current() } else { None };
         self.trace_on = main && crate::trace::enabled();
         if self.trace_on {
             crate::trace::reset();
@@ -855,7 +863,7 @@ impl Worker {
                     }
 
                     if main && multi_pv == 1 && (best_value <= alpha || best_value >= beta) && self.nodes() > NODES_LIMIT_OUTPUT {
-                        self.output_pv(&pos, self.root_depth);
+                        self.output_pv(&mut pos, self.root_depth);
                     }
 
                     if best_value <= alpha {
@@ -910,7 +918,7 @@ impl Worker {
                 stable_sort_root(&mut self.root_moves[pv_first..pv_idx + 1]);
 
                 if main && !self.stopped() && (pv_idx + 1 == multi_pv || self.nodes() > NODES_LIMIT_OUTPUT) {
-                    self.output_pv(&pos, self.root_depth);
+                    self.output_pv(&mut pos, self.root_depth);
                     uci_pv_sent = pv_idx + 1 == multi_pv;
                 }
 
@@ -1219,7 +1227,55 @@ impl Worker {
             tt_writer.penalize(1);
         }
 
-        // Step 7. Tablebases probe: not available in this build (no tables loaded).
+        // Step 7. Tablebases probe
+        if !root_node && excluded_move.is_none() && self.tb_config.cardinality != 0 {
+            let pieces_count = popcount(pos.pieces());
+            if pieces_count <= self.tb_config.cardinality
+                && (pieces_count < self.tb_config.cardinality || depth >= self.tb_config.probe_depth)
+                && pos.rule50_count() == 0
+                && !pos.can_castle(ANY_CASTLING)
+            {
+                if let Some(tb) = self.tb.clone() {
+                    let mut err = crate::syzygy::ProbeState::Ok;
+                    let wdl = tb.probe_wdl(pos, &mut err);
+                    if let Some(m) = self.manager.as_mut() {
+                        m.calls_cnt = 0;
+                    }
+                    if err != crate::syzygy::ProbeState::Fail {
+                        let h = &self.shared.tb_hits[self.thread_idx];
+                        h.store(h.load(Relaxed) + 1, Relaxed);
+                        let draw_score = self.tb_config.use_rule50 as i32;
+                        let tb_value = VALUE_TB - ply;
+                        let value = if wdl < -draw_score {
+                            -tb_value
+                        } else if wdl > draw_score {
+                            tb_value
+                        } else {
+                            VALUE_DRAW + 2 * wdl * draw_score
+                        };
+                        let b = if wdl < -draw_score {
+                            BOUND_UPPER
+                        } else if wdl > draw_score {
+                            BOUND_LOWER
+                        } else {
+                            BOUND_EXACT
+                        };
+                        if b == BOUND_EXACT || (if b == BOUND_LOWER { value >= beta } else { value <= alpha }) {
+                            tt_writer.write(pos_key, value_to_tt(value, ply), self.ss(ss).tt_pv, b, (MAX_PLY - 1).min(depth + 6), Move::NONE, VALUE_NONE, self.shared.tt.generation());
+                            return value;
+                        }
+                        if pv_node {
+                            if b == BOUND_LOWER {
+                                best_value = value;
+                                alpha = alpha.max(best_value);
+                            } else {
+                                max_value = value;
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         let mut skip_to_moves_loop = in_check;
 
@@ -1729,7 +1785,6 @@ impl Worker {
             self.update_correction_history(pos, ss, 1061 * bonus / 1024);
         }
 
-        let _ = &mut max_value;
         best_value
     }
 
@@ -1958,29 +2013,39 @@ impl Worker {
         }
     }
 
-    pub fn output_pv(&self, pos: &Position, depth: Depth) {
+    pub fn output_pv(&mut self, pos: &mut Position, depth: Depth) {
         if self.shared.silent.load(Relaxed) {
             return;
         }
         let nodes = self.shared.nodes_searched();
         let multi_pv = self.options.multi_pv.min(self.root_moves.len());
-        let tb_hits = self.shared.tb_hits_total();
+        let tb_hits = self.shared.tb_hits_total() + if self.tb_config.root_in_tb { self.root_moves.len() as u64 } else { 0 };
         let mut out = String::new();
 
         for i in 0..multi_pv {
-            let rm = &self.root_moves[i];
-            let use_previous = rm.score == -VALUE_INFINITE;
+            let use_previous = self.root_moves[i].score == -VALUE_INFINITE;
             if depth == 1 && use_previous && i > 0 {
                 continue;
             }
             let d = if use_previous { (depth - 1).max(1) } else { depth };
-            let mut v = if use_previous { rm.previous_score } else { rm.uci_score };
+            let mut v = if use_previous { self.root_moves[i].previous_score } else { self.root_moves[i].uci_score };
             if v == -VALUE_INFINITE {
                 v = VALUE_ZERO;
             }
+            let is_tb_score = self.tb_config.root_in_tb && !is_mate_or_mated(v);
+            if is_tb_score {
+                v = self.root_moves[i].tb_score;
+            }
+            if is_decisive(v) && !is_mate_or_mated(v) && !use_previous && (!self.root_moves[i].is_inexact() || is_tb_score) {
+                let opts = self.tb_options();
+                let mut rm = std::mem::replace(&mut self.root_moves[i], RootMove::new(Move::NONE));
+                syzygy_extend_pv(opts, &self.limits, self.options.move_overhead, pos, &mut rm, &mut v, multi_pv);
+                self.root_moves[i] = rm;
+            }
+            let rm = &self.root_moves[i];
             let pv_moves = if use_previous { &rm.previous_pv } else { &rm.pv };
             let pv: Vec<String> = pv_moves.iter().map(|&m| uci::move_to_uci(m, pos.is_chess960())).collect();
-            let bound = if use_previous {
+            let bound = if is_tb_score || use_previous {
                 ""
             } else if rm.inexact_lower {
                 " lowerbound"
@@ -2008,6 +2073,14 @@ impl Worker {
             ));
         }
         uci::emit(&out);
+    }
+
+    fn tb_options(&self) -> crate::syzygy::TbOptions {
+        crate::syzygy::TbOptions {
+            rule50: self.options.syzygy_50_move_rule,
+            probe_depth: self.options.syzygy_probe_depth,
+            probe_limit: self.options.syzygy_probe_limit,
+        }
     }
 
     /// Called when the program receives the UCI 'go' command (main thread only).
@@ -2076,14 +2149,16 @@ impl Worker {
             }
         }
         if !uci_pv_sent || best_idx != 0 {
-            let bt: &Worker = if best_idx == 0 { self } else { &helpers[best_idx - 1] };
-            let rd = bt.root_depth;
-            // output_pv uses the main thread's clock, as in C++.
-            let saved = std::mem::take(&mut self.root_moves);
-            let bt_moves = if best_idx == 0 { saved.clone() } else { helpers[best_idx - 1].root_moves.clone() };
-            self.root_moves = bt_moves;
-            self.output_pv(&root_pos, rd);
-            self.root_moves = saved;
+            let rd = if best_idx == 0 { self.root_depth } else { helpers[best_idx - 1].root_depth };
+            // output_pv uses the main thread's clock and options, as in C++.
+            if best_idx == 0 {
+                self.output_pv(&mut root_pos, rd);
+            } else {
+                let saved = std::mem::take(&mut self.root_moves);
+                self.root_moves = std::mem::take(&mut helpers[best_idx - 1].root_moves);
+                self.output_pv(&mut root_pos, rd);
+                helpers[best_idx - 1].root_moves = std::mem::replace(&mut self.root_moves, saved);
+            }
         }
         self.root_pos = root_pos;
 
@@ -2091,6 +2166,76 @@ impl Worker {
         let best = bt.root_moves[0].pv[0];
         let ponder = if bt.root_moves[0].pv.len() > 1 { bt.root_moves[0].pv[1] } else { Move::NONE };
         (best, ponder)
+    }
+}
+
+/// Corrects and extends PVs of moves with a TB (not mate) score, as in Stockfish.
+fn syzygy_extend_pv(opts: crate::syzygy::TbOptions, limits: &LimitsType, move_overhead: i64, pos: &mut Position, rm: &mut RootMove, v: &mut Value, multi_pv: usize) {
+    let t_start = std::time::Instant::now();
+    let rule50 = opts.rule50;
+    let time_abort = || limits.npmsec == 0 && limits.use_time_management() && 2.0 * multi_pv as f64 * t_start.elapsed().as_secs_f64() * 1000.0 >= move_overhead as f64;
+    if time_abort() {
+        return;
+    }
+    pos.do_move_simple(rm.pv[0]);
+    let mut ply: i32 = 1;
+
+    while (ply as usize) < rm.pv.len() {
+        let pv_move = rm.pv[ply as usize];
+        let mut legal: Vec<RootMove> = MoveList::new(pos, GenType::Legal).as_slice().iter().map(|&m| RootMove::new(m)).collect();
+        let config = crate::syzygy::rank_root_moves(opts, pos, &mut legal, false, &time_abort);
+        let Some(rank) = legal.iter().find(|r| r.pv[0] == pv_move).map(|r| r.tb_rank) else { break };
+        if legal[0].tb_rank != rank {
+            break;
+        }
+        ply += 1;
+        pos.do_move_simple(pv_move);
+        if config.root_in_tb && ((rule50 && pos.is_draw(ply)) || pos.is_repetition(ply)) {
+            pos.undo_move(pv_move);
+            ply -= 1;
+            break;
+        }
+        if config.root_in_tb && time_abort() {
+            break;
+        }
+    }
+    rm.pv.truncate(ply as usize);
+
+    while !(rule50 && pos.is_draw(0)) {
+        if time_abort() {
+            break;
+        }
+        let mut legal: Vec<RootMove> = Vec::new();
+        for &m in MoveList::new(pos, GenType::Legal).as_slice() {
+            let mut r = RootMove::new(m);
+            pos.do_move_simple(m);
+            for &opp in MoveList::new(pos, GenType::Legal).as_slice() {
+                r.tb_rank -= if pos.capture(opp) { 100 } else { 1 };
+            }
+            pos.undo_move(m);
+            legal.push(r);
+        }
+        if legal.is_empty() {
+            break;
+        }
+        legal.sort_by(|a, b| b.tb_rank.cmp(&a.tb_rank));
+        let config = crate::syzygy::rank_root_moves(opts, pos, &mut legal, true, &time_abort);
+        if !config.root_in_tb || config.cardinality > 0 {
+            break;
+        }
+        let pv_move = legal[0].pv[0];
+        rm.pv.push(pv_move);
+        pos.do_move_simple(pv_move);
+    }
+
+    if pos.is_draw(0) {
+        *v = VALUE_DRAW;
+    }
+    for i in (0..rm.pv.len()).rev() {
+        pos.undo_move(rm.pv[i]);
+    }
+    if time_abort() {
+        uci::emit("info string Syzygy based PV extension requires more time, increase Move Overhead as needed.\n");
     }
 }
 

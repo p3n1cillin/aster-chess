@@ -35,6 +35,8 @@ node count are identical with tracing on and off (checked by `verify_rust.py`).
 | `scripts/verify_rust_legal_edges.py` | passed: 94 positions |
 | `scripts/smoke_rust_play.py` | passed against the new core |
 | UCI | `isready`/`stop` answered in under 1 ms during a 4-thread infinite search |
+| Syzygy WDL vs python-chess (`scripts/verify_syzygy_probe.py`) | 5,000/5,000 positions equal |
+| Syzygy searches vs official binary | 180/180 output lines identical (12 positions, depth 14) |
 
 One verifier expectation changed deliberately. With the fifty-move clock at 100
 in `7k/8/6K1/8/8/8/8/R7 w - - 100 1`, Stockfish semantics give Ra8# (mate 1):
