@@ -35,6 +35,13 @@ time; intervals bootstrap whole batches.
 
 The timing gate failed, so this profile will not replace the ordinary build.
 No retraining or flag variants will be selected using these outcomes. The
-predeclared 192 regression games must still complete and be audited. Their
-results and the final decision will be recorded here. Neither speed nor this
-engineering regression screen establishes reference-engine superiority or Elo.
+predeclared 192 regression games must still complete and be audited. The 30 ms
+control completes 96 games at 12W/78D/6L (53.125%, whole-family 95% interval
+49.468..56.667%), with no forfeits, unresolved games or missing telemetry.
+Its independent PGN and journal audits pass. The 100 ms control is running;
+the final combined decision remains pending. Windows and Linux CI pass on
+commit `418a64a3`. Neither speed nor this engineering regression screen
+establishes reference-engine superiority or Elo.
+
+The next source-level investigation is described in
+`ASTER-FUSED-INPUT-INVESTIGATION.md`. It has no implemented or measured gain.

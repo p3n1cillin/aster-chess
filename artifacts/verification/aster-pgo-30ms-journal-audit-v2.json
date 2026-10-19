@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "games": 96,
+  "unique_ordered_rounds": 96,
+  "missing_telemetry_game_ordinals": [],
+  "checks": "Full ordered journal details equal JSON; complete PGN headers/moves equal journal; opening hashes, configurations, game rules, outcomes and counters agree.",
+  "source_sha256": {
+    "report": "0bdfb1cfac8d9917b078a1c509bc4658c8c4a49f034d7596487e96be8d8b3c04",
+    "pgn": "0d3b48bb5569ec2b711263a147cff0b5ba9e38e6b27dfe5fd613f1b050f04188",
+    "journal": "aca804e79a383cf242c3cd76a34628c9f201ac6e4f1fd8d17205b87a395493a4"
+  },
+  "auditor_sha256": "059e87a7dd5213f2ae2416d2b66662b1f381547d7013ec22df86c275585bf42e"
+}
