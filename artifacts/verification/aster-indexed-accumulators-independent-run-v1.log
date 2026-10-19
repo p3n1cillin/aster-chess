@@ -1,0 +1,11 @@
+{"passed": true, "positions": 2630, "perft_checks": 14, "observer_samples": 1}
+{"passed": true, "positions": 94}
+{"proof_positions_checked": 2, "status": "passed", "play_binary_sha256": "9361d9c3b066514451bf09a1767c534d8197f5909f06151433f531768cc81100", "engine_binary_sha256": "9361d9c3b066514451bf09a1767c534d8197f5909f06151433f531768cc81100", "real_sse_samples_checked": 9, "completed_depths_checked": 21, "null_pass_clock_fixtures": 2, "checks": "HTTP errors, assets UTF-8, SSE ordering, legal moves, independent SAN/PV/branch replay, PGN, undo, stop, Black opening"}
+{"passed": true, "independent_certificates": 8, "positions": 42, "incomplete_export_refused": true}
+{"passed": true, "positions": 2630, "perft_checks": 14, "observer_samples": 1}
+{"passed": true, "positions": 94}
+{"proof_positions_checked": 2, "status": "passed", "play_binary_sha256": "9361d9c3b066514451bf09a1767c534d8197f5909f06151433f531768cc81100", "engine_binary_sha256": "9361d9c3b066514451bf09a1767c534d8197f5909f06151433f531768cc81100", "real_sse_samples_checked": 9, "completed_depths_checked": 21, "null_pass_clock_fixtures": 2, "checks": "HTTP errors, assets UTF-8, SSE ordering, legal moves, independent SAN/PV/branch replay, PGN, undo, stop, Black opening"}
+{"passed": true, "independent_certificates": 8, "positions": 42, "incomplete_export_refused": true}
+{"passed": true, "positions": 2630, "perft_checks": 14, "observer_samples": 1}
+{"status": "verified", "sha256": "066c172e22c25ee3d3b4084ad44ff761426f906a9c536cabd0127d17413d0585", "url": "https://github.com/cosmobobak/viridithas-networks/releases/download/v109/sandhi-s2-b200.nnue.zst"}
+{"status": "verified", "sha256": "c9e480e92425f887df6ab9b05c6180fbd762b07879df9d9845f1aa75440caa73", "source": "existing verified file", "urls": ["https://tests.stockfishchess.org/api/nn/nn-c9e480e92425.nnue", "https://media.githubusercontent.com/media/official-stockfish/networks/935dd33472d08334adf233e7769e7af5bb6d8434/nn-c9e480e92425.nnue"]}

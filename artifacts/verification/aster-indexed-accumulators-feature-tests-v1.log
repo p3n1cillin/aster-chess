@@ -1,0 +1,46 @@
+   Compiling aster-core v1.0.0 (C:\Users\lukem\.codex\worktrees\continuation-search\chess\crates\aster-core)
+    Finished `release` profile [optimized] target(s) in 9.63s
+     Running unittests src\lib.rs (target\release\deps\aster_core-e011e711f79092e9.exe)
+
+running 14 tests
+test disagreement::tests::budget_is_hard_and_never_extends_beyond_full_depth ... ok
+test disagreement::tests::bound_must_support_the_disagreement_direction ... ok
+test disagreement::tests::ineligible_moves_spend_no_budget ... ok
+test disagreement::tests::two_separate_finite_signals_and_recent_depth_are_required ... ok
+test tt::tests::packed_metadata_preserves_independent_fields ... ok
+test tt::tests::replacement_is_depth_age_ordered_with_stable_ties ... ok
+test tt::tests::shallow_updates_preserve_deep_score_but_can_refresh_move ... ok
+test tt::tests::zero_capacity_is_rejected_before_lookup - should panic ... ok
+test tt::tests::decisive_aging_penalties_clear_resize_and_wrap ... ok
+test tt::tests::zero_tag_and_hash_extremes_are_valid ... ok
+test tt::tests::table_and_leases_share_without_manual_marker_implementations ... ok
+test nnue::kernels::indexed_tests::scalar_indexed_updates_match_wide_oracle_with_wrapping_and_aliasing ... ok
+test nnue::kernels::indexed_tests::avx2_indexed_updates_match_wide_oracle_with_wrapping_and_aliasing ... ok
+test bitboard::tests::slider_attacks_match_reference ... ok
+
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+     Running unittests src\main.rs (target\release\deps\aster_core-ac9599085259de6e.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\port.rs (target\release\deps\port-1444f0978ee428ec.exe)
+
+running 4 tests
+test fen_round_trip ... ok
+test perft_chess960 ... ok
+test nnue_incremental_matches_refresh ... ok
+test perft_standard_positions ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.15s
+
+   Doc-tests aster_core
+
+running 2 tests
+test crates\aster-core\src\tt.rs - tt::TTWriter (line 155) - compile fail ... ok
+test crates\aster-core\src\tt.rs - tt::TTWriter (line 164) - compile fail ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+

@@ -37,3 +37,11 @@ jobs:
       - run: python scripts/tactics.py tests/fixtures/tactics-v1.json --depth 8 --reference-report artifacts/tactics/aster-dev-effdc3-baseline-v1.json --output artifacts/tactics/core-ci.json
       - run: cargo run --release --locked -- bench 7
       - run: python scripts/verify_aster_branding.py --output artifacts/verification/aster-branding-ci.json
+      - name: Verify forced AVX2 core signature
+        env:
+          ASTER_SIMD: avx2
+        run: python scripts/verify_aster_branding.py --output artifacts/verification/aster-avx2-ci.json
+      - name: Verify scalar core signature
+        env:
+          ASTER_SIMD: scalar
+        run: python scripts/verify_aster_branding.py --output artifacts/verification/aster-scalar-ci.json

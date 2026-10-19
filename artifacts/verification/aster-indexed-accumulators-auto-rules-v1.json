@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "positions": 2630,
+  "legal_existence_checks": 2630,
+  "perft": [
+    {
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "depth": 3,
+      "nodes": 8902
+    },
+    {
+      "fen": "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1",
+      "depth": 2,
+      "nodes": 2039
+    },
+    {
+      "fen": "8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - - 0 1",
+      "depth": 3,
+      "nodes": 2812
+    },
+    {
+      "fen": "r3k2r/Pppp1ppp/1b3nbN/nP6/BBP1P3/q4N2/Pp1P2PP/R2Q1RK1 w kq - 0 1",
+      "depth": 3,
+      "nodes": 9467
+    },
+    {
+      "fen": "rnbq1k1r/pp1Pbppp/2p5/8/2B5/8/PPP1NnPP/RNBQK2R w KQ - 1 8",
+      "depth": 2,
+      "nodes": 1486
+    },
+    {
+      "fen": "r4rk1/1pp1qppp/p1np1n2/2b1p1B1/2B1P1b1/P1NP1N2/1PP1QPPP/R4RK1 w - - 0 10",
+      "depth": 2,
+      "nodes": 2079
+    },
+    {
+      "fen": "8/8/8/r4pPK/8/8/8/4k3 w - f6 0 1",
+      "depth": 3,
+      "nodes": 316
+    },
+    {
+      "fen": "7k/P7/8/8/8/8/8/7K w - - 0 1",
+      "depth": 3,
+      "nodes": 212
+    },
+    {
+      "fen": "4kr2/8/8/8/8/8/8/4K2R w K - 0 1",
+      "depth": 3,
+      "nodes": 2200
+    },
+    {
+      "fen": "7k/5Q2/6K1/8/8/8/8/8 b - - 0 1",
+      "depth": 3,
+      "nodes": 0
+    },
+    {
+      "fen": "7k/6Q1/6K1/8/8/8/8/8 b - - 100 1",
+      "depth": 3,
+      "nodes": 0
+    },
+    {
+      "fen": "k7/n1K5/8/8/8/8/8/R7 b - - 0 1",
+      "depth": 3,
+      "nodes": 0
+    },
+    {
+      "fen": "k7/nnK5/8/8/8/8/8/R6B b - - 0 1",
+      "depth": 3,
+      "nodes": 0
+    },
+    {
+      "fen": "r7/8/8/8/8/8/B1k5/K7 w - - 0 1",
+      "depth": 3,
+      "nodes": 0
+    }
+  ],
+  "ready_during_infinite_search_seconds": 0.00011069999891333282,
+  "observer_equivalence": [
+    {
+      "bestmove": "bestmove e2e4 ponder c7c5",
+      "score": "score cp 20",
+      "nodes": "5457"
+    },
+    {
+      "bestmove": "bestmove e2e4 ponder c7c5",
+      "score": "score cp 20",
+      "nodes": "5457"
+    }
+  ],
+  "independently_replayed_samples": 1,
+  "independently_replayed_live_branches": 4,
+  "binary_sha256": "9361d9c3b066514451bf09a1767c534d8197f5909f06151433f531768cc81100",
+  "verifier_sha256": "e20b9091d3d929cf6ce80d63303a3e485c5a50efc88cb48e6b45c388fce435b6"
+}

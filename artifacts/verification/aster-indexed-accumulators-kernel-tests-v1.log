@@ -1,0 +1,22 @@
+   Compiling aster-core v1.0.0 (C:\Users\lukem\.codex\worktrees\continuation-search\chess\crates\aster-core)
+    Finished `release` profile [optimized] target(s) in 9.54s
+     Running unittests src\lib.rs (target\release\deps\aster_core-54264562080eda59.exe)
+
+running 2 tests
+test nnue::kernels::indexed_tests::avx2_indexed_updates_match_wide_oracle_with_wrapping_and_aliasing ... ok
+test nnue::kernels::indexed_tests::scalar_indexed_updates_match_wide_oracle_with_wrapping_and_aliasing ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 12 filtered out; finished in 0.01s
+
+     Running unittests src\main.rs (target\release\deps\aster_core-c19edd985044d3bd.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\port.rs (target\release\deps\port-6d92449acd66f50d.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 4 filtered out; finished in 0.00s
+

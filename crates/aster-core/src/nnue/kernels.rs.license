@@ -14,3 +14,6 @@ Updated 2026-10-19 with changes from Stockfish development source
 2026-10-17): int8 piece-square weight rows.
 Copyright (C) 2004-2026 The Stockfish developers (see AUTHORS file).
 Licensed under the GNU General Public License v3 or later.
+
+Modified 2026-10-19 by Aster contributors: allocation-free indexed AVX2/scalar
+accumulator updates, with independent wrapping-arithmetic and aliasing checks.

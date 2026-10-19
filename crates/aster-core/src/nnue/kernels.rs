@@ -109,27 +109,39 @@ pub struct IdxRows<'a> {
 #[inline(always)]
 pub fn update_acc_idx(dst: *mut i16, src: *const i16, r: &IdxRows) {
     #[cfg(target_arch = "x86_64")]
-    if level() == LEVEL_AVX512 {
-        return unsafe { avx512::update_acc_idx(dst, src, r) };
+    match level() {
+        LEVEL_AVX512 => return unsafe { avx512::update_acc_idx(dst, src, r) },
+        LEVEL_AVX2 => return unsafe { avx2::update_acc_idx(dst, src, r) },
+        _ => {}
     }
-    let row =
-        |b: *const i8, i: u16| unsafe { std::slice::from_raw_parts(b.add(i as usize * L1), L1) };
-    let sub8: Vec<&[i8]> = (r.sub_psq.iter().map(|&i| row(r.base_psq, i)))
-        .chain(r.sub8.iter().map(|&i| row(r.base8, i)))
-        .collect();
-    let add8: Vec<&[i8]> = (r.add_psq.iter().map(|&i| row(r.base_psq, i)))
-        .chain(r.add8.iter().map(|&i| row(r.base8, i)))
-        .collect();
-    update_acc(
-        dst,
-        src,
-        &Rows {
-            sub16: &[],
-            add16: &[],
-            sub8: &sub8,
-            add8: &add8,
-        },
-    )
+    scalar_update_acc_idx(dst, src, r)
+}
+
+// Consume the indices directly. In-place refreshes use identical src/dst pointers;
+// copy permits this alias, and each row still adds modulo 2^16.
+fn scalar_update_acc_idx(dst: *mut i16, src: *const i16, r: &IdxRows) {
+    unsafe {
+        std::ptr::copy(src, dst, L1);
+        for (base, indices, subtract) in [
+            (r.base_psq, r.sub_psq, true),
+            (r.base_psq, r.add_psq, false),
+            (r.base8, r.sub8, true),
+            (r.base8, r.add8, false),
+        ] {
+            for &index in indices {
+                let row = base.add(index as usize * L1);
+                for j in 0..L1 {
+                    let weight = *row.add(j) as i16;
+                    let value = &mut *dst.add(j);
+                    *value = if subtract {
+                        value.wrapping_sub(weight)
+                    } else {
+                        value.wrapping_add(weight)
+                    };
+                }
+            }
+        }
+    }
 }
 
 /// `src` and `dst` may alias (pass the same pointer for in-place updates).
@@ -289,6 +301,92 @@ pub fn dot128(input: &[u8; 128], w: &[i8; 128]) -> i32 {
         s += input[i] as i32 * w[i] as i32;
     }
     s
+}
+
+#[cfg(test)]
+mod indexed_tests {
+    use super::*;
+
+    fn exercise(mut kernel: impl FnMut(*mut i16, *const i16, &IdxRows)) {
+        const ROWS: usize = 19;
+        let mut seed = 0x4a73_985d_23cb_801fu64;
+        let mut random = || {
+            seed ^= seed << 13;
+            seed ^= seed >> 7;
+            seed ^= seed << 17;
+            seed
+        };
+        // Deliberately offset byte rows to exercise unaligned AVX2 loads.
+        let mut psq = vec![0i8; ROWS * L1 + 1];
+        let mut threat = vec![0i8; ROWS * L1 + 1];
+        for (p, t) in psq.iter_mut().zip(threat.iter_mut()) {
+            *p = random() as i8;
+            *t = (random() >> 32) as i8;
+        }
+        psq[1..5].copy_from_slice(&[i8::MIN, i8::MAX, -1, 0]);
+        threat[1..5].copy_from_slice(&[i8::MAX, i8::MIN, 1, 0]);
+        for case in 0..128 {
+            let mut source = [0i16; L1];
+            for v in &mut source {
+                *v = random() as i16;
+            }
+            source[..4].copy_from_slice(&[i16::MIN, i16::MAX, -1, 0]);
+            let mut lists: [Vec<u16>; 4] = std::array::from_fn(|_| Vec::new());
+            for list in &mut lists {
+                for _ in 0..random() % 33 {
+                    list.push((random() % ROWS as u64) as u16);
+                }
+            }
+            match case {
+                0 => lists.iter_mut().for_each(Vec::clear),
+                1 => lists = std::array::from_fn(|_| vec![0; 32]),
+                2 => lists = [vec![0; 32], vec![], vec![], vec![]],
+                3 => lists = [vec![], vec![], vec![], vec![0; 32]],
+                4 => lists = [vec![18, 0, 18], vec![18, 0, 18], vec![1], vec![1]],
+                _ => {}
+            }
+            // Independent wide-sum oracle, narrowing only once per lane.
+            let expected: [i16; L1] = std::array::from_fn(|j| {
+                let mut value = source[j] as i64;
+                for (n, list) in lists.iter().enumerate() {
+                    let weights = if n < 2 { &psq } else { &threat };
+                    let sign = if n % 2 == 0 { -1 } else { 1 };
+                    for &index in list {
+                        value += sign * weights[1 + index as usize * L1 + j] as i64;
+                    }
+                }
+                value as i16
+            });
+            let rows = IdxRows {
+                base_psq: unsafe { psq.as_ptr().add(1) },
+                sub_psq: &lists[0],
+                add_psq: &lists[1],
+                base8: unsafe { threat.as_ptr().add(1) },
+                sub8: &lists[2],
+                add8: &lists[3],
+            };
+            let mut separate = [123i16; L1];
+            kernel(separate.as_mut_ptr(), source.as_ptr(), &rows);
+            assert_eq!(separate, expected, "separate case {case}");
+            let mut in_place = source;
+            let p = in_place.as_mut_ptr();
+            kernel(p, p, &rows);
+            assert_eq!(in_place, expected, "in-place case {case}");
+        }
+    }
+
+    #[test]
+    fn scalar_indexed_updates_match_wide_oracle_with_wrapping_and_aliasing() {
+        exercise(scalar_update_acc_idx);
+    }
+
+    #[test]
+    #[cfg(target_arch = "x86_64")]
+    fn avx2_indexed_updates_match_wide_oracle_with_wrapping_and_aliasing() {
+        if is_x86_feature_detected!("avx2") {
+            exercise(|dst, src, rows| unsafe { avx2::update_acc_idx(dst, src, rows) });
+        }
+    }
 }
 
 #[cfg(target_arch = "x86_64")]
@@ -614,6 +712,43 @@ mod avx2 {
 
     const TILE: usize = 256; // i16 lanes per tile (16 ymm registers)
     const REGS: usize = TILE / 16;
+
+    // Same register tiles as the row-slice kernel, without constructing heap
+    // vectors of row references for every incremental update or cache refresh.
+    #[target_feature(enable = "avx2")]
+    pub unsafe fn update_acc_idx(dst: *mut i16, src: *const i16, r: &IdxRows) {
+        unsafe {
+            for t in 0..L1 / TILE {
+                let base = t * TILE;
+                let mut acc = [_mm256_setzero_si256(); REGS];
+                for k in 0..REGS {
+                    acc[k] = _mm256_loadu_si256(src.add(base + k * 16) as *const _);
+                }
+                for (weights, indices, subtract) in [
+                    (r.base_psq, r.sub_psq, true),
+                    (r.base_psq, r.add_psq, false),
+                    (r.base8, r.sub8, true),
+                    (r.base8, r.add8, false),
+                ] {
+                    for &index in indices {
+                        let p = weights.add(index as usize * L1 + base);
+                        for k in 0..REGS {
+                            let w =
+                                _mm256_cvtepi8_epi16(_mm_loadu_si128(p.add(k * 16) as *const _));
+                            acc[k] = if subtract {
+                                _mm256_sub_epi16(acc[k], w)
+                            } else {
+                                _mm256_add_epi16(acc[k], w)
+                            };
+                        }
+                    }
+                }
+                for k in 0..REGS {
+                    _mm256_storeu_si256(dst.add(base + k * 16) as *mut _, acc[k]);
+                }
+            }
+        }
+    }
 
     #[target_feature(enable = "avx2")]
     pub unsafe fn update_acc(dst: *mut i16, src: *const i16, rows: &Rows) {
