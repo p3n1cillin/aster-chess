@@ -89,6 +89,13 @@ concurrently, against the pinned official Stockfish 19 binary. Aster 1.0.0 score
 were unresolved. The interval includes zero: this is equality within noise, not
 superiority. Report and PGN: `artifacts/matches/aster-1.0.0-vs-sf19-8+0.08-64pairs.*`.
 
+The same setup at 30+0.3 s (2026-10-19, Aster binary SHA-256 `38ae0bf9…`,
+Stockfish `45bc8e49…`, openings `5d2b8f4a…`) gave **1 win, 0 losses, 127 draws**
+(50.4%), pentanomial [0, 0, 63, 1, 0], Elo **+2.7** with a 95% interval of
+**−2.6 to +8.0**, no unresolved games. The draw rate rises with time, and the
+interval again includes zero. Report and PGN:
+`artifacts/matches/aster-1.0.0-vs-sf19-30+0.3-64pairs.*`.
+
 ## Strength claims
 
 No strength claim follows from these results. The core plays Stockfish 19's
