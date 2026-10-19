@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-10-19T12:55:55.116550+00:00",
+  "plan_sha256": "dacc0c912bc6e3a1cca731705bbcbd7d68ed4b2458e740d9343cce9277830d08",
+  "simultaneous_control_matches": 2,
+  "active_search_threads_total": 2,
+  "logical_processors": 12,
+  "resources": "Each engine uses one thread and 64 MiB; each control is sequential internally. Both controls run concurrently with no local compilation during games. No extra or adaptive games.",
+  "candidate_sha256": "0c047f5edb69a236921ba30aa46591091cf3bd8c7c4c9fbd7eeef3e7bba30e32",
+  "baseline_sha256": "ffc0c943256226195e5ef0b487c1682a02c841e23864e77983361246c59a9edd",
+  "parent_openings_sha256": "7775d7f888719c139eec40d080ad021bae8c9ae05923a4a4a2fd53fd4010cbe3",
+  "controls": [
+    {
+      "control": "30ms",
+      "pairs": 64,
+      "suite_range": [
+        0,
+        64
+      ],
+      "seconds_per_move": 0.03
+    },
+    {
+      "control": "100ms",
+      "pairs": 32,
+      "suite_range": [
+        64,
+        96
+      ],
+      "seconds_per_move": 0.1
+    }
+  ]
+}

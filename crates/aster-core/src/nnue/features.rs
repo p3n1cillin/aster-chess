@@ -171,10 +171,22 @@ pub fn psq_append_changed_indices(
         added.push(psq_make_index(perspective, diff.to, diff.pc, ksq, q));
     }
     if diff.remove_sq != SQ_NONE {
-        removed.push(psq_make_index(perspective, diff.remove_sq, diff.remove_pc, ksq, q));
+        removed.push(psq_make_index(
+            perspective,
+            diff.remove_sq,
+            diff.remove_pc,
+            ksq,
+            q,
+        ));
     }
     if diff.add_sq != SQ_NONE {
-        added.push(psq_make_index(perspective, diff.add_sq, diff.add_pc, ksq, q));
+        added.push(psq_make_index(
+            perspective,
+            diff.add_sq,
+            diff.add_pc,
+            ksq,
+            q,
+        ));
     }
 }
 
@@ -248,7 +260,10 @@ static LUTS_PTR: std::sync::atomic::AtomicPtr<ThreatLuts> =
 
 pub fn init() {
     let l = LUTS.get_or_init(build_luts);
-    LUTS_PTR.store(l as *const ThreatLuts as *mut ThreatLuts, std::sync::atomic::Ordering::Release);
+    LUTS_PTR.store(
+        l as *const ThreatLuts as *mut ThreatLuts,
+        std::sync::atomic::Ordering::Release,
+    );
 }
 
 fn build_luts() -> ThreatLuts {
@@ -311,7 +326,8 @@ fn build_luts() -> ThreatLuts {
                     + map as i64)
                     * helper[attacker].0 as i64) as u32;
             let excluded = map < 0;
-            lut1[attacker * PIECE_NB + attacked][0] = if excluded { THREAT_DIMENSIONS } else { feature };
+            lut1[attacker * PIECE_NB + attacked][0] =
+                if excluded { THREAT_DIMENSIONS } else { feature };
             lut1[attacker * PIECE_NB + attacked][1] = if excluded || semi_excluded {
                 THREAT_DIMENSIONS
             } else {
@@ -339,7 +355,9 @@ pub fn threat_make_index(
     let pair = (attacker ^ swap) * PIECE_NB + (attacked ^ swap);
     let l = luts();
     unsafe {
-        *l.lut1.get_unchecked(pair).get_unchecked((from_o < to_o) as usize)
+        *l.lut1
+            .get_unchecked(pair)
+            .get_unchecked((from_o < to_o) as usize)
             + *l.lut2
                 .get_unchecked(type_of(attacker))
                 .get_unchecked(from_o)
@@ -484,7 +502,9 @@ pub fn threat_append_changed_indices_both(
     let l = luts();
     let base = weight_base();
     let index = |pair: u32, from: u32, to: u32| unsafe {
-        *l.lut1.get_unchecked(pair as usize).get_unchecked((from < to) as usize)
+        *l.lut1
+            .get_unchecked(pair as usize)
+            .get_unchecked((from < to) as usize)
             + *l.lut2
                 .get_unchecked(((pair >> 4) & 7) as usize)
                 .get_unchecked(from as usize)
@@ -497,7 +517,11 @@ pub fn threat_append_changed_indices_both(
         let bi = index(pair ^ 0x88, from ^ b_orient, to ^ b_orient);
         prefetch_row_at(base, wi);
         prefetch_row_at(base, bi);
-        let lists = if raw >> 31 != 0 { &mut *added } else { &mut *removed };
+        let lists = if raw >> 31 != 0 {
+            &mut *added
+        } else {
+            &mut *removed
+        };
         push_if_lt(&mut lists[WHITE], wi);
         push_if_lt(&mut lists[BLACK], bi);
     }

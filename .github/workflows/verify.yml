@@ -28,11 +28,12 @@ jobs:
       - run: cargo build --workspace --release --locked
       - run: cargo test --workspace --release --locked
       - run: cargo test --workspace --locked
+      - run: cargo test --release --locked -p aster-core --features disagreement-guard
       - run: python scripts/verify.py --setups 1000
       - run: python scripts/verify_rust_legal_edges.py
       - run: python scripts/smoke_rust_play.py
       - run: python scripts/smoke_mate_proof.py
       - run: python scripts/tactics.py tests/fixtures/tactics-v1.json --engine-arg legacy --depth 8 --require-solved 32 --output artifacts/tactics/legacy-ci.json
-      - run: python scripts/tactics.py tests/fixtures/tactics-v1.json --depth 8 --reference-report artifacts/tactics/aster-branding-baseline-v1.json --output artifacts/tactics/core-ci.json
+      - run: python scripts/tactics.py tests/fixtures/tactics-v1.json --depth 8 --reference-report artifacts/tactics/aster-dev-effdc3-baseline-v1.json --output artifacts/tactics/core-ci.json
       - run: cargo run --release --locked -- bench 7
       - run: python scripts/verify_aster_branding.py --output artifacts/verification/aster-branding-ci.json

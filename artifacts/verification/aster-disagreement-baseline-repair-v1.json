@@ -1,0 +1,14 @@
+{
+  "baseline_commit": "6cffbf26b5c456b814990a916f10d3b2a666f4dd",
+  "old_report": "artifacts/tactics/aster-branding-baseline-v1.json",
+  "old_sha256": "49fafccb4ede91e888885cfc1cb6626d8d7407cda3f3825ddaf19712640a56c8",
+  "old_solved": 30,
+  "development_report": "artifacts/tactics/aster-dev-effdc3-baseline-v1.json",
+  "development_sha256": "ed06d8e30010e31188288c5a67dd98dd2732431e4900eee4c89d8abbf3c6fbcc",
+  "development_solved": 31,
+  "reason": "The source foundation changed before this experiment. Freeze the unmodified current core before comparing normal builds. Do not overwrite the old evidence or apply its exact-node signature to another foundation. Experimental equal-node tactical gates are unchanged.",
+  "checks": {
+    "current_default_report_matches_control": "artifacts/tactics/aster-disagreement-default-ci-v1.json",
+    "legacy_min_solved": 32
+  }
+}

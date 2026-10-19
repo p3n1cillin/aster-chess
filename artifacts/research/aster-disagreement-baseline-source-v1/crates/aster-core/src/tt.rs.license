@@ -1,0 +1,15 @@
+SPDX-License-Identifier: GPL-3.0-or-later
+
+Original source header, preserved verbatim for tt.rs:
+
+// Rust port of Stockfish 19 `tt.h/.cpp`.
+// Copyright (C) 2004-2026 The Stockfish developers (see AUTHORS file)
+// Licensed under the GNU General Public License v3 or later.
+//
+// Entries use relaxed atomics so racy multi-threaded access is defined
+// behaviour in Rust; on x86-64 these compile to plain loads and stores.
+
+Aster changes (2026-10-19): lifetime-checked write leases, typed associative
+cache storage, checked allocation/lookup, automatic thread-sharing traits,
+and state/replacement/concurrency/lifetime regression checks.
+Copyright (C) 2026 Aster contributors.

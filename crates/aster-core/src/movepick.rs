@@ -251,9 +251,8 @@ impl MovePicker {
         if T == QUIETS {
             threat_by_lesser[KNIGHT] = pos.threats_by(PAWN);
             threat_by_lesser[BISHOP] = threat_by_lesser[KNIGHT];
-            threat_by_lesser[ROOK] = pos.threats_by(KNIGHT)
-                | pos.threats_by(BISHOP)
-                | threat_by_lesser[KNIGHT];
+            threat_by_lesser[ROOK] =
+                pos.threats_by(KNIGHT) | pos.threats_by(BISHOP) | threat_by_lesser[KNIGHT];
             threat_by_lesser[QUEEN] = pos.threats_by(ROOK) | threat_by_lesser[ROOK];
         }
 

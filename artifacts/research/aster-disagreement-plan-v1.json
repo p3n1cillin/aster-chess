@@ -1,0 +1,311 @@
+{
+  "date": "2026-10-19",
+  "baseline_commit": "6cffbf26b5c456b814990a916f10d3b2a666f4dd",
+  "upstream_commit": "effdc3fd3f6de6e75fe1374a51a7a7eed66f880b",
+  "network_sha256": "c9e480e92425f887df6ab9b05c6180fbd762b07879df9d9845f1aa75440caa73",
+  "hypothesis": "Bounded extra verification of reduced quiet moves at volatile PV nodes where a usable cached score contradicts corrected neural evaluation may avoid overconfident selective pruning. This is a new Aster experiment in a known research family, not a world-first or strength claim.",
+  "policy": {
+    "depth_range": [
+      5,
+      10
+    ],
+    "node": "non-root, non-check, non-excluded, non-mate-seeking PV or cached-PV node; finite current/grandparent/cached scores; TT depth at least current depth minus 3",
+    "disagreement_min": "PAWN_VALUE / 2 internal units, and either exact TT bound or one-sided bound supporting the disagreement direction",
+    "temporal_shift_min": "PAWN_VALUE / 3 internal units against the same side two plies earlier",
+    "move": "noncapture, nonchecking, ordered index 3 through 8, currently reduced below full child depth",
+    "change": "one extra ply, never beyond full child depth",
+    "budget_per_thread_per_search": 256,
+    "parameters_frozen": true
+  },
+  "implementation": "Cargo feature disagreement-guard. Absent from default builds; experimental builds expose a UCI check default true and audit counters. Disabled mode must preserve canonical 1559611 nodes and full deterministic outputs.",
+  "generation": {
+    "positions": 96,
+    "attempts": 4096,
+    "plies": 20,
+    "seed": 2026101971,
+    "nodes": 2048,
+    "verify_nodes": 20000,
+    "max_cp": 80,
+    "excluded_opening_suites": [
+      {
+        "path": "tests/fixtures/capacity-classical-100ms-v1.json",
+        "sha256": "dcbebc58b5c33ec6b9e502031dc4cdc7190d76dbc222ded241970136d958b3f5"
+      },
+      {
+        "path": "tests/fixtures/capacity-classical-30ms-v1.json",
+        "sha256": "01e773465168914fc65c45ac13df8db197f8e0cb4e37d4a25557e4f19701bdf8"
+      },
+      {
+        "path": "tests/fixtures/capacity-control-30ms-v1.json",
+        "sha256": "76c1fefa9817b587f355cccd4dfe763ed5f435b6fc11b57fcee5eb991e2cdd30"
+      },
+      {
+        "path": "tests/fixtures/capacity-parent-v1.json",
+        "sha256": "81e388417a56d17ce865237647a02506e9cc05677232c6bcbe73b1f8d2f7d39b"
+      },
+      {
+        "path": "tests/fixtures/deep-turn-classical-100ms-v1.json",
+        "sha256": "b8c5da7d9648fd72ccf674ca694848f3bc526776b738087b31e3e82a6453165c"
+      },
+      {
+        "path": "tests/fixtures/deep-turn-classical-30ms-v1.json",
+        "sha256": "1ffa275e525d665757213fa34a93aa4bed17982fd844d444299b01d556fd0255"
+      },
+      {
+        "path": "tests/fixtures/deep-turn-control-30ms-v1.json",
+        "sha256": "99889d267db0879be7131c4039dd80d258ad2221fe54222133dd32709b595e03"
+      },
+      {
+        "path": "tests/fixtures/deep-turn-parent-v1.json",
+        "sha256": "5addfa8b6a03c8fd844ff43ec8c8dc71f6c2d3184460d919fc7dee2676865237"
+      },
+      {
+        "path": "tests/fixtures/iir-100ms-v1.json",
+        "sha256": "0b2e40c88ada4064628909ddba0293ce3594774520eaffae50daafcca41ecace"
+      },
+      {
+        "path": "tests/fixtures/iir-30ms-v1.json",
+        "sha256": "de119d1f9630b753d18a634031c90cefac64853d43e11e386aee535b53bf4307"
+      },
+      {
+        "path": "tests/fixtures/iir-behavior-v1.json",
+        "sha256": "b3680be4939c0e82ddb125c5a70a90b8c75312440333e9bc0b8d443f51fc0d15"
+      },
+      {
+        "path": "tests/fixtures/iir-parent-v1.json",
+        "sha256": "46868852f9af1c2b95bc9bfaec9b68bb0b45fd916d0bfc27f792fe9596855baa"
+      },
+      {
+        "path": "tests/fixtures/iir-rating-v1.json",
+        "sha256": "ce491f6df3345245f016f9b1b8f7658769da750a0826a422f4732b16eaf2653f"
+      },
+      {
+        "path": "tests/fixtures/kpk-setups-v1.json",
+        "sha256": "550764811ecbb1761c70a30a82c941122450839ef442f56a8f5a5a67ed96dd13"
+      },
+      {
+        "path": "tests/fixtures/lazy-order-100ms-v1.json",
+        "sha256": "12ed5a4dd3688e730ba6224b8c88e00bc5b016975aa8dd08e1e918bbb9f7be1e"
+      },
+      {
+        "path": "tests/fixtures/lazy-order-30ms-v1.json",
+        "sha256": "e6f6a4f084d0c06ec7a1bcc8de86a9d13b3fa0faa3053208c3c86359e62ba423"
+      },
+      {
+        "path": "tests/fixtures/lazy-order-behavior-v1.json",
+        "sha256": "00a8de1225c4a1e6b6f0b943c6d1d12565900eea579aa6f644d5a2b347e9f919"
+      },
+      {
+        "path": "tests/fixtures/lazy-order-parent-v1.json",
+        "sha256": "d8ac1c505d3c46c819b87da63fe8308cebd18a234a1889a9215fbc2e75101f3a"
+      },
+      {
+        "path": "tests/fixtures/lazy-order-rating-v1.json",
+        "sha256": "9c7886ac0b66b35fd6cc74c2937bb86ba5506c0363568e87cf769be6bca46652"
+      },
+      {
+        "path": "tests/fixtures/mate-proof-match-v1.json",
+        "sha256": "14286109ef669ec3abab5d4bfeb8f5de1ca6468969b72b8fd0cd658ba94edc0a"
+      },
+      {
+        "path": "tests/fixtures/mate-proof-parent-v1.json",
+        "sha256": "85553f4ff2dcc2ce9896e002ce5730d4ca54061c82f1032bdb47f0c83ae750c4"
+      },
+      {
+        "path": "tests/fixtures/openings-v1.json",
+        "sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de"
+      },
+      {
+        "path": "tests/fixtures/openings-v2.json",
+        "sha256": "cdcc99af780b795546a22e84b2557bd20168097c2694cc9b12ce2e242f74bc25"
+      },
+      {
+        "path": "tests/fixtures/openings-v3.json",
+        "sha256": "b2c84b63c566712b33102e1a5f246d47a010a0341f8396c5e036937c74e241f3"
+      },
+      {
+        "path": "tests/fixtures/openings-v4.json",
+        "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d"
+      },
+      {
+        "path": "tests/fixtures/openings-v5.json",
+        "sha256": "e63c68d4024428bef2f84a4289db06c4aee70e60aa9f081cf437d2a6d237c46e"
+      },
+      {
+        "path": "tests/fixtures/phase-classical-100ms-v1.json",
+        "sha256": "3b01d69ec7c31e2e5991b81ebb5860024b4393cb42d91c8a84db69ff20dacffc"
+      },
+      {
+        "path": "tests/fixtures/phase-classical-30ms-v1.json",
+        "sha256": "3efc264b68683bd961a269679ecb493ccd53888651e5a767b34b66a7c0f5e3e1"
+      },
+      {
+        "path": "tests/fixtures/phase-control-30ms-v1.json",
+        "sha256": "f29fbb72d1d3696bff82ff4630bc51b37d6148af3350e0b265509e96aab30758"
+      },
+      {
+        "path": "tests/fixtures/phase-parent-v1.json",
+        "sha256": "35fd8dc040ab40538966d73d0f9c54d38ce490175e90fba10c9cf4c82363063f"
+      },
+      {
+        "path": "tests/fixtures/q-evasion-100ms-v1.json",
+        "sha256": "9c760e96dc990a5ab465a5bf8eff9971ed8eae9856c76d57b6ca32f2563ba63f"
+      },
+      {
+        "path": "tests/fixtures/q-evasion-30ms-v1.json",
+        "sha256": "940d8217dd7a6a583ddcabfe6edeffcd4769ac7f9118d00f67f081b52f238072"
+      },
+      {
+        "path": "tests/fixtures/q-evasion-behavior-v1.json",
+        "sha256": "02d7afdbe0eb10296d53208cf96f551058d0b3323fe18570dd3cae1706b90e00"
+      },
+      {
+        "path": "tests/fixtures/q-evasion-parent-v1.json",
+        "sha256": "13c3a7a689f83064490766a76d112589ef2098f93a9d92ebbfcee805f1c385f4"
+      },
+      {
+        "path": "tests/fixtures/q-evasion-rating-v1.json",
+        "sha256": "b9d8a21feba1ae6c0390e1fa0dd26e3cf65848f0b2e87fd002ebbe0ef1f626fa"
+      },
+      {
+        "path": "tests/fixtures/rating-confirm-v1.json",
+        "sha256": "1e904d67400433abedb8e48592b4598e8e5ed10ed82b0cdd13025de6eca8615d"
+      },
+      {
+        "path": "tests/fixtures/rating-parent-v1.json",
+        "sha256": "6c4d7453e3572cadf786d81be8ad8b0b85fb9c461d5e93847612959836efb112"
+      },
+      {
+        "path": "tests/fixtures/rating-screen-v1.json",
+        "sha256": "690bacaceff2559200ebb084424de85639cf045c14f094912e18f5b38ba9805f"
+      },
+      {
+        "path": "tests/fixtures/relations-classical-100ms-v1.json",
+        "sha256": "2ded031474bc1542069632721b7ad8ef7807f32c1ad0378cc97438e465f64928"
+      },
+      {
+        "path": "tests/fixtures/relations-classical-30ms-v1.json",
+        "sha256": "63b831b035cfbf5ed44ee4a89e7a374e29cef97918eb8d6e8b2a54893db56478"
+      },
+      {
+        "path": "tests/fixtures/relations-control-30ms-v1.json",
+        "sha256": "9bd295a72aeeecafcf1234f923b27fe958065393a51c1b7331a3c7ea408d3f85"
+      },
+      {
+        "path": "tests/fixtures/relations-parent-v1.json",
+        "sha256": "08d8909b4520243fa3b0f850595957b79087c532607d4c375eeb54eefc3a8a46"
+      },
+      {
+        "path": "tests/fixtures/rust-foundation-original-v1.json",
+        "sha256": "f0ed641ffac5091b4dc75b076f36c2bfbc2e2f670deb8a4e613a1a24823b840f"
+      },
+      {
+        "path": "tests/fixtures/rust-foundation-parent-v1.json",
+        "sha256": "ec2a76dbd775a3fcc94156c36ec0f4762f0dae6146640fe189b1d795632b40c9"
+      },
+      {
+        "path": "tests/fixtures/rust-foundation-stockfish-v1.json",
+        "sha256": "7a4d448a988b4a77856d60102dedf6b5b5681bf6c6acf551239b29e23904bc36"
+      },
+      {
+        "path": "tests/fixtures/rust-hyperion-100ms-v1.json",
+        "sha256": "ee3ef81d4399e94368bcb55af6ac5e0c1b22cf77b04fcdc5ec4302198962932b"
+      },
+      {
+        "path": "tests/fixtures/rust-hyperion-30ms-v1.json",
+        "sha256": "454910c7a5e4265686928739954c6940f4d18e162ea69be98acb4e895878d371"
+      },
+      {
+        "path": "tests/fixtures/rust-hyperion-parent-v1.json",
+        "sha256": "7934709fa40e6eb21372079081fd4b659c25ae55b8cbffeafe4b3126c490261b"
+      },
+      {
+        "path": "tests/fixtures/rust-legal-probe-100ms-v1.json",
+        "sha256": "261eb9d49d5258641ed6b62cda3fb9fad11f47eebe34b4d68e9da99aaaae0c21"
+      },
+      {
+        "path": "tests/fixtures/rust-legal-probe-30ms-v1.json",
+        "sha256": "46e611b01d3fb6c36eada525ae7c42872215528ad6ae2c8609d30482d009bd3f"
+      },
+      {
+        "path": "tests/fixtures/rust-legal-probe-benchmark-v1.json",
+        "sha256": "a3560bd578f730f8c225129e3c6b40d6a65e2b84f3a6b74b38962591ccaa05a1"
+      },
+      {
+        "path": "tests/fixtures/rust-legal-probe-parent-v1.json",
+        "sha256": "af5585d0312a4f16346b1254fe4570a40938ea13e0897504ad0592543d7d6435"
+      },
+      {
+        "path": "tests/fixtures/rust-safety-v2.json",
+        "sha256": "6e8185bf92824481e77f7ab1b3e58d92e10f1a96a1f7f6a35c7daa111ba453b4"
+      },
+      {
+        "path": "tests/fixtures/stable-endgame-classical-100ms-v1.json",
+        "sha256": "4682375ee99e6043c9a2face29f6ae3bd9bc46fa66c3978005ac09f09d32afe6"
+      },
+      {
+        "path": "tests/fixtures/stable-endgame-classical-30ms-v1.json",
+        "sha256": "03139c4b9c389d6a607425a1fa64a3ddae9d92824fbdab765fd1138a2440f848"
+      },
+      {
+        "path": "tests/fixtures/stable-endgame-control-30ms-v1.json",
+        "sha256": "19e001548702c754b8f97e37b7274b065880bc279c968954219bf356111be8fc"
+      },
+      {
+        "path": "tests/fixtures/stable-endgame-parent-v1.json",
+        "sha256": "ee8a6137df3a3a0da43dcf783565e974483101bb41aeb956d52772f39fc06a19"
+      }
+    ],
+    "selection": "Pinned development teacher only, before candidate queries. Reject duplicate/transposed/previously frozen root positions. Never tune using these outcomes."
+  },
+  "matches": [
+    {
+      "control": "30ms",
+      "pairs": 64,
+      "suite_range": [
+        0,
+        64
+      ],
+      "seconds_per_move": 0.03
+    },
+    {
+      "control": "100ms",
+      "pairs": 32,
+      "suite_range": [
+        64,
+        96
+      ],
+      "seconds_per_move": 0.1
+    }
+  ],
+  "resources": {
+    "threads": 1,
+    "hash_mib": 64,
+    "max_plies": 400,
+    "no_adjudication": true,
+    "durable_journal": true
+  },
+  "gates": {
+    "correctness": "All native tests (default and feature); independent legality/terminal/perft/stop/undo/proof/UI checks in enabled mode. Positive activity and budget cap checks. Disabled default exact baseline comparison.",
+    "tactics": "At equal 20000-node limits, no reduction in solved count on tactics-v1, tactics-quiet-v1 and endgames-v1 relative to the frozen current control. Retain every individual difference.",
+    "strength": "All 192 games completed and independently audited even if tactics/cost fail. Promotion requires zero unresolved/forfeits, tactical gates, and both control-specific 95% opening-family bootstrap lower score bounds strictly above 50%. No promotion on noise.",
+    "bootstrap": {
+      "samples": 20000,
+      "seed": 20261019,
+      "cluster": "starting FEN and first four opening plies; resample whole opening families separately within each time control"
+    },
+    "throughput": "Equal 20000-node screening throughput median candidate/control ratio >=0.90; desktop throughput is diagnostic, never Elo.",
+    "reference": "Only if every promotion gate passes: separately predeclare a larger pinned-reference confirmation before a superiority claim."
+  },
+  "failure_policy": "Keep production disabled and retain the candidate source, all results, failures and PGNs. No adaptive retuning, extra games, changed thresholds or claimed novelty from this single experiment.",
+  "prior_art": [
+    {
+      "title": "Search Control Methods in Deep Blue",
+      "url": "https://aaai.org/papers/0004-ss99-07-004-search-control-methods-in-deep-blue/"
+    },
+    {
+      "title": "Singular extensions: Adding selectivity to brute-force searching",
+      "url": "https://doi.org/10.1016/0004-3702(90)90073-9"
+    }
+  ]
+}

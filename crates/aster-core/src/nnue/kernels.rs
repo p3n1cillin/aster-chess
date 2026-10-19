@@ -112,7 +112,8 @@ pub fn update_acc_idx(dst: *mut i16, src: *const i16, r: &IdxRows) {
     if level() == LEVEL_AVX512 {
         return unsafe { avx512::update_acc_idx(dst, src, r) };
     }
-    let row = |b: *const i8, i: u16| unsafe { std::slice::from_raw_parts(b.add(i as usize * L1), L1) };
+    let row =
+        |b: *const i8, i: u16| unsafe { std::slice::from_raw_parts(b.add(i as usize * L1), L1) };
     let sub8: Vec<&[i8]> = (r.sub_psq.iter().map(|&i| row(r.base_psq, i)))
         .chain(r.sub8.iter().map(|&i| row(r.base8, i)))
         .collect();

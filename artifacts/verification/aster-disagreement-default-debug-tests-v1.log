@@ -1,0 +1,186 @@
+   Compiling aster-core v1.0.0 (C:\Users\lukem\.codex\worktrees\continuation-search\chess\crates\aster-core)
+   Compiling aster-engine v1.0.0 (C:\Users\lukem\.codex\worktrees\continuation-search\chess\crates\engine)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 8.04s
+     Running unittests src\lib.rs (target\debug\deps\aster_core-1a5defa5d592eaaf.exe)
+
+running 12 tests
+test disagreement::tests::ineligible_moves_spend_no_budget ... ok
+test disagreement::tests::bound_must_support_the_disagreement_direction ... ok
+test disagreement::tests::two_separate_finite_signals_and_recent_depth_are_required ... ok
+test disagreement::tests::budget_is_hard_and_never_extends_beyond_full_depth ... ok
+test tt::tests::packed_metadata_preserves_independent_fields ... ok
+test tt::tests::zero_capacity_is_rejected_before_lookup - should panic ... ok
+test tt::tests::zero_tag_and_hash_extremes_are_valid ... ok
+test tt::tests::shallow_updates_preserve_deep_score_but_can_refresh_move ... ok
+test tt::tests::replacement_is_depth_age_ordered_with_stable_ties ... ok
+test tt::tests::table_and_leases_share_without_manual_marker_implementations ... ok
+test tt::tests::decisive_aging_penalties_clear_resize_and_wrap ... ok
+test bitboard::tests::slider_attacks_match_reference ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.70s
+
+     Running unittests src\main.rs (target\debug\deps\aster_core-44b5f1eceb8d0847.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\port.rs (target\debug\deps\port-5cba7f5613754b86.exe)
+
+running 4 tests
+test fen_round_trip ... ok
+test perft_chess960 ... ok
+test nnue_incremental_matches_refresh ... ok
+test perft_standard_positions ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 9.57s
+
+     Running unittests src\main.rs (target\debug\deps\aster-615e794dec3f2d48.exe)
+
+running 135 tests
+test chess::board::movegen::tests::ray_diag_test ... ok
+test chess::board::movegen::tests::bishop_attacks_basic ... ok
+test chess::board::movegen::tests::python_chess_validation ... ok
+test chess::board::movegen::tests::no_king_into_check ... ok
+test chess::board::san::tests::capture_with_x ... ok
+test aster_rules::tests::invalid_certificate_roots_rejected ... ok
+test aster_proof::tests::mate_precedes_clock ... ok
+test aster_proof::tests::bounded_and_cancelled_restore_root ... ok
+test chess::board::movegen::tests::rook_attacks_basic ... ok
+test chess::board::movegen::tests::ray_test ... ok
+test aster_proof::tests::stalemate_is_not_proof ... ok
+test chess::board::san::tests::capture_without_x ... ok
+test chess::board::san::tests::castling_kingside ... ok
+test chess::board::san::tests::castling_queenside ... ok
+test chess::board::san::tests::castling_zeros ... ok
+test chess::board::san::tests::disambiguation_knight ... ok
+test chess::board::san::tests::disambiguation_rank ... ok
+test chess::board::san::tests::en_passant ... ok
+test chess::board::san::tests::fully_specified_move ... ok
+test chess::board::san::tests::illegal_move ... ok
+test chess::board::san::tests::invalid ... ok
+test chess::board::san::tests::knight_move ... ok
+test chess::board::san::tests::disambiguation_pin ... ok
+test chess::board::san::tests::missing_promotion ... ok
+test chess::board::san::tests::pawn_capture ... ok
+test chess::board::san::tests::pawn_single_push ... ok
+test chess::board::san::tests::promotion ... ok
+test chess::board::san::tests::promotion_knight ... ok
+test chess::board::san::tests::promotion_without_equals ... ok
+test chess::board::san::tests::simple_pawn_move ... ok
+test chess::board::san::tests::terse_promotion ... ok
+test chess::board::san::tests::with_check_marker ... ok
+test chess::board::tests::castling_pseudolegality ... ok
+test chess::board::tests::can_make_swap_castle ... ok
+test chess::board::tests::illegal_ep_construction ... ok
+test chess::board::tests::key_after_works_for_captures ... ok
+test chess::board::tests::key_after_works_for_nullmove ... ok
+test chess::board::tests::ep_square_edge_case ... ok
+test chess::board::tests::key_after_works_for_simple_moves ... ok
+test chess::board::tests::game_end_states ... ok
+test chess::board::tests::other_ep_edge_case ... ok
+test chess::board::tests::quick_sanity_check ... ok
+test chess::board::tests::scharnagl_backrank_works ... ok
+test chess::board::tests::reset_properly ... ok
+test chess::board::tests::legal_probe_special_positions ... ok
+test chess::board::tests::scharnagl_full_works ... ok
+test chess::board::tests::threat_generation_black ... ok
+test chess::board::tests::threat_generation_white ... ok
+test chess::chessmove::tests::test_promotion ... ok
+test chess::chessmove::tests::test_simple_move ... ok
+test chess::chessmove::tests::test_all_square_combinations ... ok
+test chess::fen::tests::allow_extra_tokens_relaxed ... ok
+test chess::fen::tests::parse_bad_segments ... ok
+test chess::fen::tests::accept_valid_ep_square ... ok
+test chess::fen::tests::parse_chess960_shredder_fen ... ok
+test chess::fen::tests::parse_relaxed_board_only ... ok
+test chess::fen::tests::parse_startpos ... ok
+test chess::fen::tests::epd_perftsuite ... ok
+test chess::fen::tests::reject_adjacent_digits ... ok
+test chess::fen::tests::reject_extra_tokens_strict ... ok
+test chess::fen::tests::reject_uppercase_side ... ok
+test chess::fen::tests::reject_invalid_ep_rank ... ok
+test chess::board::tests::fen_round_trip ... ok
+test chess::fen::tests::reject_fullmove_zero ... ok
+test chess::fen::tests::relaxed_defaults_invalid_tokens ... ok
+test chess::fen::tests::terminal_halfmove_clocks_are_retained ... ok
+test chess::fen::tests::relaxed_partial_valid_tokens ... ok
+test chess::piece::tests::piece_all_iterator ... ok
+test chess::piece::tests::piece_char_case_convention ... ok
+test chess::piece::tests::piece_array_indexing ... ok
+test chess::fen::tests::epd_arasan21 ... ok
+test chess::piece::tests::piece_from_index ... ok
+test chess::piece::tests::piece_construction_and_decomposition ... ok
+test chess::piece::tests::piece_index_round_trip ... ok
+test chess::piece::tests::specific_piece_constructions ... ok
+test chess::piece::tests::piece_round_trip_construction ... ok
+test chess::squareset::tests::counters ... ok
+test chess::types::tests::square_flipping ... ok
+test chess::types::tests::square_relative_to ... ok
+test chess::types::tests::test_clear_rights ... ok
+test chess::types::tests::test_queenside_getters_and_setters ... ok
+test chess::types::tests::test_kingside_getters_and_setters ... ok
+test chess::types::tests::test_remove_specific_rights ... ok
+test lookups::tests::all_castle_keys_different ... ok
+test nnue::network::threat_updates::tests::kiwipete_c3b1_king_victim ... ok
+test lookups::tests::all_piece_keys_different ... ok
+test nnue::network::threat_updates::tests::kiwipete_e1d1_king_victim ... ok
+test nnue::network::threat_updates::tests::kiwipete_threat_indexes ... ok
+test chess::fen::tests::epd_tbtest ... ok
+test nnue::network::threat_updates::tests::kiwipete_incremental_quiet ... ok
+test chess::fen::tests::epd_wac ... ok
+test nnue::network::threat_updates::tests::startpos_threat_indexes ... ok
+test nnue::network::threat_updates::tests::startpos_incremental_quiet ... ok
+test nnue::network::threat_updates::tests::kiwipete_threats_after_moves ... ok
+test nnue::network::threat_updates::tests::startpos_threats_after_moves ... ok
+test nnue::network::threat_updates::tests::startpos_all_moves ... ok
+test chess::fen::tests::epd_frcperftsuite ... ok
+test perft::tests::perft_krk ... ok
+test chess::board::san::tests::roundtrip ... ok
+test nnue::network::threat_updates::tests::kiwipete_all_moves ... ok
+test perft::tests::perft_hard_position ... ok
+test chess::fen::tests::epd_all_files ... ok
+test nnue::network::threat_updates::tests::startpos_threat_accumulator ... ok
+test nnue::network::threat_updates::tests::kiwipete_threat_accumulator ... ok
+test perft::tests::simple_capture_undoability ... ok
+test perft::tests::simple_move_undoability ... ok
+test play::tests::aspiration_bounds_are_not_completed_scores ... ok
+test play::tests::initial_geometry ... ok
+test play::tests::native_game_roundtrip ... ok
+test play::tests::terminal_mate_precedes_draw ... ok
+test search::aster_depth_limit_tests::maximum_pv_depth_does_not_access_a_missing_child_slot ... ok
+test search::aster_terminal_tests::terminal_positions_precede_quiescence_and_pruning ... ok
+test search::parameters::tests::macro_hackery_same_length ... ok
+test search::parameters::tests::parser_actually_works ... ok
+test perft::tests::perft_start_position ... ok
+test perft::tests::perft_nnue_start_position ... ok
+test perft::tests::perft_movepicker_forward_promo_evasion ... ok
+test perft::tests::perft_movepicker_hard_position ... ok
+test tablebases::probe::tests::solve_5man ... ok
+test tablebases::probe::tests::solve_7man ... ok
+test tablebases::probe::tests::test_syzygy_wdl ... ok
+test threadpool::tests::test_work_sender_receiver - should panic ... ok
+test threadpool::tests::test_work_sender_receiver_success ... ok
+test searchinfo::tests::go_mate_in_2_black ... ok
+test nnue::network::validation_tests::scalar_l1_matches_simd_for_embedded_weights ... ok
+test searchinfo::tests::go_mate_in_2_white ... ok
+test perft::tests::perft_movepicker_forward_promo_evasion_and_capture ... ok
+test searchinfo::tests::go_mated_in_2_black ... ok
+test transpositiontable::tests::memset_correct ... ok
+test searchinfo::tests::go_mated_in_2_white ... ok
+test perft::tests::perft_movepicker_start_position ... ok
+test chess::board::tests::legal_probe_reachable_tree ... ok
+test nnue::network::validation_tests::lazy_batches_and_history_match_fresh_weights ... ok
+test chess::board::movegen::tests::staged_matches_full ... ok
+test nnue::network::validation_tests::incremental_and_undo_match_fresh_weights ... ok
+
+test result: ok. 135 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.06s
+
+   Doc-tests aster_core
+
+running 2 tests
+test crates\aster-core\src\tt.rs - tt::TTWriter (line 164) - compile fail ... ok
+test crates\aster-core\src\tt.rs - tt::TTWriter (line 155) - compile fail ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+

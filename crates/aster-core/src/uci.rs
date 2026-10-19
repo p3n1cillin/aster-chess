@@ -114,6 +114,8 @@ pub fn format_score(v: Value, pos: &Position) -> String {
 
 #[derive(Clone)]
 pub struct Options {
+    #[cfg(feature = "disagreement-guard")]
+    pub disagreement_guard: bool,
     pub threads: usize,
     pub hash: usize,
     pub ponder: bool,
@@ -137,6 +139,8 @@ pub struct Options {
 impl Default for Options {
     fn default() -> Self {
         Options {
+            #[cfg(feature = "disagreement-guard")]
+            disagreement_guard: true,
             threads: 1,
             hash: 16,
             ponder: false,
@@ -162,6 +166,8 @@ impl Default for Options {
 impl Options {
     fn search_options(&self) -> SearchOptions {
         SearchOptions {
+            #[cfg(feature = "disagreement-guard")]
+            disagreement_guard: self.disagreement_guard,
             multi_pv: self.multi_pv,
             skill_level: self.skill_level,
             limit_strength: self.limit_strength,
@@ -191,6 +197,8 @@ impl Options {
                 .unwrap_or(1),
         );
         [
+            #[cfg(feature = "disagreement-guard")]
+            "option name Aster Disagreement Guard type check default true".to_string(),
             format!(
                 "option name Debug Log File type string default {}",
                 e(&Options::default().debug_log_file)
@@ -476,6 +484,8 @@ impl Engine {
         let parse_i = |v: &str| v.trim().parse::<i64>().ok();
         let parse_b = |v: &str| v.trim().eq_ignore_ascii_case("true");
         match lname.as_str() {
+            #[cfg(feature = "disagreement-guard")]
+            "aster disagreement guard" => self.options.disagreement_guard = parse_b(value),
             "threads" => {
                 if let Some(v) = parse_i(value) {
                     self.options.threads = v.clamp(1, 1024) as usize;

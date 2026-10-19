@@ -1,0 +1,14 @@
+SPDX-License-Identifier: GPL-3.0-or-later
+
+Original source header, preserved verbatim for features.rs:
+
+// Rust port of Stockfish 19 NNUE feature sets:
+// `features/half_ka_v2_hm`, `features/full_threats`, `features/pp_3wide`.
+// Copyright (C) 2004-2026 The Stockfish developers (see AUTHORS file)
+// Licensed under the GNU General Public License v3 or later.
+
+Updated 2026-10-19 with changes from Stockfish development source
+(https://github.com/official-stockfish/Stockfish commit effdc3fd3f6de6e75fe1374a51a7a7eed66f880b,
+2026-10-17): K32Q2 piece-square features (king bucket x opponent queen).
+Copyright (C) 2004-2026 The Stockfish developers (see AUTHORS file).
+Licensed under the GNU General Public License v3 or later.

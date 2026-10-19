@@ -3,6 +3,8 @@
 // Modified 2026-10-19: source naming and notice layout only.
 
 pub mod bitboard;
+#[cfg(any(feature = "disagreement-guard", test))]
+mod disagreement;
 pub mod history;
 pub mod movegen;
 pub mod movepick;

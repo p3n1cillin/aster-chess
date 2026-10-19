@@ -274,7 +274,8 @@ mod dual {
             let rev = bswap(_mm256_sub_epi64(bswap(o), rrs));
             let result = _mm256_and_si256(_mm256_xor_si256(fwd, rev), mask);
             // Lane 0: file attacks; lanes 1 and 2 (after the swap): both diagonals
-            let bishop2 = _mm256_or_si256(result, _mm256_permute4x64_epi64::<0b11_01_10_00>(result));
+            let bishop2 =
+                _mm256_or_si256(result, _mm256_permute4x64_epi64::<0b11_01_10_00>(result));
             let row = *RANK_ATTACKS
                 .get_unchecked(m.file)
                 .get_unchecked(((occupied >> (m.shift + 1)) & 0x3f) as usize)
@@ -282,7 +283,8 @@ mod dual {
             let rank_attacks = row << m.shift;
             (
                 _mm_extract_epi64::<1>(_mm256_castsi256_si128(bishop2)) as u64,
-                (_mm_cvtsi128_si64(_mm256_castsi256_si128(result)) as u64).wrapping_add(rank_attacks),
+                (_mm_cvtsi128_si64(_mm256_castsi256_si128(result)) as u64)
+                    .wrapping_add(rank_attacks),
             )
         }
     }
@@ -334,7 +336,10 @@ static TABLES_PTR: std::sync::atomic::AtomicPtr<Tables> =
 
 pub fn init() {
     let t = TABLES.get_or_init(build_tables);
-    TABLES_PTR.store(t as *const Tables as *mut Tables, std::sync::atomic::Ordering::Release);
+    TABLES_PTR.store(
+        t as *const Tables as *mut Tables,
+        std::sync::atomic::Ordering::Release,
+    );
 }
 
 fn init_magics(pt: PieceType, magics: &mut [[Magic; 2]; 64], table: &mut Vec<Bitboard>) {

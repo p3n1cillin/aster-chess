@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "binary_sha256": "0c047f5edb69a236921ba30aa46591091cf3bd8c7c4c9fbd7eeef3e7bba30e32",
+  "cases": [
+    {
+      "threads": 1,
+      "enabled": false,
+      "ready_seconds": 3.37999954354018e-05,
+      "audits": 0,
+      "root_restored": true,
+      "bestmove": "e2e4"
+    },
+    {
+      "threads": 1,
+      "enabled": true,
+      "ready_seconds": 3.1400006264448166e-05,
+      "audits": 0,
+      "root_restored": true,
+      "bestmove": "e2e4"
+    },
+    {
+      "threads": 2,
+      "enabled": false,
+      "ready_seconds": 4.369999805931002e-05,
+      "audits": 0,
+      "root_restored": true,
+      "bestmove": "e2e4"
+    },
+    {
+      "threads": 2,
+      "enabled": true,
+      "ready_seconds": 3.029999788850546e-05,
+      "audits": 0,
+      "root_restored": true,
+      "bestmove": "e2e4"
+    },
+    {
+      "threads": 4,
+      "enabled": false,
+      "ready_seconds": 4.400000034365803e-05,
+      "audits": 0,
+      "root_restored": true,
+      "bestmove": "e2e4"
+    },
+    {
+      "threads": 4,
+      "enabled": true,
+      "ready_seconds": 5.339999916031957e-05,
+      "audits": 0,
+      "root_restored": true,
+      "bestmove": "e2e4"
+    }
+  ]
+}

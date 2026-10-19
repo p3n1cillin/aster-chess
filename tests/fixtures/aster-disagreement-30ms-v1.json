@@ -1,0 +1,832 @@
+{
+  "schema": 1,
+  "seed": 2026101971,
+  "plies": 20,
+  "selection_nodes": 2048,
+  "verification_nodes": 20000,
+  "max_abs_teacher_cp": 80,
+  "teacher": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "training_exclusion": null,
+  "training_exclusions": [],
+  "prior_suites_excluded": [
+    {
+      "path": "tests\\fixtures\\capacity-classical-100ms-v1.json",
+      "sha256": "dcbebc58b5c33ec6b9e502031dc4cdc7190d76dbc222ded241970136d958b3f5",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\capacity-classical-30ms-v1.json",
+      "sha256": "01e773465168914fc65c45ac13df8db197f8e0cb4e37d4a25557e4f19701bdf8",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\capacity-control-30ms-v1.json",
+      "sha256": "76c1fefa9817b587f355cccd4dfe763ed5f435b6fc11b57fcee5eb991e2cdd30",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\capacity-parent-v1.json",
+      "sha256": "81e388417a56d17ce865237647a02506e9cc05677232c6bcbe73b1f8d2f7d39b",
+      "positions": 160
+    },
+    {
+      "path": "tests\\fixtures\\deep-turn-classical-100ms-v1.json",
+      "sha256": "b8c5da7d9648fd72ccf674ca694848f3bc526776b738087b31e3e82a6453165c",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\deep-turn-classical-30ms-v1.json",
+      "sha256": "1ffa275e525d665757213fa34a93aa4bed17982fd844d444299b01d556fd0255",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\deep-turn-control-30ms-v1.json",
+      "sha256": "99889d267db0879be7131c4039dd80d258ad2221fe54222133dd32709b595e03",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\deep-turn-parent-v1.json",
+      "sha256": "5addfa8b6a03c8fd844ff43ec8c8dc71f6c2d3184460d919fc7dee2676865237",
+      "positions": 160
+    },
+    {
+      "path": "tests\\fixtures\\iir-100ms-v1.json",
+      "sha256": "0b2e40c88ada4064628909ddba0293ce3594774520eaffae50daafcca41ecace",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\iir-30ms-v1.json",
+      "sha256": "de119d1f9630b753d18a634031c90cefac64853d43e11e386aee535b53bf4307",
+      "positions": 256
+    },
+    {
+      "path": "tests\\fixtures\\iir-behavior-v1.json",
+      "sha256": "b3680be4939c0e82ddb125c5a70a90b8c75312440333e9bc0b8d443f51fc0d15",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\iir-parent-v1.json",
+      "sha256": "46868852f9af1c2b95bc9bfaec9b68bb0b45fd916d0bfc27f792fe9596855baa",
+      "positions": 448
+    },
+    {
+      "path": "tests\\fixtures\\iir-rating-v1.json",
+      "sha256": "ce491f6df3345245f016f9b1b8f7658769da750a0826a422f4732b16eaf2653f",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\kpk-setups-v1.json",
+      "sha256": "550764811ecbb1761c70a30a82c941122450839ef442f56a8f5a5a67ed96dd13",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-100ms-v1.json",
+      "sha256": "12ed5a4dd3688e730ba6224b8c88e00bc5b016975aa8dd08e1e918bbb9f7be1e",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-30ms-v1.json",
+      "sha256": "e6f6a4f084d0c06ec7a1bcc8de86a9d13b3fa0faa3053208c3c86359e62ba423",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-behavior-v1.json",
+      "sha256": "00a8de1225c4a1e6b6f0b943c6d1d12565900eea579aa6f644d5a2b347e9f919",
+      "positions": 80
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-parent-v1.json",
+      "sha256": "d8ac1c505d3c46c819b87da63fe8308cebd18a234a1889a9215fbc2e75101f3a",
+      "positions": 208
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-rating-v1.json",
+      "sha256": "9c7886ac0b66b35fd6cc74c2937bb86ba5506c0363568e87cf769be6bca46652",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\mate-proof-match-v1.json",
+      "sha256": "14286109ef669ec3abab5d4bfeb8f5de1ca6468969b72b8fd0cd658ba94edc0a",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\mate-proof-parent-v1.json",
+      "sha256": "85553f4ff2dcc2ce9896e002ce5730d4ca54061c82f1032bdb47f0c83ae750c4",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\openings-v1.json",
+      "sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v2.json",
+      "sha256": "cdcc99af780b795546a22e84b2557bd20168097c2694cc9b12ce2e242f74bc25",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v3.json",
+      "sha256": "b2c84b63c566712b33102e1a5f246d47a010a0341f8396c5e036937c74e241f3",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v4.json",
+      "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v5.json",
+      "sha256": "e63c68d4024428bef2f84a4289db06c4aee70e60aa9f081cf437d2a6d237c46e",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\phase-classical-100ms-v1.json",
+      "sha256": "3b01d69ec7c31e2e5991b81ebb5860024b4393cb42d91c8a84db69ff20dacffc",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\phase-classical-30ms-v1.json",
+      "sha256": "3efc264b68683bd961a269679ecb493ccd53888651e5a767b34b66a7c0f5e3e1",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\phase-control-30ms-v1.json",
+      "sha256": "f29fbb72d1d3696bff82ff4630bc51b37d6148af3350e0b265509e96aab30758",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\phase-parent-v1.json",
+      "sha256": "35fd8dc040ab40538966d73d0f9c54d38ce490175e90fba10c9cf4c82363063f",
+      "positions": 80
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-100ms-v1.json",
+      "sha256": "9c760e96dc990a5ab465a5bf8eff9971ed8eae9856c76d57b6ca32f2563ba63f",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-30ms-v1.json",
+      "sha256": "940d8217dd7a6a583ddcabfe6edeffcd4769ac7f9118d00f67f081b52f238072",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-behavior-v1.json",
+      "sha256": "02d7afdbe0eb10296d53208cf96f551058d0b3323fe18570dd3cae1706b90e00",
+      "positions": 160
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-parent-v1.json",
+      "sha256": "13c3a7a689f83064490766a76d112589ef2098f93a9d92ebbfcee805f1c385f4",
+      "positions": 288
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-rating-v1.json",
+      "sha256": "b9d8a21feba1ae6c0390e1fa0dd26e3cf65848f0b2e87fd002ebbe0ef1f626fa",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\rating-confirm-v1.json",
+      "sha256": "1e904d67400433abedb8e48592b4598e8e5ed10ed82b0cdd13025de6eca8615d",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\rating-parent-v1.json",
+      "sha256": "6c4d7453e3572cadf786d81be8ad8b0b85fb9c461d5e93847612959836efb112",
+      "positions": 144
+    },
+    {
+      "path": "tests\\fixtures\\rating-screen-v1.json",
+      "sha256": "690bacaceff2559200ebb084424de85639cf045c14f094912e18f5b38ba9805f",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\relations-classical-100ms-v1.json",
+      "sha256": "2ded031474bc1542069632721b7ad8ef7807f32c1ad0378cc97438e465f64928",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\relations-classical-30ms-v1.json",
+      "sha256": "63b831b035cfbf5ed44ee4a89e7a374e29cef97918eb8d6e8b2a54893db56478",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\relations-control-30ms-v1.json",
+      "sha256": "9bd295a72aeeecafcf1234f923b27fe958065393a51c1b7331a3c7ea408d3f85",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\relations-parent-v1.json",
+      "sha256": "08d8909b4520243fa3b0f850595957b79087c532607d4c375eeb54eefc3a8a46",
+      "positions": 160
+    },
+    {
+      "path": "tests\\fixtures\\rust-foundation-original-v1.json",
+      "sha256": "f0ed641ffac5091b4dc75b076f36c2bfbc2e2f670deb8a4e613a1a24823b840f",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\rust-foundation-parent-v1.json",
+      "sha256": "ec2a76dbd775a3fcc94156c36ec0f4762f0dae6146640fe189b1d795632b40c9",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\rust-foundation-stockfish-v1.json",
+      "sha256": "7a4d448a988b4a77856d60102dedf6b5b5681bf6c6acf551239b29e23904bc36",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\rust-hyperion-100ms-v1.json",
+      "sha256": "ee3ef81d4399e94368bcb55af6ac5e0c1b22cf77b04fcdc5ec4302198962932b",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\rust-hyperion-30ms-v1.json",
+      "sha256": "454910c7a5e4265686928739954c6940f4d18e162ea69be98acb4e895878d371",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\rust-hyperion-parent-v1.json",
+      "sha256": "7934709fa40e6eb21372079081fd4b659c25ae55b8cbffeafe4b3126c490261b",
+      "positions": 192
+    },
+    {
+      "path": "tests\\fixtures\\rust-legal-probe-100ms-v1.json",
+      "sha256": "261eb9d49d5258641ed6b62cda3fb9fad11f47eebe34b4d68e9da99aaaae0c21",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\rust-legal-probe-30ms-v1.json",
+      "sha256": "46e611b01d3fb6c36eada525ae7c42872215528ad6ae2c8609d30482d009bd3f",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\rust-legal-probe-benchmark-v1.json",
+      "sha256": "a3560bd578f730f8c225129e3c6b40d6a65e2b84f3a6b74b38962591ccaa05a1",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\rust-legal-probe-parent-v1.json",
+      "sha256": "af5585d0312a4f16346b1254fe4570a40938ea13e0897504ad0592543d7d6435",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\rust-safety-v2.json",
+      "sha256": "6e8185bf92824481e77f7ab1b3e58d92e10f1a96a1f7f6a35c7daa111ba453b4",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\stable-endgame-classical-100ms-v1.json",
+      "sha256": "4682375ee99e6043c9a2face29f6ae3bd9bc46fa66c3978005ac09f09d32afe6",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\stable-endgame-classical-30ms-v1.json",
+      "sha256": "03139c4b9c389d6a607425a1fa64a3ddae9d92824fbdab765fd1138a2440f848",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\stable-endgame-control-30ms-v1.json",
+      "sha256": "19e001548702c754b8f97e37b7274b065880bc279c968954219bf356111be8fc",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\stable-endgame-parent-v1.json",
+      "sha256": "ee8a6137df3a3a0da43dcf783565e974483101bb41aeb956d52772f39fc06a19",
+      "positions": 160
+    }
+  ],
+  "attempts_used": 174,
+  "teacher_options": {
+    "Threads": 1,
+    "Hash": 64
+  },
+  "generator_sha256": "67426a622fa8ae3d70088633833cd993b074c04547e5938012cb782788c23bed",
+  "interpretation": "Seeded near-best MultiPV continuations from the start, distinct final positions, balanced under a bounded teacher check. Teacher scores do not prove equality; this is a regression suite, not an independent final superiority test.",
+  "openings": [
+    {
+      "id": "opening-066",
+      "moves": "d2d4 g8f6 b1c3 d7d5 f2f3 b8c6 c1f4 h7h5 e2e3 e7e6 h2h4 a7a6 d1d2 f8d6 f4g5 d6g3 e1e2 c8d7 e2d1 g3d6",
+      "fen": "r2qk2r/1ppb1pp1/p1nbpn2/3p2Bp/3P3P/2N1PP2/PPPQ2P1/R2K1BNR w kq - 8 11",
+      "teacher_white_cp": -4,
+      "teacher_depth": 12,
+      "attempt": 118
+    },
+    {
+      "id": "opening-084",
+      "moves": "g1f3 c7c6 c2c3 g8f6 d2d4 g7g6 c1g5 f8g7 a2a4 f6e4 g5f4 d7d5 b1d2 d8b6 d1c1 b8d7 d2e4 d5e4 a4a5 b6d8",
+      "fen": "r1bqk2r/pp1nppbp/2p3p1/P7/3PpB2/2P2N2/1P2PPPP/R1Q1KB1R w KQkq - 1 11",
+      "teacher_white_cp": 56,
+      "teacher_depth": 13,
+      "attempt": 154
+    },
+    {
+      "id": "opening-062",
+      "moves": "e2e4 e7e5 b1c3 b8c6 f1e2 f8c5 d2d3 d8h4 g1h3 h4d8 c3a4 c5b4 a4c3 d7d6 h3g5 h7h6 g5f3 c6d4 c1d2 d4f3",
+      "fen": "r1bqk1nr/ppp2pp1/3p3p/4p3/1b2P3/2NP1n2/PPPBBPPP/R2QK2R w KQkq - 0 11",
+      "teacher_white_cp": 1,
+      "teacher_depth": 13,
+      "attempt": 112
+    },
+    {
+      "id": "opening-015",
+      "moves": "d2d4 b8c6 c2c4 e7e5 d4d5 c6d4 a2a3 c7c6 a1a2 g8f6 b2b4 a7a5 b4b5 c6d5 e2e3 d4e6 c4d5 e6c5 g1e2 d8e7",
+      "fen": "r1b1kb1r/1p1pqppp/5n2/pPnPp3/8/P3P3/R3NPPP/1NBQKB1R w Kkq - 3 11",
+      "teacher_white_cp": 43,
+      "teacher_depth": 13,
+      "attempt": 25
+    },
+    {
+      "id": "opening-002",
+      "moves": "d2d4 b8c6 g1f3 d7d5 e2e3 e7e6 c2c4 g7g6 f1e2 g8e7 b1c3 b7b6 c4d5 e6d5 b2b3 f8g7 d1d2 a7a6 c1a3 a6a5",
+      "fen": "r1bqk2r/2p1npbp/1pn3p1/p2p4/3P4/BPN1PN2/P2QBPPP/R3K2R w KQkq - 0 11",
+      "teacher_white_cp": 77,
+      "teacher_depth": 13,
+      "attempt": 1
+    },
+    {
+      "id": "opening-063",
+      "moves": "c2c3 e7e6 d2d4 g8f6 g1f3 d7d5 c1g5 h7h6 g5h4 c7c5 d1c2 c5d4 c3d4 c8d7 h4f6 g7f6 g2g3 d8a5 b1c3 f8b4",
+      "fen": "rn2k2r/pp1b1p2/4pp1p/q2p4/1b1P4/2N2NP1/PPQ1PP1P/R3KB1R w KQkq - 3 11",
+      "teacher_white_cp": 1,
+      "teacher_depth": 12,
+      "attempt": 113
+    },
+    {
+      "id": "opening-027",
+      "moves": "d2d4 g8f6 c2c4 d7d6 e2e3 c7c5 d4d5 e7e6 g1f3 g7g6 f1e2 b8a6 e1g1 a8b8 b1c3 e6d5 c4d5 f8g7 a2a4 a6c7",
+      "fen": "1rbqk2r/ppn2pbp/3p1np1/2pP4/P7/2N1PN2/1P2BPPP/R1BQ1RK1 w k - 1 11",
+      "teacher_white_cp": 49,
+      "teacher_depth": 11,
+      "attempt": 47
+    },
+    {
+      "id": "opening-005",
+      "moves": "c2c3 g8f6 e2e3 c7c6 d2d4 d8c7 b1d2 e7e5 e3e4 f8e7 g1f3 d7d5 f3e5 f6e4 d1h5 e4d6 f1e2 b8d7 e5d7 c8d7",
+      "fen": "r3k2r/ppqbbppp/2pn4/3p3Q/3P4/2P5/PP1NBPPP/R1B1K2R w KQkq - 0 11",
+      "teacher_white_cp": -19,
+      "teacher_depth": 11,
+      "attempt": 7
+    },
+    {
+      "id": "opening-001",
+      "moves": "e2e4 g8f6 d2d3 e7e5 c1g5 h7h6 g5h4 d7d6 c2c3 b8c6 f1e2 c8e6 h4g3 d8e7 b1d2 g7g5 g1f3 a7a6 e1g1 f8g7",
+      "fen": "r3k2r/1pp1qpb1/p1npbn1p/4p1p1/4P3/2PP1NB1/PP1NBPPP/R2Q1RK1 w kq - 2 11",
+      "teacher_white_cp": 56,
+      "teacher_depth": 13,
+      "attempt": 0
+    },
+    {
+      "id": "opening-013",
+      "moves": "g1f3 c7c6 d2d4 f7f5 c2c3 g8f6 c1f4 g7g6 h2h3 d7d6 d1b3 a7a5 a2a4 f6d5 f4h2 d8b6 b3b6 d5b6 b1d2 f8g7",
+      "fen": "rnb1k2r/1p2p1bp/1npp2p1/p4p2/P2P4/2P2N1P/1P1NPPPB/R3KB1R w KQkq - 2 11",
+      "teacher_white_cp": 30,
+      "teacher_depth": 12,
+      "attempt": 22
+    },
+    {
+      "id": "opening-086",
+      "moves": "g1f3 c7c5 e2e4 e7e6 b1c3 a7a6 g2g3 d7d6 d2d4 f8e7 d4c5 d6c5 c1e3 d8d1 a1d1 b7b5 f1g2 h7h6 f3e5 c8b7",
+      "fen": "rn2k1nr/1b2bpp1/p3p2p/1pp1N3/4P3/2N1B1P1/PPP2PBP/3RK2R w Kkq - 2 11",
+      "teacher_white_cp": 66,
+      "teacher_depth": 11,
+      "attempt": 158
+    },
+    {
+      "id": "opening-020",
+      "moves": "c2c3 d7d5 d2d4 a7a6 d1c2 c7c6 f2f3 g7g6 b1d2 f8g7 g2g3 c6c5 d4c5 h7h5 f1g2 g8f6 f3f4 e8g8 g1f3 d8c7",
+      "fen": "rnb2rk1/1pq1ppb1/p4np1/2Pp3p/5P2/2P2NP1/PPQNP1BP/R1B1K2R w KQ - 3 11",
+      "teacher_white_cp": -28,
+      "teacher_depth": 12,
+      "attempt": 36
+    },
+    {
+      "id": "opening-030",
+      "moves": "d2d4 c7c6 e2e4 e7e6 c2c4 f8b4 b1d2 d7d5 d1b3 b4d2 c1d2 d8b6 b3a3 a7a5 g1e2 d5e4 h2h4 g8e7 a1d1 b8d7",
+      "fen": "r1b1k2r/1p1nnppp/1qp1p3/p7/2PPp2P/Q7/PP1BNPP1/3RKB1R w Kkq - 3 11",
+      "teacher_white_cp": 74,
+      "teacher_depth": 12,
+      "attempt": 52
+    },
+    {
+      "id": "opening-018",
+      "moves": "e2e4 e7e5 f1e2 g8f6 b1c3 f8c5 d2d3 e8g8 g1f3 d7d5 e1g1 d5e4 c3e4 c5d6 e4g3 f8e8 c2c3 a7a5 c1e3 f6d5",
+      "fen": "rnbqr1k1/1pp2ppp/3b4/p2np3/8/2PPBNN1/PP2BPPP/R2Q1RK1 w - - 2 11",
+      "teacher_white_cp": -3,
+      "teacher_depth": 13,
+      "attempt": 30
+    },
+    {
+      "id": "opening-052",
+      "moves": "e2e4 c7c5 b1c3 e7e6 g1e2 f8e7 e2f4 b8c6 d1g4 e8f8 g4d1 g8f6 f1e2 f8e8 e1g1 d7d6 a2a4 c8d7 h2h3 d8c7",
+      "fen": "r3k2r/ppqbbppp/2nppn2/2p5/P3PN2/2N4P/1PPPBPP1/R1BQ1RK1 w - - 1 11",
+      "teacher_white_cp": -31,
+      "teacher_depth": 13,
+      "attempt": 98
+    },
+    {
+      "id": "opening-056",
+      "moves": "g1f3 g8f6 b1c3 b8c6 e2e3 a7a6 g2g3 e7e6 f1g2 f8b4 c3e2 e8g8 b2b3 f8e8 a2a3 b4f8 c1b2 h7h6 b2f6 d8f6",
+      "fen": "r1b1rbk1/1ppp1pp1/p1n1pq1p/8/8/PP2PNP1/2PPNPBP/R2QK2R w KQ - 0 11",
+      "teacher_white_cp": -3,
+      "teacher_depth": 10,
+      "attempt": 102
+    },
+    {
+      "id": "opening-035",
+      "moves": "g1f3 d7d5 e2e3 g8f6 a2a3 c7c5 c2c4 e7e6 f1e2 d5c4 h2h3 b7b5 e1g1 c8b7 b2b3 f8e7 b3c4 b5b4 d1b3 a7a5",
+      "fen": "rn1qk2r/1b2bppp/4pn2/p1p5/1pP5/PQ2PN1P/3PBPP1/RNB2RK1 w kq - 0 11",
+      "teacher_white_cp": -64,
+      "teacher_depth": 12,
+      "attempt": 60
+    },
+    {
+      "id": "opening-006",
+      "moves": "d2d4 g8f6 b1c3 c7c5 e2e4 c5d4 d1d4 b8c6 d4a4 a7a6 c1f4 e7e5 f4g3 f8b4 g3h4 e8g8 g1f3 d7d5 e1c1 b4c3",
+      "fen": "r1bq1rk1/1p3ppp/p1n2n2/3pp3/Q3P2B/2b2N2/PPP2PPP/2KR1B1R w - - 0 11",
+      "teacher_white_cp": 31,
+      "teacher_depth": 11,
+      "attempt": 8
+    },
+    {
+      "id": "opening-090",
+      "moves": "g1f3 g8f6 c2c4 c7c5 e2e3 b7b6 d2d4 c8b7 b1c3 c5d4 d1d4 e7e6 f1e2 b8c6 d4d3 f8e7 h2h3 e8g8 d3d1 d8b8",
+      "fen": "rq3rk1/pb1pbppp/1pn1pn2/8/2P5/2N1PN1P/PP2BPP1/R1BQK2R w KQ - 3 11",
+      "teacher_white_cp": -29,
+      "teacher_depth": 12,
+      "attempt": 164
+    },
+    {
+      "id": "opening-039",
+      "moves": "g1f3 c7c6 c2c3 g8f6 a2a4 d8c7 d2d4 d7d5 f3e5 e7e6 c1f4 f8d6 b1d2 b8d7 e2e3 d6e5 d4e5 d7e5 a4a5 c6c5",
+      "fen": "r1b1k2r/ppq2ppp/4pn2/P1ppn3/5B2/2P1P3/1P1N1PPP/R2QKB1R w KQkq - 0 11",
+      "teacher_white_cp": 1,
+      "teacher_depth": 10,
+      "attempt": 68
+    },
+    {
+      "id": "opening-022",
+      "moves": "e2e4 b8c6 d2d4 d7d5 e4d5 d8d5 c1e3 g8f6 g1f3 d5h5 h2h3 h5a5 c2c3 e7e5 d4e5 c6e5 b1d2 c8e6 b2b4 e5f3",
+      "fen": "r3kb1r/ppp2ppp/4bn2/q7/1P6/2P1Bn1P/P2N1PP1/R2QKB1R w KQkq - 0 11",
+      "teacher_white_cp": 16,
+      "teacher_depth": 12,
+      "attempt": 38
+    },
+    {
+      "id": "opening-017",
+      "moves": "g1f3 g8f6 c2c4 c7c6 d1c2 b8a6 d2d4 d7d6 b1c3 g7g6 a2a3 c8g4 e2e4 c6c5 c3d5 f6d5 c4d5 f8g7 h2h3 g4d7",
+      "fen": "r2qk2r/pp1bppbp/n2p2p1/2pP4/3PP3/P4N1P/1PQ2PP1/R1B1KB1R w KQkq - 1 11",
+      "teacher_white_cp": -11,
+      "teacher_depth": 11,
+      "attempt": 27
+    },
+    {
+      "id": "opening-025",
+      "moves": "c2c3 e7e6 d2d4 g8f6 c1f4 b7b6 b1d2 f6d5 f4e5 c8b7 h2h4 b8c6 e5h2 d8h4 g1f3 h4d8 h2g3 c6e7 e2e4 d5f6",
+      "fen": "r2qkb1r/pbppnppp/1p2pn2/8/3PP3/2P2NB1/PP1N1PP1/R2QKB1R w KQkq - 1 11",
+      "teacher_white_cp": 79,
+      "teacher_depth": 11,
+      "attempt": 44
+    },
+    {
+      "id": "opening-070",
+      "moves": "g1f3 c7c5 e2e4 g7g6 c2c3 b8c6 f1e2 d7d6 d2d3 f8g7 h2h3 d8b6 e1g1 a7a6 b1d2 g8f6 d2c4 b6d8 a2a4 c8e6",
+      "fen": "r2qk2r/1p2ppbp/p1npbnp1/2p5/P1N1P3/2PP1N1P/1P2BPP1/R1BQ1RK1 w kq - 1 11",
+      "teacher_white_cp": 32,
+      "teacher_depth": 11,
+      "attempt": 127
+    },
+    {
+      "id": "opening-041",
+      "moves": "d2d4 d7d5 e2e3 c7c6 g1f3 b8d7 a2a3 e7e6 h2h3 b7b6 b2b4 a7a5 b4a5 b6a5 f1d3 c8a6 b1d2 g8f6 e1g1 d8c8",
+      "fen": "r1q1kb1r/3n1ppp/b1p1pn2/p2p4/3P4/P2BPN1P/2PN1PP1/R1BQ1RK1 w kq - 6 11",
+      "teacher_white_cp": 18,
+      "teacher_depth": 12,
+      "attempt": 74
+    },
+    {
+      "id": "opening-083",
+      "moves": "c2c3 e7e6 e2e3 d7d5 f1e2 d8g5 g2g3 f8d6 d2d4 g5e7 g1f3 g8f6 e1g1 b8d7 c3c4 c7c5 b1c3 e8g8 c4d5 f6d5",
+      "fen": "r1b2rk1/pp1nqppp/3bp3/2pn4/3P4/2N1PNP1/PP2BP1P/R1BQ1RK1 w - - 0 11",
+      "teacher_white_cp": 47,
+      "teacher_depth": 13,
+      "attempt": 153
+    },
+    {
+      "id": "opening-037",
+      "moves": "c2c3 e7e6 e2e3 c7c5 h2h3 g8f6 f1e2 b7b6 a2a4 d7d5 e2b5 b8d7 b5c6 a8b8 d2d4 a7a6 g1e2 f8e7 b2b3 e7d6",
+      "fen": "1rbqk2r/3n1ppp/ppBbpn2/2pp4/P2P4/1PP1P2P/4NPP1/RNBQK2R w KQk - 1 11",
+      "teacher_white_cp": -65,
+      "teacher_depth": 13,
+      "attempt": 65
+    },
+    {
+      "id": "opening-012",
+      "moves": "d2d4 g8f6 c2c3 d7d5 g1f3 c8f5 c1g5 b8d7 g5f6 e7f6 b1d2 f5e6 a2a4 c7c6 a4a5 a7a6 e2e4 d5e4 d2e4 f8e7",
+      "fen": "r2qk2r/1p1nbppp/p1p1bp2/P7/3PN3/2P2N2/1P3PPP/R2QKB1R w KQkq - 1 11",
+      "teacher_white_cp": 40,
+      "teacher_depth": 12,
+      "attempt": 21
+    },
+    {
+      "id": "opening-029",
+      "moves": "g1f3 c7c6 e2e4 d7d5 d1e2 d5e4 e2e4 g8f6 e4e2 c8f5 d2d4 g7g6 h2h3 f8g7 g2g4 f5d7 b1c3 d7c8 c1f4 c8e6",
+      "fen": "rn1qk2r/pp2ppbp/2p1bnp1/8/3P1BP1/2N2N1P/PPP1QP2/R3KB1R w KQkq - 5 11",
+      "teacher_white_cp": 55,
+      "teacher_depth": 12,
+      "attempt": 50
+    },
+    {
+      "id": "opening-072",
+      "moves": "d2d4 b8c6 c2c4 d7d5 c4d5 d8d5 e2e3 e7e6 c1d2 d5d8 g1f3 a7a6 f1d3 g8f6 b1c3 f8d6 e3e4 e6e5 d4d5 c6a7",
+      "fen": "r1bqk2r/npp2ppp/p2b1n2/3Pp3/4P3/2NB1N2/PP1B1PPP/R2QK2R w KQkq - 1 11",
+      "teacher_white_cp": 75,
+      "teacher_depth": 12,
+      "attempt": 129
+    },
+    {
+      "id": "opening-071",
+      "moves": "g1f3 c7c6 d2d4 d7d6 b1d2 g8f6 c2c3 c8f5 b2b3 f5g6 f3h4 g6h5 d1c2 b8d7 g2g3 h7h6 d2e4 g7g5 e4f6 d7f6",
+      "fen": "r2qkb1r/pp2pp2/2pp1n1p/6pb/3P3N/1PP3P1/P1Q1PP1P/R1B1KB1R w KQkq - 0 11",
+      "teacher_white_cp": -67,
+      "teacher_depth": 14,
+      "attempt": 128
+    },
+    {
+      "id": "opening-075",
+      "moves": "c2c3 e7e6 e2e3 c7c5 g1f3 g8f6 f1e2 b8c6 d2d4 d7d5 e1g1 f8e7 b2b3 e8g8 d4c5 a7a5 c1a3 e6e5 d1c2 c8e6",
+      "fen": "r2q1rk1/1p2bppp/2n1bn2/p1Ppp3/8/BPP1PN2/P1Q1BPPP/RN3RK1 w - - 2 11",
+      "teacher_white_cp": 18,
+      "teacher_depth": 12,
+      "attempt": 133
+    },
+    {
+      "id": "opening-032",
+      "moves": "g1f3 d7d5 e2e3 c8g4 c2c4 b8c6 c4d5 d8d5 d2d4 g4f3 g2f3 e7e6 f1g2 f8b4 b1d2 d5h5 e1g1 g8e7 f3f4 h5d1",
+      "fen": "r3k2r/ppp1nppp/2n1p3/8/1b1P1P2/4P3/PP1N1PBP/R1Bq1RK1 w kq - 0 11",
+      "teacher_white_cp": 50,
+      "teacher_depth": 13,
+      "attempt": 55
+    },
+    {
+      "id": "opening-031",
+      "moves": "d2d4 g8f6 b1c3 d7d5 c1f4 a7a6 g1f3 c8f5 f3h4 f5d7 a2a3 h7h6 f4e5 e7e6 g2g3 f6g4 e2e4 g4e5 d4e5 g7g5",
+      "fen": "rn1qkb1r/1ppb1p2/p3p2p/3pP1p1/4P2N/P1N3P1/1PP2P1P/R2QKB1R w KQkq - 0 11",
+      "teacher_white_cp": -46,
+      "teacher_depth": 14,
+      "attempt": 54
+    },
+    {
+      "id": "opening-043",
+      "moves": "d2d4 b8c6 c2c4 d7d5 c4d5 d8d5 e2e3 d5d6 d4d5 c6b8 b1c3 g8f6 g1f3 c8f5 d1b3 b8d7 f3h4 f5e4 c3e4 f6e4",
+      "fen": "r3kb1r/pppnpppp/3q4/3P4/4n2N/1Q2P3/PP3PPP/R1B1KB1R w KQkq - 0 11",
+      "teacher_white_cp": 12,
+      "teacher_depth": 10,
+      "attempt": 77
+    },
+    {
+      "id": "opening-010",
+      "moves": "e2e4 e7e5 d2d3 f8c5 f1e2 d8h4 g2g3 h4d8 g1f3 b8c6 b1d2 d7d6 a2a4 g8e7 d2b3 a7a5 c2c3 e8g8 d3d4 c5b6",
+      "fen": "r1bq1rk1/1pp1nppp/1bnp4/p3p3/P2PP3/1NP2NP1/1P2BP1P/R1BQK2R w KQ - 1 11",
+      "teacher_white_cp": -1,
+      "teacher_depth": 13,
+      "attempt": 19
+    },
+    {
+      "id": "opening-095",
+      "moves": "g1f3 c7c6 e2e4 g7g6 c2c3 a7a6 h2h4 d7d5 e4d5 d8d5 f1e2 g8f6 d2d4 c8f5 e1g1 f8g7 f3e5 e8g8 h4h5 b8d7",
+      "fen": "r4rk1/1p1nppbp/p1p2np1/3qNb1P/3P4/2P5/PP2BPP1/RNBQ1RK1 w - - 1 11",
+      "teacher_white_cp": 71,
+      "teacher_depth": 12,
+      "attempt": 172
+    },
+    {
+      "id": "opening-049",
+      "moves": "g1f3 g8f6 b1c3 e7e6 a2a3 f8e7 d2d4 c7c5 d4c5 e7c5 b2b4 c5b6 e2e4 f6g4 c1g5 b6f2 e1e2 f7f6 h2h3 f6g5",
+      "fen": "rnbqk2r/pp1p2pp/4p3/6p1/1P2P1n1/P1N2N1P/2P1KbP1/R2Q1B1R w kq - 0 11",
+      "teacher_white_cp": -19,
+      "teacher_depth": 14,
+      "attempt": 93
+    },
+    {
+      "id": "opening-079",
+      "moves": "c2c3 d7d5 d2d4 c8f5 d1b3 b7b6 g1f3 g8f6 c1g5 e7e6 b1d2 c7c5 g5f6 g7f6 e2e4 f5e4 f1b5 e8e7 d4c5 b6c5",
+      "fen": "rn1q1b1r/p3kp1p/4pp2/1Bpp4/4b3/1QP2N2/PP1N1PPP/R3K2R w KQ - 0 11",
+      "teacher_white_cp": 34,
+      "teacher_depth": 12,
+      "attempt": 144
+    },
+    {
+      "id": "opening-053",
+      "moves": "g1f3 c7c5 c2c4 b8c6 e2e4 d7d6 h2h3 e7e5 f1e2 f8e7 a2a3 g8f6 e2d3 c8e6 b1c3 b7b6 c3d5 a7a6 e1g1 a6a5",
+      "fen": "r2qk2r/4bppp/1pnpbn2/p1pNp3/2P1P3/P2B1N1P/1P1P1PP1/R1BQ1RK1 w kq - 0 11",
+      "teacher_white_cp": 5,
+      "teacher_depth": 12,
+      "attempt": 99
+    },
+    {
+      "id": "opening-068",
+      "moves": "e2e4 b8c6 d2d4 d7d5 f1b5 e7e6 b1c3 g8e7 g1e2 a7a6 b5d3 d5e4 d3e4 e7f5 e1g1 f8d6 f1e1 e8g8 a2a3 f8e8",
+      "fen": "r1bqr1k1/1pp2ppp/p1nbp3/5n2/3PB3/P1N5/1PP1NPPP/R1BQR1K1 w - - 1 11",
+      "teacher_white_cp": 17,
+      "teacher_depth": 8,
+      "attempt": 120
+    },
+    {
+      "id": "opening-007",
+      "moves": "e2e4 b8c6 b1c3 e7e5 g1f3 f8b4 c3d5 b4d6 d5e3 g8f6 d2d3 d6c5 e3d5 f6g4 c1e3 c6d4 e3d4 e5d4 h2h3 c7c6",
+      "fen": "r1bqk2r/pp1p1ppp/2p5/2bN4/3pP1n1/3P1N1P/PPP2PP1/R2QKB1R w KQkq - 0 11",
+      "teacher_white_cp": 72,
+      "teacher_depth": 15,
+      "attempt": 9
+    },
+    {
+      "id": "opening-081",
+      "moves": "d2d4 c7c6 c2c4 d7d5 d1c2 e7e6 g1f3 d5c4 g2g3 b7b5 b1d2 g8f6 f1g2 b8a6 a2a3 d8b6 b2b3 c4b3 d2b3 c8b7",
+      "fen": "r3kb1r/pb3ppp/nqp1pn2/1p6/3P4/PN3NP1/2Q1PPBP/R1B1K2R w KQkq - 1 11",
+      "teacher_white_cp": 42,
+      "teacher_depth": 12,
+      "attempt": 150
+    },
+    {
+      "id": "opening-019",
+      "moves": "e2e4 b8c6 f1c4 e7e5 b1c3 g8f6 g1e2 c6a5 c4b3 a5b3 c2b3 d7d5 d2d4 e5d4 e2d4 c8g4 f2f3 g4e6 c1g5 f8e7",
+      "fen": "r2qk2r/ppp1bppp/4bn2/3p2B1/3NP3/1PN2P2/PP4PP/R2QK2R w KQkq - 3 11",
+      "teacher_white_cp": 74,
+      "teacher_depth": 13,
+      "attempt": 34
+    },
+    {
+      "id": "opening-008",
+      "moves": "d2d4 b8c6 g1f3 d7d5 c2c4 e7e5 d4e5 c8e6 c1g5 g8e7 b1d2 h7h6 g5f4 d5d4 h2h3 a7a5 d1c2 e7g6 f4h2 a5a4",
+      "fen": "r2qkb1r/1pp2pp1/2n1b1np/4P3/p1Pp4/5N1P/PPQNPPPB/R3KB1R w KQkq - 0 11",
+      "teacher_white_cp": 11,
+      "teacher_depth": 11,
+      "attempt": 11
+    },
+    {
+      "id": "opening-033",
+      "moves": "e2e4 g8f6 e4e5 f6g8 f2f4 e7e6 c2c3 c7c5 g1f3 g8e7 g2g3 d7d5 b1a3 b8c6 a3c2 d8b6 e1f2 c5c4 f2e1 e7f5",
+      "fen": "r1b1kb1r/pp3ppp/1qn1p3/3pPn2/2p2P2/2P2NP1/PPNP3P/R1BQKB1R w kq - 2 11",
+      "teacher_white_cp": 55,
+      "teacher_depth": 12,
+      "attempt": 56
+    },
+    {
+      "id": "opening-028",
+      "moves": "c2c3 e7e5 d1a4 c7c6 d2d3 g8e7 a4c2 c6c5 g1f3 d8c7 e2e4 a7a6 b1d2 g7g6 a2a4 d7d5 e4d5 e7d5 g2g3 c8f5",
+      "fen": "rn2kb1r/1pq2p1p/p5p1/2pnpb2/P7/2PP1NP1/1PQN1P1P/R1B1KB1R w KQkq - 1 11",
+      "teacher_white_cp": 14,
+      "teacher_depth": 10,
+      "attempt": 49
+    },
+    {
+      "id": "opening-067",
+      "moves": "e2e4 g8f6 d2d3 b8c6 d3d4 e7e6 f2f3 f8e7 g1e2 e8g8 b1c3 d7d5 a2a3 a7a6 c1f4 c6a5 b2b4 a5c4 e2g3 c4b2",
+      "fen": "r1bq1rk1/1pp1bppp/p3pn2/3p4/1P1PPB2/P1N2PN1/1nP3PP/R2QKB1R w KQ - 3 11",
+      "teacher_white_cp": 44,
+      "teacher_depth": 14,
+      "attempt": 119
+    },
+    {
+      "id": "opening-051",
+      "moves": "e2e4 c7c5 h2h3 d7d6 b1c3 e7e6 f1b5 b8c6 g1f3 g8f6 e4e5 d6e5 b5c6 b7c6 f3e5 f6d5 e1g1 f7f6 e5d3 c5c4",
+      "fen": "r1bqkb1r/p5pp/2p1pp2/3n4/2p5/2NN3P/PPPP1PP1/R1BQ1RK1 w kq - 0 11",
+      "teacher_white_cp": -31,
+      "teacher_depth": 12,
+      "attempt": 95
+    },
+    {
+      "id": "opening-045",
+      "moves": "g1f3 g8f6 c2c4 e7e6 e2e3 g7g6 h2h3 f8g7 f1e2 c7c6 d2d4 e8g8 e1g1 a7a5 b2b3 d7d5 c1b2 b7b6 b1d2 b8d7",
+      "fen": "r1bq1rk1/3n1pbp/1pp1pnp1/p2p4/2PP4/1P2PN1P/PB1NBPP1/R2Q1RK1 w - - 2 11",
+      "teacher_white_cp": 38,
+      "teacher_depth": 13,
+      "attempt": 81
+    },
+    {
+      "id": "opening-003",
+      "moves": "g1f3 c7c5 e2e3 g8f6 f1b5 e7e6 c2c3 d8c7 d2d4 b7b6 b2b3 a7a6 b5e2 d7d5 c1b2 c8b7 h2h3 b8d7 c3c4 f8e7",
+      "fen": "r3k2r/1bqnbppp/pp2pn2/2pp4/2PP4/1P2PN1P/PB2BPP1/RN1QK2R w KQkq - 1 11",
+      "teacher_white_cp": -12,
+      "teacher_depth": 12,
+      "attempt": 2
+    },
+    {
+      "id": "opening-074",
+      "moves": "c2c3 d7d5 g1f3 c7c6 d2d4 b8d7 b1d2 g7g6 d1c2 g8f6 a2a4 f8h6 g2g3 h6g7 f1g2 c6c5 e2e4 d5e4 d2e4 f6e4",
+      "fen": "r1bqk2r/pp1nppbp/6p1/2p5/P2Pn3/2P2NP1/1PQ2PBP/R1B1K2R w KQkq - 0 11",
+      "teacher_white_cp": 2,
+      "teacher_depth": 11,
+      "attempt": 132
+    },
+    {
+      "id": "opening-023",
+      "moves": "g1f3 g8f6 e2e3 b7b6 c2c4 g7g6 f1e2 c7c5 d2d4 c5d4 f3d4 b8c6 e1g1 c8b7 b1c3 f8g7 a2a4 e8g8 a1b1 d7d5",
+      "fen": "r2q1rk1/pb2ppbp/1pn2np1/3p4/P1PN4/2N1P3/1P2BPPP/1RBQ1RK1 w - - 0 11",
+      "teacher_white_cp": -2,
+      "teacher_depth": 16,
+      "attempt": 41
+    },
+    {
+      "id": "opening-011",
+      "moves": "d2d4 b8c6 c2c4 e7e5 d4e5 d7d6 e5e6 f7f5 b1c3 f8e7 g1h3 c6e5 f2f4 e5g4 d1c2 c7c6 c2f5 g8h6 f5d3 c8e6",
+      "fen": "r2qk2r/pp2b1pp/2ppb2n/8/2P2Pn1/2NQ3N/PP2P1PP/R1B1KB1R w KQkq - 0 11",
+      "teacher_white_cp": 72,
+      "teacher_depth": 11,
+      "attempt": 20
+    },
+    {
+      "id": "opening-014",
+      "moves": "e2e4 c7c5 f1c4 b8c6 g1f3 a7a6 c2c3 c6a5 c4d3 a5c6 d1e2 e7e5 a2a4 g8f6 d3c4 f8d6 b1a3 d6c7 f3g5 d7d5",
+      "fen": "r1bqk2r/1pb2ppp/p1n2n2/2ppp1N1/P1B1P3/N1P5/1P1PQPPP/R1B1K2R w KQkq - 0 11",
+      "teacher_white_cp": 47,
+      "teacher_depth": 11,
+      "attempt": 23
+    },
+    {
+      "id": "opening-021",
+      "moves": "e2e4 b8c6 b1c3 e7e6 f1b5 f8c5 c3a4 c5d6 b5c6 d7c6 g1f3 d8f6 d1e2 e6e5 h2h3 g8e7 d2d4 e7g6 c1e3 e8g8",
+      "fen": "r1b2rk1/ppp2ppp/2pb1qn1/4p3/N2PP3/4BN1P/PPP1QPP1/R3K2R w KQ - 3 11",
+      "teacher_white_cp": -11,
+      "teacher_depth": 12,
+      "attempt": 37
+    },
+    {
+      "id": "opening-078",
+      "moves": "d2d4 d7d5 c1f4 g8f6 b1d2 c7c5 g1f3 d8b6 c2c3 c5d4 f3d4 f6g4 f4b8 a8b8 d1a4 e8d8 a4b3 e7e6 h2h3 b6b3",
+      "fen": "1rbk1b1r/pp3ppp/4p3/3p4/3N2n1/1qP4P/PP1NPPP1/R3KB1R w KQ - 0 11",
+      "teacher_white_cp": 45,
+      "teacher_depth": 13,
+      "attempt": 143
+    },
+    {
+      "id": "opening-089",
+      "moves": "g1f3 c7c5 e2e3 e7e6 c2c4 a7a6 f1e2 f8e7 d2d4 c5d4 f3d4 g8f6 h2h3 b8c6 e1g1 b7b6 d4c6 d7c6 d1c2 d8c7",
+      "fen": "r1b1k2r/2q1bppp/ppp1pn2/8/2P5/4P2P/PPQ1BPP1/RNB2RK1 w kq - 2 11",
+      "teacher_white_cp": 12,
+      "teacher_depth": 12,
+      "attempt": 163
+    },
+    {
+      "id": "opening-004",
+      "moves": "c2c3 d7d5 d2d4 c8f5 h2h3 b8d7 c1f4 e7e6 d1b3 a8b8 g1f3 f8d6 f4h2 h7h6 b1d2 g8f6 e2e3 d6h2 f3h2 c7c5",
+      "fen": "1r1qk2r/pp1n1pp1/4pn1p/2pp1b2/3P4/1QP1P2P/PP1N1PPN/R3KB1R w KQk - 0 11",
+      "teacher_white_cp": -54,
+      "teacher_depth": 12,
+      "attempt": 3
+    },
+    {
+      "id": "opening-065",
+      "moves": "e2e4 c7c5 b1c3 d7d6 f1b5 b8d7 b5e2 e7e6 a2a4 g8f6 g1h3 f8e7 f2f4 e8g8 h3f2 d7b8 d2d3 b8c6 e2f3 f6e8",
+      "fen": "r1bqnrk1/pp2bppp/2npp3/2p5/P3PP2/2NP1B2/1PP2NPP/R1BQK2R w KQ - 3 11",
+      "teacher_white_cp": 10,
+      "teacher_depth": 12,
+      "attempt": 116
+    },
+    {
+      "id": "opening-082",
+      "moves": "c2c3 e7e5 c3c4 g8f6 a2a3 f8e7 b1c3 c7c5 g1f3 e5e4 f3g5 d7d5 c4d5 e8g8 e2e3 h7h6 g5h3 f8e8 b2b3 a7a6",
+      "fen": "rnbqr1k1/1p2bpp1/p4n1p/2pP4/4p3/PPN1P2N/3P1PPP/R1BQKB1R w KQ - 0 11",
+      "teacher_white_cp": -59,
+      "teacher_depth": 13,
+      "attempt": 152
+    },
+    {
+      "id": "opening-091",
+      "moves": "c2c3 e7e5 d1a4 c7c5 d2d3 b8c6 e2e4 d7d6 g1f3 f7f5 f1e2 f8e7 e1g1 a7a5 b2b4 c5b4 a2a3 b4a3 b1a3 g8f6",
+      "fen": "r1bqk2r/1p2b1pp/2np1n2/p3pp2/Q3P3/N1PP1N2/4BPPP/R1B2RK1 w kq - 1 11",
+      "teacher_white_cp": -17,
+      "teacher_depth": 12,
+      "attempt": 165
+    },
+    {
+      "id": "opening-087",
+      "moves": "g1f3 c7c5 e2e3 g8f6 c2c4 e7e6 f1e2 b7b6 d2d4 c5d4 e3d4 h7h6 d4d5 c8b7 d5d6 f6e4 e1g1 d8f6 f1e1 b8c6",
+      "fen": "r3kb1r/pb1p1pp1/1pnPpq1p/8/2P1n3/5N2/PP2BPPP/RNBQR1K1 w kq - 5 11",
+      "teacher_white_cp": -53,
+      "teacher_depth": 12,
+      "attempt": 159
+    },
+    {
+      "id": "opening-076",
+      "moves": "c2c3 e7e5 d1a4 c7c5 d2d4 c5d4 c3d4 b8c6 d4e5 d7d6 e2e4 a7a6 e5d6 f8d6 c1e3 d8e7 g1f3 d6b4 b1c3 g8f6",
+      "fen": "r1b1k2r/1p2qppp/p1n2n2/8/Qb2P3/2N1BN2/PP3PPP/R3KB1R w KQkq - 6 11",
+      "teacher_white_cp": 24,
+      "teacher_depth": 10,
+      "attempt": 140
+    }
+  ],
+  "parent_sha256": "7775d7f888719c139eec40d080ad021bae8c9ae05923a4a4a2fd53fd4010cbe3",
+  "range": [
+    0,
+    64
+  ]
+}

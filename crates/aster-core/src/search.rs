@@ -219,6 +219,8 @@ impl LimitsType {
 
 #[derive(Clone)]
 pub struct SearchOptions {
+    #[cfg(feature = "disagreement-guard")]
+    pub disagreement_guard: bool,
     pub multi_pv: usize,
     pub skill_level: i32,
     pub limit_strength: bool,
@@ -364,6 +366,8 @@ pub struct Worker {
     pub capture_history: Box<CapturePieceToHistory>,
     pub continuation_correction_history: Box<ContinuationCorrectionHistory>,
     pub tt_move_history: i16,
+    #[cfg(feature = "disagreement-guard")]
+    guard_budget: crate::disagreement::AuditBudget,
 
     pub shared: SharedRef,
     pub limits: LimitsType,
@@ -461,6 +465,8 @@ impl Worker {
             capture_history: boxed_zeroed(),
             continuation_correction_history: boxed_zeroed(),
             tt_move_history: 0,
+            #[cfg(feature = "disagreement-guard")]
+            guard_budget: crate::disagreement::AuditBudget::default(),
             shared,
             limits: LimitsType::default(),
             options,
@@ -579,8 +585,8 @@ impl Worker {
 
     #[inline(always)]
     fn reduction(&self, improving: bool, d: Depth, mn: i32) -> i32 {
-        let reduction_scale = self.reductions[d as usize % MAX_MOVES]
-            * self.reductions[mn as usize % MAX_MOVES];
+        let reduction_scale =
+            self.reductions[d as usize % MAX_MOVES] * self.reductions[mn as usize % MAX_MOVES];
         reduction_scale + (!improving) as i32 * reduction_scale * 197 / 512 + 948
     }
 
@@ -858,6 +864,10 @@ impl Worker {
 
     /// Main iterative deepening loop. Returns whether the final PV was sent.
     pub fn iterative_deepening(&mut self) -> bool {
+        #[cfg(feature = "disagreement-guard")]
+        {
+            self.guard_budget = crate::disagreement::AuditBudget::default();
+        }
         let main = self.is_mainthread();
         self.tb = if self.tb_config.cardinality > 0 || self.tb_config.root_in_tb {
             crate::syzygy::current()
@@ -1743,6 +1753,24 @@ impl Worker {
             return prob_cut_beta;
         }
 
+        #[cfg(feature = "disagreement-guard")]
+        let guard_node = self.options.disagreement_guard
+            && !root_node
+            && !in_check
+            && !seek_mate
+            && excluded_move.is_none()
+            && (pv_node || self.ss(ss).tt_pv)
+            && tt_hit
+            && crate::disagreement::Evidence {
+                depth,
+                current: self.ss(ss).static_eval,
+                previous: self.ss(ss - 2).static_eval,
+                cached: tt_data.value,
+                cached_depth: tt_data.depth,
+                bound: tt_data.bound,
+            }
+            .disagrees();
+
         let cont_hist: [*const PieceToHistory; 6] = [
             self.ss(ss - 1).continuation_history,
             self.ss(ss - 2).continuation_history,
@@ -2014,9 +2042,23 @@ impl Worker {
                 // Limited extensions beyond newDepth, but not deep in the tree
                 // relative to rootDepth, to avoid search explosion.
                 let d = (new_depth
-                    + (-r / 1024).min(if self.ss(ss).ply < 2 * self.root_depth { 2 } else { 0 }))
+                    + (-r / 1024).min(if self.ss(ss).ply < 2 * self.root_depth {
+                        2
+                    } else {
+                        0
+                    }))
                 .max(1)
                     + pv_node as i32;
+
+                #[cfg(feature = "disagreement-guard")]
+                let d = self.guard_budget.child_depth(
+                    guard_node,
+                    new_depth,
+                    d,
+                    move_count,
+                    capture,
+                    gives_check,
+                );
 
                 self.ssm(ss).reduction = new_depth - d;
                 if self.trace_on && d < new_depth {
@@ -2850,6 +2892,18 @@ impl Worker {
         } else {
             Move::NONE
         };
+        #[cfg(feature = "disagreement-guard")]
+        if self.options.disagreement_guard && !self.shared.silent.load(Relaxed) {
+            let audits = self.guard_budget.spent as u64
+                + helpers
+                    .iter()
+                    .map(|w| w.guard_budget.spent as u64)
+                    .sum::<u64>();
+            uci::emit(&format!(
+                "info string Aster disagreement guard audits {audits} max_per_thread {}\n",
+                crate::disagreement::AUDIT_LIMIT
+            ));
+        }
         (best, ponder)
     }
 }

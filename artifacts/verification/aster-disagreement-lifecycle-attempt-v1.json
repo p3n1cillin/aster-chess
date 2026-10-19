@@ -1,0 +1,7 @@
+{
+  "passed": false,
+  "kind": "verifier expectation mismatch",
+  "expected": "Fen:",
+  "observed": "info string fen followed by the correct starting FEN",
+  "repair": "Read the new core protocol prefix. No engine code or parameters changed."
+}
