@@ -23,6 +23,7 @@ def main():
     paths+=[ROOT/'scripts'/name for name in ['freeze_rust.py','fetch_rust_network.py','fetch_aster_network.py','fetch_reference.py','research_reference.py','research-reference.json','verify_source_names.py','verify_disagreement_guard.py','analyze_disagreement.py','verify_aster_branding.py','tactics.py','verify.py','verify_rust.py','verify_rust_equivalence.py','smoke_rust_play.py','smoke_mate_proof.py','verify_mate_proof.py','verify_rust_proofs.py','match.py','match_recovery.py','uci_client.py','build.ps1','play.ps1','rust-paths.ps1','benchmark_rust_legal_probe.py']]
     entries=[]
     paths += [ROOT / 'scripts' / 'benchmark_indexed_accumulators.py']
+    paths += [ROOT / 'scripts' / name for name in ['verify_evaluation_risk.py', 'verify_evaluation_risk_lifecycle.py', 'analyze_evaluation_risk.py']]
     for path in sorted(paths):
         relative=path.relative_to(ROOT);target=directory/relative;target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(path,target)
         entries.append({'path':relative.as_posix(),'sha256':hashlib.sha256(target.read_bytes()).hexdigest()})

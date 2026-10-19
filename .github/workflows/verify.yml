@@ -29,6 +29,7 @@ jobs:
       - run: cargo test --workspace --release --locked
       - run: cargo test --workspace --locked
       - run: cargo test --release --locked -p aster-core --features disagreement-guard
+      - run: cargo test --release --locked -p aster-core --features "evaluation-risk,disagreement-guard"
       - run: python scripts/verify.py --setups 1000
       - run: python scripts/verify_rust_legal_edges.py
       - run: python scripts/smoke_rust_play.py

@@ -18,6 +18,7 @@ name = "aster-core"
 path = "src/main.rs"
 
 [features]
+evaluation-risk = []
 # Bounded Aster search experiment; excluded from production builds.
 disagreement-guard = []
 # Embed the pinned network (verified by build.rs) so the binary is self-contained.

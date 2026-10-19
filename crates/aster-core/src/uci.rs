@@ -114,6 +114,8 @@ pub fn format_score(v: Value, pos: &Position) -> String {
 
 #[derive(Clone)]
 pub struct Options {
+    #[cfg(feature = "evaluation-risk")]
+    pub evaluation_risk: bool,
     #[cfg(feature = "disagreement-guard")]
     pub disagreement_guard: bool,
     pub threads: usize,
@@ -139,6 +141,8 @@ pub struct Options {
 impl Default for Options {
     fn default() -> Self {
         Options {
+            #[cfg(feature = "evaluation-risk")]
+            evaluation_risk: true,
             #[cfg(feature = "disagreement-guard")]
             disagreement_guard: true,
             threads: 1,
@@ -166,6 +170,8 @@ impl Default for Options {
 impl Options {
     fn search_options(&self) -> SearchOptions {
         SearchOptions {
+            #[cfg(feature = "evaluation-risk")]
+            evaluation_risk: self.evaluation_risk,
             #[cfg(feature = "disagreement-guard")]
             disagreement_guard: self.disagreement_guard,
             multi_pv: self.multi_pv,
@@ -197,6 +203,8 @@ impl Options {
                 .unwrap_or(1),
         );
         [
+            #[cfg(feature = "evaluation-risk")]
+            "option name Aster Evaluation Risk type check default true".to_string(),
             #[cfg(feature = "disagreement-guard")]
             "option name Aster Disagreement Guard type check default true".to_string(),
             format!(
@@ -484,6 +492,8 @@ impl Engine {
         let parse_i = |v: &str| v.trim().parse::<i64>().ok();
         let parse_b = |v: &str| v.trim().eq_ignore_ascii_case("true");
         match lname.as_str() {
+            #[cfg(feature = "evaluation-risk")]
+            "aster evaluation risk" => self.options.evaluation_risk = parse_b(value),
             #[cfg(feature = "disagreement-guard")]
             "aster disagreement guard" => self.options.disagreement_guard = parse_b(value),
             "threads" => {

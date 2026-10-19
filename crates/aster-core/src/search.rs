@@ -219,6 +219,8 @@ impl LimitsType {
 
 #[derive(Clone)]
 pub struct SearchOptions {
+    #[cfg(feature = "evaluation-risk")]
+    pub evaluation_risk: bool,
     #[cfg(feature = "disagreement-guard")]
     pub disagreement_guard: bool,
     pub multi_pv: usize,
@@ -368,6 +370,8 @@ pub struct Worker {
     pub tt_move_history: i16,
     #[cfg(feature = "disagreement-guard")]
     guard_budget: crate::disagreement::AuditBudget,
+    #[cfg(feature = "evaluation-risk")]
+    risk_history: crate::evaluation_risk::RiskHistory,
 
     pub shared: SharedRef,
     pub limits: LimitsType,
@@ -467,6 +471,8 @@ impl Worker {
             tt_move_history: 0,
             #[cfg(feature = "disagreement-guard")]
             guard_budget: crate::disagreement::AuditBudget::default(),
+            #[cfg(feature = "evaluation-risk")]
+            risk_history: crate::evaluation_risk::RiskHistory::default(),
             shared,
             limits: LimitsType::default(),
             options,
@@ -544,6 +550,10 @@ impl Worker {
 
     /// Reset histories, usually before a new game.
     pub fn clear(&mut self) {
+        #[cfg(feature = "evaluation-risk")]
+        {
+            self.risk_history = crate::evaluation_risk::RiskHistory::default();
+        }
         for c in self.main_history.iter_mut() {
             c.fill(-5);
         }
@@ -864,6 +874,8 @@ impl Worker {
 
     /// Main iterative deepening loop. Returns whether the final PV was sent.
     pub fn iterative_deepening(&mut self) -> bool {
+        #[cfg(feature = "evaluation-risk")]
+        self.risk_history.new_search();
         #[cfg(feature = "disagreement-guard")]
         {
             self.guard_budget = crate::disagreement::AuditBudget::default();
@@ -1289,6 +1301,9 @@ impl Worker {
         let all_node = !(pv_node || cut_node);
         let seek_mate = self.seek_mate;
 
+        #[cfg(feature = "evaluation-risk")]
+        let risk_window = (alpha, beta);
+
         // Dive into quiescence search when the depth reaches zero
         if depth <= 0 {
             return if pv_node {
@@ -1455,6 +1470,17 @@ impl Worker {
         }
 
         // Step 6. Early TT cutoff at non-PV nodes
+        #[cfg(feature = "evaluation-risk")]
+        let risk_context = (
+            crate::evaluation_risk::bucket(
+                pos.pieces().count_ones(),
+                pos.pieces_t(QUEEN) != 0,
+                us,
+                depth,
+            ),
+            depth,
+        );
+
         if !pv_node
             && excluded_move.is_none()
             && is_valid(tt_data.value)
@@ -1631,7 +1657,19 @@ impl Worker {
                         / 1024
                     + correction_value.abs() / 198435;
                 if eval - futility_margin >= beta {
-                    return (661 * beta + 363 * eval) / 1024;
+                    #[cfg(feature = "evaluation-risk")]
+                    let defer = self.options.evaluation_risk
+                        && !seek_mate
+                        && (3..=8).contains(&depth)
+                        && eval == static_eval
+                        && self
+                            .risk_history
+                            .defer(risk_context.0, eval - futility_margin - beta);
+                    #[cfg(not(feature = "evaluation-risk"))]
+                    let defer = false;
+                    if !defer {
+                        return (661 * beta + 363 * eval) / 1024;
+                    }
                 }
             }
 
@@ -2333,6 +2371,24 @@ impl Worker {
             );
         }
 
+        #[cfg(feature = "evaluation-risk")]
+        if self.options.evaluation_risk
+            && pv_node
+            && !root_node
+            && !in_check
+            && excluded_move.is_none()
+            && !self.stopped()
+            && (2..=10).contains(&risk_context.1)
+            && best_move.is_some()
+            && best_move.type_of() == NORMAL
+            && !pos.capture(best_move)
+            && best_value > risk_window.0
+            && best_value < risk_window.1.min(beta)
+        {
+            self.risk_history
+                .observe(risk_context.0, static_eval, best_value);
+        }
+
         // Adjust correction history
         if !in_check
             && !(best_move.is_some() && pos.capture(best_move))
@@ -2902,6 +2958,23 @@ impl Worker {
             uci::emit(&format!(
                 "info string Aster disagreement guard audits {audits} max_per_thread {}\n",
                 crate::disagreement::AUDIT_LIMIT
+            ));
+        }
+        #[cfg(feature = "evaluation-risk")]
+        if self.options.evaluation_risk && !self.shared.silent.load(Relaxed) {
+            let samples = self.risk_history.observations as u64
+                + helpers
+                    .iter()
+                    .map(|w| w.risk_history.observations as u64)
+                    .sum::<u64>();
+            let deferred = self.risk_history.deferred as u64
+                + helpers
+                    .iter()
+                    .map(|w| w.risk_history.deferred as u64)
+                    .sum::<u64>();
+            uci::emit(&format!(
+                "info string Aster evaluation risk samples {samples} deferred {deferred} max_per_thread {}\n",
+                crate::evaluation_risk::DEFER_LIMIT
             ));
         }
         (best, ponder)

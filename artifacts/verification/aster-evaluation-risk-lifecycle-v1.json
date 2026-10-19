@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "binary_sha256": "819e714956c5dbc2a26209daa23e4d55c0f537c644b29c40fc13a337d9984057",
+  "checker_sha256": "89f1a40965e2139ea43a8d320f61c9a7a76303bb84e1882a04156d7609b3caab",
+  "cases": [
+    {
+      "threads": 1,
+      "enabled": false,
+      "ready_seconds": 0.00011629999789875001,
+      "root_restored": true,
+      "samples": 0,
+      "deferred": 0
+    },
+    {
+      "threads": 1,
+      "enabled": true,
+      "ready_seconds": 0.00010789999214466661,
+      "root_restored": true,
+      "samples": 90,
+      "deferred": 64
+    },
+    {
+      "threads": 2,
+      "enabled": false,
+      "ready_seconds": 9.849999332800508e-05,
+      "root_restored": true,
+      "samples": 0,
+      "deferred": 0
+    },
+    {
+      "threads": 2,
+      "enabled": true,
+      "ready_seconds": 8.539999544154853e-05,
+      "root_restored": true,
+      "samples": 264,
+      "deferred": 128
+    },
+    {
+      "threads": 4,
+      "enabled": false,
+      "ready_seconds": 8.589999924879521e-05,
+      "root_restored": true,
+      "samples": 0,
+      "deferred": 0
+    },
+    {
+      "threads": 4,
+      "enabled": true,
+      "ready_seconds": 0.00013329999637790024,
+      "root_restored": true,
+      "samples": 528,
+      "deferred": 256
+    }
+  ],
+  "deterministic_resets": [
+    {
+      "reset": "ucinewgame",
+      "result": {
+        "last_info": "info depth 12 seldepth 18 multipv 1 score cp 20 nodes 15349 nps <timing> hashfull 0 tbhits 0 time <timing> pv e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 g8f6 d4c6 b7c6",
+        "bestmove": "bestmove e2e4 ponder e7e5",
+        "samples": 26,
+        "deferred": 0
+      }
+    },
+    {
+      "reset": "ucinewgame",
+      "result": {
+        "last_info": "info depth 12 seldepth 18 multipv 1 score cp 20 nodes 15349 nps <timing> hashfull 0 tbhits 0 time <timing> pv e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 g8f6 d4c6 b7c6",
+        "bestmove": "bestmove e2e4 ponder e7e5",
+        "samples": 26,
+        "deferred": 0
+      }
+    },
+    {
+      "reset": "setoption name Clear Hash",
+      "result": {
+        "last_info": "info depth 12 seldepth 18 multipv 1 score cp 20 nodes 15349 nps <timing> hashfull 0 tbhits 0 time <timing> pv e2e4 e7e5 g1f3 b8c6 d2d4 e5d4 f3d4 g8f6 d4c6 b7c6",
+        "bestmove": "bestmove e2e4 ponder e7e5",
+        "samples": 26,
+        "deferred": 0
+      }
+    }
+  ],
+  "checks": "Threads1/2/4,3MiB hash, enabled/disabled ready during search, stop, legal PV/bestmove, root restored; repeated game/clear-hash reset reproduces complete final info and activity."
+}

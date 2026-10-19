@@ -15,3 +15,7 @@ Licensed under the GNU General Public License v3 or later.
 Aster experimental changes (2026-10-19): compile-gated disagreement-driven
 verification budget and per-search activity telemetry. Policy is heuristic.
 Copyright (C) 2026 Aster contributors.
+
+Aster experimental changes (2026-10-19): feature-gated online observed
+overestimation history and bounded reverse-futility deferrals. Heuristic only.
+Copyright (C) 2026 Aster contributors.

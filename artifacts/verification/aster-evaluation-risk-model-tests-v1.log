@@ -1,0 +1,24 @@
+   Compiling aster-core v1.0.0 (C:\Users\lukem\.codex\worktrees\continuation-search\chess\crates\aster-core)
+    Finished `release` profile [optimized] target(s) in 9.73s
+     Running unittests src\lib.rs (target\release\deps\aster_core-1cb6faae6a6e38c0.exe)
+
+running 4 tests
+test evaluation_risk::tests::every_material_depth_side_context_is_separate_and_bounded ... ok
+test evaluation_risk::tests::invalid_labels_cannot_train_and_clipping_prevents_overflow ... ok
+test evaluation_risk::tests::warmup_bounds_and_one_sided_error_are_required ... ok
+test evaluation_risk::tests::search_budget_resets_but_game_history_only_clears_explicitly ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 14 filtered out; finished in 0.00s
+
+     Running unittests src\main.rs (target\release\deps\aster_core-8a0d1fa968ea468e.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\port.rs (target\release\deps\port-8a7e7f3ba1606b8b.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 4 filtered out; finished in 0.00s
+

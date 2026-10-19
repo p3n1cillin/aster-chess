@@ -5,6 +5,8 @@
 pub mod bitboard;
 #[cfg(any(feature = "disagreement-guard", test))]
 mod disagreement;
+#[cfg(any(feature = "evaluation-risk", test))]
+mod evaluation_risk;
 pub mod history;
 pub mod movegen;
 pub mod movepick;
