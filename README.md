@@ -1,11 +1,11 @@
 # Aster Rust
 
-Aster is now developed and built in **Rust only**. Its active engine is an
-attributed source fork of **Viridithas 20.0.0**, with its original trained neural
-network, Aster's independently checkable mating certificates, and a native Rust
-browser host. It does not invoke Stockfish, python-chess or the legacy C# engine
-at runtime. The upstream MIT notice and exact source fingerprints are preserved
-in `crates/engine/LICENSE.upstream-MIT` and `crates/engine/UPSTREAM.json`.
+Aster is developed and built in **Rust only**. Its native search and neural
+core is `crates/aster-core`; it runs in the same executable as the browser host,
+search visualization and independently checkable mating certificates. No external
+engine, python-chess or .NET runtime is used to play. Source origins, GPL/MIT
+notices and contributor credits are preserved in `THIRD_PARTY_NOTICES.md`,
+`crates/aster-core/AUTHORS` and the upstream manifests.
 
 The goal remains to surpass full-strength Stockfish in reproducible, controlled
 playing-strength tests. **That goal has not been achieved.** Adopting a strong
@@ -20,6 +20,7 @@ are decompressed in Rust and embedded in the executable.
 
 ```powershell
 python scripts/fetch_rust_network.py
+python scripts/fetch_aster_network.py
 cargo build --release --locked
 cargo test --release --locked
 cargo run --release --locked -- play 5188

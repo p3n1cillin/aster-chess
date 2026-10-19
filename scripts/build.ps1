@@ -8,11 +8,13 @@ Push-Location $projectRoot
 try {
     python scripts/fetch_rust_network.py
     if ($LASTEXITCODE -ne 0) { throw 'Neural weight verification failed.' }
-    & $cargo build --release --locked --target-dir $targetDirectory
+    python scripts/fetch_aster_network.py
+    if ($LASTEXITCODE -ne 0) { throw 'Core neural weight verification failed.' }
+    & $cargo build --workspace --release --locked --target-dir $targetDirectory
     if ($LASTEXITCODE -ne 0) { throw 'Rust build failed.' }
-    & $cargo test --release --locked --target-dir $targetDirectory
+    & $cargo test --workspace --release --locked --target-dir $targetDirectory
     if ($LASTEXITCODE -ne 0) { throw 'Rust tests failed.' }
-    & $cargo test --locked --target-dir $targetDirectory
+    & $cargo test --workspace --locked --target-dir $targetDirectory
     if ($LASTEXITCODE -ne 0) { throw 'Rust debug tests failed.' }
     if ($Publish) {
         $destination = Join-Path $projectRoot 'artifacts/publish/current-win-x64'

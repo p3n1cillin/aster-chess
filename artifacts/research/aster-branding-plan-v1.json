@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-19",
+  "baseline_commit": "c4574d3a5b06bd23b3d347c48bf37dc851510c4f",
+  "scope": "Behavior-preserving Aster core branding/refactor; preserve copyright/source provenance and immutable reports.",
+  "invariants": [
+    "Search, evaluation, weights, ordering, move generation and tablebases unchanged",
+    "Canonical core bench remains 2497913 nodes",
+    "All deterministic bench info/score/node/PV/bestmove output equals baseline after excluding time/nps",
+    "64 position depth-nine comparisons plus protocol/observer/perft/edges/host/proofs",
+    "Eight counterbalanced timed core-bench pairs; preserve raw timings and environment; no Elo claim"
+  ],
+  "baseline_binaries": {
+    "aster": "5e7a6d15fa295f1eb03b0aa2184228abc3567d9eae451a3b8afcde36f271c550",
+    "core": "f78138623379b310e975665e37ec0fe5fcfbf6c16c13c9c17dd2e181f5769647"
+  }
+}

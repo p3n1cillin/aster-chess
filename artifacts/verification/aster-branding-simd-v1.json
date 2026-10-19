@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "mode": "auto",
+      "nodes": 2497913,
+      "summary": "3P4/6Pq/PPP1PP1P/BB1NNRKR w HFhf - 0 5)\n\nPosition: 51/51 (nqbnrkrb/pppppppp/8/8/8/8/PPPPPPPP/NQBNRKRB w GEge - 0 1)\n\n===========================\nTotal time (ms) : 1672\nNodes searched  : 2497913\nNodes/second    : 1493967\n"
+    },
+    {
+      "mode": "avx2",
+      "nodes": 2497913,
+      "summary": "3P4/6Pq/PPP1PP1P/BB1NNRKR w HFhf - 0 5)\n\nPosition: 51/51 (nqbnrkrb/pppppppp/8/8/8/8/PPPPPPPP/NQBNRKRB w GEge - 0 1)\n\n===========================\nTotal time (ms) : 2466\nNodes searched  : 2497913\nNodes/second    : 1012941\n"
+    },
+    {
+      "mode": "scalar",
+      "nodes": 2497913,
+      "summary": "/3P4/6Pq/PPP1PP1P/BB1NNRKR w HFhf - 0 5)\n\nPosition: 51/51 (nqbnrkrb/pppppppp/8/8/8/8/PPPPPPPP/NQBNRKRB w GEge - 0 1)\n\n===========================\nTotal time (ms) : 5223\nNodes searched  : 2497913\nNodes/second    : 478252\n"
+    }
+  ]
+}

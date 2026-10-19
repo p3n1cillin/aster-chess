@@ -80,11 +80,20 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d92bec98840b8f03a5ff5413de5293bfcd8bf96467cf5452609f939ec6f5de16"
 
 [[package]]
+name = "aster-core"
+version = "1.0.0"
+dependencies = [
+ "memmap2",
+ "sha2",
+]
+
+[[package]]
 name = "aster-engine"
 version = "1.0.0"
 dependencies = [
  "anyhow",
  "arrayvec",
+ "aster-core",
  "bulletformat",
  "chrono",
  "clap",
@@ -98,7 +107,6 @@ dependencies = [
  "ruzstd",
  "serde",
  "serde_json",
- "sf-port",
  "sha2",
  "term_size",
  "thiserror",
@@ -696,14 +704,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4e7523beb55eece201a2356bee0bbca0d1ab466c14c07703b2e0ee6d42cb0c2c"
 dependencies = [
  "serde_core",
-]
-
-[[package]]
-name = "sf-port"
-version = "19.0.0"
-dependencies = [
- "memmap2",
- "sha2",
 ]
 
 [[package]]

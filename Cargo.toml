@@ -1,5 +1,6 @@
 [workspace]
-members = ["crates/engine", "crates/sf-port"]
+members = ["crates/engine", "crates/aster-core"]
+default-members = ["crates/engine"]
 resolver = "3"
 
 [profile.release]

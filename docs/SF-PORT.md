@@ -1,18 +1,18 @@
-# Stockfish 19 Rust core
+# Aster native Rust core
 
 On 2026-10-19 the user authorized porting Stockfish to Rust and using it to make
-Aster stronger. `crates/sf-port` is that port; since Aster 1.0.0 it is Aster's
+Aster stronger. `crates/aster-core` is that port; since Aster 1.0.0 it is Aster's
 default UCI engine. The previous Viridithas-derived core runs as `aster legacy`.
 
 ## Commands
 
 ```
-python scripts/fetch_sf_port_network.py
+python scripts/fetch_aster_network.py
 cargo build --release --locked
-./target/release/aster                 # UCI, Stockfish 19 Rust core
+./target/release/aster                 # UCI, Aster native Rust core
 ./target/release/aster core bench      # bench of the default core
 ./target/release/aster legacy          # UCI, previous Viridithas-derived core
-./target/release/sf-port bench         # standalone port with Stockfish identity
+./target/release/aster-core bench         # standalone Aster UCI engine
 ```
 
 In Aster mode the core also answers `legal`, `legal-exists`, `d` (as
@@ -52,7 +52,7 @@ Ryzen 5 7600X (Zen 4, AVX-512 VNNI), Windows:
 | Engine | Median nodes/s | Relative |
 | --- | ---: | ---: |
 | Official Stockfish 19 (GCC 15.2, AVX-512 ICL build) | 2,059,285 | 100% |
-| SF-Port 19 (Rust, generic x86-64 with runtime SIMD dispatch) | 1,791,903 | 87.0% |
+| Aster Core 19 (Rust, generic x86-64 with runtime SIMD dispatch) | 1,791,903 | 87.0% |
 | Aster 1.0.0 core (same code, embedded network) | 1,793,189 | 87.1% |
 
 The port started at 323K nodes/s with scalar NNUE kernels. The main gains were
@@ -89,3 +89,5 @@ moves at fixed depth, but at equal time it is about 13% slower than the official
 binary, so it should be expected to score slightly below 50% against it. Any
 claim that Aster is stronger than Stockfish requires predeclared paired matches
 with a statistical lower bound above 50%, as described in `ROADMAP.md`.
+
+Engine/crate branding now uses Aster. See [current commands and validation](ASTER-CORE.md).

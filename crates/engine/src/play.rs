@@ -108,7 +108,7 @@ impl Game {
             "legal":if result.is_some(){vec![]}else{legal},"moves":self.moves,"scoreWhite":score,
             "materialWhite":material,"pieceSquareWhite":null,"structureActivityWhite":null,"tempoWhite":null,"phase":phase,
             "whiteAttacks":attacks[0].to_vec(),"blackAttacks":attacks[1].to_vec(),"searchId":format!("rust-{}",self.id),"depths":self.depths,
-            "trace":self.trace,"error":self.error,"revision":self.revision,"engine":"Aster Rust · Viridithas 20 derived"})
+            "trace":self.trace,"error":self.error,"revision":self.revision,"engine":format!("Aster {}", crate::VERSION)})
     }
     fn emit(&mut self, kind: &str, value: Value) {
         self.revision += 1;

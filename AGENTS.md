@@ -6,7 +6,7 @@ achieved without evidence. Do not implement the engine as a Stockfish wrapper.
 Stockfish and python-chess are development tools only, never runtime dependencies.
 
 On 2026-10-19 the user authorized a faithful Rust port of Stockfish 19 in
-`crates/sf-port` (GPL-3.0-or-later, Stockfish attribution preserved). It is a
+`crates/aster-core` (GPL-3.0-or-later, Stockfish attribution preserved). It is a
 port, not a wrapper: no C++ code, Stockfish binary or external process runs
 behind it. Its first acceptance gate is an identical `bench` node signature to
 the pinned official sf_19 binary (2,497,913 nodes). The user's later goal is to
@@ -23,11 +23,11 @@ its MIT notice and original source fingerprints. Stockfish is a development
 opponent/research reference, never an external runtime engine behind Aster.
 
 - `python scripts/fetch_rust_network.py`
-- `python scripts/fetch_sf_port_network.py`
-- `cargo run --release --locked -p sf-port -- bench` must print 2,497,913 nodes
-- `cargo build --release --locked`
-- `cargo test --release --locked`
-- `cargo test --locked`
+- `python scripts/fetch_aster_network.py`
+- `cargo run --release --locked -p aster-core -- bench` must print 2,497,913 nodes
+- `cargo build --workspace --release --locked`
+- `cargo test --workspace --release --locked`
+- `cargo test --workspace --locked`
 - `.venv/Scripts/python.exe scripts/verify.py` on Windows, or the corresponding
   environment Python on other platforms.
 - `.venv/Scripts/python.exe scripts/smoke_rust_play.py`

@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-19",
+  "baseline_commit": "c4574d3a5b06bd23b3d347c48bf37dc851510c4f",
+  "candidate_binary_sha256": "6f45f681d842970446da7082668bc200f11e619585ccfb797bbe1f1e96a39fde",
+  "checks": {
+    "canonical_nodes": 2497913,
+    "identical_bench_searches": 51,
+    "identical_depth9_positions": 64,
+    "native_tests_per_profile": 140,
+    "independent_positions": 4630,
+    "perft_cases": 14,
+    "special_edges": 94,
+    "host_sse": true,
+    "proof_certificates": 8,
+    "proof_positions": 42,
+    "recovery_tests": 5,
+    "all_third_party_pins_unchanged": true,
+    "tactics_default_baseline": 30,
+    "tactics_default_candidate": 30,
+    "tactics_all_moves_and_nodes_identical": true,
+    "tactics_legacy_32_gate": true
+  },
+  "timing": {
+    "pairs": 8,
+    "order": "counterbalanced",
+    "median_candidate_over_baseline": 0.9864504026743643,
+    "median_ratio_95_bootstrap": [
+      0.9554659697790712,
+      0.9989859758756511
+    ],
+    "bootstrap_samples": 20000,
+    "seed": 20261019,
+    "interpretation": "Final local median wall time is 1.35% lower, with median-ratio bootstrap interval 0.95547..0.99899. No slowdown observed in this run. Eight short pairs on an unisolated desktop do not establish a reproducible speed increase, precisely identical speed, Elo or playing-strength gain. Earlier identity-only build v1 measurements remain preserved."
+  },
+  "scope": "Rename and format only; startup banner is now protocol-clean and host identity now names the current app. No search/eval/movegen/weights/tablebase changes.",
+  "retained_references": "GPL credits, copyright headers, AUTHORS, upstream manifests, actual external tools/opponents and immutable historical evidence retain factual identities."
+}
