@@ -44,3 +44,10 @@ See [python-chess](https://github.com/niklasf/python-chess/tree/v1.11.2).
 
 .NET, Python, optional training libraries and CI actions are external dependencies
 and retain their respective licenses. Project licensing does not relicense them.
+
+The frozen `artifacts/publish/rust-hyperion-v1` research executable embeds the
+CC0-1.0 v111 Hyperion network, SHA-256
+`2a7d2ef636767d2cf56bbae12cec42e72845156fc2607bf92bdcfc9c98b03944`.
+Its archived source retains the original MIT/GPL notices and pinned CC0 license.
+It is an unpromoted experiment, not the production network. See
+`docs/RUST-HYPERION-TRIAL.md` for the fixed plan and failed expected-move gate.

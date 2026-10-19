@@ -1,0 +1,126 @@
+{
+  "teacher": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "teacher_source_manifest": "artifacts/research/rust-foundation-stockfish19-source/manifest.json",
+  "limit": {
+    "nodes": 200000,
+    "threads": 1,
+    "hash_mib": 64,
+    "forced_root_move": true
+  },
+  "regressions": [
+    {
+      "suite": "tactics-v1",
+      "id": "tactic-023",
+      "fen": "5bk1/8/2b2p1p/1r2p1pP/4PPP1/4N3/p2K4/8 w - - 0 46",
+      "baseline_move": "e3c2",
+      "candidate_move": "e3d5",
+      "choices": [
+        {
+          "move": "e3c2",
+          "cp_for_mover": -1623,
+          "mate_for_mover": null,
+          "depth": 20,
+          "nodes": 200226,
+          "pv": [
+            "e3c2",
+            "g5f4",
+            "d2d3",
+            "b5b1",
+            "g4g5",
+            "h6g5",
+            "h5h6",
+            "f8h6",
+            "c2a3",
+            "b1b3",
+            "d3c4",
+            "b3a3",
+            "c4c5",
+            "a3a6",
+            "c5d6",
+            "a2a1q",
+            "d6e7",
+            "c6e4",
+            "e7e8"
+          ]
+        },
+        {
+          "move": "e3d5",
+          "cp_for_mover": null,
+          "mate_for_mover": -5,
+          "depth": 41,
+          "nodes": 200101,
+          "pv": [
+            "e3d5",
+            "b5b2",
+            "d2c3",
+            "a2a1q",
+            "d5f6",
+            "g8h8",
+            "f4e5",
+            "a1a3",
+            "c3d4",
+            "b2b4"
+          ]
+        }
+      ]
+    },
+    {
+      "suite": "tactics-quiet-v1",
+      "id": "tactic-024",
+      "fen": "4r3/p3n2k/1p4pp/4P3/8/5B2/PP1Q1PPP/3RK2R w K - 1 26",
+      "baseline_move": "d2d7",
+      "candidate_move": "b2b4",
+      "choices": [
+        {
+          "move": "d2d7",
+          "cp_for_mover": null,
+          "mate_for_mover": 8,
+          "depth": 25,
+          "nodes": 200124,
+          "pv": [
+            "d2d7",
+            "e8g8",
+            "d7e7",
+            "g8g7",
+            "e7f6",
+            "h6h5",
+            "f3e4",
+            "b6b5",
+            "d1d8",
+            "a7a5",
+            "e4g6",
+            "h7h6",
+            "g6e4",
+            "g7g6",
+            "f6g6"
+          ]
+        },
+        {
+          "move": "b2b4",
+          "cp_for_mover": 1315,
+          "mate_for_mover": null,
+          "depth": 17,
+          "nodes": 200126,
+          "pv": [
+            "b2b4",
+            "e7f5",
+            "d2f4",
+            "e8e7",
+            "f3e4",
+            "e7f7",
+            "d1d8"
+          ]
+        }
+      ]
+    }
+  ],
+  "interpretation": "Bounded independent diagnostic for newly missed expected moves. Does not retune or override predeclared puzzle gates or prove game-theoretic values."
+}

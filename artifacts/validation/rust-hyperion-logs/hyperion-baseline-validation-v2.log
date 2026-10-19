@@ -1,0 +1,11 @@
+   Compiling aster-engine v0.9.2 (C:\Users\lukem\.codex\worktrees\continuation-search\chess\crates\engine)
+    Finished `release` profile [optimized] target(s) in 19.05s
+     Running unittests src\main.rs (target\release\deps\aster-f8777a3742f6ae60.exe)
+
+running 3 tests
+test nnue::network::validation_tests::scalar_l1_matches_simd_for_embedded_weights ... ok
+test nnue::network::validation_tests::lazy_batches_and_history_match_fresh_weights ... ok
+test nnue::network::validation_tests::incremental_and_undo_match_fresh_weights ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 132 filtered out; finished in 0.37s
+

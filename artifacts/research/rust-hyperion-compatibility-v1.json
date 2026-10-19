@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "old_engine_commit": "0631113e2215714c54d397cce9a8caebc5e6f8ee",
+  "reference_engine_commit": "f1352d6fd2e4c53dc591588d20050ec6840ba8cc",
+  "feature_mapping_identical_except_license": true,
+  "quantized_layout_identical_after_alias_resolution": true,
+  "resolved_quantized_layout": "l0_aux:[i8;64368*1024],l0_weights:[i16;704*1024*16],l0_biases:[i16;1024],l1_weights:[[[i8;32];8];1024],l1_biases:[[f32;32];8],l2_weights:[[[f32;32*2];8];32],l2_biases:[[f32;32*2];8],l3_weights:[[[f32;1];8];32],l3_biases:[[f32;1];8],",
+  "king_bucket_map_identical": true,
+  "inference_constants": {
+    "QA": 255,
+    "QB": 64,
+    "SCALE": 240,
+    "FT_SHIFT": 9,
+    "SWISH_K": 6
+  },
+  "old_feature_sha256_lf": "7b727a798984e57c8cf5b8a38291b1a644d7d838c3661d3bf556d6d3d7a0d756",
+  "reference_feature_sha256_lf": "20c2e14c468b17c18be827ac6cd46d7bd894ccc4a21919afbc936ea4d2d7b754",
+  "sources_read_only": "Later engine code is AGPL; no implementation or permutation constants copied into active Aster. Only CC0 network data is proposed. Existing paired FT/L1 permutation is retained.",
+  "unquantized_factorizer_note": "Later floating training/import format changed its factorizer flag; the compressed quantized layout used at runtime remains equal. No unquantized model import attempted.",
+  "network_release": "https://github.com/cosmobobak/viridithas-networks/releases/tag/v111"
+}

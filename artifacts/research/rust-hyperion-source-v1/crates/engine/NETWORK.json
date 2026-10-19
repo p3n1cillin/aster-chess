@@ -1,0 +1,12 @@
+{
+  "tag": "v111",
+  "asset": "hyperion-s2-b200.nnue.zst",
+  "url": "https://github.com/cosmobobak/viridithas-networks/releases/download/v111/hyperion-s2-b200.nnue.zst",
+  "sha256": "2a7d2ef636767d2cf56bbae12cec42e72845156fc2607bf92bdcfc9c98b03944",
+  "size": 52423223,
+  "license": "CC0-1.0",
+  "license_commit": "d3da3953e41beb5c8a555ba97d1d59c6e3f07903",
+  "license_git_blob": "0e259d42c996742e9e3cba14c677129b2c1b6311",
+  "license_sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+  "source_note": "CC0 upstream trained knowledge, not trained by Aster. Compatibility is separately checked against reference f1352d6fd2e4c53dc591588d20050ec6840ba8cc; current MIT-v20 inference/feature/permutation code is retained. Strength requires Aster matches."
+}

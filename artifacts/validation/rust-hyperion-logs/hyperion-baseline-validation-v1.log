@@ -1,0 +1,22 @@
+   Compiling aster-engine v0.9.2 (C:\Users\lukem\.codex\worktrees\continuation-search\chess\crates\engine)
+error[E0308]: arguments to this method are incorrect
+    --> crates\engine\src\nnue\network\validation_tests.rs:7:17
+     |
+   7 |     incremental.force(weights, board);
+     |                 ^^^^^ -------  ----- expected `&NNUEParams`, found `&board::Board`
+     |                       |
+     |                       expected `&board::Board`, found `&NNUEParams`
+     |
+note: method defined here
+    --> crates\engine\src\nnue\network.rs:1541:12
+     |
+1541 |     pub fn force(&mut self, board: &Board, nnue_params: &NNUEParams) {
+     |            ^^^^^
+help: swap these arguments
+     |
+   7 -     incremental.force(weights, board);
+   7 +     incremental.force(board, weights);
+     |
+
+For more information about this error, try `rustc --explain E0308`.
+error: could not compile `aster-engine` (bin "aster" test) due to 1 previous error

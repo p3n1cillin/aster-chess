@@ -1,0 +1,181 @@
+{
+  "schema": 1,
+  "complete": true,
+  "reason": "complete",
+  "summary": "White forces checkmate within 5 plies. Every legal defense is covered; all 16 leaves/positions are replayable.",
+  "rootFen": "8/8/4K3/1k6/8/1p6/8/Q1R5 w - - 0 1",
+  "strongSide": 0,
+  "rootDistance": 5,
+  "maxPlies": 7,
+  "visits": 31806,
+  "nodeLimit": 100000,
+  "nodes": [
+    {
+      "id": 0,
+      "fen": "8/8/4K3/1k6/8/1p6/8/Q1R5 w - - 0 1",
+      "distance": 5,
+      "edges": [
+        {
+          "move": "a1a3",
+          "to": 1
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "fen": "8/8/4K3/1k6/8/Qp6/8/2R5 b - - 1 1",
+      "distance": 4,
+      "edges": [
+        {
+          "move": "b3b2",
+          "to": 2
+        },
+        {
+          "move": "b5b6",
+          "to": 10
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fen": "8/8/4K3/1k6/8/Q7/1p6/2R5 w - - 0 2",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "a3b2",
+          "to": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fen": "8/8/4K3/1k6/8/8/1Q6/2R5 b - - 0 2",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "b5a4",
+          "to": 4
+        },
+        {
+          "move": "b5a5",
+          "to": 6
+        },
+        {
+          "move": "b5a6",
+          "to": 8
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fen": "8/8/4K3/8/k7/8/1Q6/2R5 w - - 1 3",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "c1a1",
+          "to": 5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "fen": "8/8/4K3/8/k7/8/1Q6/R7 b - - 2 3",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 6,
+      "fen": "8/8/4K3/k7/8/8/1Q6/2R5 w - - 1 3",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "c1a1",
+          "to": 7
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "fen": "8/8/4K3/k7/8/8/1Q6/R7 b - - 2 3",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 8,
+      "fen": "8/8/k3K3/8/8/8/1Q6/2R5 w - - 1 3",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "c1a1",
+          "to": 9
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "fen": "8/8/k3K3/8/8/8/1Q6/R7 b - - 2 3",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 10,
+      "fen": "8/8/1k2K3/8/8/Qp6/8/2R5 w - - 2 2",
+      "distance": 3,
+      "edges": [
+        {
+          "move": "a3b4",
+          "to": 11
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "fen": "8/8/1k2K3/8/1Q6/1p6/8/2R5 b - - 3 2",
+      "distance": 2,
+      "edges": [
+        {
+          "move": "b6a6",
+          "to": 12
+        },
+        {
+          "move": "b6a7",
+          "to": 14
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "fen": "8/8/k3K3/8/1Q6/1p6/8/2R5 w - - 4 3",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "c1a1",
+          "to": 13
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "fen": "8/8/k3K3/8/1Q6/1p6/8/R7 b - - 5 3",
+      "distance": 0,
+      "edges": []
+    },
+    {
+      "id": 14,
+      "fen": "8/k7/4K3/8/1Q6/1p6/8/2R5 w - - 4 3",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "c1a1",
+          "to": 15
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "fen": "8/k7/4K3/8/1Q6/1p6/8/R7 b - - 5 3",
+      "distance": 0,
+      "edges": []
+    }
+  ]
+}

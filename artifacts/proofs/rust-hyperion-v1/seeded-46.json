@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "complete": true,
+  "reason": "complete",
+  "summary": "White forces checkmate within 1 plies. Every legal defense is covered; all 2 leaves/positions are replayable.",
+  "rootFen": "3k4/8/3K2p1/8/2Q1B3/8/8/8 w - - 0 1",
+  "strongSide": 0,
+  "rootDistance": 1,
+  "maxPlies": 3,
+  "visits": 3,
+  "nodeLimit": 100000,
+  "nodes": [
+    {
+      "id": 0,
+      "fen": "3k4/8/3K2p1/8/2Q1B3/8/8/8 w - - 0 1",
+      "distance": 1,
+      "edges": [
+        {
+          "move": "c4g8",
+          "to": 1
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "fen": "3k2Q1/8/3K2p1/8/4B3/8/8/8 b - - 1 1",
+      "distance": 0,
+      "edges": []
+    }
+  ]
+}
