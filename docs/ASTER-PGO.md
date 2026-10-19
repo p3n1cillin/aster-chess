@@ -14,6 +14,15 @@ The second plan repairs collection using a development-only Rust executable,
 can flush its counters. Aster itself remains the standalone playing engine.
 The `pgo-driver` feature only enables that training executable.
 
+Training is fixed: 64 prior foundation roots at depth 12, three automatic
+canonical benches, one AVX2 bench, one scalar bench, and the actual play/proof
+smoke workloads. The repaired collection preserves 13 raw profile files and
+the merged profile. Both builds use the same pinned Rust compiler, explicit
+Windows target, x86-64-v3 flags, release settings and driver feature. Only
+instrumentation/profile-use flags differ as recorded in the build manifest.
+The 96 new validation roots were excluded from compiler-training roots;
+interior search overlap and neural-model training independence are unknown.
+
 The repaired collection has positive coverage in all three required areas.
 Control and optimized builds have identical canonical traces in automatic,
 AVX2 and scalar modes, each with 1,559,611 nodes. They also match on 96 fresh
@@ -33,15 +42,23 @@ time; intervals bootstrap whole batches.
 | AVX2 | 1.09875 | 1.08710–1.10685 | Fail |
 | Scalar | 0.99957 | 0.99168–1.01459 | Pass |
 
-The timing gate failed, so this profile will not replace the ordinary build.
-No retraining or flag variants will be selected using these outcomes. The
-predeclared 192 regression games must still complete and be audited. The 30 ms
-control completes 96 games at 12W/78D/6L (53.125%, whole-family 95% interval
-49.468..56.667%), with no forfeits, unresolved games or missing telemetry.
-Its independent PGN and journal audits pass. The 100 ms control is running;
-the final combined decision remains pending. Windows and Linux CI pass on
-commit `418a64a3`. Neither speed nor this engineering regression screen
-establishes reference-engine superiority or Elo.
+The timing gate failed, so this profile does not replace the ordinary build.
+No retraining, flag variants or added games were selected using these outcomes.
+All 192 predeclared regression games complete and pass independent PGN and
+journal audits, without forfeits, unresolved games or missing telemetry.
+
+| Control | W/D/L | Score | Whole-family 95% interval |
+| --- | --- | ---: | --- |
+| 30 ms | 12/78/6 | 53.125% | 49.468..56.667% |
+| 100 ms | 8/80/8 | 50.000% | 46.111..53.804% |
+
+Both pass the engineering nonregression screen; neither establishes a strength
+gain. Windows and Linux CI pass on both the driver implementation (`418a64a3`)
+and final hash-chain analysis (`54d33be6`). The decision is **not adopted** in
+`artifacts/verification/aster-pgo-decision-v2.json`. The normal release binary
+retains SHA-256 `6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2`.
+Neither this screen nor compilation speed establishes reference-engine
+superiority or Elo. The development driver and evidence tools are retained.
 
 The next source-level investigation is described in
 `ASTER-FUSED-INPUT-INVESTIGATION.md`. It has no implemented or measured gain.

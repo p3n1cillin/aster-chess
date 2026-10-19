@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-19",
+  "active_engine": "Aster Rust development core; ordinary compiler build",
+  "active_binary_sha256": "6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2",
+  "active_local_rating": null,
+  "public_elo": null,
+  "candidate_binary_sha256": "ee768f65b73356e371f139f538faf85b6a68660191e5a01daa0cf671c20175a2",
+  "candidate_local_rating": null,
+  "decision_report": "artifacts/verification/aster-pgo-decision-v2.json",
+  "status": "All 192 games audited. Timing fails, so the profile is not adopted. Both score intervals include 50%; no strength gain is established.",
+  "limits": "An engineering speed/regression screen is not an absolute rating or reference-superiority test. No Elo is transferred. Hourly research continuation is active."
+}

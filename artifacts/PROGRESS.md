@@ -1,3 +1,26 @@
+## 2026-10-19: compiler profile trial completed; no adoption
+
+PGO preserves exact calculations but fails the fixed speed gate. Eight held-out
+batches per mode show automatic elapsed unchanged (ratio 1.00016), AVX2 slower
+(1.09875), and scalar unchanged (0.99957). All 192 declared games complete and
+pass independent PGN/journal audits: 12W/78D/6L at 30 ms (53.125%, family interval
+49.468..56.667%) and 8W/80D/8L at 100 ms (50%, 46.111..53.804%). No forfeits,
+unresolved games or missing telemetry occur. Neither control establishes a gain.
+The optimized build is not adopted; ordinary release SHA-256 remains `6b4d46db…`.
+
+The first collection's missing search counters were caught before optimized
+candidate queries. Its evidence is preserved. A development-only normal-return
+Rust driver repairs collection, with real search/quiescence/evaluation counters,
+13 raw profiles and a pinned merged profile. Native PGO release, ordinary debug
+and release each pass 157 tests plus two compile-fail checks. All canonical traces
+and 96 fresh roots per SIMD mode agree; tactics, independent rules/perft/edges,
+real visualization, proofs and SMP stop/undo pass. Windows/Linux CI pass on the
+final tooling revision, including the driver; local analysis verifies source,
+profile and opening hash chains. See `docs/ASTER-PGO.md`.
+The next fusion investigation is still a source-level hypothesis, not a result.
+No public/absolute Elo or superiority is established; research continuation stays
+active. Failed search policies and PGO remain disabled.
+
 ## 2026-10-19: online evaluation-risk trial completed; no promotion
 
 The predeclared per-worker error-history policy completes all 256 paired games,

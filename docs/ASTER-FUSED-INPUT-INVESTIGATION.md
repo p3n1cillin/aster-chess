@@ -17,6 +17,16 @@ vectors within each perspective, retaining the original nonzero index order.
 Keep fallback paths for AVX-512 without VBMI2, AVX2 and scalar. Do not change
 neural weights, search decisions, move ordering or ordinary compiler flags.
 
+Arithmetic constraints from the existing implementation: each transformed byte
+is at most `floor(255 * 255 / 512) = 127`. Thus each packed four-byte signed
+32-bit group is nonnegative, and saturation to signed 16-bit preserves whether
+the group is zero. The current compression index vector compensates for the
+128-bit lane interleaving introduced by the pack; preserve that compensation
+exactly. Use side-to-move perspective first, as the current network does.
+Generate indices in pairs of transformed vectors to retain the old compression
+width. This is a source-level equivalence argument to test, not proof that
+fusion will be faster on this CPU.
+
 Required checks before candidate timing:
 
 - Compare all transformed bytes and ordered nonzero indices against the old

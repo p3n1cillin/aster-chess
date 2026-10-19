@@ -16,9 +16,16 @@ a separate hypothesis before any new search-policy experiment.
 The online evaluation-risk experiment also completes all 256 declared games but
 fails both strict strength gates (51.95% at 30 ms, 49.22% at 100 ms; both family
 intervals include 50%). It remains absent from normal builds, without retuning.
-See `docs/ASTER-EVALUATION-RISK.md`. The next independent engineering experiment
-is profile-guided compilation for the automatic path, with fixed training inputs
-and separate fresh validation roots before any speed or strength claim.
+See `docs/ASTER-EVALUATION-RISK.md`.
+
+The profile-guided compilation trial also completes all 192 declared games and
+audits, but fails timing: automatic elapsed is unchanged and AVX2 is about 9.9%
+slower. It is not adopted. The repaired native profiling driver and exactness
+checks are retained; ordinary builds are unchanged. See `docs/ASTER-PGO.md`.
+The next source-level hypothesis is fusing neural input transformation and
+nonzero-index collection. It requires a separate committed plan, fresh roots
+and matched correctness/timing/playing gates before candidate queries; see
+`docs/ASTER-FUSED-INPUT-INVESTIGATION.md`. No gain is yet established for it.
 
 The Aster disagreement-guard experiment tests a bounded response to conflicting
 search evidence. Its policy, new opening roots and two controls were fixed before
