@@ -1,0 +1,39 @@
+{
+ "created_utc": "2026-10-19T17:16:46.908301Z",
+ "purpose": "Status measurement of Aster at commit 779bba2 (Linux huge pages + paired widening) against the pinned upstream development commit it ports, at equal time. Declared before any game.",
+ "candidate": {
+  "binary": "target/release/aster (copied to /tmp for the run)",
+  "commit": "779bba2",
+  "sha256": "8c72d091921e73a85d5c6156887a98b96345910ad5680c2236839301fb70d4b2",
+  "uci_name": "Aster 1.0.0"
+ },
+ "opponent": {
+  "source": "official-stockfish effdc3fd3f6de6e75fe1374a51a7a7eed66f880b",
+  "build": "make profile-build ARCH=x86-64-avx512icl COMP=gcc (gcc 13.3.0)",
+  "sha256": "f68a1b19174ea9c9a9943b1846534f19b7d01a83ba55ee75141cb919d8b98e11",
+  "uci_name": "Stockfish dev-20261017-effdc3fd",
+  "network": "nn-c9e480e92425"
+ },
+ "runner": {
+  "tool": "fastchess alpha 1.4.0 (721b0f9), built from source in ignored tools/",
+  "sha256": "9526ebb15b1aa5dd12acaf630782b74c067aa4e32895190a226e16c597f9b6cb"
+ },
+ "openings": {
+  "file": "UHO_Lichess_4852_v1.epd (official-stockfish/books a804a97)",
+  "sha256": "7a7f6470615a69c6cf23d565417701d38732876f480af90d67b42abade35644a",
+  "order": "random",
+  "srand": 20261019
+ },
+ "settings": {
+  "tc": "10+0.1",
+  "threads": 1,
+  "hash_mib": 16,
+  "concurrency": 4,
+  "pairs": 400,
+  "games_per_opening": 2,
+  "colors": "swapped (-repeat)",
+  "adjudication": "none (fastchess default rules only)"
+ },
+ "machine": "cloud VM, Intel Xeon 2.8GHz AVX-512, 4 vCPU, Linux",
+ "decision_rule": "Report pentanomial score, Elo and 95% interval. Only a lower bound above 0 Elo would indicate Aster is stronger; an interval containing 0 is equality within noise. Expectation before play: slightly below 50% because Aster's measured speed is ~91% of the opponent's. No retries or stopping early except for crashes."
+}
