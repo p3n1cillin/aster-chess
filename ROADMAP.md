@@ -10,6 +10,11 @@ On Linux, transparent huge pages and the AVX-512 paired int8 widening add are no
 ported (bench unchanged), raising measured speed on an Intel AVX-512 VM from
 ~82% to ~91% of the upstream commit built from source. An 800-game UHO match at
 10+0.1 against that commit scored 49.5% (−3.5 ± 11.8 Elo): level within noise.
+The AVX2 kernels now use the same paired widening (forced-AVX2 speed 0.74 →
+0.84 of the upstream bmi2 build). Upstream master is still `effdc3fd3f`, so
+this is parity with current Stockfish, not superiority. Remaining speed gaps are
+diffuse (move picking, `do_move`, search bookkeeping), each below this VM's
+±3% timing noise; use instruction counts (callgrind, AVX2 path) to rank them.
 See `docs/ASTER-LINUX-SPEED.md`.
 
 Allocation-free indexed neural updates are now adopted: local same-work timings

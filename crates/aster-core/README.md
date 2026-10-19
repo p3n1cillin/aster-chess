@@ -30,8 +30,10 @@ generation, lazily computed threat maps and the search and time-management
 changes made after `sf_19`. [UPSTREAM.json](UPSTREAM.json) pins the commit and a
 SHA-256 for each ported source file.
 
-Not yet ported: NUMA binding and large pages (neither is used by the official
-binary on a single-node machine without the lock-pages privilege).
+Large pages: on Linux the network, histories, accumulator caches and
+transposition table use 2 MiB aligned memory advised as transparent huge pages,
+as upstream does (`src/large_pages.rs`); Windows large pages (which need the
+lock-pages privilege) and NUMA binding are not ported.
 
 ## Exactness
 
@@ -80,6 +82,12 @@ decoding, a two-perspective threat pass, unchecked fixed-capacity list pushes,
 VBMI2 16-bit compresses for the first layer's non-zero list and range-masked
 history indices (each within noise). Tried and rejected: paired `maddubs`
 widening of int8 rows (2% slower on Zen 4) and a T2 hint for weight rows.
+
+On a Linux Intel AVX-512 VM (2026-10-19), after porting huge pages and the
+paired int8 widening add (AVX-512 and AVX2), Aster measured about 0.91–0.94 of
+the upstream commit built with clang 18 (automatic AVX-512 path) and 0.84 of the
+upstream `x86-64-bmi2` build on the forced AVX2 path; see
+[the Linux speed record](../../docs/ASTER-LINUX-SPEED.md).
 
 Speed is not strength evidence. At equal time, a slower identical search reaches
 fewer nodes, so this port should be expected to score slightly below 50% against

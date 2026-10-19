@@ -74,3 +74,19 @@ The upstream AVX-512 ICL `write_multiple_dirties` (VBMI byte compress and
 permute of dirty threats) was ported and kept the bench signature on every
 path, but 16 concurrent rounds against the adopted build showed no difference
 beyond the VM's noise (median ratios 0.99–1.03 for identical binaries).
+
+Compiling the whole crate with `-C target-cpu=native` (instead of x86-64-v3 plus
+runtime dispatch) was also neutral here (median ratio 0.99 to the default build).
+
+## Reproducing
+
+Development tools live in ignored `tools/` and are never runtime dependencies:
+the upstream commit cloned into `tools/stockfish/src-effdc3fd3f` and built with
+`make build ARCH=x86-64-avx512icl COMP=clang` / `make profile-build ... COMP=gcc`
+(network copied into `src/`), fastchess `v1.4.0-alpha` (`721b0f9`) built with
+`make`, and `UHO_Lichess_4852_v1.epd` from `official-stockfish/books`
+(`a804a97`). The speed script is `artifacts/research/aster-linux-speed-v1/speed_concurrent.py`
+(`python speed_concurrent.py ROUNDS "16 1 13" REFERENCE CANDIDATE...`).
+Note that `cargo test -p aster-core --features ...` relinks
+`target/release/aster-core` with experimental features; rebuild without features
+before timing or matches and check the 1,559,611 signature.
