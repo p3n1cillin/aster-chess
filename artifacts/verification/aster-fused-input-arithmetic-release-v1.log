@@ -1,0 +1,22 @@
+   Compiling aster-core v1.0.0 (C:\Users\lukem\.codex\worktrees\continuation-search\chess\crates\aster-core)
+    Finished `release` profile [optimized] target(s) in 9.66s
+     Running unittests src\lib.rs (target\release\deps\aster_core-4e34f93f58aaa217.exe)
+
+running 2 tests
+test nnue::kernels::avx512::fused_tests::fused_extremes_and_random_match_independent_oracles ... ok
+test nnue::kernels::avx512::fused_tests::fused_every_single_input_byte_preserves_order_and_membership ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 18 filtered out; finished in 0.01s
+
+     Running unittests src\main.rs (target\release\deps\aster_core-664e4f178a7a8a2a.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\port.rs (target\release\deps\port-34e436093b569377.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 4 filtered out; finished in 0.00s
+

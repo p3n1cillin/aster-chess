@@ -71,6 +71,57 @@ pub fn prefetch_l1<T>(p: *const T) {
 /// Number of i32 chunks (4 input bytes) in the fc_0 input.
 pub const FC0_CHUNKS: usize = L1 / 4;
 
+/// Experimental transformed input with only its initialized index prefix exposed.
+#[cfg(feature = "fused-input")]
+#[repr(C, align(64))]
+pub(super) struct FusedInput {
+    input: [u8; L1],
+    indices: [std::mem::MaybeUninit<u16>; FC0_CHUNKS + 32],
+    len: usize,
+}
+
+#[cfg(feature = "fused-input")]
+impl FusedInput {
+    #[inline]
+    pub fn new(first: &[i16; L1], second: &[i16; L1]) -> Option<Self> {
+        #[cfg(target_arch = "x86_64")]
+        if level() == LEVEL_AVX512 && VBMI2.load(Relaxed) {
+            let mut input = std::mem::MaybeUninit::<[u8; L1]>::uninit();
+            let mut indices = [std::mem::MaybeUninit::<u16>::uninit(); FC0_CHUNKS + 32];
+            // Dispatch guarantees all required features. The kernel writes every
+            // input byte and exactly the returned prefix (plus bounded slack).
+            let len = unsafe {
+                avx512::transform_sparse(
+                    first,
+                    second,
+                    input.as_mut_ptr().cast(),
+                    indices.as_mut_ptr().cast(),
+                )
+            };
+            return Some(Self {
+                input: unsafe { input.assume_init() },
+                indices,
+                len,
+            });
+        }
+        #[cfg(not(target_arch = "x86_64"))]
+        let _ = (first, second);
+        None
+    }
+
+    #[inline]
+    pub fn affine(&self, weights: &[i8], output: &mut [i32; L2]) {
+        assert_eq!(weights.len(), L1 * L2);
+        #[cfg(target_arch = "x86_64")]
+        unsafe {
+            // Construction guarantees ISA support and initialization. The
+            // initialized prefix is never expanded to include scratch slack.
+            let indices = std::slice::from_raw_parts(self.indices.as_ptr().cast(), self.len);
+            avx512::sparse_affine_fc0_list(&self.input, weights, output, indices);
+        }
+    }
+}
+
 /// Chunked weight layout used by all affine kernels:
 /// w[chunk * OUT * 4 + out * 4 + k] = W[out][chunk * 4 + k].
 pub fn chunk_layout(w_row_major: &[i8], outs: usize, ins: usize) -> Vec<i8> {
@@ -519,6 +570,62 @@ mod avx512 {
         }
     }
 
+    // Consume each pair before writing it, preserving the old compression order.
+    #[cfg(feature = "fused-input")]
+    #[target_feature(enable = "avx512f,avx512bw,avx512vbmi2")]
+    pub(super) unsafe fn transform_sparse(
+        first: &[i16; L1],
+        second: &[i16; L1],
+        output: *mut u8,
+        indices: *mut u16,
+    ) -> usize {
+        unsafe {
+            let zero = _mm512_setzero_si512();
+            let maximum = _mm512_set1_epi16(255);
+            let fix = _mm512_setr_epi64(0, 2, 4, 6, 1, 3, 5, 7);
+            let mut index = _mm512_set_epi16(
+                31, 30, 29, 28, 15, 14, 13, 12, 27, 26, 25, 24, 11, 10, 9, 8, 23, 22, 21, 20, 7, 6,
+                5, 4, 19, 18, 17, 16, 3, 2, 1, 0,
+            );
+            let step = _mm512_set1_epi16(32);
+            let mut count = 0;
+            for (perspective, accumulator) in [first, second].into_iter().enumerate() {
+                let a = accumulator.as_ptr();
+                for base in (0..L1 / 2).step_by(128) {
+                    let mut vectors = [zero; 2];
+                    for (pair, vector) in vectors.iter_mut().enumerate() {
+                        let j = base + pair * 64;
+                        let a0 = _mm512_loadu_si512(a.add(j).cast());
+                        let a1 = _mm512_loadu_si512(a.add(j + 32).cast());
+                        let b0 = _mm512_loadu_si512(a.add(L1 / 2 + j).cast());
+                        let b1 = _mm512_loadu_si512(a.add(L1 / 2 + j + 32).cast());
+                        let s0 = _mm512_slli_epi16::<7>(_mm512_max_epi16(
+                            _mm512_min_epi16(a0, maximum),
+                            zero,
+                        ));
+                        let s1 = _mm512_slli_epi16::<7>(_mm512_max_epi16(
+                            _mm512_min_epi16(a1, maximum),
+                            zero,
+                        ));
+                        let p0 = _mm512_mulhi_epi16(s0, _mm512_min_epi16(b0, maximum));
+                        let p1 = _mm512_mulhi_epi16(s1, _mm512_min_epi16(b1, maximum));
+                        *vector = _mm512_permutexvar_epi64(fix, _mm512_packus_epi16(p0, p1));
+                        _mm512_storeu_si512(output.add(perspective * L1 / 2 + j).cast(), *vector);
+                    }
+                    let packed = _mm512_packs_epi32(vectors[0], vectors[1]);
+                    let mask = _mm512_test_epi16_mask(packed, packed);
+                    _mm512_storeu_si512(
+                        indices.add(count).cast(),
+                        _mm512_maskz_compress_epi16(mask, index),
+                    );
+                    count += mask.count_ones() as usize;
+                    index = _mm512_add_epi16(index, step);
+                }
+            }
+            count
+        }
+    }
+
     #[target_feature(enable = "avx512f,avx512bw,avx512vnni")]
     /// Indices of the non-zero 4-byte chunks of the fc_0 input, gathered with
     /// 16-bit compresses (two input vectors per step after a saturating pack,
@@ -583,7 +690,12 @@ mod avx512 {
     }
 
     #[target_feature(enable = "avx512f,avx512bw,avx512vnni")]
-    unsafe fn sparse_affine_fc0_list(input: &[u8; L1], w: &[i8], out: &mut [i32; L2], nnz: &[u16]) {
+    pub(super) unsafe fn sparse_affine_fc0_list(
+        input: &[u8; L1],
+        w: &[i8],
+        out: &mut [i32; L2],
+        nnz: &[u16],
+    ) {
         unsafe {
             let inp = input.as_ptr() as *const i32;
             let count = nnz.len();
@@ -701,6 +813,132 @@ mod avx512 {
             }
             _mm512_storeu_si512(out.as_mut_ptr() as *mut _, acc0);
             _mm512_storeu_si512(out.as_mut_ptr().add(16) as *mut _, acc1);
+        }
+    }
+    #[cfg(all(test, feature = "fused-input"))]
+    mod fused_tests {
+        use super::*;
+
+        #[repr(align(64))]
+        struct Input([u8; L1]);
+
+        fn supported() -> bool {
+            is_x86_feature_detected!("avx512f")
+                && is_x86_feature_detected!("avx512bw")
+                && is_x86_feature_detected!("avx512vnni")
+                && is_x86_feature_detected!("avx512vbmi2")
+        }
+
+        fn next(state: &mut u64) -> u64 {
+            *state ^= *state << 13;
+            *state ^= *state >> 7;
+            *state ^= *state << 17;
+            *state
+        }
+
+        fn check(first: &[i16; L1], second: &[i16; L1], weights: &[i8]) {
+            let mut actual = Input([0xa5; L1]);
+            let mut indices = [std::mem::MaybeUninit::<u16>::uninit(); FC0_CHUNKS + 32];
+            let count = unsafe {
+                transform_sparse(
+                    first,
+                    second,
+                    actual.0.as_mut_ptr(),
+                    indices.as_mut_ptr().cast(),
+                )
+            };
+            assert!(count <= FC0_CHUNKS);
+            let indices =
+                unsafe { std::slice::from_raw_parts(indices.as_ptr().cast::<u16>(), count) };
+            let mut expected = Input([0; L1]);
+            for (p, a) in [first, second].into_iter().enumerate() {
+                for j in 0..L1 / 2 {
+                    expected.0[p * L1 / 2 + j] = (i32::from(a[j].clamp(0, 255))
+                        * i32::from(a[j + L1 / 2].clamp(0, 255))
+                        / 512) as u8;
+                }
+            }
+            assert_eq!(actual.0, expected.0);
+            let mut previous = [0u16; FC0_CHUNKS + 32];
+            let previous_count =
+                unsafe { nnz_vbmi2(expected.0.as_ptr().cast(), previous.as_mut_ptr()) };
+            assert_eq!(indices, &previous[..previous_count]);
+            let mut sorted = indices.to_vec();
+            sorted.sort_unstable();
+            let membership: Vec<u16> = expected
+                .0
+                .chunks_exact(4)
+                .enumerate()
+                .filter_map(|(i, x)| x.iter().any(|&v| v != 0).then_some(i as u16))
+                .collect();
+            assert_eq!(sorted, membership);
+
+            let biases: [i32; L2] = std::array::from_fn(|o| o as i32 * 37 - 900);
+            let mut output = biases;
+            unsafe {
+                sparse_affine_fc0_list(&actual.0, weights, &mut output, indices);
+            }
+            let oracle: [i32; L2] = std::array::from_fn(|o| {
+                let mut sum = i64::from(biases[o]);
+                for c in 0..FC0_CHUNKS {
+                    for k in 0..4 {
+                        sum += i64::from(expected.0[c * 4 + k])
+                            * i64::from(weights[c * L2 * 4 + o * 4 + k]);
+                    }
+                }
+                i32::try_from(sum).unwrap()
+            });
+            assert_eq!(output, oracle);
+        }
+
+        #[test]
+        fn fused_handle_keeps_aligned_initialized_input() {
+            crate::nnue::init();
+            let expected = level() == LEVEL_AVX512 && VBMI2.load(Relaxed);
+            let input = FusedInput::new(&[255; L1], &[255; L1]);
+            assert_eq!(input.is_some(), expected);
+            if let Some(input) = input {
+                assert_eq!(input.input.as_ptr() as usize % 64, 0);
+                assert_eq!(input.len, FC0_CHUNKS);
+                let weights = vec![1; L1 * L2];
+                let mut output = [0; L2];
+                input.affine(&weights, &mut output);
+                assert_eq!(output, [127 * L1 as i32; L2]);
+            }
+        }
+
+        #[test]
+        fn fused_extremes_and_random_match_independent_oracles() {
+            if !supported() {
+                return;
+            }
+            let mut rng = 0x1a57_e2c3_d4b5_1901;
+            let weights: Vec<i8> = (0..L1 * L2).map(|_| next(&mut rng) as i8).collect();
+            for value in [i16::MIN, -1, 0, 1, 127, 254, 255, 256, i16::MAX] {
+                check(&[value; L1], &[value; L1], &weights);
+            }
+            for _ in 0..128 {
+                let first = std::array::from_fn(|_| next(&mut rng) as i16);
+                let second = std::array::from_fn(|_| next(&mut rng) as i16);
+                check(&first, &second, &weights);
+            }
+        }
+
+        #[test]
+        fn fused_every_single_input_byte_preserves_order_and_membership() {
+            if !supported() {
+                return;
+            }
+            let mut rng = 0xf051_17e5_2026_1019;
+            let weights: Vec<i8> = (0..L1 * L2).map(|_| next(&mut rng) as i8).collect();
+            for byte in 0..L1 {
+                let mut a = [[0i16; L1]; 2];
+                let p = byte / (L1 / 2);
+                let j = byte % (L1 / 2);
+                a[p][j] = 255;
+                a[p][j + L1 / 2] = 255;
+                check(&a[0], &a[1], &weights);
+            }
         }
     }
 }

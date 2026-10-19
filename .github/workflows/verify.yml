@@ -37,6 +37,8 @@ jobs:
       - run: cargo test --workspace --locked
       - run: cargo test --release --locked -p aster-core --features disagreement-guard
       - run: cargo test --release --locked -p aster-core --features "evaluation-risk,disagreement-guard"
+      - run: cargo test --workspace --release --locked --features aster-engine/fused-input
+      - run: cargo test --workspace --locked --features aster-engine/fused-input
       - run: python scripts/verify.py --setups 1000
       - run: python scripts/verify_rust_legal_edges.py
       - run: python scripts/smoke_rust_play.py
@@ -53,3 +55,5 @@ jobs:
         env:
           ASTER_SIMD: scalar
         run: python scripts/verify_aster_branding.py --output artifacts/verification/aster-scalar-ci.json
+      - run: cargo build --workspace --release --locked --features aster-engine/fused-input
+      - run: python scripts/verify_aster_branding.py --output artifacts/verification/aster-fused-input-ci.json

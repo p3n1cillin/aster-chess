@@ -1,0 +1,50 @@
+["scripts/verify_rust_equivalence.py", "--candidate", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-candidate-v1\\aster.exe", "--baseline", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-control-v1\\aster.exe", "--suite", "tests/fixtures/aster-fused-input-parent-v1.json", "--output", "artifacts/verification/aster-fused-input-equivalence-auto-v1.json"]
+{"passed": true, "identical": 64, "positions": 64}
+["scripts/tactics.py", "tests/fixtures/tactics-v1.json", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-control-v1\\aster.exe", "--nodes", "20000", "--output", "artifacts/tactics/aster-fused-input-auto-control-tactics-v1-v1.json"]
+{"solved": 32, "total": 32}
+["scripts/tactics.py", "tests/fixtures/tactics-v1.json", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-candidate-v1\\aster.exe", "--nodes", "20000", "--reference-report", "artifacts/tactics/aster-fused-input-auto-control-tactics-v1-v1.json", "--output", "artifacts/tactics/aster-fused-input-auto-candidate-tactics-v1-v1.json"]
+{"solved": 32, "total": 32}
+["scripts/tactics.py", "tests/fixtures/tactics-quiet-v1.json", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-control-v1\\aster.exe", "--nodes", "20000", "--output", "artifacts/tactics/aster-fused-input-auto-control-tactics-quiet-v1-v1.json"]
+{"solved": 31, "total": 32}
+["scripts/tactics.py", "tests/fixtures/tactics-quiet-v1.json", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-candidate-v1\\aster.exe", "--nodes", "20000", "--reference-report", "artifacts/tactics/aster-fused-input-auto-control-tactics-quiet-v1-v1.json", "--output", "artifacts/tactics/aster-fused-input-auto-candidate-tactics-quiet-v1-v1.json"]
+{"solved": 31, "total": 32}
+["scripts/tactics.py", "tests/fixtures/endgames-v1.json", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-control-v1\\aster.exe", "--nodes", "20000", "--output", "artifacts/tactics/aster-fused-input-auto-control-endgames-v1-v1.json"]
+{"solved": 16, "total": 16}
+["scripts/tactics.py", "tests/fixtures/endgames-v1.json", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-candidate-v1\\aster.exe", "--nodes", "20000", "--reference-report", "artifacts/tactics/aster-fused-input-auto-control-endgames-v1-v1.json", "--output", "artifacts/tactics/aster-fused-input-auto-candidate-endgames-v1-v1.json"]
+{"solved": 16, "total": 16}
+["scripts/verify_rust_equivalence.py", "--candidate", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-candidate-v1\\aster.exe", "--baseline", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-control-v1\\aster.exe", "--suite", "tests/fixtures/aster-fused-input-parent-v1.json", "--output", "artifacts/verification/aster-fused-input-equivalence-avx2-v1.json"]
+{"passed": true, "identical": 64, "positions": 64}
+["scripts/tactics.py", "tests/fixtures/tactics-v1.json", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-control-v1\\aster.exe", "--nodes", "20000", "--output", "artifacts/tactics/aster-fused-input-avx2-control-tactics-v1-v1.json"]
+{"solved": 32, "total": 32}
+["scripts/tactics.py", "tests/fixtures/tactics-v1.json", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-candidate-v1\\aster.exe", "--nodes", "20000", "--reference-report", "artifacts/tactics/aster-fused-input-avx2-control-tactics-v1-v1.json", "--output", "artifacts/tactics/aster-fused-input-avx2-candidate-tactics-v1-v1.json"]
+{"solved": 32, "total": 32}
+["scripts/tactics.py", "tests/fixtures/tactics-quiet-v1.json", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-control-v1\\aster.exe", "--nodes", "20000", "--output", "artifacts/tactics/aster-fused-input-avx2-control-tactics-quiet-v1-v1.json"]
+{"solved": 31, "total": 32}
+["scripts/tactics.py", "tests/fixtures/tactics-quiet-v1.json", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-candidate-v1\\aster.exe", "--nodes", "20000", "--reference-report", "artifacts/tactics/aster-fused-input-avx2-control-tactics-quiet-v1-v1.json", "--output", "artifacts/tactics/aster-fused-input-avx2-candidate-tactics-quiet-v1-v1.json"]
+{"solved": 31, "total": 32}
+["scripts/tactics.py", "tests/fixtures/endgames-v1.json", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-control-v1\\aster.exe", "--nodes", "20000", "--output", "artifacts/tactics/aster-fused-input-avx2-control-endgames-v1-v1.json"]
+{"solved": 16, "total": 16}
+["scripts/tactics.py", "tests/fixtures/endgames-v1.json", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-candidate-v1\\aster.exe", "--nodes", "20000", "--reference-report", "artifacts/tactics/aster-fused-input-avx2-control-endgames-v1-v1.json", "--output", "artifacts/tactics/aster-fused-input-avx2-candidate-endgames-v1-v1.json"]
+{"solved": 16, "total": 16}
+["scripts/verify_rust_equivalence.py", "--candidate", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-candidate-v1\\aster.exe", "--baseline", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-control-v1\\aster.exe", "--suite", "tests/fixtures/aster-fused-input-parent-v1.json", "--output", "artifacts/verification/aster-fused-input-equivalence-scalar-v1.json"]
+{"passed": true, "identical": 64, "positions": 64}
+["scripts/tactics.py", "tests/fixtures/tactics-v1.json", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-control-v1\\aster.exe", "--nodes", "20000", "--output", "artifacts/tactics/aster-fused-input-scalar-control-tactics-v1-v1.json"]
+{"solved": 32, "total": 32}
+["scripts/tactics.py", "tests/fixtures/tactics-v1.json", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-candidate-v1\\aster.exe", "--nodes", "20000", "--reference-report", "artifacts/tactics/aster-fused-input-scalar-control-tactics-v1-v1.json", "--output", "artifacts/tactics/aster-fused-input-scalar-candidate-tactics-v1-v1.json"]
+{"solved": 32, "total": 32}
+["scripts/tactics.py", "tests/fixtures/tactics-quiet-v1.json", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-control-v1\\aster.exe", "--nodes", "20000", "--output", "artifacts/tactics/aster-fused-input-scalar-control-tactics-quiet-v1-v1.json"]
+{"solved": 31, "total": 32}
+["scripts/tactics.py", "tests/fixtures/tactics-quiet-v1.json", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-candidate-v1\\aster.exe", "--nodes", "20000", "--reference-report", "artifacts/tactics/aster-fused-input-scalar-control-tactics-quiet-v1-v1.json", "--output", "artifacts/tactics/aster-fused-input-scalar-candidate-tactics-quiet-v1-v1.json"]
+{"solved": 31, "total": 32}
+["scripts/tactics.py", "tests/fixtures/endgames-v1.json", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-control-v1\\aster.exe", "--nodes", "20000", "--output", "artifacts/tactics/aster-fused-input-scalar-control-endgames-v1-v1.json"]
+{"solved": 16, "total": 16}
+["scripts/tactics.py", "tests/fixtures/endgames-v1.json", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-candidate-v1\\aster.exe", "--nodes", "20000", "--reference-report", "artifacts/tactics/aster-fused-input-scalar-control-endgames-v1-v1.json", "--output", "artifacts/tactics/aster-fused-input-scalar-candidate-endgames-v1-v1.json"]
+{"solved": 16, "total": 16}
+["scripts/verify.py", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-candidate-v1\\aster.exe", "--output", "artifacts/verification/aster-fused-input-rules-v1.json", "--setups", "1000"]
+{"passed": true, "positions": 2630, "perft_checks": 14, "observer_samples": 1}
+["scripts/verify_rust_legal_edges.py", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-candidate-v1\\aster.exe", "--output", "artifacts/verification/aster-fused-input-edges-v1.json"]
+{"passed": true, "positions": 94}
+["scripts/smoke_rust_play.py", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-candidate-v1\\aster.exe", "--output", "artifacts/verification/aster-fused-input-play-v1.json"]
+{"proof_positions_checked": 2, "status": "passed", "play_binary_sha256": "fbb3fa6c328c4702b484d93545f2c2495200686553782fff5f6805f3db0c3ce6", "engine_binary_sha256": "fbb3fa6c328c4702b484d93545f2c2495200686553782fff5f6805f3db0c3ce6", "real_sse_samples_checked": 9, "completed_depths_checked": 22, "null_pass_clock_fixtures": 2, "checks": "HTTP errors, assets UTF-8, SSE ordering, legal moves, independent SAN/PV/branch replay, PGN, undo, stop, Black opening"}
+["scripts/smoke_mate_proof.py", "--engine", "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-candidate-v1\\aster.exe", "--output", "artifacts/verification/aster-fused-input-proofs-v1.json"]
+{"passed": true, "independent_certificates": 8, "positions": 42, "incomplete_export_refused": true}

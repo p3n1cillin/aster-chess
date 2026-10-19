@@ -1,0 +1,12 @@
+{
+  "tag": "v109",
+  "asset": "sandhi-s2-b200.nnue.zst",
+  "url": "https://github.com/cosmobobak/viridithas-networks/releases/download/v109/sandhi-s2-b200.nnue.zst",
+  "sha256": "066c172e22c25ee3d3b4084ad44ff761426f906a9c536cabd0127d17413d0585",
+  "size": 52442657,
+  "license": "CC0-1.0",
+  "license_commit": "d3da3953e41beb5c8a555ba97d1d59c6e3f07903",
+  "license_git_blob": "0e259d42c996742e9e3cba14c677129b2c1b6311",
+  "license_sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+  "source_note": "Upstream release knowledge, not trained by Aster. This exact v109 asset preceded Viridithas 20; baseline benchmark must identify the chosen pair."
+}

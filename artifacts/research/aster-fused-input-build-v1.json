@@ -1,0 +1,33 @@
+{
+  "status": "built_unqualified",
+  "plan": "artifacts/research/aster-fused-input-plan-v1.json",
+  "plan_sha256": "917a77a39fbc10b4e48ef0aef4adeca7833887e842aaf98f9c7bd34a225bd070",
+  "compiler": "rustc 1.99.1 (58cf8f9c3 2026-10-13)\nbinary: rustc\ncommit-hash: 58cf8f9c35b355199727627d07ae34a4e2846d67\ncommit-date: 2026-10-13\nhost: x86_64-pc-windows-msvc\nrelease: 1.99.1\nLLVM version: 23.1.1",
+  "flags": [
+    "-C",
+    "target-cpu=x86-64-v3"
+  ],
+  "build_command": [
+    "cargo",
+    "build",
+    "--workspace",
+    "--release",
+    "--locked",
+    "--features",
+    "aster-engine/fused-input"
+  ],
+  "binaries": {
+    "control": {
+      "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-control-v1\\aster.exe",
+      "sha256": "6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2",
+      "features": []
+    },
+    "candidate": {
+      "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\fused-input-candidate-v1\\aster.exe",
+      "sha256": "fbb3fa6c328c4702b484d93545f2c2495200686553782fff5f6805f3db0c3ce6",
+      "features": [
+        "aster-engine/fused-input"
+      ]
+    }
+  }
+}
