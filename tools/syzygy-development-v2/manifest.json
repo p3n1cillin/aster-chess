@@ -1,0 +1,427 @@
+{
+  "purpose": "Development oracle for the Syzygy prober; never used for play",
+  "source_tag": "python-chess v1.11.2",
+  "license": "GPL-3.0-or-later (python-chess)",
+  "files": [
+    {
+      "name": "KBBvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KBBvK.rtbw",
+      "bytes": 58000,
+      "sha256": "3afa74fcfd6100df851c3b18ca255acd9d68c31c7c74cb02b2d5236ffd610ed6"
+    },
+    {
+      "name": "KBBvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KBBvK.rtbz",
+      "bytes": 136272,
+      "sha256": "d3786ba13d73b1ed61b8be4fd301ceed56b9af5e7c4fbf4a252ef77d2ea3d3db"
+    },
+    {
+      "name": "KBNvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KBNvK.rtbw",
+      "bytes": 7632,
+      "sha256": "76958da65bc243f2f0a16ceb83f1c00cbc4fb6d6e2f43d052c2f9d65bf16fee8"
+    },
+    {
+      "name": "KBNvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KBNvK.rtbz",
+      "bytes": 461840,
+      "sha256": "cad874516a2327e63754b3faababc7dece1b949305f2944b2b5a3b137f92ecd3"
+    },
+    {
+      "name": "KBPvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KBPvK.rtbw",
+      "bytes": 81424,
+      "sha256": "4714e6844d18eea21b9e7be3c8b2f5b04739638d74416ae18ab86e1fb4a12e4c"
+    },
+    {
+      "name": "KBPvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KBPvK.rtbz",
+      "bytes": 75792,
+      "sha256": "0360472b5800b9c5fbecf4717b0ef582e503bcdee16f57ee8e187234a80a5581"
+    },
+    {
+      "name": "KBvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KBvK.rtbw",
+      "bytes": 80,
+      "sha256": "bc0d8ab3560de9038460f0e8f61e3b7efd3e3d0327d19ae0387c0da7ddeb244d"
+    },
+    {
+      "name": "KBvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KBvK.rtbz",
+      "bytes": 80,
+      "sha256": "6246c8a5c643eec9d4758d55ed843e31cc28a9b82a6f630c1c950d8b7755975b"
+    },
+    {
+      "name": "KBvKB.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KBvKB.rtbw",
+      "bytes": 1232,
+      "sha256": "f0bfff470a9775c0f6693d7c1b73a0879cfed64f9b50cb56872cc15dbe8336ad"
+    },
+    {
+      "name": "KBvKB.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KBvKB.rtbz",
+      "bytes": 80,
+      "sha256": "104404c12c01bbeef4e9095a65cf1f98da6def2e106880b555371f3a8c7f54b6"
+    },
+    {
+      "name": "KBvKN.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KBvKN.rtbw",
+      "bytes": 2256,
+      "sha256": "1d0c01bfb86b5167103f5e46eaa9cfda8b614424cd7749b5e02539c850594bda"
+    },
+    {
+      "name": "KBvKN.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KBvKN.rtbz",
+      "bytes": 80,
+      "sha256": "268eecbf84f5371a860707ef55a7c53fc55e7c5d29379ec70d6b7ff253d48d2e"
+    },
+    {
+      "name": "KBvKP.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KBvKP.rtbw",
+      "bytes": 107472,
+      "sha256": "7ea5491c17771a47cb558bf3ac3d6fe6a85e2075daa34f8ec4fa91b4319c1fe5"
+    },
+    {
+      "name": "KBvKP.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KBvKP.rtbz",
+      "bytes": 5968,
+      "sha256": "929287a203a8f371f2418cfcbd4b05638a7dc7d2146b87df07a6259b653aebee"
+    },
+    {
+      "name": "KNNvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KNNvK.rtbw",
+      "bytes": 1360,
+      "sha256": "8b5195abd7f1d4be7aa4b4dca669e9075d61d1c6b02dec8b71f5e9ea21d9eced"
+    },
+    {
+      "name": "KNNvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KNNvK.rtbz",
+      "bytes": 80,
+      "sha256": "9b2f7f8046cc7911c82a6d51abfa405dfd1c35f118f9a0705e69bd9f81db12ce"
+    },
+    {
+      "name": "KNPvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KNPvK.rtbw",
+      "bytes": 93200,
+      "sha256": "27ce7e0ea8f585dfbbb29e2cc1e04ac547818d547c17ad9b053b05eca6f5b479"
+    },
+    {
+      "name": "KNPvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KNPvK.rtbz",
+      "bytes": 111056,
+      "sha256": "b2543f1e060eb800cb5f3dc8968c6c57141a87819039d29d681ab3cd2386c57c"
+    },
+    {
+      "name": "KNvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KNvK.rtbw",
+      "bytes": 80,
+      "sha256": "9d3518b12df3d2006441df758bce31e961346e70a11920aaad75c647003bb6e7"
+    },
+    {
+      "name": "KNvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KNvK.rtbz",
+      "bytes": 80,
+      "sha256": "0e49a0f2810a131c32fc14872e83044aa9810ce2c86df071851512077291fc25"
+    },
+    {
+      "name": "KNvKN.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KNvKN.rtbw",
+      "bytes": 1168,
+      "sha256": "290b5d295f531ac680e35a3295ff265e89da864fc0363b5d7aca928c8e38faf6"
+    },
+    {
+      "name": "KNvKN.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KNvKN.rtbz",
+      "bytes": 80,
+      "sha256": "540abbc141be6619646d1ad9cd3080c97e52eb599e3a5832974f93d2d5114f9d"
+    },
+    {
+      "name": "KNvKP.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KNvKP.rtbw",
+      "bytes": 148048,
+      "sha256": "f21332cc4b380764847d6c32511dee16cbf56e65604596ca24e784f8e4c13bdb"
+    },
+    {
+      "name": "KNvKP.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KNvKP.rtbz",
+      "bytes": 10640,
+      "sha256": "f5540325bc8bb6b2a9c99b9e1f4672aa06291fd2d8a4d2fa1fbd9453c90774b4"
+    },
+    {
+      "name": "KPPvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KPPvK.rtbw",
+      "bytes": 25104,
+      "sha256": "55aa91c460bc5eea322b8a6cde4f94d2e0a244b6fc14f6aca17e6ccfb2e56ef6"
+    },
+    {
+      "name": "KPPvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KPPvK.rtbz",
+      "bytes": 8656,
+      "sha256": "a56cb0a0fd1baa54a47f14b383a8bb0e74051832fbd7f12a0a47f09e5e68b370"
+    },
+    {
+      "name": "KPvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KPvK.rtbw",
+      "bytes": 7824,
+      "sha256": "63ad9e15cd0f5e91e42e6f669a9f6116ae9f9eabd85757e9fb28d2be6074aed9"
+    },
+    {
+      "name": "KPvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KPvK.rtbz",
+      "bytes": 4176,
+      "sha256": "f2469f063c9b5748b7b8a0e33d65e41be2090c397b4bcbedbeedbc5ff301b596"
+    },
+    {
+      "name": "KPvKP.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KPvKP.rtbw",
+      "bytes": 245328,
+      "sha256": "6d21860e47a91d00841ccf63a657dc09b78f602e0ec005f925470e2449e1ae05"
+    },
+    {
+      "name": "KPvKP.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KPvKP.rtbz",
+      "bytes": 54480,
+      "sha256": "2967707c971ec847c5ef3fe6f1934166aeb10c8cc151a1ae9d7c922c5aed1fc3"
+    },
+    {
+      "name": "KQBvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQBvK.rtbw",
+      "bytes": 4944,
+      "sha256": "55948e960dcdf6b4f02ebae87b1a1a7d14bff085aea17e6e6d4b7f75a2306493"
+    },
+    {
+      "name": "KQBvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQBvK.rtbz",
+      "bytes": 139088,
+      "sha256": "27b12f2c8083962b502704af7fd01d7424bfbe724c2bbfd6962f227c7fe91732"
+    },
+    {
+      "name": "KQNvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQNvK.rtbw",
+      "bytes": 3600,
+      "sha256": "cd807df1b6f5966ddc9f481e01bd58b4653d67c77d9d450d348c9bca827b51b8"
+    },
+    {
+      "name": "KQNvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQNvK.rtbz",
+      "bytes": 156432,
+      "sha256": "a86a0900d84c4c95bb85845b88f3ff77ef50383593fa27383ed2e585e8d8139c"
+    },
+    {
+      "name": "KQPvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQPvK.rtbw",
+      "bytes": 12496,
+      "sha256": "e7cd0729a1b2662f289d423bf788634d60a0fb86e11b0b791da9ab88a36a8e6f"
+    },
+    {
+      "name": "KQPvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQPvK.rtbz",
+      "bytes": 32208,
+      "sha256": "b8a0ddb251a9368c4a97f7add8647b050fb0257ed6bea5cf1dc3a720994082c4"
+    },
+    {
+      "name": "KQQvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQQvK.rtbw",
+      "bytes": 7056,
+      "sha256": "b1c0d3eabf1226440b950fd468c4f30a13ea69ce38194bc65e07bd6b617226e0"
+    },
+    {
+      "name": "KQQvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQQvK.rtbz",
+      "bytes": 25936,
+      "sha256": "0d8e14a93ba2fd578b904746c5b0d0c93eb7084aff654c72a0476cab00ba6f94"
+    },
+    {
+      "name": "KQRvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQRvK.rtbw",
+      "bytes": 4560,
+      "sha256": "b018ece9cc195618981b027268f9cca929a1ed4c0bdd739874b7846640ef479a"
+    },
+    {
+      "name": "KQRvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQRvK.rtbz",
+      "bytes": 44112,
+      "sha256": "9766d3e684582297943583e1981154609655034cea2aa78a5494cc01c8c6bcee"
+    },
+    {
+      "name": "KQvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQvK.rtbw",
+      "bytes": 272,
+      "sha256": "45c453e5113a714bd4ece1cb5ba78cf5d21dd8b06f89708675d164fbe9bd3b53"
+    },
+    {
+      "name": "KQvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQvK.rtbz",
+      "bytes": 5328,
+      "sha256": "ad20819e947f38bf06865a888dbde488ee4a34d2aa64b5727e1882313b1273a3"
+    },
+    {
+      "name": "KQvKB.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQvKB.rtbw",
+      "bytes": 6672,
+      "sha256": "0c18bbcaec0e7c161d56392ff57a39258dd93acd0321e3bbb32f7c05636abeac"
+    },
+    {
+      "name": "KQvKB.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQvKB.rtbz",
+      "bytes": 195216,
+      "sha256": "a63befd64dbd1aab4e8b290da558fa1ccae21d7aebad81966a7cdd6ac8432554"
+    },
+    {
+      "name": "KQvKN.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQvKN.rtbw",
+      "bytes": 10064,
+      "sha256": "ba07bd47c6eaa20904b595f43e171c6fc70fcc056cb33696fe12ed254c546100"
+    },
+    {
+      "name": "KQvKN.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQvKN.rtbz",
+      "bytes": 162640,
+      "sha256": "0e99385bbd903975f8511751379079aa3b6663dd093f43b9ac951a97bd938371"
+    },
+    {
+      "name": "KQvKP.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQvKP.rtbw",
+      "bytes": 58064,
+      "sha256": "2f92788170e8a5c05608f44a47fd42f3f4fff372d0af64633c56bd081039d8f9"
+    },
+    {
+      "name": "KQvKP.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQvKP.rtbz",
+      "bytes": 205776,
+      "sha256": "faedb2db23be6619a57cd21c1291582bba9ddae30c5a394f5d4a7ab834a3940f"
+    },
+    {
+      "name": "KQvKQ.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQvKQ.rtbw",
+      "bytes": 16528,
+      "sha256": "571a85d86e635e48567997ea648fd1e90dde39c9b413b2fe968f5e7faeacfbb0"
+    },
+    {
+      "name": "KQvKQ.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQvKQ.rtbz",
+      "bytes": 6736,
+      "sha256": "98327247ba50c403199faec4df4a5f21e333c5c51b6ea2649ef9fd71264f8344"
+    },
+    {
+      "name": "KQvKR.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQvKR.rtbw",
+      "bytes": 20496,
+      "sha256": "8cdbe3c8e098037875de5854c656f8afeadb8327c85b5b7b1cac81719afd3e2c"
+    },
+    {
+      "name": "KQvKR.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KQvKR.rtbz",
+      "bytes": 309008,
+      "sha256": "0c15a2aaa3bdef39da4c26932006b5d38b55b8e3ad13e8a44815d63f84738618"
+    },
+    {
+      "name": "KRBvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KRBvK.rtbw",
+      "bytes": 2832,
+      "sha256": "9e6eced11a37cad71b4fc1a4f62a15e191e58883b51ce8c4c45f341051c6ae8e"
+    },
+    {
+      "name": "KRBvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KRBvK.rtbz",
+      "bytes": 261776,
+      "sha256": "e3bb6fbd54a57a154136ecee763a8e9862d8ab3f57b2f55387df70bdbff1b140"
+    },
+    {
+      "name": "KRNvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KRNvK.rtbw",
+      "bytes": 2320,
+      "sha256": "4f96cab9fc0005f2679eacb92cec32edf9c932db7bb29b5dc7659be0012d6c35"
+    },
+    {
+      "name": "KRNvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KRNvK.rtbz",
+      "bytes": 295632,
+      "sha256": "150b85874a78474a38d0f36f1ab39d387f524a1c2092ad92d3d0945d96c17d16"
+    },
+    {
+      "name": "KRPvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KRPvK.rtbw",
+      "bytes": 5136,
+      "sha256": "6bc2aa9db5ee7fcc287e6c3b006ab6cfc2be4dff4ae7ca4a524a78520eea61db"
+    },
+    {
+      "name": "KRPvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KRPvK.rtbz",
+      "bytes": 12944,
+      "sha256": "5c89c9ef70c144bb2d6d823a41668ccf2f79b486b6bc128ff01aadb5485c06a9"
+    },
+    {
+      "name": "KRRvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KRRvK.rtbw",
+      "bytes": 1936,
+      "sha256": "4c05ec32e6e43b690d235307de75432a3ceecdbc3d2659d8101ed15b48b8445d"
+    },
+    {
+      "name": "KRRvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KRRvK.rtbz",
+      "bytes": 53520,
+      "sha256": "e68314e00bf9f16122005a06f7d42bc0f6c682f30e8ca50532ba44444f3b96ce"
+    },
+    {
+      "name": "KRvK.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KRvK.rtbw",
+      "bytes": 208,
+      "sha256": "37f8601644113dc83be9822913d6ecf75e5c8b7eeb11b7689c38a3ff986d2a48"
+    },
+    {
+      "name": "KRvK.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KRvK.rtbz",
+      "bytes": 8272,
+      "sha256": "9ce83c0f6204fcca761c4203a4644ad2993462749fa39ac27815a29dee740b20"
+    },
+    {
+      "name": "KRvKB.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KRvKB.rtbw",
+      "bytes": 32912,
+      "sha256": "69b247cb390ffcd729cf5fe5c40f8a24803190bf67b108b8f05b8b08b26a6a72"
+    },
+    {
+      "name": "KRvKB.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KRvKB.rtbz",
+      "bytes": 9936,
+      "sha256": "4fa644478a516e1425b22a740ddefc4d54e51298250b8208d26073df3638630b"
+    },
+    {
+      "name": "KRvKN.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KRvKN.rtbw",
+      "bytes": 100048,
+      "sha256": "a8cde902b010bf6c8763c97d19b5430b422e74db9cb8e9d5e67fa07373c13c5b"
+    },
+    {
+      "name": "KRvKN.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KRvKN.rtbz",
+      "bytes": 93200,
+      "sha256": "c0df57d0b066cdd7be5bdf9b14745f6ead1fd8e9fba2b77fe0f3cb56ebef7ae0"
+    },
+    {
+      "name": "KRvKP.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KRvKP.rtbw",
+      "bytes": 179408,
+      "sha256": "3968c2bfced3a5ecfbb54166ec13d4e7b70f3b03c495af4ae87cad2ec75a0749"
+    },
+    {
+      "name": "KRvKP.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KRvKP.rtbz",
+      "bytes": 193424,
+      "sha256": "6d4b1389832854119df815ff89ed2cb0786e8887f000009f0db3484457f7f6ff"
+    },
+    {
+      "name": "KRvKR.rtbw",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KRvKR.rtbw",
+      "bytes": 12944,
+      "sha256": "797081b5b3fbac20c4baa5453d68bdae1425b63895f5c9a5ac5c68ea63a97712"
+    },
+    {
+      "name": "KRvKR.rtbz",
+      "url": "https://raw.githubusercontent.com/niklasf/python-chess/v1.11.2/data/syzygy/regular/KRvKR.rtbz",
+      "bytes": 3408,
+      "sha256": "c23fa5a0209204b847232ed49e079c099cf603b43d6ace9e27257793b1839850"
+    }
+  ]
+}

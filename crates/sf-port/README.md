@@ -22,9 +22,7 @@ complete SF 19 NNUE: HalfKAv2_hm, FullThreats and PP_3Wide feature sets, the
 accumulator stack with Finny-table caches (incremental forward/backward,
 hybrid king-move and refresh paths) and the 1024→32→32→1 layer stacks.
 
-Not yet ported: NUMA binding, large pages and the `speedtest` command. Syzygy
-WDL probing is verified (below); DTZ probing is ported but not yet verified,
-because no DTZ tables are available locally.
+Not yet ported: NUMA binding, large pages and the `speedtest` command.
 
 ## Exactness
 
@@ -42,10 +40,11 @@ The port reproduces Stockfish's search exactly, not approximately:
   reference generator, and incremental accumulators against full refreshes
   along random games. Aster's independent python-chess verifiers pass against
   this core as well.
-* Syzygy: WDL probes equal python-chess's independent reader on 5,000 random
-  positions (both colors, all 3-man development tables), and with
-  `SyzygyPath` set, fixed-depth searches of 12 tablebase positions print the
-  same 180 lines as the official binary (TB scores, tbhits, PVs).
+* Syzygy: WDL and DTZ probes equal python-chess's independent reader on 14,000
+  random positions across all 35 3- and 4-piece tables (both colors;
+  `scripts/fetch_syzygy_dev_tables.py`, `scripts/verify_syzygy_probe.py`). With
+  `SyzygyPath` set, fixed-depth searches of 17 tablebase positions print the
+  same 260 lines as the official binary, including DTZ-extended PVs to mate.
 
 Integer-exactness is what makes this possible: NNUE accumulators use wrapping
 16-bit arithmetic and the layers use exact 32-bit dot products, so incremental,

@@ -167,7 +167,8 @@ pub static PAWN_PAIR_BB: [Bitboard; 64] = {
 
 #[inline(always)]
 pub fn pawn_pair_bb(s: Square) -> Bitboard {
-    PAWN_PAIR_BB[s]
+    debug_assert!(s < 64);
+    unsafe { *PAWN_PAIR_BB.get_unchecked(s) }
 }
 
 const fn line_mask(sq: Square, d1: Direction, d2: Direction) -> Bitboard {
@@ -447,6 +448,11 @@ pub fn h2(h: Key) -> usize {
 
 impl Tables {
     #[inline(always)]
+    pub fn psq(&self, pc: Piece, s: Square) -> Key {
+        debug_assert!(pc < PIECE_NB && s < 64);
+        unsafe { *self.zobrist_psq.get_unchecked(pc).get_unchecked(s) }
+    }
+    #[inline(always)]
     pub fn bishop_attacks(&self, s: Square, occupied: Bitboard) -> Bitboard {
         let m = unsafe { self.magics.get_unchecked(s).get_unchecked(0) };
         unsafe { *self.attack_table.get_unchecked(m.offset + m.index(occupied)) }
@@ -462,7 +468,7 @@ impl Tables {
             BISHOP => self.bishop_attacks(s, occupied),
             ROOK => self.rook_attacks(s, occupied),
             QUEEN => self.bishop_attacks(s, occupied) | self.rook_attacks(s, occupied),
-            _ => PSEUDO_ATTACKS[pt][s],
+            _ => pa(pt, s),
         }
     }
 }
@@ -477,7 +483,7 @@ pub fn attacks_bb(pt: PieceType, s: Square, occupied: Bitboard) -> Bitboard {
             let (b, r) = dual::both_attacks_bb(s, occupied);
             b | r
         }
-        _ => PSEUDO_ATTACKS[pt][s],
+        _ => pa(pt, s),
     }
 }
 #[cfg(all(target_arch = "x86_64", target_feature = "avx2"))]
@@ -544,13 +550,19 @@ mod tests {
         }
     }
 }
+/// Table lookup without bounds checks (debug builds still check).
+#[inline(always)]
+pub fn pa(pt: usize, s: Square) -> Bitboard {
+    debug_assert!(pt < PIECE_TYPE_NB && s < 64);
+    unsafe { *PSEUDO_ATTACKS.get_unchecked(pt).get_unchecked(s) }
+}
 #[inline(always)]
 pub fn pawn_attacks_from(c: Color, s: Square) -> Bitboard {
-    PSEUDO_ATTACKS[c][s]
+    pa(c, s)
 }
 #[inline(always)]
 pub fn pseudo_attacks(pt: PieceType, s: Square) -> Bitboard {
-    PSEUDO_ATTACKS[pt][s]
+    pa(pt, s)
 }
 #[inline(always)]
 pub fn line_bb(s1: Square, s2: Square) -> Bitboard {

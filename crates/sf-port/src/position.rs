@@ -345,7 +345,7 @@ impl Position {
         let (b, r) = both_attacks_bb(ksq, self.pieces());
         let st = self.st_mut();
         st.check_squares[PAWN] = pawn_attacks_from(them, ksq);
-        st.check_squares[KNIGHT] = PSEUDO_ATTACKS[KNIGHT][ksq];
+        st.check_squares[KNIGHT] = pa(KNIGHT, ksq);
         st.check_squares[BISHOP] = b;
         st.check_squares[ROOK] = r;
         st.check_squares[QUEEN] = b | r;
@@ -374,15 +374,15 @@ impl Position {
             let s = pop_lsb(&mut b);
             let pc = self.piece_on(s);
             let st = self.st_mut();
-            st.key ^= t.zobrist_psq[pc][s];
+            st.key ^= t.psq(pc, s);
             if type_of(pc) == PAWN {
-                st.pawn_key ^= t.zobrist_psq[pc][s];
+                st.pawn_key ^= t.psq(pc, s);
             } else {
-                st.non_pawn_key[color_of(pc)] ^= t.zobrist_psq[pc][s];
+                st.non_pawn_key[color_of(pc)] ^= t.psq(pc, s);
                 if type_of(pc) != KING {
                     st.non_pawn_material[color_of(pc)] += PIECE_VALUE[pc];
                     if type_of(pc) <= BISHOP {
-                        st.minor_piece_key ^= t.zobrist_psq[pc][s];
+                        st.minor_piece_key ^= t.psq(pc, s);
                     }
                 }
             }
@@ -404,7 +404,7 @@ impl Position {
         let mut k = 0;
         for pc in PIECES {
             for cnt in 0..self.piece_count[pc] {
-                k ^= t.zobrist_psq[pc][8 + cnt as usize];
+                k ^= t.psq(pc, 8 + cnt as usize);
             }
         }
         k
@@ -463,7 +463,7 @@ impl Position {
     fn update_slider_blockers(&mut self, c: Color) {
         let ksq = self.king_square(c);
         let them = flip_color(c);
-        let mut snipers = ((PSEUDO_ATTACKS[ROOK][ksq] & self.pieces_tt(QUEEN, ROOK)) | (PSEUDO_ATTACKS[BISHOP][ksq] & self.pieces_tt(QUEEN, BISHOP))) & self.pieces_c(them);
+        let mut snipers = ((pa(ROOK, ksq) & self.pieces_tt(QUEEN, ROOK)) | (pa(BISHOP, ksq) & self.pieces_tt(QUEEN, BISHOP))) & self.pieces_c(them);
         let occupancy = self.pieces() ^ snipers;
         let mut blockers = 0;
         let mut pinners = 0;
@@ -489,8 +489,8 @@ impl Position {
             | (b & self.pieces_tt(BISHOP, QUEEN))
             | (pawn_attacks_from(BLACK, s) & self.pieces_ct(WHITE, PAWN))
             | (pawn_attacks_from(WHITE, s) & self.pieces_ct(BLACK, PAWN))
-            | (PSEUDO_ATTACKS[KNIGHT][s] & self.pieces_t(KNIGHT))
-            | (PSEUDO_ATTACKS[KING][s] & self.pieces_t(KING))
+            | (pa(KNIGHT, s) & self.pieces_t(KNIGHT))
+            | (pa(KING, s) & self.pieces_t(KING))
     }
     #[inline(always)]
     pub fn attackers_to(&self, s: Square) -> Bitboard {
@@ -502,8 +502,8 @@ impl Position {
         (rook_attacks(s, occupied) & self.pieces_ctt(c, ROOK, QUEEN)) != 0
             || (bishop_attacks(s, occupied) & self.pieces_ctt(c, BISHOP, QUEEN)) != 0
             || (pawn_attacks_from(flip_color(c), s) & self.pieces_ct(c, PAWN)) != 0
-            || (PSEUDO_ATTACKS[KNIGHT][s] & self.pieces_ct(c, KNIGHT)) != 0
-            || (PSEUDO_ATTACKS[KING][s] & self.pieces_ct(c, KING)) != 0
+            || (pa(KNIGHT, s) & self.pieces_ct(c, KNIGHT)) != 0
+            || (pa(KING, s) & self.pieces_ct(c, KING)) != 0
     }
 
     /// Tests whether a pseudo-legal move is legal
@@ -661,8 +661,8 @@ impl Position {
 
         if m.type_of() == CASTLING {
             let (rfrom, rto) = self.do_castling::<true>(us, from, &mut to, dirties.as_deref_mut());
-            k ^= t.zobrist_psq[captured][rfrom] ^ t.zobrist_psq[captured][rto];
-            self.st_mut().non_pawn_key[us] ^= t.zobrist_psq[captured][rfrom] ^ t.zobrist_psq[captured][rto];
+            k ^= t.psq(captured, rfrom) ^ t.psq(captured, rto);
+            self.st_mut().non_pawn_key[us] ^= t.psq(captured, rfrom) ^ t.psq(captured, rto);
             captured = NO_PIECE;
         } else if captured != NO_PIECE {
             let mut capsq = to;
@@ -671,29 +671,29 @@ impl Position {
                     capsq = sq_add(capsq, -pawn_push(us));
                     self.remove_piece(capsq, dirties.as_deref_mut().map(|d| &mut d.dirty_threats));
                 }
-                self.st_mut().pawn_key ^= t.zobrist_psq[captured][capsq];
+                self.st_mut().pawn_key ^= t.psq(captured, capsq);
             } else {
                 let st = self.st_mut();
                 st.non_pawn_material[them] -= PIECE_VALUE[captured];
-                st.non_pawn_key[them] ^= t.zobrist_psq[captured][capsq];
+                st.non_pawn_key[them] ^= t.psq(captured, capsq);
                 if type_of(captured) <= BISHOP {
-                    st.minor_piece_key ^= t.zobrist_psq[captured][capsq];
+                    st.minor_piece_key ^= t.psq(captured, capsq);
                 }
             }
             if let Some(d) = dirties.as_deref_mut() {
                 d.dirty_piece.remove_pc = captured;
                 d.dirty_piece.remove_sq = capsq;
             }
-            k ^= t.zobrist_psq[captured][capsq];
+            k ^= t.psq(captured, capsq);
             let idx = 8 + self.piece_count[captured] as usize - (m.type_of() != EN_PASSANT) as usize;
             let st = self.st_mut();
-            st.material_key ^= t.zobrist_psq[captured][idx];
+            st.material_key ^= t.psq(captured, idx);
             st.rule50 = 0;
         } else if let Some(d) = dirties.as_deref_mut() {
             d.dirty_piece.remove_sq = SQ_NONE;
         }
 
-        k ^= t.zobrist_psq[pc][from] ^ t.zobrist_psq[pc][to];
+        k ^= t.psq(pc, from) ^ t.psq(pc, to);
 
         if self.st().ep_square != SQ_NONE {
             k ^= t.zobrist_enpassant[file_of(self.st().ep_square)];
@@ -702,7 +702,7 @@ impl Position {
 
         let cr_old = self.st().castling_rights;
         k ^= t.zobrist_castling[cr_old];
-        let cr_new = cr_old & !(self.castling_rights_mask[from] | self.castling_rights_mask[to]);
+        let cr_new = cr_old & !(unsafe { *self.castling_rights_mask.get_unchecked(from) | *self.castling_rights_mask.get_unchecked(to) });
         self.st_mut().castling_rights = cr_new;
         k ^= t.zobrist_castling[cr_new];
 
@@ -727,24 +727,24 @@ impl Position {
                     d.dirty_piece.add_sq = to;
                     d.dirty_piece.to = SQ_NONE;
                 }
-                k ^= t.zobrist_psq[promotion][to];
-                let mk = t.zobrist_psq[promotion][8 + self.piece_count[promotion] as usize] ^ t.zobrist_psq[pc][8 + self.piece_count[pc] as usize - 1];
+                k ^= t.psq(promotion, to);
+                let mk = t.psq(promotion, 8 + self.piece_count[promotion] as usize) ^ t.psq(pc, 8 + self.piece_count[pc] as usize - 1);
                 let st = self.st_mut();
                 st.material_key ^= mk;
-                st.non_pawn_key[us] ^= t.zobrist_psq[promotion][to];
+                st.non_pawn_key[us] ^= t.psq(promotion, to);
                 if pt <= BISHOP {
-                    st.minor_piece_key ^= t.zobrist_psq[promotion][to];
+                    st.minor_piece_key ^= t.psq(promotion, to);
                 }
                 st.non_pawn_material[us] += PIECE_VALUE[promotion];
             }
             let st = self.st_mut();
-            st.pawn_key ^= t.zobrist_psq[pc][from] ^ t.zobrist_psq[pc][to];
+            st.pawn_key ^= t.psq(pc, from) ^ t.psq(pc, to);
             st.rule50 = 0;
         } else {
             let st = self.st_mut();
-            st.non_pawn_key[us] ^= t.zobrist_psq[pc][from] ^ t.zobrist_psq[pc][to];
+            st.non_pawn_key[us] ^= t.psq(pc, from) ^ t.psq(pc, to);
             if type_of(pc) <= BISHOP {
-                st.minor_piece_key ^= t.zobrist_psq[pc][from] ^ t.zobrist_psq[pc][to];
+                st.minor_piece_key ^= t.psq(pc, from) ^ t.psq(pc, to);
             }
         }
 
@@ -884,7 +884,7 @@ impl Position {
         let pc = self.piece_on(from);
         let captured = self.piece_on(to);
         let mut k = self.st().key ^ t.zobrist_side;
-        k ^= t.zobrist_psq[captured][to] ^ t.zobrist_psq[pc][to] ^ t.zobrist_psq[pc][from];
+        k ^= t.psq(captured, to) ^ t.psq(pc, to) ^ t.psq(pc, from);
         if captured != NO_PIECE || type_of(pc) == PAWN {
             return k;
         }
@@ -1051,13 +1051,15 @@ impl Position {
 
     #[inline(always)]
     pub fn put_piece(&mut self, pc: Piece, s: Square) {
-        self.board[s] = pc as u8;
         let b = square_bb(s);
-        self.by_type_bb[ALL_PIECES] |= b;
-        self.by_type_bb[type_of(pc)] |= b;
-        self.by_color_bb[color_of(pc)] |= b;
-        self.piece_count[pc] += 1;
-        self.piece_count[make_piece(color_of(pc), ALL_PIECES)] += 1;
+        unsafe {
+            *self.board.get_unchecked_mut(s) = pc as u8;
+            self.by_type_bb[ALL_PIECES] |= b;
+            *self.by_type_bb.get_unchecked_mut(type_of(pc)) |= b;
+            *self.by_color_bb.get_unchecked_mut(color_of(pc)) |= b;
+            *self.piece_count.get_unchecked_mut(pc) += 1;
+            *self.piece_count.get_unchecked_mut(make_piece(color_of(pc), ALL_PIECES)) += 1;
+        }
     }
 
     #[inline(always)]
@@ -1075,12 +1077,14 @@ impl Position {
             self.update_piece_threats::<true>(pc, false, s, d, !0);
         }
         let b = square_bb(s);
-        self.by_type_bb[ALL_PIECES] ^= b;
-        self.by_type_bb[type_of(pc)] ^= b;
-        self.by_color_bb[color_of(pc)] ^= b;
-        self.board[s] = NO_PIECE as u8;
-        self.piece_count[pc] -= 1;
-        self.piece_count[make_piece(color_of(pc), ALL_PIECES)] -= 1;
+        unsafe {
+            self.by_type_bb[ALL_PIECES] ^= b;
+            *self.by_type_bb.get_unchecked_mut(type_of(pc)) ^= b;
+            *self.by_color_bb.get_unchecked_mut(color_of(pc)) ^= b;
+            *self.board.get_unchecked_mut(s) = NO_PIECE as u8;
+            *self.piece_count.get_unchecked_mut(pc) -= 1;
+            *self.piece_count.get_unchecked_mut(make_piece(color_of(pc), ALL_PIECES)) -= 1;
+        }
     }
 
     #[inline(always)]
@@ -1090,11 +1094,13 @@ impl Position {
         if let Some(d) = dts.as_deref_mut() {
             self.update_piece_threats::<true>(pc, false, from, d, from_to);
         }
-        self.by_type_bb[ALL_PIECES] ^= from_to;
-        self.by_type_bb[type_of(pc)] ^= from_to;
-        self.by_color_bb[color_of(pc)] ^= from_to;
-        self.board[from] = NO_PIECE as u8;
-        self.board[to] = pc as u8;
+        unsafe {
+            self.by_type_bb[ALL_PIECES] ^= from_to;
+            *self.by_type_bb.get_unchecked_mut(type_of(pc)) ^= from_to;
+            *self.by_color_bb.get_unchecked_mut(color_of(pc)) ^= from_to;
+            *self.board.get_unchecked_mut(from) = NO_PIECE as u8;
+            *self.board.get_unchecked_mut(to) = pc as u8;
+        }
         if let Some(d) = dts {
             self.update_piece_threats::<true>(pc, true, to, d, from_to);
         }
@@ -1164,10 +1170,10 @@ impl Position {
             BISHOP => b_attacks,
             ROOK => r_attacks,
             QUEEN => slider_attacks,
-            PAWN => PSEUDO_ATTACKS[color_of(pc)][s],
-            _ => PSEUDO_ATTACKS[pt][s],
+            PAWN => pa(color_of(pc), s),
+            _ => pa(pt, s),
         }) & threat_targets;
-        let mut incoming = PSEUDO_ATTACKS[KNIGHT][s] & self.pieces_t(KNIGHT);
+        let mut incoming = pa(KNIGHT, s) & self.pieces_t(KNIGHT);
         if pt == KNIGHT || pt == ROOK {
             incoming |= (pawn_attacks_from(WHITE, s) & self.pieces_ct(BLACK, PAWN)) | (pawn_attacks_from(BLACK, s) & self.pieces_ct(WHITE, PAWN));
         }
@@ -1219,27 +1225,27 @@ impl Position {
     }
     #[inline(always)]
     pub fn pieces_t(&self, pt: PieceType) -> Bitboard {
-        self.by_type_bb[pt]
+        unsafe { *self.by_type_bb.get_unchecked(pt) }
     }
     #[inline(always)]
     pub fn pieces_tt(&self, a: PieceType, b: PieceType) -> Bitboard {
-        self.by_type_bb[a] | self.by_type_bb[b]
+        self.pieces_t(a) | self.pieces_t(b)
     }
     #[inline(always)]
     pub fn pieces_c(&self, c: Color) -> Bitboard {
-        self.by_color_bb[c]
+        unsafe { *self.by_color_bb.get_unchecked(c) }
     }
     #[inline(always)]
     pub fn pieces_ct(&self, c: Color, pt: PieceType) -> Bitboard {
-        self.by_color_bb[c] & self.by_type_bb[pt]
+        self.pieces_c(c) & self.pieces_t(pt)
     }
     #[inline(always)]
     pub fn pieces_ctt(&self, c: Color, a: PieceType, b: PieceType) -> Bitboard {
-        self.by_color_bb[c] & (self.by_type_bb[a] | self.by_type_bb[b])
+        self.pieces_c(c) & (self.pieces_t(a) | self.pieces_t(b))
     }
     #[inline(always)]
     pub fn count(&self, c: Color, pt: PieceType) -> i32 {
-        self.piece_count[make_piece(c, pt)]
+        unsafe { *self.piece_count.get_unchecked(make_piece(c, pt)) }
     }
     #[inline(always)]
     pub fn count_both(&self, pt: PieceType) -> i32 {
@@ -1271,15 +1277,15 @@ impl Position {
     }
     #[inline(always)]
     pub fn blockers_for_king(&self, c: Color) -> Bitboard {
-        self.st().blockers_for_king[c]
+        unsafe { *self.st().blockers_for_king.get_unchecked(c) }
     }
     #[inline(always)]
     pub fn pinners(&self, c: Color) -> Bitboard {
-        self.st().pinners[c]
+        unsafe { *self.st().pinners.get_unchecked(c) }
     }
     #[inline(always)]
     pub fn check_squares(&self, pt: PieceType) -> Bitboard {
-        self.st().check_squares[pt]
+        unsafe { *self.st().check_squares.get_unchecked(pt) }
     }
     #[inline(always)]
     pub fn attacks_by(&self, pt: PieceType, c: Color) -> Bitboard {

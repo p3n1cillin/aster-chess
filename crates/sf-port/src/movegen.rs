@@ -256,7 +256,7 @@ fn generate_all<const T: u8>(pos: &Position, ml: &mut MoveList, us: Color) {
         generate_moves(pos, ml, us, QUEEN, target);
     }
 
-    let b = PSEUDO_ATTACKS[KING][ksq] & if T == EVASIONS { !pos.pieces_c(us) } else { target };
+    let b = pa(KING, ksq) & if T == EVASIONS { !pos.pieces_c(us) } else { target };
     splat_moves(ml, ksq, b);
 
     if (T == QUIETS || T == NON_EVASIONS) && pos.can_castle(color_castling(us, ANY_CASTLING)) {

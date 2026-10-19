@@ -230,10 +230,13 @@
     "bench_info_and_bestmove_lines_identical": true,
     "nnue_static_eval_positions_identical": 45,
     "syzygy": {
-      "wdl_probes_vs_python_chess": 5000,
-      "tables": "tools/syzygy-development-v1 (3-man WDL only)",
-      "tb_search_output_identical_lines": 180,
-      "dtz": "implemented, not yet verified (no DTZ tables available locally)"
+      "wdl_dtz_probes_vs_python_chess": 14000,
+      "tables": "tools/syzygy-development-v2: all 35 3-4 man WDL+DTZ tables (scripts/fetch_syzygy_dev_tables.py)",
+      "wdl_only_probes_vs_python_chess_v1": 5000,
+      "tb_search_output_identical_lines": {
+        "wdl_only_v1_tables": 180,
+        "wdl_dtz_v2_tables": 260
+      }
     }
   }
 }
