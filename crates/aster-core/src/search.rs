@@ -4,6 +4,7 @@
 
 use crate::bitboard::*;
 use crate::history::*;
+use crate::large_pages::LargeBox;
 use crate::movegen::{GenType, MoveList};
 use crate::movepick::{MovePicker, new_move_buffer};
 use crate::nnue;
@@ -363,10 +364,10 @@ impl SearchManager {
 }
 
 pub struct Worker {
-    pub main_history: Box<ButterflyHistory>,
-    pub low_ply_history: Box<LowPlyHistory>,
-    pub capture_history: Box<CapturePieceToHistory>,
-    pub continuation_correction_history: Box<ContinuationCorrectionHistory>,
+    pub main_history: LargeBox<ButterflyHistory>,
+    pub low_ply_history: LargeBox<LowPlyHistory>,
+    pub capture_history: LargeBox<CapturePieceToHistory>,
+    pub continuation_correction_history: LargeBox<ContinuationCorrectionHistory>,
     pub tt_move_history: i16,
     #[cfg(feature = "disagreement-guard")]
     guard_budget: crate::disagreement::AuditBudget,

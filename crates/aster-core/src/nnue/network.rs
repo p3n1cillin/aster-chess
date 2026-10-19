@@ -22,12 +22,14 @@ pub const THREAT_AND_PP_DIMENSIONS: usize = (THREAT_DIMENSIONS + PP_DIMENSIONS) 
 
 pub const DEFAULT_NET_NAME: &str = "nn-c9e480e92425.nnue";
 
-/// Input feature converter weights, stored in file (unpermuted) order:
-/// one row of L1 values per input feature.
+/// Input feature converter weights: one row of L1 values per input feature,
+/// in file order or, for the AVX-512 kernels, in the paired layout.
 pub struct FeatureTransformer {
     pub biases: Box<[i16; L1]>,
     pub weights: AlignedBuf<i8>,           // PSQ_DIMENSIONS * L1
     pub threat_pp_weights: AlignedBuf<i8>, // THREAT_AND_PP_DIMENSIONS * L1
+    /// Rows are in the AVX-512 paired layout (kernels::PAIR_ORDER).
+    pub paired: bool,
 }
 
 impl FeatureTransformer {
@@ -181,16 +183,22 @@ impl Network {
         r.i16s(&mut biases[..])?;
         let threat_w = r.i8s(THREAT_DIMENSIONS as usize * L1)?;
         let pp_w = r.i8s(PP_DIMENSIONS as usize * L1)?;
-        let weights = r.i8s(PSQ_DIMENSIONS * L1)?;
+        let mut weights = r.i8s(PSQ_DIMENSIONS * L1)?.to_vec();
 
         let mut threat_pp_weights = Vec::with_capacity(threat_w.len() + pp_w.len());
         threat_pp_weights.extend_from_slice(threat_w);
         threat_pp_weights.extend_from_slice(pp_w);
+        let paired = kernels::paired_rows();
+        if paired {
+            kernels::to_paired_layout(&mut weights);
+            kernels::to_paired_layout(&mut threat_pp_weights);
+        }
 
         let ft = FeatureTransformer {
             biases,
-            weights: AlignedBuf::from_slice(weights),
+            weights: AlignedBuf::from_slice(&weights),
             threat_pp_weights: AlignedBuf::from_slice(&threat_pp_weights),
+            paired,
         };
         super::features::set_prefetch_base(ft.threat_pp_weights.as_ptr());
 

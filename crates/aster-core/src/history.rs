@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // Modified 2026-10-19: source naming and notice layout only.
 
+use crate::large_pages::{LargeBox, LargeSlice};
 use crate::position::Position;
 use crate::types::*;
 use std::sync::atomic::{AtomicI16, Ordering::Relaxed};
@@ -36,16 +37,11 @@ pub fn get(e: &AtomicI16) -> i32 {
     e.load(Relaxed) as i32
 }
 
-/// Allocates a zero-initialised boxed value of a plain integer/atomic array type.
-pub fn boxed_zeroed<T>() -> Box<T> {
-    let layout = std::alloc::Layout::new::<T>();
-    unsafe {
-        let p = std::alloc::alloc_zeroed(layout) as *mut T;
-        if p.is_null() {
-            std::alloc::handle_alloc_error(layout);
-        }
-        Box::from_raw(p)
-    }
+/// Allocates a zero-initialised value of a plain integer/atomic array type in
+/// huge-page backed memory (as the upstream reference does for its histories).
+pub fn boxed_zeroed<T>() -> LargeBox<T> {
+    // SAFETY: only used for integer and atomic integer arrays.
+    unsafe { LargeBox::zeroed() }
 }
 
 pub const BUTTERFLY_D: i32 = 7183;
@@ -73,9 +69,9 @@ pub struct CorrectionBundle {
 
 /// Histories shared between all search threads (the upstream reference shares them per NUMA node).
 pub struct SharedHistories {
-    pub correction: Vec<[CorrectionBundle; COLOR_NB]>,
-    pub continuation: Box<[[ContinuationHistory; 2]; 2]>,
-    pub pawn: Vec<PieceToHistory>,
+    pub correction: LargeSlice<[CorrectionBundle; COLOR_NB]>,
+    pub continuation: LargeBox<[[ContinuationHistory; 2]; 2]>,
+    pub pawn: LargeSlice<PieceToHistory>,
     size_minus1: usize,
     pawn_size_minus1: usize,
 }
@@ -86,12 +82,9 @@ impl SharedHistories {
         debug_assert!(thread_count.is_power_of_two());
         let corr_size = thread_count * CORRHIST_BASE_SIZE;
         let pawn_size = thread_count * PAWN_HISTORY_BASE_SIZE;
-        let mut correction = Vec::with_capacity(corr_size);
-        correction.resize_with(corr_size, Default::default);
-        let mut pawn = Vec::with_capacity(pawn_size);
-        pawn.resize_with(pawn_size, || {
-            std::array::from_fn(|_| std::array::from_fn(|_| AtomicI16::new(0)))
-        });
+        // SAFETY: atomic integer arrays; every entry is set by `clear_range`.
+        let correction = unsafe { LargeSlice::zeroed(corr_size) };
+        let pawn = unsafe { LargeSlice::zeroed(pawn_size) };
         SharedHistories {
             correction,
             continuation: boxed_zeroed(),

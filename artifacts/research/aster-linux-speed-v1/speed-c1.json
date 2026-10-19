@@ -1,0 +1,32 @@
+{
+ "created_utc": "2026-10-19",
+ "scope": "Speed only; identical 1,559,611-node bench on every binary. Not a strength result.",
+ "machine": "cloud VM, Intel Xeon @2.80GHz (AVX-512 VNNI/VBMI2), 4 vCPU, Linux 6.18, THP=madvise",
+ "method": "12 rounds; each round runs all four binaries concurrently (`bench 16 1 13`), one per pinned core, cores rotated per round; ratio = nps / clang reference nps in the same round; median and IQR of ratios. Script: speed_concurrent.py",
+ "reference_source": "official-stockfish effdc3fd3f6de6e75fe1374a51a7a7eed66f880b, network nn-c9e480e92425",
+ "binaries": {
+  "reference_clang": {
+   "build": "make build ARCH=x86-64-avx512icl COMP=clang (clang 18.1.3)",
+   "sha256": "df8ca3de3e679025a16fcda4463f8f7420f4f4cf298d286c6ec7cce9eb826e6f"
+  },
+  "reference_gcc_pgo": {
+   "build": "make profile-build ARCH=x86-64-avx512icl COMP=gcc (gcc 13.3.0)",
+   "sha256": "f68a1b19174ea9c9a9943b1846534f19b7d01a83ba55ee75141cb919d8b98e11"
+  },
+  "aster_before": {
+   "commit": "234121d",
+   "sha256": "f6bf83d31300fabd7a7fc9eeaa7a56839069313320c58ffe70e78e440779f9eb"
+  },
+  "aster_after": {
+   "commit": "this commit (huge pages + paired widening)",
+   "sha256": "0c548de25f4dbc41b4f350afc76ccb7afa6e6a98a4392965266719b86cedc003"
+  }
+ },
+ "raw_output": [
+  "nodes 1559611",
+  "tools/stockfish/sf-effdc3f-clang              median nps    821294  ratio median 1.0000  IQR 1.0000-1.0000",
+  "/tmp/claude-0/aster-base                      median nps    663954  ratio median 0.8168  IQR 0.7831-0.8716",
+  "/tmp/claude-0/aster-c1                        median nps    755810  ratio median 0.9127  IQR 0.8866-0.9640",
+  "tools/stockfish/sf-effdc3f-gcc-pgo            median nps    803944  ratio median 1.0109  IQR 0.9503-1.0381"
+ ]
+}

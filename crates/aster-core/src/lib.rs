@@ -8,6 +8,7 @@ mod disagreement;
 #[cfg(any(feature = "evaluation-risk", test))]
 mod evaluation_risk;
 pub mod history;
+pub mod large_pages;
 pub mod movegen;
 pub mod movepick;
 pub mod nnue;

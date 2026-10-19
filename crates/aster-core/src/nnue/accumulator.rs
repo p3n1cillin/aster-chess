@@ -6,6 +6,7 @@ use super::features::*;
 use super::kernels::*;
 use super::network::{FeatureTransformer, L1};
 use crate::bitboard::*;
+use crate::large_pages::LargeSlice;
 use crate::position::Position;
 use crate::types::*;
 
@@ -39,7 +40,7 @@ pub struct CacheEntry {
 /// piece-square accumulation of the last position seen with that king square.
 pub struct AccumulatorCaches {
     // index: opponent_has_queen * 64 + king square
-    entries: Vec<[CacheEntry; COLOR_NB]>,
+    entries: LargeSlice<[CacheEntry; COLOR_NB]>,
 }
 
 impl AccumulatorCaches {
@@ -50,7 +51,7 @@ impl AccumulatorCaches {
             piece_bb: 0,
         };
         AccumulatorCaches {
-            entries: vec![[e.clone(), e]; 2 * 64],
+            entries: LargeSlice::from_fn(2 * 64, |_| [e.clone(), e.clone()]),
         }
     }
     pub fn clear(&mut self, ft: &FeatureTransformer) {
@@ -76,14 +77,14 @@ fn opponent_has_queen(pos: &Position, persp: Color) -> bool {
 pub const MAX_SIZE: usize = MAX_PLY as usize + 1;
 
 pub struct AccumulatorStack {
-    accs: Vec<AccumulatorState>,
+    accs: LargeSlice<AccumulatorState>,
     size: usize,
 }
 
 impl Default for AccumulatorStack {
     fn default() -> Self {
         AccumulatorStack {
-            accs: vec![AccumulatorState::default(); MAX_SIZE],
+            accs: LargeSlice::from_fn(MAX_SIZE, |_| AccumulatorState::default()),
             size: 1,
         }
     }
@@ -646,16 +647,16 @@ pub fn refresh_from_scratch(persp: Color, ft: &FeatureTransformer, pos: &Positio
     while b != 0 {
         let sq = pop_lsb(&mut b);
         let i = psq_make_index(persp, sq, pos.piece_on(sq), ksq, q);
-        for (a, w) in acc.iter_mut().zip(psq_row(ft, i)) {
-            *a = a.wrapping_add(*w as i16);
+        for (a, w) in acc.iter_mut().zip(logical_row(psq_row(ft, i), ft.paired)) {
+            *a = a.wrapping_add(w as i16);
         }
     }
     let mut active = ThreatIndexList::new();
     threat_append_active_indices(persp, pos, &mut active);
     pp_append_active_indices(persp, pos, &mut active);
     for &i in active.as_slice() {
-        for (a, w) in acc.iter_mut().zip(thr_row(ft, i)) {
-            *a = a.wrapping_add(*w as i16);
+        for (a, w) in acc.iter_mut().zip(logical_row(thr_row(ft, i), ft.paired)) {
+            *a = a.wrapping_add(w as i16);
         }
     }
     acc

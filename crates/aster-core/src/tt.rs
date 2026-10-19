@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // Modified 2026-10-19: typed cache storage and lifetime-checked write leases.
 
+use crate::large_pages::LargeSlice;
 use crate::types::*;
 use std::sync::atomic::{AtomicI16, AtomicU8, AtomicU16, Ordering::Relaxed};
 
@@ -200,14 +201,14 @@ impl TTWriter<'_> {
 /// Fixed associative storage. Atomics supply Send/Sync without manual unsafe
 /// marker implementations; borrowing supplies write-handle lifetime checks.
 pub struct TranspositionTable {
-    buckets: Box<[Bucket]>,
+    buckets: LargeSlice<Bucket>,
     generation: AtomicU8,
 }
 
 impl TranspositionTable {
     pub fn new(mebibytes: usize) -> Self {
         let mut table = Self {
-            buckets: Box::default(),
+            buckets: LargeSlice::empty(),
             generation: AtomicU8::new(0),
         };
         table.resize(mebibytes);
@@ -220,13 +221,14 @@ impl TranspositionTable {
             .expect("Cache size must be positive and representable in bytes");
         let count = bytes / BUCKET_BYTES;
         // Drop the old allocation before requesting another large table.
-        self.buckets = Box::default();
-        self.buckets = (0..count).map(|_| Bucket::default()).collect();
+        self.buckets = LargeSlice::empty();
+        // SAFETY: buckets are atomic integers and padding; zero is the empty state.
+        self.buckets = unsafe { LargeSlice::zeroed(count) };
         self.generation.store(0, Relaxed);
     }
     pub fn clear(&self) {
         self.generation.store(0, Relaxed);
-        for bucket in &self.buckets {
+        for bucket in self.buckets.iter() {
             for slot in &bucket.slots {
                 slot.clear();
             }
