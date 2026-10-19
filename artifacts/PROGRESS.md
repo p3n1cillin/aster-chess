@@ -1,3 +1,23 @@
+## 2026-10-19: Linux huge pages and paired widening; 800-game UHO status match
+
+On a Linux Intel AVX-512 VM the port ran at about 82% of the same upstream
+commit built from source. Two upstream mechanisms were missing: transparent huge
+pages for the network, histories, accumulator caches and transposition table,
+and the AVX-512 paired int8 widening add. Both are now ported; the bench stays
+1,559,611 on AVX-512, AVX2 and scalar, and all CI-equivalent checks pass. Median
+same-round speed ratio to the clang reference rose from 0.817 to 0.913
+(gcc PGO reference 1.011). See `docs/ASTER-LINUX-SPEED.md`.
+
+A predeclared match of commit `779bba2` against the gcc PGO build of the pinned
+upstream commit (10+0.1, 1 thread, 16 MiB, 400 color-swapped pairs from
+`UHO_Lichess_4852_v1`, fastchess) scored **191W/199L/410D, 49.5%, −3.5 ± 11.8
+Elo**, pentanomial [0, 100, 208, 92, 0], no forfeits. Level within noise; no
+superiority. Evidence: `artifacts/matches/aster-779bba2-vs-sfdev-uho/`.
+
+A port of the upstream AVX-512 ICL vectorized dirty-threat writer was exact
+(same bench on every path) but its effect (≤1%) was below this VM's ±3% timing
+noise across 16 concurrent rounds, so it was not adopted.
+
 ## 2026-10-19: fused neural input rejected at fixed timing gate
 
 One compile-gated Rust fusion implementation and 64 fresh roots are frozen

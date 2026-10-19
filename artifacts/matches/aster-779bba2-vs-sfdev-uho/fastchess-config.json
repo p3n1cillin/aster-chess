@@ -1,0 +1,166 @@
+{
+    "resign": {
+        "move_count": 1,
+        "score": 0,
+        "twosided": false,
+        "enabled": false
+    },
+    "draw": {
+        "move_number": 0,
+        "move_count": 1,
+        "score": 0,
+        "enabled": false
+    },
+    "maxmoves": {
+        "move_count": 1,
+        "enabled": false
+    },
+    "tb_adjudication": {
+        "syzygy_dirs": "",
+        "max_pieces": 0,
+        "ignore_50_move_rule": false,
+        "enabled": false
+    },
+    "opening": {
+        "file": "tools/books/UHO_Lichess_4852_v1.epd",
+        "format": 0,
+        "order": 0,
+        "plies": -1,
+        "start": 1
+    },
+    "pgn": {
+        "additional_lines_rgx": [],
+        "event_name": "Fastchess Tournament",
+        "site": "?",
+        "file": "artifacts/matches/aster-779bba2-vs-sfdev-uho/games.pgn",
+        "notation": 0,
+        "track_nodes": false,
+        "track_seldepth": false,
+        "track_nps": false,
+        "track_hashfull": false,
+        "track_tbhits": false,
+        "track_timeleft": false,
+        "track_latency": false,
+        "min": false,
+        "crc": false
+    },
+    "epd": {
+        "file": ""
+    },
+    "sprt": {
+        "alpha": 0.0,
+        "beta": 0.0,
+        "elo0": 0.0,
+        "elo1": 0.0,
+        "model": "normalized",
+        "enabled": false
+    },
+    "config_name": "config.json",
+    "output": 0,
+    "seed": 20261019,
+    "variant": 0,
+    "ratinginterval": 50,
+    "scoreinterval": 1,
+    "wait": 0,
+    "autosaveinterval": 20,
+    "games": 2,
+    "rounds": 400,
+    "concurrency": 4,
+    "force_concurrency": false,
+    "recover": false,
+    "noswap": false,
+    "reverse": false,
+    "report_penta": true,
+    "affinity": false,
+    "show_latency": false,
+    "log": {
+        "file": "",
+        "level": 2,
+        "compress": false,
+        "realtime": true
+    },
+    "engines": [
+        {
+            "name": "Aster-779bba2",
+            "dir": "",
+            "cmd": "/tmp/claude-0/aster-779bba2",
+            "args": "",
+            "restart": false,
+            "options": [
+                [
+                    "Hash",
+                    "16"
+                ],
+                [
+                    "Threads",
+                    "1"
+                ]
+            ],
+            "limit": {
+                "tc": {
+                    "increment": 100,
+                    "fixed_time": 0,
+                    "time": 10000,
+                    "moves": 0,
+                    "timemargin": 0
+                },
+                "nodes": 0,
+                "plies": 0
+            },
+            "variant": 0
+        },
+        {
+            "name": "SF-effdc3f",
+            "dir": "",
+            "cmd": "tools/stockfish/sf-effdc3f-gcc-pgo",
+            "args": "",
+            "restart": false,
+            "options": [
+                [
+                    "Hash",
+                    "16"
+                ],
+                [
+                    "Threads",
+                    "1"
+                ]
+            ],
+            "limit": {
+                "tc": {
+                    "increment": 100,
+                    "fixed_time": 0,
+                    "time": 10000,
+                    "moves": 0,
+                    "timemargin": 0
+                },
+                "nodes": 0,
+                "plies": 0
+            },
+            "variant": 0
+        }
+    ],
+    "stats": {
+        "SF-effdc3f vs Aster-779bba2": {
+            "wins": 166,
+            "losses": 167,
+            "draws": 319,
+            "penta_WW": 0,
+            "penta_WD": 76,
+            "penta_WL": 90,
+            "penta_DD": 83,
+            "penta_LD": 77,
+            "penta_LL": 0
+        },
+        "Aster-779bba2 vs SF-effdc3f": {
+            "wins": 24,
+            "losses": 33,
+            "draws": 91,
+            "penta_WW": 0,
+            "penta_WD": 15,
+            "penta_WL": 9,
+            "penta_DD": 26,
+            "penta_LD": 24,
+            "penta_LL": 0
+        }
+    }
+}

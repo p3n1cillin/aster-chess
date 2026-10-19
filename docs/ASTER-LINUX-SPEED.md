@@ -43,3 +43,20 @@ each round (`artifacts/research/aster-linux-speed-v1/`):
 
 The VM is noisy; individual runs vary by ±10%. Intermediate measurements had
 huge pages alone at about 0.87–0.89 and both changes at 0.90.
+
+## Equal-time status match
+
+Predeclared plan, fastchess log/config, PGN and report:
+`artifacts/matches/aster-779bba2-vs-sfdev-uho/`. Aster `779bba2` against the
+gcc PGO build of the pinned upstream commit, 10+0.1, one thread, 16 MiB hash,
+400 color-swapped pairs from `UHO_Lichess_4852_v1.epd` (seed 20261019):
+**191 wins, 199 losses, 410 draws (49.5%)**, −3.5 ± 11.8 Elo, pentanomial
+[0, 100, 208, 92, 0]. The interval contains zero: level within noise, as
+expected for an exact port at ~91% speed. This is not a superiority result.
+
+## Tried, not adopted
+
+The upstream AVX-512 ICL `write_multiple_dirties` (VBMI byte compress and
+permute of dirty threats) was ported and kept the bench signature on every
+path, but 16 concurrent rounds against the adopted build showed no difference
+beyond the VM's noise (median ratios 0.99–1.03 for identical binaries).

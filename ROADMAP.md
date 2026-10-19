@@ -6,6 +6,12 @@ canonical bench signature **1,559,611**. Syzygy probing is implemented. The late
 recorded local throughput is 93.1% of that source built with clang; this measures
 speed, not playing strength. See `docs/SF-PORT.md` and `artifacts/PROGRESS.md`.
 
+On Linux, transparent huge pages and the AVX-512 paired int8 widening add are now
+ported (bench unchanged), raising measured speed on an Intel AVX-512 VM from
+~82% to ~91% of the upstream commit built from source. An 800-game UHO match at
+10+0.1 against that commit scored 49.5% (−3.5 ± 11.8 Elo): level within noise.
+See `docs/ASTER-LINUX-SPEED.md`.
+
 Allocation-free indexed neural updates are now adopted: local same-work timings
 show 12.41% less AVX2 elapsed and 35.53% less scalar-kernel elapsed, with automatic
 AVX-512 effectively unchanged. Exact calculations and all 128 engineering
