@@ -35,13 +35,31 @@ def main():
     assert all(build['search_profile_coverage'].values())
     assert hashlib.sha256(Path(build['merged_profile']['path']).read_bytes()).hexdigest() == build['merged_profile']['sha256']
     binaries = {role: build['binaries'][label]['sha256'] for role, label in [('candidate', 'optimized'), ('opponent', 'control')]}
+    parent = read(plan['validation_suite']['path'])
+    assert digest(plan['validation_suite']['path']) == plan['validation_suite']['sha256']
+    timing_suite = 'tests/fixtures/aster-pgo-timing-v1.json'
+    assert read(timing_suite)['openings'] == parent['openings'][:16]
+    manifests = {}
+    for role, folder in [('candidate', 'aster-pgo-source-v2'), ('opponent', 'aster-pgo-control-source-v2')]:
+        path = f'artifacts/research/{folder}/manifest.json'
+        manifest = read(path)
+        assert manifest['binary_sha256'] == binaries[role]
+        base = ROOT / path
+        for item in manifest['source_files']:
+            assert hashlib.sha256((base.parent / item['path']).read_bytes()).hexdigest() == item['sha256']
+        assert hashlib.sha256((base.parent / manifest['pgo']['manifest_file']).read_bytes()).hexdigest() == manifest['pgo']['manifest_sha256']
+        if manifest['pgo']['profile_guided']:
+            profile = manifest['pgo']['profile']
+            assert hashlib.sha256((base.parent / profile['file']).read_bytes()).hexdigest() == profile['sha256'] == build['merged_profile']['sha256']
+        manifests[role] = digest(path)
     timing = read(PREFIX + 'timing-v2.json')
     assert timing['complete'] and timing['identical_behavior'] and timing['training_root_overlap'] == 0
     assert timing['plan_sha256'] == digest(plan_path)
     assert timing['build_report_sha256'] == digest('artifacts/research/aster-pgo-build-v2.json')
+    assert timing['suite_sha256'] == digest(timing_suite)
     for mode in plan['timing']['modes']:
         assert len(timing['modes'][mode]['batches']) == plan['timing']['replicates']
-    for check in ['runtime', 'control-equivalence', 'rules', 'edges', 'play', 'proofs', 'source-names-final']:
+    for check in ['runtime', 'control-equivalence', 'control-driver', 'optimized-driver', 'source-integrity', 'rules', 'edges', 'play', 'proofs', 'analysis-source-names']:
         result = read(PREFIX + check + '-v2.json')
         assert result.get('passed') or result.get('status') == 'passed', check
     for mode in ['auto', 'avx2', 'scalar']:
@@ -63,6 +81,11 @@ def main():
         raw = read(path)
         for role, binary in binaries.items():
             assert raw[role + '_binary_sha256'] == binary
+            assert raw[role + '_source_manifest']['sha256'] == manifests[role]
+        suite_path = f'tests/fixtures/aster-pgo-{name}-v1.json'
+        first, last = specification['suite_range']
+        assert read(suite_path)['openings'] == parent['openings'][first:last]
+        assert raw['opening_suite']['sha256'] == digest(suite_path)
         control = control_report(ROOT / path, specification['pairs'], specification['seconds_per_move'])
         interval = control.get('opening_family_95_percent_interval')
         control['passes_engineering_nonregression'] = bool(
