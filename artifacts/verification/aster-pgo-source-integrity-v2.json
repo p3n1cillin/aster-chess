@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "snapshots": [
+    {
+      "manifest": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-control-source-v2\\manifest.json",
+      "sha256": "fe2f996001b0252eb87c637b3d0e817f22e1b679fa936925232b6d79747469fc",
+      "source_files": 195,
+      "passed": true
+    },
+    {
+      "manifest": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\research\\aster-pgo-source-v2\\manifest.json",
+      "sha256": "f627e408a4dec78ca9900119b425e8dd4d12e26d4c414d2afee2a571ae57a1a5",
+      "source_files": 195,
+      "passed": true
+    }
+  ],
+  "preserved_binaries": [
+    {
+      "role": "control",
+      "kind": "engine",
+      "path": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\a354c8edced146d82b8a77142f6d299722addc909a7e3de90f5f2592780951a3\\aster.exe",
+      "sha256": "a354c8edced146d82b8a77142f6d299722addc909a7e3de90f5f2592780951a3"
+    },
+    {
+      "role": "control",
+      "kind": "training_driver",
+      "path": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\2b17d7a813bd490ae3cb46aa5807321e65ea57482be1a91a49cbbfdabde15669\\aster-pgo-trainer.exe",
+      "sha256": "2b17d7a813bd490ae3cb46aa5807321e65ea57482be1a91a49cbbfdabde15669"
+    },
+    {
+      "role": "instrumented",
+      "kind": "engine",
+      "path": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\536636bc4bac498ae97d1b3e4f1d4ed8f96a6dbb7d62a225aaa98be3eb3bf45e\\aster.exe",
+      "sha256": "536636bc4bac498ae97d1b3e4f1d4ed8f96a6dbb7d62a225aaa98be3eb3bf45e"
+    },
+    {
+      "role": "instrumented",
+      "kind": "training_driver",
+      "path": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\b39742c860c00703bd9a2e6d5d80ba8beecf779e47ff973aec44251d20212b87\\aster-pgo-trainer.exe",
+      "sha256": "b39742c860c00703bd9a2e6d5d80ba8beecf779e47ff973aec44251d20212b87"
+    },
+    {
+      "role": "optimized",
+      "kind": "engine",
+      "path": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\ee768f65b73356e371f139f538faf85b6a68660191e5a01daa0cf671c20175a2\\aster.exe",
+      "sha256": "ee768f65b73356e371f139f538faf85b6a68660191e5a01daa0cf671c20175a2"
+    },
+    {
+      "role": "optimized",
+      "kind": "training_driver",
+      "path": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\b2ecff24431fa11d83a68bc3c926960cf65ead3e5a3bbb523ee2b56be7dc186a\\aster-pgo-trainer.exe",
+      "sha256": "b2ecff24431fa11d83a68bc3c926960cf65ead3e5a3bbb523ee2b56be7dc186a"
+    }
+  ]
+}

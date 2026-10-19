@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-10-19T14:48:53Z",
+  "code_commit": "418a64a3cd20bcf6a46a69d0a112a82bbbc717e2",
+  "plan": "artifacts/research/aster-pgo-plan-v2.json",
+  "plan_sha256": "6179b7dc2ac3448d1a99cb3985cc59a4b5d22ebe8759f156135d3b640cc7e776",
+  "build": "artifacts/research/aster-pgo-build-v2.json",
+  "candidate_sha256": "ee768f65b73356e371f139f538faf85b6a68660191e5a01daa0cf671c20175a2",
+  "control_sha256": "a354c8edced146d82b8a77142f6d299722addc909a7e3de90f5f2592780951a3",
+  "cpu": "AMD Ryzen 5 7600X; 6 cores, 12 logical processors",
+  "active_searches": 2,
+  "threads_per_search": 1,
+  "hash_mib_per_engine": 64,
+  "schedule": "30ms and 100ms controls run concurrently, each 48 pairs; one active search per match. No local compiler or benchmark during games. ASTER_SIMD unset, automatic dispatch.",
+  "timing_already_failed": true,
+  "policy": "Complete all 192 games despite timing failure, independently audit and preserve all results. No adaptive retraining, flags or added games. Ordinary build remains default."
+}
