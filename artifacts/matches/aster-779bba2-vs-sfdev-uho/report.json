@@ -1,0 +1,27 @@
+{
+ "plan": "plan.json",
+ "completed_utc": "2026-10-19T18:55Z",
+ "games": 800,
+ "pairs": 400,
+ "result": {
+  "wins": 191,
+  "losses": 199,
+  "draws": 410,
+  "score": 0.495,
+  "elo": -3.47,
+  "elo_95_halfwidth": 11.8,
+  "nelo": -7.09,
+  "nelo_95_halfwidth": 24.08,
+  "los_percent": 28.18,
+  "pentanomial_LL_LD_DD_WD_WW": [
+   0,
+   100,
+   208,
+   92,
+   0
+  ]
+ },
+ "unresolved_or_forfeits": "none reported by fastchess (no time losses, disconnects or illegal moves in the log)",
+ "infrastructure_note": "A first launch was stopped after 41 games because its controlling shell had a 2-hour limit shorter than the expected run; its log and PGN are kept unchanged in aborted-run-1/ and are excluded. The relaunch used the identical command, seed and binaries.",
+ "interpretation": "Level within noise: the 95% interval (-15.3 to +8.3 Elo) contains 0. Consistent with the expectation of a small deficit from Aster's ~91% speed on this machine. No strength gain or superiority is shown."
+}
