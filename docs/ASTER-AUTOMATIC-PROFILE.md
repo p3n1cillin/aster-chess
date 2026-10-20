@@ -103,3 +103,22 @@ Exact executables, matching PDBs, maps and build logs are preserved in the local
 SHA-addressed research binary store, with paths, sizes and hashes in the receipt.
 The repository preserves all raw emitted profiles and source snapshots. LLVM
 tools and diagnostic features are not standalone Aster runtime dependencies.
+
+## Follow-up: bounded machine-code inspection
+
+A separate plan was committed before one offline disassembly on 2026-10-20.
+The unchanged debug-control indexed-update function contains 258 static
+instructions, including 64 signed-byte widening loads across four row loops.
+Sixteen accumulator vectors stay in registers; no direct stack-relative vector
+spill/load appears. The local stack traffic holds scalar list/loop metadata.
+Weight-row loads addressed through `rbp` are not stack spills. Outer control
+visits two 512-lane tiles for the 1,024-lane accumulator.
+
+This rules out a vector-spill explanation for this exact compiled function; it
+does not measure cache stalls or prove an instruction-throughput limit. No
+candidate variant has been selected, compiled or queried. Next commit one
+separate update-policy hypothesis and fresh roots before its implementation.
+The disassembly, empty stderr, pinned tool/input identities and bounded result
+are preserved in `artifacts/research/aster-indexed-update-inspection-v1/` and
+`artifacts/verification/aster-indexed-update-inspection-v1.json`. The original
+profile completion and its completion-time documentation stay frozen.

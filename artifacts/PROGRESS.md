@@ -15,6 +15,10 @@ about 41–46% bench overhead versus its diagnostic control, within the declared
 strength or novelty result. No candidate is adopted and no games were required
 by this diagnostic. See `docs/ASTER-AUTOMATIC-PROFILE.md`. Next inspect preserved
 machine code offline before committing a separate candidate policy/fresh roots.
+The separately planned one-function disassembly now also completes: sixteen
+accumulator vectors remain in registers, with no direct stack-relative vector
+spills. No hardware-stall cause or candidate variant is established. See
+`artifacts/verification/aster-indexed-update-inspection-v1.json`.
 
 ## 2026-10-19: fused neural input rejected at fixed timing gate
 

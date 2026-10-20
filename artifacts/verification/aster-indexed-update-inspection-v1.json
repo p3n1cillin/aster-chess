@@ -1,0 +1,25 @@
+{
+  "status": "completed_offline_inspection",
+  "completed_utc": "2026-10-20T15:44:52.668823+00:00",
+  "plan_sha256": "0d2b77ad59f3f3d2eee7375521f983d047db213b0fb73ec6d60957d1b461a651",
+  "files": {
+    "artifacts/research/aster-indexed-update-inspection-v1/disassembly.txt": "392497f30414b06a9840f70cbfa3d76662d0f27c101bfb49aba9e13cf7ad1125",
+    "artifacts/research/aster-indexed-update-inspection-v1/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "bounded_commands": 1,
+  "retries": 0,
+  "engine_invocations": 0,
+  "candidate_implemented": false,
+  "static_instruction_count": 258,
+  "direct_rsp_vector_memory_instructions": 0,
+  "observations": [
+    "The indexed update retains sixteen accumulator vectors in registers; no direct rsp-relative vector spill/load appears in the bounded function.",
+    "The 56-byte local stack frame and eight general-purpose pushes preserve list lengths/bases and loop metadata. Rbp addresses in vector loads are weight-row bases, not stack spills.",
+    "Four signed-byte row loops each contain sixteen widening loads plus sixteen adds or subtracts per row and tile. Outer control visits two 512-lane tiles for L1=1024.",
+    "This inspection provides no cache-miss, throughput or stall measurements. Reducing a supposed vector-spill bottleneck is unsupported by this binary."
+  ],
+  "next_step": "Formulate one distinct policy with a separately committed plan, fresh roots and matched gates before candidate implementation/queries. Profile and static assembly do not prove a hardware cause or a gain.",
+  "public_elo": null,
+  "absolute_elo": null,
+  "superiority_established": false
+}

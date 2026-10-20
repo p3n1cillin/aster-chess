@@ -1,0 +1,264 @@
+
+C:\Users\lukem\.codex\worktrees\continuation-search\chess\.aster-local\automatic-profile-v1\debug_control\aster-core.exe:	file format coff-x86-64
+
+Disassembly of section .text:
+
+0000000140001000 <.text>:
+140038350:     	push	r15
+140038352:     	push	r14
+140038354:     	push	r13
+140038356:     	push	r12
+140038358:     	push	rsi
+140038359:     	push	rdi
+14003835a:     	push	rbp
+14003835b:     	push	rbx
+14003835c:     	sub	rsp, 0x38
+140038360:     	mov	rax, qword ptr [r8]
+140038363:     	mov	r9, qword ptr [r8 + 0x8]
+140038367:     	mov	qword ptr [rsp + 0x30], r9
+14003836c:     	lea	r10, [r9 + r9]
+140038370:     	mov	r11, qword ptr [r8 + 0x10]
+140038374:     	mov	r9, qword ptr [r8 + 0x18]
+140038378:     	mov	qword ptr [rsp + 0x28], r9
+14003837d:     	lea	rdi, [r9 + r9]
+140038381:     	mov	rbx, qword ptr [r8 + 0x20]
+140038385:     	mov	r9, qword ptr [r8 + 0x28]
+140038389:     	mov	qword ptr [rsp + 0x20], r9
+14003838e:     	lea	r15, [r9 + r9]
+140038392:     	mov	r12, qword ptr [r8 + 0x30]
+140038396:     	mov	r9, qword ptr [r8 + 0x38]
+14003839a:     	mov	rsi, qword ptr [r8 + 0x40]
+14003839e:     	mov	qword ptr [rsp + 0x10], rsi
+1400383a3:     	mov	r8, qword ptr [r8 + 0x48]
+1400383a7:     	mov	qword ptr [rsp + 0x8], r8
+1400383ac:     	mov	qword ptr [rsp + 0x18], r9
+1400383b1:     	add	r9, r9
+1400383b4:     	mov	r8b, 0x1
+1400383b7:     	xor	r14d, r14d
+1400383ba:     	jmp	0x140038456 <.text+0x37456>
+1400383bf:     	nop
+1400383c0:     	vmovdqu64	zmmword ptr [rcx + r13], zmm25
+1400383c7:     	vmovdqu64	zmmword ptr [rcx + r13 + 0x40], zmm24
+1400383cf:     	vmovdqu64	zmmword ptr [rcx + r13 + 0x80], zmm23
+1400383d7:     	vmovdqu64	zmmword ptr [rcx + r13 + 0xc0], zmm22
+1400383df:     	vmovdqu64	zmmword ptr [rcx + r13 + 0x100], zmm21
+1400383e7:     	vmovdqu64	zmmword ptr [rcx + r13 + 0x140], zmm20
+1400383ef:     	vmovdqu64	zmmword ptr [rcx + r13 + 0x180], zmm19
+1400383f7:     	vmovdqu64	zmmword ptr [rcx + r13 + 0x1c0], zmm18
+1400383ff:     	vmovdqu64	zmmword ptr [rcx + r13 + 0x200], zmm17
+140038407:     	vmovdqu64	zmmword ptr [rcx + r13 + 0x240], zmm16
+14003840f:     	vmovdqu64	zmmword ptr [rcx + r13 + 0x280], zmm5
+140038417:     	vmovdqu64	zmmword ptr [rcx + r13 + 0x2c0], zmm4
+14003841f:     	vmovdqu64	zmmword ptr [rcx + r13 + 0x300], zmm3
+140038427:     	vmovdqu64	zmmword ptr [rcx + r13 + 0x340], zmm2
+14003842f:     	vmovdqu64	zmmword ptr [rcx + r13 + 0x380], zmm1
+140038437:     	vmovdqu64	zmmword ptr [rcx + r13 + 0x3c0], zmm0
+14003843f:     	mov	r14d, 0x1
+140038445:     	test	byte ptr [rsp + 0x4], 0x1
+14003844a:     	mov	r8d, 0x0
+140038450:     	je	0x14003892a <.text+0x3792a>
+140038456:     	mov	dword ptr [rsp + 0x4], r8d
+14003845b:     	mov	r13, r14
+14003845e:     	shl	r13, 0xa
+140038462:     	shl	r14, 0x9
+140038466:     	vmovdqu64	zmm25, zmmword ptr [rdx + r13]
+14003846d:     	vmovdqu64	zmm24, zmmword ptr [rdx + r13 + 0x40]
+140038475:     	vmovdqu64	zmm23, zmmword ptr [rdx + r13 + 0x80]
+14003847d:     	vmovdqu64	zmm22, zmmword ptr [rdx + r13 + 0xc0]
+140038485:     	vmovdqu64	zmm21, zmmword ptr [rdx + r13 + 0x100]
+14003848d:     	vmovdqu64	zmm20, zmmword ptr [rdx + r13 + 0x140]
+140038495:     	vmovdqu64	zmm19, zmmword ptr [rdx + r13 + 0x180]
+14003849d:     	vmovdqu64	zmm18, zmmword ptr [rdx + r13 + 0x1c0]
+1400384a5:     	vmovdqu64	zmm17, zmmword ptr [rdx + r13 + 0x200]
+1400384ad:     	vmovdqu64	zmm16, zmmword ptr [rdx + r13 + 0x240]
+1400384b5:     	vmovdqu64	zmm5, zmmword ptr [rdx + r13 + 0x280]
+1400384bd:     	vmovdqu64	zmm4, zmmword ptr [rdx + r13 + 0x2c0]
+1400384c5:     	vmovdqu64	zmm3, zmmword ptr [rdx + r13 + 0x300]
+1400384cd:     	vmovdqu64	zmm2, zmmword ptr [rdx + r13 + 0x340]
+1400384d5:     	vmovdqu64	zmm1, zmmword ptr [rdx + r13 + 0x380]
+1400384dd:     	vmovdqu64	zmm0, zmmword ptr [rdx + r13 + 0x3c0]
+1400384e5:     	cmp	qword ptr [rsp + 0x30], 0x0
+1400384eb:     	je	0x1400385f5 <.text+0x375f5>
+1400384f1:     	mov	r8, qword ptr [rsp + 0x10]
+1400384f6:     	lea	rbp, [r8 + r14]
+1400384fa:     	xor	r8d, r8d
+1400384fd:     	nop	dword ptr [rax]
+140038500:     	movzx	esi, word ptr [rax + r8]
+140038505:     	shl	esi, 0xa
+140038508:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi]
+140038510:     	vpsubw	zmm25, zmm25, zmm26
+140038516:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x20]
+14003851e:     	vpsubw	zmm24, zmm24, zmm26
+140038524:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x40]
+14003852c:     	vpmovsxbw	zmm27, ymmword ptr [rbp + rsi + 0x60]
+140038534:     	vpsubw	zmm23, zmm23, zmm26
+14003853a:     	vpsubw	zmm22, zmm22, zmm27
+140038540:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x80]
+140038548:     	vpsubw	zmm21, zmm21, zmm26
+14003854e:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0xa0]
+140038556:     	vpsubw	zmm20, zmm20, zmm26
+14003855c:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0xc0]
+140038564:     	vpmovsxbw	zmm27, ymmword ptr [rbp + rsi + 0xe0]
+14003856c:     	vpsubw	zmm19, zmm19, zmm26
+140038572:     	vpsubw	zmm18, zmm18, zmm27
+140038578:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x100]
+140038580:     	vpsubw	zmm17, zmm17, zmm26
+140038586:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x120]
+14003858e:     	vpsubw	zmm16, zmm16, zmm26
+140038594:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x140]
+14003859c:     	vpmovsxbw	zmm27, ymmword ptr [rbp + rsi + 0x160]
+1400385a4:     	vpsubw	zmm5, zmm5, zmm26
+1400385aa:     	vpsubw	zmm4, zmm4, zmm27
+1400385b0:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x180]
+1400385b8:     	vpsubw	zmm3, zmm3, zmm26
+1400385be:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x1a0]
+1400385c6:     	vpsubw	zmm2, zmm2, zmm26
+1400385cc:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x1c0]
+1400385d4:     	vpmovsxbw	zmm27, ymmword ptr [rbp + rsi + 0x1e0]
+1400385dc:     	vpsubw	zmm1, zmm1, zmm26
+1400385e2:     	vpsubw	zmm0, zmm0, zmm27
+1400385e8:     	add	r8, 0x2
+1400385ec:     	cmp	r10, r8
+1400385ef:     	jne	0x140038500 <.text+0x37500>
+1400385f5:     	cmp	qword ptr [rsp + 0x28], 0x0
+1400385fb:     	je	0x140038705 <.text+0x37705>
+140038601:     	mov	r8, qword ptr [rsp + 0x10]
+140038606:     	lea	rbp, [r8 + r14]
+14003860a:     	xor	r8d, r8d
+14003860d:     	nop	dword ptr [rax]
+140038610:     	movzx	esi, word ptr [r11 + r8]
+140038615:     	shl	esi, 0xa
+140038618:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi]
+140038620:     	vpaddw	zmm25, zmm25, zmm26
+140038626:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x20]
+14003862e:     	vpaddw	zmm24, zmm24, zmm26
+140038634:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x40]
+14003863c:     	vpmovsxbw	zmm27, ymmword ptr [rbp + rsi + 0x60]
+140038644:     	vpaddw	zmm23, zmm23, zmm26
+14003864a:     	vpaddw	zmm22, zmm22, zmm27
+140038650:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x80]
+140038658:     	vpaddw	zmm21, zmm21, zmm26
+14003865e:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0xa0]
+140038666:     	vpaddw	zmm20, zmm20, zmm26
+14003866c:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0xc0]
+140038674:     	vpmovsxbw	zmm27, ymmword ptr [rbp + rsi + 0xe0]
+14003867c:     	vpaddw	zmm19, zmm19, zmm26
+140038682:     	vpaddw	zmm18, zmm18, zmm27
+140038688:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x100]
+140038690:     	vpaddw	zmm17, zmm17, zmm26
+140038696:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x120]
+14003869e:     	vpaddw	zmm16, zmm16, zmm26
+1400386a4:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x140]
+1400386ac:     	vpmovsxbw	zmm27, ymmword ptr [rbp + rsi + 0x160]
+1400386b4:     	vpaddw	zmm5, zmm5, zmm26
+1400386ba:     	vpaddw	zmm4, zmm4, zmm27
+1400386c0:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x180]
+1400386c8:     	vpaddw	zmm3, zmm3, zmm26
+1400386ce:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x1a0]
+1400386d6:     	vpaddw	zmm2, zmm2, zmm26
+1400386dc:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x1c0]
+1400386e4:     	vpmovsxbw	zmm27, ymmword ptr [rbp + rsi + 0x1e0]
+1400386ec:     	vpaddw	zmm1, zmm1, zmm26
+1400386f2:     	vpaddw	zmm0, zmm0, zmm27
+1400386f8:     	add	r8, 0x2
+1400386fc:     	cmp	rdi, r8
+1400386ff:     	jne	0x140038610 <.text+0x37610>
+140038705:     	cmp	qword ptr [rsp + 0x20], 0x0
+14003870b:     	je	0x140038815 <.text+0x37815>
+140038711:     	mov	r8, qword ptr [rsp + 0x8]
+140038716:     	lea	rbp, [r8 + r14]
+14003871a:     	xor	r8d, r8d
+14003871d:     	nop	dword ptr [rax]
+140038720:     	movzx	esi, word ptr [rbx + r8]
+140038725:     	shl	esi, 0xa
+140038728:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi]
+140038730:     	vpsubw	zmm25, zmm25, zmm26
+140038736:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x20]
+14003873e:     	vpsubw	zmm24, zmm24, zmm26
+140038744:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x40]
+14003874c:     	vpmovsxbw	zmm27, ymmword ptr [rbp + rsi + 0x60]
+140038754:     	vpsubw	zmm23, zmm23, zmm26
+14003875a:     	vpsubw	zmm22, zmm22, zmm27
+140038760:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x80]
+140038768:     	vpsubw	zmm21, zmm21, zmm26
+14003876e:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0xa0]
+140038776:     	vpsubw	zmm20, zmm20, zmm26
+14003877c:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0xc0]
+140038784:     	vpmovsxbw	zmm27, ymmword ptr [rbp + rsi + 0xe0]
+14003878c:     	vpsubw	zmm19, zmm19, zmm26
+140038792:     	vpsubw	zmm18, zmm18, zmm27
+140038798:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x100]
+1400387a0:     	vpsubw	zmm17, zmm17, zmm26
+1400387a6:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x120]
+1400387ae:     	vpsubw	zmm16, zmm16, zmm26
+1400387b4:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x140]
+1400387bc:     	vpmovsxbw	zmm27, ymmword ptr [rbp + rsi + 0x160]
+1400387c4:     	vpsubw	zmm5, zmm5, zmm26
+1400387ca:     	vpsubw	zmm4, zmm4, zmm27
+1400387d0:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x180]
+1400387d8:     	vpsubw	zmm3, zmm3, zmm26
+1400387de:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x1a0]
+1400387e6:     	vpsubw	zmm2, zmm2, zmm26
+1400387ec:     	vpmovsxbw	zmm26, ymmword ptr [rbp + rsi + 0x1c0]
+1400387f4:     	vpmovsxbw	zmm27, ymmword ptr [rbp + rsi + 0x1e0]
+1400387fc:     	vpsubw	zmm1, zmm1, zmm26
+140038802:     	vpsubw	zmm0, zmm0, zmm27
+140038808:     	add	r8, 0x2
+14003880c:     	cmp	r15, r8
+14003880f:     	jne	0x140038720 <.text+0x37720>
+140038815:     	cmp	qword ptr [rsp + 0x18], 0x0
+14003881b:     	je	0x1400383c0 <.text+0x373c0>
+140038821:     	add	r14, qword ptr [rsp + 0x8]
+140038826:     	xor	ebp, ebp
+140038828:     	nop	dword ptr [rax + rax]
+140038830:     	movzx	r8d, word ptr [r12 + rbp]
+140038835:     	shl	r8d, 0xa
+140038839:     	vpmovsxbw	zmm26, ymmword ptr [r14 + r8]
+140038840:     	vpaddw	zmm25, zmm25, zmm26
+140038846:     	vpmovsxbw	zmm26, ymmword ptr [r14 + r8 + 0x20]
+14003884e:     	vpaddw	zmm24, zmm24, zmm26
+140038854:     	vpmovsxbw	zmm26, ymmword ptr [r14 + r8 + 0x40]
+14003885c:     	vpmovsxbw	zmm27, ymmword ptr [r14 + r8 + 0x60]
+140038864:     	vpaddw	zmm23, zmm23, zmm26
+14003886a:     	vpaddw	zmm22, zmm22, zmm27
+140038870:     	vpmovsxbw	zmm26, ymmword ptr [r14 + r8 + 0x80]
+140038878:     	vpaddw	zmm21, zmm21, zmm26
+14003887e:     	vpmovsxbw	zmm26, ymmword ptr [r14 + r8 + 0xa0]
+140038886:     	vpaddw	zmm20, zmm20, zmm26
+14003888c:     	vpmovsxbw	zmm26, ymmword ptr [r14 + r8 + 0xc0]
+140038894:     	vpmovsxbw	zmm27, ymmword ptr [r14 + r8 + 0xe0]
+14003889c:     	vpaddw	zmm19, zmm19, zmm26
+1400388a2:     	vpaddw	zmm18, zmm18, zmm27
+1400388a8:     	vpmovsxbw	zmm26, ymmword ptr [r14 + r8 + 0x100]
+1400388b0:     	vpaddw	zmm17, zmm17, zmm26
+1400388b6:     	vpmovsxbw	zmm26, ymmword ptr [r14 + r8 + 0x120]
+1400388be:     	vpaddw	zmm16, zmm16, zmm26
+1400388c4:     	vpmovsxbw	zmm26, ymmword ptr [r14 + r8 + 0x140]
+1400388cc:     	vpmovsxbw	zmm27, ymmword ptr [r14 + r8 + 0x160]
+1400388d4:     	vpaddw	zmm5, zmm5, zmm26
+1400388da:     	vpaddw	zmm4, zmm4, zmm27
+1400388e0:     	vpmovsxbw	zmm26, ymmword ptr [r14 + r8 + 0x180]
+1400388e8:     	vpaddw	zmm3, zmm3, zmm26
+1400388ee:     	vpmovsxbw	zmm26, ymmword ptr [r14 + r8 + 0x1a0]
+1400388f6:     	vpaddw	zmm2, zmm2, zmm26
+1400388fc:     	vpmovsxbw	zmm26, ymmword ptr [r14 + r8 + 0x1c0]
+140038904:     	vpmovsxbw	zmm27, ymmword ptr [r14 + r8 + 0x1e0]
+14003890c:     	vpaddw	zmm1, zmm1, zmm26
+140038912:     	vpaddw	zmm0, zmm0, zmm27
+140038918:     	add	rbp, 0x2
+14003891c:     	cmp	r9, rbp
+14003891f:     	jne	0x140038830 <.text+0x37830>
+140038925:     	jmp	0x1400383c0 <.text+0x373c0>
+14003892a:     	add	rsp, 0x38
+14003892e:     	pop	rbx
+14003892f:     	pop	rbp
+140038930:     	pop	rdi
+140038931:     	pop	rsi
+140038932:     	pop	r12
+140038934:     	pop	r13
+140038936:     	pop	r14
+140038938:     	pop	r15
+14003893a:     	vzeroupper
+14003893d:     	ret
+14003893e:     	int3
+14003893f:     	int3

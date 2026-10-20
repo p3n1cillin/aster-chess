@@ -34,9 +34,10 @@ That diagnostic now completes all 32 fixed runs with identical search traces and
 unchanged playing inputs. Indexed AVX-512 accumulator updates account for
 25.33–29.43% of sampled PCs across two workloads. Sampling adds about 41–46%
 bench overhead versus its diagnostic control, so the ranking remains diagnostic.
-See `docs/ASTER-AUTOMATIC-PROFILE.md`. Next inspect the preserved update machine
-code offline, then predeclare one distinct scheduling/data-movement hypothesis;
-no candidate, speed gain or strength gain is established by the profile.
+See `docs/ASTER-AUTOMATIC-PROFILE.md`. The bounded offline inspection finds no vector stack spills in that function;
+no hardware stall cause is established. Next predeclare one distinct update
+scheduling/data-movement hypothesis with fresh roots before implementation.
+No candidate, speed gain or strength gain is established by these diagnostics.
 
 The Aster disagreement-guard experiment tests a bounded response to conflicting
 search evidence. Its policy, new opening roots and two controls were fixed before
