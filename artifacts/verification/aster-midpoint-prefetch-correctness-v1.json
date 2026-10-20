@@ -1,0 +1,496 @@
+{
+  "status": "passed",
+  "passed": true,
+  "created_utc": "2026-10-20T22:05:31.771384+00:00",
+  "pid": 22808,
+  "build_report_sha256": "b305ea05d2fee25f76146fd5d16fff9b88226223b7dd1c336542d8f209ca5d36",
+  "checker_sha256": "b935e2b7f7be8b39f75eb462bbc4a4ca0216d8f8e962703c07346d33f49f80c8",
+  "steps": [
+    {
+      "label": "verify_source_names",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/verify_source_names.py"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\verify_source_names.log",
+      "log_sha256": "3c1edbe0674895a327279622f0bd7cc2f6a45e5b32672e95b73429c62f59755c"
+    },
+    {
+      "label": "fetch_rust_network",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/fetch_rust_network.py"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\fetch_rust_network.log",
+      "log_sha256": "9368f782cbc386a4a939d60218f04f6049569dd2666271539a3387ebb82a5ba1"
+    },
+    {
+      "label": "fetch_aster_network",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/fetch_aster_network.py"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\fetch_aster_network.log",
+      "log_sha256": "cfec0b1bf4fe0fb28910b14bbf66c175ba3c878ce5effd3efdd4d1dfd8239d5c"
+    },
+    {
+      "label": "format",
+      "command": [
+        "C:\\Users\\lukem\\.cargo\\bin\\cargo.exe",
+        "fmt",
+        "--all",
+        "--check"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\format.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "label": "feature-release",
+      "command": [
+        "C:\\Users\\lukem\\.cargo\\bin\\cargo.exe",
+        "test",
+        "--workspace",
+        "--locked",
+        "--release",
+        "--features",
+        "midpoint-prefetch"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\feature-release.log",
+      "log_sha256": "2514005b3e2112edc77f3e88cca05bb6beed9c4ffda7de95f6478494a75354aa"
+    },
+    {
+      "label": "feature-debug",
+      "command": [
+        "C:\\Users\\lukem\\.cargo\\bin\\cargo.exe",
+        "test",
+        "--workspace",
+        "--locked",
+        "--features",
+        "midpoint-prefetch"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\feature-debug.log",
+      "log_sha256": "6ec8ef114ef087e485345107bc2299969ad1f28d87c3778123070faf49a07e13"
+    },
+    {
+      "label": "default-release",
+      "command": [
+        "C:\\Users\\lukem\\.cargo\\bin\\cargo.exe",
+        "test",
+        "--workspace",
+        "--locked",
+        "--release"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\default-release.log",
+      "log_sha256": "76be48b159b3d033090272455eed6fb93fbb4b86446b65af8451620cc9132156"
+    },
+    {
+      "label": "default-debug",
+      "command": [
+        "C:\\Users\\lukem\\.cargo\\bin\\cargo.exe",
+        "test",
+        "--workspace",
+        "--locked"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\default-debug.log",
+      "log_sha256": "dd3112be60bd510e4aa0e466dda432e348240d4a1e007b4a720a0a8ba5769cbf"
+    },
+    {
+      "label": "runtime",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/verify_fused_input_runtime.py",
+        "--build-report",
+        "artifacts/research/aster-midpoint-prefetch-build-v1.json",
+        "--output",
+        "artifacts/verification/aster-midpoint-prefetch-runtime-v1.json"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\runtime.log",
+      "log_sha256": "c0056892a6b7095a11e39e0f3e52310188cd00f8176220126b51072b7847709c"
+    },
+    {
+      "label": "equivalence-auto",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/verify_rust_equivalence.py",
+        "--candidate",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\midpoint-prefetch-v1\\aster-midpoint-prefetch.exe",
+        "--baseline",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\target\\release\\aster.exe",
+        "--suite",
+        "tests/fixtures/aster-midpoint-prefetch-parent-v1.json",
+        "--output",
+        "artifacts/verification/aster-midpoint-prefetch-equivalence-auto-v1.json"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\equivalence-auto.log",
+      "log_sha256": "749f75ffc77666f8c5f28c2401bc101ecd4df36524309a3cb1b158be493bc1e6"
+    },
+    {
+      "label": "equivalence-avx2",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/verify_rust_equivalence.py",
+        "--candidate",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\midpoint-prefetch-v1\\aster-midpoint-prefetch.exe",
+        "--baseline",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\target\\release\\aster.exe",
+        "--suite",
+        "tests/fixtures/aster-midpoint-prefetch-parent-v1.json",
+        "--output",
+        "artifacts/verification/aster-midpoint-prefetch-equivalence-avx2-v1.json"
+      ],
+      "mode": "avx2",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\equivalence-avx2.log",
+      "log_sha256": "749f75ffc77666f8c5f28c2401bc101ecd4df36524309a3cb1b158be493bc1e6"
+    },
+    {
+      "label": "equivalence-scalar",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/verify_rust_equivalence.py",
+        "--candidate",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\midpoint-prefetch-v1\\aster-midpoint-prefetch.exe",
+        "--baseline",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\target\\release\\aster.exe",
+        "--suite",
+        "tests/fixtures/aster-midpoint-prefetch-parent-v1.json",
+        "--output",
+        "artifacts/verification/aster-midpoint-prefetch-equivalence-scalar-v1.json"
+      ],
+      "mode": "scalar",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\equivalence-scalar.log",
+      "log_sha256": "749f75ffc77666f8c5f28c2401bc101ecd4df36524309a3cb1b158be493bc1e6"
+    },
+    {
+      "label": "tactics-control-tactics-v1",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/tactics.py",
+        "tests/fixtures/tactics-v1.json",
+        "--engine",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\target\\release\\aster.exe",
+        "--nodes",
+        "20000",
+        "--output",
+        "artifacts/tactics/aster-midpoint-prefetch-control-tactics-v1.json"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\tactics-control-tactics-v1.log",
+      "log_sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "label": "tactics-auto-tactics-v1",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/tactics.py",
+        "tests/fixtures/tactics-v1.json",
+        "--engine",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\midpoint-prefetch-v1\\aster-midpoint-prefetch.exe",
+        "--nodes",
+        "20000",
+        "--reference-report",
+        "artifacts/tactics/aster-midpoint-prefetch-control-tactics-v1.json",
+        "--output",
+        "artifacts/tactics/aster-midpoint-prefetch-auto-tactics-v1.json"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\tactics-auto-tactics-v1.log",
+      "log_sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "label": "tactics-avx2-tactics-v1",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/tactics.py",
+        "tests/fixtures/tactics-v1.json",
+        "--engine",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\midpoint-prefetch-v1\\aster-midpoint-prefetch.exe",
+        "--nodes",
+        "20000",
+        "--reference-report",
+        "artifacts/tactics/aster-midpoint-prefetch-control-tactics-v1.json",
+        "--output",
+        "artifacts/tactics/aster-midpoint-prefetch-avx2-tactics-v1.json"
+      ],
+      "mode": "avx2",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\tactics-avx2-tactics-v1.log",
+      "log_sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "label": "tactics-scalar-tactics-v1",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/tactics.py",
+        "tests/fixtures/tactics-v1.json",
+        "--engine",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\midpoint-prefetch-v1\\aster-midpoint-prefetch.exe",
+        "--nodes",
+        "20000",
+        "--reference-report",
+        "artifacts/tactics/aster-midpoint-prefetch-control-tactics-v1.json",
+        "--output",
+        "artifacts/tactics/aster-midpoint-prefetch-scalar-tactics-v1.json"
+      ],
+      "mode": "scalar",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\tactics-scalar-tactics-v1.log",
+      "log_sha256": "10fb533ab937143d58d6b1b00f63469c873de3bc8cd888fb9829f47dc5ee0725"
+    },
+    {
+      "label": "tactics-control-tactics-quiet-v1",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/tactics.py",
+        "tests/fixtures/tactics-quiet-v1.json",
+        "--engine",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\target\\release\\aster.exe",
+        "--nodes",
+        "20000",
+        "--output",
+        "artifacts/tactics/aster-midpoint-prefetch-control-tactics-quiet-v1.json"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\tactics-control-tactics-quiet-v1.log",
+      "log_sha256": "ea91da7afa4f6c815c58e7ec58e599406c1ff35a88e12fdbb14eb4323803620d"
+    },
+    {
+      "label": "tactics-auto-tactics-quiet-v1",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/tactics.py",
+        "tests/fixtures/tactics-quiet-v1.json",
+        "--engine",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\midpoint-prefetch-v1\\aster-midpoint-prefetch.exe",
+        "--nodes",
+        "20000",
+        "--reference-report",
+        "artifacts/tactics/aster-midpoint-prefetch-control-tactics-quiet-v1.json",
+        "--output",
+        "artifacts/tactics/aster-midpoint-prefetch-auto-tactics-quiet-v1.json"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\tactics-auto-tactics-quiet-v1.log",
+      "log_sha256": "ea91da7afa4f6c815c58e7ec58e599406c1ff35a88e12fdbb14eb4323803620d"
+    },
+    {
+      "label": "tactics-avx2-tactics-quiet-v1",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/tactics.py",
+        "tests/fixtures/tactics-quiet-v1.json",
+        "--engine",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\midpoint-prefetch-v1\\aster-midpoint-prefetch.exe",
+        "--nodes",
+        "20000",
+        "--reference-report",
+        "artifacts/tactics/aster-midpoint-prefetch-control-tactics-quiet-v1.json",
+        "--output",
+        "artifacts/tactics/aster-midpoint-prefetch-avx2-tactics-quiet-v1.json"
+      ],
+      "mode": "avx2",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\tactics-avx2-tactics-quiet-v1.log",
+      "log_sha256": "ea91da7afa4f6c815c58e7ec58e599406c1ff35a88e12fdbb14eb4323803620d"
+    },
+    {
+      "label": "tactics-scalar-tactics-quiet-v1",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/tactics.py",
+        "tests/fixtures/tactics-quiet-v1.json",
+        "--engine",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\midpoint-prefetch-v1\\aster-midpoint-prefetch.exe",
+        "--nodes",
+        "20000",
+        "--reference-report",
+        "artifacts/tactics/aster-midpoint-prefetch-control-tactics-quiet-v1.json",
+        "--output",
+        "artifacts/tactics/aster-midpoint-prefetch-scalar-tactics-quiet-v1.json"
+      ],
+      "mode": "scalar",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\tactics-scalar-tactics-quiet-v1.log",
+      "log_sha256": "ea91da7afa4f6c815c58e7ec58e599406c1ff35a88e12fdbb14eb4323803620d"
+    },
+    {
+      "label": "tactics-control-endgames-v1",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/tactics.py",
+        "tests/fixtures/endgames-v1.json",
+        "--engine",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\target\\release\\aster.exe",
+        "--nodes",
+        "20000",
+        "--output",
+        "artifacts/tactics/aster-midpoint-prefetch-control-endgames-v1.json"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\tactics-control-endgames-v1.log",
+      "log_sha256": "c3654af40dd61462211b7b809cc1af6a063d0b17310c3f6b86e20d0ec5ed9355"
+    },
+    {
+      "label": "tactics-auto-endgames-v1",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/tactics.py",
+        "tests/fixtures/endgames-v1.json",
+        "--engine",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\midpoint-prefetch-v1\\aster-midpoint-prefetch.exe",
+        "--nodes",
+        "20000",
+        "--reference-report",
+        "artifacts/tactics/aster-midpoint-prefetch-control-endgames-v1.json",
+        "--output",
+        "artifacts/tactics/aster-midpoint-prefetch-auto-endgames-v1.json"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\tactics-auto-endgames-v1.log",
+      "log_sha256": "c3654af40dd61462211b7b809cc1af6a063d0b17310c3f6b86e20d0ec5ed9355"
+    },
+    {
+      "label": "tactics-avx2-endgames-v1",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/tactics.py",
+        "tests/fixtures/endgames-v1.json",
+        "--engine",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\midpoint-prefetch-v1\\aster-midpoint-prefetch.exe",
+        "--nodes",
+        "20000",
+        "--reference-report",
+        "artifacts/tactics/aster-midpoint-prefetch-control-endgames-v1.json",
+        "--output",
+        "artifacts/tactics/aster-midpoint-prefetch-avx2-endgames-v1.json"
+      ],
+      "mode": "avx2",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\tactics-avx2-endgames-v1.log",
+      "log_sha256": "c3654af40dd61462211b7b809cc1af6a063d0b17310c3f6b86e20d0ec5ed9355"
+    },
+    {
+      "label": "tactics-scalar-endgames-v1",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/tactics.py",
+        "tests/fixtures/endgames-v1.json",
+        "--engine",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\midpoint-prefetch-v1\\aster-midpoint-prefetch.exe",
+        "--nodes",
+        "20000",
+        "--reference-report",
+        "artifacts/tactics/aster-midpoint-prefetch-control-endgames-v1.json",
+        "--output",
+        "artifacts/tactics/aster-midpoint-prefetch-scalar-endgames-v1.json"
+      ],
+      "mode": "scalar",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\tactics-scalar-endgames-v1.log",
+      "log_sha256": "c3654af40dd61462211b7b809cc1af6a063d0b17310c3f6b86e20d0ec5ed9355"
+    },
+    {
+      "label": "rules",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/verify.py",
+        "--engine",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\midpoint-prefetch-v1\\aster-midpoint-prefetch.exe",
+        "--output",
+        "artifacts/verification/aster-midpoint-prefetch-rules-v1.json",
+        "--setups",
+        "1000"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\rules.log",
+      "log_sha256": "cb6419a01fc0644221edbf66615fab483f9cab71c67e867fef56dc0cb7532e6b"
+    },
+    {
+      "label": "edges",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/verify_rust_legal_edges.py",
+        "--engine",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\midpoint-prefetch-v1\\aster-midpoint-prefetch.exe",
+        "--output",
+        "artifacts/verification/aster-midpoint-prefetch-edges-v1.json"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\edges.log",
+      "log_sha256": "ce1f7b6a6603d28d07aa27a79ab625f9a102e6abae955141572f0627044e2595"
+    },
+    {
+      "label": "play",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/smoke_rust_play.py",
+        "--engine",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\midpoint-prefetch-v1\\aster-midpoint-prefetch.exe",
+        "--output",
+        "artifacts/verification/aster-midpoint-prefetch-play-v1.json"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\play.log",
+      "log_sha256": "1c770c3235e65922a58c072c5ae5c7a7fd70e0611526b1f8ecd05eb57d13f632"
+    },
+    {
+      "label": "proofs",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.venv\\Scripts\\python.exe",
+        "scripts/smoke_mate_proof.py",
+        "--engine",
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\midpoint-prefetch-v1\\aster-midpoint-prefetch.exe",
+        "--output",
+        "artifacts/verification/aster-midpoint-prefetch-proofs-v1.json"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\proofs.log",
+      "log_sha256": "65980d47d3d7d3d104733bf7844ec585071c273aede0f20e464bb34b2b6f3b76"
+    },
+    {
+      "label": "bench7",
+      "command": [
+        "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\midpoint-prefetch-v1\\aster-midpoint-prefetch.exe",
+        "bench",
+        "7"
+      ],
+      "mode": "auto",
+      "exit_code": 0,
+      "log": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\artifacts\\verification\\aster-midpoint-prefetch-correctness-v1\\bench7.log",
+      "log_sha256": "5ebe876a81809aa0578aeb504d6f9469b10c4a718d0608c1b7b734e78787e78c"
+    }
+  ],
+  "active_step": null,
+  "completed_utc": "2026-10-20T22:08:09.814101+00:00"
+}
