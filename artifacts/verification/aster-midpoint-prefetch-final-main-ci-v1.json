@@ -1,0 +1,24 @@
+{
+  "verified_utc": "2026-10-20T22:20:34.826Z",
+  "head_sha": "5ede3d8ef6fcde335fcd85df4c1d11611297a2ce",
+  "workflow": "https://github.com/p3n1cillin/aster-chess/actions/runs/39506620763",
+  "jobs": [
+    {
+      "id": 118917033538,
+      "name": "rust (windows-latest)",
+      "status": "completed",
+      "conclusion": "success",
+      "completed_at": "2026-10-20T22:20:14Z",
+      "html_url": "https://github.com/p3n1cillin/aster-chess/actions/runs/39506620763/job/118917033538"
+    },
+    {
+      "id": 118917033834,
+      "name": "rust (ubuntu-latest)",
+      "status": "completed",
+      "conclusion": "success",
+      "completed_at": "2026-10-20T22:17:42Z",
+      "html_url": "https://github.com/p3n1cillin/aster-chess/actions/runs/39506620763/job/118917033834"
+    }
+  ],
+  "note": "Final restored-source main checks passed on both platforms. The midpoint-prefetch experiment remains rejected; this is not adoption or a playing-strength claim."
+}
