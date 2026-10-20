@@ -1,0 +1,1 @@
+python3 scripts/spsa_worker.py --ref cb0f25f --tc 10+0.1 --iterations 720 --pairs 6 --deadline 1792567746 --seed 207 --worker w7 --label spsa2 
