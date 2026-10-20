@@ -3,3 +3,9 @@ SPSA_STATE {"label": "rtest", "worker": "w0", "seed": 9, "ref": "HEAD", "iterati
 SPSA_STATE {"label": "rtest", "worker": "w0", "seed": 9, "ref": "HEAD", "iteration": 3, "planned": 8, "games": 6, "plus_w_l_d": [0, 1, 5], "tc": {"nodes": 2000}, "values": {"RazorMargin": 341.92, "LmrBase": 696.74}}
 JOB_RESUMING
 SPSA_RESUME from iteration 3
+SPSA_STATE {"label": "rtest", "worker": "w0", "seed": 9, "ref": "HEAD", "iteration": 4, "planned": 8, "games": 8, "plus_w_l_d": [1, 1, 6], "tc": {"nodes": 2000}, "values": {"RazorMargin": 341.98, "LmrBase": 696.94}}
+SPSA_STATE {"label": "rtest", "worker": "w0", "seed": 9, "ref": "HEAD", "iteration": 5, "planned": 8, "games": 10, "plus_w_l_d": [2, 1, 7], "tc": {"nodes": 2000}, "values": {"RazorMargin": 342.04, "LmrBase": 696.76}}
+SPSA_STATE {"label": "rtest", "worker": "w0", "seed": 9, "ref": "HEAD", "iteration": 6, "planned": 8, "games": 12, "plus_w_l_d": [2, 1, 9], "tc": {"nodes": 2000}, "values": {"RazorMargin": 342.04, "LmrBase": 696.76}}
+SPSA_STATE {"label": "rtest", "worker": "w0", "seed": 9, "ref": "HEAD", "iteration": 7, "planned": 8, "games": 14, "plus_w_l_d": [3, 2, 9], "tc": {"nodes": 2000}, "values": {"RazorMargin": 342.04, "LmrBase": 696.76}}
+SPSA_STATE {"label": "rtest", "worker": "w0", "seed": 9, "ref": "HEAD", "iteration": 8, "planned": 8, "games": 16, "plus_w_l_d": [5, 2, 9], "tc": {"nodes": 2000}, "values": {"RazorMargin": 341.95, "LmrBase": 696.46}}
+SPSA_DONE
