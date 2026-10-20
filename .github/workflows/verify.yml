@@ -53,3 +53,16 @@ jobs:
         env:
           ASTER_SIMD: scalar
         run: python scripts/verify_aster_branding.py --output artifacts/verification/aster-scalar-ci.json
+      - run: cargo test --workspace --release --locked --features midpoint-prefetch
+      - run: cargo test --workspace --locked --features midpoint-prefetch
+      - run: cargo build --workspace --release --locked --features midpoint-prefetch
+      - name: Verify experimental prefetch signatures
+        shell: python {0}
+        run: |
+          import os, subprocess, sys
+          for mode in ['auto', 'avx2', 'scalar']:
+              env = os.environ.copy()
+              env.pop('ASTER_SIMD', None)
+              if mode != 'auto':
+                  env['ASTER_SIMD'] = mode
+              subprocess.run([sys.executable, 'scripts/verify_aster_branding.py', '--output', f'artifacts/verification/aster-midpoint-prefetch-{mode}-ci.json'], env=env, check=True)

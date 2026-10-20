@@ -383,6 +383,12 @@ fn weight_base() -> *const i8 {
 fn prefetch_row_at(base: *const i8, index: u32) {
     if !base.is_null() {
         super::kernels::prefetch(base.wrapping_add(index as usize * 1024));
+        #[cfg(feature = "midpoint-prefetch")]
+        if super::kernels::level() == super::kernels::LEVEL_AVX512 {
+            // Development-only hint for the second 512-byte update tile.
+            // Wrapping arithmetic constructs an address; the hint does not read it.
+            super::kernels::prefetch(base.wrapping_add(index as usize * 1024).wrapping_add(512));
+        }
     }
 }
 

@@ -1,0 +1,31 @@
+[package]
+name = "aster-core"
+version = "1.0.0"
+edition = "2024"
+description = "Aster native Rust chess search and neural evaluation core."
+license = "GPL-3.0-or-later"
+authors = ["The Stockfish developers (original C++ engine)", "Aster contributors (Rust port)"]
+rust-version = "1.93.0"
+
+[dependencies]
+memmap2 = "0.9.5"
+
+[build-dependencies]
+sha2 = "=0.10.9"
+
+[[bin]]
+name = "aster-core"
+path = "src/main.rs"
+
+[features]
+# One bounded row-prefetch experiment; excluded from production builds.
+midpoint-prefetch = []
+evaluation-risk = []
+# Bounded Aster search experiment; excluded from production builds.
+disagreement-guard = []
+# Embed the pinned network (verified by build.rs) so the binary is self-contained.
+embed-net = []
+# Cycle counters around hot sections (development only).
+prof = []
+# Windows-only instruction-pointer sampling profiler (development only).
+sampler = []
