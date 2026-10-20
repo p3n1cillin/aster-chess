@@ -1,0 +1,536 @@
+{
+  "schema": 1,
+  "seed": 20261020017,
+  "plies": 20,
+  "selection_nodes": 2048,
+  "verification_nodes": 20000,
+  "max_abs_teacher_cp": 80,
+  "teacher": {
+    "tag": "sf_19",
+    "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+    "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+    "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+    "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+    "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+    "uci_name": "Stockfish 19"
+  },
+  "training_exclusion": null,
+  "training_exclusions": [],
+  "prior_suites_excluded": [
+    {
+      "path": "tests\\fixtures\\aster-disagreement-100ms-v1.json",
+      "sha256": "ccfdf675f11ef770e2d957b23dd6b11220e7613d25f85fa47049276b59467501",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\aster-disagreement-30ms-v1.json",
+      "sha256": "6f4c5f2e7ccfa9917d940e71b500e5f4c641992c90a1f3bc39d33cd37a84ad32",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\aster-disagreement-parent-v1.json",
+      "sha256": "7775d7f888719c139eec40d080ad021bae8c9ae05923a4a4a2fd53fd4010cbe3",
+      "positions": 96
+    },
+    {
+      "path": "tests\\fixtures\\aster-evaluation-risk-100ms-v1.json",
+      "sha256": "d59cdcb7621cf8f3db53d3f91a3d745169fc5029e8aecf5c4a545f279de31cc5",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\aster-evaluation-risk-30ms-v1.json",
+      "sha256": "fd37fb8ed08039c56dbd280e7ca100fa578220b85e16d7c56a7eb332b90fe601",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\aster-evaluation-risk-parent-v1.json",
+      "sha256": "a4c465b2614486828f9f80ce4e6461a8f4389cc154cc17ef4d909933c284391d",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\aster-fused-input-100ms-v1.json",
+      "sha256": "b436d4188725fde8c86b8f0aa7c260bd1807097713261cbdd031009d81577796",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\aster-fused-input-30ms-v1.json",
+      "sha256": "61c9348f957b113191b736c2642db2131c432c3baadca003e81613f91b0eaedd",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\aster-fused-input-parent-v1.json",
+      "sha256": "63a8e9fd60e2017fd1652add6c0c30586657a9cb6534547ced77f8e5d2789746",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\aster-fused-input-timing-v1.json",
+      "sha256": "eca95fa33826994b5b251d2038517538665946fa81fa04a7f8ad5d17bdbe746d",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\aster-indexed-accumulators-auto-v1.json",
+      "sha256": "0638594100e9d035197b970f9c3fbbfbdf327358a25fcd823e0e54f35c328b3c",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\aster-indexed-accumulators-avx2-v1.json",
+      "sha256": "c9c0e0ae933e1a24d5153ae8e9be3d23d69d530775ab73f0ba9f95326a364300",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\aster-indexed-accumulators-parent-v1.json",
+      "sha256": "d918b14c24cdebf184a4f59371508be7b3a8eaa4681d55649d7f6e6be5d1ba02",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\aster-pgo-100ms-v1.json",
+      "sha256": "e799c6b7676cf0144e8e3d523c5fd630a25487b715e90d154759029abfd9dc70",
+      "positions": 48
+    },
+    {
+      "path": "tests\\fixtures\\aster-pgo-30ms-v1.json",
+      "sha256": "6a9a80128801d5b89001d773efd976b28d47ee8c06c7ae28f27975473fbf601a",
+      "positions": 48
+    },
+    {
+      "path": "tests\\fixtures\\aster-pgo-parent-v1.json",
+      "sha256": "2ef58680178109740b83e88db3fd03456171a2f13a967bf3932dc934f6665946",
+      "positions": 96
+    },
+    {
+      "path": "tests\\fixtures\\aster-pgo-timing-v1.json",
+      "sha256": "53142456f950e4e0567df5801e7212c720c59443a37f145e671f4f175b547406",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\capacity-classical-100ms-v1.json",
+      "sha256": "dcbebc58b5c33ec6b9e502031dc4cdc7190d76dbc222ded241970136d958b3f5",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\capacity-classical-30ms-v1.json",
+      "sha256": "01e773465168914fc65c45ac13df8db197f8e0cb4e37d4a25557e4f19701bdf8",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\capacity-control-30ms-v1.json",
+      "sha256": "76c1fefa9817b587f355cccd4dfe763ed5f435b6fc11b57fcee5eb991e2cdd30",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\capacity-parent-v1.json",
+      "sha256": "81e388417a56d17ce865237647a02506e9cc05677232c6bcbe73b1f8d2f7d39b",
+      "positions": 160
+    },
+    {
+      "path": "tests\\fixtures\\deep-turn-classical-100ms-v1.json",
+      "sha256": "b8c5da7d9648fd72ccf674ca694848f3bc526776b738087b31e3e82a6453165c",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\deep-turn-classical-30ms-v1.json",
+      "sha256": "1ffa275e525d665757213fa34a93aa4bed17982fd844d444299b01d556fd0255",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\deep-turn-control-30ms-v1.json",
+      "sha256": "99889d267db0879be7131c4039dd80d258ad2221fe54222133dd32709b595e03",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\deep-turn-parent-v1.json",
+      "sha256": "5addfa8b6a03c8fd844ff43ec8c8dc71f6c2d3184460d919fc7dee2676865237",
+      "positions": 160
+    },
+    {
+      "path": "tests\\fixtures\\iir-100ms-v1.json",
+      "sha256": "0b2e40c88ada4064628909ddba0293ce3594774520eaffae50daafcca41ecace",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\iir-30ms-v1.json",
+      "sha256": "de119d1f9630b753d18a634031c90cefac64853d43e11e386aee535b53bf4307",
+      "positions": 256
+    },
+    {
+      "path": "tests\\fixtures\\iir-behavior-v1.json",
+      "sha256": "b3680be4939c0e82ddb125c5a70a90b8c75312440333e9bc0b8d443f51fc0d15",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\iir-parent-v1.json",
+      "sha256": "46868852f9af1c2b95bc9bfaec9b68bb0b45fd916d0bfc27f792fe9596855baa",
+      "positions": 448
+    },
+    {
+      "path": "tests\\fixtures\\iir-rating-v1.json",
+      "sha256": "ce491f6df3345245f016f9b1b8f7658769da750a0826a422f4732b16eaf2653f",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\kpk-setups-v1.json",
+      "sha256": "550764811ecbb1761c70a30a82c941122450839ef442f56a8f5a5a67ed96dd13",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-100ms-v1.json",
+      "sha256": "12ed5a4dd3688e730ba6224b8c88e00bc5b016975aa8dd08e1e918bbb9f7be1e",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-30ms-v1.json",
+      "sha256": "e6f6a4f084d0c06ec7a1bcc8de86a9d13b3fa0faa3053208c3c86359e62ba423",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-behavior-v1.json",
+      "sha256": "00a8de1225c4a1e6b6f0b943c6d1d12565900eea579aa6f644d5a2b347e9f919",
+      "positions": 80
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-parent-v1.json",
+      "sha256": "d8ac1c505d3c46c819b87da63fe8308cebd18a234a1889a9215fbc2e75101f3a",
+      "positions": 208
+    },
+    {
+      "path": "tests\\fixtures\\lazy-order-rating-v1.json",
+      "sha256": "9c7886ac0b66b35fd6cc74c2937bb86ba5506c0363568e87cf769be6bca46652",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\mate-proof-match-v1.json",
+      "sha256": "14286109ef669ec3abab5d4bfeb8f5de1ca6468969b72b8fd0cd658ba94edc0a",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\mate-proof-parent-v1.json",
+      "sha256": "85553f4ff2dcc2ce9896e002ce5730d4ca54061c82f1032bdb47f0c83ae750c4",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\openings-v1.json",
+      "sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v2.json",
+      "sha256": "cdcc99af780b795546a22e84b2557bd20168097c2694cc9b12ce2e242f74bc25",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v3.json",
+      "sha256": "b2c84b63c566712b33102e1a5f246d47a010a0341f8396c5e036937c74e241f3",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v4.json",
+      "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\openings-v5.json",
+      "sha256": "e63c68d4024428bef2f84a4289db06c4aee70e60aa9f081cf437d2a6d237c46e",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\phase-classical-100ms-v1.json",
+      "sha256": "3b01d69ec7c31e2e5991b81ebb5860024b4393cb42d91c8a84db69ff20dacffc",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\phase-classical-30ms-v1.json",
+      "sha256": "3efc264b68683bd961a269679ecb493ccd53888651e5a767b34b66a7c0f5e3e1",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\phase-control-30ms-v1.json",
+      "sha256": "f29fbb72d1d3696bff82ff4630bc51b37d6148af3350e0b265509e96aab30758",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\phase-parent-v1.json",
+      "sha256": "35fd8dc040ab40538966d73d0f9c54d38ce490175e90fba10c9cf4c82363063f",
+      "positions": 80
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-100ms-v1.json",
+      "sha256": "9c760e96dc990a5ab465a5bf8eff9971ed8eae9856c76d57b6ca32f2563ba63f",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-30ms-v1.json",
+      "sha256": "940d8217dd7a6a583ddcabfe6edeffcd4769ac7f9118d00f67f081b52f238072",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-behavior-v1.json",
+      "sha256": "02d7afdbe0eb10296d53208cf96f551058d0b3323fe18570dd3cae1706b90e00",
+      "positions": 160
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-parent-v1.json",
+      "sha256": "13c3a7a689f83064490766a76d112589ef2098f93a9d92ebbfcee805f1c385f4",
+      "positions": 288
+    },
+    {
+      "path": "tests\\fixtures\\q-evasion-rating-v1.json",
+      "sha256": "b9d8a21feba1ae6c0390e1fa0dd26e3cf65848f0b2e87fd002ebbe0ef1f626fa",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\rating-confirm-v1.json",
+      "sha256": "1e904d67400433abedb8e48592b4598e8e5ed10ed82b0cdd13025de6eca8615d",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\rating-parent-v1.json",
+      "sha256": "6c4d7453e3572cadf786d81be8ad8b0b85fb9c461d5e93847612959836efb112",
+      "positions": 144
+    },
+    {
+      "path": "tests\\fixtures\\rating-screen-v1.json",
+      "sha256": "690bacaceff2559200ebb084424de85639cf045c14f094912e18f5b38ba9805f",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\relations-classical-100ms-v1.json",
+      "sha256": "2ded031474bc1542069632721b7ad8ef7807f32c1ad0378cc97438e465f64928",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\relations-classical-30ms-v1.json",
+      "sha256": "63b831b035cfbf5ed44ee4a89e7a374e29cef97918eb8d6e8b2a54893db56478",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\relations-control-30ms-v1.json",
+      "sha256": "9bd295a72aeeecafcf1234f923b27fe958065393a51c1b7331a3c7ea408d3f85",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\relations-parent-v1.json",
+      "sha256": "08d8909b4520243fa3b0f850595957b79087c532607d4c375eeb54eefc3a8a46",
+      "positions": 160
+    },
+    {
+      "path": "tests\\fixtures\\rust-foundation-original-v1.json",
+      "sha256": "f0ed641ffac5091b4dc75b076f36c2bfbc2e2f670deb8a4e613a1a24823b840f",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\rust-foundation-parent-v1.json",
+      "sha256": "ec2a76dbd775a3fcc94156c36ec0f4762f0dae6146640fe189b1d795632b40c9",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\rust-foundation-stockfish-v1.json",
+      "sha256": "7a4d448a988b4a77856d60102dedf6b5b5681bf6c6acf551239b29e23904bc36",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\rust-hyperion-100ms-v1.json",
+      "sha256": "ee3ef81d4399e94368bcb55af6ac5e0c1b22cf77b04fcdc5ec4302198962932b",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\rust-hyperion-30ms-v1.json",
+      "sha256": "454910c7a5e4265686928739954c6940f4d18e162ea69be98acb4e895878d371",
+      "positions": 128
+    },
+    {
+      "path": "tests\\fixtures\\rust-hyperion-parent-v1.json",
+      "sha256": "7934709fa40e6eb21372079081fd4b659c25ae55b8cbffeafe4b3126c490261b",
+      "positions": 192
+    },
+    {
+      "path": "tests\\fixtures\\rust-legal-probe-100ms-v1.json",
+      "sha256": "261eb9d49d5258641ed6b62cda3fb9fad11f47eebe34b4d68e9da99aaaae0c21",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\rust-legal-probe-30ms-v1.json",
+      "sha256": "46e611b01d3fb6c36eada525ae7c42872215528ad6ae2c8609d30482d009bd3f",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\rust-legal-probe-benchmark-v1.json",
+      "sha256": "a3560bd578f730f8c225129e3c6b40d6a65e2b84f3a6b74b38962591ccaa05a1",
+      "positions": 16
+    },
+    {
+      "path": "tests\\fixtures\\rust-legal-probe-parent-v1.json",
+      "sha256": "af5585d0312a4f16346b1254fe4570a40938ea13e0897504ad0592543d7d6435",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\rust-safety-v2.json",
+      "sha256": "6e8185bf92824481e77f7ab1b3e58d92e10f1a96a1f7f6a35c7daa111ba453b4",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\stable-endgame-classical-100ms-v1.json",
+      "sha256": "4682375ee99e6043c9a2face29f6ae3bd9bc46fa66c3978005ac09f09d32afe6",
+      "positions": 32
+    },
+    {
+      "path": "tests\\fixtures\\stable-endgame-classical-30ms-v1.json",
+      "sha256": "03139c4b9c389d6a607425a1fa64a3ddae9d92824fbdab765fd1138a2440f848",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\stable-endgame-control-30ms-v1.json",
+      "sha256": "19e001548702c754b8f97e37b7274b065880bc279c968954219bf356111be8fc",
+      "positions": 64
+    },
+    {
+      "path": "tests\\fixtures\\stable-endgame-parent-v1.json",
+      "sha256": "ee8a6137df3a3a0da43dcf783565e974483101bb41aeb956d52772f39fc06a19",
+      "positions": 160
+    }
+  ],
+  "attempts_used": 140,
+  "teacher_options": {
+    "Threads": 1,
+    "Hash": 64
+  },
+  "generator_sha256": "67426a622fa8ae3d70088633833cd993b074c04547e5938012cb782788c23bed",
+  "interpretation": "Seeded near-best MultiPV continuations from the start, distinct final positions, balanced under a bounded teacher check. Teacher scores do not prove equality; this is a regression suite, not an independent final superiority test.",
+  "openings": [
+    {
+      "id": "opening-028",
+      "moves": "e2e4 b8c6 f1c4 e7e6 g1f3 f8e7 d2d4 d7d5 e4d5 e6d5 c4b3 c6a5 e1g1 c7c6 d1e2 g8f6 c2c3 c8f5 c1g5 e8g8",
+      "fen": "r2q1rk1/pp2bppp/2p2n2/n2p1bB1/3P4/1BP2N2/PP2QPPP/RN3RK1 w - - 3 11",
+      "teacher_white_cp": 2,
+      "teacher_depth": 14,
+      "attempt": 54
+    },
+    {
+      "id": "opening-017",
+      "moves": "e2e4 b8c6 d2d4 d7d5 e4d5 d8d5 g1f3 d5d6 b1a3 a7a6 c1e3 g8f6 f1d3 g7g6 c2c3 f8g7 e1g1 b7b5 f1e1 e8g8",
+      "fen": "r1b2rk1/2p1ppbp/p1nq1np1/1p6/3P4/N1PBBN2/PP3PPP/R2QR1K1 w - - 2 11",
+      "teacher_white_cp": 52,
+      "teacher_depth": 12,
+      "attempt": 31
+    },
+    {
+      "id": "opening-038",
+      "moves": "e2e4 e7e5 f1e2 b8c6 c2c4 g8f6 d2d3 f8c5 b1c3 h7h6 c1e3 c5e3 f2e3 d7d6 c3d5 f6d5 c4d5 c6b8 a1c1 e8g8",
+      "fen": "rnbq1rk1/ppp2pp1/3p3p/3Pp3/4P3/3PP3/PP2B1PP/2RQK1NR w K - 3 11",
+      "teacher_white_cp": -5,
+      "teacher_depth": 15,
+      "attempt": 67
+    },
+    {
+      "id": "opening-059",
+      "moves": "c2c3 g8f6 d2d4 c7c6 d1c2 d7d5 c1g5 h7h6 g5h4 b8d7 h4f6 e7f6 b1d2 a7a5 e2e3 f8d6 a2a3 e8g8 c3c4 d5c4",
+      "fen": "r1bq1rk1/1p1n1pp1/2pb1p1p/p7/2pP4/P3P3/1PQN1PPP/R3KBNR w KQ - 0 11",
+      "teacher_white_cp": -5,
+      "teacher_depth": 13,
+      "attempt": 104
+    },
+    {
+      "id": "opening-030",
+      "moves": "e2e4 e7e5 b1c3 g8f6 d2d4 d7d6 c1g5 b8c6 g1f3 a7a6 d4e5 d6e5 d1d8 e8d8 f1c4 c8e6 e1c1 f8d6 c4d5 d8d7",
+      "fen": "r6r/1ppk1ppp/p1nbbn2/3Bp1B1/4P3/2N2N2/PPP2PPP/2KR3R w - - 6 11",
+      "teacher_white_cp": 32,
+      "teacher_depth": 12,
+      "attempt": 57
+    },
+    {
+      "id": "opening-047",
+      "moves": "d2d4 b8c6 g1f3 d7d5 c1f4 g8f6 e2e3 c8g4 b1d2 e7e6 c2c3 f8d6 f1b5 a7a6 b5d3 g4f5 d2b3 d8e7 f4d6 e7d6",
+      "fen": "r3k2r/1pp2ppp/p1nqpn2/3p1b2/3P4/1NPBPN2/PP3PPP/R2QK2R w KQkq - 0 11",
+      "teacher_white_cp": 24,
+      "teacher_depth": 14,
+      "attempt": 81
+    },
+    {
+      "id": "opening-051",
+      "moves": "d2d4 c7c6 g1f3 g8f6 c2c4 d7d5 c4d5 c6d5 c1g5 b8c6 g5f4 c8g4 d1b3 d8b6 b1d2 f6h5 f4e3 h5f6 b3b6 a7b6",
+      "fen": "r3kb1r/1p2pppp/1pn2n2/3p4/3P2b1/4BN2/PP1NPPPP/R3KB1R w KQkq - 0 11",
+      "teacher_white_cp": -12,
+      "teacher_depth": 13,
+      "attempt": 85
+    },
+    {
+      "id": "opening-071",
+      "moves": "d2d4 d7d5 g1f3 c7c6 c2c4 c8f5 c1f4 d8b6 d1b3 e7e6 b1c3 h7h5 f3d2 b8d7 h2h4 f8e7 c4c5 b6b3 d2b3 b7b6",
+      "fen": "r3k1nr/p2nbpp1/1pp1p3/2Pp1b1p/3P1B1P/1NN5/PP2PPP1/R3KB1R w KQkq - 0 11",
+      "teacher_white_cp": 12,
+      "teacher_depth": 11,
+      "attempt": 122
+    },
+    {
+      "id": "opening-076",
+      "moves": "d2d4 d7d5 c1f4 c8f5 e2e3 c7c6 g2g4 f5c8 c2c3 e7e6 f1d3 b8d7 b1d2 e6e5 f4e5 h7h5 e5f4 h5g4 d1e2 g8e7",
+      "fen": "r1bqkb1r/pp1nnpp1/2p5/3p4/3P1Bp1/2PBP3/PP1NQP1P/R3K1NR w KQkq - 2 11",
+      "teacher_white_cp": 49,
+      "teacher_depth": 11,
+      "attempt": 131
+    },
+    {
+      "id": "opening-063",
+      "moves": "g1f3 g8f6 b1c3 d7d5 a2a3 d5d4 c3b1 b8c6 e2e3 e7e5 f1e2 g7g5 e2b5 c8d7 d2d3 d8e7 e3d4 c6d4 b5d7 f6d7",
+      "fen": "r3kb1r/pppnqp1p/8/4p1p1/3n4/P2P1N2/1PP2PPP/RNBQK2R w KQkq - 0 11",
+      "teacher_white_cp": -15,
+      "teacher_depth": 14,
+      "attempt": 111
+    },
+    {
+      "id": "opening-053",
+      "moves": "g1f3 c7c6 d2d4 d7d5 c2c3 d8c7 d1b3 c8f5 f3h4 f5d7 h4f3 e7e6 g2g3 f8d6 b1d2 g8f6 e2e4 f6e4 d2e4 d5e4",
+      "fen": "rn2k2r/ppqb1ppp/2pbp3/8/3Pp3/1QP2NP1/PP3P1P/R1B1KB1R w KQkq - 0 11",
+      "teacher_white_cp": 12,
+      "teacher_depth": 13,
+      "attempt": 89
+    },
+    {
+      "id": "opening-040",
+      "moves": "d2d4 g8f6 c2c4 c7c6 d1c2 d7d5 g1f3 c8g4 e2e3 e7e6 b1d2 g4f5 c2d1 d8b6 f3h4 f5e4 f2f3 e4f5 h4f5 e6f5",
+      "fen": "rn2kb1r/pp3ppp/1qp2n2/3p1p2/2PP4/4PP2/PP1N2PP/R1BQKB1R w KQkq - 0 11",
+      "teacher_white_cp": 41,
+      "teacher_depth": 11,
+      "attempt": 71
+    },
+    {
+      "id": "opening-073",
+      "moves": "g1f3 c7c5 b1c3 g7g6 d2d4 c5d4 d1d4 g8f6 c1f4 d8a5 b2b4 a5b6 d4b6 a7b6 e2e4 d7d6 e4e5 d6e5 f4e5 f8g7",
+      "fen": "rnb1k2r/1p2ppbp/1p3np1/4B3/1P6/2N2N2/P1P2PPP/R3KB1R w KQkq - 1 11",
+      "teacher_white_cp": 30,
+      "teacher_depth": 13,
+      "attempt": 126
+    },
+    {
+      "id": "opening-074",
+      "moves": "d2d4 b8c6 d4d5 c6b8 g1f3 c7c6 b1c3 c6d5 d1d5 g8f6 d5d2 b8c6 h2h3 e7e6 e2e3 f8c5 a2a3 d7d5 f1e2 e8g8",
+      "fen": "r1bq1rk1/pp3ppp/2n1pn2/2bp4/8/P1N1PN1P/1PPQBPP1/R1B1K2R w KQ - 2 11",
+      "teacher_white_cp": -28,
+      "teacher_depth": 12,
+      "attempt": 129
+    },
+    {
+      "id": "opening-018",
+      "moves": "g1f3 g8f6 b1c3 d7d6 d2d4 g7g6 a2a3 c8f5 c1g5 d6d5 h2h3 c7c6 e2e3 f8g7 f3d2 d8b6 c3a4 b6d8 g5f4 e8g8",
+      "fen": "rn1q1rk1/pp2ppbp/2p2np1/3p1b2/N2P1B2/P3P2P/1PPN1PP1/R2QKB1R w KQ - 7 11",
+      "teacher_white_cp": 26,
+      "teacher_depth": 13,
+      "attempt": 33
+    },
+    {
+      "id": "opening-072",
+      "moves": "g1f3 g8f6 c2c4 e7e6 d2d4 f8b4 c1d2 b4e7 e2e3 d7d5 b1c3 d5c4 a1c1 b7b6 h2h3 e8g8 d1a4 a7a6 a4c4 c7c5",
+      "fen": "rnbq1rk1/4bppp/pp2pn2/2p5/2QP4/2N1PN1P/PP1B1PP1/2R1KB1R w K - 0 11",
+      "teacher_white_cp": -17,
+      "teacher_depth": 12,
+      "attempt": 124
+    }
+  ],
+  "parent": {
+    "path": "tests/fixtures/aster-midpoint-prefetch-parent-v1.json",
+    "sha256": "ebf08f9079dc6ce9b3a6eab7df8a4f4ad795eed256440ee6e6d8e686cccaad0c",
+    "range": [
+      0,
+      16
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+SPDX-License-Identifier: GPL-3.0-or-later
+
+Original source header, preserved verbatim for uci.rs:
+
+// Rust port of Stockfish 19 `uci.cpp`, `engine.cpp`, `ucioption.cpp`,
+// `benchmark.cpp` (bench) and the thread-pool driver from `thread.cpp`.
+// Copyright (C) 2004-2026 The Stockfish developers (see AUTHORS file)
+// Licensed under the GNU General Public License v3 or later.
+
+Aster experimental changes (2026-10-19): feature-gated disagreement-guard UCI option.
+Copyright (C) 2026 Aster contributors.
+
+Aster experimental changes (2026-10-19): evaluation-risk research option.
+Copyright (C) 2026 Aster contributors.
