@@ -104,6 +104,13 @@ SHA-addressed research binary store, with paths, sizes and hashes in the receipt
 The repository preserves all raw emitted profiles and source snapshots. LLVM
 tools and diagnostic features are not standalone Aster runtime dependencies.
 
+Windows and Linux CI both pass on tooling commit `98ce7a08`, including native
+builds/tests, independent rules, actual visualization/proofs, tactics and all
+three SIMD signatures. Later commits change only documentation and offline
+inspection evidence. The receipt is
+`artifacts/verification/aster-automatic-profile-ci-v1.json`; the original
+completion-time documentation remains archived unchanged.
+
 ## Follow-up: bounded machine-code inspection
 
 A separate plan was committed before one offline disassembly on 2026-10-20.

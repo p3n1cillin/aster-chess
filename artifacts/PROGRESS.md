@@ -19,6 +19,8 @@ The separately planned one-function disassembly now also completes: sixteen
 accumulator vectors remain in registers, with no direct stack-relative vector
 spills. No hardware-stall cause or candidate variant is established. See
 `artifacts/verification/aster-indexed-update-inspection-v1.json`.
+Windows/Linux CI pass on tooling commit `98ce7a08`; the separate CI receipt
+preserves the completed jobs without rewriting frozen completion evidence.
 
 ## 2026-10-19: fused neural input rejected at fixed timing gate
 

@@ -1,0 +1,30 @@
+{
+  "verified_utc": "2026-10-20T15:48:58.003Z",
+  "workflow": "https://github.com/p3n1cillin/aster-chess/actions/runs/39450986018",
+  "run_id": 39450986018,
+  "head_sha": "98ce7a08af396debc8e7458ecb10647c3a8f661c",
+  "status": "completed",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 118725400668,
+      "name": "rust (windows-latest)",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/p3n1cillin/aster-chess/actions/runs/39450986018/job/118725400668",
+      "completed_at": "2026-10-20T15:47:12Z"
+    },
+    {
+      "id": 118725401321,
+      "name": "rust (ubuntu-latest)",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/p3n1cillin/aster-chess/actions/runs/39450986018/job/118725401321",
+      "completed_at": "2026-10-20T15:46:15Z"
+    }
+  ],
+  "scope": "Windows and Linux CI passed on the profiling-tooling commit. Subsequent commits add only offline inspection evidence and documentation; native playing source and collector/analyzer unchanged. Frozen profile completion remains unmodified.",
+  "raw_jobs_file": "artifacts/verification/aster-automatic-profile-ci-jobs-v1.json",
+  "raw_jobs_sha256": "4ffcab25e6c0610d1e6f853bcac6b5b6c22dcff7473378a62f47be455a67d16d",
+  "ci_relevant_source_unchanged": true
+}
