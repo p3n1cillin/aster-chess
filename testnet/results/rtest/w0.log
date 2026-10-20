@@ -1,0 +1,5 @@
+SPSA_STATE {"label": "rtest", "worker": "w0", "seed": 9, "ref": "HEAD", "iteration": 1, "planned": 8, "games": 2, "plus_w_l_d": [0, 0, 2], "tc": {"nodes": 2000}, "values": {"RazorMargin": 342.0, "LmrBase": 697.0}}
+SPSA_STATE {"label": "rtest", "worker": "w0", "seed": 9, "ref": "HEAD", "iteration": 2, "planned": 8, "games": 4, "plus_w_l_d": [0, 1, 3], "tc": {"nodes": 2000}, "values": {"RazorMargin": 341.92, "LmrBase": 696.74}}
+SPSA_STATE {"label": "rtest", "worker": "w0", "seed": 9, "ref": "HEAD", "iteration": 3, "planned": 8, "games": 6, "plus_w_l_d": [0, 1, 5], "tc": {"nodes": 2000}, "values": {"RazorMargin": 341.92, "LmrBase": 696.74}}
+JOB_RESUMING
+SPSA_RESUME from iteration 3
