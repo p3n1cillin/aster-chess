@@ -1,0 +1,4680 @@
+{
+  "created_utc": "2026-10-20T16:39:30.840127+00:00",
+  "baseline_commit": "082180f20d84f7d4fb934fe549a6141cbb0c7ae6",
+  "baseline_sha256": "6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2",
+  "hypothesis": "Adding one T1 prefetch at byte512 of each existing changed threat/pawn-pair row hint on the automatic AVX-512 path may start its second512-byte tile sooner. The profile identifies indexed updates as expensive, but establishes no cache-stall cause; this is a speculative engineering policy, not novelty or strength.",
+  "implementation": {
+    "feature": "midpoint-prefetch, default-off; forwarded by aster-engine",
+    "policy": "Keep the existing base-row T1 prefetch in features::prefetch_row_at. Only with midpoint-prefetch compiled and kernels::level()==LEVEL_AVX512, issue exactly one additional same-hint prefetch at base.wrapping_add(index*1024).wrapping_add(512), under the existing nonnull guard. Preserve all indices including existing sentinel handling, weight data, arithmetic, accumulator loops and search. No alternative hints/distances, added piece-square prefetch or fusion.",
+    "scope": [
+      "crates/aster-core/Cargo.toml",
+      "crates/engine/Cargo.toml",
+      "crates/aster-core/src/nnue/features.rs",
+      ".github/workflows/verify.yml"
+    ],
+    "build": "Rust1.99.1 release locked; existing x86-64-v3 flags; no PGO/instrumentation/debug overrides; separate target directory; retain production6b unchanged. Freeze baseline before implementation and candidate before queries."
+  },
+  "playing_inputs": [
+    {
+      "path": "Cargo.toml",
+      "sha256": "ac3533624306bdc30a69960d0514a528e0221987ea76eafbdceb951db7dfcf84"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "11919d78a85470d26ea78091dbf4805913f711a91a8e0c985ac7c29eecf4ffc8"
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "sha256": "d8c420f9c9a2fc00c09cf07b7bb570c92a09137ef1559cb9ef5b12c76f7557cc"
+    },
+    {
+      "path": ".cargo/config.toml",
+      "sha256": "29424c07f5532b9cda675d89ced5f85c93b9638586221e432496d75cd6566b06"
+    },
+    {
+      "path": "crates/aster-core/AUTHORS",
+      "sha256": "59c7a457f0665f26453ad90f474db7cd328f0983a7e8031cded5d6f25e1a1eb6"
+    },
+    {
+      "path": "crates/aster-core/build.rs",
+      "sha256": "9cbfe4f3d97d39f068c826caf640758b6cc0faff58a9877fddb186abdaabc215"
+    },
+    {
+      "path": "crates/aster-core/Cargo.toml",
+      "sha256": "f2a227f2507ef24743b386fb1317075ed45915238e133b45d294a4d5fd3d24d2"
+    },
+    {
+      "path": "crates/aster-core/Copying.txt",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "crates/aster-core/README.md",
+      "sha256": "0eb47b04286d9d7b0f40209a14199278355529f21a5cde8b3812d0e3398569da"
+    },
+    {
+      "path": "crates/aster-core/src/bitboard.rs",
+      "sha256": "b7786cfac62c294b8389bc2566d4a749499e047679ecd84df9a37da393018a46"
+    },
+    {
+      "path": "crates/aster-core/src/bitboard.rs.license",
+      "sha256": "5256f7daa93680ae6f5d5aaf789e68d4432406c1e974fb0ad0c946d7fffcaa54"
+    },
+    {
+      "path": "crates/aster-core/src/disagreement.rs",
+      "sha256": "46a79843bebedb29074f08c0b380970fb263074e08c16b8399775a46b3ec64c4"
+    },
+    {
+      "path": "crates/aster-core/src/evaluation_risk.rs",
+      "sha256": "201f1ea1002d72cad7061f1a3ce75ae3ea7ee8541c3c6a6e5169faecb5c12fc7"
+    },
+    {
+      "path": "crates/aster-core/src/history.rs",
+      "sha256": "843961fccdd08943980d4bbd71f2ce2b46e07e09a6287e339df0e5409eb81024"
+    },
+    {
+      "path": "crates/aster-core/src/history.rs.license",
+      "sha256": "631171ad478cb43cfbaeea61317dc7c2ca285fce28a7c859371dffb125047c68"
+    },
+    {
+      "path": "crates/aster-core/src/lib.rs",
+      "sha256": "6e2d0cdbdcc589d9f6ca71140c54ec5a00993098a5d1c791617247aa3cd1f1d4"
+    },
+    {
+      "path": "crates/aster-core/src/lib.rs.license",
+      "sha256": "7b33002f284ab76fb429f3919bbd9d2d2647880fee8ac5be89978e57e6be7983"
+    },
+    {
+      "path": "crates/aster-core/src/main.rs",
+      "sha256": "2ebc9a1110512a5e2b5b521eb452b2623160e0d54607d9d13da7e532c917e8ee"
+    },
+    {
+      "path": "crates/aster-core/src/main.rs.license",
+      "sha256": "a666ca6e8f37095e343ff540fb41536e29e75c7a2a0adb42b5a0b03669a911b1"
+    },
+    {
+      "path": "crates/aster-core/src/movegen.rs",
+      "sha256": "c2a0783424128e49eba2ed8439b97f9e091052087e7db5e23a4a95798f5feb42"
+    },
+    {
+      "path": "crates/aster-core/src/movegen.rs.license",
+      "sha256": "f7d77536628cc218cd29630815f8c0d9b3e7f6cb912c3a0e9c6bdf24b71ee509"
+    },
+    {
+      "path": "crates/aster-core/src/movepick.rs",
+      "sha256": "acf5e704b115ca010bec91a3f61a4e28149107c70e32374db28be2d530077361"
+    },
+    {
+      "path": "crates/aster-core/src/movepick.rs.license",
+      "sha256": "66e01f88d40ead1a3ccc01e1b1a8418c221c0a139edb047c253f4b882f5899d8"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/accumulator.rs",
+      "sha256": "db64ee0300f080ddfa2e1c482af3faebdd1c560d7bacc362dc8ef2657419eb21"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/accumulator.rs.license",
+      "sha256": "4ca4297d836bc3b14d39b1380956767bdb35c2d9f747eac7f16b287ea52a77cc"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/aligned.rs",
+      "sha256": "c1bab1727299aa595b9d222329b95306793f27c4a28c2f62da98cf4ed0fd5b09"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/features.rs",
+      "sha256": "fd73cfbe5df4d29353f367ddda362837f5d477d47e5750e98f0c2ad13a735e5f"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/features.rs.license",
+      "sha256": "f0fb744a720e58289579538eefa541188573f0a9db676023f5481636244b52f6"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/kernels.rs",
+      "sha256": "cbace96f9c4a95cada5c96ea4b8cd912bf74ab30279ce1aa54634bafbdab3a6a"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/kernels.rs.license",
+      "sha256": "e4ed6d953c7f3ae90774e2caed15f33a0789cbc005a4d0108d2198c6248faaea"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/mod.rs",
+      "sha256": "b6ad6ac2d24c44293faecdbb14fd100aedb54eaf4f808d700cb1c17bcc99b58a"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/mod.rs.license",
+      "sha256": "8a1c5f0b6dbceb103b1cf36eb511d5de0ed56afbf8a899ee3489b2b6d5d37f18"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/network.rs",
+      "sha256": "871251e2176386669755463aa9de7f4558e1b79f48676c88d16678893e2d5ed6"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/network.rs.license",
+      "sha256": "42e358ccbcb20a0cee71aff26e79eb6c5e13ae88214fcc2a668798dddcefa571"
+    },
+    {
+      "path": "crates/aster-core/src/perft.rs",
+      "sha256": "e8b33750b7c24c681e0cfc7f3a5403ce694a3b628520d7f1051a87da76eb5325"
+    },
+    {
+      "path": "crates/aster-core/src/perft.rs.license",
+      "sha256": "46d257484ee4f8d9ae2048ec37dde08228ceebe2f27dec66280a6b234d51982d"
+    },
+    {
+      "path": "crates/aster-core/src/position.rs",
+      "sha256": "1f66270ffc7608cb42d2c2e6489d5a88cfa5011876d8573b9d4a4a2e6e40336c"
+    },
+    {
+      "path": "crates/aster-core/src/position.rs.license",
+      "sha256": "a8b474b9110a086e2f02dd92061d2587ab29f6c02e788ba14c16eee1e4c0f381"
+    },
+    {
+      "path": "crates/aster-core/src/prof.rs",
+      "sha256": "5922c14d28580b76fdaf7fcd381374c46d4192b8bbdb5c507a8ab1aa8a4fd8d6"
+    },
+    {
+      "path": "crates/aster-core/src/sampler.rs",
+      "sha256": "77d6d8eb6d4aced90bb8ff02b6ba5efe2d900bd880820b91320a09a738ea64e8"
+    },
+    {
+      "path": "crates/aster-core/src/search.rs",
+      "sha256": "0385e8b78ab7723c99bc760a50b4e2684214dae4029130711c48547dabffedf2"
+    },
+    {
+      "path": "crates/aster-core/src/search.rs.license",
+      "sha256": "374e2163481e03a4176708029991362ffb172f50e6ee6ab79bacf9c88865503a"
+    },
+    {
+      "path": "crates/aster-core/src/speedtest_positions.rs",
+      "sha256": "449647a0896bbfa107f6beaa72af7ff0f297b96d8341f124ee7e7549c68301c2"
+    },
+    {
+      "path": "crates/aster-core/src/speedtest_positions.rs.license",
+      "sha256": "990d44aa8c2149c63ee6c5c6b58b63c5e7ad7d1af2afb4b925d2451fac400b52"
+    },
+    {
+      "path": "crates/aster-core/src/syzygy.rs",
+      "sha256": "9ba3b95bb9743ec96fe5f773f41ca48fae84fcafc562a6b95886b7138aa1eda5"
+    },
+    {
+      "path": "crates/aster-core/src/syzygy.rs.license",
+      "sha256": "774770457cae71c9c332d17f0b2f65995558db75dbaaf3664b6169dc45bafd0b"
+    },
+    {
+      "path": "crates/aster-core/src/timeman.rs",
+      "sha256": "352f5f9bf023de9c867756045efa3dd404edf9209808a194a6b72787006743e8"
+    },
+    {
+      "path": "crates/aster-core/src/timeman.rs.license",
+      "sha256": "25adee76d6928eb68121c3c5bcc94b3320b5b8c39c1e08feffa90cb221fb74e0"
+    },
+    {
+      "path": "crates/aster-core/src/trace.rs",
+      "sha256": "9775667ac23f4d863b603e2e2541028878017718cc43eca3a6a15edacb13b577"
+    },
+    {
+      "path": "crates/aster-core/src/tt/tests.rs",
+      "sha256": "5ff13ef71ecc51757cef8e33062b2d357baa44d7402978e657042ca083cac70b"
+    },
+    {
+      "path": "crates/aster-core/src/tt.rs",
+      "sha256": "7e999a6c517b293d8817c4d417fb9aa7f787c5967506150365e188f50f070060"
+    },
+    {
+      "path": "crates/aster-core/src/tt.rs.license",
+      "sha256": "b6fa11f1fa30c1c23f63f2fe16ef833948b810d94b98cd5ee60cccef0316e5aa"
+    },
+    {
+      "path": "crates/aster-core/src/types.rs",
+      "sha256": "1a5d8026f00f64ec96dfe66f4de2a8ace3a67c7a989154d4ab09fedfb13a440e"
+    },
+    {
+      "path": "crates/aster-core/src/types.rs.license",
+      "sha256": "41d0b3b223077663b343ab36c44e292c87f0cd92e06bdcab4039ef94ff06a72e"
+    },
+    {
+      "path": "crates/aster-core/src/uci.rs",
+      "sha256": "25d5bdf2d140bc267f7dc9005a2639d76350992520347c3509618f8d9b878e7a"
+    },
+    {
+      "path": "crates/aster-core/src/uci.rs.license",
+      "sha256": "d00bcd70d5e6a64c3235f6480159e4c3f26fd75ed5034483454e350e93ba8a14"
+    },
+    {
+      "path": "crates/aster-core/tests/port.rs",
+      "sha256": "25ef1032e2aabfe63df73bb345095e9b2bfedb4a3be089e7b864a61ce7b1db14"
+    },
+    {
+      "path": "crates/aster-core/tests/port.rs.license",
+      "sha256": "a85e94d0c2ac5754c05d992290473e4c455f440a7f5d8b5d8dbc72e24dffbdb4"
+    },
+    {
+      "path": "crates/aster-core/UPSTREAM.json",
+      "sha256": "6832819ccf6e6f2c94125755d7fea2b43eff8fa7e944ed8b765a674ca37d0b05"
+    }
+  ],
+  "generation": {
+    "positions": 80,
+    "attempts": 8192,
+    "plies": 20,
+    "seed": 20261020017,
+    "nodes": 2048,
+    "verify_nodes": 20000,
+    "max_cp": 80,
+    "excluded_suites": [
+      {
+        "path": "tests/fixtures/aster-disagreement-100ms-v1.json",
+        "sha256": "ccfdf675f11ef770e2d957b23dd6b11220e7613d25f85fa47049276b59467501"
+      },
+      {
+        "path": "tests/fixtures/aster-disagreement-30ms-v1.json",
+        "sha256": "6f4c5f2e7ccfa9917d940e71b500e5f4c641992c90a1f3bc39d33cd37a84ad32"
+      },
+      {
+        "path": "tests/fixtures/aster-disagreement-parent-v1.json",
+        "sha256": "7775d7f888719c139eec40d080ad021bae8c9ae05923a4a4a2fd53fd4010cbe3"
+      },
+      {
+        "path": "tests/fixtures/aster-evaluation-risk-100ms-v1.json",
+        "sha256": "d59cdcb7621cf8f3db53d3f91a3d745169fc5029e8aecf5c4a545f279de31cc5"
+      },
+      {
+        "path": "tests/fixtures/aster-evaluation-risk-30ms-v1.json",
+        "sha256": "fd37fb8ed08039c56dbd280e7ca100fa578220b85e16d7c56a7eb332b90fe601"
+      },
+      {
+        "path": "tests/fixtures/aster-evaluation-risk-parent-v1.json",
+        "sha256": "a4c465b2614486828f9f80ce4e6461a8f4389cc154cc17ef4d909933c284391d"
+      },
+      {
+        "path": "tests/fixtures/aster-fused-input-100ms-v1.json",
+        "sha256": "b436d4188725fde8c86b8f0aa7c260bd1807097713261cbdd031009d81577796"
+      },
+      {
+        "path": "tests/fixtures/aster-fused-input-30ms-v1.json",
+        "sha256": "61c9348f957b113191b736c2642db2131c432c3baadca003e81613f91b0eaedd"
+      },
+      {
+        "path": "tests/fixtures/aster-fused-input-parent-v1.json",
+        "sha256": "63a8e9fd60e2017fd1652add6c0c30586657a9cb6534547ced77f8e5d2789746"
+      },
+      {
+        "path": "tests/fixtures/aster-fused-input-timing-v1.json",
+        "sha256": "eca95fa33826994b5b251d2038517538665946fa81fa04a7f8ad5d17bdbe746d"
+      },
+      {
+        "path": "tests/fixtures/aster-indexed-accumulators-auto-v1.json",
+        "sha256": "0638594100e9d035197b970f9c3fbbfbdf327358a25fcd823e0e54f35c328b3c"
+      },
+      {
+        "path": "tests/fixtures/aster-indexed-accumulators-avx2-v1.json",
+        "sha256": "c9c0e0ae933e1a24d5153ae8e9be3d23d69d530775ab73f0ba9f95326a364300"
+      },
+      {
+        "path": "tests/fixtures/aster-indexed-accumulators-parent-v1.json",
+        "sha256": "d918b14c24cdebf184a4f59371508be7b3a8eaa4681d55649d7f6e6be5d1ba02"
+      },
+      {
+        "path": "tests/fixtures/aster-pgo-100ms-v1.json",
+        "sha256": "e799c6b7676cf0144e8e3d523c5fd630a25487b715e90d154759029abfd9dc70"
+      },
+      {
+        "path": "tests/fixtures/aster-pgo-30ms-v1.json",
+        "sha256": "6a9a80128801d5b89001d773efd976b28d47ee8c06c7ae28f27975473fbf601a"
+      },
+      {
+        "path": "tests/fixtures/aster-pgo-parent-v1.json",
+        "sha256": "2ef58680178109740b83e88db3fd03456171a2f13a967bf3932dc934f6665946"
+      },
+      {
+        "path": "tests/fixtures/aster-pgo-timing-v1.json",
+        "sha256": "53142456f950e4e0567df5801e7212c720c59443a37f145e671f4f175b547406"
+      },
+      {
+        "path": "tests/fixtures/capacity-classical-100ms-v1.json",
+        "sha256": "dcbebc58b5c33ec6b9e502031dc4cdc7190d76dbc222ded241970136d958b3f5"
+      },
+      {
+        "path": "tests/fixtures/capacity-classical-30ms-v1.json",
+        "sha256": "01e773465168914fc65c45ac13df8db197f8e0cb4e37d4a25557e4f19701bdf8"
+      },
+      {
+        "path": "tests/fixtures/capacity-control-30ms-v1.json",
+        "sha256": "76c1fefa9817b587f355cccd4dfe763ed5f435b6fc11b57fcee5eb991e2cdd30"
+      },
+      {
+        "path": "tests/fixtures/capacity-parent-v1.json",
+        "sha256": "81e388417a56d17ce865237647a02506e9cc05677232c6bcbe73b1f8d2f7d39b"
+      },
+      {
+        "path": "tests/fixtures/deep-turn-classical-100ms-v1.json",
+        "sha256": "b8c5da7d9648fd72ccf674ca694848f3bc526776b738087b31e3e82a6453165c"
+      },
+      {
+        "path": "tests/fixtures/deep-turn-classical-30ms-v1.json",
+        "sha256": "1ffa275e525d665757213fa34a93aa4bed17982fd844d444299b01d556fd0255"
+      },
+      {
+        "path": "tests/fixtures/deep-turn-control-30ms-v1.json",
+        "sha256": "99889d267db0879be7131c4039dd80d258ad2221fe54222133dd32709b595e03"
+      },
+      {
+        "path": "tests/fixtures/deep-turn-parent-v1.json",
+        "sha256": "5addfa8b6a03c8fd844ff43ec8c8dc71f6c2d3184460d919fc7dee2676865237"
+      },
+      {
+        "path": "tests/fixtures/iir-100ms-v1.json",
+        "sha256": "0b2e40c88ada4064628909ddba0293ce3594774520eaffae50daafcca41ecace"
+      },
+      {
+        "path": "tests/fixtures/iir-30ms-v1.json",
+        "sha256": "de119d1f9630b753d18a634031c90cefac64853d43e11e386aee535b53bf4307"
+      },
+      {
+        "path": "tests/fixtures/iir-behavior-v1.json",
+        "sha256": "b3680be4939c0e82ddb125c5a70a90b8c75312440333e9bc0b8d443f51fc0d15"
+      },
+      {
+        "path": "tests/fixtures/iir-parent-v1.json",
+        "sha256": "46868852f9af1c2b95bc9bfaec9b68bb0b45fd916d0bfc27f792fe9596855baa"
+      },
+      {
+        "path": "tests/fixtures/iir-rating-v1.json",
+        "sha256": "ce491f6df3345245f016f9b1b8f7658769da750a0826a422f4732b16eaf2653f"
+      },
+      {
+        "path": "tests/fixtures/kpk-setups-v1.json",
+        "sha256": "550764811ecbb1761c70a30a82c941122450839ef442f56a8f5a5a67ed96dd13"
+      },
+      {
+        "path": "tests/fixtures/lazy-order-100ms-v1.json",
+        "sha256": "12ed5a4dd3688e730ba6224b8c88e00bc5b016975aa8dd08e1e918bbb9f7be1e"
+      },
+      {
+        "path": "tests/fixtures/lazy-order-30ms-v1.json",
+        "sha256": "e6f6a4f084d0c06ec7a1bcc8de86a9d13b3fa0faa3053208c3c86359e62ba423"
+      },
+      {
+        "path": "tests/fixtures/lazy-order-behavior-v1.json",
+        "sha256": "00a8de1225c4a1e6b6f0b943c6d1d12565900eea579aa6f644d5a2b347e9f919"
+      },
+      {
+        "path": "tests/fixtures/lazy-order-parent-v1.json",
+        "sha256": "d8ac1c505d3c46c819b87da63fe8308cebd18a234a1889a9215fbc2e75101f3a"
+      },
+      {
+        "path": "tests/fixtures/lazy-order-rating-v1.json",
+        "sha256": "9c7886ac0b66b35fd6cc74c2937bb86ba5506c0363568e87cf769be6bca46652"
+      },
+      {
+        "path": "tests/fixtures/mate-proof-match-v1.json",
+        "sha256": "14286109ef669ec3abab5d4bfeb8f5de1ca6468969b72b8fd0cd658ba94edc0a"
+      },
+      {
+        "path": "tests/fixtures/mate-proof-parent-v1.json",
+        "sha256": "85553f4ff2dcc2ce9896e002ce5730d4ca54061c82f1032bdb47f0c83ae750c4"
+      },
+      {
+        "path": "tests/fixtures/openings-v1.json",
+        "sha256": "a864be58037a8c81a2879b8f5b8b8ede872c7d12f17937f9ef82e3f6cc7f35de"
+      },
+      {
+        "path": "tests/fixtures/openings-v2.json",
+        "sha256": "cdcc99af780b795546a22e84b2557bd20168097c2694cc9b12ce2e242f74bc25"
+      },
+      {
+        "path": "tests/fixtures/openings-v3.json",
+        "sha256": "b2c84b63c566712b33102e1a5f246d47a010a0341f8396c5e036937c74e241f3"
+      },
+      {
+        "path": "tests/fixtures/openings-v4.json",
+        "sha256": "5d2b8f4aca942c8a1640635e4a8d26d4474d1cdb7598a565f4c1b88e4b06188d"
+      },
+      {
+        "path": "tests/fixtures/openings-v5.json",
+        "sha256": "e63c68d4024428bef2f84a4289db06c4aee70e60aa9f081cf437d2a6d237c46e"
+      },
+      {
+        "path": "tests/fixtures/phase-classical-100ms-v1.json",
+        "sha256": "3b01d69ec7c31e2e5991b81ebb5860024b4393cb42d91c8a84db69ff20dacffc"
+      },
+      {
+        "path": "tests/fixtures/phase-classical-30ms-v1.json",
+        "sha256": "3efc264b68683bd961a269679ecb493ccd53888651e5a767b34b66a7c0f5e3e1"
+      },
+      {
+        "path": "tests/fixtures/phase-control-30ms-v1.json",
+        "sha256": "f29fbb72d1d3696bff82ff4630bc51b37d6148af3350e0b265509e96aab30758"
+      },
+      {
+        "path": "tests/fixtures/phase-parent-v1.json",
+        "sha256": "35fd8dc040ab40538966d73d0f9c54d38ce490175e90fba10c9cf4c82363063f"
+      },
+      {
+        "path": "tests/fixtures/q-evasion-100ms-v1.json",
+        "sha256": "9c760e96dc990a5ab465a5bf8eff9971ed8eae9856c76d57b6ca32f2563ba63f"
+      },
+      {
+        "path": "tests/fixtures/q-evasion-30ms-v1.json",
+        "sha256": "940d8217dd7a6a583ddcabfe6edeffcd4769ac7f9118d00f67f081b52f238072"
+      },
+      {
+        "path": "tests/fixtures/q-evasion-behavior-v1.json",
+        "sha256": "02d7afdbe0eb10296d53208cf96f551058d0b3323fe18570dd3cae1706b90e00"
+      },
+      {
+        "path": "tests/fixtures/q-evasion-parent-v1.json",
+        "sha256": "13c3a7a689f83064490766a76d112589ef2098f93a9d92ebbfcee805f1c385f4"
+      },
+      {
+        "path": "tests/fixtures/q-evasion-rating-v1.json",
+        "sha256": "b9d8a21feba1ae6c0390e1fa0dd26e3cf65848f0b2e87fd002ebbe0ef1f626fa"
+      },
+      {
+        "path": "tests/fixtures/rating-confirm-v1.json",
+        "sha256": "1e904d67400433abedb8e48592b4598e8e5ed10ed82b0cdd13025de6eca8615d"
+      },
+      {
+        "path": "tests/fixtures/rating-parent-v1.json",
+        "sha256": "6c4d7453e3572cadf786d81be8ad8b0b85fb9c461d5e93847612959836efb112"
+      },
+      {
+        "path": "tests/fixtures/rating-screen-v1.json",
+        "sha256": "690bacaceff2559200ebb084424de85639cf045c14f094912e18f5b38ba9805f"
+      },
+      {
+        "path": "tests/fixtures/relations-classical-100ms-v1.json",
+        "sha256": "2ded031474bc1542069632721b7ad8ef7807f32c1ad0378cc97438e465f64928"
+      },
+      {
+        "path": "tests/fixtures/relations-classical-30ms-v1.json",
+        "sha256": "63b831b035cfbf5ed44ee4a89e7a374e29cef97918eb8d6e8b2a54893db56478"
+      },
+      {
+        "path": "tests/fixtures/relations-control-30ms-v1.json",
+        "sha256": "9bd295a72aeeecafcf1234f923b27fe958065393a51c1b7331a3c7ea408d3f85"
+      },
+      {
+        "path": "tests/fixtures/relations-parent-v1.json",
+        "sha256": "08d8909b4520243fa3b0f850595957b79087c532607d4c375eeb54eefc3a8a46"
+      },
+      {
+        "path": "tests/fixtures/rust-foundation-original-v1.json",
+        "sha256": "f0ed641ffac5091b4dc75b076f36c2bfbc2e2f670deb8a4e613a1a24823b840f"
+      },
+      {
+        "path": "tests/fixtures/rust-foundation-parent-v1.json",
+        "sha256": "ec2a76dbd775a3fcc94156c36ec0f4762f0dae6146640fe189b1d795632b40c9"
+      },
+      {
+        "path": "tests/fixtures/rust-foundation-stockfish-v1.json",
+        "sha256": "7a4d448a988b4a77856d60102dedf6b5b5681bf6c6acf551239b29e23904bc36"
+      },
+      {
+        "path": "tests/fixtures/rust-hyperion-100ms-v1.json",
+        "sha256": "ee3ef81d4399e94368bcb55af6ac5e0c1b22cf77b04fcdc5ec4302198962932b"
+      },
+      {
+        "path": "tests/fixtures/rust-hyperion-30ms-v1.json",
+        "sha256": "454910c7a5e4265686928739954c6940f4d18e162ea69be98acb4e895878d371"
+      },
+      {
+        "path": "tests/fixtures/rust-hyperion-parent-v1.json",
+        "sha256": "7934709fa40e6eb21372079081fd4b659c25ae55b8cbffeafe4b3126c490261b"
+      },
+      {
+        "path": "tests/fixtures/rust-legal-probe-100ms-v1.json",
+        "sha256": "261eb9d49d5258641ed6b62cda3fb9fad11f47eebe34b4d68e9da99aaaae0c21"
+      },
+      {
+        "path": "tests/fixtures/rust-legal-probe-30ms-v1.json",
+        "sha256": "46e611b01d3fb6c36eada525ae7c42872215528ad6ae2c8609d30482d009bd3f"
+      },
+      {
+        "path": "tests/fixtures/rust-legal-probe-benchmark-v1.json",
+        "sha256": "a3560bd578f730f8c225129e3c6b40d6a65e2b84f3a6b74b38962591ccaa05a1"
+      },
+      {
+        "path": "tests/fixtures/rust-legal-probe-parent-v1.json",
+        "sha256": "af5585d0312a4f16346b1254fe4570a40938ea13e0897504ad0592543d7d6435"
+      },
+      {
+        "path": "tests/fixtures/rust-safety-v2.json",
+        "sha256": "6e8185bf92824481e77f7ab1b3e58d92e10f1a96a1f7f6a35c7daa111ba453b4"
+      },
+      {
+        "path": "tests/fixtures/stable-endgame-classical-100ms-v1.json",
+        "sha256": "4682375ee99e6043c9a2face29f6ae3bd9bc46fa66c3978005ac09f09d32afe6"
+      },
+      {
+        "path": "tests/fixtures/stable-endgame-classical-30ms-v1.json",
+        "sha256": "03139c4b9c389d6a607425a1fa64a3ddae9d92824fbdab765fd1138a2440f848"
+      },
+      {
+        "path": "tests/fixtures/stable-endgame-control-30ms-v1.json",
+        "sha256": "19e001548702c754b8f97e37b7274b065880bc279c968954219bf356111be8fc"
+      },
+      {
+        "path": "tests/fixtures/stable-endgame-parent-v1.json",
+        "sha256": "ee8a6137df3a3a0da43dcf783565e974483101bb41aeb956d52772f39fc06a19"
+      }
+    ],
+    "generator": "scripts/generate_openings.py",
+    "generator_sha256": "67426a622fa8ae3d70088633833cd993b074c04547e5938012cb782788c23bed",
+    "teacher_manifest": "tools/stockfish/manifest.json",
+    "teacher_manifest_sha256": "e584d21a94ee3bbde60353857ae6f3ef01f9a3483299adef072c72f08a6f017f",
+    "teacher": {
+      "tag": "sf_19",
+      "release_url": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_19",
+      "asset_url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_19/stockfish-windows-x86-64-universal.zip",
+      "archive_sha256": "3c8bf1f9ea66a09350a40df4f632288285ac206d99f33ab5842c408fc30b48a7",
+      "executable": "tools\\stockfish\\sf_19\\stockfish\\stockfish-windows-x86-64-universal.exe",
+      "executable_sha256": "45bc8e4969147db9c2eb533810637994619bff0eacc81ccfd9854394901bcbd0",
+      "uci_name": "Stockfish 19"
+    }
+  },
+  "validation": {
+    "parent": "tests/fixtures/aster-midpoint-prefetch-parent-v1.json",
+    "timing_range": [
+      0,
+      16
+    ],
+    "exact_depth": 9,
+    "exact_positions": 80,
+    "controls": {
+      "30ms": {
+        "range": [
+          16,
+          48
+        ],
+        "movetime": 0.03,
+        "pairs": 32
+      },
+      "100ms": {
+        "range": [
+          48,
+          80
+        ],
+        "movetime": 0.1,
+        "pairs": 32
+      }
+    },
+    "tactics_nodes": 20000,
+    "tactics_suites": [
+      "tactics-v1",
+      "tactics-quiet-v1",
+      "endgames-v1"
+    ]
+  },
+  "timing": {
+    "depth": 13,
+    "replicates": {
+      "auto": 12,
+      "avx2": 8,
+      "scalar": 8
+    },
+    "mode_order": [
+      "auto",
+      "avx2",
+      "scalar"
+    ],
+    "warm": "Exactly one depth8 startpos search per engine/mode, baseline then candidate, excluded from totals. Each role has one persistent process per mode, Threads1 Hash64, every measured root new game with full legal history.",
+    "ordering": "For batch b traverse root indices0..15 if b even,15..0 if b odd. For root ordinal j within that traversal, run baseline then candidate if (b+j)%2==0, otherwise candidate then baseline. Thus every batch has8AB and8BA; each root has equal first/second slots across even replication counts. Order is per root, not per whole batch.",
+    "schedule": [
+      {
+        "mode": "auto",
+        "batch": 0,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 0,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 0,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 0,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 0,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 0,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 0,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 0,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 0,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 0,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 0,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 0,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 0,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 0,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 0,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 0,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 1,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 1,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 1,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 1,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 1,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 1,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 1,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 1,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 1,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 1,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 1,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 1,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 1,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 1,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 1,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 1,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 2,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 2,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 2,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 2,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 2,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 2,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 2,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 2,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 2,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 2,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 2,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 2,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 2,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 2,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 2,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 2,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 3,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 3,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 3,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 3,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 3,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 3,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 3,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 3,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 3,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 3,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 3,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 3,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 3,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 3,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 3,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 3,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 4,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 4,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 4,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 4,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 4,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 4,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 4,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 4,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 4,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 4,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 4,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 4,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 4,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 4,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 4,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 4,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 5,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 5,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 5,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 5,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 5,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 5,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 5,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 5,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 5,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 5,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 5,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 5,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 5,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 5,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 5,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 5,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 6,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 6,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 6,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 6,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 6,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 6,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 6,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 6,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 6,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 6,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 6,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 6,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 6,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 6,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 6,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 6,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 7,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 7,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 7,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 7,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 7,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 7,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 7,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 7,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 7,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 7,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 7,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 7,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 7,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 7,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 7,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 7,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 8,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 8,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 8,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 8,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 8,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 8,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 8,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 8,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 8,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 8,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 8,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 8,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 8,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 8,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 8,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 8,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 9,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 9,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 9,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 9,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 9,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 9,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 9,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 9,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 9,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 9,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 9,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 9,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 9,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 9,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 9,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 9,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 10,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 10,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 10,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 10,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 10,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 10,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 10,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 10,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 10,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 10,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 10,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 10,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 10,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 10,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 10,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 10,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 11,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 11,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 11,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 11,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 11,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 11,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 11,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 11,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 11,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 11,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 11,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 11,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 11,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 11,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 11,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "auto",
+        "batch": 11,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 0,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 0,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 0,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 0,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 0,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 0,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 0,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 0,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 0,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 0,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 0,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 0,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 0,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 0,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 0,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 0,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 1,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 1,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 1,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 1,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 1,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 1,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 1,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 1,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 1,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 1,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 1,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 1,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 1,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 1,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 1,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 1,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 2,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 2,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 2,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 2,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 2,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 2,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 2,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 2,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 2,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 2,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 2,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 2,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 2,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 2,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 2,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 2,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 3,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 3,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 3,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 3,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 3,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 3,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 3,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 3,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 3,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 3,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 3,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 3,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 3,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 3,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 3,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 3,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 4,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 4,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 4,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 4,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 4,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 4,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 4,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 4,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 4,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 4,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 4,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 4,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 4,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 4,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 4,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 4,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 5,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 5,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 5,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 5,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 5,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 5,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 5,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 5,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 5,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 5,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 5,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 5,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 5,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 5,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 5,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 5,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 6,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 6,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 6,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 6,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 6,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 6,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 6,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 6,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 6,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 6,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 6,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 6,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 6,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 6,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 6,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 6,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 7,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 7,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 7,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 7,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 7,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 7,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 7,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 7,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 7,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 7,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 7,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 7,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 7,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 7,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 7,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "avx2",
+        "batch": 7,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 0,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 0,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 0,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 0,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 0,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 0,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 0,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 0,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 0,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 0,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 0,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 0,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 0,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 0,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 0,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 0,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 1,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 1,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 1,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 1,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 1,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 1,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 1,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 1,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 1,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 1,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 1,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 1,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 1,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 1,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 1,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 1,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 2,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 2,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 2,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 2,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 2,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 2,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 2,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 2,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 2,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 2,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 2,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 2,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 2,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 2,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 2,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 2,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 3,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 3,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 3,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 3,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 3,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 3,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 3,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 3,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 3,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 3,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 3,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 3,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 3,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 3,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 3,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 3,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 4,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 4,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 4,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 4,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 4,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 4,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 4,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 4,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 4,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 4,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 4,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 4,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 4,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 4,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 4,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 4,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 5,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 5,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 5,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 5,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 5,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 5,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 5,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 5,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 5,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 5,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 5,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 5,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 5,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 5,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 5,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 5,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 6,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 6,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 6,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 6,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 6,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 6,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 6,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 6,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 6,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 6,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 6,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 6,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 6,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 6,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 6,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 6,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 7,
+        "root": 15,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 7,
+        "root": 14,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 7,
+        "root": 13,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 7,
+        "root": 12,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 7,
+        "root": 11,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 7,
+        "root": 10,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 7,
+        "root": 9,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 7,
+        "root": 8,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 7,
+        "root": 7,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 7,
+        "root": 6,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 7,
+        "root": 5,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 7,
+        "root": 4,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 7,
+        "root": 3,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 7,
+        "root": 2,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 7,
+        "root": 1,
+        "roles": [
+          "candidate",
+          "baseline"
+        ]
+      },
+      {
+        "mode": "scalar",
+        "batch": 7,
+        "root": 0,
+        "roles": [
+          "baseline",
+          "candidate"
+        ]
+      }
+    ],
+    "bootstrap_samples": 20000,
+    "seed": 20261020018,
+    "auto_max_median_ratio": 0.99,
+    "auto_max_upper95_ratio": 1.0,
+    "other_max_median_ratio": 1.01,
+    "other_max_upper95_ratio": 1.03,
+    "metric": "Median candidate/baseline total wall elapsed per16root batch, protocol/reset included; whole-batch bootstrap95%, matched roots. Desktop not affinity-isolated; no Elo from timing."
+  },
+  "resources": {
+    "cpu": "Ryzen5 7600X, Windows",
+    "threads_per_engine": 1,
+    "hash_mib": 64,
+    "active_searches": 1,
+    "per_engine_timeout_seconds": 120,
+    "per_build_timeout_seconds": 900,
+    "no_overlapping_local_builds_matches_or_studies": true
+  },
+  "gates": {
+    "before_timing": "Feature and default debug/release native tests; source names/format; canonical1559611 and all51normalized traces all3modes; all80freshdepth9roots eachmode; unchanged three20k-node tactics suites; independent legality/perft/edges, actualHTTP/SSEplay, proof verification and SMPready/stop/undo; exact source/binary preservation. Existing arithmetic tests suffice: only non-dereferencing hints change, no new arithmetic.",
+    "conditional_matches": "Only after all correctness/exactness/timing gates pass, complete32pairs30ms then32pairs100ms on disjoint frozen ranges, color swapped,1thread64MiB,max400plies,no adjudication. Persist journals/PGNs; complete/audit all128games once started even if firstcontrol fails. No unresolved/forfeits, reject engineering regression if whole-opening-family95% upper score bound below50%;20000bootstrapseed20261020018. Not an Elo-gain claim.",
+    "adoption": "All gates and Windows/Linux CI must pass before default adoption. No adoption while checks pending. A timing failure prospectively skips all64pairs and restores original live engine/Cargo/workflow source after archiving candidate.",
+    "strength": "No strength or novelty claim from speed. Separate predeclared current-reference multi-control confirmation and exact-binary Elo calibration remain required."
+  },
+  "failure_policy": "One policy and attempt only; no hint/distance variants, retuning, replacement timing, extra games or threshold changes. Stop candidate on any unexpected exactness/timeout/error; preserve partial evidence. No repairs after timing starts. Correctness-only bug repair before timing must preserve first attempt and be separately recorded, maximum2. Existing failed experiments remain closed."
+}
