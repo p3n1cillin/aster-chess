@@ -44,8 +44,9 @@ case "$mode" in
     # Results are shipped only from worker branches (testnet/<label>-<worker>).
     if git symbolic-ref --short HEAD 2>/dev/null | grep -q '^testnet/'; then
       git add -f "$log" "$cmdfile" >/dev/null 2>&1
-      git -c user.name="Aster testnet" -c user.email="testnet@users.noreply.github.com" \
-        commit -q -m "testnet: results $(basename "$log")" >/dev/null 2>&1
+      # The worker's configured identity: some containers reject commits by
+      # unverified authors.
+      git commit -q -m "testnet: results $(basename "$log")" >/dev/null 2>&1
       for delay in 2 4 8 16; do
         git push -q -u origin HEAD >/dev/null 2>&1 && break
         sleep $delay
