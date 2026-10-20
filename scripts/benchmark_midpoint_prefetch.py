@@ -98,6 +98,7 @@ def main():
                     for move in entries[specification['root']]['moves'].split():
                         board.push_uci(move)
                     observation = dict(specification, runs={})
+                    report['observations'].append(observation)
                     for role in specification['roles']:
                         report['active_query'] = dict(specification, role=role)
                         save()
@@ -115,10 +116,10 @@ def main():
                         assert behavior['depth'] == plan['timing']['depth']
                         reference.setdefault(specification['root'], behavior)
                         assert behavior == reference[specification['root']], (mode, role, specification['root'])
-                        observation['runs'][role] = dict(elapsed_ns=elapsed, behavior=behavior)
+                        observation['runs'][role] = dict(began_ns=began, ended_ns=began + elapsed,
+                                                        elapsed_ns=elapsed, behavior=behavior)
                         report['active_query'] = None
-                    report['observations'].append(observation)
-                    save()
+                        save()
                 batches = []
                 for batch in range(plan['timing']['replicates'][mode]):
                     observations = [o for o in report['observations'] if o['mode'] == mode and o['batch'] == batch]
