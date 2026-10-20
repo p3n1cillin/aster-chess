@@ -1,0 +1,140 @@
+{
+  "created_utc": "2026-10-20T15:40:54.739849+00:00",
+  "files": [
+    {
+      "role": "production",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\target\\release\\aster.exe",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2\\aster.exe",
+      "sha256": "6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2",
+      "bytes": 170488832
+    },
+    {
+      "role": "debug_control",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\debug_control\\aster-core.exe",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\b403fa67b650c8fd6ae081127db6bda1a5498716169dc382e870c6f80d804311\\aster-core.exe",
+      "sha256": "b403fa67b650c8fd6ae081127db6bda1a5498716169dc382e870c6f80d804311",
+      "bytes": 113832960
+    },
+    {
+      "role": "debug_control",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\debug_control\\aster_core.pdb",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\b403fa67b650c8fd6ae081127db6bda1a5498716169dc382e870c6f80d804311\\aster_core.pdb",
+      "sha256": "63109cd12c820cf720b0110646f8438512bf1e4c480f721c1e3eff128b891f0a",
+      "bytes": 4812800
+    },
+    {
+      "role": "debug_control",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\debug_control\\link.map",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\b403fa67b650c8fd6ae081127db6bda1a5498716169dc382e870c6f80d804311\\link.map",
+      "sha256": "733275fbc29cd73e462fb5c41f8ff4406fef1f3e10bf13a752410a52c9ee6b27",
+      "bytes": 495921
+    },
+    {
+      "role": "debug_control",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\debug_control\\pdb-summary.txt",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\b403fa67b650c8fd6ae081127db6bda1a5498716169dc382e870c6f80d804311\\pdb-summary.txt",
+      "sha256": "79ec945a352b9b38ca645bd2540a2d73d2b794b59a56d371878b4520a76bb876",
+      "bytes": 491
+    },
+    {
+      "role": "debug_control",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\debug_control\\build.stdout.txt",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\b403fa67b650c8fd6ae081127db6bda1a5498716169dc382e870c6f80d804311\\build.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "role": "debug_control",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\debug_control\\build.stderr.txt",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\b403fa67b650c8fd6ae081127db6bda1a5498716169dc382e870c6f80d804311\\build.stderr.txt",
+      "sha256": "97ee23601eeabe143503b8fe1705cbf4201d26e832f06f8640fd717205559cdb",
+      "bytes": 493
+    },
+    {
+      "role": "counters",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\counters\\aster-core.exe",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\aec220aa1f7d1c7e883cc27d7f0bffbbac7e7fb9153b6ec1d70297e12fe9bde4\\aster-core.exe",
+      "sha256": "aec220aa1f7d1c7e883cc27d7f0bffbbac7e7fb9153b6ec1d70297e12fe9bde4",
+      "bytes": 113835008
+    },
+    {
+      "role": "counters",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\counters\\aster_core.pdb",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\aec220aa1f7d1c7e883cc27d7f0bffbbac7e7fb9153b6ec1d70297e12fe9bde4\\aster_core.pdb",
+      "sha256": "8ddb4dfc8eec7cef6b4b26a791f4ab80ed734b80c32ac8647d9b761f89dc6fd9",
+      "bytes": 4829184
+    },
+    {
+      "role": "counters",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\counters\\link.map",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\aec220aa1f7d1c7e883cc27d7f0bffbbac7e7fb9153b6ec1d70297e12fe9bde4\\link.map",
+      "sha256": "fac70109e299c4c02cf74375bbd2008d17a69e2fb364567abdf874634c6c1b24",
+      "bytes": 497993
+    },
+    {
+      "role": "counters",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\counters\\pdb-summary.txt",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\aec220aa1f7d1c7e883cc27d7f0bffbbac7e7fb9153b6ec1d70297e12fe9bde4\\pdb-summary.txt",
+      "sha256": "40d452fb2049751994615fe7e1a9686b28747dfe8a475153f5f3d9feb727eaee",
+      "bytes": 491
+    },
+    {
+      "role": "counters",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\counters\\build.stdout.txt",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\aec220aa1f7d1c7e883cc27d7f0bffbbac7e7fb9153b6ec1d70297e12fe9bde4\\build.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "role": "counters",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\counters\\build.stderr.txt",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\aec220aa1f7d1c7e883cc27d7f0bffbbac7e7fb9153b6ec1d70297e12fe9bde4\\build.stderr.txt",
+      "sha256": "8ca835f44be3f2b1c46cfba459aa3537f47832e618beb448fce238b522a41b50",
+      "bytes": 213
+    },
+    {
+      "role": "sampler",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\sampler\\aster-core.exe",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\79705a5f5be0625e16f10415468fdbf4b763aca7c6b62b7eb7c26864f2950a76\\aster-core.exe",
+      "sha256": "79705a5f5be0625e16f10415468fdbf4b763aca7c6b62b7eb7c26864f2950a76",
+      "bytes": 113845760
+    },
+    {
+      "role": "sampler",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\sampler\\aster_core.pdb",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\79705a5f5be0625e16f10415468fdbf4b763aca7c6b62b7eb7c26864f2950a76\\aster_core.pdb",
+      "sha256": "57ed7e16caed21c6a70f50ed74c8d93ccb8aca6368ab1b050d888144f71900a1",
+      "bytes": 5017600
+    },
+    {
+      "role": "sampler",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\sampler\\link.map",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\79705a5f5be0625e16f10415468fdbf4b763aca7c6b62b7eb7c26864f2950a76\\link.map",
+      "sha256": "b775f8b69657e40e38d3e3ec0b004838032dd67e9b3a3801772f7877879d7c19",
+      "bytes": 504767
+    },
+    {
+      "role": "sampler",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\sampler\\pdb-summary.txt",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\79705a5f5be0625e16f10415468fdbf4b763aca7c6b62b7eb7c26864f2950a76\\pdb-summary.txt",
+      "sha256": "7c734cb3438a712c85e2685e588b2abbe996efb86c1f4a27020c2e80a2e1d90a",
+      "bytes": 491
+    },
+    {
+      "role": "sampler",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\sampler\\build.stdout.txt",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\79705a5f5be0625e16f10415468fdbf4b763aca7c6b62b7eb7c26864f2950a76\\build.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "role": "sampler",
+      "original": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\sampler\\build.stderr.txt",
+      "archive": "C:\\Users\\lukem\\AppData\\Local\\Aster\\research-binaries\\79705a5f5be0625e16f10415468fdbf4b763aca7c6b62b7eb7c26864f2950a76\\build.stderr.txt",
+      "sha256": "5fcd48afe581281cfd28c42cc7b7a1128040b764f1b121ae8be89b65be2756c5",
+      "bytes": 213
+    }
+  ],
+  "source_manifest_sha256": "1f8bf538d5e10920b5d55fa05c5b40a9d53c9eac709cb0d6a94ee378aa339b98",
+  "all_verified": true
+}

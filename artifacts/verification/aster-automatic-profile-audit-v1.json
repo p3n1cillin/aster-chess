@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "engine_invocations": 0,
+  "raw_profile_collection_repeated": false,
+  "scripts_compile": true,
+  "source_names": true,
+  "source_snapshot_files_verified": 59,
+  "archived_binary_support_files_verified": 19,
+  "sample_denominators_verified": true,
+  "ratio_pairing_independently_verified": true,
+  "analysis_gates": {
+    "sample_minima": true,
+    "resolution": true,
+    "overhead": true
+  },
+  "active_binary_sha256": "6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2"
+}

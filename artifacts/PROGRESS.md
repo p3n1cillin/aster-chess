@@ -1,3 +1,21 @@
+## 2026-10-20: unchanged automatic-path profile completed
+
+All 32 predeclared diagnostic runs finish without repeats; full normalized
+search traces agree, canonical nodes remain 1,559,611, and all 59 pinned playing
+inputs plus production binary `6b4d46db…` are unchanged. Eight sampled runs yield
+148,000 observations including 1,992 outside-module counts. All 146,008
+executable-code PCs resolve; matching EXEs/PDBs/maps and raw data are preserved.
+
+Indexed AVX-512 accumulator updates account for 25.33% of all canonical samples
+and 29.43% on foundation16, nominating update scheduling/data movement for a
+distinct investigation. Inclusive accumulator counters corroborate substantial
+work but are overlapping TSC ticks, not disjoint runtime costs. Sampling adds
+about 41–46% bench overhead versus its diagnostic control, within the declared
+2x limit; normal-speed representativeness remains limited. This is no speed,
+strength or novelty result. No candidate is adopted and no games were required
+by this diagnostic. See `docs/ASTER-AUTOMATIC-PROFILE.md`. Next inspect preserved
+machine code offline before committing a separate candidate policy/fresh roots.
+
 ## 2026-10-19: fused neural input rejected at fixed timing gate
 
 One compile-gated Rust fusion implementation and 64 fresh roots are frozen

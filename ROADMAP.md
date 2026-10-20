@@ -30,6 +30,14 @@ See `docs/ASTER-FUSED-INPUT-INVESTIGATION.md`. Next profile the unchanged automa
 path with a bounded diagnostic workload and select a distinct measured bottleneck
 before another predeclared candidate. Do not retune the failed fusion policy.
 
+That diagnostic now completes all 32 fixed runs with identical search traces and
+unchanged playing inputs. Indexed AVX-512 accumulator updates account for
+25.33–29.43% of sampled PCs across two workloads. Sampling adds about 41–46%
+bench overhead versus its diagnostic control, so the ranking remains diagnostic.
+See `docs/ASTER-AUTOMATIC-PROFILE.md`. Next inspect the preserved update machine
+code offline, then predeclare one distinct scheduling/data-movement hypothesis;
+no candidate, speed gain or strength gain is established by the profile.
+
 The Aster disagreement-guard experiment tests a bounded response to conflicting
 search evidence. Its policy, new opening roots and two controls were fixed before
 candidate queries. All 192 games are audited, but neither strength gate passes:
