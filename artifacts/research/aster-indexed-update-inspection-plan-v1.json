@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-10-20T15:43:47.500152+00:00",
+  "scope": "Offline inspection only: one existing unchanged debug-control indexed AVX-512 update function; no engine runs, builds, source changes, hardware counters or candidate queries.",
+  "input": {
+    "path": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\debug_control\\aster-core.exe",
+    "sha256": "b403fa67b650c8fd6ae081127db6bda1a5498716169dc382e870c6f80d804311",
+    "map": "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\debug_control\\link.map",
+    "map_sha256": "733275fbc29cd73e462fb5c41f8ff4406fef1f3e10bf13a752410a52c9ee6b27"
+  },
+  "tool": {
+    "path": "C:\\Users\\lukem\\.rustup\\toolchains\\1.99.1-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\bin\\llvm-objdump.exe",
+    "sha256": "2f93abc19ae65237c701f75a7347f724ca7ea34e4e933700cde8df11a6dc0ebe",
+    "version": "LLVM (http://llvm.org/):\n  LLVM version 23.1.1-rust-1.99.1-stable\n  Optimized build.\n\n\n  Registered Targets:\n    aarch64     - AArch64 (little endian)\n    aarch64_32  - AArch64 (little endian ILP32)\n    aarch64_be  - AArch64 (big endian)\n    amdgcn      - legacy name for amdgpu\n    amdgpu      - AMDGPU gfx6+\n    arm         - ARM\n    arm64       - ARM64 (little endian)\n    arm64_32    - ARM64 (little endian ILP32)\n    armeb       - ARM (big endian)\n    avr         - Atmel AVR Microcontroller\n    bpf         - BPF (host endian)\n    bpfeb       - BPF (big endian)\n    bpfel       - BPF (little endian)\n    csky        - C-SKY\n    hexagon     - Hexagon\n    loongarch32 - 32-bit LoongArch\n    loongarch64 - 64-bit LoongArch\n    m68k        - Motorola 68000 family\n    mips        - MIPS (32-bit big endian)\n    mips64      - MIPS (64-bit big endian)\n    mips64el    - MIPS (64-bit little endian)\n    mipsel      - MIPS (32-bit little endian)\n    msp430      - MSP430 [experimental]\n    nvptx       - NVIDIA PTX 32-bit\n    nvptx64     - NVIDIA PTX 64-bit\n    ppc32       - PowerPC 32\n    ppc32le     - PowerPC 32 LE\n    ppc64       - PowerPC 64\n    ppc64le     - PowerPC 64 LE\n    r600        - AMD GPUs HD2XXX-HD6XXX\n    riscv32     - 32-bit RISC-V\n    riscv32be   - 32-bit big endian RISC-V\n    riscv64     - 64-bit RISC-V\n    riscv64be   - 64-bit big endian RISC-V\n    sparc       - Sparc\n    sparcel     - Sparc LE\n    sparcv9     - Sparc V9\n    systemz     - SystemZ\n    thumb       - Thumb\n    thumbeb     - Thumb (big endian)\n    wasm32      - WebAssembly 32-bit\n    wasm64      - WebAssembly 64-bit\n    x86         - 32-bit X86: Pentium-Pro and above\n    x86-64      - 64-bit X86: EM64T and AMD64\n    xtensa      - Xtensa 32"
+  },
+  "command": [
+    "C:\\Users\\lukem\\.rustup\\toolchains\\1.99.1-x86_64-pc-windows-msvc\\lib\\rustlib\\x86_64-pc-windows-msvc\\bin\\llvm-objdump.exe",
+    "--disassemble",
+    "--no-show-raw-insn",
+    "--x86-asm-syntax=intel",
+    "--start-address=0x140038350",
+    "--stop-address=0x140038940",
+    "C:\\Users\\lukem\\.codex\\worktrees\\continuation-search\\chess\\.aster-local\\automatic-profile-v1\\debug_control\\aster-core.exe"
+  ],
+  "limits": {
+    "process_timeout_seconds": 30,
+    "functions": 1,
+    "maximum_output_bytes": 65536,
+    "engine_invocations": 0,
+    "retries": 0
+  },
+  "interpretation": "Check for direct stack traffic and static loop structure to inform a later distinct policy. Assembly alone does not measure cache stalls, throughput, speed or playing strength. No candidate variant is selected by this inspection."
+}
