@@ -80,6 +80,8 @@ def main():
     ap.add_argument('--hours', type=float, default=1e9)
     ap.add_argument('--worker', default=socket.gethostname())
     ap.add_argument('--label', default='spsa')
+    ap.add_argument('--resume', help='log of an earlier run of this chain: continue after its last SPSA_STATE')
+    ap.add_argument('--deadline', type=float, default=0, help='Unix time after which no step starts')
     args = ap.parse_args()
 
     tw.WORK.mkdir(parents=True, exist_ok=True)
@@ -95,12 +97,22 @@ def main():
     for p in params.values():
         p['c'] = p['c_end'] * n ** gamma
         p['a'] = p['r_end'] * p['c_end'] ** 2 * (big_a + n) ** alpha
-    rng = random.Random(args.seed)
     started = time.time()
     totals = [0, 0, 0]
-    for k in range(1, n + 1):
-        if time.time() - started > args.hours * 3600:
+    first = 1
+    last = resume_state(args) if args.resume else None
+    if last:
+        first = last['iteration'] + 1
+        totals = last['plus_w_l_d']
+        for name, v in last['values'].items():
+            if name in params:
+                params[name]['value'] = float(v)
+        print(f'SPSA_RESUME from iteration {last["iteration"]}', flush=True)
+    for k in range(first, n + 1):
+        if time.time() - started > args.hours * 3600 or (args.deadline and time.time() > args.deadline):
             break
+        # Seeded per step, so a resumed chain draws the same directions.
+        rng = random.Random(args.seed * 7919 + k)
         delta = {name: rng.choice((-1, 1)) for name in params}
         plus, minus = {}, {}
         for name, p in params.items():
@@ -114,12 +126,32 @@ def main():
         for name, p in params.items():
             ak, ck = p['a'] / (big_a + k) ** alpha, p['c'] / k ** gamma
             p['value'] = min(p['max'], max(p['min'], p['value'] + ak / ck * result * delta[name]))
-        if k % 5 == 0 or k == n:
-            state = {'label': args.label, 'worker': args.worker, 'seed': args.seed, 'ref': args.ref,
-                     'iteration': k, 'planned': n, 'games': 2 * args.pairs * k,
-                     'plus_w_l_d': totals, 'tc': spec,
-                     'values': {name: round(p['value'], 2) for name, p in params.items()}}
-            print('SPSA_STATE ' + json.dumps(state), flush=True)
+        state = {'label': args.label, 'worker': args.worker, 'seed': args.seed, 'ref': args.ref,
+                 'iteration': k, 'planned': n, 'games': 2 * args.pairs * k,
+                 'plus_w_l_d': totals, 'tc': spec,
+                 'values': {name: round(p['value'], 2) for name, p in params.items()}}
+        print('SPSA_STATE ' + json.dumps(state), flush=True)
+    else:
+        print('SPSA_DONE', flush=True)
+        return
+    print('SPSA_DONE (time budget)', flush=True)
+
+
+def resume_state(args):
+    """Last SPSA_STATE of this chain in an earlier log, if any."""
+    path = pathlib.Path(args.resume)
+    if not path.exists():
+        return None
+    last = None
+    for line in path.read_text(errors='replace').splitlines():
+        if line.startswith('SPSA_STATE '):
+            try:
+                s = json.loads(line[len('SPSA_STATE '):])
+            except json.JSONDecodeError:
+                continue
+            if (s['label'], s['worker'], s['seed']) == (args.label, args.worker, args.seed):
+                last = s
+    return last
 
 
 if __name__ == '__main__':

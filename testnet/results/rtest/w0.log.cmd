@@ -1,1 +1,0 @@
-python3 scripts/spsa_worker.py --ref HEAD --params LmrBase\,RazorMargin --nodes 2000 --iterations 8 --pairs 1 --concurrency 2 --seed 9 --worker w0 --label rtest 

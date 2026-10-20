@@ -185,6 +185,8 @@ def main():
     parser.add_argument('--batch-pairs', type=int, default=100)
     parser.add_argument('--concurrency', type=int, default=os.cpu_count() or 1)
     parser.add_argument('--hours', type=float, default=1e9, help='stop starting batches after this long')
+    parser.add_argument('--deadline', type=float, default=0, help='Unix time after which no batch starts')
+    parser.add_argument('--resume', help='log of an earlier run: skip batches it already reported')
     args = parser.parse_args()
 
     spec_path = pathlib.Path(args.spec)
@@ -202,9 +204,18 @@ def main():
                 raise RuntimeError(f'{label} bench {info[label + "_bench"]} != spec {side["bench"]}')
     print('TESTNET_READY ' + json.dumps(info), flush=True)
 
+    done = set()
+    if args.resume and pathlib.Path(args.resume).exists():
+        for line in pathlib.Path(args.resume).read_text(errors='replace').splitlines():
+            if line.startswith('TESTNET_RESULT '):
+                r = json.loads(line[len('TESTNET_RESULT '):])
+                if (r['test'], r['worker']) == (spec['name'], args.worker):
+                    done.add(r['batch'])
     started = time.time()
     for k in range(1, args.batches + 1):
-        if time.time() - started > args.hours * 3600:
+        if k in done:
+            continue
+        if time.time() - started > args.hours * 3600 or (args.deadline and time.time() > args.deadline):
             break
         seed = args.seed * 100000 + k
         pgn = WORK / f'{spec["name"]}-{args.worker}-{seed}.pgn'
@@ -213,6 +224,7 @@ def main():
         result = dict(info, batch=k, seed=seed, pairs=sum(penta), pentanomial=penta,
                       games_w_l_d=games[1:] if games else None, problems=problems)
         print('TESTNET_RESULT ' + json.dumps(result), flush=True)
+    print('TESTNET_DONE', flush=True)
 
 
 if __name__ == '__main__':
