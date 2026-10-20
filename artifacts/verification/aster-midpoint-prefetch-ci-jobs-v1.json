@@ -1,0 +1,605 @@
+{
+  "total_count": 2,
+  "jobs": [
+    {
+      "id": 118913215922,
+      "run_id": 39505486277,
+      "workflow_name": "Verify Rust",
+      "head_branch": "codex/aster-midpoint-prefetch",
+      "run_url": "https://api.github.com/repos/p3n1cillin/aster-chess/actions/runs/39505486277",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOU7iDeM8AAAAbr8etsg",
+      "head_sha": "aca2aca1783d998408109108ff2611700af0bb6c",
+      "url": "https://api.github.com/repos/p3n1cillin/aster-chess/actions/jobs/118913215922",
+      "html_url": "https://github.com/p3n1cillin/aster-chess/actions/runs/39505486277/job/118913215922",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-20T22:05:24Z",
+      "started_at": "2026-10-20T22:05:25Z",
+      "completed_at": "2026-10-20T22:11:11Z",
+      "name": "rust (ubuntu-latest)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-20T22:05:26Z",
+          "completed_at": "2026-10-20T22:05:27Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-20T22:05:27Z",
+          "completed_at": "2026-10-20T22:05:37Z"
+        },
+        {
+          "name": "Run dtolnay/rust-toolchain@stable",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-20T22:05:37Z",
+          "completed_at": "2026-10-20T22:05:47Z"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-20T22:05:47Z",
+          "completed_at": "2026-10-20T22:05:47Z"
+        },
+        {
+          "name": "Run python -m pip install -r requirements-dev.txt",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-20T22:05:47Z",
+          "completed_at": "2026-10-20T22:05:51Z"
+        },
+        {
+          "name": "Run python -m unittest discover -s tests -p test_match_recovery.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-20T22:05:51Z",
+          "completed_at": "2026-10-20T22:05:51Z"
+        },
+        {
+          "name": "Run python scripts/verify_source_names.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-20T22:05:51Z",
+          "completed_at": "2026-10-20T22:05:51Z"
+        },
+        {
+          "name": "Run python scripts/fetch_rust_network.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-20T22:05:51Z",
+          "completed_at": "2026-10-20T22:05:52Z"
+        },
+        {
+          "name": "Run python scripts/fetch_aster_network.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-20T22:05:52Z",
+          "completed_at": "2026-10-20T22:05:55Z"
+        },
+        {
+          "name": "Run cargo fmt --all --check",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-20T22:05:55Z",
+          "completed_at": "2026-10-20T22:05:56Z"
+        },
+        {
+          "name": "Run cargo build --workspace --release --locked",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-20T22:05:56Z",
+          "completed_at": "2026-10-20T22:06:44Z"
+        },
+        {
+          "name": "Run cargo build --release --locked -p aster-engine --features pgo-driver --bin aster-pgo-trainer",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-20T22:06:44Z",
+          "completed_at": "2026-10-20T22:06:53Z"
+        },
+        {
+          "name": "Verify native profile driver",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-20T22:06:53Z",
+          "completed_at": "2026-10-20T22:06:58Z"
+        },
+        {
+          "name": "Run cargo test --workspace --release --locked",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-20T22:06:58Z",
+          "completed_at": "2026-10-20T22:07:38Z"
+        },
+        {
+          "name": "Run cargo test --workspace --locked",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-20T22:07:38Z",
+          "completed_at": "2026-10-20T22:08:15Z"
+        },
+        {
+          "name": "Run cargo test --release --locked -p aster-core --features disagreement-guard",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-20T22:08:15Z",
+          "completed_at": "2026-10-20T22:08:32Z"
+        },
+        {
+          "name": "Run cargo test --release --locked -p aster-core --features \"evaluation-risk,disagreement-guard\"",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-20T22:08:32Z",
+          "completed_at": "2026-10-20T22:08:48Z"
+        },
+        {
+          "name": "Run python scripts/verify.py --setups 1000",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-20T22:08:48Z",
+          "completed_at": "2026-10-20T22:09:03Z"
+        },
+        {
+          "name": "Run python scripts/verify_rust_legal_edges.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-20T22:09:03Z",
+          "completed_at": "2026-10-20T22:09:04Z"
+        },
+        {
+          "name": "Run python scripts/smoke_rust_play.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-10-20T22:09:04Z",
+          "completed_at": "2026-10-20T22:09:07Z"
+        },
+        {
+          "name": "Run python scripts/smoke_mate_proof.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-20T22:09:07Z",
+          "completed_at": "2026-10-20T22:09:07Z"
+        },
+        {
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-v1.json --engine-arg legacy --depth 8 --require-solved 32 --output artifacts/tactics/legacy-ci.json",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22,
+          "started_at": "2026-10-20T22:09:07Z",
+          "completed_at": "2026-10-20T22:09:08Z"
+        },
+        {
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-v1.json --depth 8 --reference-report artifacts/tactics/aster-dev-effdc3-baseline-v1.json --output artifacts/tactics/core-ci.json",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23,
+          "started_at": "2026-10-20T22:09:08Z",
+          "completed_at": "2026-10-20T22:09:09Z"
+        },
+        {
+          "name": "Run cargo run --release --locked -- bench 7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 24,
+          "started_at": "2026-10-20T22:09:09Z",
+          "completed_at": "2026-10-20T22:09:09Z"
+        },
+        {
+          "name": "Run python scripts/verify_aster_branding.py --output artifacts/verification/aster-branding-ci.json",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-20T22:09:09Z",
+          "completed_at": "2026-10-20T22:09:12Z"
+        },
+        {
+          "name": "Verify forced AVX2 core signature",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 26,
+          "started_at": "2026-10-20T22:09:12Z",
+          "completed_at": "2026-10-20T22:09:15Z"
+        },
+        {
+          "name": "Verify scalar core signature",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27,
+          "started_at": "2026-10-20T22:09:15Z",
+          "completed_at": "2026-10-20T22:09:20Z"
+        },
+        {
+          "name": "Run cargo test --workspace --release --locked --features midpoint-prefetch",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 28,
+          "started_at": "2026-10-20T22:09:20Z",
+          "completed_at": "2026-10-20T22:10:00Z"
+        },
+        {
+          "name": "Run cargo test --workspace --locked --features midpoint-prefetch",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29,
+          "started_at": "2026-10-20T22:10:00Z",
+          "completed_at": "2026-10-20T22:10:30Z"
+        },
+        {
+          "name": "Run cargo build --workspace --release --locked --features midpoint-prefetch",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 30,
+          "started_at": "2026-10-20T22:10:30Z",
+          "completed_at": "2026-10-20T22:10:59Z"
+        },
+        {
+          "name": "Verify experimental prefetch signatures",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 31,
+          "started_at": "2026-10-20T22:10:59Z",
+          "completed_at": "2026-10-20T22:11:09Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 61,
+          "started_at": "2026-10-20T22:11:09Z",
+          "completed_at": "2026-10-20T22:11:09Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 62,
+          "started_at": "2026-10-20T22:11:09Z",
+          "completed_at": "2026-10-20T22:11:10Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 63,
+          "started_at": "2026-10-20T22:11:10Z",
+          "completed_at": "2026-10-20T22:11:10Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/p3n1cillin/aster-chess/check-runs/118913215922",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000002534,
+      "runner_name": "GitHub Actions 1000002534",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 118913216182,
+      "run_id": 39505486277,
+      "workflow_name": "Verify Rust",
+      "head_branch": "codex/aster-midpoint-prefetch",
+      "run_url": "https://api.github.com/repos/p3n1cillin/aster-chess/actions/runs/39505486277",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOU7iDeM8AAAAbr8eutg",
+      "head_sha": "aca2aca1783d998408109108ff2611700af0bb6c",
+      "url": "https://api.github.com/repos/p3n1cillin/aster-chess/actions/jobs/118913216182",
+      "html_url": "https://github.com/p3n1cillin/aster-chess/actions/runs/39505486277/job/118913216182",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-20T22:05:24Z",
+      "started_at": "2026-10-20T22:05:25Z",
+      "completed_at": "2026-10-20T22:11:16Z",
+      "name": "rust (windows-latest)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-20T22:05:26Z",
+          "completed_at": "2026-10-20T22:05:27Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-20T22:05:27Z",
+          "completed_at": "2026-10-20T22:05:40Z"
+        },
+        {
+          "name": "Run dtolnay/rust-toolchain@stable",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-20T22:05:40Z",
+          "completed_at": "2026-10-20T22:05:51Z"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-20T22:05:51Z",
+          "completed_at": "2026-10-20T22:05:51Z"
+        },
+        {
+          "name": "Run python -m pip install -r requirements-dev.txt",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-20T22:05:51Z",
+          "completed_at": "2026-10-20T22:06:00Z"
+        },
+        {
+          "name": "Run python -m unittest discover -s tests -p test_match_recovery.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-20T22:06:00Z",
+          "completed_at": "2026-10-20T22:06:01Z"
+        },
+        {
+          "name": "Run python scripts/verify_source_names.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-20T22:06:01Z",
+          "completed_at": "2026-10-20T22:06:01Z"
+        },
+        {
+          "name": "Run python scripts/fetch_rust_network.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-20T22:06:01Z",
+          "completed_at": "2026-10-20T22:06:03Z"
+        },
+        {
+          "name": "Run python scripts/fetch_aster_network.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-20T22:06:03Z",
+          "completed_at": "2026-10-20T22:06:06Z"
+        },
+        {
+          "name": "Run cargo fmt --all --check",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-20T22:06:06Z",
+          "completed_at": "2026-10-20T22:06:07Z"
+        },
+        {
+          "name": "Run cargo build --workspace --release --locked",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-20T22:06:07Z",
+          "completed_at": "2026-10-20T22:07:08Z"
+        },
+        {
+          "name": "Run cargo build --release --locked -p aster-engine --features pgo-driver --bin aster-pgo-trainer",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-20T22:07:08Z",
+          "completed_at": "2026-10-20T22:07:16Z"
+        },
+        {
+          "name": "Verify native profile driver",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-20T22:07:16Z",
+          "completed_at": "2026-10-20T22:07:19Z"
+        },
+        {
+          "name": "Run cargo test --workspace --release --locked",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-20T22:07:19Z",
+          "completed_at": "2026-10-20T22:08:01Z"
+        },
+        {
+          "name": "Run cargo test --workspace --locked",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-20T22:08:01Z",
+          "completed_at": "2026-10-20T22:08:34Z"
+        },
+        {
+          "name": "Run cargo test --release --locked -p aster-core --features disagreement-guard",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-20T22:08:34Z",
+          "completed_at": "2026-10-20T22:08:49Z"
+        },
+        {
+          "name": "Run cargo test --release --locked -p aster-core --features \"evaluation-risk,disagreement-guard\"",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-20T22:08:49Z",
+          "completed_at": "2026-10-20T22:09:04Z"
+        },
+        {
+          "name": "Run python scripts/verify.py --setups 1000",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-20T22:09:04Z",
+          "completed_at": "2026-10-20T22:09:13Z"
+        },
+        {
+          "name": "Run python scripts/verify_rust_legal_edges.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-20T22:09:13Z",
+          "completed_at": "2026-10-20T22:09:14Z"
+        },
+        {
+          "name": "Run python scripts/smoke_rust_play.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-10-20T22:09:14Z",
+          "completed_at": "2026-10-20T22:09:16Z"
+        },
+        {
+          "name": "Run python scripts/smoke_mate_proof.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-20T22:09:16Z",
+          "completed_at": "2026-10-20T22:09:16Z"
+        },
+        {
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-v1.json --engine-arg legacy --depth 8 --require-solved 32 --output artifacts/tactics/legacy-ci.json",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22,
+          "started_at": "2026-10-20T22:09:16Z",
+          "completed_at": "2026-10-20T22:09:17Z"
+        },
+        {
+          "name": "Run python scripts/tactics.py tests/fixtures/tactics-v1.json --depth 8 --reference-report artifacts/tactics/aster-dev-effdc3-baseline-v1.json --output artifacts/tactics/core-ci.json",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23,
+          "started_at": "2026-10-20T22:09:17Z",
+          "completed_at": "2026-10-20T22:09:18Z"
+        },
+        {
+          "name": "Run cargo run --release --locked -- bench 7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 24,
+          "started_at": "2026-10-20T22:09:18Z",
+          "completed_at": "2026-10-20T22:09:19Z"
+        },
+        {
+          "name": "Run python scripts/verify_aster_branding.py --output artifacts/verification/aster-branding-ci.json",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-20T22:09:19Z",
+          "completed_at": "2026-10-20T22:09:21Z"
+        },
+        {
+          "name": "Verify forced AVX2 core signature",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 26,
+          "started_at": "2026-10-20T22:09:21Z",
+          "completed_at": "2026-10-20T22:09:23Z"
+        },
+        {
+          "name": "Verify scalar core signature",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27,
+          "started_at": "2026-10-20T22:09:23Z",
+          "completed_at": "2026-10-20T22:09:26Z"
+        },
+        {
+          "name": "Run cargo test --workspace --release --locked --features midpoint-prefetch",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 28,
+          "started_at": "2026-10-20T22:09:26Z",
+          "completed_at": "2026-10-20T22:10:09Z"
+        },
+        {
+          "name": "Run cargo test --workspace --locked --features midpoint-prefetch",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29,
+          "started_at": "2026-10-20T22:10:09Z",
+          "completed_at": "2026-10-20T22:10:34Z"
+        },
+        {
+          "name": "Run cargo build --workspace --release --locked --features midpoint-prefetch",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 30,
+          "started_at": "2026-10-20T22:10:34Z",
+          "completed_at": "2026-10-20T22:11:06Z"
+        },
+        {
+          "name": "Verify experimental prefetch signatures",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 31,
+          "started_at": "2026-10-20T22:11:06Z",
+          "completed_at": "2026-10-20T22:11:13Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 61,
+          "started_at": "2026-10-20T22:11:13Z",
+          "completed_at": "2026-10-20T22:11:13Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 62,
+          "started_at": "2026-10-20T22:11:13Z",
+          "completed_at": "2026-10-20T22:11:15Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 63,
+          "started_at": "2026-10-20T22:11:15Z",
+          "completed_at": "2026-10-20T22:11:15Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/p3n1cillin/aster-chess/check-runs/118913216182",
+      "labels": [
+        "windows-latest"
+      ],
+      "runner_id": 1000002535,
+      "runner_name": "GitHub Actions 1000002535",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

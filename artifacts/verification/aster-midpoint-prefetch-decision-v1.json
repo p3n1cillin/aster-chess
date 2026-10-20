@@ -1,0 +1,461 @@
+{
+  "status": "evidence_verified_experiment_rejected",
+  "created_utc": "2026-10-20T22:10:51.808089+00:00",
+  "checker_sha256": "e5ca04d5aa516d103899474e61783a6eba8a4387aa2b5107e0f1b315a91324f5",
+  "evidence_sha256": {
+    "artifacts/research/aster-midpoint-prefetch-plan-v1.json": "556f77504cf0581e70b794ae6cee615afb12c4ddf5d6129d8b835ce2c96f05b7",
+    "artifacts/research/aster-midpoint-prefetch-build-v1.json": "b305ea05d2fee25f76146fd5d16fff9b88226223b7dd1c336542d8f209ca5d36",
+    "artifacts/verification/aster-midpoint-prefetch-correctness-v1.json": "4e019fc0070ce58326959041575029ee920f6c16ae088b270fb2ed37c0cc57c5",
+    "artifacts/verification/aster-midpoint-prefetch-timing-v1.json": "d5c0bfa5bd64cb931f07adf771db445eeabee129037f75d6fb9142a3d03896ff",
+    "artifacts/research/aster-midpoint-prefetch-control-source-v1/manifest.json": "2c66369fb937e877358e6b0cb7c824e1c4015d021f815155f3ad8fcc45baae85",
+    "artifacts/research/aster-midpoint-prefetch-source-v1/manifest.json": "06c01625579f6c54050433d6bf02dc424b2f5f7bf37a9eaf74dd7346941221fa",
+    "tests/fixtures/aster-midpoint-prefetch-parent-v1.json": "ebf08f9079dc6ce9b3a6eab7df8a4f4ad795eed256440ee6e6d8e686cccaad0c",
+    "artifacts/verification/aster-midpoint-prefetch-equivalence-auto-v1.json": "5436b771326a37e2df2adabba4b7356e2b968b52cedaca150e934ec545bba5f6",
+    "artifacts/tactics/aster-midpoint-prefetch-auto-tactics-v1.json": "4dab494e8f4dffb1d33c72465169e1871f5aa8a371104331a3db505e249d25a7",
+    "artifacts/tactics/aster-midpoint-prefetch-auto-tactics-quiet-v1.json": "bae1b66752f172377322a923c0833ba3b8da1a262df41de356db05c71f292a76",
+    "artifacts/tactics/aster-midpoint-prefetch-auto-endgames-v1.json": "7cc6fc0fab8a77be6edc5ae3596cbd61fa800cd784813a70033789a7b39554af",
+    "artifacts/verification/aster-midpoint-prefetch-equivalence-avx2-v1.json": "5436b771326a37e2df2adabba4b7356e2b968b52cedaca150e934ec545bba5f6",
+    "artifacts/tactics/aster-midpoint-prefetch-avx2-tactics-v1.json": "cccb3d0d6db301645a98ff009a37f0fd54501e3cc018b38d3b601c9fb1844b91",
+    "artifacts/tactics/aster-midpoint-prefetch-avx2-tactics-quiet-v1.json": "d9bfe288886ed8bb403928e0a5756bd0683e5f6e664348d068fc15e8bd82ef04",
+    "artifacts/tactics/aster-midpoint-prefetch-avx2-endgames-v1.json": "6b5e53570cbad28c3b725dd54ee6bef0d5771648e036614e7eea444919cec850",
+    "artifacts/verification/aster-midpoint-prefetch-equivalence-scalar-v1.json": "5436b771326a37e2df2adabba4b7356e2b968b52cedaca150e934ec545bba5f6",
+    "artifacts/tactics/aster-midpoint-prefetch-scalar-tactics-v1.json": "00773f3dd55dfa717d8baff77a6c3fa19209f29eded70d8b19ff339d94f7a691",
+    "artifacts/tactics/aster-midpoint-prefetch-scalar-tactics-quiet-v1.json": "41fbe8940729235c942dd9714f10dc2ee7e1f8b98f6d1555db5a5c4fd8f4c862",
+    "artifacts/tactics/aster-midpoint-prefetch-scalar-endgames-v1.json": "327c67075ff436b74787f43d8be240c754ed6ecb87d8fa7aa178139c070c3502",
+    "artifacts/verification/aster-midpoint-prefetch-runtime-v1.json": "1d15453e483f1bc6929374d98079ca275fe4bfa7890d6f9f862ce3b4d9d2863c",
+    "artifacts/verification/aster-midpoint-prefetch-rules-v1.json": "eb73cdd67553a05beb80816994f922dd0fdceeec0b24250b215badc31d6aa4fc",
+    "artifacts/verification/aster-midpoint-prefetch-edges-v1.json": "cdb44a8ccaa9322d632bb614951479b7b106174843e6ebbebda994ee18476959",
+    "artifacts/verification/aster-midpoint-prefetch-play-v1.json": "d056c7f31099bdd82f1287e5a1faf28788a5485592a334b0ae7e3b676e58279c",
+    "artifacts/verification/aster-midpoint-prefetch-proofs-v1.json": "aca9fe98f59faffe93634eeb2f13c530bcd8f87099c20958633ab98528e66a71",
+    "artifacts/verification/aster-midpoint-prefetch-first-audit-failure-v1.log": "e810ec9c300ee8835ed2930e644092b48937bd4080b90cffb34bd1a80465ed13",
+    "scripts/audit_midpoint_prefetch_timing.py": "00deb77a097173f82d8b43e8e4bdf25cf11e8d6d6b36fd4bf2eced46bde43a4c"
+  },
+  "timing": {
+    "auto": {
+      "median_ratio": 1.0077911619021422,
+      "interval95": [
+        1.0009303549636261,
+        1.0253337305259458
+      ],
+      "passed": false
+    },
+    "avx2": {
+      "median_ratio": 1.0054856604062925,
+      "interval95": [
+        0.9931687167943426,
+        1.029556327749566
+      ],
+      "passed": true
+    },
+    "scalar": {
+      "median_ratio": 0.9922706588654358,
+      "interval95": [
+        0.9770415410348483,
+        1.0123195231550828
+      ],
+      "passed": true
+    }
+  },
+  "actual_order_matches_plan": true,
+  "matched_root_pairs": 448,
+  "root_first_slot_balance": false,
+  "first_slot_counts": [
+    {
+      "mode": "auto",
+      "root": 0,
+      "first_slots": {
+        "baseline": 12,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "auto",
+      "root": 1,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 12
+      }
+    },
+    {
+      "mode": "auto",
+      "root": 2,
+      "first_slots": {
+        "baseline": 12,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "auto",
+      "root": 3,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 12
+      }
+    },
+    {
+      "mode": "auto",
+      "root": 4,
+      "first_slots": {
+        "baseline": 12,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "auto",
+      "root": 5,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 12
+      }
+    },
+    {
+      "mode": "auto",
+      "root": 6,
+      "first_slots": {
+        "baseline": 12,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "auto",
+      "root": 7,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 12
+      }
+    },
+    {
+      "mode": "auto",
+      "root": 8,
+      "first_slots": {
+        "baseline": 12,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "auto",
+      "root": 9,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 12
+      }
+    },
+    {
+      "mode": "auto",
+      "root": 10,
+      "first_slots": {
+        "baseline": 12,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "auto",
+      "root": 11,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 12
+      }
+    },
+    {
+      "mode": "auto",
+      "root": 12,
+      "first_slots": {
+        "baseline": 12,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "auto",
+      "root": 13,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 12
+      }
+    },
+    {
+      "mode": "auto",
+      "root": 14,
+      "first_slots": {
+        "baseline": 12,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "auto",
+      "root": 15,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 12
+      }
+    },
+    {
+      "mode": "avx2",
+      "root": 0,
+      "first_slots": {
+        "baseline": 8,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "avx2",
+      "root": 1,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 8
+      }
+    },
+    {
+      "mode": "avx2",
+      "root": 2,
+      "first_slots": {
+        "baseline": 8,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "avx2",
+      "root": 3,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 8
+      }
+    },
+    {
+      "mode": "avx2",
+      "root": 4,
+      "first_slots": {
+        "baseline": 8,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "avx2",
+      "root": 5,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 8
+      }
+    },
+    {
+      "mode": "avx2",
+      "root": 6,
+      "first_slots": {
+        "baseline": 8,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "avx2",
+      "root": 7,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 8
+      }
+    },
+    {
+      "mode": "avx2",
+      "root": 8,
+      "first_slots": {
+        "baseline": 8,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "avx2",
+      "root": 9,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 8
+      }
+    },
+    {
+      "mode": "avx2",
+      "root": 10,
+      "first_slots": {
+        "baseline": 8,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "avx2",
+      "root": 11,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 8
+      }
+    },
+    {
+      "mode": "avx2",
+      "root": 12,
+      "first_slots": {
+        "baseline": 8,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "avx2",
+      "root": 13,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 8
+      }
+    },
+    {
+      "mode": "avx2",
+      "root": 14,
+      "first_slots": {
+        "baseline": 8,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "avx2",
+      "root": 15,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 8
+      }
+    },
+    {
+      "mode": "scalar",
+      "root": 0,
+      "first_slots": {
+        "baseline": 8,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "scalar",
+      "root": 1,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 8
+      }
+    },
+    {
+      "mode": "scalar",
+      "root": 2,
+      "first_slots": {
+        "baseline": 8,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "scalar",
+      "root": 3,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 8
+      }
+    },
+    {
+      "mode": "scalar",
+      "root": 4,
+      "first_slots": {
+        "baseline": 8,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "scalar",
+      "root": 5,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 8
+      }
+    },
+    {
+      "mode": "scalar",
+      "root": 6,
+      "first_slots": {
+        "baseline": 8,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "scalar",
+      "root": 7,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 8
+      }
+    },
+    {
+      "mode": "scalar",
+      "root": 8,
+      "first_slots": {
+        "baseline": 8,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "scalar",
+      "root": 9,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 8
+      }
+    },
+    {
+      "mode": "scalar",
+      "root": 10,
+      "first_slots": {
+        "baseline": 8,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "scalar",
+      "root": 11,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 8
+      }
+    },
+    {
+      "mode": "scalar",
+      "root": 12,
+      "first_slots": {
+        "baseline": 8,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "scalar",
+      "root": 13,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 8
+      }
+    },
+    {
+      "mode": "scalar",
+      "root": 14,
+      "first_slots": {
+        "baseline": 8,
+        "candidate": 0
+      }
+    },
+    {
+      "mode": "scalar",
+      "root": 15,
+      "first_slots": {
+        "baseline": 0,
+        "candidate": 8
+      }
+    }
+  ],
+  "timing_passed": false,
+  "protocol_conformant": false,
+  "protocol_failure": "The explicit schedule was followed, with8AB/8BA per batch, but reversing roots and using (batch+ordinal)%2 cancels the intended per-root first-slot rotation. Each root always ran the same role first. The plan prose incorrectly claimed per-root balance. Preserve every result; no corrected rerun or variant.",
+  "native_tests_including_compile_fail": {
+    "feature-release": 159,
+    "feature-debug": 159,
+    "default-release": 159,
+    "default-debug": 159
+  },
+  "eligible_for_conditional_matches": false,
+  "conditional_pairs_unused": 64,
+  "adopted": false,
+  "interpretation": "Audited engineering gates only; no playing-strength, absolute/public Elo or reference-superiority claim."
+}

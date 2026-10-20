@@ -1,0 +1,36 @@
+{
+  "status": "restored_original_source",
+  "created_utc": "2026-10-20T22:11:17.147064+00:00",
+  "paths": [
+    {
+      "path": "crates/aster-core/Cargo.toml",
+      "candidate_sha256": "976ec57cbfb3b06775519e494ce56f51fbe485df9f7d87e118c1cb631ecc8bc3",
+      "restored_sha256": "f2a227f2507ef24743b386fb1317075ed45915238e133b45d294a4d5fd3d24d2"
+    },
+    {
+      "path": "crates/engine/Cargo.toml",
+      "candidate_sha256": "a74118b9e4e43e3fb4902e0fcd2916f1765e35ff793ccaafa8540c484dffc774",
+      "restored_sha256": "4e59a6eb491a97490c5801b52e84726567df3df3c11b9627de1d0d76ac7f5342"
+    },
+    {
+      "path": "crates/aster-core/src/nnue/features.rs",
+      "candidate_sha256": "b66f21698a8d4e365ad31ac01ec2b424a46eb10122998b289a01494620642f84",
+      "restored_sha256": "fd73cfbe5df4d29353f367ddda362837f5d477d47e5750e98f0c2ad13a735e5f"
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "candidate_sha256": "80902b599628725f7658cc65deba3f32f794792a75e77a1bea677be772a40421",
+      "restored_sha256": "e3f0f9f4fc1db12c32e1b9168db1f78c1944151f479401dd43a132e99137b47c"
+    }
+  ],
+  "active_binary_sha256": "6b4d46db1b89ba9b3fd228121ac931f7791972ef3cc0e1865d00b37f96fb69e2",
+  "candidate_binary_sha256": "044f80be39d8f7fdc6e048414d790e5351277dce881fa03e8252959a83ddb4ae",
+  "candidate_archive_verified": true,
+  "candidate_workflow": {
+    "path": "artifacts/research/aster-midpoint-prefetch-workflow-v1.yml",
+    "sha256": "80902b599628725f7658cc65deba3f32f794792a75e77a1bea677be772a40421"
+  },
+  "conditional_matches_started": false,
+  "conditional_pairs_unused": 64,
+  "reason": "Automatic timing gate failed. Supplemental audit also establishes the committed schedule violated its prose per-root first-slot balance requirement; no corrected run or variant."
+}

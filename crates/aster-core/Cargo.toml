@@ -18,8 +18,6 @@ name = "aster-core"
 path = "src/main.rs"
 
 [features]
-# One bounded row-prefetch experiment; excluded from production builds.
-midpoint-prefetch = []
 evaluation-risk = []
 # Bounded Aster search experiment; excluded from production builds.
 disagreement-guard = []

@@ -1,3 +1,31 @@
+## 2026-10-20: midpoint row-prefetch rejected; ordering defect preserved
+
+One default-off Rust hint policy and 80 fresh roots are frozen before candidate
+implementation/queries. All correctness gates pass: feature/default native
+debug/release each 157 tests plus two compile-fail checks, canonical 1,559,611
+nodes/all traces per mode, 80 fresh depth-nine roots per mode, unchanged tactics,
+independent rules/perft/edges, real visual play/proofs and SMP ready/stop/undo.
+Windows/Linux CI pass on candidate commit `aca2aca1`.
+
+All 28 fixed timing batches finish once (448 root pairs). Automatic median
+elapsed ratio 1.00779, interval 1.00093..1.02533, fails the <=0.99/<=1.00 gate.
+AVX2 1.00549 and scalar 0.99227 stay within their numeric tolerances. These
+remain descriptive: the first independent audit also catches a plan error.
+Reversing roots while using batch-plus-traversal-ordinal parity keeps each
+root's first role constant, despite balanced AB/BA counts per batch. The
+explicit array was followed, but its claimed per-root balance was wrong.
+The first failed checker and its output, exact schedule and every observation
+are preserved; a separate report verifies the evidence and rejects the protocol.
+There is no repaired timing run, retuning or replacement result.
+
+The prospectively conditional 64 pairs remain unused. Original live engine,
+Cargo and workflow source are restored byte for byte; production `6b4d46db…`
+is unchanged. Exact candidate `044f80be…`, source snapshots and all negative
+evidence remain archived. No strength, novelty or Elo gain is established.
+See `docs/ASTER-MIDPOINT-PREFETCH.md`. Next predeclare a bounded count of
+redundant accumulator row work; no benefit is measured. Check future explicit
+schedule balance before any engine query. The overarching goal remains active.
+
 ## 2026-10-20: unchanged automatic-path profile completed
 
 All 32 predeclared diagnostic runs finish without repeats; full normalized

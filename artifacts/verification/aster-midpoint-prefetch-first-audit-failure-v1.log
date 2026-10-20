@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\lukem\.codex\worktrees\continuation-search\chess\scripts\audit_midpoint_prefetch_timing.py", line 121, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\lukem\.codex\worktrees\continuation-search\chess\scripts\audit_midpoint_prefetch_timing.py", line 88, in main
+    assert first_slots[mode, root, 'baseline'] == first_slots[mode, root, 'candidate'] == repetitions // 2
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -39,6 +39,17 @@ no hardware stall cause is established. Next predeclare one distinct update
 scheduling/data-movement hypothesis with fresh roots before implementation.
 No candidate, speed gain or strength gain is established by these diagnostics.
 
+The subsequent single midpoint-row-prefetch policy also fails its fixed timing
+gate (automatic elapsed ratio 1.00779). Its explicit schedule has balanced
+AB/BA counts per batch but violates the plan's claimed per-root first-slot
+balance; both failures are preserved without rerunning. All correctness and
+Windows/Linux CI checks pass, but the policy is rejected, its 64 conditional
+pairs remain unused, and original live source is restored. See
+`docs/ASTER-MIDPOINT-PREFETCH.md`. Do not retune prefetch distances or hints from
+this result. Next predeclare a bounded count of potentially redundant
+accumulator row work. Any future timing schedule must pass balance checks
+before engine queries, including reversed-root traversal interactions.
+
 The Aster disagreement-guard experiment tests a bounded response to conflicting
 search evidence. Its policy, new opening roots and two controls were fixed before
 candidate queries. All 192 games are audited, but neither strength gate passes:

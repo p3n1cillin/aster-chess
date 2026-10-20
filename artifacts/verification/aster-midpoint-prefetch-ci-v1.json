@@ -1,0 +1,27 @@
+{
+  "verified_utc": "2026-10-20T22:11:33.169Z",
+  "candidate_commit": "aca2aca1783d998408109108ff2611700af0bb6c",
+  "run_id": 39505486277,
+  "workflow": "https://github.com/p3n1cillin/aster-chess/actions/runs/39505486277",
+  "jobs": [
+    {
+      "id": 118913215922,
+      "name": "rust (ubuntu-latest)",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/p3n1cillin/aster-chess/actions/runs/39505486277/job/118913215922",
+      "completed_at": "2026-10-20T22:11:11Z"
+    },
+    {
+      "id": 118913216182,
+      "name": "rust (windows-latest)",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/p3n1cillin/aster-chess/actions/runs/39505486277/job/118913216182",
+      "completed_at": "2026-10-20T22:11:16Z"
+    }
+  ],
+  "scope": "Candidate native source, Cargo feature forwarding and full CI feature signatures passed on Windows/Linux. This does not override the failed timing or invalid per-root first-slot balance; no adoption.",
+  "raw_jobs_file": "artifacts/verification/aster-midpoint-prefetch-ci-jobs-v1.json",
+  "raw_jobs_sha256": "d92c0ad495bbd7c89034d0963790498ba28597aa522d5a4eaec85aece9590610"
+}
