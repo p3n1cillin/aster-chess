@@ -28,16 +28,18 @@ import subprocess
 import sys
 import time
 
+from research_reference import research_text
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 TOOLS = ROOT / 'tools'
 WORK = ROOT / 'testnet' / 'work'
 
 FASTCHESS_URL = 'https://github.com/Disservin/fastchess.git'
 FASTCHESS_TAG = 'v1.4.0-alpha'
-BOOKS_URL = 'https://github.com/official-stockfish/books.git'
+BOOKS_URL = research_text('testnet.books_url')
 BOOK_NAME = 'UHO_Lichess_4852_v1.epd'
 BOOK_SHA256 = '7a7f6470615a69c6cf23d565417701d38732876f480af90d67b42abade35644a'
-UPSTREAM_URL = 'https://github.com/official-stockfish/Stockfish.git'
+UPSTREAM_URL = research_text('testnet.upstream_url')
 UPSTREAM_COMMIT = 'effdc3fd3f6de6e75fe1374a51a7a7eed66f880b'
 UPSTREAM_NET = 'nn-c9e480e92425.nnue'
 
@@ -97,11 +99,11 @@ def ensure_networks():
 
 def ensure_upstream() -> pathlib.Path:
     """The upstream development commit built from source (gcc PGO), as a reference opponent."""
-    exe = TOOLS / 'stockfish' / f'upstream-{UPSTREAM_COMMIT[:10]}'
+    exe = ROOT / research_text('download.directory') / f'upstream-{UPSTREAM_COMMIT[:10]}'
     if exe.exists():
         return exe
     log('building upstream reference opponent')
-    src = TOOLS / 'stockfish' / f'src-{UPSTREAM_COMMIT[:10]}'
+    src = ROOT / research_text('download.directory') / f'src-{UPSTREAM_COMMIT[:10]}'
     if not (src / 'src' / 'Makefile').exists():
         src.mkdir(parents=True, exist_ok=True)
         run(['git', 'init', '-q'], cwd=src)
@@ -111,7 +113,7 @@ def ensure_upstream() -> pathlib.Path:
     flags = open('/proc/cpuinfo').read()
     arch = 'x86-64-avx512icl' if 'avx512_vnni' in flags and 'avx512vbmi2' in flags else 'x86-64-bmi2'
     run(['make', '-j', str(os.cpu_count() or 2), 'profile-build', f'ARCH={arch}', 'COMP=gcc'], cwd=src / 'src')
-    shutil.copy(src / 'src' / 'stockfish', exe)
+    shutil.copy(src / 'src' / research_text('testnet.upstream_binary'), exe)
     return exe
 
 
