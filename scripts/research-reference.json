@@ -71,6 +71,9 @@
     "forbidden_identity_pattern": "stockfish|sf[-_]port",
     "verify_general_proofs.interpretation": "Independent winning strategies and bounded oracle agreement. Unknown budgets are retained. Covers general material, both colors, attacker/defender roots, special moves, cancellation and protocol. No playing strength or Stockfish superiority inferred.",
     "verify_proof_protocol.interpretation": "Native Aster explanation works during infinite search without blocking readiness/stop. Pinned Stockfish's explain command emits no such proof explanation. Core search/evaluation unchanged; 66 fixed-node outputs agree. No claim about third-party Stockfish interfaces or general chess intelligence.",
-    "watch.opponent_help": "Opponent executable (default: pinned official Stockfish)"
+    "watch.opponent_help": "Opponent executable (default: pinned official Stockfish)",
+    "testnet.books_url": "https://github.com/official-stockfish/books.git",
+    "testnet.upstream_url": "https://github.com/official-stockfish/Stockfish.git",
+    "testnet.upstream_binary": "stockfish"
   }
 }
